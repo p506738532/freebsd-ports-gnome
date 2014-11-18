@@ -47,6 +47,14 @@ CAJA_DESC=	Caja plugin
 COMICS_DESC=	Comic book archives support
 DJVU_DESC=	DJVU support
 
+OPTIONS_SUB=	yes
+
+CAJA_CONFIGURE_ENABLE=	caja
+CAJA_USE=	caja
+DJVU_LIB_DEPENDS=	libdjvulibre.so:${PORTSDIR}/graphics/djvulibre
+DJVU_CONFIGURE_ENABLE=	djvu
+COMICS_CONFIGURE_ENABLE=	comics
+
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MDVI} || ${PORT_OPTIONS:MT1LIB}
@@ -65,32 +73,6 @@ CONFIGURE_ARGS+=--disable-t1lib
 .else
 CONFIGURE_ARGS+=--disable-dvi
 PLIST_SUB+=	DVI="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MCAJA}
-USE_MATE+=	caja
-CONFIGURE_ARGS+=--enable-caja
-PLIST_SUB+=	CAJA=""
-.else
-CONFIGURE_ARGS+=--disable-caja
-PLIST_SUB+=	CAJA="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MDJVU}
-LIB_DEPENDS+=	libdjvulibre.so:${PORTSDIR}/graphics/djvulibre
-CONFIGURE_ARGS+=--enable-djvu
-PLIST_SUB+=	DJVU=""
-.else
-CONFIGURE_ARGS+=--disable-djvu
-PLIST_SUB+=	DJVU="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MCOMICS}
-CONFIGURE_ARGS+=--enable-comics
-PLIST_SUB+=	COMICS=""
-.else
-CONFIGURE_ARGS+=--disable-comics
-PLIST_SUB+=	COMICS="@comment "
 .endif
 
 .include <bsd.port.mk>
