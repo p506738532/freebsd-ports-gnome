@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libmateweather
-PORTVERSION=	1.8.0
+PORTVERSION=	1.9.1
 CATEGORIES=	net mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
