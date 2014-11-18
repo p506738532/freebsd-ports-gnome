@@ -16,7 +16,7 @@ RUN_DEPENDS=	mate-base>=1.8.0:${PORTSDIR}/x11/mate-base \
 		mate-icon-theme-faenza>=1.8.0:${PORTSDIR}/x11-themes/mate-icon-theme-faenza \
 		mate-terminal:${PORTSDIR}/x11/mate-terminal \
 		mate-screensaver:${PORTSDIR}/x11/mate-screensaver \
-		mate-calc:${PORTSDIR}/math/mate-calc \
+		galculator:${PORTSDIR}/math/galculator \
 		mate-screenshot:${PORTSDIR}/deskutils/mate-utils \
 		mate-system-monitor:${PORTSDIR}/sysutils/mate-system-monitor \
 		eom:${PORTSDIR}/graphics/eom \
