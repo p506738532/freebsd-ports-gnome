@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mate-polkit
-PORTVERSION=	1.8.0
+PORTVERSION=	1.9.0
 CATEGORIES=	sysutils mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
 PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomehier gtk20 intlhack introspection:build
+USE_GNOME=	gtk20 intlhack introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
