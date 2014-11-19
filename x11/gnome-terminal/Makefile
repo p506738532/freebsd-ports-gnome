@@ -1,9 +1,9 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11/gnome-terminal/Makefile 19971 2014-10-16 09:27:16Z gusi $
+#   $MCom: ports/trunk/x11/gnome-terminal/Makefile 20059 2014-11-10 21:24:07Z gusi $
 
 PORTNAME=	gnome-terminal
-PORTVERSION=	3.14.1
+PORTVERSION=	3.14.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -37,16 +37,8 @@ MIGRATION_CONFIGURE_ENABLE=	migration
 MIGRATION_USE=			GNOME=gconf2
 MIGRATION_DESC=			Profile migration to gsettings (pulls in gconf2)
 
-.include <bsd.port.options.mk>
-
 post-patch:
 	@${TOUCH} ${WRKSRC}/aclocal.m4 ${WRKSRC}/Makefile.in \
 		${WRKSRC}/configure ${WRKSRC}/config.h.in
-.if ${OSVERSION} < 1000000
-	@${REINPLACE_CMD} -e 's|-Wno-suggest-attribute=format||g ; \
-		s|-Wno-unused-but-set-variable||g' \
-		${WRKSRC}/src/Makefile.in
-EXTRA_PATCHES+=	${FILESDIR}/extra-src_terminal-screen.c
-.endif
 
 .include <bsd.port.mk>

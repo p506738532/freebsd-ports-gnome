@@ -1,9 +1,9 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/trunk/graphics/evince/Makefile 19983 2014-10-17 08:16:01Z gusi $
+#    $MCom: ports/trunk/graphics/evince/Makefile 20078 2014-11-13 09:06:29Z gusi $
 
 PORTNAME=	evince
-PORTVERSION=	3.14.0
+PORTVERSION=	3.14.1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,8 +22,8 @@ RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 		adwaita-icon-theme>=0:${PORTSDIR}/x11-themes/adwaita-icon-theme \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USES=		compiler:c++11-lang desktop-file-utils gettext gmake libtool \
-		pathfix pkgconfig tar:xz
+USES=		desktop-file-utils gettext gmake libtool pathfix \
+		pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
