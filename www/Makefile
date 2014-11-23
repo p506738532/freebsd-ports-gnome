@@ -347,6 +347,7 @@
     SUBDIR += jtoolkit
     SUBDIR += junkbuster
     SUBDIR += kannel
+    SUBDIR += kcgi
     SUBDIR += kdewebdev4
     SUBDIR += kpartsplugin
     SUBDIR += kplaylist
@@ -563,6 +564,7 @@
     SUBDIR += p5-Amon2
     SUBDIR += p5-Amon2-Lite
     SUBDIR += p5-Amon2-Plugin-LogDispatch
+    SUBDIR += p5-Amon2-Plugin-Web-CSRFDefender
     SUBDIR += p5-Amon2-Plugin-Web-MobileAgent
     SUBDIR += p5-Any-Template
     SUBDIR += p5-Any-URI-Escape
@@ -1763,6 +1765,7 @@
     SUBDIR += rubygem-cuba
     SUBDIR += rubygem-d3_rails
     SUBDIR += rubygem-d3_rails-rails4
+    SUBDIR += rubygem-dashing
     SUBDIR += rubygem-davclient
     SUBDIR += rubygem-domainatrix
     SUBDIR += rubygem-dropzonejs-rails

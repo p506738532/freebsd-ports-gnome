@@ -1281,6 +1281,7 @@
     SUBDIR += mercator
     SUBDIR += mercurial
     SUBDIR += mercurialeclipse
+    SUBDIR += mico
     SUBDIR += mime
     SUBDIR += mimir
     SUBDIR += mingw32-bin-msvcrt
@@ -1675,6 +1676,7 @@
     SUBDIR += p5-Code-Perl
     SUBDIR += p5-Commands-Guarded
     SUBDIR += p5-CommitBit
+    SUBDIR += p5-Compiler-Lexer
     SUBDIR += p5-Config-Any
     SUBDIR += p5-Config-ApacheFormat
     SUBDIR += p5-Config-Auto
@@ -2572,6 +2574,7 @@
     SUBDIR += p5-POEx-Role-SessionInstantiation
     SUBDIR += p5-POEx-Role-Streaming
     SUBDIR += p5-POEx-Types
+    SUBDIR += p5-POSIX-strftime-Compiler
     SUBDIR += p5-POSIX-strptime
     SUBDIR += p5-PPerl
     SUBDIR += p5-PV
@@ -2629,6 +2632,7 @@
     SUBDIR += p5-Perl-Metrics-Simple
     SUBDIR += p5-Perl-OSType
     SUBDIR += p5-Perl-PrereqScanner
+    SUBDIR += p5-Perl-PrereqScanner-Lite
     SUBDIR += p5-Perl-Tidy
     SUBDIR += p5-Perl-Unsafe-Signals
     SUBDIR += p5-Perl-Version
@@ -2738,6 +2742,7 @@
     SUBDIR += p5-Scalar-Does
     SUBDIR += p5-Scalar-Listify
     SUBDIR += p5-Scalar-String
+    SUBDIR += p5-Scalar-Util-LooksLikeNumber
     SUBDIR += p5-Scope-Guard
     SUBDIR += p5-Scope-Upper
     SUBDIR += p5-Script-isAperlScript

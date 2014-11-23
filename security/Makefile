@@ -9,6 +9,7 @@
     SUBDIR += R-cran-digest
     SUBDIR += aescrypt
     SUBDIR += aespipe
+    SUBDIR += afl
     SUBDIR += afterglow
     SUBDIR += aide
     SUBDIR += aimsniff
@@ -150,6 +151,7 @@
     SUBDIR += gnomint
     SUBDIR += gnupg
     SUBDIR += gnupg1
+    SUBDIR += gnupg20
     SUBDIR += gnutls
     SUBDIR += go.crypto
     SUBDIR += goptlib
@@ -532,6 +534,8 @@
     SUBDIR += p5-Dancer-Plugin-Auth-Extensible
     SUBDIR += p5-Dancer-Plugin-Auth-Extensible-Provider-Usergroup
     SUBDIR += p5-Dancer-Plugin-Passphrase
+    SUBDIR += p5-Dancer2-Plugin-Auth-Extensible
+    SUBDIR += p5-Dancer2-Plugin-Passphrase
     SUBDIR += p5-Data-Entropy
     SUBDIR += p5-Data-Password
     SUBDIR += p5-Digest

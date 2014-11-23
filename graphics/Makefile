@@ -44,6 +44,7 @@
     SUBDIR += apngdis
     SUBDIR += apvlv
     SUBDIR += aqsis
+    SUBDIR += argyllcms
     SUBDIR += asciio
     SUBDIR += atril
     SUBDIR += autopano-sift-c
@@ -239,6 +240,7 @@
     SUBDIR += gdchart
     SUBDIR += gdk-pixbuf
     SUBDIR += gdk-pixbuf2
+    SUBDIR += gdtclft
     SUBDIR += geeqie
     SUBDIR += gegl
     SUBDIR += generic_image_decoder
@@ -790,6 +792,7 @@
     SUBDIR += picviz
     SUBDIR += piddle
     SUBDIR += pinpoint
+    SUBDIR += pinta
     SUBDIR += pixelize
     SUBDIR += pixen
     SUBDIR += pixie
@@ -1071,7 +1074,6 @@
     SUBDIR += xv
     SUBDIR += xv-m17n
     SUBDIR += xwpick
-    SUBDIR += xzgv
     SUBDIR += yafray
     SUBDIR += yagf
     SUBDIR += yed

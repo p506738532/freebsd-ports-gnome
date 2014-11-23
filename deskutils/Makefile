@@ -104,7 +104,6 @@
     SUBDIR += gruler
     SUBDIR += gtg
     SUBDIR += gtimer
-    SUBDIR += gtkjournal
     SUBDIR += gtodo
     SUBDIR += gtweakui
     SUBDIR += gucharmap
@@ -220,7 +219,6 @@
     SUBDIR += simpleagenda
     SUBDIR += simplegroupware
     SUBDIR += sliderule
-    SUBDIR += splashsetter
     SUBDIR += steadyflow
     SUBDIR += strigi
     SUBDIR += strigiclient
@@ -271,6 +269,7 @@
     SUBDIR += xfce4-notifyd
     SUBDIR += xfce4-tumbler
     SUBDIR += xfce4-volumed
+    SUBDIR += xfce4-volumed-pulse
     SUBDIR += xfce4-xkb-plugin
     SUBDIR += xmaddressbook
     SUBDIR += xmdiary

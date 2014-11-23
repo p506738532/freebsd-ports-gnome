@@ -100,7 +100,6 @@
     SUBDIR += gtk-theme-switch2
     SUBDIR += gtkchtheme
     SUBDIR += gtkterm2
-    SUBDIR += gtstarter
     SUBDIR += guake
     SUBDIR += hotwire-shell
     SUBDIR += hs-X11
@@ -369,6 +368,7 @@
     SUBDIR += xf86vidmodeproto
     SUBDIR += xfce4-clipman-plugin
     SUBDIR += xfce4-conf
+    SUBDIR += xfce4-dashboard
     SUBDIR += xfce4-embed-plugin
     SUBDIR += xfce4-quicklauncher-plugin
     SUBDIR += xfce4-screenshooter-plugin

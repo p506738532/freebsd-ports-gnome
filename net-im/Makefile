@@ -141,10 +141,11 @@
     SUBDIR += rubygem-termtter
     SUBDIR += rubygem-tinder
     SUBDIR += sendxmpp
+    SUBDIR += sigram
     SUBDIR += skype
     SUBDIR += skype-devel
     SUBDIR += skype4
-    SUBDIR += telegram-cli
+    SUBDIR += telegram
     SUBDIR += telepathy-butterfly
     SUBDIR += telepathy-farsight
     SUBDIR += telepathy-farstream
@@ -160,7 +161,6 @@
     SUBDIR += telepathy-rakia
     SUBDIR += telepathy-salut
     SUBDIR += telepathy-sofiasip
-    SUBDIR += tg
     SUBDIR += tkabber
     SUBDIR += tkabber-plugins
     SUBDIR += tkabbur

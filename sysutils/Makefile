@@ -245,6 +245,7 @@
     SUBDIR += filewatcherd
     SUBDIR += finfo
     SUBDIR += firstboot-freebsd-update
+    SUBDIR += firstboot-growfs
     SUBDIR += firstboot-pkgs
     SUBDIR += flasher
     SUBDIR += flashrom
@@ -670,7 +671,6 @@
     SUBDIR += pecl-proctitle
     SUBDIR += pefs-kmod
     SUBDIR += personality
-    SUBDIR += pessulus
     SUBDIR += pflogx
     SUBDIR += pfstat
     SUBDIR += pftables
@@ -863,7 +863,6 @@
     SUBDIR += searchmonkey
     SUBDIR += seatools
     SUBDIR += sec
-    SUBDIR += serpentine
     SUBDIR += setcdboot
     SUBDIR += setquota
     SUBDIR += sformat

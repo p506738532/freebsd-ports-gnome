@@ -57,7 +57,6 @@
     SUBDIR += emacs
     SUBDIR += emacs-devel
     SUBDIR += emacs-nox11
-    SUBDIR += emacs23
     SUBDIR += fb
     SUBDIR += flim
     SUBDIR += fpc-ide
@@ -219,6 +218,7 @@
     SUBDIR += pico-alpine
     SUBDIR += pluma
     SUBDIR += poedit
+    SUBDIR += psgml
     SUBDIR += puff
     SUBDIR += py-room
     SUBDIR += rox-edit
