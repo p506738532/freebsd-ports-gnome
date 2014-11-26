@@ -77,7 +77,6 @@
     SUBDIR += checkbot
     SUBDIR += chems
     SUBDIR += cherokee
-    SUBDIR += chimera
     SUBDIR += choqok
     SUBDIR += chpasswd
     SUBDIR += chromium
@@ -392,6 +391,7 @@
     SUBDIR += luakit
     SUBDIR += lynx
     SUBDIR += lynx-current
+    SUBDIR += madsonic
     SUBDIR += magento
     SUBDIR += mahara
     SUBDIR += man2web

@@ -240,6 +240,7 @@
     SUBDIR += cmake-fedora
     SUBDIR += cmake-gui
     SUBDIR += cmake-modules
+    SUBDIR += cmake-modules-webos
     SUBDIR += cmph
     SUBDIR += cmunge
     SUBDIR += cobf
@@ -382,17 +383,11 @@
     SUBDIR += ebnf2yacc
     SUBDIR += ecb
     SUBDIR += ecgi
-    SUBDIR += ecore
-    SUBDIR += ecore-file
-    SUBDIR += ecore-ipc
-    SUBDIR += ecore-main
     SUBDIR += edb
-    SUBDIR += eet
+    SUBDIR += efl
     SUBDIR += eggdbus
     SUBDIR += egypt
     SUBDIR += eiffelstudio
-    SUBDIR += eina
-    SUBDIR += eio
     SUBDIR += elf
     SUBDIR += elfio
     SUBDIR += elfkickers
@@ -1089,7 +1084,6 @@
     SUBDIR += libnxt
     SUBDIR += liboil
     SUBDIR += libol
-    SUBDIR += libole2
     SUBDIR += libolecf
     SUBDIR += liboobs
     SUBDIR += liboop
