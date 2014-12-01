@@ -12,8 +12,12 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME Symbolic Icons
 
 INSTALLS_ICONS=	yes
-USES=		gmake pathfix pkgconfig tar:xz
+USES=		gettext-tools gmake pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix intltool
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	ac_cv_path_GTK_ENCODE_SYMBOLIC_SVG="false"
+
+post-install:
+	@${RM} -rf ${STAGEDIR}${PREFIX}/share/locale
 
 .include <bsd.port.mk>

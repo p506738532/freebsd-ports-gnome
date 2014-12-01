@@ -5,6 +5,69 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20141130:
+  AFFECTS: users of devel/gettext (close to everyone)
+  AUTHOR: tijl@FreeBSD.org
+
+  The devel/gettext port has been split up in devel/gettext-runtime, a
+  lightweight package containing runtime libraries, and devel/gettext-tools,
+  a package containing developer tools.  The devel/gettext port still exists
+  as a metaport.
+
+  You must first delete the existing installation of gettext and then
+  reinstall it.  This will break sudo, so you *must* do this in a root
+  shell (sudo -i) if you use sudo.
+
+  # pkg delete -f gettext
+  # portmaster devel/gettext
+
+  Or for portupgrade users:
+
+  # pkg delete -f gettext
+  # portinstall devel/gettext
+
+20141127:
+  AFFECTS: users of lang/perl5.*
+  AUTHOR: mat@FreeBSD.org
+
+  There was a nasty bug introduced in the update below, it was introduced in
+  svn revision 373476 and corrected in 373485.  If you get errors looking like
+  this one:
+
+  ===>   Registering installation for p5-Params-Util-1.07_1 as automatic
+  pkg-static: lstat(/usr/ports/devel/p5-Params-Util/work/stage/usr/local/./usr/local/lib/perl5/site_perl/mach/5.16/auto/Params/Util/.packlist): No such file or directory
+  *** [fake-pkg] Error code 74
+
+  You will have to wipe your ports tree clean.  If using portsnap, with:
+
+    portsnap extract
+
+  If using subversion:
+
+    svn revert -R
+
+20141127:
+  AFFECTS: users of lang/perl5.*
+  AUTHOR: mat@FreeBSD.org
+
+  The .packlist files are back, if you upgraded all your p5- ports yesterday
+  and need them, you will need to reinstall them again, see yesterday's update
+  for instructions.
+
+20141126:
+  AFFECTS: users of multimedia/x264
+  AUTHOR: xmj@FreeBSD.org
+
+  With the recent split of multimedia/x264 in library and binary and library
+  components, if an application that uses libx264 is updated before x264 itself,
+  multimedia/libx264 will conflict with the existing x264 package. Delete
+  this package before continuing any update that depends on it: 
+  
+  # pkg delete -f x264
+  
+  Install the updated x264 and/or upgrade the other applications that
+  depend on libx264, such as ffmpeg.
+
 20141126:
   AFFECTS: users of lang/perl5.*
   AUTHOR: mat@FreeBSD.org

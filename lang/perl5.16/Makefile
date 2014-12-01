@@ -3,7 +3,7 @@
 
 PORTNAME=	perl
 PORTVERSION=	${PERL_VERSION}
-PORTREVISION=	12
+PORTREVISION=	16
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	CPAN \
 		${MASTER_SITE_LOCAL:S/$/:local/} \
@@ -22,11 +22,14 @@ LICENSE_COMB=	dual
 LICENSE_FILE_ART10=	${WRKSRC}/Artistic
 LICENSE_FILE_GPLv1=	${WRKSRC}/Copying
 
+DEPRECATED=	Unsupported, please upgrade to a more recent version of Perl
+EXPIRATION_DATE=2015-07-31
+
 CONFLICTS_INSTALL=	perl5.*-*
 
 OPTIONS_DEFINE=	DEBUG GDBM PERL_MALLOC PERL_64BITINT THREADS PTHREAD \
 		MULTIPLICITY SITECUSTOMIZE USE_PERL
-OPTIONS_DEFAULT=	PERL_64BITINT THREADS PTHREAD USE_PERL
+OPTIONS_DEFAULT=	PERL_64BITINT THREADS PTHREAD USE_PERL MULTIPLICITY
 OPTIONS_SUB=
 GDBM_DESC=	GDBM_File extension
 PERL_MALLOC_DESC=	Use Perl malloc
@@ -54,6 +57,7 @@ USES=	tar:bzip2 cpe
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=Configure
 CONFIGURE_ARGS=	-sde -Dprefix=${PREFIX} \
+	-Dlibperl=libperl.so.${PERL_VER} \
 	-Darchlib=${PREFIX}/lib/perl5/${PERL_VER}/${PERL_ARCH} \
 	-Dprivlib=${PREFIX}/lib/perl5/${PERL_VER} \
 	-Dman3dir=${PREFIX}/${MAN3PREFIX_REL}/man/man3 \
@@ -74,6 +78,7 @@ MAKE_ENV+=	${LOCALE_CLEANUP}
 
 SUB_LIST+=	PERL_VERSION=${PERL_VERSION} \
 		PERL_VER=${PERL_VER} \
+		SITE_PERL=${SITE_PERL_REL} \
 		PERL_ARCH=${PERL_ARCH}
 
 SUB_FILES=	perl5_version use.perl perl-man.conf
@@ -113,7 +118,7 @@ CONFIGURE_ARGS+=	\
     -Accflags=-DPERLIOBUF_DEFAULT_BUFSIZ=${PERLIOBUF_DEFAULT_BUFSIZ}
 .endif
 
-MAN3PREFIX_REL=	lib/perl5/${PERL_VER}
+MAN3PREFIX_REL=	lib/perl5/${PERL_VER}/perl
 MAN3PREFIX=	${PREFIX}/${MAN3PREFIX_REL}
 MANDIRS+=	${MAN3PREFIX}/man
 
@@ -170,6 +175,8 @@ CONFIGURE_ARGS+=	-Duse64bitint
 
 .if ${PORT_OPTIONS:MMULTIPLICITY}
 CONFIGURE_ARGS+=	-Dusemultiplicity=y
+.else
+CONFIGURE_ARGS+=	-Dusemultiplicity=n
 .endif
 
 .if ${PORT_OPTIONS:MSITECUSTOMIZE}
@@ -211,8 +218,9 @@ post-install:
 	${MKDIR} ${STAGEDIR}${SITE_MAN3}
 	${MKDIR} ${STAGEDIR}${SITE_ARCH}/auto
 	${MKDIR} ${STAGEDIR}${SITE_PERL}/auto
-	${RM} ${STAGEDIR}${PREFIX}/lib/perl5/${PERL_VER}/${PERL_ARCH}/.packlist
 	${LN} ${STAGEDIR}${PREFIX}/bin/perl${PERL_VERSION} ${STAGEDIR}${PREFIX}/bin/perl5
+	${LN} -s libperl.so.${PERL_VER} ${STAGEDIR}${PREFIX}/lib/perl5/${PERL_VER}/${PERL_ARCH}/CORE/libperl.so
+	${LN} -s libperl.so.${PERL_VER} ${STAGEDIR}${PREFIX}/lib/perl5/${PERL_VER}/${PERL_ARCH}/CORE/libperl.so.${PERL_VERSION}
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/perl${PERL_VERSION}
 	${INSTALL_DATA} ${WRKDIR}/perl5_version ${STAGEDIR}${PREFIX}/etc
 	${FIND} ${STAGEDIR} -name '*.bs' -size 0 -delete
@@ -220,7 +228,7 @@ post-install:
 	${MKDIR} ${STAGEDIR}${SITE_ARCH}/sys
 	# h2ph needs perl, but perl is not installed, it's only
 	# staged, so, use the one in WRKDIR 
-	(cd /usr/include && ${ENV} LD_LIBRARY_PATH=${WRKSRC} \
+	(cd /usr/include && ${SETENV} LD_LIBRARY_PATH=${WRKSRC} \
 		${WRKSRC}/perl -I ${WRKSRC}/lib ${STAGEDIR}${PREFIX}/bin/h2ph \
 		-d ${STAGEDIR}${SITE_ARCH} *.h machine/*.h sys/*.h >/dev/null)
 	@${FIND} ${STAGEDIR}${SITE_ARCH} -name '*.ph' | sed -e 's|${STAGEDIR}||' >> ${TMPPLIST}

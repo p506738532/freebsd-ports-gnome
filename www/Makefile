@@ -120,7 +120,6 @@
     SUBDIR += dotclear
     SUBDIR += dotproject
     SUBDIR += download-gemist
-    SUBDIR += dpsearch
     SUBDIR += drood
     SUBDIR += drraw
     SUBDIR += drupal6
@@ -400,6 +399,7 @@
     SUBDIR += mediawiki119
     SUBDIR += mediawiki122
     SUBDIR += mediawiki123
+    SUBDIR += mediawiki124
     SUBDIR += mergelog
     SUBDIR += mgstat
     SUBDIR += mhonarc
@@ -1919,6 +1919,7 @@
     SUBDIR += sarg
     SUBDIR += scloader
     SUBDIR += script4rss
+    SUBDIR += seahub
     SUBDIR += seamonkey
     SUBDIR += seamonkey-i18n
     SUBDIR += selenium

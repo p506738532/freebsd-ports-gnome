@@ -49,6 +49,7 @@
     SUBDIR += dlv
     SUBDIR += dmd1
     SUBDIR += dmd2
+    SUBDIR += duktape
     SUBDIR += ecl
     SUBDIR += elan
     SUBDIR += elixir
@@ -116,7 +117,6 @@
     SUBDIR += intel2gas
     SUBDIR += intercal
     SUBDIR += io
-    SUBDIR += ironpython
     SUBDIR += itcl
     SUBDIR += itcl4
     SUBDIR += jakarta-commons-jelly

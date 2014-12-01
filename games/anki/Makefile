@@ -3,11 +3,12 @@
 
 PORTNAME=	anki
 PORTVERSION=	2.0.31
+PORTREVISION=	1
 CATEGORIES=	games python
 MASTER_SITES=	http://ankisrs.net/download/mirror/
 DIST_SUBDIR=	python
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	trebbu@googlemail.com
 COMMENT=	Flashcard trainer with spaced repetition
 
 LICENSE=	AGPLv3
@@ -31,7 +32,7 @@ USE_QT4=	network_run webkit_run
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
 
-NLS_USES=	gettext:run
+NLS_USES=	gettext-runtime:run
 
 .include <bsd.port.options.mk>
 

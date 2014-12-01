@@ -28,6 +28,8 @@ GH_COMMIT=	329139f
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 
+GLIB_SCHEMAS=	org.gnome.shell.extensions.weather.gschema.xml
+
 pre-configure:
 		cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
 
