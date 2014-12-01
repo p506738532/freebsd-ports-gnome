@@ -57,7 +57,6 @@
     SUBDIR += emacs
     SUBDIR += emacs-devel
     SUBDIR += emacs-nox11
-    SUBDIR += emacs23
     SUBDIR += fb
     SUBDIR += flim
     SUBDIR += fpc-ide
@@ -68,7 +67,6 @@
     SUBDIR += gedit-plugins
     SUBDIR += ghex
     SUBDIR += gmanedit
-    SUBDIR += gnome2-office
     SUBDIR += gnotepad+
     SUBDIR += gobby
     SUBDIR += gwrite
@@ -90,6 +88,7 @@
     SUBDIR += kile-kde4
     SUBDIR += klat4
     SUBDIR += komodo-edit
+    SUBDIR += latexila
     SUBDIR += lazarus
     SUBDIR += lazarus-lcl-gtk
     SUBDIR += lazarus-lcl-gtk2
@@ -220,6 +219,7 @@
     SUBDIR += pico-alpine
     SUBDIR += pluma
     SUBDIR += poedit
+    SUBDIR += psgml
     SUBDIR += puff
     SUBDIR += py-room
     SUBDIR += rox-edit

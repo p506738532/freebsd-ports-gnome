@@ -75,7 +75,6 @@
     SUBDIR += cmt
     SUBDIR += cmus
     SUBDIR += cmus-post.fm
-    SUBDIR += cowbell
     SUBDIR += cpige
     SUBDIR += cplay
     SUBDIR += cpp-xmms2
@@ -199,6 +198,7 @@
     SUBDIR += gnaural
     SUBDIR += gnome-audio
     SUBDIR += gnome-media
+    SUBDIR += gnome-music
     SUBDIR += gnomoradio
     SUBDIR += gnormalize
     SUBDIR += gnuitar

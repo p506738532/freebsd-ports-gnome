@@ -77,7 +77,6 @@
     SUBDIR += checkbot
     SUBDIR += chems
     SUBDIR += cherokee
-    SUBDIR += chimera
     SUBDIR += choqok
     SUBDIR += chpasswd
     SUBDIR += chromium
@@ -121,7 +120,6 @@
     SUBDIR += dotclear
     SUBDIR += dotproject
     SUBDIR += download-gemist
-    SUBDIR += dpsearch
     SUBDIR += drood
     SUBDIR += drraw
     SUBDIR += drupal6
@@ -171,10 +169,8 @@
     SUBDIR += entrans
     SUBDIR += ephemera
     SUBDIR += epiphany
-    SUBDIR += epiphany-extensions
     SUBDIR += erwn
     SUBDIR += eventum
-    SUBDIR += evolution-webcal
     SUBDIR += extjs
     SUBDIR += fancybox
     SUBDIR += faup
@@ -349,6 +345,7 @@
     SUBDIR += jtoolkit
     SUBDIR += junkbuster
     SUBDIR += kannel
+    SUBDIR += kcgi
     SUBDIR += kdewebdev4
     SUBDIR += kpartsplugin
     SUBDIR += kplaylist
@@ -362,6 +359,7 @@
     SUBDIR += libhpack
     SUBDIR += libhtp-suricata
     SUBDIR += libmicrohttpd
+    SUBDIR += libsocialweb
     SUBDIR += libwww
     SUBDIR += libxul
     SUBDIR += lifetype
@@ -392,6 +390,7 @@
     SUBDIR += luakit
     SUBDIR += lynx
     SUBDIR += lynx-current
+    SUBDIR += madsonic
     SUBDIR += magento
     SUBDIR += mahara
     SUBDIR += man2web
@@ -400,6 +399,7 @@
     SUBDIR += mediawiki119
     SUBDIR += mediawiki122
     SUBDIR += mediawiki123
+    SUBDIR += mediawiki124
     SUBDIR += mergelog
     SUBDIR += mgstat
     SUBDIR += mhonarc
@@ -564,6 +564,7 @@
     SUBDIR += p5-Amon2
     SUBDIR += p5-Amon2-Lite
     SUBDIR += p5-Amon2-Plugin-LogDispatch
+    SUBDIR += p5-Amon2-Plugin-Web-CSRFDefender
     SUBDIR += p5-Amon2-Plugin-Web-MobileAgent
     SUBDIR += p5-Any-Template
     SUBDIR += p5-Any-URI-Escape
@@ -1764,6 +1765,7 @@
     SUBDIR += rubygem-cuba
     SUBDIR += rubygem-d3_rails
     SUBDIR += rubygem-d3_rails-rails4
+    SUBDIR += rubygem-dashing
     SUBDIR += rubygem-davclient
     SUBDIR += rubygem-domainatrix
     SUBDIR += rubygem-dropzonejs-rails
@@ -1917,6 +1919,7 @@
     SUBDIR += sarg
     SUBDIR += scloader
     SUBDIR += script4rss
+    SUBDIR += seahub
     SUBDIR += seamonkey
     SUBDIR += seamonkey-i18n
     SUBDIR += selenium

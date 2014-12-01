@@ -54,7 +54,7 @@
     SUBDIR += dvdrip
     SUBDIR += dvdstyler
     SUBDIR += dvts
-    SUBDIR += emotion
+    SUBDIR += emotion_generic_players-vlc
     SUBDIR += emovix
     SUBDIR += ffmpeg
     SUBDIR += ffmpeg0
@@ -177,6 +177,7 @@
     SUBDIR += libfame
     SUBDIR += libkate
     SUBDIR += libmatroska
+    SUBDIR += libmediaart
     SUBDIR += libmediainfo
     SUBDIR += libmovtar
     SUBDIR += libmpeg2
@@ -198,6 +199,7 @@
     SUBDIR += libva-vdpau-driver
     SUBDIR += libvdpau
     SUBDIR += libvpx
+    SUBDIR += libx264
     SUBDIR += libxine
     SUBDIR += libxspf
     SUBDIR += libzen
@@ -322,6 +324,7 @@
     SUBDIR += quodlibet
     SUBDIR += quvi
     SUBDIR += quvi09
+    SUBDIR += rage
     SUBDIR += recmpeg
     SUBDIR += recordmydesktop
     SUBDIR += replex
@@ -339,6 +342,7 @@
     SUBDIR += smplayer-themes
     SUBDIR += sms1xxx-kmod
     SUBDIR += smtube
+    SUBDIR += snappy
     SUBDIR += spigot
     SUBDIR += spook
     SUBDIR += spotify-websocket-api
@@ -415,7 +419,6 @@
     SUBDIR += xporthdmv
     SUBDIR += xtheater
     SUBDIR += xvid
-    SUBDIR += y4mscaler
     SUBDIR += yamdi
     SUBDIR += zoneminder
 

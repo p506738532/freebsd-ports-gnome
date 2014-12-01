@@ -44,6 +44,7 @@
     SUBDIR += apngdis
     SUBDIR += apvlv
     SUBDIR += aqsis
+    SUBDIR += argyllcms
     SUBDIR += asciio
     SUBDIR += atril
     SUBDIR += autopano-sift-c
@@ -85,7 +86,10 @@
     SUBDIR += clutter
     SUBDIR += clutter-box2d
     SUBDIR += clutter-gtk
+    SUBDIR += clutter-gtk3
+    SUBDIR += cluttermm
     SUBDIR += code-eli
+    SUBDIR += cogl
     SUBDIR += colord
     SUBDIR += colord-gtk
     SUBDIR += comical
@@ -129,9 +133,6 @@
     SUBDIR += duhdraw
     SUBDIR += dynamechs
     SUBDIR += easypaint
-    SUBDIR += ecore-evas
-    SUBDIR += ecore-sdl
-    SUBDIR += edje
     SUBDIR += edje_viewer
     SUBDIR += electrix
     SUBDIR += enblend
@@ -149,33 +150,13 @@
     SUBDIR += epstool
     SUBDIR += etch
     SUBDIR += eterm-bg
-    SUBDIR += ethumb
-    SUBDIR += evas
-    SUBDIR += evas-core
-    SUBDIR += evas-engine-buffer
-    SUBDIR += evas-engine-opengl
-    SUBDIR += evas-engine-sdl
-    SUBDIR += evas-engine-x11
-    SUBDIR += evas-loader-bmp
-    SUBDIR += evas-loader-eet
-    SUBDIR += evas-loader-generic
-    SUBDIR += evas-loader-gif
-    SUBDIR += evas-loader-ico
-    SUBDIR += evas-loader-jpeg
-    SUBDIR += evas-loader-pmaps
-    SUBDIR += evas-loader-png
-    SUBDIR += evas-loader-psd
-    SUBDIR += evas-loader-svg
-    SUBDIR += evas-loader-tga
-    SUBDIR += evas-loader-tiff
-    SUBDIR += evas-loader-wbmp
-    SUBDIR += evas-loader-xpm
     SUBDIR += evas_generic_loaders-gst
     SUBDIR += evas_generic_loaders-pdf
     SUBDIR += evas_generic_loaders-ps
     SUBDIR += evas_generic_loaders-raw
     SUBDIR += evas_generic_loaders-svg
     SUBDIR += evas_generic_loaders-xcf
+    SUBDIR += evas_generic_loaders
     SUBDIR += evince
     SUBDIR += evolvotron
     SUBDIR += exact-image
@@ -236,6 +217,7 @@
     SUBDIR += gdchart
     SUBDIR += gdk-pixbuf
     SUBDIR += gdk-pixbuf2
+    SUBDIR += gdtclft
     SUBDIR += geeqie
     SUBDIR += gegl
     SUBDIR += generic_image_decoder
@@ -289,6 +271,8 @@
     SUBDIR += gmt
     SUBDIR += gnash
     SUBDIR += gnofract4d
+    SUBDIR += gnome-color-manager
+    SUBDIR += gnome-video-effects
     SUBDIR += gnustep-slideshow
     SUBDIR += gnustep-slideshowkit
     SUBDIR += gocr
@@ -511,6 +495,7 @@
     SUBDIR += libgnomecanvas-reference
     SUBDIR += libgnomecanvasmm26
     SUBDIR += libgphoto2
+    SUBDIR += libgxps
     SUBDIR += libimg
     SUBDIR += libiptcdata
     SUBDIR += libjpeg-turbo
@@ -557,7 +542,7 @@
     SUBDIR += linux-c6-sdl_ttf
     SUBDIR += linux-c6-dri
     SUBDIR += linux-c6-dri-compat
-    SUBDIR += linux-c6-gdk-pixbuf
+    SUBDIR += linux-c6-gdk-pixbuf2
     SUBDIR += linux-c6-glx-utils
     SUBDIR += linux-c6-jpeg
     SUBDIR += linux-c6-libGLU
@@ -602,7 +587,6 @@
     SUBDIR += mscgen
     SUBDIR += mtpaint
     SUBDIR += multican
-    SUBDIR += multiraw
     SUBDIR += mupdf
     SUBDIR += mxp
     SUBDIR += mypaint
@@ -784,6 +768,7 @@
     SUBDIR += picviz
     SUBDIR += piddle
     SUBDIR += pinpoint
+    SUBDIR += pinta
     SUBDIR += pixelize
     SUBDIR += pixen
     SUBDIR += pixie
@@ -804,6 +789,7 @@
     SUBDIR += poppler-data
     SUBDIR += poppler-glib
     SUBDIR += poppler-qt4
+    SUBDIR += poppler-qt5
     SUBDIR += poppler-utils
     SUBDIR += pornview
     SUBDIR += potrace
@@ -971,6 +957,7 @@
     SUBDIR += seejpeg
     SUBDIR += separate
     SUBDIR += seq2gif
+    SUBDIR += shared-color-profiles
     SUBDIR += sharpconstruct
     SUBDIR += shiva-collections
     SUBDIR += shotwell
@@ -1064,7 +1051,6 @@
     SUBDIR += xv
     SUBDIR += xv-m17n
     SUBDIR += xwpick
-    SUBDIR += xzgv
     SUBDIR += yafray
     SUBDIR += yagf
     SUBDIR += yed

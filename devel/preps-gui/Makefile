@@ -13,11 +13,14 @@ DIST_SUBDIR=	prep
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Problem reporting system
 
+BROKEN=		public distfiles unavailable
+DEPRECATED=	upstream disappeared
+EXPIRATION_DATE=	2014-12-15
+
 RUN_DEPENDS=	prepsdb_tool:${PORTSDIR}/devel/prepstools
 
-USES=		gmake pathfix pkgconfig
+USES=		gmake pathfix pkgconfig pgsql
 USE_GNOME=	gnomeprefix gtk20 gconf2 libgnomeui
-USE_PGSQL=	yes
 INSTALLS_OMF=	yes
 GCONF_SCHEMAS=	preps.schema
 

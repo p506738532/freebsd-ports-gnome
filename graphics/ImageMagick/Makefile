@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ImageMagick
-DISTVERSION=	6.8.9-10
+DISTVERSION=	6.9.0-0
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	graphics perl5
@@ -396,10 +396,6 @@ pre-configure:
 .endif
 
 post-install: test
-.if ${PORT_OPTIONS:MPERL}
-	@${RM} -f ${STAGEDIR}${PREFIX}/lib/perl5/${PERL_VER}/${PERL_ARCH}/perllocal.pod*
-	@${RM} -f ${STAGEDIR}${SITE_PERL}/${PERL_ARCH}/auto/Image/Magick/.packlist
-.endif
 .if ${PORT_OPTIONS:MMODULES}
 	@${TOUCH} ${STAGEDIR}${PREFIX}/lib/ImageMagick-${PORTVERSION:R}/modules-${_QBIT}${_HDRI}/coders/.keep
 	@${TOUCH} ${STAGEDIR}${PREFIX}/lib/ImageMagick-${PORTVERSION:R}/modules-${_QBIT}${_HDRI}/filters/.keep
