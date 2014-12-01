@@ -1,9 +1,8 @@
 # Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
 # $FreeBSD$
-#   $MCom: ports/trunk/deskutils/gnome-shell-extension-gtile/Makefile 19681 2014-05-23 14:43:21Z gusi $
 
 PORTNAME=	gnome-shell-extension-gtile
-PORTVERSION=	0.0.0.20140520
+PORTVERSION=	0.0.0.20141126
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -15,7 +14,7 @@ BUILD_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 		gsettings-desktop-schemas>=3.12.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-WRKSRC=		${WRKDIR}/vibou-vibou.gTile-259b0dd
+WRKSRC=		${WRKDIR}/vibou-vibou.gTile-${GH_COMMIT}
 
 USES=		gettext gmake pkgconfig tar:xz
 USE_GNOME=	glib20
@@ -25,8 +24,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.shell.extensions.gtile.gschema.xml
 
 GH_ACCOUNT=	vibou
-GH_TAGNAME=	259b0dd59f
-GH_COMMIT=	259b0dd59f
+GH_TAGNAME=	cdad7c1
+GH_COMMIT=	cdad7c1
 GH_PROJECT=	vibou.gTile
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
@@ -34,7 +33,7 @@ PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 NO_BUILD=	yes
 
 post-patch:
-		@${REINPLACE_CMD} -e 's|3.10|3.10","3.12|g' \
+		@${REINPLACE_CMD} -e 's|3.12|3.12","3.14|g' \
 			${WRKSRC}/metadata.json
 		@${REINPLACE_CMD} -e "s|Extension.dir.get_child('schemas').get_path()|'${PREFIX}/share/glib-2.0/schemas'|g" \
 			${WRKSRC}/utils.js
