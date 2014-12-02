@@ -276,7 +276,6 @@
     SUBDIR += cppunit
     SUBDIR += cproto
     SUBDIR += cpuflags
-    SUBDIR += creduce
     SUBDIR += critcl
     SUBDIR += cross-binutils
     SUBDIR += cscope
@@ -4808,6 +4807,7 @@
     SUBDIR += vtcl
     SUBDIR += vxlog
     SUBDIR += wand-libconfig
+    SUBDIR += websocketpp
     SUBDIR += websvn
     SUBDIR += wininfo
     SUBDIR += winpdb
