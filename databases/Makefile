@@ -536,8 +536,10 @@
     SUBDIR += pgadmin3
     SUBDIR += pgagent
     SUBDIR += pgbadger
+    SUBDIR += pgbarman
     SUBDIR += pgbouncer
     SUBDIR += pgdbf
+    SUBDIR += pgespresso
     SUBDIR += pgfouine
     SUBDIR += pglesslog
     SUBDIR += pgloader

@@ -15,7 +15,7 @@ RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell
 WRKSRC=		${WRKDIR}/Neroth-gnome-shell-extension-weather-${GH_COMMIT}
 
 USES=		autoreconf:build gettext gmake libtool pkgconfig tar:xz
-USE_GNOME=	intltool
+USE_GNOME=	glib20 intlhack
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -32,5 +32,6 @@ GLIB_SCHEMAS=	org.gnome.shell.extensions.weather.gschema.xml
 
 pre-configure:
 		cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
+		${intlhack_PRE_PATCH}
 
 .include <bsd.port.mk>
