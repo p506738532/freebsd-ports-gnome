@@ -786,10 +786,7 @@ gnome-post-install:
 	@for i in ${GLIB_SCHEMAS}; do \
 		${ECHO_CMD} "share/glib-2.0/schemas/$${i}" >> ${TMPPLIST}; \
 	done
-	@${ECHO_CMD} "@exec glib-compile-schemas %D/share/glib-2.0/schemas > /dev/null || /usr/bin/true" \
-			>> ${TMPPLIST}; \
-	${ECHO_CMD} "@unexec glib-compile-schemas %D/share/glib-2.0/schemas > /dev/null || /usr/bin/true" \
-			>> ${TMPPLIST};
+	@${ECHO_CMD} "@glib-schemas" >> ${TMPPLIST};
 .endif
 
 .  if defined(INSTALLS_OMF)
