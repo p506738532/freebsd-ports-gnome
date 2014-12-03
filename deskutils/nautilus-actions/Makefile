@@ -28,6 +28,8 @@ CONFIGURE_ARGS=	--with-nautilus-extdir=${LOCALBASE}/lib/nautilus/extensions-3.0 
 		--disable-gconf
 INSTALL_TARGET=	install-strip
 
+PLIST_SUB=	VERSION="3.2.4"
+
 PORTDOCS=	AUTHORS ChangeLog ChangeLog-2008 ChangeLog-2009 ChangeLog-2010 \
 		ChangeLog-2011 ChangeLog-2012 COPYING COPYING-DOCS INSTALL \
 		MAINTAINERS NEWS README README-GCONF TODO
