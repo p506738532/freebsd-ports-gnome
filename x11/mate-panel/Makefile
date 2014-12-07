@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mate-panel
-PORTVERSION=	1.9.1
+PORTVERSION=	1.9.3
 CATEGORIES=	x11 mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -25,6 +25,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-network-manager \
 		--disable-gtk-doc \
+		--with-gtk=2.0 \
 		--with-html-dir=${PREFIX}/share/doc \
 		--libexecdir=${PREFIX}/lib/mate-panel
 INSTALLS_ICONS=	yes
