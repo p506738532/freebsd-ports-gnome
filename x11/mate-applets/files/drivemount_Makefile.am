@@ -1,0 +1,22 @@
+--- drivemount/Makefile.am.orig	2014-12-05 12:32:59.348011747 +0100
++++ drivemount/Makefile.am	2014-12-05 12:33:17.935057901 +0100
+@@ -7,16 +7,16 @@
+ 	$(MATE_APPLETS4_CFLAGS)			\
+ 	$(MATEDESKTOP_CFLAGS)
+ 
+-libexec_PROGRAMS = drivemount-applet
++libexec_PROGRAMS = mate-drivemount-applet
+ 
+-drivemount_applet_SOURCES =	\
++mate_drivemount_applet_SOURCES =	\
+ 	drivemount.c		\
+ 	drive-list.c		\
+ 	drive-list.h		\
+ 	drive-button.c		\
+ 	drive-button.h
+ 
+-drivemount_applet_LDADD =	\
++mate_drivemount_applet_LDADD =	\
+ 	$(MATE_APPLETS4_LIBS)	\
+ 	$(MATEDESKTOP_LIBS)
+ 

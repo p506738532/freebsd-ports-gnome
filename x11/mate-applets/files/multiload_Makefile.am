@@ -1,0 +1,23 @@
+--- multiload/Makefile.am.orig	2014-12-05 12:37:12.295993794 +0100
++++ multiload/Makefile.am	2014-12-05 12:37:32.834993521 +0100
+@@ -8,9 +8,9 @@
+ 	$(MATEDESKTOP_CFLAGS)	\
+ 	$(GIO_CFLAGS)
+ 
+-libexec_PROGRAMS = multiload-applet
++libexec_PROGRAMS = mate-multiload-applet
+ 
+-multiload_applet_SOURCES = \
++mate_multiload_applet_SOURCES = \
+ 			global.h	\
+ 			linux-proc.h	\
+ 			load-graph.h	\
+@@ -22,7 +22,7 @@
+ 			autoscaler.c	\
+ 			autoscaler.h
+ 
+-multiload_applet_LDADD = \
++mate_multiload_applet_LDADD = \
+ 				$(MATE_APPLETS4_LIBS) 	\
+ 				$(GTOP_APPLETS_LIBS)	\
+ 				$(MATEDESKTOP_LIBS)		\
