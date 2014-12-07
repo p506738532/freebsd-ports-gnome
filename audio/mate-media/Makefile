@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mate-media
-PORTVERSION=	1.9.1
+PORTVERSION=	1.9.2
 CATEGORIES=	audio mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -12,7 +12,8 @@ COMMENT=	Multimedia applications for the MATE desktop
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libcanberra-gtk.so:${PORTSDIR}/audio/libcanberra \
-		libmatemixer.so:${PORTSDIR}/audio/libmatemixer
+		libmatemixer.so:${PORTSDIR}/audio/libmatemixer \
+		libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique
 
 PORTSCOUT=	limitw:1,even
 
@@ -22,6 +23,7 @@ USE_GNOME=	glib20 gtk20 intlhack libxml2
 USE_LDCONFIG=	yes
 USE_GSTREAMER=	good
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--with-gtk=2.0
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
