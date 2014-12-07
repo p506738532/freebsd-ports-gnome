@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mate-terminal
-PORTVERSION=	1.8.1
+PORTVERSION=	1.9.0
 CATEGORIES=	x11 mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -15,6 +15,7 @@ BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake pathfix pkgconfig tar:xz
+USE_MATE=	desktop
 USE_XORG=	sm x11
 USE_GNOME=	dconf gtk20 intlhack vte
 GNU_CONFIGURE=	yes
