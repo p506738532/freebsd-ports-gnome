@@ -564,6 +564,7 @@
     SUBDIR += nvramtool
     SUBDIR += oak
     SUBDIR += obliterate
+    SUBDIR += odo
     SUBDIR += ods2
     SUBDIR += open
     SUBDIR += openipmi
@@ -815,8 +816,6 @@
     SUBDIR += rubygem-hammer_cli_foreman_bootdisk
     SUBDIR += rubygem-hammer_cli_foreman_ssh
     SUBDIR += rubygem-hiera
-    SUBDIR += rubygem-hiera-json
-    SUBDIR += rubygem-hiera-puppet
     SUBDIR += rubygem-librarian-puppet
     SUBDIR += rubygem-log4r
     SUBDIR += rubygem-mogilefs-client

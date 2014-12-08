@@ -1,7 +1,7 @@
 # $FreeBSD$
 #
 
-    COMMENT = Databases
+    COMMENT = Databases and related software
 
     SUBDIR += R-cran-DBI
     SUBDIR += R-cran-RMySQL
@@ -171,7 +171,6 @@
     SUBDIR += mdbtools
     SUBDIR += mdcached
     SUBDIR += memcached
-    SUBDIR += memcachedb
     SUBDIR += memcacheq
     SUBDIR += metakit
     SUBDIR += monetdb
@@ -205,6 +204,7 @@
     SUBDIR += mysql56-client
     SUBDIR += mysql56-server
     SUBDIR += mysqlbackup
+    SUBDIR += mysqlbigram
     SUBDIR += mysqldumper
     SUBDIR += mysqlidxchk
     SUBDIR += mysqlreport
@@ -397,8 +397,8 @@
     SUBDIR += p5-Dancer-Plugin-Database-Core
     SUBDIR += p5-Dancer-Plugin-Redis
     SUBDIR += p5-Dancer-Session-Memcached
-    SUBDIR += p5-Dancer2-Plugin-Database
     SUBDIR += p5-Dancer2-Plugin-DBIC
+    SUBDIR += p5-Dancer2-Plugin-Database
     SUBDIR += p5-Data-Page
     SUBDIR += p5-Data-Pageset
     SUBDIR += p5-Exception-Class-DBI
@@ -537,8 +537,10 @@
     SUBDIR += pgadmin3
     SUBDIR += pgagent
     SUBDIR += pgbadger
+    SUBDIR += pgbarman
     SUBDIR += pgbouncer
     SUBDIR += pgdbf
+    SUBDIR += pgespresso
     SUBDIR += pgfouine
     SUBDIR += pglesslog
     SUBDIR += pgloader
@@ -685,7 +687,6 @@
     SUBDIR += postgresql93-plperl
     SUBDIR += postgresql93-plpython
     SUBDIR += postgresql93-pltcl
-    SUBDIR += postgresql93-plv8js
     SUBDIR += postgresql93-server
     SUBDIR += postgresql94-client
     SUBDIR += postgresql94-contrib
@@ -827,12 +828,13 @@
     SUBDIR += rubygem-activemodel
     SUBDIR += rubygem-activemodel4
     SUBDIR += rubygem-activerecord
-    SUBDIR += rubygem-activerecord4
     SUBDIR += rubygem-activerecord-jdbc-adapter
     SUBDIR += rubygem-activerecord-jdbcmysql-adapter
     SUBDIR += rubygem-activerecord-mysql-adapter
+    SUBDIR += rubygem-activerecord4
     SUBDIR += rubygem-amalgalite
     SUBDIR += rubygem-arel
+    SUBDIR += rubygem-arel-helpers
     SUBDIR += rubygem-arel3
     SUBDIR += rubygem-awesome_nested_set
     SUBDIR += rubygem-bdb1
