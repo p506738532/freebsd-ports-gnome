@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mate-system-monitor
-PORTVERSION=	1.8.0
+PORTVERSION=	1.9.1
 CATEGORIES=	sysutils mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -19,6 +19,7 @@ PORTSCOUT=	limitw:1,even
 USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_MATE=	icontheme
 USE_GNOME=	gnomehier gtk20 librsvg2 intlhack libxml2 gtkmm24 libwnck
+CONFIGURE_ARGS=	--with-gtk=2.0
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-lutil"
 CPPFLAGS+=	-I${LOCALBASE}/include
