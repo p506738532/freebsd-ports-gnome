@@ -3,7 +3,7 @@
 
 PORTNAME=	atril
 PORTVERSION=	1.8.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics print mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -24,13 +24,12 @@ PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig tar:xz
-USE_MATE=	icontheme
+USE_MATE=	caja icontheme
 USE_XORG=	sm
 USE_GNOME=	cairo gtk20 intlhack libxml2
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gtk=2.0 \
-		--disable-xps \
 		--disable-static
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -39,13 +38,14 @@ INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.mate.Atril.gschema.xml
 
-OPTIONS_DEFINE=	DVI T1LIB CAJA COMICS DJVU
+OPTIONS_DEFINE=	DVI T1LIB CAJA COMICS DJVU XPS
 OPTIONS_DEFAULT=CAJA COMICS
 DVI_DESC=	DVI viewer support
 T1LIB_DESC=	T1LIB for TYPE1 fonts to DVI (Enables DVI)
 CAJA_DESC=	Caja plugin
 COMICS_DESC=	Comic book archives support
 DJVU_DESC=	DJVU support
+XPS_DESC=	XPS support
 
 OPTIONS_SUB=	yes
 
@@ -54,6 +54,8 @@ CAJA_USE=	caja
 DJVU_LIB_DEPENDS=	libdjvulibre.so:${PORTSDIR}/graphics/djvulibre
 DJVU_CONFIGURE_ENABLE=	djvu
 COMICS_CONFIGURE_ENABLE=	comics
+XPS_CONFIGURE_ENABLE=	xps
+XPS_LIB_DEPENDS=	libgxps.so:${PORTSDIR}/graphics/libgxps
 
 .include <bsd.port.options.mk>
 
