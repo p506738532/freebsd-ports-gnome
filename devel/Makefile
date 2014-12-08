@@ -1118,6 +1118,7 @@
     SUBDIR += libphutil
     SUBDIR += libplist
     SUBDIR += libpo6
+    SUBDIR += libpru
     SUBDIR += libpthread-stubs
     SUBDIR += libqcow
     SUBDIR += libqxt
@@ -1939,6 +1940,7 @@
     SUBDIR += p5-Devel-Messenger
     SUBDIR += p5-Devel-Modlist
     SUBDIR += p5-Devel-NYTProf
+    SUBDIR += p5-Devel-OverloadInfo
     SUBDIR += p5-Devel-PPPort
     SUBDIR += p5-Devel-PackagePath
     SUBDIR += p5-Devel-PartialDump
@@ -2399,6 +2401,7 @@
     SUBDIR += p5-Module-Reload
     SUBDIR += p5-Module-Reload-Sel
     SUBDIR += p5-Module-Runtime
+    SUBDIR += p5-Module-Runtime-Conflicts
     SUBDIR += p5-Module-ScanDeps
     SUBDIR += p5-Module-Setup
     SUBDIR += p5-Module-Starter
@@ -3527,6 +3530,7 @@
     SUBDIR += protobuf
     SUBDIR += protobuf-c
     SUBDIR += protobuf25
+    SUBDIR += pructl
     SUBDIR += psptoolchain
     SUBDIR += psptoolchain-binutils
     SUBDIR += psptoolchain-gcc-stage1
@@ -4261,6 +4265,7 @@
     SUBDIR += ruby-subversion
     SUBDIR += ruby-tzfile
     SUBDIR += ruby-wirble
+    SUBDIR += rubygem-CFPropertyList
     SUBDIR += rubygem-abstract
     SUBDIR += rubygem-actionpack-action_caching
     SUBDIR += rubygem-actionview

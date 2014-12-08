@@ -3,7 +3,7 @@
 
 PORTNAME=	ggz-sdl-games
 PORTVERSION=	${GGZ_VERSION}
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	games
 
 MAINTAINER=	ports@FreeBSD.org
@@ -31,6 +31,7 @@ post-patch:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/geekgame/module.dsc ${STAGEDIR}/${PREFIX}/share/ggz/geekgame.dsc
 	${INSTALL_DATA} ${WRKSRC}/ttt3d/module.dsc ${STAGEDIR}/${PREFIX}/share/ggz/ttt3d.dsc
+	${RM} ${STAGEDIR}${PREFIX}/etc/ggz.modules
 
 .include "${.CURDIR}/../libggz/bsd.ggz.mk"
 .include <bsd.port.mk>
