@@ -11,7 +11,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Translations for the cinnamon desktop
 
-USES=		gettext:build tar:xz
+USES=		gettext-tools tar:xz
 NO_CONFIGURE=	yes
 INSTALL_TARGET=	all
 
