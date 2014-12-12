@@ -79,6 +79,8 @@
     SUBDIR += bkpupsd
     SUBDIR += bksh
     SUBDIR += bontmia
+    SUBDIR += boxbackup
+    SUBDIR += boxbackup-devel
     SUBDIR += brasero
     SUBDIR += brebis
     SUBDIR += bsd-splash-changer
@@ -149,6 +151,7 @@
     SUBDIR += cpdup
     SUBDIR += cpu
     SUBDIR += cpuburn
+    SUBDIR += cpuid
     SUBDIR += cpulimit
     SUBDIR += cramfs
     SUBDIR += crashme
@@ -948,6 +951,9 @@
     SUBDIR += ttyload
     SUBDIR += tw_cli
     SUBDIR += tzdialog
+    SUBDIR += u-boot-beaglebone
+    SUBDIR += u-boot-rpi
+    SUBDIR += u-boot-wandboard
     SUBDIR += ua
     SUBDIR += ucspi-ipc
     SUBDIR += ucspi-proxy
