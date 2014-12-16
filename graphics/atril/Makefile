@@ -50,7 +50,7 @@ XPS_DESC=	XPS support
 OPTIONS_SUB=	yes
 
 CAJA_CONFIGURE_ENABLE=	caja
-CAJA_USE=	caja
+CAJA_USE=		MATE=caja
 DJVU_LIB_DEPENDS=	libdjvulibre.so:${PORTSDIR}/graphics/djvulibre
 DJVU_CONFIGURE_ENABLE=	djvu
 COMICS_CONFIGURE_ENABLE=	comics
