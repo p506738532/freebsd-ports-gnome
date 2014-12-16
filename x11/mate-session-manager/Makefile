@@ -19,7 +19,7 @@ RUN_DEPENDS=	${LOCALBASE}/sbin/console-kit-daemon:${PORTSDIR}/sysutils/consoleki
 PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-#USE_MATE=	settingsdaemon
+USE_MATE=	desktop
 USE_XORG=	ice sm xau xext xrandr xrender xtrans xtst
 USE_GNOME=	gnomehier gtk20 intlhack librsvg2 libxslt pango
 GNU_CONFIGURE=	yes
