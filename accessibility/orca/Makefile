@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/accessibility/orca/Makefile 20054 2014-11-10 17:23:39Z gusi $
 
 PORTNAME=	orca
-PORTVERSION=	3.14.2
+PORTVERSION=	3.14.3
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
