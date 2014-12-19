@@ -27,6 +27,7 @@ PORTSCOUT=	limit:1,even
 
 BUILD_DEPENDS+=	at-spi2-atk>=0:${PORTSDIR}/accessibility/at-spi2-atk
 RUN_DEPENDS+=	hicolor-icon-theme>=0:${PORTSDIR}/misc/hicolor-icon-theme \
+		adwaita-icon-theme>=0:${PORTSDIR}/x11-themes/adwaita-icon-theme \
 		at-spi2-atk>=0:${PORTSDIR}/accessibility/at-spi2-atk
 
 USE_PERL5=	build
