@@ -3,6 +3,7 @@
 
 PORTNAME=	wxlauncher
 PORTVERSION=	0.9.4
+PORTREVISION=	1
 CATEGORIES=	games
 
 MAINTAINER=	lightside@gmx.com
@@ -11,7 +12,7 @@ COMMENT=	Multi-platform launcher for the Freespace 2 Source Code Project
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/GPLv2.txt
 
-BUILD_DEPENDS=	markdown_py:${PORTSDIR}/textproc/py-markdown \
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}markdown>0:${PORTSDIR}/textproc/py-markdown \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3
 
 USE_GITHUB=	yes
@@ -20,7 +21,7 @@ GH_PROJECT=	${PORTNAME}
 GH_COMMIT=	d251770
 GH_TAGNAME=	${GH_COMMIT}
 
-USES=		cmake:outsource openal python:2:build
+USES=		cmake:outsource openal python:2,build
 USE_SDL=	sdl
 USE_WX=		2.8
 WX_UNICODE=	yes
