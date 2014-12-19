@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nghttp2
-PORTVERSION=	0.6.6
+PORTVERSION=	0.6.7
 CATEGORIES=	www net
 MASTER_SITES=	https://github.com/tatsuhiro-t/${PORTNAME}/releases/download/v${PORTVERSION}/ \
 		LOCAL/sunpoet
@@ -52,6 +52,8 @@ HPACK_LIB_DEPENDS=	libjansson.so:${PORTSDIR}/devel/jansson
 
 .if ${OSVERSION} < 1000000 && !defined(WITH_OPENSSL_PORT)
 IGNORE=		nghttp2 requires OpenSSL 1.0.1+
+.elif defined(WITH_OPENSSL_PORT)
+BROKEN=		Does not build
 .endif
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000000
@@ -60,5 +62,6 @@ CONFIGURE_ARGS+=--with-jemalloc
 
 post-patch:
 	@${REINPLACE_CMD} -e '/JEMALLOC_LIBS/ s|-ljemalloc||' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|^DEFAULT_INCLUDES = |&-I${WRKSRC}/src/includes |' ${WRKSRC}/examples/Makefile.in ${WRKSRC}/src/Makefile.in
 
 .include <bsd.port.post.mk>

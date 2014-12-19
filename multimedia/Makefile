@@ -65,8 +65,8 @@
     SUBDIR += flvstreamer
     SUBDIR += flvtool++
     SUBDIR += fpc-dts
-    SUBDIR += fpc-matroska
     SUBDIR += fpc-libvlc
+    SUBDIR += fpc-matroska
     SUBDIR += freetuxtv
     SUBDIR += freevo
     SUBDIR += fxtv
@@ -118,6 +118,7 @@
     SUBDIR += gstreamer-plugins-xvid
     SUBDIR += gstreamer-qt4
     SUBDIR += gstreamer1
+    SUBDIR += gstreamer1-editing-services
     SUBDIR += gstreamer1-libav
     SUBDIR += gstreamer1-plugins
     SUBDIR += gstreamer1-plugins-all
@@ -186,9 +187,9 @@
     SUBDIR += libquicktime
     SUBDIR += libquicktime-lame
     SUBDIR += libquvi
-    SUBDIR += libquvi09
     SUBDIR += libquvi-scripts
     SUBDIR += libquvi-scripts09
+    SUBDIR += libquvi09
     SUBDIR += librtmp
     SUBDIR += libsmacker
     SUBDIR += libtheora
@@ -297,8 +298,8 @@
     SUBDIR += py-enzyme
     SUBDIR += py-ffmpeg
     SUBDIR += py-gstreamer
-    SUBDIR += py-guessit
     SUBDIR += py-gstreamer1
+    SUBDIR += py-guessit
     SUBDIR += py-kaa-base
     SUBDIR += py-kaa-imlib2
     SUBDIR += py-kaa-metadata

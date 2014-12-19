@@ -3,7 +3,7 @@
 
 PORTNAME=	exact-image
 PORTVERSION=	0.8.9
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	graphics perl5 python
 MASTER_SITES=	http://dl.exactcode.de/oss/${PORTNAME}/ LOCAL/bf
 
@@ -24,7 +24,6 @@ LIB_DEPENDS=	libagg.so:${PORTSDIR}/graphics/agg \
 		libfreetype.so:${PORTSDIR}/print/freetype2 \
 		libexpat.so:${PORTSDIR}/textproc/expat2
 
-CFLAGS+=	-fPIC
 #hack to get custom exactcode configure script to enable tiff support with
 #broken headers on c++ in base system:
 CPPFLAGS+=	-fpermissive -I${LOCALBASE}/include -I${LOCALBASE}/include/libpng15
@@ -32,14 +31,12 @@ USES=		gmake perl5 pkgconfig python tar:bzip2
 USE_XORG=	x11
 HAS_CONFIGURE=	yes
 INSTALL_WRKSRC=	${WRKSRC}/objdir
-BINS=	bardecode econvert edentify empty-page hocr2pdf optimize2bw
+BINS=		bardecode econvert edentify empty-page hocr2pdf optimize2bw
 PLIST_FILES=	${BINS:S|^|bin/|} \
 		%%SITE_PERL%%/ExactImage.so \
 		%%SITE_PERL%%/ExactImage.pm \
 		%%PYTHON_SITELIBDIR%%/ExactImage.py \
 		%%PYTHON_SITELIBDIR%%/_ExactImage.so
-
-BROKEN_amd64=	Fails to link
 
 post-extract:
 	@${RM} -rf ${WRKSRC}/agg-2.4/

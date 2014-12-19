@@ -1118,6 +1118,7 @@
     SUBDIR += libphutil
     SUBDIR += libplist
     SUBDIR += libpo6
+    SUBDIR += libpru
     SUBDIR += libpthread-stubs
     SUBDIR += libqcow
     SUBDIR += libqxt
@@ -1188,6 +1189,7 @@
     SUBDIR += libwfut
     SUBDIR += libx86
     SUBDIR += libxalloc
+    SUBDIR += libxo
     SUBDIR += libxs
     SUBDIR += libytnef
     SUBDIR += libzookeeper
@@ -1218,7 +1220,6 @@
     SUBDIR += lion
     SUBDIR += llnextgen
     SUBDIR += llvm-devel
-    SUBDIR += llvm32
     SUBDIR += llvm33
     SUBDIR += llvm34
     SUBDIR += llvm35
@@ -1939,6 +1940,7 @@
     SUBDIR += p5-Devel-Messenger
     SUBDIR += p5-Devel-Modlist
     SUBDIR += p5-Devel-NYTProf
+    SUBDIR += p5-Devel-OverloadInfo
     SUBDIR += p5-Devel-PPPort
     SUBDIR += p5-Devel-PackagePath
     SUBDIR += p5-Devel-PartialDump
@@ -2399,6 +2401,7 @@
     SUBDIR += p5-Module-Reload
     SUBDIR += p5-Module-Reload-Sel
     SUBDIR += p5-Module-Runtime
+    SUBDIR += p5-Module-Runtime-Conflicts
     SUBDIR += p5-Module-ScanDeps
     SUBDIR += p5-Module-Setup
     SUBDIR += p5-Module-Starter
@@ -3425,6 +3428,7 @@
     SUBDIR += pecl-spl_types
     SUBDIR += pecl-spread
     SUBDIR += pecl-statgrab
+    SUBDIR += pecl-strict
     SUBDIR += pecl-svn
     SUBDIR += pecl-swoole
     SUBDIR += pecl-sync
@@ -3520,13 +3524,12 @@
     SUBDIR += ppl
     SUBDIR += premake
     SUBDIR += premake4
-    SUBDIR += preps-gui
-    SUBDIR += prepstools
     SUBDIR += privman
     SUBDIR += projectcenter
     SUBDIR += protobuf
     SUBDIR += protobuf-c
     SUBDIR += protobuf25
+    SUBDIR += pructl
     SUBDIR += psptoolchain
     SUBDIR += psptoolchain-binutils
     SUBDIR += psptoolchain-gcc-stage1
@@ -3621,6 +3624,7 @@
     SUBDIR += py-ZopeUndo
     SUBDIR += py-akismet
     SUBDIR += py-anonfunc
+    SUBDIR += py-anyconfig
     SUBDIR += py-anyjson
     SUBDIR += py-apipkg
     SUBDIR += py-appdirs
@@ -4261,6 +4265,7 @@
     SUBDIR += ruby-subversion
     SUBDIR += ruby-tzfile
     SUBDIR += ruby-wirble
+    SUBDIR += rubygem-CFPropertyList
     SUBDIR += rubygem-abstract
     SUBDIR += rubygem-actionpack-action_caching
     SUBDIR += rubygem-actionview

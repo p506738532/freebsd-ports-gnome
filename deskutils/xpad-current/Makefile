@@ -2,10 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	xpad
-PORTVERSION=	4.1
-PORTREVISION=	4
+PORTVERSION=	4.4.0
 CATEGORIES=	deskutils
-MASTER_SITES=	http://launchpad.net/${PORTNAME}/trunk/${PORTVERSION}/+download/
+MASTER_SITES=	http://launchpad.net/${PORTNAME}/trunk/4.4/+download/
 PKGNAMESUFFIX=	-current
 
 MAINTAINER=	jgh@FreeBSD.org
@@ -18,7 +17,7 @@ OPTIONS_SUB=	yes
 
 CONFLICTS_INSTALL=	xpad-[0-9]*
 USE_XORG=	x11 sm
-USE_GNOME=	gtk20 gnomehier intltool
+USE_GNOME=	gtk30 intltool gtksourceview3
 USES=	pkgconfig gmake tar:bzip2
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	${CXXFLAGS} -I${LOCALBASE}/include
@@ -28,13 +27,11 @@ GNU_CONFIGURE=	yes
 NLS_USES=		gettext
 NLS_CONFIGURE_ENABLE=	nls
 
+RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme
+
 .include <bsd.port.options.mk>
 
 post-patch:
-.if ! ${PORT_OPTIONS:MNLS}
-	@${REINPLACE_CMD} -e 's|SUBDIRS = autopackage doc src images po|SUBDIRS = autopackage doc src images|' \
-		${WRKSRC}/Makefile.in
-.endif
 	@${REINPLACE_CMD} -e 's|glib/glist.h|glib.h|g' \
 		${WRKSRC}/src/xpad-undo.c
 

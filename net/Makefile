@@ -28,6 +28,7 @@
     SUBDIR += aslookup
     SUBDIR += asterisk
     SUBDIR += asterisk11
+    SUBDIR += asterisk13
     SUBDIR += avahi
     SUBDIR += avahi-app
     SUBDIR += avahi-autoipd
@@ -37,6 +38,7 @@
     SUBDIR += avahi-libdns
     SUBDIR += avahi-qt4
     SUBDIR += avahi-sharp
+    SUBDIR += axa
     SUBDIR += babeld
     SUBDIR += beacon
     SUBDIR += beanstalkd
@@ -153,16 +155,16 @@
     SUBDIR += go.net
     SUBDIR += gofish
     SUBDIR += gogoc
-    SUBDIR += googlecl
     SUBDIR += google-cloud-sdk
     SUBDIR += google-daemon
+    SUBDIR += googlecl
     SUBDIR += gopher
     SUBDIR += gotthard
     SUBDIR += gpxe
     SUBDIR += gq
     SUBDIR += grdesktop
-    SUBDIR += grilo-plugins
     SUBDIR += grilo
+    SUBDIR += grilo-plugins
     SUBDIR += grive
     SUBDIR += grsync
     SUBDIR += gsk
@@ -225,6 +227,7 @@
     SUBDIR += ilbc
     SUBDIR += imapproxy
     SUBDIR += iodine
+    SUBDIR += ip2location
     SUBDIR += ip6_int
     SUBDIR += ipgrab
     SUBDIR += iplog
@@ -355,6 +358,7 @@
     SUBDIR += mcast-tools
     SUBDIR += mediastreamer
     SUBDIR += mediatomb
+    SUBDIR += megatools
     SUBDIR += mgen
     SUBDIR += micro_inetd
     SUBDIR += micro_proxy
@@ -421,7 +425,6 @@
     SUBDIR += ntopng
     SUBDIR += ntp
     SUBDIR += ntp-devel
-    SUBDIR += ntp-rc
     SUBDIR += ntraceroute
     SUBDIR += nusoap
     SUBDIR += nxproxy
@@ -753,6 +756,7 @@
     SUBDIR += p5-XML-Fast
     SUBDIR += p5-XML-RPC
     SUBDIR += p5-XML-RPC-Fast
+    SUBDIR += p5-XMLRPC-Lite
     SUBDIR += p5-XPC
     SUBDIR += p5-ZConf
     SUBDIR += p5-ZConf-Bookmarks
@@ -818,6 +822,7 @@
     SUBDIR += pecl-cvsclient
     SUBDIR += pecl-geoip
     SUBDIR += pecl-gupnp
+    SUBDIR += pecl-ip2location
     SUBDIR += pecl-mosquitto
     SUBDIR += pecl-oauth
     SUBDIR += pecl-radius
@@ -845,6 +850,7 @@
     SUBDIR += phpldapadmin
     SUBDIR += pimdd
     SUBDIR += pipsecd
+    SUBDIR += pjsip
     SUBDIR += pktanon
     SUBDIR += pload
     SUBDIR += plugdaemon
@@ -1011,6 +1017,7 @@
     SUBDIR += rubygem-fog-sakuracloud
     SUBDIR += rubygem-fog-softlayer
     SUBDIR += rubygem-fog-terremark
+    SUBDIR += rubygem-fog-vmfusion
     SUBDIR += rubygem-fog-voxel
     SUBDIR += rubygem-geoip
     SUBDIR += rubygem-gitlab_omniauth-ldap
@@ -1020,9 +1027,9 @@
     SUBDIR += rubygem-iproto
     SUBDIR += rubygem-lita-gems
     SUBDIR += rubygem-macaddr
-    SUBDIR += rubygem-netrc
     SUBDIR += rubygem-net-ldap
     SUBDIR += rubygem-net-netrc
+    SUBDIR += rubygem-netrc
     SUBDIR += rubygem-network_interface
     SUBDIR += rubygem-oauth
     SUBDIR += rubygem-oauth2
@@ -1037,9 +1044,11 @@
     SUBDIR += rubygem-omniauth-twitter
     SUBDIR += rubygem-open-uri-cached
     SUBDIR += rubygem-openid
+    SUBDIR += rubygem-opennebula
     SUBDIR += rubygem-packetfu
     SUBDIR += rubygem-pcaprub
     SUBDIR += rubygem-rabbiter
+    SUBDIR += rubygem-rbvmomi
     SUBDIR += rubygem-rightaws
     SUBDIR += rubygem-rightflexiscale
     SUBDIR += rubygem-rightgogrid

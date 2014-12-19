@@ -48,14 +48,15 @@
     SUBDIR += ktp-common-internals
     SUBDIR += ktp-contact-list
     SUBDIR += ktp-contact-runner
+    SUBDIR += ktp-desktop-applets
     SUBDIR += ktp-filetransfer-handler
     SUBDIR += ktp-kded-integration-module
     SUBDIR += ktp-send-file
     SUBDIR += ktp-text-ui
     SUBDIR += libjreen
+    SUBDIR += libnice
     SUBDIR += libnice-gst010
     SUBDIR += libnice-gst1
-    SUBDIR += libnice
     SUBDIR += libpurple
     SUBDIR += libtelepathy
     SUBDIR += libyahoo2

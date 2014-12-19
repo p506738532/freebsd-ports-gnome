@@ -4,6 +4,7 @@
 
 PORTNAME=	webkit
 PORTVERSION=	2.4.7
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	-gtk3
@@ -90,6 +91,9 @@ CXXFLAGS+=	-Wno-c++11-extensions -Qunused-arguments
 CONFIGURE_ARGS+=--enable-webkit2
 # We need clang + libc++ or gcc 4.7+. gcc has libstdc++ conflict between
 # gcc port and base. This originates from icu
+.if ${OSVERSION} < 900000
+BROKEN=		Fails to build
+.endif
 .if ${OSVERSION}<1000019
 CXXFLAGS+=	-stdlib=libc++ -I${LOCALBASE}/include/c++/v1
 LDFLAGS+=	-stdlib=libc++

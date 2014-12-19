@@ -768,19 +768,14 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #
 # For extract:
 #
-# EXTRACT_CMD	- Command for extracting archive: "bzip2" if USE_BZIP2
-#				  is set, "gzip" otherwise.
+# EXTRACT_CMD	- Command for extracting archive
+#				  Default: ${TAR}
 # EXTRACT_BEFORE_ARGS
 #				- Arguments to ${EXTRACT_CMD} before filename.
-#				  Default: "-dc"
+#				  Default: "-xf"
 # EXTRACT_AFTER_ARGS
 #				- Arguments to ${EXTRACT_CMD} following filename.
-#				  default: "| tar -xf -"
-# EXTRACT_PRESERVE_OWNERSHIP
-#				- Normally, when run as "root", the extract stage will
-#				  change the owner and group of all files under ${WRKDIR}
-#				  to 0:0.  Set this variable if you want to turn off this
-#				  feature.
+#				  Default: "--no-same-owner --no-same-permissions"
 # For patch:
 #
 # EXTRA_PATCHES	- Define this variable if you have patches not in
@@ -1149,7 +1144,7 @@ STRIPBIN=	${STRIP_CMD}
 .else
 
 # Look for files named "*.orig" under ${PATCH_WRKSRC} and (re-)generate
-# ${FILESDIR}/patch-* files from them.  By popular demand, we currently
+# ${PATCHDIR}/patch-* files from them.  By popular demand, we currently
 # use '_' (underscore) to replace path separators in patch file names.
 #
 # If a file name happens to contain character which is also a separator
@@ -1162,7 +1157,7 @@ STRIPBIN=	${STRIP_CMD}
 .if !target(makepatch)
 PATCH_PATH_SEPARATOR=	_
 makepatch:
-	@${MKDIR} ${FILESDIR}
+	@${MKDIR} ${PATCHDIR}
 	@(cd ${PATCH_WRKSRC}; \
 		for f in `${FIND} -s . -type f -name '*.orig'`; do \
 			ORIG=$${f#./}; \
@@ -1171,14 +1166,14 @@ makepatch:
 			! for _lps in `${ECHO} _ - + | ${SED} -e \
 				's|${PATCH_PATH_SEPARATOR}|__|'`; do \
 					PATCH=`${ECHO} $${NEW} | ${SED} -e "s|/|$${_lps}|g"`; \
-					test -f "${FILESDIR}/patch-$${PATCH}" && break; \
+					test -f "${PATCHDIR}/patch-$${PATCH}" && break; \
 			done || ${ECHO} $${_SEEN} | ${GREP} -q /$${PATCH} && { \
 				PATCH=`${ECHO} $${NEW} | ${SED} -e \
 					's|${PATCH_PATH_SEPARATOR}|&&|g' -e \
 					's|/|${PATCH_PATH_SEPARATOR}|g'`; \
 				_SEEN=$${_SEEN}/$${PATCH}; \
 			}; \
-			OUT=${FILESDIR}/patch-$${PATCH}; \
+			OUT=${PATCHDIR}/patch-$${PATCH}; \
 			${ECHO} ${DIFF} -udp $${ORIG} $${NEW} '>' $${OUT}; \
 			TZ=UTC ${DIFF} -udp $${ORIG} $${NEW} | ${SED} -e \
 				'/^---/s|\.[0-9]* +0000$$| UTC|' -e \
@@ -1402,7 +1397,7 @@ SCRIPTDIR?=		${MASTERDIR}/scripts
 PKGDIR?=		${MASTERDIR}
 
 .if defined(USE_LINUX_PREFIX)
-PREFIX?=		${LINUXBASE}
+PREFIX:=		${LINUXBASE}
 NO_MTREE=		yes
 .else
 PREFIX?=		${LOCALBASE}
@@ -1779,9 +1774,8 @@ USE_LINUX=	${OVERRIDE_LINUX_BASE_PORT}
 LINUX_BASE_PORT=	${LINUXBASE}/bin/sh:${PORTSDIR}/emulators/linux_base-${USE_LINUX}
 .	else
 .		if ${USE_LINUX:tl} == "yes"
-USE_LINUX=	f10		# temporary default, set to c6 soon
-LINUX_BASE_PORT=	${LINUXBASE}/etc/fedora-release:${PORTSDIR}/emulators/linux_base-f10
-#LINUX_BASE_PORT=	${LINUXBASE}/etc/redhat-release:${PORTSDIR}/emulators/linux_base-c6
+USE_LINUX=	c6
+LINUX_BASE_PORT=	${LINUXBASE}/etc/redhat-release:${PORTSDIR}/emulators/linux_base-c6
 .		else
 IGNORE=		cannot be built: there is no emulators/linux_base-${USE_LINUX}, perhaps wrong use of USE_LINUX or OVERRIDE_LINUX_BASE_PORT
 .		endif
@@ -2156,11 +2150,7 @@ TAR?=	/usr/bin/tar
 # EXTRACT_SUFX is defined in .pre.mk section
 EXTRACT_CMD?=	${TAR}
 EXTRACT_BEFORE_ARGS?=	-xf
-.if defined(EXTRACT_PRESERVE_OWNERSHIP)
-EXTRACT_AFTER_ARGS?=
-.else
 EXTRACT_AFTER_ARGS?=	--no-same-owner --no-same-permissions
-.endif
 
 # Figure out where the local mtree file is
 .if !defined(MTREE_FILE) && !defined(NO_MTREE)
@@ -3043,12 +3033,6 @@ build: configure
 	@${TOUCH} ${TOUCH_FLAGS} ${BUILD_COOKIE}
 .endif
 
-# Disable install
-.if defined(NO_INSTALL) && !target(do-install)
-do-install:
-	@${DO_NADA}
-.endif
-
 # Disable package
 .if defined(NO_PACKAGE) && !target(package)
 package:
@@ -3320,12 +3304,10 @@ do-extract:
 			exit 1; \
 		fi; \
 	done
-.if !defined(EXTRACT_PRESERVE_OWNERSHIP)
 	@if [ ${UID} = 0 ]; then \
 		${CHMOD} -R ug-s ${WRKDIR}; \
 		${CHOWN} -R 0:0 ${WRKDIR}; \
 	fi
-.endif
 .endif
 
 # Patch
@@ -3414,9 +3396,10 @@ run-autotools-fixup:
 				-e 's|freebsd\[\[12\]\]\*)|freebsd[[12]].*)|g' \
 				-e 's|freebsd\[\[123\]\]\*)|freebsd[[123]].*)|g' \
 					$${f} ; \
+			cmp -s $${f}.fbsd10bak $${f} || \
+			${ECHO_MSG} "===>   FreeBSD 10 autotools fix applied to $${f}"; \
 			${TOUCH} ${TOUCH_FLAGS} -mr $${f}.fbsd10bak $${f} ; \
 			${RM} -f $${f}.fbsd10bak ; \
-			${ECHO_MSG} "===>   FreeBSD 10 autotools fix applied to $${f}"; \
 		done
 .endif
 .endif
@@ -3572,9 +3555,9 @@ check-install-conflicts:
 
 # Install
 
-.if !target(do-install)
+.if !target(do-install) && !defined(NO_INSTALL)
 do-install:
-	@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
+	@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${FAKEROOT} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
 .endif
 
 # Package
@@ -4864,7 +4847,8 @@ create-manifest:
 		echo "}" ; \
 		echo "categories: [ ${CATEGORIES:u:S/$/,/} ]" ; \
 		l=${LICENSE_COMB} ; \
-		[ -n "${NO_ARCH}" ] && echo "arch : `${PKG_BIN} config abi | ${CUT} -d: -f1,2`:*" ; \
+		[ -n "${NO_ARCH}" ] && echo "arch : `${PKG_BIN} config abi | tr '[:upper:]' '[:lower:]' | ${CUT} -d: -f1,2`:*" ; \
+		[ -n "${NO_ARCH}" ] && echo "abi : `${PKG_BIN} config abi | ${CUT} -d: -f1,2`:*" ; \
 		echo "licenselogic: $${l:-single}" ; \
 		[ -z "${LICENSE}" ] || echo "licenses: [ ${LICENSE:u:S/$/,/} ]" ; \
 		[ -z "${USERS}" ] || echo "users: [ ${USERS:u:S/$/,/} ]" ; \
@@ -5946,9 +5930,9 @@ _PATCH_SEQ=		ask-license patch-message patch-depends pathfix dos2unix fix-sheban
 				pre-patch \
 				pre-patch-script do-patch charsetfix-post-patch post-patch post-patch-script
 _CONFIGURE_DEP=	patch
-_CONFIGURE_SEQ=	build-depends lib-depends configure-message run-autotools-fixup \
+_CONFIGURE_SEQ=	build-depends lib-depends configure-message \
 				pre-configure pre-configure-script \
-				run-autotools do-autoreconf patch-libtool do-configure \
+				run-autotools do-autoreconf patch-libtool run-autotools-fixup do-configure \
 				post-configure post-configure-script
 _BUILD_DEP=		configure
 _BUILD_SEQ=		build-message pre-build pre-build-script do-build \
