@@ -1025,6 +1025,7 @@
     SUBDIR += libfreefare
     SUBDIR += libftdi
     SUBDIR += libftdi1
+    SUBDIR += libfwsi
     SUBDIR += libg19
     SUBDIR += libg19draw
     SUBDIR += libgalago
@@ -4483,6 +4484,7 @@
     SUBDIR += rubygem-mutter
     SUBDIR += rubygem-naught
     SUBDIR += rubygem-needle
+    SUBDIR += rubygem-nenv
     SUBDIR += rubygem-nesty
     SUBDIR += rubygem-nice-ffi
     SUBDIR += rubygem-nio4r
@@ -4648,6 +4650,7 @@
     SUBDIR += scons
     SUBDIR += sdl12
     SUBDIR += sdl20
+    SUBDIR += sdl2pp
     SUBDIR += sdl_console
     SUBDIR += sdl_gnat
     SUBDIR += sdl_sge
@@ -4689,6 +4692,7 @@
     SUBDIR += sparc64-binutils
     SUBDIR += sparc64-gcc
     SUBDIR += sparc64-xtoolchain-gcc
+    SUBDIR += spark
     SUBDIR += spatialindex
     SUBDIR += spdict
     SUBDIR += spin
