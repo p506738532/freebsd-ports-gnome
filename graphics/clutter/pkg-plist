@@ -141,7 +141,7 @@ lib/girepository-1.0/Clutter-1.0.typelib
 lib/girepository-1.0/ClutterX11-1.0.typelib
 lib/libclutter-1.0.so
 lib/libclutter-1.0.so.0
-lib/libclutter-1.0.so.0.2000.0
+lib/libclutter-1.0.so.0.2102.0
 lib/libclutter-glx-1.0.so
 lib/libclutter-glx-1.0.so.0
 libdata/pkgconfig/cally-1.0.pc
@@ -339,6 +339,10 @@ share/doc/cally/up.png
 %%DOCSDIR%%/ix12.html
 %%DOCSDIR%%/ix13.html
 %%DOCSDIR%%/ix14.html
+%%DOCSDIR%%/ix15.html
+%%DOCSDIR%%/ix16.html
+%%DOCSDIR%%/ix17.html
+%%DOCSDIR%%/ix18.html
 %%DOCSDIR%%/left-insensitive.png
 %%DOCSDIR%%/left.png
 %%DOCSDIR%%/license.html

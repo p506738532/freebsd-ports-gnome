@@ -1,9 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/graphics/clutter/Makefile 19945 2014-10-15 05:41:04Z gusi $
 
 PORTNAME=	clutter
-PORTVERSION=	1.20.0
+PORTVERSION=	1.21.2
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
