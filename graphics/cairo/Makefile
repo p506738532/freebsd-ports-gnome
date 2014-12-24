@@ -39,7 +39,7 @@ CONFIGURE_ARGS=	--with-html-dir=${DOCSDIR} \
 		--enable-tee
 
 OPTIONS_DEFINE=	OPENGL XCB GLIB X11 
-OPTIONS_DEFAULT=XCB GLIB X11
+OPTIONS_DEFAULT=OPENGL XCB GLIB X11
 XCB_DESC=	Enable XCB (X C-language Binding) Support
 GLIB_DESC=	Enable GObject Functions Feature
 OPTIONS_SUB=	yes
@@ -70,10 +70,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-ldl||g' \
 		${WRKSRC}/util/*/Makefile.in \
 		${WRKSRC}/boilerplate/Makefile.in
-.if ${PORT_OPTIONS:MOPENGL}
-	@${REINPLACE_CMD} 's|@CAIRO_CFLAGS@|-I$$(top_srcdir)/src/glew &|' \
-		${WRKSRC}/src/Makefile.in
-.endif
 
 .include <bsd.port.mk>
 
