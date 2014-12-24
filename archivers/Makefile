@@ -31,6 +31,7 @@
     SUBDIR += freetar
     SUBDIR += freeze
     SUBDIR += gcpio
+    SUBDIR += gnome-autoar
     SUBDIR += grzip
     SUBDIR += gtar
     SUBDIR += gzip

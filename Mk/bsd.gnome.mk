@@ -465,7 +465,7 @@ gnomespeech_LIB_DEPENDS=libgnomespeech.so:${PORTSDIR}/accessibility/gnome-speech
 gnomespeech_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-speech-1.0.pc
 gnomespeech_USE_GNOME_IMPL=libbonobo
 
-evolutiondataserver3_LIB_DEPENDS=	libedataserver-1.2.so.18:${PORTSDIR}/databases/evolution-data-server
+evolutiondataserver3_LIB_DEPENDS=	libedataserver-1.2.so:${PORTSDIR}/databases/evolution-data-server
 evolutiondataserver3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libedataserverui-3.0.pc
 evolutiondataserver3_USE_GNOME_IMPL=	libxml2 gtk30
 
