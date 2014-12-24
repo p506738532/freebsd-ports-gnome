@@ -211,6 +211,7 @@
     SUBDIR += gramofile
     SUBDIR += grip
     SUBDIR += gsm
+    SUBDIR += gsound
     SUBDIR += gspeakers
     SUBDIR += gstreamer-plugins-a52dec
     SUBDIR += gstreamer-plugins-amrnb

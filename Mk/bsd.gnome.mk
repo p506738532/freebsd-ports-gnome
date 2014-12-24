@@ -82,7 +82,7 @@ _USE_GNOME_ALL+= atk atspi cairo desktopfileutils gal2 \
 
 # GNOME 3 components
 _USE_GNOME_ALL+=dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
-		gnomemenus3 gtk30 gtkhtml4 gtksourceview3 libgda5 \
+		gnomemenus3 gsound gtk30 gtkhtml4 gtksourceview3 libgda5 \
 		libgda5-ui libwnck3 metacity nautilus3 py3gobject3 \
 		pygobject3 vte3
 
@@ -143,6 +143,12 @@ gconfmm26_USE_GNOME_IMPL=	glibmm gconf2
 glibmm_DETECT=		${LOCALBASE}/libdata/pkgconfig/glibmm-2.4.pc
 glibmm_LIB_DEPENDS=	libglibmm-2.4.so:${PORTSDIR}/devel/glibmm
 glibmm_USE_GNOME_IMPL=	libsigc++20 glib20
+
+gsound_DETECT=		${LOCALBASE}/libdata/pkgconfig/gsound.pc
+gsound_BUILD_DEPENDS=	gsound-play:${PORTSDIR}/audio/gsound
+gsound_LIB_DEPENDS=	libgsound.so:${PORTSDIR}/audio/gsound
+gsound_RUN_DEPENDS=	gsound-play:${PORTSDIR}/audio/gsound
+gsound_USE_GNOME_IMPL=	glib20
 
 gtkmm20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtkmm-2.0.pc
 gtkmm20_LIB_DEPENDS=	libgtkmm-2.0.so:${PORTSDIR}/x11-toolkits/gtkmm20
