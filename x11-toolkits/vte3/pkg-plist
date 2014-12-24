@@ -1,6 +1,7 @@
 bin/vte-%%VERSION%%
 etc/profile.d/vte.sh
 include/vte-%%VERSION%%/vte/vte.h
+include/vte-%%VERSION%%/vte/vtedeprecated.h
 include/vte-%%VERSION%%/vte/vteenums.h
 include/vte-%%VERSION%%/vte/vteglobals.h
 include/vte-%%VERSION%%/vte/vtemacros.h
@@ -11,10 +12,11 @@ include/vte-%%VERSION%%/vte/vteversion.h
 lib/girepository-1.0/Vte-%%VERSION%%.typelib
 lib/libvte-%%VERSION%%.so
 lib/libvte-%%VERSION%%.so.0
-lib/libvte-%%VERSION%%.so.0.3800.2
+lib/libvte-%%VERSION%%.so.0.3901.0
 libdata/pkgconfig/vte-%%VERSION%%.pc
 share/doc/vte-%%VERSION%%/VteTerminal.html
 share/doc/vte-%%VERSION%%/annotation-glossary.html
+share/doc/vte-%%VERSION%%/api-index-0-40.html
 share/doc/vte-%%VERSION%%/api-index-deprecated.html
 share/doc/vte-%%VERSION%%/api-index-full.html
 share/doc/vte-%%VERSION%%/ch01.html
@@ -81,6 +83,7 @@ share/locale/is/LC_MESSAGES/vte-%%VERSION%%.mo
 share/locale/it/LC_MESSAGES/vte-%%VERSION%%.mo
 share/locale/ja/LC_MESSAGES/vte-%%VERSION%%.mo
 share/locale/ka/LC_MESSAGES/vte-%%VERSION%%.mo
+share/locale/kk/LC_MESSAGES/vte-%%VERSION%%.mo
 share/locale/kn/LC_MESSAGES/vte-%%VERSION%%.mo
 share/locale/ko/LC_MESSAGES/vte-%%VERSION%%.mo
 share/locale/ku/LC_MESSAGES/vte-%%VERSION%%.mo
