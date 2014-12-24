@@ -377,11 +377,9 @@ librsvg2_USE_GNOME_IMPL=libgsf gtk20
 nautilus3_LIB_DEPENDS=	libnautilus-extension.so:${PORTSDIR}/x11-fm/nautilus
 nautilus3_DETECT=	${LOCALBASE}/share/gir-1.0/Nautilus-3.0.gir
 nautilus3_USE_GNOME_IMPL=gnomedesktop3 gvfs libxml2
-nautilus3_GNOME_DESKTOP_VERSION=3
 
 metacity_LIB_DEPENDS=	libmetacity-private.so:${PORTSDIR}/x11-wm/metacity
 metacity_DETECT=	${LOCALBASE}/libdata/pkgconfig/libmetacity-private.pc
-metacity_GNOME_DESKTOP_VERSION=3
 
 gal2_LIB_DEPENDS=	libgal-2.4.so:${PORTSDIR}/x11-toolkits/gal2
 gal2_DETECT=		${LOCALBASE}/libdata/pkgconfig/gal-2.4.pc
@@ -391,7 +389,6 @@ gnomecontrolcenter3_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-keybindings.pc
 gnomecontrolcenter3_BUILD_DEPENDS=	${gnomecontrolcenter3_DETECT}:${PORTSDIR}/sysutils/gnome-control-center
 gnomecontrolcenter3_RUN_DEPENDS=	${gnomecontrolcenter3_DETECT}:${PORTSDIR}/sysutils/gnome-control-center
 gnomecontrolcenter3_USE_GNOME_IMPL=	gnomedesktop3
-gnomecontrolcenter3_GNOME_DESKTOP_VERSION=3
 
 libgda4_LIB_DEPENDS=	libgda-4.0.so:${PORTSDIR}/databases/libgda4
 libgda4_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgda-4.0.pc
@@ -477,7 +474,6 @@ gnomespeech_USE_GNOME_IMPL=libbonobo
 evolutiondataserver3_LIB_DEPENDS=	libedataserver-1.2.so.18:${PORTSDIR}/databases/evolution-data-server
 evolutiondataserver3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libedataserverui-3.0.pc
 evolutiondataserver3_USE_GNOME_IMPL=	libxml2 gtk30
-evolutiondataserver3_GNOME_DESKTOP_VERSION=3
 
 desktopfileutils_BUILD_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
 desktopfileutils_RUN_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
@@ -488,7 +484,6 @@ gnomemenus3_BUILD_DEPENDS=	gnome-menus>=3.2.0:${PORTSDIR}/x11/gnome-menus
 gnomemenus3_RUN_DEPENDS=	gnome-menus>=3.2.0:${PORTSDIR}/x11/gnome-menus
 gnomemenus3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnome-menu-3.0.pc
 gnomemenus3_USE_GNOME_IMPL=	glib20
-gnomemenus3_GNOME_DESKTOP_VERSION=3
 
 gnomedocutils_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-doc-utils.pc
 gnomedocutils_BUILD_DEPENDS=	${gnomedocutils_DETECT}:${PORTSDIR}/textproc/gnome-doc-utils
@@ -571,32 +566,14 @@ USE_GNOME+=	gtk-update-icon-cache
 # ... Do some other things ...
 # .endif
 
-# If the user has not defined GNOME_DESKTOP_VERSION, let's try to prevent
-# users from shooting themselves in the foot.  We will try to make an
-# intelligent choice on the user's behalf.
-.if exists(${gnomepanel3_DETECT})
-GNOME_DESKTOP_VERSION?=	3
-.elif exists(${gnomepanel_DETECT})
-GNOME_DESKTOP_VERSION?=	2
-.endif
-
 # We also check each component to see if it has a desktop requirement.  If
 # it does, and its requirement disagrees with the user's chosen desktop,
 # do not add the component to the HAVE_GNOME list.
 
 _USE_GNOME_SAVED:=${USE_GNOME}
-_USE_GNOME_DESKTOP=yes
 HAVE_GNOME?=
 .if (defined(WANT_GNOME) && !defined(WITHOUT_GNOME))
 . for component in ${_USE_GNOME_ALL}
-.      if defined(GNOME_DESKTOP_VERSION) && \
-	defined(${component}_GNOME_DESKTOP_VERSION)
-.         if ${GNOME_DESKTOP_VERSION}==${${component}_GNOME_DESKTOP_VERSION}
-HAVE_GNOME+=	${component}
-.         else
-_USE_GNOME_DESKTOP=no
-.         endif
-.      else
 .         if exists(${${component}_DETECT})
 HAVE_GNOME+=	${component}
 .         elif defined(WITH_GNOME)
@@ -605,7 +582,6 @@ HAVE_GNOME+=	${component}
 HAVE_GNOME+=	${component}
 .            endif
 .         endif
-.       endif
 . endfor
 .elif defined(WITHOUT_GNOME)
 .  if ${WITHOUT_GNOME}!="yes" && ${WITHOUT_GNOME}!="1"
@@ -643,14 +619,6 @@ ${component}_USE_GNOME_IMPL+=${${subcomponent}_USE_GNOME_IMPL}
 # and if the user's chosen desktop is not of the same version, mark the
 # port as IGNORE.
 . for component in ${USE_GNOME:C/^([^:]+).*/\1/}
-.      if defined(GNOME_DESKTOP_VERSION) && \
-	defined(${component}_GNOME_DESKTOP_VERSION)
-.         if ${GNOME_DESKTOP_VERSION}!=${${component}_GNOME_DESKTOP_VERSION}
-IGNORE=	cannot install: ${PORTNAME} wants to use the GNOME
-IGNORE+=${${component}_GNOME_DESKTOP_VERSION} desktop, but you wish to use
-IGNORE+=the GNOME ${GNOME_DESKTOP_VERSION} desktop
-.         endif
-.      endif
 .  if ${_USE_GNOME_ALL:M${component}}==""
 IGNORE=	cannot install: Unknown component ${component}
 .  endif
@@ -732,13 +700,6 @@ USE_GNOME?=
 PLIST_SUB+=	GNOME:="@comment " NOGNOME:=""
 .  else
 PLIST_SUB+=	GNOME:="" NOGNOME:="@comment "
-.    if defined(GNOME_DESKTOP_VERSION)
-.      if ${_USE_GNOME_DESKTOP}=="yes"
-PLIST_SUB+=	GNOMEDESKTOP:="" NOGNOMEDESKTOP:="@comment "
-.      else
-PLIST_SUB+=	GNOMEDESKTOP:="@comment " NOGNOMEDESKTOP:=""
-.      endif
-.    endif
 .  endif
 .endif
 
