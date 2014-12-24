@@ -1,11 +1,10 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11-toolkits/gtk30/Makefile 20051 2014-11-10 09:39:43Z gusi $
 # Please keep gtk30 and x11-themes/gnome-themes-standard minor version in sync
 
 PORTNAME=	gtk
-PORTVERSION=	3.14.5
-PORTREVISION?=	1
+PORTVERSION=	3.15.3
+PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -26,25 +25,27 @@ PORTSCOUT=	ignore:1
 PORTSCOUT=	limit:1,even
 
 BUILD_DEPENDS+=	at-spi2-atk>=0:${PORTSDIR}/accessibility/at-spi2-atk
+LIB_DEPENDS=	libepoxy.so:${PORTSDIR}/graphics/libepoxy
 RUN_DEPENDS+=	hicolor-icon-theme>=0:${PORTSDIR}/misc/hicolor-icon-theme \
 		at-spi2-atk>=0:${PORTSDIR}/accessibility/at-spi2-atk
 
 USE_PERL5=	build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	atk gdkpixbuf2 gtk-update-icon-cache \
-		introspection:build pango
+USE_GNOME=	atk gdkpixbuf2 introspection:build pango
+#gtk-update-icon-cache \
+#		introspection:build pango
 USES+=		gettext gmake libtool pathfix perl5 pkgconfig
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
-CONFIGURE_ARGS=	--enable-gtk2-dependency --disable-packagekit \
+CONFIGURE_ARGS=	--disable-packagekit \
 		--enable-introspection
 CPPFLAGS+=	-I${LOCALBASE}/include -fno-omit-frame-pointer
 LIBS+=		-L${LOCALBASE}/lib
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
-LIBVERSION=	0.1400.5
+LIBVERSION=	0.1503.0
 PLIST_SUB+=	LIBVERSION=${LIBVERSION}
 
 GLIB_SCHEMAS=	org.gtk.Demo.gschema.xml \
