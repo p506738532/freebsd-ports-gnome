@@ -7,7 +7,6 @@ include/mutter/meta/compositor-mutter.h
 include/mutter/meta/compositor.h
 include/mutter/meta/display.h
 include/mutter/meta/errors.h
-include/mutter/meta/gradient.h
 include/mutter/meta/group.h
 include/mutter/meta/keybindings.h
 include/mutter/meta/main.h
@@ -64,13 +63,13 @@ share/doc/meta/left-insensitive.png
 share/doc/meta/left.png
 share/doc/meta/meta-Common.html
 share/doc/meta/meta-Errors.html
-share/doc/meta/meta-Gradients.html
 share/doc/meta/meta-Main.html
 share/doc/meta/meta-MetaCompositor.html
 share/doc/meta/meta-MetaGroup.html
 share/doc/meta/meta-MetaKeybinding.html
 share/doc/meta/meta-Preferences.html
 share/doc/meta/meta-Utility-functions.html
+share/doc/meta/meta-gradient.html
 share/doc/meta/meta.devhelp2
 share/doc/meta/mutter-overview.html
 share/doc/meta/object-tree.html
