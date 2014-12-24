@@ -76,6 +76,7 @@ include/giomm-%%API_VERSION%%/giomm/menumodel.h
 include/giomm-%%API_VERSION%%/giomm/mount.h
 include/giomm-%%API_VERSION%%/giomm/mountoperation.h
 include/giomm-%%API_VERSION%%/giomm/networkaddress.h
+include/giomm-%%API_VERSION%%/giomm/networkmonitor.h
 include/giomm-%%API_VERSION%%/giomm/networkservice.h
 include/giomm-%%API_VERSION%%/giomm/notification.h
 include/giomm-%%API_VERSION%%/giomm/outputstream.h
@@ -157,6 +158,7 @@ include/giomm-%%API_VERSION%%/giomm/private/menumodel_p.h
 include/giomm-%%API_VERSION%%/giomm/private/mount_p.h
 include/giomm-%%API_VERSION%%/giomm/private/mountoperation_p.h
 include/giomm-%%API_VERSION%%/giomm/private/networkaddress_p.h
+include/giomm-%%API_VERSION%%/giomm/private/networkmonitor_p.h
 include/giomm-%%API_VERSION%%/giomm/private/networkservice_p.h
 include/giomm-%%API_VERSION%%/giomm/private/notification_p.h
 include/giomm-%%API_VERSION%%/giomm/private/outputstream_p.h
@@ -253,6 +255,7 @@ include/glibmm-%%API_VERSION%%/glibmm.h
 include/glibmm-%%API_VERSION%%/glibmm/arrayhandle.h
 include/glibmm-%%API_VERSION%%/glibmm/balancedtree.h
 include/glibmm-%%API_VERSION%%/glibmm/base64.h
+include/glibmm-%%API_VERSION%%/glibmm/binding.h
 include/glibmm-%%API_VERSION%%/glibmm/bytearray.h
 include/glibmm-%%API_VERSION%%/glibmm/bytes.h
 include/glibmm-%%API_VERSION%%/glibmm/checksum.h
@@ -289,6 +292,7 @@ include/glibmm-%%API_VERSION%%/glibmm/optiongroup.h
 include/glibmm-%%API_VERSION%%/glibmm/pattern.h
 include/glibmm-%%API_VERSION%%/glibmm/priorities.h
 include/glibmm-%%API_VERSION%%/glibmm/private/balancedtree_p.h
+include/glibmm-%%API_VERSION%%/glibmm/private/binding_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/bytearray_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/bytes_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/checksum_p.h
