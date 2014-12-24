@@ -264,6 +264,7 @@
     SUBDIR += libassuan
     SUBDIR += libbeid
     SUBDIR += libbf
+    SUBDIR += libcryptui
     SUBDIR += libecc
     SUBDIR += libfprint
     SUBDIR += libgcrypt
