@@ -61,6 +61,11 @@ post-patch:
 .endif
 	@${REINPLACE_CMD} -e 's|(AM_MAKEFLAGS) install-exec-hook|(AM_MAKEFLAGS)|g' \
 		${WRKSRC}/gnome-pty-helper/Makefile.in
+# zlib.pc only is available on in 11-HEAD any maybe 10.1-R
+	@${REINPLACE_CMD} -e 's|zlib"|"|g' \
+		${WRKSRC}/configure
+
+CFLAGS+=	-lz
 
 .include <bsd.port.mk>
 
