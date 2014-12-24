@@ -1,4 +1,3 @@
-share/applications/gnome-shell-classic.desktop
 share/gnome-session/sessions/gnome-classic.session
 share/gnome-shell/extensions/alternate-tab@gnome-shell-extensions.gcampax.github.com/convenience.js
 share/gnome-shell/extensions/alternate-tab@gnome-shell-extensions.gcampax.github.com/extension.js
@@ -69,6 +68,7 @@ share/gnome-shell/theme/classic-toggle-off-intl.svg
 share/gnome-shell/theme/classic-toggle-off-us.svg
 share/gnome-shell/theme/classic-toggle-on-intl.svg
 share/gnome-shell/theme/classic-toggle-on-us.svg
+share/gnome-shell/theme/gnome-classic-high-contrast.css
 share/gnome-shell/theme/gnome-classic.css
 share/locale/af/LC_MESSAGES/gnome-shell-extensions.mo
 share/locale/an/LC_MESSAGES/gnome-shell-extensions.mo
@@ -116,6 +116,7 @@ share/locale/pa/LC_MESSAGES/gnome-shell-extensions.mo
 share/locale/pl/LC_MESSAGES/gnome-shell-extensions.mo
 share/locale/pt/LC_MESSAGES/gnome-shell-extensions.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-shell-extensions.mo
+share/locale/ro/LC_MESSAGES/gnome-shell-extensions.mo
 share/locale/ru/LC_MESSAGES/gnome-shell-extensions.mo
 share/locale/sk/LC_MESSAGES/gnome-shell-extensions.mo
 share/locale/sl/LC_MESSAGES/gnome-shell-extensions.mo
