@@ -1,9 +1,8 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/mail/evolution/Makefile 20048 2014-11-10 09:19:46Z gusi $
 
 PORTNAME=	evolution
-PORTVERSION=	3.12.8
+PORTVERSION=	3.13.9
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -18,14 +17,15 @@ LIB_DEPENDS=	libnss3.so:${PORTSDIR}/security/nss \
 		libgtkspell3-3.so:${PORTSDIR}/textproc/gtkspell3 \
 		libgeocode-glib.so:${PORTSDIR}/net/geocode-glib \
 		libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
+		libgnome-autoar-gtk.so:${PORTSDIR}/archivers/gnome-autoar \
+		libcryptui.so:${PORTSDIR}/security/libcryptui \
 		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 		libnotify.so:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	highlight:${PORTSDIR}/textproc/highlight
 
 USES=		desktop-file-utils bison gettext gmake libtool \
 		pathfix perl5 pkgconfig tar:xz
-USE_GNOME=	evolutiondataserver3 gnomedesktop3 gnomeprefix gtkhtml4 \
-		intlhack
+USE_GNOME=	evolutiondataserver3 gnomedesktop3 gnomeprefix intlhack
 GNU_CONFIGURE=	yes
 USE_GSTREAMER1=	yes
 INSTALLS_ICONS=	yes
@@ -57,7 +57,7 @@ GLIB_SCHEMAS=	org.gnome.evolution.gschema.xml \
 		org.gnome.evolution.plugin.publish-calendar.gschema.xml \
 		org.gnome.evolution.plugin.templates.gschema.xml
 
-EVO_VERSION=	3.12
+EVO_VERSION=	3.14
 PLIST_SUB=	VERSION=${EVO_VERSION} \
 		PORTVERSION=2.12
 

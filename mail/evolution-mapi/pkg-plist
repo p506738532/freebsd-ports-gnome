@@ -10,7 +10,7 @@ include/evolution-data-server/mapi/e-mapi-folder.h
 include/evolution-data-server/mapi/e-mapi-mail-utils.h
 include/evolution-data-server/mapi/e-mapi-operation-queue.h
 include/evolution-data-server/mapi/e-mapi-utils.h
-lib/evolution/%%VERSION%%/modules/module-mapi-configuration.so
+lib/evolution/modules/module-mapi-configuration.so
 lib/evolution-data-server/addressbook-backends/libebookbackendmapi.so
 lib/evolution-data-server/calendar-backends/libecalbackendmapi.so
 lib/evolution-data-server/camel-providers/libcamelmapi.urls
