@@ -1,9 +1,8 @@
 # Created by: Gustau Perez i Querol <gustau.perez@gmail.com> 
 # $FreeBSD$
-#   $MCom: ports/trunk/net/geocode-glib/Makefile 20031 2014-11-02 21:47:55Z kwm $
 
 PORTNAME=	geocode-glib
-PORTVERSION=	3.14.0
+PORTVERSION=	3.15.3.1
 CATEGORIES=	net devel gnome
 MASTER_SITES=	GNOME
 
@@ -21,9 +20,5 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ENV=	XDG_CACHE_HOME=${WRKDIR}
 INSTALL_TARGET=	install-strip
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|SoupGNOME|Soup|' \
-                ${WRKSRC}/geocode-glib/Makefile.in
 
 .include <bsd.port.mk>
