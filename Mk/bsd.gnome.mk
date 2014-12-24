@@ -3,16 +3,8 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/trunk/Mk/bsd.gnome.mk 20033 2014-11-02 23:07:27Z kwm $
 #
 # Please view me with 4 column tabs!
-
-#######################################################
-#
-# *** WARNING: Disable MARCUSCOM before merge in FreeBSD!
-#     Please also remove this section before merging into FreeBSD.
-#
-#MARCUSCOM_CVS=yes
 
 # ======================= USERS =================================
 #
@@ -518,12 +510,6 @@ gvfs_DETECT=		${LOCALBASE}/lib/gvfs/libgvfscommon.so
 gvfs_BUILD_DEPENDS=	gvfs>=0:${PORTSDIR}/devel/gvfs
 gvfs_RUN_DEPENDS=	gvfs>=0:${PORTSDIR}/devel/gvfs
 gvfs_USE_GNOME_IMPL=	glib20
-
-.if defined(MARCUSCOM_CVS)
-. if exists(${PORTSDIR}/Mk/bsd.gnome-experimental.mk)
-.include "${PORTSDIR}/Mk/bsd.gnome-experimental.mk"
-. endif
-.endif
 
 .if defined(INSTALLS_ICONS)
 USE_GNOME+=	gtk-update-icon-cache
