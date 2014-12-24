@@ -103,6 +103,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/combobox.h
 include/gtkmm-%%API_VERSION%%/gtkmm/comboboxtext.h
 include/gtkmm-%%API_VERSION%%/gtkmm/container.h
 include/gtkmm-%%API_VERSION%%/gtkmm/cssprovider.h
+include/gtkmm-%%API_VERSION%%/gtkmm/csssection.h
 include/gtkmm-%%API_VERSION%%/gtkmm/dialog.h
 include/gtkmm-%%API_VERSION%%/gtkmm/drawingarea.h
 include/gtkmm-%%API_VERSION%%/gtkmm/editable.h
@@ -246,6 +247,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/combobox_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/comboboxtext_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/container_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/cssprovider_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/csssection_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/dialog_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/drawingarea_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/editable_p.h
@@ -457,6 +459,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/stock.h
 include/gtkmm-%%API_VERSION%%/gtkmm/stockid.h
 include/gtkmm-%%API_VERSION%%/gtkmm/stockitem.h
 include/gtkmm-%%API_VERSION%%/gtkmm/stylecontext.h
+include/gtkmm-%%API_VERSION%%/gtkmm/styleproperty.h
 include/gtkmm-%%API_VERSION%%/gtkmm/styleprovider.h
 include/gtkmm-%%API_VERSION%%/gtkmm/switch.h
 include/gtkmm-%%API_VERSION%%/gtkmm/table.h
