@@ -3726,6 +3726,7 @@
     SUBDIR += py-fake-factory
     SUBDIR += py-fam
     SUBDIR += py-fastimport
+    SUBDIR += py-filemagic
     SUBDIR += py-fileutils
     SUBDIR += py-five.customerize
     SUBDIR += py-five.formlib
@@ -3742,6 +3743,7 @@
     SUBDIR += py-fudge
     SUBDIR += py-funcparserlib
     SUBDIR += py-fusefs
+    SUBDIR += py-future
     SUBDIR += py-futures
     SUBDIR += py-game
     SUBDIR += py-gamin
