@@ -16,6 +16,6 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.desktop.archives.enums.xml \
-		org.gnome.desktop.archives.gschema.xm
+		org.gnome.desktop.archives.gschema.xml
 
 .include <bsd.port.mk>
