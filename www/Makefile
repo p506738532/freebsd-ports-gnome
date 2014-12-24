@@ -150,8 +150,6 @@
     SUBDIR += drupal6-wysiwyg
     SUBDIR += drupal6-zeropoint
     SUBDIR += drupal7
-    SUBDIR += drupal7-jailadmin
-    SUBDIR += drupal7-vulnscan
     SUBDIR += drupal7-wysiwyg
     SUBDIR += drush
     SUBDIR += dtse
@@ -226,6 +224,7 @@
     SUBDIR += google-sitemapgen
     SUBDIR += googlebook_dl
     SUBDIR += goose
+    SUBDIR += gpx2map
     SUBDIR += grafana
     SUBDIR += grails
     SUBDIR += gregarius
