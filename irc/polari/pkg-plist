@@ -4,7 +4,6 @@ lib/polari/girepository-1.0/Polari-1.0.typelib
 share/appdata/org.gnome.Polari.appdata.xml
 share/applications/org.gnome.Polari.desktop
 share/dbus-1/services/org.gnome.Polari.service
-share/glib-2.0/schemas/org.gnome.polari.gschema.xml
 share/icons/hicolor/256x256/apps/polari.png
 share/locale/ar/LC_MESSAGES/polari.mo
 share/locale/as/LC_MESSAGES/polari.mo
@@ -14,6 +13,7 @@ share/locale/cs/LC_MESSAGES/polari.mo
 share/locale/da/LC_MESSAGES/polari.mo
 share/locale/de/LC_MESSAGES/polari.mo
 share/locale/el/LC_MESSAGES/polari.mo
+share/locale/en_GB/LC_MESSAGES/polari.mo
 share/locale/es/LC_MESSAGES/polari.mo
 share/locale/eu/LC_MESSAGES/polari.mo
 share/locale/fi/LC_MESSAGES/polari.mo

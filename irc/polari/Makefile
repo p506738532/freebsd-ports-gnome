@@ -1,9 +1,8 @@
 # Created by: Gustau Perez <gustau.perez@gmail.com>
 # $FreeBSD$
-#   $MCom: ports/trunk/irc/polari/Makefile 19991 2014-10-18 19:23:24Z gusi $
 
 PORTNAME=	polari
-PORTVERSION=	3.14.1
+PORTVERSION=	3.15.3
 CATEGORIES=	irc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,5 +22,7 @@ INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
+
+GLIB_SCHEMAS=	org.gnome.polari.gschema.xml
 
 .include <bsd.port.mk>
