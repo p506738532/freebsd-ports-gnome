@@ -1,9 +1,8 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/sysutils/gnome-settings-daemon/Makefile 20031 2014-11-02 21:47:55Z kwm $
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	3.14.2
+PORTVERSION=	3.15.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -36,12 +35,13 @@ USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-gudev \
+		--with-nssdb=${LOCALBASE}/share/certs/ca-root-nss.crt \
+		--disable-wayland \
 		--disable-systemd \
 		--disable-rfkill \
 		--disable-network-manager \
 		--disable-packagekit
-#		--disable-ibus \
-#--with-pnpids=${LOCALBASE}/share/libgnome-desktop-3.0/pnp.ids
+
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
@@ -68,15 +68,16 @@ GLIB_SCHEMAS=	org.gnome.settings-daemon.enums.xml \
 		org.gnome.settings-daemon.plugins.sharing.gschema.xml \
 		org.gnome.settings-daemon.plugins.xrandr.gschema.xml \
 		org.gnome.settings-daemon.plugins.xsettings.gschema.xml
+# comment out, to see if native xserver 1.14 works :)
 # work around missing cursor with xorg-server 1.12.
-GLIB_SCHEMAS+=	cursor-plugin.gschema.override
+#GLIB_SCHEMAS+=	cursor-plugin.gschema.override
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/gnome|${PREFIX}/etc/gnome|g' \
 		${WRKSRC}/data/org.gnome.settings-daemon.plugins.xrandr.gschema.xml.in.in
 
-post-install:
-	${INSTALL_DATA} ${FILESDIR}/cursor-plugin.gschema.override \
-		${STAGEDIR}${PREFIX}/share/glib-2.0/schemas
+#post-install:
+#	${INSTALL_DATA} ${FILESDIR}/cursor-plugin.gschema.override \
+#		${STAGEDIR}${PREFIX}/share/glib-2.0/schemas
 
 .include <bsd.port.mk>
