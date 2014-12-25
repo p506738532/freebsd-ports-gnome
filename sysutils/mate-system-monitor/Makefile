@@ -18,7 +18,7 @@ PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_MATE=	icontheme
-USE_GNOME=	gnomehier gtk20 librsvg2 intlhack libxml2 gtkmm24 libwnck
+USE_GNOME=	gtk20 gtkmm24 intlhack librsvg2 libwnck libxml2
 CONFIGURE_ARGS=	--with-gtk=2.0
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-lutil"
