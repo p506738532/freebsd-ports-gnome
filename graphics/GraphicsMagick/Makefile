@@ -3,6 +3,7 @@
 
 PORTNAME=	GraphicsMagick
 PORTVERSION=	1.3.20
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	graphics
 MASTER_SITES=	SF \
@@ -16,7 +17,7 @@ LIB_DEPENDS=	libjbig.so:${PORTSDIR}/graphics/jbigkit		\
 		libjasper.so:${PORTSDIR}/graphics/jasper	\
 		libjpeg.so:${PORTSDIR}/graphics/jpeg		\
 		liblcms2.so:${PORTSDIR}/graphics/lcms2		\
-		libpng15.so:${PORTSDIR}/graphics/png		\
+		libpng.so:${PORTSDIR}/graphics/png		\
 		libtiff.so:${PORTSDIR}/graphics/tiff		\
 		libfreetype.so:${PORTSDIR}/print/freetype2
 
@@ -117,6 +118,3 @@ regression-test: do-build
 		${MAKEFILE} ${MAKE_ARGS} check)
 
 .include <bsd.port.post.mk>
-# The OPENMP option may select gcc as compiler but on architectures
-# that have switched to libc++ clang should be used for C++ code.
-CXX=		c++

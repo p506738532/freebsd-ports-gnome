@@ -3,7 +3,7 @@
 
 PORTNAME=	xplanet
 PORTVERSION=	1.3.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	astro geography
 MASTER_SITES=	SF
 
@@ -29,7 +29,7 @@ GIF_LIB_DEPENDS=	libgif.so:${PORTSDIR}/graphics/giflib
 JPEG_CONFIGURE_WITH=	jpeg
 JPEG_LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg
 PNG_CONFIGURE_WITH=	png
-PNG_LIB_DEPENDS+=	libpng15.so:${PORTSDIR}/graphics/png
+PNG_LIB_DEPENDS+=	libpng.so:${PORTSDIR}/graphics/png
 PNM_CONFIGURE_WITH=	pnm
 PNM_LIB_DEPENDS=	libnetpbm.so:${PORTSDIR}/graphics/netpbm
 TIFF_CONFIGURE_WITH=	tiff
