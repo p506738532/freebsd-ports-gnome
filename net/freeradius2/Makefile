@@ -3,6 +3,7 @@
 
 PORTNAME=	freeradius
 DISTVERSION=	2.2.6
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/freeradius/%SUBDIR%/ \
 		ftp://ftp.ntua.gr/pub/net/radius/freeradius/%SUBDIR%/ \
@@ -344,6 +345,6 @@ pre-configure:
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}-${PORTVERSION}/*.so
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/rlm_* \
-		${STAGEDIR}${PREFIX}/sbin/rad*
+		${STAGEDIR}${PREFIX}/sbin/radiusd
 
 .include <bsd.port.post.mk>

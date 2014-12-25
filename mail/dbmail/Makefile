@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	http://git.dbmail.eu/paul/dbmail/snapshot/ \
 		http://www.dbmail.org/download/3.2/
 
-MAINTAINER=	ahicks@p-o.co.uk
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	SQL database-based mail system (POP3 and IMAP)
 
 LICENSE=	GPLv2

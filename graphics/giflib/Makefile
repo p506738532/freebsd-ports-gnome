@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-4.x
 PKGNAMESUFFIX=	${NOX11SUFFIX}${PKGNAMESUFFIX2}
 
-MAINTAINER=	dinoex@FreeBSD.org
+MAINTAINER=	portmgr@FreeBSD.org
 COMMENT=	Tools and library routines for working with GIF images
 
 CONFLICTS=	libungif-[0-9]*

@@ -3,7 +3,7 @@
 
 PORTNAME=	openttd
 PORTVERSION=	1.4.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://gb.binaries.openttd.org/binaries/releases/${PORTVERSION}/ \
 		http://ftp.snt.utwente.nl/pub/games/openttd/binaries/releases/${PORTVERSION}/ \
@@ -15,7 +15,7 @@ COMMENT=	Open source clone of Microprose Transport Tycoon Deluxe
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	libpng15.so:${PORTSDIR}/graphics/png \
+LIB_DEPENDS=	libpng.so:${PORTSDIR}/graphics/png \
 		liblzo2.so:${PORTSDIR}/archivers/lzo2
 
 USES=		gmake pkgconfig tar:xz
@@ -92,6 +92,8 @@ pre-everything::
 
 post-patch:
 	@${REINPLACE_CMD} -e 's,/usr/local,${LOCALBASE},' ${WRKSRC}/config.lib
+	@${REINPLACE_CMD} -e '/FS_NORMAL/s,max(1,&U,' \
+		${WRKSRC}/src/fontcache.cpp
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PORTNAME} ${STAGEDIR}${PREFIX}/bin

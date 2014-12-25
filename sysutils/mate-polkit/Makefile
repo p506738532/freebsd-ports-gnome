@@ -1,8 +1,9 @@
-# Created by: Koop Mast<kwm@FreeBSD.org>
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
 
 PORTNAME=	mate-polkit
 PORTVERSION=	1.9.0
+PORTREVISION=	1
 CATEGORIES=	sysutils mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate

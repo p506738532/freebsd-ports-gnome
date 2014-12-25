@@ -3,8 +3,9 @@
 
 PORTNAME=	pioneer
 PORTVERSION=	0.0.${GH_TAGNAME}
+PORTREVISION=	1
 CATEGORIES=	games
-MASTER_SITES=	http://github.com/${GH_ACCOUNT}/${GH_PROJECT}/archive/${GH_TAGNAME}.tar.gz?dummy=/
+MASTER_SITES=	http://github.com/${GH_ACCOUNT}/${GH_PROJECT}/archive/${GH_TAGNAME}${EXTRACT_SUFX}?dummy=/
 
 MAINTAINER=	lightside@gmx.com
 COMMENT=	Space adventure game set in the Milky Way galaxy
@@ -33,7 +34,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/GL/glu.h:${PORTSDIR}/graphics/libGLU
 LIB_DEPENDS=	libsigc-2.0.so:${PORTSDIR}/devel/libsigc++20 \
 		libfreetype.so:${PORTSDIR}/print/freetype2 \
 		libvorbisfile.so:${PORTSDIR}/audio/libvorbis \
-		libpng15.so:${PORTSDIR}/graphics/png \
+		libpng.so:${PORTSDIR}/graphics/png \
 		libassimp.so:${PORTSDIR}/multimedia/assimp
 
 GH_ACCOUNT=	pioneerspacesim
@@ -92,6 +93,9 @@ post-patch: .SILENT
 		${WRKSRC}/configure.ac
 	${REINPLACE_CMD} -e 's/modelviewer/${PORTNAME} -modelviewer/' \
 		${WRKSRC}/Modelviewer.txt
+# Use "unsigned int" type for std::max matching function
+	${REINPLACE_CMD} -e 's/int m_atlasVIncrement/unsigned &/' \
+		${WRKSRC}/src/text/TextureFont.h
 .if !${PORT_OPTIONS:MMODELCOMPILER}
 	${REINPLACE_CMD} -e 's/pioneer modelcompiler/pioneer/' \
 		${WRKSRC}/src/Makefile.am

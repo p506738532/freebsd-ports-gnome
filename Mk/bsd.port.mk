@@ -768,19 +768,14 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #
 # For extract:
 #
-# EXTRACT_CMD	- Command for extracting archive: "bzip2" if USE_BZIP2
-#				  is set, "gzip" otherwise.
+# EXTRACT_CMD	- Command for extracting archive
+#				  Default: ${TAR}
 # EXTRACT_BEFORE_ARGS
 #				- Arguments to ${EXTRACT_CMD} before filename.
-#				  Default: "-dc"
+#				  Default: "-xf"
 # EXTRACT_AFTER_ARGS
 #				- Arguments to ${EXTRACT_CMD} following filename.
-#				  default: "| tar -xf -"
-# EXTRACT_PRESERVE_OWNERSHIP
-#				- Normally, when run as "root", the extract stage will
-#				  change the owner and group of all files under ${WRKDIR}
-#				  to 0:0.  Set this variable if you want to turn off this
-#				  feature.
+#				  Default: "--no-same-owner --no-same-permissions"
 # For patch:
 #
 # EXTRA_PATCHES	- Define this variable if you have patches not in
@@ -885,7 +880,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  Default: ${PORTSDIR}/Templates/BSD.local.dist or
 #				  /etc/mtree/BSD.usr.dist if ${PREFIX} == "/usr".
 # PLIST_DIRS	- Directories to be added to packing list
-# PLIST_DIRSTRY	- Directories to be added to packing list and try to remove them.
 # PLIST_FILES	- Files and symbolic links to be added to packing list
 #
 # PLIST			- Name of the `packing list' file.
@@ -1091,7 +1085,6 @@ CO_ENV+=	STAGEDIR=${STAGEDIR} \
 			WRKDIR=${WRKDIR} \
 			WRKSRC=${WRKSRC} \
 			MTREE_FILE=${MTREE_FILE} \
-			GNOME_MTREE_FILE=${GNOME_MTREE_FILE} \
 			TMPPLIST=${TMPPLIST} \
 			SCRIPTSDIR=${SCRIPTSDIR} \
 			PLIST_SUB_SED="${PLIST_SUB_SED}" \
@@ -1149,7 +1142,7 @@ STRIPBIN=	${STRIP_CMD}
 .else
 
 # Look for files named "*.orig" under ${PATCH_WRKSRC} and (re-)generate
-# ${FILESDIR}/patch-* files from them.  By popular demand, we currently
+# ${PATCHDIR}/patch-* files from them.  By popular demand, we currently
 # use '_' (underscore) to replace path separators in patch file names.
 #
 # If a file name happens to contain character which is also a separator
@@ -1162,7 +1155,7 @@ STRIPBIN=	${STRIP_CMD}
 .if !target(makepatch)
 PATCH_PATH_SEPARATOR=	_
 makepatch:
-	@${MKDIR} ${FILESDIR}
+	@${MKDIR} ${PATCHDIR}
 	@(cd ${PATCH_WRKSRC}; \
 		for f in `${FIND} -s . -type f -name '*.orig'`; do \
 			ORIG=$${f#./}; \
@@ -1171,14 +1164,14 @@ makepatch:
 			! for _lps in `${ECHO} _ - + | ${SED} -e \
 				's|${PATCH_PATH_SEPARATOR}|__|'`; do \
 					PATCH=`${ECHO} $${NEW} | ${SED} -e "s|/|$${_lps}|g"`; \
-					test -f "${FILESDIR}/patch-$${PATCH}" && break; \
+					test -f "${PATCHDIR}/patch-$${PATCH}" && break; \
 			done || ${ECHO} $${_SEEN} | ${GREP} -q /$${PATCH} && { \
 				PATCH=`${ECHO} $${NEW} | ${SED} -e \
 					's|${PATCH_PATH_SEPARATOR}|&&|g' -e \
 					's|/|${PATCH_PATH_SEPARATOR}|g'`; \
 				_SEEN=$${_SEEN}/$${PATCH}; \
 			}; \
-			OUT=${FILESDIR}/patch-$${PATCH}; \
+			OUT=${PATCHDIR}/patch-$${PATCH}; \
 			${ECHO} ${DIFF} -udp $${ORIG} $${NEW} '>' $${OUT}; \
 			TZ=UTC ${DIFF} -udp $${ORIG} $${NEW} | ${SED} -e \
 				'/^---/s|\.[0-9]* +0000$$| UTC|' -e \
@@ -1229,14 +1222,6 @@ _OSVERSION_MAJOR=	${OSVERSION:C/([0-9]?[0-9])([0-9][0-9])[0-9]{3}/\1/}
 .error UNAME_r (${UNAMER}) and OSVERSION (${OSVERSION}) do not agree on major version number.
 .elif ${_OSVERSION_MAJOR} != ${OSREL:R}
 .error OSREL (${OSREL}) and OSVERSION (${OSVERSION}) do not agree on major version number.
-.endif
-
-# Enable new xorg for FreeBSD versions after Radeon KMS was imported unless
-# WITHOUT_NEW_XORG is set.
-.if !defined(WITHOUT_NEW_XORG)
-WITH_NEW_XORG?=	yes
-.else
-.undef WITH_NEW_XORG
 .endif
 
 # Only define tools here (for transition period with between pkg tools)
@@ -2155,11 +2140,7 @@ TAR?=	/usr/bin/tar
 # EXTRACT_SUFX is defined in .pre.mk section
 EXTRACT_CMD?=	${TAR}
 EXTRACT_BEFORE_ARGS?=	-xf
-.if defined(EXTRACT_PRESERVE_OWNERSHIP)
-EXTRACT_AFTER_ARGS?=
-.else
 EXTRACT_AFTER_ARGS?=	--no-same-owner --no-same-permissions
-.endif
 
 # Figure out where the local mtree file is
 .if !defined(MTREE_FILE) && !defined(NO_MTREE)
@@ -3042,12 +3023,6 @@ build: configure
 	@${TOUCH} ${TOUCH_FLAGS} ${BUILD_COOKIE}
 .endif
 
-# Disable install
-.if defined(NO_INSTALL) && !target(do-install)
-do-install:
-	@${DO_NADA}
-.endif
-
 # Disable package
 .if defined(NO_PACKAGE) && !target(package)
 package:
@@ -3319,12 +3294,10 @@ do-extract:
 			exit 1; \
 		fi; \
 	done
-.if !defined(EXTRACT_PRESERVE_OWNERSHIP)
 	@if [ ${UID} = 0 ]; then \
 		${CHMOD} -R ug-s ${WRKDIR}; \
 		${CHOWN} -R 0:0 ${WRKDIR}; \
 	fi
-.endif
 .endif
 
 # Patch
@@ -3572,9 +3545,9 @@ check-install-conflicts:
 
 # Install
 
-.if !target(do-install)
+.if !target(do-install) && !defined(NO_INSTALL)
 do-install:
-	@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
+	@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${FAKEROOT} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
 .endif
 
 # Package
@@ -4864,7 +4837,8 @@ create-manifest:
 		echo "}" ; \
 		echo "categories: [ ${CATEGORIES:u:S/$/,/} ]" ; \
 		l=${LICENSE_COMB} ; \
-		[ -n "${NO_ARCH}" ] && echo "arch : `${PKG_BIN} config abi | ${CUT} -d: -f1,2`:*" ; \
+		[ -n "${NO_ARCH}" ] && echo "arch : `${PKG_BIN} config abi | tr '[:upper:]' '[:lower:]' | ${CUT} -d: -f1,2`:*" ; \
+		[ -n "${NO_ARCH}" ] && echo "abi : `${PKG_BIN} config abi | ${CUT} -d: -f1,2`:*" ; \
 		echo "licenselogic: $${l:-single}" ; \
 		[ -z "${LICENSE}" ] || echo "licenses: [ ${LICENSE:u:S/$/,/} ]" ; \
 		[ -z "${USERS}" ] || echo "users: [ ${USERS:u:S/$/,/} ]" ; \
@@ -4906,9 +4880,6 @@ create-manifest:
 	[ -f ${PKGPOSTUPGRADE} ] && ${CP} ${PKGPOSTUPGRADE} ${METADIR}/+POST_UPGRADE; \
 	${CP} ${DESCR} ${METADIR}/+DESC; \
 	[ -f ${PKGMESSAGE} ] && ${CP} ${PKGMESSAGE} ${METADIR}/+DISPLAY || return 0
-.if !defined(NO_MTREE)
-	@[ -f ${MTREE_FILE} ] && ${CP} ${MTREE_FILE} ${METADIR}/+MTREE_DIRS || return 0
-.endif
 
 # Print out package names.
 
@@ -5095,6 +5066,7 @@ generate-plist: ${WRKDIR}
 		${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} ${PLIST} >> ${TMPPLIST}; \
 	fi
 
+# Keep PLIST_DIRSTRY as compatibility
 .for dir in ${PLIST_DIRS} ${PLIST_DIRSTRY}
 	@${ECHO_CMD} ${dir} | ${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} -e 's,^,@dir ,' >> ${TMPPLIST}
 .endfor

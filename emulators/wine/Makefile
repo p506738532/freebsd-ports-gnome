@@ -3,7 +3,7 @@
 
 PORTNAME=	wine
 DISTVERSION=	1.6.2
-PORTREVISION=	5
+PORTREVISION=	7
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -21,7 +21,7 @@ LIB_DEPENDS=	libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
 		libfreetype.so:${PORTSDIR}/print/freetype2 \
 		libjpeg.so:${PORTSDIR}/graphics/jpeg \
 		liblcms2.so:${PORTSDIR}/graphics/lcms2 \
-		libpng15.so:${PORTSDIR}/graphics/png \
+		libpng.so:${PORTSDIR}/graphics/png \
 		libxml2.so:${PORTSDIR}/textproc/libxml2
 
 CONFLICTS_INSTALL=	i386-wine-[0-9]* i386-wine-devel-[0-9]* wine-devel-[0-9]*
@@ -43,7 +43,7 @@ WINELIBDIR?=	${PREFIX}/lib
 USE_LDCONFIG=	${WINELIBDIR} ${WINELIBDIR}/wine
 .endif
 ONLY_FOR_ARCHS=	i386
-USES=		bison compiler:c11 gmake shebangfix tar:bzip2
+USES=		bison compiler:c11 desktop-file-utils gmake shebangfix tar:bzip2
 SHEBANG_FILES=	tools/winemaker tools/winedump/function_grep.pl
 USE_GL=		glu
 USE_XORG=	xcomposite xcursor xi xpm xrandr xrender

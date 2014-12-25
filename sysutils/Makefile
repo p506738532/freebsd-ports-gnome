@@ -79,6 +79,8 @@
     SUBDIR += bkpupsd
     SUBDIR += bksh
     SUBDIR += bontmia
+    SUBDIR += boxbackup
+    SUBDIR += boxbackup-devel
     SUBDIR += brasero
     SUBDIR += brebis
     SUBDIR += bsd-splash-changer
@@ -149,6 +151,7 @@
     SUBDIR += cpdup
     SUBDIR += cpu
     SUBDIR += cpuburn
+    SUBDIR += cpuid
     SUBDIR += cpulimit
     SUBDIR += cramfs
     SUBDIR += crashme
@@ -245,6 +248,7 @@
     SUBDIR += filewatcherd
     SUBDIR += finfo
     SUBDIR += firstboot-freebsd-update
+    SUBDIR += firstboot-growfs
     SUBDIR += firstboot-pkgs
     SUBDIR += flasher
     SUBDIR += flashrom
@@ -774,10 +778,12 @@
     SUBDIR += rej
     SUBDIR += relaxconf
     SUBDIR += rename
+    SUBDIR += renameutils
     SUBDIR += reoback
     SUBDIR += respond
     SUBDIR += retail
     SUBDIR += rfstool
+    SUBDIR += rhc
     SUBDIR += rinse
     SUBDIR += rmonitor
     SUBDIR += roottail
@@ -798,6 +804,7 @@
     SUBDIR += rubygem-capistrano
     SUBDIR += rubygem-capistrano-ext
     SUBDIR += rubygem-chef
+    SUBDIR += rubygem-chef-api
     SUBDIR += rubygem-chef-zero
     SUBDIR += rubygem-facter
     SUBDIR += rubygem-fluent-mixin-plaintextformatter
@@ -818,6 +825,7 @@
     SUBDIR += rubygem-hiera
     SUBDIR += rubygem-librarian-puppet
     SUBDIR += rubygem-log4r
+    SUBDIR += rubygem-logify
     SUBDIR += rubygem-mogilefs-client
     SUBDIR += rubygem-murder
     SUBDIR += rubygem-ohai
@@ -908,6 +916,7 @@
     SUBDIR += syslog-ng
     SUBDIR += syslog-ng-devel
     SUBDIR += syslog-ng-incubator
+    SUBDIR += syslog-ng-incubator03
     SUBDIR += syslog-ng33
     SUBDIR += syslog-ng34
     SUBDIR += syslog-ng35
@@ -948,6 +957,9 @@
     SUBDIR += ttyload
     SUBDIR += tw_cli
     SUBDIR += tzdialog
+    SUBDIR += u-boot-beaglebone
+    SUBDIR += u-boot-rpi
+    SUBDIR += u-boot-wandboard
     SUBDIR += ua
     SUBDIR += ucspi-ipc
     SUBDIR += ucspi-proxy
