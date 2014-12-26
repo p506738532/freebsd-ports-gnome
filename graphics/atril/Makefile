@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	atril
-PORTVERSION=	1.8.1
-PORTREVISION=	4
+PORTVERSION=	1.9.1
 CATEGORIES=	graphics print mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -38,14 +37,15 @@ INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.mate.Atril.gschema.xml
 
-OPTIONS_DEFINE=	DVI T1LIB CAJA COMICS DJVU XPS
-OPTIONS_DEFAULT=CAJA COMICS
+OPTIONS_DEFINE=	DVI T1LIB CAJA COMICS DJVU XPS EPUB
+OPTIONS_DEFAULT=CAJA COMICS EPUB
 DVI_DESC=	DVI viewer support
 T1LIB_DESC=	T1LIB for TYPE1 fonts to DVI (Enables DVI)
 CAJA_DESC=	Caja plugin
 COMICS_DESC=	Comic book archives support
 DJVU_DESC=	DJVU support
 XPS_DESC=	XPS support
+EPUB_DESC=	Epub support
 
 OPTIONS_SUB=	yes
 
@@ -56,6 +56,8 @@ DJVU_CONFIGURE_ENABLE=	djvu
 COMICS_CONFIGURE_ENABLE=	comics
 XPS_CONFIGURE_ENABLE=	xps
 XPS_LIB_DEPENDS=	libgxps.so:${PORTSDIR}/graphics/libgxps
+EPUB_CONFIGURE_ENABLE=	epub
+EPUB_LIB_DEPENDS=	libwebkitgtk-1.0.so:${PORTSDIR}/www/webkit-gtk2
 
 .include <bsd.port.options.mk>
 
