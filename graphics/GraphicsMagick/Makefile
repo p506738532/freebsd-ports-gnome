@@ -10,7 +10,7 @@ MASTER_SITES=	SF \
 		ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/1.3/
 MASTER_SITE_SUBDIR=	${PORTNAME:tl}/${PORTNAME:tl}/${PORTVERSION}
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Fast image processing tools based on ImageMagick
 
 LIB_DEPENDS=	libjbig.so:${PORTSDIR}/graphics/jbigkit		\
@@ -118,3 +118,6 @@ regression-test: do-build
 		${MAKEFILE} ${MAKE_ARGS} check)
 
 .include <bsd.port.post.mk>
+# The OPENMP option may select gcc as compiler but on architectures
+# that have switched to libc++ clang should be used for C++ code.
+CXX=		c++
