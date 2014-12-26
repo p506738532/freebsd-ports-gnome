@@ -199,6 +199,7 @@ share/pixmaps/nohost.png
 @mode 1775
 @dir etc/gdm/home
 @mode
+@dir etc/gdm/home/.local/share/applications
 @unexec rm -rf %D/etc/gdm/home/.gconf*
 @dir %%ETCDIR%%/Sessions
 @dir etc/dm
@@ -208,3 +209,4 @@ share/pixmaps/nohost.png
 @dir /var/run/gdm/
 @dir /var/log/gdm/
 @unexec rm -fr /var/gdm
+@dir share/xsessions

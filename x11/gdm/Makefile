@@ -1,9 +1,8 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11/gdm/Makefile 20031 2014-11-02 21:47:55Z kwm $
 
 PORTNAME=	gdm
-PORTVERSION=	3.14.1
+PORTVERSION=	3.15.3.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -60,6 +59,7 @@ CONFIGURE_ARGS=	--disable-static \
 		--with-dmconfdir=${LOCALBASE}/share/xsessions \
 		--with-screenshot-dir=/var/run/gdm/greeter \
 		--enable-authentication-scheme=pam \
+		--without-plymouth \
 		--with-user=gdm \
 		--with-group=gdm \
  		--with-initial-vt=09 \
