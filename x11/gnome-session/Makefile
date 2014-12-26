@@ -1,9 +1,8 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11/gnome-session/Makefile 19960 2014-10-15 14:24:24Z gusi $
 
 PORTNAME=	gnome-session
-PORTVERSION=	3.14.0
+PORTVERSION=	3.15.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,6 +24,7 @@ USE_GL=		gl
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docbook-docs \
+		--enable-consolekit \
 		--enable-gconf=no
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
