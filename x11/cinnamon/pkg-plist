@@ -55,6 +55,7 @@ lib/cinnamon-settings/bin/installSchema.py
 lib/cinnamon-settings/bin/proxygsettings.py
 lib/cinnamon-settings/bin/removeSchema.py
 lib/cinnamon-settings/bin/xlet-settings.ui
+lib/cinnamon-settings/cinnamon-settings-spice-progress.ui
 lib/cinnamon-settings/cinnamon-settings.py
 lib/cinnamon-settings/cinnamon-settings.ui
 lib/cinnamon-settings/data/spices/applet-detail.html
