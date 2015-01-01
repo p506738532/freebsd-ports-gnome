@@ -1,6 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/net/glib-networking/Makefile 19944 2014-10-15 05:33:09Z gusi $
 
 PORTNAME=	glib-networking
 PORTVERSION=	2.43.1

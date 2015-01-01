@@ -158,7 +158,6 @@
     SUBDIR += eaccelerator
     SUBDIR += edbrowse
     SUBDIR += efront
-    SUBDIR += egueb
     SUBDIR += elgg
     SUBDIR += elinks
     SUBDIR += eliom
@@ -1046,6 +1045,7 @@
     SUBDIR += p5-Mojolicious-Plugin-Authentication
     SUBDIR += p5-Mojolicious-Plugin-Database
     SUBDIR += p5-Mojolicious-Plugin-Mongodb
+    SUBDIR += p5-Mojolicious-Plugin-TtRenderer
     SUBDIR += p5-Mojolicious-Plugin-YamlConfig
     SUBDIR += p5-Monoceros
     SUBDIR += p5-Mozilla-CA
@@ -1678,6 +1678,7 @@
     SUBDIR += py-slimmer
     SUBDIR += py-slumber
     SUBDIR += py-splinter
+    SUBDIR += py-spyne
     SUBDIR += py-surl
     SUBDIR += py-textile
     SUBDIR += py-tgwebservices
