@@ -29,6 +29,7 @@
     SUBDIR += conduit
     SUBDIR += conkyemail
     SUBDIR += conkyforecast
+    SUBDIR += countdown
     SUBDIR += cycle
     SUBDIR += dailystrips
     SUBDIR += deforaos-todo
@@ -273,8 +274,8 @@
     SUBDIR += xmaddressbook
     SUBDIR += xmdiary
     SUBDIR += xneur
+    SUBDIR += xpad3
     SUBDIR += xpad
-    SUBDIR += xpad-current
     SUBDIR += xpostit
     SUBDIR += xpostitPlus
     SUBDIR += xrolo
