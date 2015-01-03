@@ -8,7 +8,7 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Evolution plugin to connect to Microsoft Exchange Web Services
+COMMENT=	Evolution Microsoft Exchange plugin through Exchange Web Services
 
 BUILD_DEPENDS=	evolution>=3.0.0:${PORTSDIR}/mail/evolution
 LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \

@@ -8,7 +8,7 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Evolution plugin to connect to Microsoft Exchange servers
+COMMENT=	Evolution Microsoft Exchange plugin through OpenChange
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool \
 		evolution>=3.0.0:${PORTSDIR}/mail/evolution
