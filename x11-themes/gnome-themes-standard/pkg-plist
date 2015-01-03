@@ -3599,16 +3599,3 @@ share/themes/HighContrast/gtk-2.0/gtkrc
 share/themes/HighContrast/gtk-3.0/gtk.css
 share/themes/HighContrast/index.theme
 share/themes/HighContrast/metacity-1/metacity-theme-3.xml
-@dir share/locale/an/LC_MESSAGES
-@dir share/locale/as/LC_MESSAGES
-@dir share/locale/bn_IN/LC_MESSAGES
-@dir share/locale/ca@valencia/LC_MESSAGES
-@dir share/locale/fur/LC_MESSAGES
-@dir share/locale/fy/LC_MESSAGES
-@dir share/locale/km/LC_MESSAGES
-@dir share/locale/mr/LC_MESSAGES
-@dir share/locale/sr@latin/LC_MESSAGES
-@dir share/locale/te/LC_MESSAGES
-@dir share/locale/ug/LC_MESSAGES
-@dir share/locale/uz@cyrillic/LC_MESSAGES
-@dir share/locale/zh_HK/LC_MESSAGES
