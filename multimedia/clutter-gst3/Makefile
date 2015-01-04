@@ -10,6 +10,9 @@ PKGNAMESUFFIX=	3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Clutter GStreamer integration
 
+# see https://bugzilla.gnome.org/show_bug.cgi?id=742279
+IGNORE=		makes gst-inspect-1.0 hang/crash
+
 LIB_DEPENDS=	libclutter-1.0.so:${PORTSDIR}/graphics/clutter
 
 USES=		gmake libtool pathfix pkgconfig tar:xz
