@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	GD
-PORTVERSION=	2.53
-PORTREVISION=	1
+PORTVERSION=	2.56
 CATEGORIES=	graphics perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
@@ -23,5 +22,8 @@ CONFIGURE_ENV=	options="FT,GIF,JPEG,PNG,XPM" \
 		lib_zlib_path=/usr
 USES=		perl5
 USE_PERL5=	configure
+
+post-patch:
+	@${CHMOD} u+w ${WRKSRC}/bdf_scripts/bdf2gdfont.pl
 
 .include <bsd.port.mk>

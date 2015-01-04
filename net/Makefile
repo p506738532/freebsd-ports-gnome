@@ -1223,6 +1223,7 @@
     SUBDIR += unison-devel
     SUBDIR += unison-nox11
     SUBDIR += unison232
+    SUBDIR += unison240
     SUBDIR += unix2tcp
     SUBDIR += uplog
     SUBDIR += urelay
@@ -1280,6 +1281,7 @@
     SUBDIR += xrdesktop
     SUBDIR += xrdp
     SUBDIR += xrdp-devel
+    SUBDIR += yami4
     SUBDIR += yaph
     SUBDIR += yate
     SUBDIR += yaz
