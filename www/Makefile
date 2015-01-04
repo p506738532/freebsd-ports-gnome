@@ -1151,6 +1151,7 @@
     SUBDIR += p5-STF-Dispatcher-PSGI
     SUBDIR += p5-SWF-Chart
     SUBDIR += p5-Scrappy
+    SUBDIR += p5-Selenium-Remote-Driver
     SUBDIR += p5-Session-Storage-Secure
     SUBDIR += p5-Squatting
     SUBDIR += p5-Squatting-On-PSGI
@@ -1238,6 +1239,7 @@
     SUBDIR += p5-WWW-Mechanize-FormFiller
     SUBDIR += p5-WWW-Mechanize-GZip
     SUBDIR += p5-WWW-Mechanize-Meta
+    SUBDIR += p5-WWW-Mechanize-PhantomJS
     SUBDIR += p5-WWW-Mechanize-Pluggable
     SUBDIR += p5-WWW-Mechanize-Plugin-phpBB
     SUBDIR += p5-WWW-Mechanize-Shell
@@ -1787,6 +1789,7 @@
     SUBDIR += rubygem-feed-normalizer
     SUBDIR += rubygem-feedjira
     SUBDIR += rubygem-flowdock
+    SUBDIR += rubygem-form_data
     SUBDIR += rubygem-geminabox
     SUBDIR += rubygem-gitlab-flowdock-git-hook
     SUBDIR += rubygem-gitlab-gollum-lib
