@@ -1,0 +1,32 @@
+From 0216eea17abcfba6caf287c46b3222f321feb005 Mon Sep 17 00:00:00 2001
+From: Lionel Landwerlin <lionel.g.landwerlin@intel.com>
+Date: Mon, 5 Jan 2015 13:26:04 +0000
+Subject: auto-video-sink: check initialization value properly
+
+https://bugzilla.gnome.org/show_bug.cgi?id=742279
+
+diff --git a/clutter-gst/clutter-gst-auto-video-sink.c b/clutter-gst/clutter-gst-auto-video-sink.c
+index 3a37a70..792a832 100644
+--- clutter-gst/clutter-gst-auto-video-sink.c
++++ clutter-gst/clutter-gst-auto-video-sink.c
+@@ -110,7 +110,7 @@ clutter_gst_auto_video_sink_class_init (ClutterGstAutoVideoSink3Class *klass)
+                                                         CLUTTER_GST_TYPE_CONTENT,
+                                                         G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
+ 
+-  if (_clutter_initialized) {
++  if (_clutter_initialized == CLUTTER_INIT_SUCCESS) {
+     GstElement *clutter_sink = clutter_gst_create_video_sink ();
+ 
+     gst_element_class_add_pad_template (eklass,
+@@ -157,7 +157,7 @@ clutter_gst_auto_video_sink_reset (ClutterGstAutoVideoSink3 *sink)
+ {
+   GstPad *targetpad;
+ 
+-  if (!_clutter_initialized)
++  if (_clutter_initialized != CLUTTER_INIT_SUCCESS)
+     return;
+ 
+   /* Remove any existing element */
+-- 
+cgit v0.10.1
+
