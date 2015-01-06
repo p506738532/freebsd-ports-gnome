@@ -1,9 +1,8 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#  $MCom: ports/trunk/net/vinagre/Makefile 20064 2014-11-11 06:09:58Z gusi $
 
 PORTNAME=	vinagre
-PORTVERSION=	3.14.3
+PORTVERSION=	3.15.3
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
