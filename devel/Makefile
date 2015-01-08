@@ -1525,6 +1525,7 @@
     SUBDIR += p5-Badger
     SUBDIR += p5-Benchmark-Timer
     SUBDIR += p5-Best
+    SUBDIR += p5-Brannigan
     SUBDIR += p5-Bread-Board
     SUBDIR += p5-Bread-Board-Declare
     SUBDIR += p5-Bundle-Perl6
@@ -4314,6 +4315,7 @@
     SUBDIR += rubygem-bioruby
     SUBDIR += rubygem-blankslate
     SUBDIR += rubygem-blockenspiel
+    SUBDIR += rubygem-bones
     SUBDIR += rubygem-bson
     SUBDIR += rubygem-bson1
     SUBDIR += rubygem-buftok
@@ -4460,7 +4462,7 @@
     SUBDIR += rubygem-librarian
     SUBDIR += rubygem-libyajl2
     SUBDIR += rubygem-listen
-    SUBDIR += rubygem-little_plugger
+    SUBDIR += rubygem-little-plugger
     SUBDIR += rubygem-locale
     SUBDIR += rubygem-lockfile
     SUBDIR += rubygem-logging
@@ -4507,6 +4509,7 @@
     SUBDIR += rubygem-nio4r
     SUBDIR += rubygem-nori
     SUBDIR += rubygem-notify
+    SUBDIR += rubygem-notiffany
     SUBDIR += rubygem-nprogress-rails
     SUBDIR += rubygem-oj
     SUBDIR += rubygem-open3_backport
@@ -4552,6 +4555,7 @@
     SUBDIR += rubygem-ref
     SUBDIR += rubygem-request_store
     SUBDIR += rubygem-require_all
+    SUBDIR += rubygem-retryable
     SUBDIR += rubygem-rgl
     SUBDIR += rubygem-rr
     SUBDIR += rubygem-rrd-ffi
