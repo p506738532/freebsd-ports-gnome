@@ -1035,6 +1035,8 @@
     SUBDIR += p5-Maypole
     SUBDIR += p5-Maypole-Authentication-UserSessionCookie
     SUBDIR += p5-Maypole-Component
+    SUBDIR += p5-McBain
+    SUBDIR += p5-McBain-WithPSGI
     SUBDIR += p5-MediaWiki
     SUBDIR += p5-MediaWiki-API
     SUBDIR += p5-Mobile-UserAgent
@@ -1206,6 +1208,7 @@
     SUBDIR += p5-URI-Sequin
     SUBDIR += p5-URI-Title
     SUBDIR += p5-URI-ToDisk
+    SUBDIR += p5-URL-Encode-XS
     SUBDIR += p5-VUser-Google-ProvisioningAPI
     SUBDIR += p5-W3C-LinkChecker
     SUBDIR += p5-W3C-LogValidator

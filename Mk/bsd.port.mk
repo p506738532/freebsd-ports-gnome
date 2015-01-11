@@ -1416,10 +1416,6 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 .include "${PORTSDIR}/Mk/bsd.php.mk"
 .endif
 
-.if defined(USE_PYTHON) || defined(USE_PYTHON_BUILD) || defined(USE_PYTHON_RUN)
-USES+=	python
-.endif
-
 .if defined(USE_FPC) || defined(WANT_FPC_BASE) || defined(WANT_FPC_ALL)
 .include "${PORTSDIR}/Mk/bsd.fpc.mk"
 .endif
@@ -5916,6 +5912,7 @@ _BUILD_SEQ=		build-message pre-build pre-build-script do-build \
 _STAGE_DEP=		build
 _STAGE_SEQ=		stage-message stage-dir run-depends lib-depends apply-slist pre-install generate-plist \
 				pre-su-install
+# ${POST_PLIST} must be after anything that modifies TMPPLIST
 .if defined(NEED_ROOT)
 _STAGE_SUSEQ=	create-users-groups do-install \
 				kmod-post-install fix-perl-things \
@@ -5924,7 +5921,7 @@ _STAGE_SUSEQ=	create-users-groups do-install \
 				install-rc-script install-ldconfig-file install-license \
 				install-desktop-entries add-plist-info add-plist-docs \
 				add-plist-examples add-plist-data add-plist-post \
-				move-uniquefiles-plist
+				move-uniquefiles-plist ${POST_PLIST}
 .if defined(DEVELOPER)
 _STAGE_SUSEQ+=	stage-qa
 .endif
@@ -5936,7 +5933,7 @@ _STAGE_SEQ+=	create-users-groups do-install \
 				install-rc-script install-ldconfig-file install-license \
 				install-desktop-entries add-plist-info add-plist-docs \
 				add-plist-examples add-plist-data add-plist-post \
-				move-uniquefiles-plist fix-perl-things
+				move-uniquefiles-plist ${POST_PLIST}
 .if defined(DEVELOPER)
 _STAGE_SEQ+=	stage-qa
 .endif

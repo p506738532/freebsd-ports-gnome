@@ -79,6 +79,8 @@
     SUBDIR += linsmith
     SUBDIR += massxpert
     SUBDIR += mbdyn
+    SUBDIR += mcstas
+    SUBDIR += mcstas-comps
     SUBDIR += medit
     SUBDIR += meep
     SUBDIR += mei
