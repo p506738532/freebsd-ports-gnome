@@ -3,6 +3,7 @@
 
 PORTNAME=	gnome-sound-recorder
 PORTVERSION=	3.15.3
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3

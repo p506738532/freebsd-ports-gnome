@@ -13,11 +13,9 @@ MASTER_SITES=	ftp://ftp.freepascal.org/pub/fpc/dist/${PORTVERSION}/source/:sourc
 		ftp://ftp.us.freepascal.org/pub/fpc/dist/${PORTVERSION}/source/:source \
 		http://leaf.dragonflybsd.org/~marino/dports-src/:DragonFlybootstrap \
 		SF/freepascal/Source/${PORTVERSION}:source \
-		${MASTER_SITE_GOOGLE_CODE}:bootstrap \
-		${MASTER_SITE_LOCAL:S|$|acm/freepascal/:bootstrap|} \
-		${MASTER_SITE_GOOGLE_CODE}:man \
-		${MASTER_SITE_LOCAL:S|$|acm/freepascal/:man|}
-DISTFILES=	${DISTNAME:S/$/.source/}${EXTRACT_SUFX}:source
+		LOCAL/acm/freepascal/:bootstrap \
+		LOCAL/acm/freepascal/:man
+DISTFILES=	${DISTNAME}.source.tar.gz:source
 DIST_SUBDIR=	freepascal
 
 MAINTAINER?=	freebsd-fpc@FreeBSD.org
@@ -59,8 +57,8 @@ SUB_FILES=	pkg-message
 BUILDNAME=	${FPC_ARCH}-${OPSYS:tl}
 PLIST_SUB+=	PORTVERSION=${PORTVERSION} \
 		BUILDNAME=${BUILDNAME}
-DISTFILES+=	${BOOTDIR}${EXTRACT_SUFX}:${OPSYS:MDragonFly}bootstrap \
-		${DISTNAME:S/$/.man/}${EXTRACT_SUFX}:man
+DISTFILES+=	${BOOTDIR}.tar.gz:${OPSYS:MDragonFly}bootstrap \
+		${DISTNAME}.man.tar.gz:man
 MAKE_ARGS+=	FPCMAKE=${WRKDIR}/${FPCSRCDIR}/utils/fpcm/fpcmake \
 		FPCTARGET=${BUILDNAME} \
 		ARCH=${FPC_ARCH} \
@@ -75,14 +73,13 @@ BOOTPPC=	PP=${WRKDIR}/${BOOTDIR}
 do-extract:
 # unpack binary distribution
 	@${MKDIR} ${WRKDIR}
-	@${TAR} -xzf ${_DISTDIR}/${BOOTDIR}${EXTRACT_SUFX} \
+	@${TAR} -xzf ${_DISTDIR}/${BOOTDIR}.tar.gz \
 		--directory ${WRKDIR} && ${CHMOD} +x ${WRKDIR}/${BOOTDIR}
 # unpack man files
-	@${TAR} -xzf ${_DISTDIR}/${DISTNAME:S/$/.man/}${EXTRACT_SUFX} \
-		--directory ${WRKDIR}
+	@${TAR} -xzf ${_DISTDIR}/${DISTNAME}.man.tar.gz --directory ${WRKDIR}
 # unpack source distribution
-	@(cd ${WRKDIR} && ${GZIP_CMD} -dc \
-		${_DISTDIR}/${DISTNAME:S/$/.source/}${EXTRACT_SUFX} | \
+	@(cd ${WRKDIR} && \
+		${GZIP_CMD} -dc ${_DISTDIR}/${DISTNAME}.source.tar.gz | \
 		${TAR} -xf - \
 		${FPCSRCDIR}/compiler \
 		${FPCSRCDIR}/rtl \
