@@ -815,6 +815,7 @@
     SUBDIR += rubygem-fssm
     SUBDIR += rubygem-god
     SUBDIR += rubygem-guard
+    SUBDIR += rubygem-guard-compat
     SUBDIR += rubygem-guard-livereload
     SUBDIR += rubygem-guard-minitest
     SUBDIR += rubygem-guard-rspec
@@ -831,6 +832,7 @@
     SUBDIR += rubygem-ohai
     SUBDIR += rubygem-parallel
     SUBDIR += rubygem-rubyipmi
+    SUBDIR += rubygem-shellany
     SUBDIR += rubygem-smart_proxy_salt
     SUBDIR += rubygem-sys-admin
     SUBDIR += rubygem-sys-cpu

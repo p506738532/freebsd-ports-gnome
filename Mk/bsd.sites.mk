@@ -126,15 +126,6 @@ MASTER_SITE_COMP_SOURCES+= \
 	ftp://ftp.uu.net/usenet/comp.sources.%SUBDIR%/
 .endif
 
-.if !defined(IGNORE_MASTER_SITE_CRITICAL)
-MASTER_SITE_CRITICAL+= \
-	http://critical.ch/distfiles/%SUBDIR%/ \
-	http://energy.critical.ch/distfiles/%SUBDIR%/ \
-	http://snow.critical.ch/distfiles/%SUBDIR%/ \
-	http://fneu.fr/distfiles/%SUBDIR%/ \
-	ftp://ftp.c.saper.info/distfiles/%SUBDIR%/
-.endif
-
 .if !defined(IGNORE_MASTER_SITE_CSME)
 MASTER_SITE_CSME+=	${MASTER_SITE_CENKES}
 .endif
@@ -1154,13 +1145,14 @@ MASTER_SITE_SAMBA+= \
 # List:	http://download.savannah.gnu.org/mirmon/
 .if !defined(IGNORE_MASTER_SITE_SAVANNAH)
 MASTER_SITE_SAVANNAH+= \
+	http://download.savannah.gnu.org/releases/%SUBDIR%/ \
+	http://download-mirror.savannah.gnu.org/releases/%SUBDIR%/ \
 	http://nongnu.askapache.com/%SUBDIR%/ \
 	http://mirror.lihnidos.org/GNU/savannah/%SUBDIR%/ \
 	http://ftp.twaren.net/Unix/NonGNU/%SUBDIR%/ \
 	ftp://ftp.twaren.net/Unix/NonGNU/%SUBDIR%/ \
 	http://gnu.mirrors.pair.com/savannah/savannah/%SUBDIR%/ \
-	ftp://gnu.mirrors.pair.com/savannah/%SUBDIR%/ \
-	http://download-mirror.savannah.gnu.org/releases/%SUBDIR%/
+	ftp://gnu.mirrors.pair.com/savannah/%SUBDIR%/
 .endif
 
 # List:		http://sourceforge.net/apps/trac/sourceforge/wiki/Mirrors
@@ -1391,26 +1383,34 @@ MASTER_SITE_TUCOWS+= \
 .endif
 
 # List:		http://www.vim.org/mirrors.php
-# Updated:	2014-02-28
+# Updated:	2015-01-03
+# Please make sure mirrors end in /unix/
 .if !defined(IGNORE_MASTER_SITE_VIM)
 MASTER_SITE_VIM+= \
-	http://ftp.vim.org/pub/vim/unix/ \
-	http://vim.mirrors.hostinginnederland.nl/unix/ \
-	http://ftp.tw.vim.org/pub/vim/unix/ \
-	http://ftp2.tw.vim.org/pub/vim/unix/ \
-	http://artfiles.org/vim.org/unix/ \
-	http://vim.cybermirror.org/unix/ \
-	http://ftp.vim.ossmirror.de/pub/vim/unix/ \
-	http://tweedo.com/mirror/ftp.vim.org/unix/ \
-	http://vim.mirror.fr/unix/ \
-	http://ftp.gr.vim.org/pub/vim/unix/ \
-	http://mirror.netinch.com/pub/vim/unix/ \
-	http://servingzone.com/mirrors/vim/unix/ \
-	http://ftp2.uk.vim.org/pub/vim/unix/ \
-	http://ftp2.jp.vim.org/pub/vim/unix/ \
-	http://ftp2.kr.vim.org/pub/vim/unix/ \
 	http://mirrors-usa.go-parts.com/pub/vim/unix/ \
-	ftp://ftp.home.vim.org/pub/vim/unix/
+	http://ftp2.uk.vim.org/pub/vim/unix/ \
+	http://ftp.vim.ossmirror.de/pub/vim/unix/ \
+	http://ftp.stust.edu.tw/vim/unix/ \
+	http://vim.cybermirror.org/unix/ \
+	http://www.netgull.com/vim/unix/ \
+	http://ftp2.jp.vim.org/pub/vim/unix/ \
+	http://mirrors.go-parts.com/pub/vim/unix/ \
+	http://artfiles.org/vim.org/unix/ \
+	http://ftp2.kr.vim.org/pub/vim/unix/ \
+	http://mirror.netinch.com/pub/vim/unix/ \
+	http://ftp.es.vim.org/pub/vim/unix/ \
+	http://ftp.gr.vim.org/pub/vim/unix/ \
+	http://tweedo.com/mirror/ftp.vim.org/unix/ \
+	http://mirrors-br.go-parts.com/pub/vim/unix/ \
+	http://ftp2.tw.vim.org/pub/vim/unix/ \
+	http://mirrors-au.go-parts.com/pub/vim/unix/ \
+	http://mirrors-uk.go-parts.com/pub/vim/unix/ \
+	http://ftp.tw.vim.org/pub/vim/unix/ \
+	http://funnyshare.org/mirrors/vim/unix/ \
+	http://mirrors-ru.go-parts.com/pub/vim/unix/ \
+	http://servingzone.com/mirrors/vim/unix/ \
+	http://ftp.ro.vim.org/mirrors/ftp.vim.org/unix/ \
+	http://vim.mirror.fr/unix/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_WINDOWMAKER)
