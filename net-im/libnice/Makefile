@@ -1,10 +1,8 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/net-im/libnice/Makefile 19801 2014-08-13 09:46:10Z gusi $
 
 PORTNAME=	libnice
-PORTVERSION=	0.1.7
-PORTREVISION=	1
+PORTVERSION=	0.1.8
 CATEGORIES=	net-im devel
 MASTER_SITES=	http://nice.freedesktop.org/releases/
 
