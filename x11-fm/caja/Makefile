@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	caja
-PORTVERSION=	1.9.3
+PORTVERSION=	1.9.4
 CATEGORIES=	x11-fm mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -40,5 +40,6 @@ GLIB_SCHEMAS=	org.mate.caja.gschema.xml \
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/caja/extensions-2.0
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libcaja-extension.so.1.4.0
 
 .include <bsd.port.mk>
