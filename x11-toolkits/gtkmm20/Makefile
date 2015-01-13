@@ -15,7 +15,7 @@ COMMENT=	C++ wrapper for Gtk+, Pango, Atk, and Glib
 
 USES+=		tar:bzip2
 
-PORTSCOUT=	ignore
+PORTSCOUT=	ignore:1
 
 .if !defined(REFERENCE_PORT)
 
