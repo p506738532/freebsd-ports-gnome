@@ -1,9 +1,8 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/lang/vala/Makefile 19985 2014-10-17 12:35:17Z kwm $
 
 PORTNAME=	vala
-PORTVERSION=	0.26.1
+PORTVERSION=	0.27.1
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
@@ -22,7 +21,8 @@ INSTALL_TARGET=	install-strip
 
 VALA_VER=	${PORTVERSION:R}
 
-PLIST_SUB=	VERSION=${VALA_VER}
+PLIST_SUB=	VERSION=0.28
+#PLIST_SUB=	VERSION=${VALA_VER}
 
 post-install:
 	${LN} -fs ${PREFIX}/libdata/pkgconfig/libvala-${VALA_VER}.pc \
