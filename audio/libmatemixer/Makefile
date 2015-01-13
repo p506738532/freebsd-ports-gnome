@@ -14,9 +14,7 @@ LICENSE=	LGPL21
 USES=		gettext libtool pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 intltool	
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-alsa \
-		--disable-pulseaudio \
-		--disable-null \
+CONFIGURE_ARGS=	--disable-null \
 		--enable-oss \
 		--disable-gtk-doc \
 		--disable-gtk-doc-html \
