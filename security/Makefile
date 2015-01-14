@@ -22,6 +22,7 @@
     SUBDIR += arirang
     SUBDIR += arm
     SUBDIR += arpCounterattack
+    SUBDIR += asignify
     SUBDIR += authforce
     SUBDIR += autossh
     SUBDIR += avcheck
@@ -839,9 +840,6 @@
     SUBDIR += py-zope.security
     SUBDIR += py-zope.securitypolicy
     SUBDIR += py-zope.session
-    SUBDIR += qca-cyrus-sasl
-    SUBDIR += qca-gnupg
-    SUBDIR += qca-ossl
     SUBDIR += qtkeychain
     SUBDIR += quantis
     SUBDIR += quantis-kmod
