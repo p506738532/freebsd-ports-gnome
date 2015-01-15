@@ -3,6 +3,7 @@
 
 PORTNAME=	vala
 PORTVERSION=	0.27.1
+PORTREVISION=	1
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
@@ -23,9 +24,5 @@ VALA_VER=	${PORTVERSION:R}
 
 PLIST_SUB=	VERSION=0.28
 #PLIST_SUB=	VERSION=${VALA_VER}
-
-post-install:
-	${LN} -fs ${PREFIX}/libdata/pkgconfig/libvala-${VALA_VER}.pc \
-		${STAGEDIR}${PREFIX}/libdata/pkgconfig/vala-1.0.pc
 
 .include <bsd.port.mk>
