@@ -103,6 +103,13 @@ CONFIGURE_ARGS+=--disable-contact-maps
 #			libclutter-gtk-1.0.so:${PORTSDIR}/graphics/clutter-gtk3
 #MAPS_BUILD_DEPENDS=	geoclue>=0:${PORTSDIR}/net/geoclue
 
+.include <bsd.port.options.mk>
+
+# webkit-gtk3 needs this
+.if ${OSVERSION} < 1000000
+USES+=	compiler:c++11-lib
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e '/^plugins_standard_always/s/audio-inline//' \
 	    	-e 's|-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi|${KRB5_LIB}|g' \
