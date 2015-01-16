@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-maps
-PORTVERSION=	3.15.3.2
+PORTVERSION=	3.15.4
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -24,6 +24,6 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib
-GLIB_SCHEMAS=	org.gnome.maps.gschema.xml
+GLIB_SCHEMAS=	org.gnome.Maps.gschema.xml
 
 .include <bsd.port.mk>
