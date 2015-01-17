@@ -48,6 +48,7 @@
     SUBDIR += automount
     SUBDIR += automounter
     SUBDIR += autopsy
+    SUBDIR += azure-agent
     SUBDIR += b43-fwcutter
     SUBDIR += backuppc
     SUBDIR += backuppc-devel
@@ -854,6 +855,7 @@
     SUBDIR += sas2ircu
     SUBDIR += savelogs
     SUBDIR += sb16config
+    SUBDIR += sbsigntool
     SUBDIR += scalpel
     SUBDIR += scan_ffs
     SUBDIR += scanbuttond
