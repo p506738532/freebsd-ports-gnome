@@ -35,9 +35,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
-GLIB_SCHEMAS=	org.mate.control-center.gschema.xml \
-		org.mate.control-center.keybinding.gschema.xml
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 	    	${WRKSRC}/capplets/common/mate-theme-info.c
