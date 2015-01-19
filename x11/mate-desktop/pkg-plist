@@ -15,6 +15,7 @@ include/mate-desktop-2.0/libmate-desktop/mate-gsettings.h
 include/mate-desktop-2.0/libmate-desktop/mate-rr-config.h
 include/mate-desktop-2.0/libmate-desktop/mate-rr-labeler.h
 include/mate-desktop-2.0/libmate-desktop/mate-rr.h
+lib/girepository-1.0/MateDesktop-2.0.typelib
 lib/libmate-desktop-2.a
 lib/libmate-desktop-2.so
 lib/libmate-desktop-2.so.17
@@ -51,6 +52,7 @@ share/applications/mate-color-select.desktop
 %%DOCSDIR%%/thumbnail.html
 %%DOCSDIR%%/up-insensitive.png
 %%DOCSDIR%%/up.png
+share/gir-1.0/MateDesktop-2.0.gir
 share/libmate-desktop/pnp.ids
 share/locale/af/LC_MESSAGES/mate-desktop.mo
 share/locale/am/LC_MESSAGES/mate-desktop.mo
