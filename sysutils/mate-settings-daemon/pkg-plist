@@ -1,5 +1,11 @@
 etc/dbus-1/system.d/org.mate.SettingsDaemon.DateTimeMechanism.conf
 etc/xdg/autostart/mate-settings-daemon.desktop
+etc/xrdb/Editres.ad
+etc/xrdb/Emacs.ad
+etc/xrdb/General.ad
+etc/xrdb/Motif.ad
+etc/xrdb/Tk.ad
+etc/xrdb/Xaw.ad
 include/mate-settings-daemon/mate-settings-client.h
 include/mate-settings-daemon/mate-settings-plugin.h
 lib/mate-settings-daemon/a11y-keyboard.mate-settings-plugin
@@ -160,12 +166,6 @@ share/mate-settings-daemon/icons/hicolor/64x64/devices/kbd-numlock-on.png
 share/mate-settings-daemon/icons/hicolor/64x64/devices/kbd-scrolllock-off.png
 share/mate-settings-daemon/icons/hicolor/64x64/devices/kbd-scrolllock-on.png
 share/mate-settings-daemon/msd-a11y-preferences-dialog.ui
-share/mate-settings-daemon/xrdb/Editres.ad
-share/mate-settings-daemon/xrdb/Emacs.ad
-share/mate-settings-daemon/xrdb/General.ad
-share/mate-settings-daemon/xrdb/Motif.ad
-share/mate-settings-daemon/xrdb/Tk.ad
-share/mate-settings-daemon/xrdb/Xaw.ad
 share/polkit-1/actions/org.mate.settingsdaemon.datetimemechanism.policy
 @dir etc/mate-settings-daemon/xrandr
 @dir etc/mate-settings-daemon
