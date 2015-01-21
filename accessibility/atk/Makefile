@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	atk
-PORTVERSION=	2.15.3
+PORTVERSION=	2.15.4
 PORTREVISION?=	0
 CATEGORIES=	accessibility devel
 MASTER_SITES=	GNOME
@@ -12,6 +12,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME accessibility toolkit (ATK)
 
 USES=		tar:xz
+PORTSCOUT=	limitw:1,even
 
 .if !defined(REFERENCE_PORT)
 
