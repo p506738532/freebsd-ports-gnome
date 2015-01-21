@@ -49,6 +49,10 @@ share/help/C/gnome-color-manager/color-import-linux.page
 share/help/C/gnome-color-manager/color-import-osx.page
 share/help/C/gnome-color-manager/color-import-windows.page
 share/help/C/gnome-color-manager/legal.xml
+share/help/ca/gnome-color-manager/color-import-linux.page
+share/help/ca/gnome-color-manager/color-import-osx.page
+share/help/ca/gnome-color-manager/color-import-windows.page
+share/help/ca/gnome-color-manager/legal.xml
 share/help/cs/gnome-color-manager/color-import-linux.page
 share/help/cs/gnome-color-manager/color-import-osx.page
 share/help/cs/gnome-color-manager/color-import-windows.page
