@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-online-accounts
-PORTVERSION=	3.15.3
+PORTVERSION=	3.15.4
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -18,6 +18,8 @@ LIB_DEPENDS=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
 		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring \
 		libsecret-1.so:${PORTSDIR}/security/libsecret \
 		librest-0.7.so:${PORTSDIR}/devel/librest
+
+PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack introspection:build libxslt:build
