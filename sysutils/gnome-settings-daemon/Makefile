@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	3.15.1
+PORTVERSION=	3.15.4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -28,6 +28,8 @@ LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 RUN_DEPENDS=	gnome-session>=0:${PORTSDIR}/x11/gnome-session \
 		geoclue>=0:${PORTSDIR}/net/geoclue \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
+
+PORTSCOUT=	limitw:1,even
 
 USE_XORG=	xxf86misc
 USE_GNOME=	gnomedesktop3 gnomeprefix intlhack libxslt
