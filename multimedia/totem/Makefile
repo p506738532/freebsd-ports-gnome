@@ -1,10 +1,8 @@
 # Created by: Hendrik Scholz <hendrik@scholz.net>
 # $FreeBSD$
-#   $MCom: ports/trunk/multimedia/totem/Makefile 20031 2014-11-02 21:47:55Z kwm $
 
 PORTNAME=	totem
-PORTVERSION=	3.14.1
-PORTREVISION=	1
+PORTVERSION=	3.15.4
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,7 +17,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-
 		grilo-plugins>=0:${PORTSDIR}/net/grilo-plugins
 LIB_DEPENDS=	libgdata.so:${PORTSDIR}/devel/libgdata \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
-		libclutter-gst-2.0.so:${PORTSDIR}/multimedia/clutter-gst \
+		libclutter-gst-3.0.so:${PORTSDIR}/multimedia/clutter-gst3 \
 		libclutter-gtk-1.0.so:${PORTSDIR}/graphics/clutter-gtk3 \
 		libpeas-1.0.so:${PORTSDIR}/devel/libpeas \
 		libtotem-plparser.so:${PORTSDIR}/multimedia/totem-pl-parser
@@ -28,6 +26,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 		gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon \
 		gnome-icon-theme-symbolic>=2.91.0:${PORTSDIR}/x11-themes/gnome-icon-theme-symbolic \
 		grilo-plugins>=0:${PORTSDIR}/net/grilo-plugins
+
+PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils gettext gmake libtool pathfix pkgconfig \
 		python:3 shebangfix tar:xz
@@ -78,26 +78,6 @@ PLIST_SUB+=	LIRC=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} lirc
 .else
 PLIST_SUB+=	LIRC="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MBROWSER_PLUGINS}
-CONFIGURE_ARGS+=--enable-browser-plugins \
-		--enable-gmp-plugin \
-		--enable-narrowspace-plugin
-PLIST_SUB+=	BROWSER_PLUGINS=""
-
-USES+=		webplugin:native
-WEBPLUGIN_FILES=	libtotem-cone-plugin.so libtotem-gmp-plugin.so \
-			libtotem-mully-plugin.so \
-			libtotem-narrowspace-plugin.so
-CONFIGURE_ENV+=	BROWSER_PLUGIN_DIR="${WEBPLUGIN_DIR}"
-
-.else
-CONFIGURE_ARGS+=--disable-browser-plugins \
-		--disable-basic-plugin \
-		--disable-gmp-plugin \
-		--disable-narrowspace-plugin
-PLIST_SUB+=	BROWSER_PLUGINS="@comment "
 .endif
 
 .if defined(WITH_DVD_DEVICE)
