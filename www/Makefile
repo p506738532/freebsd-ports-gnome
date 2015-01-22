@@ -1114,6 +1114,7 @@
     SUBDIR += p5-Plack-Middleware-RemoveRedundantBody
     SUBDIR += p5-Plack-Middleware-Reproxy
     SUBDIR += p5-Plack-Middleware-ReverseProxy
+    SUBDIR += p5-Plack-Middleware-Rewrite
     SUBDIR += p5-Plack-Middleware-ServerStatus-Lite
     SUBDIR += p5-Plack-Middleware-Session
     SUBDIR += p5-Plack-Middleware-SocketIO
@@ -1193,6 +1194,7 @@
     SUBDIR += p5-Tenjin
     SUBDIR += p5-Test-HTTP
     SUBDIR += p5-Test-HTTP-Server-Simple
+    SUBDIR += p5-Test-LWP-UserAgent
     SUBDIR += p5-Test-Nginx
     SUBDIR += p5-TestGen4Web-Runner
     SUBDIR += p5-Text-MultiMarkdown-ApacheHandler
@@ -1717,6 +1719,7 @@
     SUBDIR += py-wsgidav
     SUBDIR += py-zope.app.wsgi
     SUBDIR += pyblosxom
+    SUBDIR += pycarddav
     SUBDIR += pydio
     SUBDIR += pyjamas
     SUBDIR += pylot
@@ -1724,7 +1727,8 @@
     SUBDIR += qdecoder
     SUBDIR += qooxdoo
     SUBDIR += quickie
-    SUBDIR += qupzilla
+    SUBDIR += qupzilla-qt4
+    SUBDIR += qupzilla-qt5
     SUBDIR += radicale
     SUBDIR += red5
     SUBDIR += redaxo
@@ -1855,11 +1859,13 @@
     SUBDIR += rubygem-net-http-digest_auth11
     SUBDIR += rubygem-net-http-persistent
     SUBDIR += rubygem-net-http-persistent25
+    SUBDIR += rubygem-net-http-pipeline
     SUBDIR += rubygem-nicovideo
     SUBDIR += rubygem-ntlm-http
     SUBDIR += rubygem-pagerduty
     SUBDIR += rubygem-passenger
     SUBDIR += rubygem-puma
+    SUBDIR += rubygem-pusher-client
     SUBDIR += rubygem-rabbirack
     SUBDIR += rubygem-rack
     SUBDIR += rubygem-rack-accept

@@ -35,6 +35,7 @@
     SUBDIR += clang33
     SUBDIR += clang34
     SUBDIR += clang35
+    SUBDIR += clang36
     SUBDIR += clojure
     SUBDIR += clojure-mode.el
     SUBDIR += cmucl
@@ -137,6 +138,7 @@
     SUBDIR += lua-mode.el
     SUBDIR += lua51
     SUBDIR += lua52
+    SUBDIR += lua53
     SUBDIR += luajit
     SUBDIR += malbolge
     SUBDIR += maude
