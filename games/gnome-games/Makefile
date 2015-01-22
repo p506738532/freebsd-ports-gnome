@@ -1,10 +1,8 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/games/gnome-games/Makefile 20023 2014-10-25 14:22:37Z gusi $
 
 PORTNAME=	gnome-games
-PORTVERSION=	3.14.0
-PORTREVISION=	1
+PORTVERSION=	3.15.0
 CATEGORIES=	games gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,7 +11,8 @@ EXTRACT_ONLY=	# empty
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gnome games meta port
 
-RUN_DEPENDS=	five-or-more:${PORTSDIR}/games/five-or-more \
+RUN_DEPENDS=	atomix:${PORTSDIR}/games/atomix \
+		five-or-more:${PORTSDIR}/games/five-or-more \
 		four-in-a-row:${PORTSDIR}/games/four-in-a-row \
 		gnome-chess:${PORTSDIR}/games/gnome-chess \
 		gnome-klotski:${PORTSDIR}/games/gnome-klotski \
