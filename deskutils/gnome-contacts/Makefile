@@ -1,9 +1,8 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/deskutils/gnome-contacts/Makefile 20055 2014-11-10 17:35:24Z gusi $
 
 PORTNAME=	gnome-contacts
-PORTVERSION=	3.14.2
+PORTVERSION=	3.15.4
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -15,6 +14,8 @@ LIB_DEPENDS=	libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
 		libgee-0.8.so:${PORTSDIR}/devel/libgee \
 		libfolks.so:${PORTSDIR}/net-im/folks \
 		libnotify.so:${PORTSDIR}/devel/libnotify
+
+PORTSCOUT=	limitw:1,even
 
 USE_GNOME=	evolutiondataserver3 gnomedesktop3 gtk30 intlhack \
 		introspection:build
