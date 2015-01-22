@@ -13,6 +13,8 @@ COMMENT=	Yet another little mind game
 LICENSE=	GPLv2 # or later
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+PORTSCOUT=	limitw:1,even
+
 USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack libxml2
 GNU_CONFIGURE=	yes
