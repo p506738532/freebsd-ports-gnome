@@ -1,5 +1,6 @@
 bin/g-ir-annotation-tool
 bin/g-ir-compiler
+bin/g-ir-doc-tool
 bin/g-ir-generate
 bin/g-ir-scanner
 include/gobject-introspection-1.0/giarginfo.h
