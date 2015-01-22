@@ -4,6 +4,8 @@ Remove old MarcusCom RCS's
 Gnome-flashback here...
 upower shlib bump
 PORTSCOUT sprinkling
-evince-lite [PR ...]
 
-gnome-icon-theme?
+GNOME 3.15 Todo:
+Update all deskutils/gnome-shell-extension- for the new gnome-shell.
+evince-lite [PR ...]
+what to do with ports needing gnome-icon-theme, but gtk3 pulls in adwaita
