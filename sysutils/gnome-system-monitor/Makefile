@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-system-monitor
-PORTVERSION=	3.15.3
+PORTVERSION=	3.15.4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
