@@ -1,10 +1,8 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/editors/gedit/Makefile 20047 2014-11-10 07:28:52Z gusi $
 
 PORTNAME=	gedit
-PORTVERSION=	3.14.2
-PORTREVISION=	2
+PORTVERSION=	3.15.1
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,9 +20,11 @@ LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
 RUN_DEPENDS=	iso-codes>=0:${PORTSDIR}/misc/iso-codes \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
+PORTSCOUT=	limitw:1,even
+
 USES=		desktop-file-utils gettext gmake libtool \
 		pathfix pkgconfig python:3 tar:xz
-USE_GNOME=	gnomeprefix gtksourceview3 intlhack introspection:build \
+USE_GNOME=	gtksourceview3 intlhack introspection:build \
 		libxml2 py3gobject3
 USE_XORG=	sm
 GNU_CONFIGURE=	yes
