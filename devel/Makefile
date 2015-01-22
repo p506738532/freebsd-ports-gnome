@@ -39,7 +39,6 @@
     SUBDIR += ace+tao-doc
     SUBDIR += acme
     SUBDIR += activitymail
-    SUBDIR += actor-framework
     SUBDIR += adabooch
     SUBDIR += adacurses
     SUBDIR += adime
@@ -185,6 +184,7 @@
     SUBDIR += c-unit
     SUBDIR += c2mdoc
     SUBDIR += c4
+    SUBDIR += caf
     SUBDIR += calibrator
     SUBDIR += capstone
     SUBDIR += cask
@@ -387,6 +387,7 @@
     SUBDIR += ebnf2yacc
     SUBDIR += ecgi
     SUBDIR += edb
+    SUBDIR += efivar
     SUBDIR += efl
     SUBDIR += eggdbus
     SUBDIR += egypt
@@ -1054,6 +1055,7 @@
     SUBDIR += libhoard
     SUBDIR += libhtp
     SUBDIR += libical
+    SUBDIR += libical-glib
     SUBDIR += libinotify
     SUBDIR += libiqxmlrpc
     SUBDIR += libisofs
@@ -1228,6 +1230,7 @@
     SUBDIR += llvm33
     SUBDIR += llvm34
     SUBDIR += llvm35
+    SUBDIR += llvm36
     SUBDIR += lm4tools
     SUBDIR += lmdbg
     SUBDIR += lndir
@@ -1491,6 +1494,7 @@
     SUBDIR += p5-App-Trace
     SUBDIR += p5-App-cpanminus
     SUBDIR += p5-App-cpanoutdated
+    SUBDIR += p5-App-perlbrew
     SUBDIR += p5-App-scan_prereqs_cpanfile
     SUBDIR += p5-AppConfig
     SUBDIR += p5-AppConfig-Std
@@ -2683,6 +2687,7 @@
     SUBDIR += p5-Pod-Coverage-Moose
     SUBDIR += p5-Pod-Coverage-TrustPod
     SUBDIR += p5-Pod-Tests
+    SUBDIR += p5-Pod-Usage
     SUBDIR += p5-Pragmatic
     SUBDIR += p5-Proc-BackOff
     SUBDIR += p5-Proc-Background
@@ -3122,6 +3127,7 @@
     SUBDIR += p5-Type-Tie
     SUBDIR += p5-Type-Tiny
     SUBDIR += p5-Type-Tiny-XS
+    SUBDIR += p5-Types-Core
     SUBDIR += p5-Types-Path-Tiny
     SUBDIR += p5-Types-Serialiser
     SUBDIR += p5-UDCode
@@ -3156,6 +3162,7 @@
     SUBDIR += p5-XML-Pastor
     SUBDIR += p5-XS-Object-Magic
     SUBDIR += p5-XSLoader
+    SUBDIR += p5-Xporter
     SUBDIR += p5-YAML-AppConfig
     SUBDIR += p5-Yada-Yada-Yada
     SUBDIR += p5-ZConf-GUI
@@ -3194,6 +3201,7 @@
     SUBDIR += p5-libxml-enno
     SUBDIR += p5-local-lib
     SUBDIR += p5-match-simple
+    SUBDIR += p5-mem
     SUBDIR += p5-mixin
     SUBDIR += p5-mocked
     SUBDIR += p5-multidimensional
@@ -3202,7 +3210,6 @@
     SUBDIR += p5-namespace-sweep
     SUBDIR += p5-orz
     SUBDIR += p5-parent
-    SUBDIR += p5-perlbrew
     SUBDIR += p5-perlkde
     SUBDIR += p5-perlqt
     SUBDIR += p5-pip
@@ -4421,6 +4428,7 @@
     SUBDIR += rubygem-georuby
     SUBDIR += rubygem-getopt
     SUBDIR += rubygem-gettext
+    SUBDIR += rubygem-gh
     SUBDIR += rubygem-gibbler
     SUBDIR += rubygem-gio2
     SUBDIR += rubygem-git
@@ -4644,6 +4652,7 @@
     SUBDIR += rubygem-tins0
     SUBDIR += rubygem-toml
     SUBDIR += rubygem-transactionsimple
+    SUBDIR += rubygem-travis
     SUBDIR += rubygem-treetop
     SUBDIR += rubygem-trollop
     SUBDIR += rubygem-turn

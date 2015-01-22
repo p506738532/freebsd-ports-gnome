@@ -48,6 +48,7 @@
     SUBDIR += automount
     SUBDIR += automounter
     SUBDIR += autopsy
+    SUBDIR += azure-agent
     SUBDIR += b43-fwcutter
     SUBDIR += backuppc
     SUBDIR += backuppc-devel
@@ -675,6 +676,7 @@
     SUBDIR += pecl-proctitle
     SUBDIR += pefs-kmod
     SUBDIR += personality
+    SUBDIR += pesign
     SUBDIR += pflogx
     SUBDIR += pfstat
     SUBDIR += pftables
@@ -854,6 +856,7 @@
     SUBDIR += sas2ircu
     SUBDIR += savelogs
     SUBDIR += sb16config
+    SUBDIR += sbsigntool
     SUBDIR += scalpel
     SUBDIR += scan_ffs
     SUBDIR += scanbuttond

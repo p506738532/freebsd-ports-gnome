@@ -3,14 +3,14 @@
 
 PORTNAME=	calibre
 PORTVERSION=	1.48.0
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	deskutils python
 MASTER_SITES=	SF/${PORTNAME}/${PORTVERSION}/
 
 MAINTAINER=	madpilot@FreeBSD.org
 COMMENT=	Ebook management application
 
-LIB_DEPENDS=	libMagickWand-6.Q16.so:${PORTSDIR}/graphics/ImageMagick \
+LIB_DEPENDS=	libMagickWand-6.so:${PORTSDIR}/graphics/ImageMagick \
 		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
 		libpoppler-qt4.so:${PORTSDIR}/graphics/poppler-qt4 \
 		libwmflite.so:${PORTSDIR}/graphics/libwmf \
@@ -79,14 +79,14 @@ do-build:
 		${PYSETUP} build)
 
 do-install:
-.for dir in bash-completion desktop-directories gnome/apps mime/packages \
-	icons/hicolor/128x128/apps zsh/site-functions
+.for dir in bash-completion gnome/apps mime/packages \
+	icons/hicolor/128x128 zsh/site-functions
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/${dir}
 .endfor
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION}/site-packages
 	(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} \
 		${PYSETUP} install --prefix ${PREFIX} \
 		--staging-root ${STAGEDIR}${PREFIX})
-	${RM} ${STAGEDIR}${PREFIX}/bin/calibre-uninstall
+	@${RM} ${STAGEDIR}${PREFIX}/bin/calibre-uninstall
 
 .include <bsd.port.mk>

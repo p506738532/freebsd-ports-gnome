@@ -239,6 +239,7 @@
     SUBDIR += renderproto
     SUBDIR += resourceproto
     SUBDIR += rgb
+    SUBDIR += rofi
     SUBDIR += rox-wallpaper
     SUBDIR += roxbg
     SUBDIR += roxterm
@@ -247,7 +248,6 @@
     SUBDIR += ruby-X11
     SUBDIR += rubygem-gnome2
     SUBDIR += rxvt
-    SUBDIR += rxvt-devel
     SUBDIR += rxvt-unicode
     SUBDIR += sakura
     SUBDIR += sbxkb
