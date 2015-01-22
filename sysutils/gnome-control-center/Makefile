@@ -1,9 +1,8 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/sysutils/gnome-control-center/Makefile 20031 2014-11-02 21:47:55Z kwm $
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	3.14.2
+PORTVERSION=	3.15.4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -38,9 +37,10 @@ RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 		gcm-calibrate:${PORTSDIR}/graphics/gnome-color-manager
 
 CONFLICTS=	gnome-media-2.[0-9]*
+PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake pathfix pkgconfig tar:xz
-USE_GNOME=	gnomedesktop3 gnomemenus3 gnomeprefix intlhack libxml2
+USE_GNOME=	gnomedesktop3 gnomemenus3 intlhack libxml2
 USE_XORG=	xscrnsaver x11 xxf86misc kbproto xi
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
