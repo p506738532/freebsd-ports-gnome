@@ -1,9 +1,8 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/net/vino/Makefile 20063 2014-11-10 22:11:39Z gusi $
 
 PORTNAME=	vino
-PORTVERSION=	3.14.1
+PORTVERSION=	3.15.4
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,8 +18,10 @@ LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls \
 		libnotify.so:${PORTSDIR}/devel/libnotify \
 		libavahi-glib.so:${PORTSDIR}/net/avahi-app
 
+PORTSCOUT=	limitw:1,even
+
 USES=		gettext gmake pathfix pkgconfig tar:xz
-USE_GNOME=	gnomeprefix gtk30 intlhack
+USE_GNOME=	gtk30 intlhack
 USE_XORG=	xdamage xfixes xtst
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
