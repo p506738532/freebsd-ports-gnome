@@ -3,6 +3,7 @@
 
 PORTNAME=	clutter
 PORTVERSION=	1.21.4
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -18,7 +19,7 @@ LIB_DEPENDS=	libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
 PORTSCOUT=	limit:1,even
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gdkpixbuf2 atk pango introspection:build
+USE_GNOME=	gtk30 introspection:build
 USE_GL=		gl egl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 GNU_CONFIGURE=	yes
