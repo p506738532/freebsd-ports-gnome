@@ -13,6 +13,8 @@ COMMENT=	Gnome minesweeper
 BUILD_DEPENDS=	vala:${PORTSDIR}/lang/vala \
 		itstool:${PORTSDIR}/textproc/itstool
 
+PORTSCOUT=	limitw:1,even
+
 USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack librsvg2 libxml2:build
 INSTALLS_ICONS=	yes
