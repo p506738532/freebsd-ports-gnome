@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	aisleriot
-PORTVERSION=	3.14.2
+PORTVERSION=	3.15.0
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,6 +17,7 @@ LIB_DEPENDS=	libguile-2.0.so:${PORTSDIR}/lang/guile2 \
 		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
 
 CONFLICTS=	sol-*
+PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils gettext gmake pathfix pkgconfig tar:xz
 USE_GNOME=	gconf2 gtk30 intlhack librsvg2 libxml2:build
