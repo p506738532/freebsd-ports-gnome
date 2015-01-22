@@ -32,6 +32,7 @@ lib/eom/plugins/statusbar-date.eom-plugin
 libdata/pkgconfig/eom.pc
 man/man1/eom.1.gz
 share/MateConf/gsettings/eom.convert
+share/appdata/eom.appdata.xml
 share/applications/eom.desktop
 %%PORTDOCS%%%%DOCSDIR%%/EomDialog.html
 %%PORTDOCS%%%%DOCSDIR%%/EomExifDetails.html
