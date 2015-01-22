@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell
-PORTVERSION=	3.15.3
+PORTVERSION=	3.15.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -35,17 +35,17 @@ PORTSCOUT=	limitw:1,even
 
 USES=		compiler:c11 gettext gmake libtool pathfix pkgconfig \
 		tar:xz webplugin:native
-USE_GNOME=	evolutiondataserver3 gnomedesktop3 gnomeprefix \
+USE_GNOME=	evolutiondataserver3 gnomedesktop3 \
 		gtk30 intlhack introspection
 USE_XORG=	x11 xfixes sm
 USE_GSTREAMER1=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-WEBPLUGIN_DIR=	${PREFIX}/lib/
+WEBPLUGIN_NAME=	libgnome-shell-browser-plugin.so
+WEBPLUGIN_DIR=	${PREFIX}/lib/mozilla/plugins/
 WEBPLUGIN_FILES=libgnome-shell-browser-plugin.so
 CONFIGURE_ARGS+=--enable-compile-warnings=no \
 		--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
-CONFIGURE_ENV+=	BROWSER_PLUGIN_DIR=${PREFIX}/lib/
 CPPFLAGS+=	-I${LOCALASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
