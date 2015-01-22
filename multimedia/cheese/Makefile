@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cheese
-PORTVERSION=	3.15.3
+PORTVERSION=	3.15.4
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,8 +20,10 @@ LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 		libclutter-gst-2.0.so:${PORTSDIR}/multimedia/clutter-gst
 RUN_DEPENDS=	gnome-video-effects>=0:${PORTSDIR}/graphics/gnome-video-effects
 
+PORTSCOUT=	limitw:1,even
+
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomeprefix intlhack evolutiondataserver3 librsvg2 \
+USE_GNOME=	intlhack evolutiondataserver3 librsvg2 \
 		gnomedesktop3 libxml2:build introspection:build
 USE_XORG=	xxf86vm x11
 USE_GSTREAMER1=	bad good jpeg ogg theora v4l2 vpx
