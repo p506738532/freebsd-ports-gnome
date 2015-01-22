@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mutter
-PORTVERSION=	3.15.3
+PORTVERSION=	3.15.4
 CATEGORIES=	x11-wm
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,8 +23,7 @@ RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity \
 PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack \
-		introspection:build
+USE_GNOME=	gnomedesktop3 gtk30 intlhack introspection:build
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm xfixes \
 		xrender xdamage
 GNU_CONFIGURE=	yes

@@ -15,6 +15,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
 		libcogl.so:${PORTSDIR}/graphics/cogl
 
+PORTSCOUT=	limit:1,even
+
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gdkpixbuf2 atk pango introspection:build
 USE_GL=		gl egl
