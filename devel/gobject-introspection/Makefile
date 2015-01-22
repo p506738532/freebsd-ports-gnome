@@ -3,6 +3,7 @@
 
 PORTNAME=	gobject-introspection
 PORTVERSION=	1.43.3
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,6 +24,7 @@ USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib
+CONFIGURE_ARGS=	--disable-doctool
 INSTALL_TARGET=	install-strip
 
 # Force it to put the .cache in ${WRKSRC} instead of ~/.cache. ports/143260
