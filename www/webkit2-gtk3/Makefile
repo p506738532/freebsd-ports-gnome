@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	webkit
-PORTVERSION=	2.7.3
+PORTVERSION=	2.7.4
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	2-gtk3
@@ -19,9 +19,9 @@ LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
 		libwebp.so:${PORTSDIR}/graphics/webp \
 		libpng.so:${PORTSDIR}/graphics/png \
 		libsecret-1.so:${PORTSDIR}/security/libsecret \
+		libicutu.so:${PORTSDIR}/devel/icu \
 		libharfbuzz.so:${PORTSDIR}/print/harfbuzz \
 		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
-#add		libicu
 RUN_DEPENDS=	geoclue>=0:${PORTSDIR}/net/geoclue 
 
 PORTSCOUT=	limitw:1,even
@@ -88,7 +88,7 @@ CONFIGURE_ENV+=	FLEX_PATH="${LOCALBASE}/bin/flex"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%BROWSER_PLUGINS_DIR%%|${BROWSER_PLUGINS_DIR}|' \
-		${WRKSRC}/Source/WebCore/plugins/PluginDatabase.cpp
+		${WRKSRC}/Source/WebKit2/UIProcess/Plugins/unix/PluginInfoStoreUnix.cpp
 
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} CFLAGS="${CFLAGS}" \
