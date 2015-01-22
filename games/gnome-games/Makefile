@@ -21,12 +21,13 @@ RUN_DEPENDS=	atomix:${PORTSDIR}/games/atomix \
 		gnome-nibbles:${PORTSDIR}/games/gnome-nibbles \
 		gnome-robots:${PORTSDIR}/games/gnome-robots \
 		gnome-sudoku:${PORTSDIR}/games/gnome-sudoku \
+		gnome-taquin:${PORTSDIR}/games/gnome-taquin \
 		gnome-tetravex:${PORTSDIR}/games/gnome-tetravex \
 		hitori:${PORTSDIR}/games/hitori \
 		iagno:${PORTSDIR}/games/iagno \
 		lightsoff:${PORTSDIR}/games/lightsoff \
 		quadrapassel:${PORTSDIR}/games/quadrapassel \
-		sol:${PORTSDIR}/games/aisleriot \
+		aisleriot>=0:${PORTSDIR}/games/aisleriot \
 		swell-foop:${PORTSDIR}/games/swell-foop \
 		tali:${PORTSDIR}/games/tali
 
