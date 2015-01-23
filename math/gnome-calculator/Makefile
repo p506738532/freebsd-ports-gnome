@@ -3,6 +3,7 @@
 
 PORTNAME=	gnome-calculator
 PORTVERSION=	3.15.4
+PORTREVISION=	1
 CATEGORIES=	math gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -11,6 +12,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 calculator tool
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
+LIB_DEPENDS=	libmpfr.so:${PORTSDIR}/math/mpfr
 
 PORTSCOUT=	limitw:1,even
 
