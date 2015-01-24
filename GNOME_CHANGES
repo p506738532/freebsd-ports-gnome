@@ -9,3 +9,6 @@ GNOME 3.15 Todo:
 Update all deskutils/gnome-shell-extension- for the new gnome-shell.
 evince-lite [PR ...]
 what to do with ports needing gnome-icon-theme, but gtk3 pulls in adwaita
+
+Before import:
+libgit2 / libgit2-glib https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=196176
