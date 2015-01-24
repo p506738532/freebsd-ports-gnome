@@ -1,8 +1,7 @@
-# $FreeBSD$
+# $FreeBSD: head/devel/libgit2/Makefile 377075 2015-01-15 11:01:25Z wg $
 
 PORTNAME=	libgit2
-PORTVERSION=	0.21.1
-PORTREVISION=	1
+PORTVERSION=	0.22.1
 CATEGORIES=	devel
 
 MAINTAINER=	wg@FreeBSD.org
@@ -13,9 +12,9 @@ LICENSE=	GPLv2
 USE_GITHUB=	yes
 GH_ACCOUNT=	libgit2
 GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	b4d00c1
+GH_COMMIT=	1ce9ea3
 
-USES=		cmake python:build
+USES=		cmake pkgconfig python:build
 USE_LDCONFIG=	yes
 USE_OPENSSL=	yes
 
