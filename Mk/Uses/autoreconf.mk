@@ -76,7 +76,7 @@ do-autoreconf:
 	@test -e ${CONFIGURE_WRKSRC}/${f} || ${TOUCH} ${CONFIGURE_WRKSRC}/${f}
 .endfor
 	@(cd ${CONFIGURE_WRKSRC} && ${LOCALBASE}/bin/autoreconf -f -i)
-. if defined(USE_GNOME} && ${_USE_GNOME:Mintltool}
+. if defined(USE_GNOME) && ${_USE_GNOME:Mintltool}
 	@(cd ${CONFIGURE_WRKSRC} && ${LOCALBASE}/bin/intltoolize -f -c)
 # apply freebsd specific prefix changes
 .  if ${_USE_GNOME:Mintlhack}
