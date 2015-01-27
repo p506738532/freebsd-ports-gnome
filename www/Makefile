@@ -1551,6 +1551,7 @@
     SUBDIR += py-formencode
     SUBDIR += py-frozen-flask
     SUBDIR += py-funkload
+    SUBDIR += py-gandi.cli
     SUBDIR += py-gevent-websocket
     SUBDIR += py-google-api-python-client
     SUBDIR += py-graphite-web
@@ -1673,6 +1674,7 @@
     SUBDIR += py-requests-toolbelt
     SUBDIR += py-requests1
     SUBDIR += py-restclient
+    SUBDIR += py-rfc3987
     SUBDIR += py-rhodecode
     SUBDIR += py-routes
     SUBDIR += py-satchmo
