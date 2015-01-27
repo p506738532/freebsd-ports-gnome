@@ -40,6 +40,7 @@
     SUBDIR += avahi-sharp
     SUBDIR += axa
     SUBDIR += babeld
+    SUBDIR += balance
     SUBDIR += beacon
     SUBDIR += beanstalkd
     SUBDIR += belle-sip
@@ -152,6 +153,7 @@
     SUBDIR += gnome-online-miners
     SUBDIR += gnu-dico
     SUBDIR += gnu-radius
+    SUBDIR += go-amqp
     SUBDIR += go-cs
     SUBDIR += go.net
     SUBDIR += gofish
