@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	accountsservice
-PORTVERSION=	0.6.39
+PORTVERSION=	0.6.40
 CATEGORIES=	sysutils devel
 MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/
 
