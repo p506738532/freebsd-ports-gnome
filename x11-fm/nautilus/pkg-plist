@@ -171,5 +171,3 @@ share/locale/zh_HK/LC_MESSAGES/nautilus.mo
 share/locale/zh_TW/LC_MESSAGES/nautilus.mo
 share/locale/zu/LC_MESSAGES/nautilus.mo
 share/gnome-shell/search-providers/nautilus-search-provider.ini
-share/mime/application/x-gnome-saved-search.xml
-share/mime/packages/nautilus.xml
