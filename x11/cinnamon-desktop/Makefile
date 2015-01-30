@@ -17,7 +17,7 @@ RUN_DEPENDS=	xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
 		libxkbfile>=0:${PORTSDIR}/x11/libxkbfile
 
 USE_XORG=	x11 xrandr xext
-USES=		autoreconf:build gettext gmake libtool pathfix pkgconfig \
+USES=		autoreconf gettext gmake libtool pathfix pkgconfig \
 		shebangfix tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
 SHEBANG_FILES=	files/usr/bin/cinnamon-desktop-migrate-mediakeys
@@ -59,8 +59,5 @@ post-patch:
 
 	@${REINPLACE_CMD} -e 's|find -min|find . -|g' \
 		${WRKSRC}/files/Makefile.am
-
-pre-configure:
-	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
 
 .include <bsd.port.mk>
