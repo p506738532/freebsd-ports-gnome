@@ -16,10 +16,9 @@ LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 
 CONFLICTS_BUILD=spidermonkey17-1.7.*
 
-USES=		autoreconf:build compiler:c11 gettext libtool gmake \
+USES=		autoreconf compiler:c11 gettext libtool gmake \
 		pathfix pkgconfig python:build shebangfix
-USE_GNOME=	cairo glib20 gnomeprefix introspection:build \
-		intlhack
+USE_GNOME=	cairo glib20 gnomeprefix introspection:build
 USE_LDCONFIG=	yes
 PATHFIX_MAKEFILEIN=	Makefile.am
 GNU_CONFIGURE=	yes
@@ -31,8 +30,5 @@ CONFIGURE_ARGS+=--enable-compile-warnings=no
 
 python_OLD_CMD=	/usr/bin/env python
 python_CMD=	${PYTHON_CMD}
-
-pre-configure:
-	cd ${WRKSRC} && ${SETENV} NOCONFIGURE=yes ${SH} ./autogen.sh
 
 .include <bsd.port.mk>
