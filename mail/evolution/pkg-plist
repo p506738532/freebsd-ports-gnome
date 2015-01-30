@@ -315,6 +315,7 @@ include/evolution/e-util/ea-factory.h
 include/evolution/e-util/ea-widgets.h
 include/evolution/e-util/gal-a11y-e-cell-popup.h
 include/evolution/e-util/gal-a11y-e-cell-registry.h
+include/evolution/e-util/gal-a11y-e-cell-text.h
 include/evolution/e-util/gal-a11y-e-cell-toggle.h
 include/evolution/e-util/gal-a11y-e-cell-tree.h
 include/evolution/e-util/gal-a11y-e-cell-vbox.h
