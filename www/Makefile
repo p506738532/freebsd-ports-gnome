@@ -360,7 +360,6 @@
     SUBDIR += libsocialweb
     SUBDIR += libwww
     SUBDIR += libxul
-    SUBDIR += lifetype
     SUBDIR += lightsquid
     SUBDIR += lighttpd
     SUBDIR += lighttpd-mod_geoip
@@ -1004,6 +1003,7 @@
     SUBDIR += p5-HTTP-WebTest
     SUBDIR += p5-HTTPD-Log-Filter
     SUBDIR += p5-HTTPD-User-Manage
+    SUBDIR += p5-Hijk
     SUBDIR += p5-I18N-AcceptLanguage
     SUBDIR += p5-IMDB-Film
     SUBDIR += p5-Image-Delivery
@@ -2119,7 +2119,6 @@
     SUBDIR += typolight
     SUBDIR += udmsearch
     SUBDIR += uglifyjs
-    SUBDIR += ump
     SUBDIR += usermanager
     SUBDIR += uwsgi
     SUBDIR += uwsgitop

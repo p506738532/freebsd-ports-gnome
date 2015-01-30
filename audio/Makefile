@@ -625,7 +625,6 @@
     SUBDIR += py3-pylast
     SUBDIR += pytone
     SUBDIR += qjackctl
-    SUBDIR += qmidinet
     SUBDIR += qmpdclient
     SUBDIR += qsampler
     SUBDIR += qsynth
@@ -779,14 +778,12 @@
     SUBDIR += whysynth
     SUBDIR += wildmidi
     SUBDIR += wmalbum
-    SUBDIR += wmauda
     SUBDIR += wmix
     SUBDIR += wmmp
     SUBDIR += wmrecord
     SUBDIR += wmsmixer
     SUBDIR += workman
     SUBDIR += wxguitar
-    SUBDIR += x11amp
     SUBDIR += xanalyser
     SUBDIR += xcd
     SUBDIR += xcdplayer
