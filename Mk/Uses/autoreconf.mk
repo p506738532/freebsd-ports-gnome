@@ -77,10 +77,17 @@ do-autoreconf:
 .endfor
 	@(cd ${CONFIGURE_WRKSRC} && ${LOCALBASE}/bin/autoreconf -f -i)
 . if defined(USE_GNOME) && ${_USE_GNOME:Mintltool}
+# check if intltool is actualy used (gtk ports enforce intltool for there
+# users, even said user doesn't utilize intltool)
+# gtk20 and gtk30 shouldn't force intltool on there users 
+RESULT1= `grep "^AC_PROG_INTLTOOL" ${WRKSRC}/configure.* >/dev/null`
+RESULT2= `grep "^IT_PROG_INTLTOOL" ${WRKSRC}/configure.* >/dev/null`
+.  if ! (${RESULT1} || ${RESULT2})
 	@(cd ${CONFIGURE_WRKSRC} && ${LOCALBASE}/bin/intltoolize -f -c)
 # apply freebsd specific prefix changes
-.  if ${_USE_GNOME:Mintlhack}
+.   if ${_USE_GNOME:Mintlhack}
 	@${intlhack_PRE_PATCH}
+.   endif
 .  endif
 . endif
 .endif
