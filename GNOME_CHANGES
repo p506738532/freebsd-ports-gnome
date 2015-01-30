@@ -10,5 +10,8 @@ Update all deskutils/gnome-shell-extension- for the new gnome-shell.
 evince-lite [PR ...]
 what to do with ports needing gnome-icon-theme, but gtk3 pulls in adwaita
 
+
 Before import:
 libgit2 / libgit2-glib https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=196176
+See if we can make a way so we can build tracker 1.3+ on a system that has
+1.2.x installed.
