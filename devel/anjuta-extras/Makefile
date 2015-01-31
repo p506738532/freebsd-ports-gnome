@@ -9,9 +9,10 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Extra anjuta plugins
 
+BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libanjuta-3.so:${PORTSDIR}/devel/anjuta
 		
-USES=		gettext gmake libtool tar:xz
+USES=		gettext gmake libtool pkgconfig tar:xz
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
