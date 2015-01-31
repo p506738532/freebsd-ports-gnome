@@ -79,7 +79,7 @@ do-autoreconf:
 . if defined(USE_GNOME) && ${_USE_GNOME:Mintltool}
 # check if intltool is actualy used (gtk ports enforce intltool for there
 # users, even said user doesn't utilize intltool)
-# gtk20 and gtk30 shouldn't force intltool on there users 
+# gtk20 and gtk30 shouldn't force intltool on there users
 RESULT1= `grep "^AC_PROG_INTLTOOL" ${WRKSRC}/configure.* >/dev/null`
 RESULT2= `grep "^IT_PROG_INTLTOOL" ${WRKSRC}/configure.* >/dev/null`
 .  if ! (${RESULT1} || ${RESULT2})
