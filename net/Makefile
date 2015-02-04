@@ -467,7 +467,6 @@
     SUBDIR += ossp-sa
     SUBDIR += ostinato
     SUBDIR += owamp
-    SUBDIR += owncloud-csync
     SUBDIR += p5-Acme-HTTP
     SUBDIR += p5-AddressBook
     SUBDIR += p5-Amazon-SQS-Simple
@@ -1285,6 +1284,7 @@
     SUBDIR += xprobe
     SUBDIR += xpvm
     SUBDIR += xrdesktop
+    SUBDIR += xrdesktop2
     SUBDIR += xrdp
     SUBDIR += xrdp-devel
     SUBDIR += yami4

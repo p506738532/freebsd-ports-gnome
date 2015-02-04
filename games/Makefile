@@ -446,6 +446,7 @@
     SUBDIR += kapman
     SUBDIR += kardsgt
     SUBDIR += kartofel
+    SUBDIR += katawa-shoujo
     SUBDIR += katomic
     SUBDIR += kblackbox
     SUBDIR += kblocks

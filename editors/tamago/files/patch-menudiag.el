@@ -1,5 +1,5 @@
---- menudiag.el.orig	2001-01-28 03:53:13.000000000 +0900
-+++ menudiag.el	2015-01-29 18:32:59.000000000 +0900
+--- menudiag.el.orig	2015-01-31 19:23:34.000000000 +0900
++++ menudiag.el	2015-02-02 00:30:59.000000000 +0900
 @@ -226,6 +226,9 @@
    (remove-hook 'minibuffer-setup-hook 'menudiag-minibuffer-hook)
    (setq menudiag-minibuffer-list (cons (current-buffer)
@@ -10,15 +10,6 @@
    (buffer-disable-undo)
    (menudiag-receive-variables)
    (menudiag-beginning-of-items)
-@@ -248,7 +251,7 @@
- 			       (string-width (cadr menu)))))
-   (add-hook 'minibuffer-setup-hook 'menudiag-minibuffer-hook)
-   (unwind-protect
--      (progn
-+      (let ((overriding-local-map menudiag-mode-map))
- 	(read-from-minibuffer "" "" menudiag-mode-map)
- 	(menudiag-receive-variables))
-     (setq menudiag-minibuffer-list (cdr menudiag-minibuffer-list))
 @@ -296,7 +299,7 @@
  (defun menudiag-goto-item ()
    (interactive)
@@ -51,7 +42,7 @@
      (pop-to-buffer org-buf)
      (while (and item-list (>= n (length (car item-list))))
        (setq l (1+ l)
-@@ -619,7 +623,7 @@
+@@ -619,15 +623,14 @@
    (unless (eq last-command 'menudiag-selection-goto)
      (setq menudiag-goto-number-list nil
  	  menudiag-original-point (point)))
@@ -60,3 +51,12 @@
  					menudiag-goto-number-list))
    (menudiag-selection-goto-internal))
  
+ (defun menudiag-selection-goto-internal ()
+   (let* ((list menudiag-goto-number-list)
+ 	 (n (menudiag-selection-item-number list))
+-	 (len (save-excursion
+-		(set-buffer menudiag-selection-main-buffer)
++	 (len (with-current-buffer menudiag-selection-main-buffer
+ 		(length menudiag-current-items))))
+     (setq this-command 'menudiag-selection-goto)
+     (if (>= n len)

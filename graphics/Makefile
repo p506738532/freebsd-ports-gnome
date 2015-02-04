@@ -464,6 +464,7 @@
     SUBDIR += libart_lgpl
     SUBDIR += libaux
     SUBDIR += libboard
+    SUBDIR += libbpg
     SUBDIR += libcaca
     SUBDIR += libcdr01
     SUBDIR += libchamplain
@@ -1049,9 +1050,11 @@
     SUBDIR += yed
     SUBDIR += yukon
     SUBDIR += zathura
+    SUBDIR += zathura-cb
     SUBDIR += zathura-djvu
     SUBDIR += zathura-pdf-mupdf
     SUBDIR += zathura-pdf-poppler
+    SUBDIR += zathura-ps
     SUBDIR += zbar
     SUBDIR += zgv
     SUBDIR += zimg

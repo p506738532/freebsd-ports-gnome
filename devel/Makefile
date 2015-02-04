@@ -1155,6 +1155,7 @@
     SUBDIR += libsigcx
     SUBDIR += libsigrok
     SUBDIR += libsigrokdecode
+    SUBDIR += libsigscan
     SUBDIR += libsigsegv
     SUBDIR += libslang2
     SUBDIR += libsmdev
@@ -2267,6 +2268,7 @@
     SUBDIR += p5-Inline-Tcl
     SUBDIR += p5-InlineX-C2XS
     SUBDIR += p5-InlineX-CPP2XS
+    SUBDIR += p5-Input-Validator
     SUBDIR += p5-Ioctl
     SUBDIR += p5-Iodef-Pb-Simple
     SUBDIR += p5-Iterator
@@ -3825,6 +3827,7 @@
     SUBDIR += py-jellyfish
     SUBDIR += py-jira
     SUBDIR += py-jmespath
+    SUBDIR += py-joblib
     SUBDIR += py-jsmin
     SUBDIR += py-json-py
     SUBDIR += py-jsonlib
@@ -4262,6 +4265,7 @@
     SUBDIR += regexx
     SUBDIR += regexxer
     SUBDIR += remake
+    SUBDIR += renpy
     SUBDIR += replay
     SUBDIR += rhtvision
     SUBDIR += rlog
