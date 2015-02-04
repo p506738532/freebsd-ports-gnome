@@ -12,7 +12,7 @@ COMMENT=	Gstreamer-based video player for the GNOME 3 Desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
-		appdata-tools>=0:${PORTSDIR}/devel/appdata-tools \
+		appstream-glib>=0:${PORTSDIR}/devel/appstream-glib \
 		itstool:${PORTSDIR}/textproc/itstool \
 		grilo-plugins>=0:${PORTSDIR}/net/grilo-plugins
 LIB_DEPENDS=	libgdata.so:${PORTSDIR}/devel/libgdata \
