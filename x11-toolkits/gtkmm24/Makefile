@@ -15,7 +15,7 @@ COMMENT=	C++ wrapper for Gtk+
 
 USES+=		tar:xz
 
-PORTSCOUT=	limit:2.24.*$$
+PORTSCOUT=	ignore:1
 
 .if !defined(REFERENCE_PORT)
 

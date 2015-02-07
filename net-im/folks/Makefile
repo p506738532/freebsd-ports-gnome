@@ -1,6 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/net-im/folks/Makefile 20031 2014-11-02 21:47:55Z kwm $
 
 PORTNAME=	folks
 PORTVERSION=	0.10.1
@@ -43,8 +42,6 @@ TRACKER_CONFIGURE_ENABLE=	tracker-backend
 TRACKER_LIB_DEPENDS=	libtracker-control-1.0.so:${PORTSDIR}/sysutils/tracker
 
 post-patch:
-#	@${REINPLACE_CMD} -e 's|TRACKER_SPARQL_MAJOR=0.16|TRACKER_SPARQL_MAJOR=1.0|g' \
-#		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|--fatal-warnings||g' \
 		${WRKSRC}/configure
 

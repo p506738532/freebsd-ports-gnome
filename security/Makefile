@@ -177,6 +177,7 @@
     SUBDIR += hmap
     SUBDIR += honggfuzz
     SUBDIR += hotssh
+    SUBDIR += hpenc
     SUBDIR += hs-Crypto
     SUBDIR += hs-DRBG
     SUBDIR += hs-HsOpenSSL
@@ -377,7 +378,6 @@
     SUBDIR += openscep
     SUBDIR += openssh-askpass
     SUBDIR += openssh-portable
-    SUBDIR += openssh-portable66
     SUBDIR += openssl
     SUBDIR += openssl_tpm_engine
     SUBDIR += openvas-client
@@ -410,6 +410,7 @@
     SUBDIR += p5-Authen-DecHpwd
     SUBDIR += p5-Authen-Htpasswd
     SUBDIR += p5-Authen-Krb5
+    SUBDIR += p5-Authen-Krb5-Simple
     SUBDIR += p5-Authen-Libwrap
     SUBDIR += p5-Authen-NTLM
     SUBDIR += p5-Authen-OATH
@@ -424,6 +425,7 @@
     SUBDIR += p5-Authen-Simple-DBI
     SUBDIR += p5-Authen-Simple-DBM
     SUBDIR += p5-Authen-Simple-HTTP
+    SUBDIR += p5-Authen-Simple-Kerberos
     SUBDIR += p5-Authen-Simple-LDAP
     SUBDIR += p5-Authen-Simple-Net
     SUBDIR += p5-Authen-Simple-PAM
@@ -519,6 +521,7 @@
     SUBDIR += p5-Crypt-Shark
     SUBDIR += p5-Crypt-Simple
     SUBDIR += p5-Crypt-SmbHash
+    SUBDIR += p5-Crypt-Sodium
     SUBDIR += p5-Crypt-Solitaire
     SUBDIR += p5-Crypt-TEA
     SUBDIR += p5-Crypt-T_e_a
@@ -552,6 +555,7 @@
     SUBDIR += p5-Digest-EMAC
     SUBDIR += p5-Digest-Elf
     SUBDIR += p5-Digest-FNV
+    SUBDIR += p5-Digest-GOST
     SUBDIR += p5-Digest-HMAC
     SUBDIR += p5-Digest-Hashcash
     SUBDIR += p5-Digest-Haval256
@@ -585,6 +589,7 @@
     SUBDIR += p5-GSSAPI
     SUBDIR += p5-GnuPG
     SUBDIR += p5-GnuPG-Interface
+    SUBDIR += p5-Heimdal-Kadm5
     SUBDIR += p5-HTML-Email-Obfuscate
     SUBDIR += p5-IO-Async-SSL
     SUBDIR += p5-IO-Socket-SSL

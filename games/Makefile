@@ -445,6 +445,7 @@
     SUBDIR += kapman
     SUBDIR += kardsgt
     SUBDIR += kartofel
+    SUBDIR += katawa-shoujo
     SUBDIR += katomic
     SUBDIR += kblackbox
     SUBDIR += kblocks
@@ -590,6 +591,7 @@
     SUBDIR += mindguard
     SUBDIR += minecraft-client
     SUBDIR += minecraft-server
+    SUBDIR += minerbold
     SUBDIR += minetest
     SUBDIR += minetest_game
     SUBDIR += mirrormagic
@@ -1003,7 +1005,6 @@
     SUBDIR += vamos
     SUBDIR += vavoom
     SUBDIR += vavoom-extras
-    SUBDIR += vdrift-data
     SUBDIR += vectoroids
     SUBDIR += vegastrike
     SUBDIR += vegastrike-data

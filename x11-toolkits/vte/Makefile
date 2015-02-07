@@ -14,7 +14,7 @@ COMMENT?=	Gtk 2 based terminal widget with accessibility and I18N support
 
 USES+=		tar:xz
 
-PORTSCOUT=	limit:0.28.*$$
+PORTSCOUT=	ignore:1
 
 .if !defined(REFERENCE_PORT)
 

@@ -360,7 +360,6 @@
     SUBDIR += libsocialweb
     SUBDIR += libwww
     SUBDIR += libxul
-    SUBDIR += lifetype
     SUBDIR += lightsquid
     SUBDIR += lighttpd
     SUBDIR += lighttpd-mod_geoip
@@ -1004,6 +1003,7 @@
     SUBDIR += p5-HTTP-WebTest
     SUBDIR += p5-HTTPD-Log-Filter
     SUBDIR += p5-HTTPD-User-Manage
+    SUBDIR += p5-Hijk
     SUBDIR += p5-I18N-AcceptLanguage
     SUBDIR += p5-IMDB-Film
     SUBDIR += p5-Image-Delivery
@@ -1114,6 +1114,7 @@
     SUBDIR += p5-Plack-Middleware-RemoveRedundantBody
     SUBDIR += p5-Plack-Middleware-Reproxy
     SUBDIR += p5-Plack-Middleware-ReverseProxy
+    SUBDIR += p5-Plack-Middleware-Rewrite
     SUBDIR += p5-Plack-Middleware-ServerStatus-Lite
     SUBDIR += p5-Plack-Middleware-Session
     SUBDIR += p5-Plack-Middleware-SocketIO
@@ -1193,6 +1194,7 @@
     SUBDIR += p5-Tenjin
     SUBDIR += p5-Test-HTTP
     SUBDIR += p5-Test-HTTP-Server-Simple
+    SUBDIR += p5-Test-LWP-UserAgent
     SUBDIR += p5-Test-Nginx
     SUBDIR += p5-TestGen4Web-Runner
     SUBDIR += p5-Text-MultiMarkdown-ApacheHandler
@@ -1263,9 +1265,7 @@
     SUBDIR += p5-WWW-RobotRules-Parser
     SUBDIR += p5-WWW-Scraper-ISBN
     SUBDIR += p5-WWW-Scraper-ISBN-Amazon_Driver
-    SUBDIR += p5-WWW-Scraper-ISBN-Driver
     SUBDIR += p5-WWW-Scraper-ISBN-ORA_Driver
-    SUBDIR += p5-WWW-Scraper-ISBN-Record
     SUBDIR += p5-WWW-Scripter
     SUBDIR += p5-WWW-Scripter-Plugin-Ajax
     SUBDIR += p5-WWW-Scripter-Plugin-JavaScript
@@ -1414,7 +1414,7 @@
     SUBDIR += php55-tidy
     SUBDIR += php56-opcache
     SUBDIR += php56-session
-    SUBDIR += php56-tidy   
+    SUBDIR += php56-tidy
     SUBDIR += phpbb
     SUBDIR += phpbb3
     SUBDIR += phpgroupware
@@ -1549,6 +1549,7 @@
     SUBDIR += py-formencode
     SUBDIR += py-frozen-flask
     SUBDIR += py-funkload
+    SUBDIR += py-gandi.cli
     SUBDIR += py-gevent-websocket
     SUBDIR += py-google-api-python-client
     SUBDIR += py-graphite-web
@@ -1657,6 +1658,7 @@
     SUBDIR += py-pyramid
     SUBDIR += py-pyramid_rpc
     SUBDIR += py-pysearch
+    SUBDIR += py-python-digitalocean
     SUBDIR += py-pywebdav
     SUBDIR += py-qp
     SUBDIR += py-qpy
@@ -1670,6 +1672,7 @@
     SUBDIR += py-requests-toolbelt
     SUBDIR += py-requests1
     SUBDIR += py-restclient
+    SUBDIR += py-rfc3987
     SUBDIR += py-rhodecode
     SUBDIR += py-routes
     SUBDIR += py-satchmo
@@ -1716,6 +1719,7 @@
     SUBDIR += py-wsgidav
     SUBDIR += py-zope.app.wsgi
     SUBDIR += pyblosxom
+    SUBDIR += pycarddav
     SUBDIR += pydio
     SUBDIR += pyjamas
     SUBDIR += pylot
@@ -1723,7 +1727,8 @@
     SUBDIR += qdecoder
     SUBDIR += qooxdoo
     SUBDIR += quickie
-    SUBDIR += qupzilla
+    SUBDIR += qupzilla-qt4
+    SUBDIR += qupzilla-qt5
     SUBDIR += radicale
     SUBDIR += red5
     SUBDIR += redaxo
@@ -1854,11 +1859,13 @@
     SUBDIR += rubygem-net-http-digest_auth11
     SUBDIR += rubygem-net-http-persistent
     SUBDIR += rubygem-net-http-persistent25
+    SUBDIR += rubygem-net-http-pipeline
     SUBDIR += rubygem-nicovideo
     SUBDIR += rubygem-ntlm-http
     SUBDIR += rubygem-pagerduty
     SUBDIR += rubygem-passenger
     SUBDIR += rubygem-puma
+    SUBDIR += rubygem-pusher-client
     SUBDIR += rubygem-rabbirack
     SUBDIR += rubygem-rack
     SUBDIR += rubygem-rack-accept
@@ -2110,7 +2117,6 @@
     SUBDIR += typolight
     SUBDIR += udmsearch
     SUBDIR += uglifyjs
-    SUBDIR += ump
     SUBDIR += usermanager
     SUBDIR += uwsgi
     SUBDIR += uwsgitop

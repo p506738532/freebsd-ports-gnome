@@ -48,6 +48,7 @@
     SUBDIR += automount
     SUBDIR += automounter
     SUBDIR += autopsy
+    SUBDIR += azure-agent
     SUBDIR += b43-fwcutter
     SUBDIR += backuppc
     SUBDIR += backuppc-devel
@@ -159,6 +160,7 @@
     SUBDIR += cronolog
     SUBDIR += cronolog-devel
     SUBDIR += curly
+    SUBDIR += currtime
     SUBDIR += cw
     SUBDIR += daa2iso
     SUBDIR += dae
@@ -460,6 +462,7 @@
     SUBDIR += liburcu
     SUBDIR += libutempter
     SUBDIR += libzeitgeist
+    SUBDIR += life-preserver
     SUBDIR += lineak-defaultplugin
     SUBDIR += lineak-xosdplugin
     SUBDIR += lineakd
@@ -651,9 +654,13 @@
     SUBDIR += password-store
     SUBDIR += patchelf
     SUBDIR += pax-utils
+    SUBDIR += pbi-manager
     SUBDIR += pbimaker
+    SUBDIR += pcbsd-appweb
+    SUBDIR += pcbsd-libsh
+    SUBDIR += pcbsd-syscache
     SUBDIR += pcbsd-utils
-    SUBDIR += pcbsd-utils-qt4
+    SUBDIR += pcbsd-utils-qt5
     SUBDIR += pcfclock
     SUBDIR += pciutils
     SUBDIR += pcpustat
@@ -675,6 +682,7 @@
     SUBDIR += pecl-proctitle
     SUBDIR += pefs-kmod
     SUBDIR += personality
+    SUBDIR += pesign
     SUBDIR += pflogx
     SUBDIR += pfstat
     SUBDIR += pftables
@@ -759,6 +767,7 @@
     SUBDIR += qlogtools
     SUBDIR += qpxtool
     SUBDIR += qsynergy
+    SUBDIR += qt5-qtpaths
     SUBDIR += quicksynergy
     SUBDIR += qzeitgeist
     SUBDIR += racktables
@@ -854,6 +863,7 @@
     SUBDIR += sas2ircu
     SUBDIR += savelogs
     SUBDIR += sb16config
+    SUBDIR += sbsigntool
     SUBDIR += scalpel
     SUBDIR += scan_ffs
     SUBDIR += scanbuttond
@@ -875,6 +885,7 @@
     SUBDIR += setquota
     SUBDIR += sformat
     SUBDIR += sg3_utils
+    SUBDIR += shim
     SUBDIR += shlock
     SUBDIR += shmcat
     SUBDIR += sievelog
@@ -1009,6 +1020,7 @@
     SUBDIR += vpnc-scripts
     SUBDIR += vstrip
     SUBDIR += vttest
+    SUBDIR += warden
     SUBDIR += wait_on
     SUBDIR += watchdog
     SUBDIR += watchfolder
