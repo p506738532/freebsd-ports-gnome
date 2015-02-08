@@ -1356,7 +1356,6 @@
     SUBDIR += noweb
     SUBDIR += npth
     SUBDIR += nspr
-    SUBDIR += ntopng-zmq
     SUBDIR += nxt-python
     SUBDIR += obby
     SUBDIR += obfuscatejs
@@ -1400,6 +1399,8 @@
     SUBDIR += oniguruma
     SUBDIR += oniguruma4
     SUBDIR += oniguruma5
+    SUBDIR += onscripter
+    SUBDIR += onscripter-1byte
     SUBDIR += open-beagle
     SUBDIR += open-usp-tukubai
     SUBDIR += opencl
@@ -2277,6 +2278,7 @@
     SUBDIR += p5-Iterator-Simple
     SUBDIR += p5-Iterator-Util
     SUBDIR += p5-JIRA-Client
+    SUBDIR += p5-JIRA-REST
     SUBDIR += p5-JQuery
     SUBDIR += p5-JSON-Hyper
     SUBDIR += p5-JSON-Path

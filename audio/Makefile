@@ -434,6 +434,7 @@
     SUBDIR += linuxsampler
     SUBDIR += listener
     SUBDIR += lmms
+    SUBDIR += lollypop
     SUBDIR += lpac
     SUBDIR += lua51-mpd
     SUBDIR += lv2core
