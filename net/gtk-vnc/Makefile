@@ -1,10 +1,8 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/net/gtk-vnc/Makefile 20031 2014-11-02 21:47:55Z kwm $
 
 PORTNAME=	gtk-vnc
-PORTVERSION=	0.4.4
-PORTREVISION=	3
+PORTVERSION=	0.5.4
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 
@@ -29,5 +27,13 @@ CONFIGURE_ARGS=	--with-gtk=3.0 --enable-introspection \
 		--disable-plugin --without-python
 MAKE_JOBS_UNSAFE=	yes
 INSTALL_TARGET=	install-strip
+
+OPTIONS_DEFINE=	PULSEAUDIO
+OPTIONS_DEFAULT=PULSEAUDIO
+OPTIONS_SUB=	yes
+
+PULSEAUDIO_DESC=	use PulseAudio for audio playback
+PULSEAUDIO_CONFIGURE_WITH=	pulseaudio
+PULSEAUDIO_LIB_DEPENDS=	libpulse.so:${PORTSDIR}/audio/pulseaudio
 
 .include <bsd.port.mk>
