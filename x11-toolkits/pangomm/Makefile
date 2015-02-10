@@ -1,10 +1,9 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11-toolkits/pangomm/Makefile 19822 2014-08-20 08:57:46Z gusi $
 
 PORTNAME=	pangomm
-PORTVERSION=	2.34.0
-PORTREVISION?=	1
+PORTVERSION=	2.35.1
+PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
