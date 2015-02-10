@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	tracker
-PORTVERSION=	1.3.2
-PORTREVISION=	1
+PORTVERSION=	1.3.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -25,8 +24,8 @@ RUN_DEPENDS=	xdg-desktop-icon:${PORTSDIR}/devel/xdg-utils \
 
 PLIST_SUB=	TRACKER_VER="1.0"
 
-USES=		desktop-file-utils gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USE_GNOME=	gtk30 intlhack introspection:build
 USE_LDCONFIG=	yes
 USE_SQLITE=	3
 USE_GSTREAMER1=	yes
