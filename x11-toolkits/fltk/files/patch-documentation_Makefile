@@ -1,5 +1,14 @@
 --- documentation/Makefile.orig	2011-08-27 01:33:42.000000000 +0000
 +++ documentation/Makefile	2011-08-27 01:39:59.000000000 +0000
+@@ -73,7 +73,7 @@
+ 
+ install: $(MANPAGES)
+ 	echo "Installing documentation files in $(DESTDIR)$(docdir) ..."
+-	-$(INSTALL_DIR) $(DESTDIR)$(docdir)
++#	-$(INSTALL_DIR) $(DESTDIR)$(docdir)
+ 	if test -f html/index.html ; then \
+ 	  for file in html/* ; do \
+ 		$(INSTALL_DATA) $$file $(DESTDIR)$(docdir); \
 @@ -84,11 +84,6 @@
  	  $(INSTALL_DATA) fltk.pdf $(DESTDIR)$(docdir); \
  	fi

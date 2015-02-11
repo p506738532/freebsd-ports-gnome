@@ -958,6 +958,7 @@
     SUBDIR += snortsam
     SUBDIR += snortsnarf
     SUBDIR += softhsm
+    SUBDIR += softhsm2
     SUBDIR += spass
     SUBDIR += spike-proxy
     SUBDIR += spybye
