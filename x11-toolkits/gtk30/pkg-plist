@@ -10,6 +10,7 @@ etc/gtk-3.0/im-multipress.conf
 include/gail-3.0/libgail-util/gail-util.h
 include/gail-3.0/libgail-util/gailmisc.h
 include/gail-3.0/libgail-util/gailtextutil.h
+include/gtk-3.0/gdk/gdk-autocleanup.h
 include/gtk-3.0/gdk/gdk.h
 include/gtk-3.0/gdk/gdkapplaunchcontext.h
 include/gtk-3.0/gdk/gdkcairo.h
@@ -44,6 +45,7 @@ include/gtk-3.0/gdk/gdkversionmacros.h
 include/gtk-3.0/gdk/gdkvisual.h
 include/gtk-3.0/gdk/gdkwindow.h
 include/gtk-3.0/gdk/gdkx.h
+include/gtk-3.0/gdk/x11/gdkx-autocleanups.h
 include/gtk-3.0/gdk/x11/gdkx11applaunchcontext.h
 include/gtk-3.0/gdk/x11/gdkx11cursor.h
 include/gtk-3.0/gdk/x11/gdkx11device-core.h
@@ -63,6 +65,7 @@ include/gtk-3.0/gdk/x11/gdkx11selection.h
 include/gtk-3.0/gdk/x11/gdkx11utils.h
 include/gtk-3.0/gdk/x11/gdkx11visual.h
 include/gtk-3.0/gdk/x11/gdkx11window.h
+include/gtk-3.0/gtk/a11y/gtk-a11y-autocleanups.h
 include/gtk-3.0/gtk/a11y/gtkarrowaccessible.h
 include/gtk-3.0/gtk/a11y/gtkbooleancellaccessible.h
 include/gtk-3.0/gtk/a11y/gtkbuttonaccessible.h
@@ -155,6 +158,7 @@ include/gtk-3.0/gtk/deprecated/gtkvscale.h
 include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h
 include/gtk-3.0/gtk/deprecated/gtkvseparator.h
 include/gtk-3.0/gtk/gtk-a11y.h
+include/gtk-3.0/gtk/gtk-autocleanups.h
 include/gtk-3.0/gtk/gtk.h
 include/gtk-3.0/gtk/gtkaboutdialog.h
 include/gtk-3.0/gtk/gtkaccelgroup.h
@@ -365,11 +369,13 @@ include/gtk-3.0/gtk/gtkwidget.h
 include/gtk-3.0/gtk/gtkwidgetpath.h
 include/gtk-3.0/gtk/gtkwindow.h
 include/gtk-3.0/gtk/gtkwindowgroup.h
+include/gtk-3.0/gtk/gtkx-autocleanups.h
 include/gtk-3.0/gtk/gtkx.h
 include/gtk-3.0/unix-print/gtk/gtkpagesetupunixdialog.h
 include/gtk-3.0/unix-print/gtk/gtkprinter.h
 include/gtk-3.0/unix-print/gtk/gtkprintjob.h
 include/gtk-3.0/unix-print/gtk/gtkprintunixdialog.h
+include/gtk-3.0/unix-print/gtk/gtkunixprint-autocleanups.h
 include/gtk-3.0/unix-print/gtk/gtkunixprint.h
 lib/girepository-1.0/Gdk-3.0.typelib
 lib/girepository-1.0/GdkX11-3.0.typelib

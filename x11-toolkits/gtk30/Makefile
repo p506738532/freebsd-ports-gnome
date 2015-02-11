@@ -1,9 +1,10 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
 # $FreeBSD$
-# Please keep gtk30 and x11-themes/gnome-themes-standard minor version in sync
+# Please keep gtk30 in sync with the following x11-themes ports:
+# adwaita-icon-theme, gnome-themes-standard and mate-themes
 
 PORTNAME=	gtk
-PORTVERSION=	3.15.4
+PORTVERSION=	3.15.6
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -46,7 +47,7 @@ LIBS+=		-L${LOCALBASE}/lib
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
-LIBVERSION=	0.1504.0
+LIBVERSION=	0.1506.0
 PLIST_SUB+=	LIBVERSION=${LIBVERSION}
 
 GLIB_SCHEMAS=	org.gtk.Demo.gschema.xml \
