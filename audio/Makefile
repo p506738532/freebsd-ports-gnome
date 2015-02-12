@@ -434,6 +434,7 @@
     SUBDIR += linuxsampler
     SUBDIR += listener
     SUBDIR += lmms
+    SUBDIR += lollypop
     SUBDIR += lpac
     SUBDIR += lua51-mpd
     SUBDIR += lv2core
@@ -600,7 +601,6 @@
     SUBDIR += py-cddb
     SUBDIR += py-discogs-client
     SUBDIR += py-eyed3
-    SUBDIR += py-eyed3-06
     SUBDIR += py-fastaudio
     SUBDIR += py-gmusicapi
     SUBDIR += py-id3
@@ -625,7 +625,6 @@
     SUBDIR += py3-pylast
     SUBDIR += pytone
     SUBDIR += qjackctl
-    SUBDIR += qmidinet
     SUBDIR += qmpdclient
     SUBDIR += qsampler
     SUBDIR += qsynth
@@ -779,14 +778,12 @@
     SUBDIR += whysynth
     SUBDIR += wildmidi
     SUBDIR += wmalbum
-    SUBDIR += wmauda
     SUBDIR += wmix
     SUBDIR += wmmp
     SUBDIR += wmrecord
     SUBDIR += wmsmixer
     SUBDIR += workman
     SUBDIR += wxguitar
-    SUBDIR += x11amp
     SUBDIR += xanalyser
     SUBDIR += xcd
     SUBDIR += xcdplayer

@@ -326,6 +326,7 @@
     SUBDIR += imgsizer
     SUBDIR += impresscms
     SUBDIR += interchange
+    SUBDIR += iojs
     SUBDIR += ismail
     SUBDIR += iwebcal
     SUBDIR += jawstats
@@ -360,7 +361,6 @@
     SUBDIR += libsocialweb
     SUBDIR += libwww
     SUBDIR += libxul
-    SUBDIR += lifetype
     SUBDIR += lightsquid
     SUBDIR += lighttpd
     SUBDIR += lighttpd-mod_geoip
@@ -381,6 +381,7 @@
     SUBDIR += linux-opera
     SUBDIR += linux-seamonkey
     SUBDIR += lionwiki
+    SUBDIR += litmus
     SUBDIR += ljdeps
     SUBDIR += ljdump
     SUBDIR += llgal
@@ -1004,6 +1005,7 @@
     SUBDIR += p5-HTTP-WebTest
     SUBDIR += p5-HTTPD-Log-Filter
     SUBDIR += p5-HTTPD-User-Manage
+    SUBDIR += p5-Hijk
     SUBDIR += p5-I18N-AcceptLanguage
     SUBDIR += p5-IMDB-Film
     SUBDIR += p5-Image-Delivery
@@ -1265,9 +1267,7 @@
     SUBDIR += p5-WWW-RobotRules-Parser
     SUBDIR += p5-WWW-Scraper-ISBN
     SUBDIR += p5-WWW-Scraper-ISBN-Amazon_Driver
-    SUBDIR += p5-WWW-Scraper-ISBN-Driver
     SUBDIR += p5-WWW-Scraper-ISBN-ORA_Driver
-    SUBDIR += p5-WWW-Scraper-ISBN-Record
     SUBDIR += p5-WWW-Scripter
     SUBDIR += p5-WWW-Scripter-Plugin-Ajax
     SUBDIR += p5-WWW-Scripter-Plugin-JavaScript
@@ -1484,6 +1484,7 @@
     SUBDIR += py-django-caching-app-plugins
     SUBDIR += py-django-classy-tags
     SUBDIR += py-django-cms
+    SUBDIR += py-django-contrib-comments
     SUBDIR += py-django-crispy-forms
     SUBDIR += py-django-datetime-widget
     SUBDIR += py-django-debug-toolbar
@@ -1542,6 +1543,8 @@
     SUBDIR += py-flask-admin
     SUBDIR += py-flask-cache
     SUBDIR += py-flask-flatpages
+    SUBDIR += py-flask-oauthlib
+    SUBDIR += py-flask-restful
     SUBDIR += py-flask-sockets
     SUBDIR += py-flask-uploads
     SUBDIR += py-flask-wtf
@@ -2119,7 +2122,6 @@
     SUBDIR += typolight
     SUBDIR += udmsearch
     SUBDIR += uglifyjs
-    SUBDIR += ump
     SUBDIR += usermanager
     SUBDIR += uwsgi
     SUBDIR += uwsgitop
