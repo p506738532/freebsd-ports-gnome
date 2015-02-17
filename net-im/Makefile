@@ -115,6 +115,7 @@
     SUBDIR += poezio
     SUBDIR += pork
     SUBDIR += prosody
+    SUBDIR += proxy65
     SUBDIR += psi
     SUBDIR += psimedia
     SUBDIR += pwytter
@@ -147,6 +148,7 @@
     SUBDIR += skype-devel
     SUBDIR += skype4
     SUBDIR += telegram
+    SUBDIR += telegram-purple
     SUBDIR += telepathy-butterfly
     SUBDIR += telepathy-farsight
     SUBDIR += telepathy-farstream

@@ -163,6 +163,7 @@
     SUBDIR += gpass
     SUBDIR += gpgdir
     SUBDIR += gpgme
+    SUBDIR += gputty
     SUBDIR += gringotts
     SUBDIR += gsasl
     SUBDIR += gsfv
@@ -257,6 +258,7 @@
     SUBDIR += krb5-112
     SUBDIR += krb5-appl
     SUBDIR += kripp
+    SUBDIR += kstart
     SUBDIR += kwalletmanager
     SUBDIR += l0pht-watch
     SUBDIR += l0phtcrack
@@ -489,6 +491,8 @@
     SUBDIR += p5-Crypt-OpenSSL-Bignum
     SUBDIR += p5-Crypt-OpenSSL-CA
     SUBDIR += p5-Crypt-OpenSSL-DSA
+    SUBDIR += p5-Crypt-OpenSSL-EC
+    SUBDIR += p5-Crypt-OpenSSL-ECDSA
     SUBDIR += p5-Crypt-OpenSSL-RSA
     SUBDIR += p5-Crypt-OpenSSL-Random
     SUBDIR += p5-Crypt-OpenSSL-X509
@@ -789,6 +793,7 @@
     SUBDIR += py-kerberos
     SUBDIR += py-keyczar
     SUBDIR += py-keyring
+    SUBDIR += py-libnacl
     SUBDIR += py-m2crypto
     SUBDIR += py-mcrypt
     SUBDIR += py-mhash
@@ -874,6 +879,7 @@
     SUBDIR += rdigest
     SUBDIR += regripper
     SUBDIR += regripperplugins
+    SUBDIR += reop
     SUBDIR += retranslator
     SUBDIR += revealrk
     SUBDIR += revelation
@@ -955,6 +961,7 @@
     SUBDIR += snortsam
     SUBDIR += snortsnarf
     SUBDIR += softhsm
+    SUBDIR += softhsm2
     SUBDIR += spass
     SUBDIR += spike-proxy
     SUBDIR += spybye

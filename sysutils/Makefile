@@ -48,8 +48,10 @@
     SUBDIR += automount
     SUBDIR += automounter
     SUBDIR += autopsy
+    SUBDIR += avfs
     SUBDIR += azure-agent
     SUBDIR += b43-fwcutter
+    SUBDIR += backupchecker
     SUBDIR += backuppc
     SUBDIR += backuppc-devel
     SUBDIR += bacula-bat
@@ -83,7 +85,6 @@
     SUBDIR += boxbackup
     SUBDIR += boxbackup-devel
     SUBDIR += brasero
-    SUBDIR += brebis
     SUBDIR += bsd-splash-changer
     SUBDIR += bsdadminscripts
     SUBDIR += bsdconfig
@@ -756,6 +757,7 @@
     SUBDIR += py-ranger
     SUBDIR += py-salt
     SUBDIR += py-salt-api
+    SUBDIR += py-shutilwhich
     SUBDIR += py-stdiff
     SUBDIR += py-supervisor
     SUBDIR += py-zdaemon
@@ -801,9 +803,7 @@
     SUBDIR += rsyncmanager
     SUBDIR += rsyncrypto
     SUBDIR += rsyslog7
-    SUBDIR += rsyslog7-devel
     SUBDIR += rsyslog8
-    SUBDIR += rsyslog8-devel
     SUBDIR += rtty
     SUBDIR += ruby-quota
     SUBDIR += rubygem-SyslogLogger
@@ -837,6 +837,7 @@
     SUBDIR += rubygem-log4r
     SUBDIR += rubygem-logify
     SUBDIR += rubygem-mogilefs-client
+    SUBDIR += rubygem-mothra
     SUBDIR += rubygem-murder
     SUBDIR += rubygem-ohai
     SUBDIR += rubygem-parallel

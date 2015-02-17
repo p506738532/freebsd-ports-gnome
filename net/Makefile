@@ -302,6 +302,7 @@
     SUBDIR += libkfbapi
     SUBDIR += libkvkontakte
     SUBDIR += libmateweather
+    SUBDIR += libmaxminddb
     SUBDIR += libmediawiki
     SUBDIR += libmms
     SUBDIR += libmxp
@@ -856,6 +857,7 @@
     SUBDIR += php56-sockets
     SUBDIR += php56-xmlrpc
     SUBDIR += phpldapadmin
+    SUBDIR += pimd
     SUBDIR += pimdd
     SUBDIR += pipsecd
     SUBDIR += pjsip
@@ -1255,6 +1257,7 @@
     SUBDIR += widentd
     SUBDIR += wireshark
     SUBDIR += wireshark-lite
+    SUBDIR += wireshark-qt5
     SUBDIR += wizd
     SUBDIR += wlan2eth
     SUBDIR += wmlj

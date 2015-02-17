@@ -326,6 +326,7 @@
     SUBDIR += imgsizer
     SUBDIR += impresscms
     SUBDIR += interchange
+    SUBDIR += iojs
     SUBDIR += ismail
     SUBDIR += iwebcal
     SUBDIR += jawstats
@@ -380,6 +381,7 @@
     SUBDIR += linux-opera
     SUBDIR += linux-seamonkey
     SUBDIR += lionwiki
+    SUBDIR += litmus
     SUBDIR += ljdeps
     SUBDIR += ljdump
     SUBDIR += llgal
@@ -819,6 +821,7 @@
     SUBDIR += p5-Dancer-Template-Xslate
     SUBDIR += p5-Dancer2
     SUBDIR += p5-Dancer2-Plugin-Ajax
+    SUBDIR += p5-Dancer2-Plugin-Deferred
     SUBDIR += p5-Data-TreeDumper-Renderer-DHTML
     SUBDIR += p5-Data-Validate-URI
     SUBDIR += p5-Emplacken
@@ -1457,6 +1460,7 @@
     SUBDIR += py-albatross
     SUBDIR += py-amf
     SUBDIR += py-apachelog
+    SUBDIR += py-autobahn
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
     SUBDIR += py-beautifulsoup32
@@ -1482,6 +1486,7 @@
     SUBDIR += py-django-caching-app-plugins
     SUBDIR += py-django-classy-tags
     SUBDIR += py-django-cms
+    SUBDIR += py-django-contrib-comments
     SUBDIR += py-django-crispy-forms
     SUBDIR += py-django-datetime-widget
     SUBDIR += py-django-debug-toolbar
@@ -1540,6 +1545,8 @@
     SUBDIR += py-flask-admin
     SUBDIR += py-flask-cache
     SUBDIR += py-flask-flatpages
+    SUBDIR += py-flask-oauthlib
+    SUBDIR += py-flask-restful
     SUBDIR += py-flask-sockets
     SUBDIR += py-flask-uploads
     SUBDIR += py-flask-wtf
@@ -1714,6 +1721,7 @@
     SUBDIR += py-webware-component
     SUBDIR += py-werkzeug
     SUBDIR += py-wikitools
+    SUBDIR += py-wsaccel
     SUBDIR += py-ws4py
     SUBDIR += py-wsgiauth
     SUBDIR += py-wsgidav
