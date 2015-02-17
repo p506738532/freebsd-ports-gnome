@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libgweather
-PORTVERSION=	3.15.1
+PORTVERSION=	3.15.90
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 
@@ -18,8 +18,7 @@ RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme
 PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomeprefix gtk30 intlhack \
-		introspection:build
+USE_GNOME=	gtk30 intlhack introspection:build
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
