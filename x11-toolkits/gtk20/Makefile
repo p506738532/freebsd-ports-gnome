@@ -3,8 +3,8 @@
 #   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.237 2013/03/04 17:44:38 kwm Exp $
 
 PORTNAME=	gtk
-PORTVERSION=	2.24.25
-PORTREVISION?=	1
+PORTVERSION=	2.24.26
+PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -51,7 +51,7 @@ DEBUG_CONFIGURE_ON=	--enable-debug=yes
 
 .include <bsd.port.options.mk>
 
-PLIST_SUB+=	LIBGAILVER=18.0.1 LIBGVER=0.2400.25
+PLIST_SUB+=	LIBGAILVER=18.0.1 LIBGVER=0.2400.26
 
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${GREP} -l lgmodule | \
@@ -77,8 +77,8 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/gtk-2.0/${GTK2_VERSION}/engines
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/gtk-2.0/${GTK2_VERSION}/loaders
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/gtk-2.0/${GTK2_VERSION}/modules
-	${INSTALL_MAN} ${WRKSRC}/docs/reference/gtk/gtk-query-immodules-2.0.1 \
-		${STAGEDIR}${PREFIX}/man/man1
+#	${INSTALL_MAN} ${WRKSRC}/docs/reference/gtk/gtk-query-immodules-2.0 \
+#		${STAGEDIR}${PREFIX}/man/man1
 
 .include <bsd.port.mk>
 
