@@ -821,6 +821,7 @@
     SUBDIR += p5-Dancer-Template-Xslate
     SUBDIR += p5-Dancer2
     SUBDIR += p5-Dancer2-Plugin-Ajax
+    SUBDIR += p5-Dancer2-Plugin-Deferred
     SUBDIR += p5-Data-TreeDumper-Renderer-DHTML
     SUBDIR += p5-Data-Validate-URI
     SUBDIR += p5-Emplacken
@@ -1459,6 +1460,7 @@
     SUBDIR += py-albatross
     SUBDIR += py-amf
     SUBDIR += py-apachelog
+    SUBDIR += py-autobahn
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
     SUBDIR += py-beautifulsoup32
@@ -1719,6 +1721,7 @@
     SUBDIR += py-webware-component
     SUBDIR += py-werkzeug
     SUBDIR += py-wikitools
+    SUBDIR += py-wsaccel
     SUBDIR += py-ws4py
     SUBDIR += py-wsgiauth
     SUBDIR += py-wsgidav
