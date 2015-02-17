@@ -360,7 +360,6 @@ include/evolution/em-format/e-mail-part.h
 include/evolution/em-format/e-mail-stripsig-filter.h
 include/evolution/libemail-engine/camel-null-store.h
 include/evolution/libemail-engine/camel-sasl-xoauth2.h
-include/evolution/libemail-engine/e-mail-authenticator.h
 include/evolution/libemail-engine/e-mail-engine-enums.h
 include/evolution/libemail-engine/e-mail-engine-enumtypes.h
 include/evolution/libemail-engine/e-mail-folder-utils.h
@@ -606,7 +605,6 @@ share/applications/evolution.desktop
 %%PORTDOCS%%%%DOCSDIR%%-mail-engine/EMFilterFolderElement.html
 %%PORTDOCS%%%%DOCSDIR%%-mail-engine/EMVFolderContext.html
 %%PORTDOCS%%%%DOCSDIR%%-mail-engine/EMVFolderRule.html
-%%PORTDOCS%%%%DOCSDIR%%-mail-engine/EMailAuthenticator.html
 %%PORTDOCS%%%%DOCSDIR%%-mail-engine/EMailJunkFilter.html
 %%PORTDOCS%%%%DOCSDIR%%-mail-engine/EMailSession.html
 %%PORTDOCS%%%%DOCSDIR%%-mail-engine/MailFolderCache.html
