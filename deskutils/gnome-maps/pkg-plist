@@ -1,7 +1,13 @@
 bin/gnome-maps
+lib/gnome-maps/girepository-1.0/GnomeMaps-1.0.typelib
+lib/gnome-maps/libgnome-maps.a
+lib/gnome-maps/libgnome-maps.so
+lib/gnome-maps/libgnome-maps.so.0
+lib/gnome-maps/libgnome-maps.so.0.0.0
 share/appdata/org.gnome.Maps.appdata.xml
 share/applications/org.gnome.Maps.desktop
 share/dbus-1/services/org.gnome.Maps.service
+share/gir-1.0/GnomeMaps-1.0.gir
 %%DATADIR%%/icons/hicolor/16x16/apps/layers-button-symbolic.svg
 %%DATADIR%%/icons/hicolor/16x16/apps/maps-point-end-symbolic.svg
 %%DATADIR%%/icons/hicolor/16x16/apps/maps-point-end.svg

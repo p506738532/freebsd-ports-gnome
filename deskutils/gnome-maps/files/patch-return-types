@@ -1,0 +1,39 @@
+From 7e15c7d5af45700828c26f455d9cf5b1cd00a8a7 Mon Sep 17 00:00:00 2001
+From: Ting-Wei Lan <lantw@src.gnome.org>
+Date: Mon, 9 Feb 2015 19:33:25 +0800
+Subject: [PATCH] build: Fix "non-void function should return a value"
+
+---
+ lib/maps-contact-store.c | 2 +-
+ lib/maps-contact.c       | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/lib/maps-contact-store.c b/lib/maps-contact-store.c
+index 2e0b071..7529e2a 100644
+--- lib/maps-contact-store.c
++++ lib/maps-contact-store.c
+@@ -303,7 +303,7 @@ maps_contact_store_load (MapsContactStore *store)
+ GList *
+ maps_contact_store_get_contacts (MapsContactStore *store)
+ {
+-  g_return_if_fail (MAPS_IS_CONTACT_STORE (store));
++  g_return_val_if_fail (MAPS_IS_CONTACT_STORE (store), FALSE);
+ 
+   return store->priv->list;
+ }
+diff --git a/lib/maps-contact.c b/lib/maps-contact.c
+index b681c4b..06ccf8f 100644
+--- lib/maps-contact.c
++++ lib/maps-contact.c
+@@ -241,7 +241,7 @@ maps_contact_add_place (MapsContact  *contact,
+ GList *
+ maps_contact_get_places (MapsContact *contact)
+ {
+-  g_return_if_fail (MAPS_IS_CONTACT (contact));
++  g_return_val_if_fail (MAPS_IS_CONTACT (contact), NULL);
+ 
+   return contact->priv->places;
+ }
+-- 
+2.3.0
+
