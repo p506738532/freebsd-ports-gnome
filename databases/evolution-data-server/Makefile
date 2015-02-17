@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.13.10
+PORTVERSION=	3.13.90
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,8 +25,7 @@ LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 
 USES=		bison gettext gmake gperf libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build \
-		libxml2
+USE_GNOME=	gtk30 intlhack introspection:build libxml2
 USE_OPENLDAP=	yes
 USE_SQLITE=	yes
 GNU_CONFIGURE=	yes
