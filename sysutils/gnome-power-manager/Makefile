@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-power-manager
-PORTVERSION=	3.14.1
+PORTVERSION=	3.15.90
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -14,8 +14,8 @@ LIB_DEPENDS=	libupower-glib.so:${PORTSDIR}/sysutils/upower
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 INSTALLS_ICONS=	yes
-USE_GNOME=	gnomeprefix gtk30 intlhack
-MAKE_JOBS_UNSAFE=yes
+USE_GNOME=	gtk30 intlhack
+#MAKE_JOBS_UNSAFE=yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-doc-dir=${PREFIX}/share/doc \
 		--disable-docbook-docs
