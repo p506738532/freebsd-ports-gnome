@@ -757,6 +757,7 @@
     SUBDIR += py-ranger
     SUBDIR += py-salt
     SUBDIR += py-salt-api
+    SUBDIR += py-shutilwhich
     SUBDIR += py-stdiff
     SUBDIR += py-supervisor
     SUBDIR += py-zdaemon
@@ -802,9 +803,7 @@
     SUBDIR += rsyncmanager
     SUBDIR += rsyncrypto
     SUBDIR += rsyslog7
-    SUBDIR += rsyslog7-devel
     SUBDIR += rsyslog8
-    SUBDIR += rsyslog8-devel
     SUBDIR += rtty
     SUBDIR += ruby-quota
     SUBDIR += rubygem-SyslogLogger
