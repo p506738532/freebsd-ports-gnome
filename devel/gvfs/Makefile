@@ -1,10 +1,8 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/devel/gvfs/Makefile 19827 2014-08-24 08:15:41Z gusi $
 
 PORTNAME=	gvfs
-PORTVERSION=	1.20.3
-PORTREVISION=	2
+PORTVERSION=	1.23.90
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -21,7 +19,7 @@ LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
 PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	glib20 gnomeprefix intlhack intltool libxslt:build
+USE_GNOME=	glib20 intlhack libxslt:build
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -96,6 +94,6 @@ post-patch:
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}/remote-volume-monitors
-	${TOUCH} ${STAGEDIR}${DATADIR}/remote-volume-monitors/.keep
+#	${TOUCH} ${STAGEDIR}${DATADIR}/remote-volume-monitors/.keep
 
 .include <bsd.port.mk>

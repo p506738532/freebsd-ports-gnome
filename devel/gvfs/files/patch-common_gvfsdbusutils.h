@@ -1,7 +1,5 @@
-https://bugzilla.gnome.org/show_bug.cgi?id=722411
-
---- common/gvfsdbusutils.h.orig	2014-05-25 17:43:08.000000000 +0200
-+++ common/gvfsdbusutils.h	2014-05-25 17:43:08.000000000 +0200
+--- common/gvfsdbusutils.h.orig	2015-02-18 08:40:08 UTC
++++ common/gvfsdbusutils.h
 @@ -0,0 +1,42 @@
 +/* GIO - GLib Input, Output and Streaming Library
 + * 
