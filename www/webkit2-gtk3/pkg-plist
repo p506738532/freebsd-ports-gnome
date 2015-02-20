@@ -9,6 +9,7 @@ include/webkitgtk-4.0/JavaScriptCore/WebKitAvailability.h
 include/webkitgtk-4.0/webkit2/WebKitAuthenticationRequest.h
 include/webkitgtk-4.0/webkit2/WebKitBackForwardList.h
 include/webkitgtk-4.0/webkit2/WebKitBackForwardListItem.h
+include/webkitgtk-4.0/webkit2/WebKitColorChooserRequest.h
 include/webkitgtk-4.0/webkit2/WebKitContextMenu.h
 include/webkitgtk-4.0/webkit2/WebKitContextMenuActions.h
 include/webkitgtk-4.0/webkit2/WebKitContextMenuItem.h
@@ -271,10 +272,10 @@ lib/girepository-1.0/WebKit2-4.0.typelib
 lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
 lib/libjavascriptcoregtk-4.0.so
 lib/libjavascriptcoregtk-4.0.so.18
-lib/libjavascriptcoregtk-4.0.so.18.1.3
+lib/libjavascriptcoregtk-4.0.so.18.1.4
 lib/libwebkit2gtk-4.0.so
 lib/libwebkit2gtk-4.0.so.37
-lib/libwebkit2gtk-4.0.so.37.5.0
+lib/libwebkit2gtk-4.0.so.37.6.0
 lib/webkit2gtk-4.0/injected-bundle/libwebkit2gtkinjectedbundle.so
 libdata/pkgconfig/javascriptcoregtk-4.0.pc
 libdata/pkgconfig/webkit2gtk-4.0.pc

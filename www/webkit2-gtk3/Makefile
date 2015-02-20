@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	webkit
-PORTVERSION=	2.7.4
+PORTVERSION=	2.7.90
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	2-gtk3
@@ -33,8 +33,7 @@ USES=		bison compiler:c++11-lib gettext gmake gperf perl5 \
 		pkgconfig python:2 tar:xz
 USE_RUBY=	yes
 RUBY_NO_RUN_DEPENDS=yes
-USE_GNOME=	cairo gtk20 gtk30 introspection:build \
-		libxml2 libxslt:build
+USE_GNOME=	cairo gtk20 gtk30 introspection:build libxml2 libxslt:build
 USE_GL=		gl egl
 USE_SQLITE=	3
 USE_PERL5=	build
