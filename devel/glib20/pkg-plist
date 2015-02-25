@@ -133,6 +133,7 @@ include/glib-2.0/gio/gsettingsbackend.h
 include/glib-2.0/gio/gsettingsschema.h
 include/glib-2.0/gio/gsimpleaction.h
 include/glib-2.0/gio/gsimpleactiongroup.h
+include/glib-2.0/gio/gsimpleiostream.h
 include/glib-2.0/gio/gsimpleproxyresolver.h
 include/glib-2.0/gio/gsimpleasyncresult.h
 include/glib-2.0/gio/gsimplepermission.h
