@@ -1,9 +1,8 @@
 # Created by: FreeBSD GNOME Team <gnome@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/games/gnome-tetravex/Makefile 19989 2014-10-18 09:53:56Z gusi $
 
 PORTNAME=	gnome-tetravex
-PORTVERSION=	3.14.0
+PORTVERSION=	3.15.90
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
