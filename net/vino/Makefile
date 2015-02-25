@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	vino
-PORTVERSION=	3.15.4
+PORTVERSION=	3.15.90
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,16 +25,8 @@ USE_GNOME=	gtk30 intlhack
 USE_XORG=	xdamage xfixes xtst
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-CONFIGURE_ARGS=	--without-network-manager \
-		--disable-http-server
 CPPFLAGS+=	-I${LOCALBASE}/include -Wno-format-nonliteral
 LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.Vino.enums.xml org.gnome.Vino.gschema.xml
-
-OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	NOTIFY
-OPTIONS_DEFAULT=NOTIFY
-NOTIFY_LIBS_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify
-NOTIFY_CONFIGURE_WITH=	libnotify	
 
 .include <bsd.port.mk>
