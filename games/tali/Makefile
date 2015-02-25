@@ -1,9 +1,8 @@
 # Created by: FreeBSD GNOME Team <gnome@freebsd.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/games/tali/Makefile 19989 2014-10-18 09:53:56Z gusi $
 
 PORTNAME=	tali
-PORTVERSION=	3.14.0
+PORTVERSION=	3.15.90
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
