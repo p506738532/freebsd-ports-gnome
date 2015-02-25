@@ -6,13 +6,14 @@ PORTVERSION=	0.9
 CATEGORIES=	devel pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
-DISTNAME=	runkit-${PORTVERSION}
-EXTRACT_SUFX=	.tgz
 DIST_SUBDIR=	PECL
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	PECL extension to modify constants, user-defined functions, and classes
 
+LICENSE=	PHP30
+
+USES=		tar:tgz
 USE_PHP=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	runkit

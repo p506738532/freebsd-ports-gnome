@@ -544,6 +544,7 @@
     SUBDIR += git
     SUBDIR += git-bzr-ng
     SUBDIR += git-extras
+    SUBDIR += git-lite
     SUBDIR += git-merge-changelog
     SUBDIR += git-modes
     SUBDIR += git-review
@@ -1112,6 +1113,7 @@
     SUBDIR += liborcus07
     SUBDIR += libosinfo
     SUBDIR += libosmo-abis
+    SUBDIR += libosmo-netif
     SUBDIR += libosmo-sccp
     SUBDIR += libosmocore
     SUBDIR += libowfat
@@ -4233,6 +4235,7 @@
     SUBDIR += qt4-help-tools
     SUBDIR += qt4-libqtassistantclient
     SUBDIR += qt4-linguist
+    SUBDIR += qt4-linguisttools
     SUBDIR += qt4-makeqpf
     SUBDIR += qt4-moc
     SUBDIR += qt4-porting
