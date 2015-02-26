@@ -23,6 +23,7 @@ share/locale/el/LC_MESSAGES/mate-polkit.mo
 share/locale/en_AU/LC_MESSAGES/mate-polkit.mo
 share/locale/en_GB/LC_MESSAGES/mate-polkit.mo
 share/locale/es/LC_MESSAGES/mate-polkit.mo
+share/locale/et/LC_MESSAGES/mate-polkit.mo
 share/locale/eu/LC_MESSAGES/mate-polkit.mo
 share/locale/fi/LC_MESSAGES/mate-polkit.mo
 share/locale/fr/LC_MESSAGES/mate-polkit.mo
@@ -55,6 +56,7 @@ share/locale/ru/LC_MESSAGES/mate-polkit.mo
 share/locale/sk/LC_MESSAGES/mate-polkit.mo
 share/locale/sl/LC_MESSAGES/mate-polkit.mo
 share/locale/sq/LC_MESSAGES/mate-polkit.mo
+share/locale/sr/LC_MESSAGES/mate-polkit.mo
 share/locale/sv/LC_MESSAGES/mate-polkit.mo
 share/locale/ta/LC_MESSAGES/mate-polkit.mo
 share/locale/te/LC_MESSAGES/mate-polkit.mo
