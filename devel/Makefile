@@ -2229,6 +2229,7 @@
     SUBDIR += p5-IO-Pager
     SUBDIR += p5-IO-Pipely
     SUBDIR += p5-IO-Prompt
+    SUBDIR += p5-IO-Prompt-Simple
     SUBDIR += p5-IO-Prompt-Tiny
     SUBDIR += p5-IO-Prompter
     SUBDIR += p5-IO-Pty-Easy
@@ -2583,6 +2584,7 @@
     SUBDIR += p5-PAR-Dist
     SUBDIR += p5-PAR-Packer
     SUBDIR += p5-PCSC-Card
+    SUBDIR += p5-PerlX-Maybe
     SUBDIR += p5-PHP-Serialization
     SUBDIR += p5-POE
     SUBDIR += p5-POE-API-Hooks
