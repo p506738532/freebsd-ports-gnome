@@ -605,6 +605,7 @@
     SUBDIR += p5-Blog-Spam
     SUBDIR += p5-Browser-Open
     SUBDIR += p5-Business-PayPal
+    SUBDIR += p5-CGI
     SUBDIR += p5-CGI-Ajax
     SUBDIR += p5-CGI-Application
     SUBDIR += p5-CGI-Application-Dispatch
@@ -651,6 +652,7 @@
     SUBDIR += p5-CGI-Expand
     SUBDIR += p5-CGI-ExtDirect
     SUBDIR += p5-CGI-FCKeditor
+    SUBDIR += p5-CGI-Fast
     SUBDIR += p5-CGI-FastTemplate
     SUBDIR += p5-CGI-FormBuilder
     SUBDIR += p5-CGI-Framework
@@ -1133,6 +1135,7 @@
     SUBDIR += p5-PocketIO
     SUBDIR += p5-Pod-Site
     SUBDIR += p5-PodToHTML
+    SUBDIR += p5-Protocol-HTTP2
     SUBDIR += p5-Protocol-SocketIO
     SUBDIR += p5-Protocol-WebSocket
     SUBDIR += p5-Protocol-XMLRPC
@@ -1701,6 +1704,7 @@
     SUBDIR += py-tgwebservices
     SUBDIR += py-tmdb3
     SUBDIR += py-tornado
+    SUBDIR += py-trello
     SUBDIR += py-turbogears
     SUBDIR += py-turbogears2
     SUBDIR += py-tvdb_api
