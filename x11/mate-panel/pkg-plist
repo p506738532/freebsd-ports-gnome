@@ -360,6 +360,7 @@ share/mate-panel/applets/org.mate.panel.Wncklet.mate-panel-applet
 share/mate-panel/layouts/default.layout
 share/mate-panel/layouts/fedora.layout
 share/mate-panel/layouts/linuxmint.layout
+share/mate-panel/layouts/mageia.layout
 share/mate-panel/layouts/opensuse.layout
 share/mate-panel/layouts/ubuntu.layout
 share/mate-panel/pixmaps/clock-calendar-icon.png
