@@ -143,6 +143,7 @@ share/gtksourceview-3.0/language-specs/fortran.lang
 share/gtksourceview-3.0/language-specs/fsharp.lang
 share/gtksourceview-3.0/language-specs/gap.lang
 share/gtksourceview-3.0/language-specs/gdb-log.lang
+share/gtksourceview-3.0/language-specs/genie.lang
 share/gtksourceview-3.0/language-specs/glsl.lang
 share/gtksourceview-3.0/language-specs/go.lang
 share/gtksourceview-3.0/language-specs/gtk-doc.lang
