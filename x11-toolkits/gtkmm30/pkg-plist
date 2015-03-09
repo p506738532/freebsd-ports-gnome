@@ -370,6 +370,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/socket_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/spinbutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/spinner_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/stack_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/stacksidebar_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/stackswitcher_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/statusbar_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/statusicon_p.h
@@ -417,6 +418,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/volumebutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/widget_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/widgetpath_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/window_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/windowgroup_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/progressbar.h
 include/gtkmm-%%API_VERSION%%/gtkmm/radioaction.h
 include/gtkmm-%%API_VERSION%%/gtkmm/radiobutton.h
@@ -452,6 +454,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/socket.h
 include/gtkmm-%%API_VERSION%%/gtkmm/spinbutton.h
 include/gtkmm-%%API_VERSION%%/gtkmm/spinner.h
 include/gtkmm-%%API_VERSION%%/gtkmm/stack.h
+include/gtkmm-%%API_VERSION%%/gtkmm/stacksidebar.h
 include/gtkmm-%%API_VERSION%%/gtkmm/stackswitcher.h
 include/gtkmm-%%API_VERSION%%/gtkmm/statusbar.h
 include/gtkmm-%%API_VERSION%%/gtkmm/statusicon.h
@@ -505,6 +508,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/volumebutton.h
 include/gtkmm-%%API_VERSION%%/gtkmm/widget.h
 include/gtkmm-%%API_VERSION%%/gtkmm/widgetpath.h
 include/gtkmm-%%API_VERSION%%/gtkmm/window.h
+include/gtkmm-%%API_VERSION%%/gtkmm/windowgroup.h
 include/gtkmm-%%API_VERSION%%/gtkmm/wrap_init.h
 lib/gdkmm-%%API_VERSION%%/include/gdkmmconfig.h
 lib/gtkmm-%%API_VERSION%%/include/gtkmmconfig.h

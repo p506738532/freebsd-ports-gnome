@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gtkmm
-PORTVERSION=	3.15.4
+PORTVERSION=	3.15.10
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -29,7 +29,7 @@ LIBS+=		-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-documentation
 INSTALL_TARGET=	install-strip
 
-PLIST_SUB=	VERSION="3.0" API_VERSION="3.0"
+PLIST_SUB=	API_VERSION="3.0"
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/tests//' \
