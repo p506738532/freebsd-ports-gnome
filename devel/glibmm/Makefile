@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	glibmm
-PORTVERSION=	2.43.2
+PORTVERSION=	2.43.91
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
@@ -13,7 +13,7 @@ COMMENT=	C++ interfaces for glib2
 
 USES+=		tar:xz
 
-PLIST_SUB=	VERSION="2.4" API_VERSION="2.4"
+PLIST_SUB=	VERSION="2.4"
 
 .if !defined(REFERENCE_PORT)
 
