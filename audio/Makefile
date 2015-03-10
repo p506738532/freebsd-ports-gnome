@@ -668,6 +668,7 @@
     SUBDIR += sdl_mixer
     SUBDIR += sdl_sound
     SUBDIR += sfront
+    SUBDIR += shairplay
     SUBDIR += shairport
     SUBDIR += shntool
     SUBDIR += shorten
@@ -765,6 +766,7 @@
     SUBDIR += vo-aacenc
     SUBDIR += vo-amrwbenc
     SUBDIR += voipong
+    SUBDIR += volumeicon
     SUBDIR += vorbis-tools
     SUBDIR += vorbisgain
     SUBDIR += vsound

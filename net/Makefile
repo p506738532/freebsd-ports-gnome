@@ -514,8 +514,10 @@
     SUBDIR += p5-IP-Country
     SUBDIR += p5-IPC-Session
     SUBDIR += p5-JavaScript-RPC
+    SUBDIR += p5-Kafka
     SUBDIR += p5-MaxMind-DB-Common
     SUBDIR += p5-MaxMind-DB-Reader
+    SUBDIR += p5-MaxMind-DB-Writer
     SUBDIR += p5-Net
     SUBDIR += p5-Net-AMQP
     SUBDIR += p5-Net-APNS
@@ -697,6 +699,7 @@
     SUBDIR += p5-Net-sFlow
     SUBDIR += p5-Net-uFTP
     SUBDIR += p5-NetAddr-IP-Count
+    SUBDIR += p5-NetAddr-MAC
     SUBDIR += p5-NetPacket
     SUBDIR += p5-OAI-Harvester
     SUBDIR += p5-OurNet-BBS
@@ -839,6 +842,7 @@
     SUBDIR += pecl-radius
     SUBDIR += pecl-yaz
     SUBDIR += pecl-yp
+    SUBDIR += pecl-zmq
     SUBDIR += pen
     SUBDIR += pfinger
     SUBDIR += phamm
@@ -948,6 +952,7 @@
     SUBDIR += py-twitter
     SUBDIR += py-twitter-tools
     SUBDIR += py-txamqp
+    SUBDIR += py-uritemplate
     SUBDIR += py-urllib3
     SUBDIR += py-wolframalpha
     SUBDIR += py-xmlrpc
@@ -1020,11 +1025,18 @@
     SUBDIR += rubygem-amqp-utils
     SUBDIR += rubygem-amqp067
     SUBDIR += rubygem-aws-s3
+    SUBDIR += rubygem-aws-ses
     SUBDIR += rubygem-bunny
     SUBDIR += rubygem-bunny060
     SUBDIR += rubygem-connection_pool
+    SUBDIR += rubygem-dogapi
     SUBDIR += rubygem-domain_name
     SUBDIR += rubygem-dropbox-sdk
+    SUBDIR += rubygem-epp-client-afnic
+    SUBDIR += rubygem-epp-client-base
+    SUBDIR += rubygem-epp-client-rgp
+    SUBDIR += rubygem-epp-client-secdns
+    SUBDIR += rubygem-epp-client-smallregistry
     SUBDIR += rubygem-fog-atmos
     SUBDIR += rubygem-fog-aws
     SUBDIR += rubygem-fog-ecloud
@@ -1061,7 +1073,6 @@
     SUBDIR += rubygem-omniauth-openid
     SUBDIR += rubygem-omniauth-twitter
     SUBDIR += rubygem-open-uri-cached
-    SUBDIR += rubygem-openid
     SUBDIR += rubygem-opennebula
     SUBDIR += rubygem-packetfu
     SUBDIR += rubygem-pcaprub
@@ -1073,6 +1084,7 @@
     SUBDIR += rubygem-righthttpconnection
     SUBDIR += rubygem-rightslicehost
     SUBDIR += rubygem-ruby-growl
+    SUBDIR += rubygem-ruby-openid
     SUBDIR += rubygem-rubyntlm
     SUBDIR += rubygem-rubyntlm01
     SUBDIR += rubygem-rubytter
@@ -1145,7 +1157,6 @@
     SUBDIR += spread-j
     SUBDIR += spread4
     SUBDIR += sprinkle
-    SUBDIR += spserver
     SUBDIR += sqtop
     SUBDIR += ss5
     SUBDIR += ssldump
@@ -1179,6 +1190,7 @@
     SUBDIR += tcpick
     SUBDIR += tcpillust
     SUBDIR += tcping
+    SUBDIR += tcpkali
     SUBDIR += tcpmssd
     SUBDIR += tcpproxy
     SUBDIR += tcpreen
@@ -1291,7 +1303,6 @@
     SUBDIR += xorp
     SUBDIR += xprobe
     SUBDIR += xpvm
-    SUBDIR += xrdesktop
     SUBDIR += xrdesktop2
     SUBDIR += xrdp
     SUBDIR += xrdp-devel
