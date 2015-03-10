@@ -8,13 +8,15 @@ MASTER_SITES=	CPAN
 MASTER_SITE_SUBDIR=	CPAN:LEEJO
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	adamw@FreeBSD.org
+MAINTAINER=	perl@FreeBSD.org
 COMMENT=	Handle Common Gateway Interface requests and responses
 
 LICENSE=	ART20 GPLv1
 LICENSE_COMB=	dual
 
 CONFLICTS=	p5-CGI.pm-[1-3]*
+
+PORTSCOUT=	limit:^[0-9\.]*$$
 
 USES=		perl5
 USE_PERL5=	configure
