@@ -527,6 +527,7 @@
     SUBDIR += p5-HTML-Entities-Numbered
     SUBDIR += p5-HTML-EscapeEvil
     SUBDIR += p5-HTML-Format
+    SUBDIR += p5-HTML-FormatExternal
     SUBDIR += p5-HTML-FormatText-WithLinks
     SUBDIR += p5-HTML-FormatText-WithLinks-AndTables
     SUBDIR += p5-HTML-Fraction
@@ -753,6 +754,7 @@
     SUBDIR += p5-Template-Extract
     SUBDIR += p5-Template-Magic
     SUBDIR += p5-Template-Plugin-Autoformat
+    SUBDIR += p5-Template-Plugin-CSV
     SUBDIR += p5-Template-Plugin-Filter-Minify-CSS
     SUBDIR += p5-Template-Plugin-Filter-Minify-CSS-XS
     SUBDIR += p5-Template-Plugin-Filter-Minify-JavaScript
@@ -784,6 +786,7 @@
     SUBDIR += p5-Text-CharWidth
     SUBDIR += p5-Text-Chomp
     SUBDIR += p5-Text-ClearSilver
+    SUBDIR += p5-Text-Colorizer
     SUBDIR += p5-Text-Context
     SUBDIR += p5-Text-Context-EitherSide
     SUBDIR += p5-Text-DHCPLeases
@@ -1487,6 +1490,7 @@
     SUBDIR += tex2im
     SUBDIR += texi2db
     SUBDIR += texi2html
+    SUBDIR += texi2mdoc
     SUBDIR += textogif
     SUBDIR += the_silver_searcher
     SUBDIR += ti-hunspell

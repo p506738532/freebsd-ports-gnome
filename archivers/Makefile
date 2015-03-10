@@ -30,6 +30,7 @@
     SUBDIR += fpc-unzip
     SUBDIR += freetar
     SUBDIR += freeze
+    SUBDIR += gcab
     SUBDIR += gcpio
     SUBDIR += gnome-autoar
     SUBDIR += grzip
