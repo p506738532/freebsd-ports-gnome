@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.13.90
+PORTVERSION=	3.15.91
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -46,7 +46,7 @@ GLIB_SCHEMAS=	org.gnome.Evolution.DefaultSources.gschema.xml \
 		org.gnome.evolution-data-server.calendar.gschema.xml \
 		org.gnome.evolution.shell.network-config.gschema.xml
 
-PLIST_SUB=	VERSION="3.14" EVO_VERSION="1.2"
+PLIST_SUB=	VERSION="3.16" EVO_VERSION="1.2"
 
 OPTIONS_DEFINE=	WEATHER KERBEROS
 OPTIONS_DEFAULT=WEATHER KERBEROS
