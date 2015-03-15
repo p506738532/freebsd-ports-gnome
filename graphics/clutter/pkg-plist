@@ -143,7 +143,7 @@ lib/girepository-1.0/ClutterGdk-1.0.typelib
 lib/girepository-1.0/ClutterX11-1.0.typelib
 lib/libclutter-1.0.so
 lib/libclutter-1.0.so.0
-lib/libclutter-1.0.so.0.2104.0
+lib/libclutter-1.0.so.0.2106.0
 lib/libclutter-glx-1.0.so
 lib/libclutter-glx-1.0.so.0
 libdata/pkgconfig/cally-1.0.pc
@@ -289,6 +289,7 @@ share/gtk-doc/html/clutter/ch10.html
 share/gtk-doc/html/clutter/ch11.html
 share/gtk-doc/html/clutter/ch12.html
 share/gtk-doc/html/clutter/clutter-Base-geometric-types.html
+share/gtk-doc/html/clutter/clutter-Cairo-integration.html
 share/gtk-doc/html/clutter/clutter-ClutterGLXTexturePixmap.html
 share/gtk-doc/html/clutter/clutter-ClutterWaylandSurface.html
 share/gtk-doc/html/clutter/clutter-ClutterX11TexturePixmap.html
@@ -312,6 +313,7 @@ share/gtk-doc/html/clutter/clutter-Wayland-compositor-specific-support.html
 share/gtk-doc/html/clutter/clutter-Wayland-specific-support.html
 share/gtk-doc/html/clutter/clutter-Win32-Specific-Support.html
 share/gtk-doc/html/clutter/clutter-X11-Specific-Support.html
+share/gtk-doc/html/clutter/clutter-clutter-mir.html
 share/gtk-doc/html/clutter/clutter-overview.html
 share/gtk-doc/html/clutter/clutter.devhelp2
 share/gtk-doc/html/clutter/clutteranimation.html
