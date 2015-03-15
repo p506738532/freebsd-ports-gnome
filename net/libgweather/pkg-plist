@@ -13,7 +13,6 @@ lib/libgweather-3.so.6
 lib/libgweather-3.so.6.4.0
 libdata/pkgconfig/gweather-3.0.pc
 share/gir-1.0/GWeather-3.0.gir
-share/glade/catalogs/libgweather.xml
 share/gtk-doc/html/libgweather-3.0/GWeatherInfo.html
 share/gtk-doc/html/libgweather-3.0/GWeatherLocation.html
 share/gtk-doc/html/libgweather-3.0/GWeatherLocationEntry.html

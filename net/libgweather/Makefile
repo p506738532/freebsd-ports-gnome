@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libgweather
-PORTVERSION=	3.15.90
+PORTVERSION=	3.15.91
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 
@@ -24,6 +24,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib
+CONFIGURE_ARGS+=--disable-glade-catalog
 INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.gnome.GWeather.enums.xml \
 		org.gnome.GWeather.gschema.xml
