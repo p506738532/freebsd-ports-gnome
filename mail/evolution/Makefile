@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution
-PORTVERSION=	3.13.90
+PORTVERSION=	3.15.91
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -58,7 +58,7 @@ GLIB_SCHEMAS=	org.gnome.evolution.gschema.xml \
 		org.gnome.evolution.plugin.publish-calendar.gschema.xml \
 		org.gnome.evolution.plugin.templates.gschema.xml
 
-EVO_VERSION=	3.14
+EVO_VERSION=	3.16
 PLIST_SUB=	VERSION=${EVO_VERSION} \
 		PORTVERSION=2.12
 
