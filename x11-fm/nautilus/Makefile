@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nautilus
-PORTVERSION=	3.15.4
+PORTVERSION=	3.15.91
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,6 +17,8 @@ LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 		libexempi.so:${PORTSDIR}/textproc/exempi
 RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
+
+PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig tar:xz
