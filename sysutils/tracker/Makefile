@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	tracker
-PORTVERSION=	1.3.3
+PORTVERSION=	1.3.5
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -24,7 +24,7 @@ RUN_DEPENDS=	xdg-desktop-icon:${PORTSDIR}/devel/xdg-utils \
 
 PLIST_SUB=	TRACKER_VER="1.0"
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		desktop-file-utils gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack introspection:build
 USE_LDCONFIG=	yes
 USE_SQLITE=	3
@@ -33,11 +33,11 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS=	--enable-video-extractor=gstreamer \
-		--with-session-bus-services-dir=${LOCALBASE}/share/dbus-1/services \
+CONFIGURE_ARGS=	--with-session-bus-services-dir=${LOCALBASE}/share/dbus-1/services \
 		--disable-libiptcdata --enable-miner-fs \
-		--disable-meegotouch  --disable-miner-flickr \
+		--disable-meegotouch \
 		--enable-icu-charset-detection \
+		--disable-network-manager \
 		--disable-enca \
 		--enable-tracker-preferences \
 		--disable-libosinfo \
@@ -58,14 +58,16 @@ OPTIONS_DEFINE=		AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINERS \
 			NAUTILUS WEB_MINERS
 OPTIONS_DEFAULT=	AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINERS
 OPTIONS_SUB=yes
-WEB_MINERS_DESC=	Support for Firefox, Thunderbird and Evolution
+WEB_MINERS_DESC=	Support for Firefox, Thunderbird
+# and Evolution
 AUDIO_MINERS_DESC=	Support for audio formats
 DOCUMENT_MINERS_DESC=	Support for some sort of documents (pdf, ps, xps, office)
 GRAPHIC_MINERS_DESC=	Support for some graphic formats (gif, png, tiff)
 NAUTILUS_DESC=		Support for nautilus tagging
 
 
-WEB_MINERS_CONFIGURE_ENABLE=	miner-firefox miner-thunderbird miner-evolution
+WEB_MINERS_CONFIGURE_ENABLE=	miner-firefox miner-thunderbird
+# miner-evolution
 WEB_MINERS_BUILD_DEPENDS=	firefox>=0:${PORTSDIR}/www/firefox \
 				thunderbird>=0:${PORTSDIR}/mail/thunderbird
 WEB_MINERS_RUN_DEPENDS=		firefox>=0:${PORTSDIR}/www/firefox \
@@ -79,7 +81,7 @@ AUDIO_MINERS_LIB_DEPENDS=	libtotem-plparser.so:${PORTSDIR}/multimedia/totem-pl-p
 				libogg.so:${PORTSDIR}/audio/libogg \
 				libtag.so:${PORTSDIR}/audio/taglib
 
-DOCUMENT_MINERS_CONFIGURE_ENABLE=	libgxps poppler libxml2 exif libgsf \
+DOCUMENT_MINERS_CONFIGURE_ENABLE=	libexif libgxps poppler libxml2 libgsf \
 				abiword dvi ps exempi text
 DOCUMENT_MINERS_LIB_DEPENDS=	libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib \
 				libgxps.so:${PORTSDIR}/graphics/libgxps \
@@ -87,7 +89,7 @@ DOCUMENT_MINERS_LIB_DEPENDS=	libpoppler-glib.so:${PORTSDIR}/graphics/poppler-gli
 				libexempi.so:${PORTSDIR}/textproc/exempi \
 				libwv.so:${PORTSDIR}/textproc/wv
 
-GRAPHICS_MINERS_CONFIGURE_ENABLE=	libgif libjpeg libtiff icon libpng
+GRAPHICS_MINERS_CONFIGURE_ENABLE=	libexif libgif libjpeg libtiff icon libpng
 GRAPHICS_MINERS_LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 				libgif.so:${PORTSDIR}/graphics/giflib \
 				libpng.so:${PORTSDIR}/graphics/png \
