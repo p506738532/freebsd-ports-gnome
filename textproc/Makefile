@@ -418,6 +418,7 @@
     SUBDIR += luaexpat
     SUBDIR += lucene
     SUBDIR += lucene4
+    SUBDIR += lucene5
     SUBDIR += luceneplusplus
     SUBDIR += lv-aspell
     SUBDIR += m17n-im-config
@@ -765,6 +766,7 @@
     SUBDIR += p5-Template-Semantic
     SUBDIR += p5-Template-Tiny
     SUBDIR += p5-Term-QRCode
+    SUBDIR += p5-Test-Groonga
     SUBDIR += p5-Test-Perl-Critic
     SUBDIR += p5-Text-ASCIIMathML
     SUBDIR += p5-Text-ASCIITable
