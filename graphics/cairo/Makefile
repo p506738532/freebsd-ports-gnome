@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cairo
-PORTVERSION=	1.14.0
-PORTREVISION=	2
+PORTVERSION=	1.14.2
 PORTEPOCH=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
@@ -57,9 +56,13 @@ XCB_RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/xcb-renderutil.pc:${PORTSDIR}/x1
 XCB_CONFIGURE_ENABLE=	xcb
 # this has another option --enable-xlib-xcb=auto but it is buggy.
 
-PLIST_SUB+=	LIBVER=2.11400.0
+PLIST_SUB+=	LIBVER=2.11400.2
 
 .include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MOPENGL} && !${PORT_OPTIONS:MX11}
+BROKEN=	OpenGL option needs X11 support
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e '/test/s/==/=/g' \
