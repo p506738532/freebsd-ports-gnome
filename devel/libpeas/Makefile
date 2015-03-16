@@ -1,10 +1,8 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/devel/libpeas/Makefile 19947 2014-10-15 05:54:00Z gusi $
 
 PORTNAME=	libpeas
-PORTVERSION=	1.12.1
-PORTREVISION=	1
+PORTVERSION=	1.13.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -27,13 +25,16 @@ CONFIGURE_ARGS+=--disable-glade-catalog \
 		--disable-python2
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	PYTHON SEED
-OPTIONS_DEFAULT=PYTHON SEED
-SEED_DESC=	JavaScript support based on webkit-gtk3
-SEED_LIB_DEPENDS=	libseed-gtk3.so:${PORTSDIR}/devel/seed
-SEED_CONFIGURE_ENABLE=	seed	
+OPTIONS_DEFINE=	PYTHON
+OPTIONS_DEFAULT=PYTHON
+
+# there is support for python2 but can't figure out a why to include that
+# in a sane way.
 PYTHON_USE=	GNOME=py3gobject3
 PYTHON_CONFIGURE_ENABLE=	python3
+
+# lua needs lua 5.1 and devel/lua-lgi. The latter is build for lua 5.2 however..
+CONFIGURE_ARGS+=	--disable-lua5.1 --disable-luajit
 
 PLIST_SUB+=	PYVER=${PYTHON_VER:S/.//}
 
