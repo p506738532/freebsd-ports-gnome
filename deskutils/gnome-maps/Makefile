@@ -14,6 +14,9 @@ BUILD_DEPENDS=	geoclue>=0:${PORTSDIR}/net/geoclue \
 		itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 		libgeocode-glib.so:${PORTSDIR}/net/geocode-glib \
+		libgee-0.8.so:${PORTSDIR}/devel/libgee \
+		libchamplain-0.12.so:${PORTSDIR}/graphics/libchamplain \
+		libfolks.so:${PORTSDIR}/net-im/folks \
 		libgjs.so:${PORTSDIR}/lang/gjs
 RUN_DEPENDS=	geoclue>=0:${PORTSDIR}/net/geoclue
 
