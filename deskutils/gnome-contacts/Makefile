@@ -32,19 +32,21 @@ GLIB_SCHEMAS=	org.gnome.Contacts.enums.xml \
 
 CHEESE_DESC=	Cheese webcam support
 
+OPTIONS_SUB=	yes
+OPTIONS_DEFINE=	MANPAGES
+OPTIONS_DEFAULT=MANPAGES
+
 OPTIONS_DEFINE_i386=	CHEESE
 OPTIONS_DEFAULT_i386=	CHEESE
 OPTIONS_DEFINE_amd64=	CHEESE
 OPTIONS_DEFAULT_amd64=	CHEESE
 
-.include <bsd.port.options.mk>
+CHEESE_CONFIGURE_WITH=	cheese
+CHEESE_LIB_DEPENDS=	libcheese-gtk.so:${PORTSDIR}/multimedia/cheese
 
-.if ${PORT_OPTIONS:MCHEESE}
-CONFIGURE_ARGS+=--with-cheese
-LIB_DEPENDS+=	libcheese-gtk.so:${PORTSDIR}/multimedia/cheese
-#.else
-#BROKEN=		sorry cheese less build is currently borken
-#CONFIGURE_ARGS+=--without-cheese
-.endif
+MANPAGES_CONFIGURE_ENABLE=	man-pages
+MANPAGES_USE		GNOME=libxslt:build
+MANPAGES_BUILD_DEPENDS=	docbook-xml>=0:${PORTSDIR}/textproc/docbook-xml \
+			docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
 
 .include <bsd.port.mk>
