@@ -11,7 +11,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Unicode/ISO10646 character map and font viewer
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool \
-		appdata-tools>=0:${PORTSDIR}/devel/appdata-tools
+		appdata-validate>=0:${PORTSDIR}/devel/appstream-glib
 
 PORTSCOUT=	limitw:1,even
 

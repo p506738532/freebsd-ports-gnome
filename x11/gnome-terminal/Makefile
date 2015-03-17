@@ -13,7 +13,7 @@ COMMENT=	Terminal component for the GNOME 3 Desktop
 
 BUILD_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		itstool:${PORTSDIR}/textproc/itstool \
-		appdata-tools>=0:${PORTSDIR}/devel/appdata-tools \
+		appdata-validate:${PORTSDIR}/devel/appstream-glib \
 		vala:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid
