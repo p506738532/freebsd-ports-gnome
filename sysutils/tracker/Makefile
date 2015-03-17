@@ -81,7 +81,7 @@ AUDIO_MINERS_LIB_DEPENDS=	libtotem-plparser.so:${PORTSDIR}/multimedia/totem-pl-p
 				libogg.so:${PORTSDIR}/audio/libogg \
 				libtag.so:${PORTSDIR}/audio/taglib
 
-DOCUMENT_MINERS_CONFIGURE_ENABLE=	libexif libgxps poppler libxml2 libgsf \
+DOCUMENT_MINERS_CONFIGURE_ENABLE=	libgxps poppler libxml2 libgsf \
 				abiword dvi ps exempi text
 DOCUMENT_MINERS_LIB_DEPENDS=	libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib \
 				libgxps.so:${PORTSDIR}/graphics/libgxps \
@@ -89,8 +89,8 @@ DOCUMENT_MINERS_LIB_DEPENDS=	libpoppler-glib.so:${PORTSDIR}/graphics/poppler-gli
 				libexempi.so:${PORTSDIR}/textproc/exempi \
 				libwv.so:${PORTSDIR}/textproc/wv
 
-GRAPHICS_MINERS_CONFIGURE_ENABLE=	libexif libgif libjpeg libtiff icon libpng
-GRAPHICS_MINERS_LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
+GRAPHIC_MINERS_CONFIGURE_ENABLE=	libexif libgif libjpeg libtiff icon libpng
+GRAPHIC_MINERS_LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 				libgif.so:${PORTSDIR}/graphics/giflib \
 				libpng.so:${PORTSDIR}/graphics/png \
 				libtiff.so:${PORTSDIR}/graphics/tiff
