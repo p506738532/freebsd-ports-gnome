@@ -25,7 +25,7 @@ RUN_DEPENDS=	xdg-desktop-icon:${PORTSDIR}/devel/xdg-utils \
 PLIST_SUB=	TRACKER_VER="1.0"
 
 USES=		desktop-file-utils gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gtk30 intlhack introspection:build
+USE_GNOME=	gtk30 intlhack introspection:build libxslt:build
 USE_LDCONFIG=	yes
 USE_SQLITE=	3
 USE_GSTREAMER1=	yes
