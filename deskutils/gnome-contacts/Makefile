@@ -11,6 +11,7 @@ COMMENT=	Contacts manager for gnome
 
 BUILD_DEPENDS=	vala>=0.14.0:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
+		libchamplain-0.12.so:${PORTSDIR}/graphics/libchamplain \
 		libclutter-gtk-1.0.so:${PORTSDIR}/graphics/clutter-gtk3 \
 		libgee-0.8.so:${PORTSDIR}/devel/libgee \
 		libfolks.so:${PORTSDIR}/net-im/folks \
