@@ -1,20 +1,26 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/devel/dconf-editor/Makefile 19571 2014-04-25 18:12:46Z kwm $
 
-PORTNAME=	dconf
-PORTREVISION=	0
-PKGNAMESUFFIX=	-editor
+PORTNAME=	dconf-editor
+PORTVERSION=	3.15.92
+CATEGORIES=	devel gnome
+MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome3
 
-COMMENT=	configuration editor for dconf
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	Configuration database editor for GNOME
 
-DCONF_SLAVE=	editor
+BUILD_DEPENDS=	dconf>=0.23.2:${PORTSDIR}/devel/dconf \
+		vala>=0.18.1:${PORTSDIR}/lang/vala
+LIB_DEPENDS=	libdconf.so:${PORTSDIR}/devel/dconf
 
-MASTERDIR=	${.CURDIR}/../dconf
+USES=		gettext gmake pathfix pkgconfig tar:xz
+USE_GNOME=	intltool gtk30 libxml2
+USE_LDCONFIG=	yes
+GNU_CONFIGURE=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALLS_ICONS=	yes
+GLIB_SCHEMAS=	ca.desrt.dconf-editor.gschema.xml
 
-PLIST=		${.CURDIR}/pkg-plist
-
-BUILD_WRKSRC=	${WRKSRC}/editor
-INSTALL_WRKSRC=	${WRKSRC}/editor
-
-.include "${MASTERDIR}/Makefile"
+.include <bsd.port.mk>
