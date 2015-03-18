@@ -37,7 +37,6 @@ share/gtk-doc/html/shell/ShellGenericContainer.html
 share/gtk-doc/html/shell/ShellGlobal.html
 share/gtk-doc/html/shell/ShellGtkEmbed.html
 share/gtk-doc/html/shell/ShellMountOperation.html
-share/gtk-doc/html/shell/ShellSlicer.html
 share/gtk-doc/html/shell/ShellStack.html
 share/gtk-doc/html/shell/ShellTpClient.html
 share/gtk-doc/html/shell/ShellTrayIcon.html
@@ -63,7 +62,7 @@ share/gtk-doc/html/shell/left.png
 share/gtk-doc/html/shell/object-tree.html
 share/gtk-doc/html/shell/right-insensitive.png
 share/gtk-doc/html/shell/right.png
-share/gtk-doc/html/shell/shell-shell-keybinding-modes.html
+share/gtk-doc/html/shell/shell-shell-action-modes.html
 share/gtk-doc/html/shell/shell-shell-polkit-authentication-agent.html
 share/gtk-doc/html/shell/shell-shell-recorder.html
 share/gtk-doc/html/shell/shell-shell-util.html
@@ -117,6 +116,7 @@ share/locale/be/LC_MESSAGES/gnome-shell.mo
 share/locale/bg/LC_MESSAGES/gnome-shell.mo
 share/locale/bn/LC_MESSAGES/gnome-shell.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-shell.mo
+share/locale/bs/LC_MESSAGES/gnome-shell.mo
 share/locale/ca/LC_MESSAGES/gnome-shell.mo
 share/locale/ca@valencia/LC_MESSAGES/gnome-shell.mo
 share/locale/cs/LC_MESSAGES/gnome-shell.mo
@@ -140,6 +140,7 @@ share/locale/hi/LC_MESSAGES/gnome-shell.mo
 share/locale/hu/LC_MESSAGES/gnome-shell.mo
 share/locale/ia/LC_MESSAGES/gnome-shell.mo
 share/locale/id/LC_MESSAGES/gnome-shell.mo
+share/locale/is/LC_MESSAGES/gnome-shell.mo
 share/locale/it/LC_MESSAGES/gnome-shell.mo
 share/locale/ja/LC_MESSAGES/gnome-shell.mo
 share/locale/kk/LC_MESSAGES/gnome-shell.mo

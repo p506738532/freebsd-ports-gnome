@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell
-PORTVERSION=	3.15.4
+PORTVERSION=	3.15.92
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -27,7 +27,6 @@ LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libclutter-1.0.so:${PORTSDIR}/graphics/clutter \
 		libgjs.so:${PORTSDIR}/lang/gjs
 RUN_DEPENDS=	py*-dbus>=0:${PORTSDIR}/devel/py-dbus \
-		gdm>=0:${PORTSDIR}/x11/gdm \
 		gnome-control-center:${PORTSDIR}/sysutils/gnome-control-center \
 		ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss
 
