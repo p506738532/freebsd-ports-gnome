@@ -17,6 +17,7 @@ include/mutter/meta/meta-background-image.h
 include/mutter/meta/meta-background.h
 include/mutter/meta/meta-cursor-tracker.h
 include/mutter/meta/meta-idle-monitor.h
+include/mutter/meta/meta-monitor-manager.h
 include/mutter/meta/meta-plugin.h
 include/mutter/meta/meta-shadow-factory.h
 include/mutter/meta/meta-shaped-texture.h
