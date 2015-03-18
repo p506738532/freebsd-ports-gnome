@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	libgweather
-PORTVERSION=	3.15.91
+PORTVERSION=	3.15.92
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library to accessing online weather informations
