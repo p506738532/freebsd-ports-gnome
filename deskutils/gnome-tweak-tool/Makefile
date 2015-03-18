@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-tweak-tool
-PORTVERSION=	3.15.90
+PORTVERSION=	3.15.92
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
