@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	file-roller
-PORTVERSION=	3.15.90
+PORTVERSION=	3.15.92
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	GNOME
@@ -14,6 +14,8 @@ COMMENT=	Archive manager for zip files, tar, etc
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 RUN_DEPENDS=	gtar:${PORTSDIR}/archivers/gtar \
     		unzip:${PORTSDIR}/archivers/unzip
+
+PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils gettext gmake libtool \
 		pathfix pkgconfig tar:xz
