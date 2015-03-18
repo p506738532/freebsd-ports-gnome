@@ -11,6 +11,7 @@ evince-lite [PR ...]
 what to do with ports needing gnome-icon-theme, but gtk3 pulls in adwaita
 Check if all gnome games can save the scores ...
 Fix all the gnome-shell extensions to work with the new shell.
+gnome games scores?
 
 Before import:
 libgit2 / libgit2-glib https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=196176
