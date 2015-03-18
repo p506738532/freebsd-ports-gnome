@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	tracker
-PORTVERSION=	1.3.5
+PORTVERSION=	1.3.6
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -22,7 +22,7 @@ RUN_DEPENDS=	xdg-desktop-icon:${PORTSDIR}/devel/xdg-utils \
 		pdftotext:${PORTSDIR}/graphics/poppler-utils \
 		w3m:${PORTSDIR}/www/w3m
 
-PLIST_SUB=	TRACKER_VER="1.0"
+PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack introspection:build libxslt:build
@@ -54,6 +54,8 @@ GLIB_SCHEMAS=	org.freedesktop.Tracker.DB.gschema.xml \
 		org.freedesktop.Tracker.enums.xml \
 		org.freedesktop.Tracker.gschema.xml
 
+PLIST_SUB=	TRACKER_VER="1.0" LIBVER=306
+
 OPTIONS_DEFINE=		AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINERS \
 			NAUTILUS WEB_MINERS
 OPTIONS_DEFAULT=	AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINERS
@@ -64,7 +66,6 @@ AUDIO_MINERS_DESC=	Support for audio formats
 DOCUMENT_MINERS_DESC=	Support for some sort of documents (pdf, ps, xps, office)
 GRAPHIC_MINERS_DESC=	Support for some graphic formats (gif, png, tiff)
 NAUTILUS_DESC=		Support for nautilus tagging
-
 
 WEB_MINERS_CONFIGURE_ENABLE=	miner-firefox miner-thunderbird
 # miner-evolution
