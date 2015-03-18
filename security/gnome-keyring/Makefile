@@ -1,10 +1,8 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/security/gnome-keyring/Makefile 19966 2014-10-16 06:32:52Z gusi $
 
 PORTNAME=	gnome-keyring
-PORTVERSION=	3.14.0
-PORTREVISION=	1
+PORTVERSION=	3.15.92
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,6 +20,8 @@ LIB_DEPENDS=	libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring \
 		libp11-kit.so:${PORTSDIR}/security/p11-kit \
 		libgcrypt.so:${PORTSDIR}/security/libgcrypt
 RUN_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss
+
+PORTSCOUT=	limitw:1,even
 
 USE_GNOME=	gnomeprefix gtk30 intlhack libxslt:build
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
