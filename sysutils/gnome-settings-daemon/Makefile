@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	3.15.4
+PORTVERSION=	3.15.92
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -39,10 +39,8 @@ INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-gudev \
 		--with-nssdb=${LOCALBASE}/share/certs/ca-root-nss.crt \
 		--disable-wayland \
-		--disable-systemd \
 		--disable-rfkill \
-		--disable-network-manager \
-		--disable-packagekit
+		--disable-network-manager
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -70,16 +68,9 @@ GLIB_SCHEMAS=	org.gnome.settings-daemon.enums.xml \
 		org.gnome.settings-daemon.plugins.sharing.gschema.xml \
 		org.gnome.settings-daemon.plugins.xrandr.gschema.xml \
 		org.gnome.settings-daemon.plugins.xsettings.gschema.xml
-# comment out, to see if native xserver 1.14 works :)
-# work around missing cursor with xorg-server 1.12.
-#GLIB_SCHEMAS+=	cursor-plugin.gschema.override
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/gnome|${PREFIX}/etc/gnome|g' \
 		${WRKSRC}/data/org.gnome.settings-daemon.plugins.xrandr.gschema.xml.in.in
-
-#post-install:
-#	${INSTALL_DATA} ${FILESDIR}/cursor-plugin.gschema.override \
-#		${STAGEDIR}${PREFIX}/share/glib-2.0/schemas
 
 .include <bsd.port.mk>
