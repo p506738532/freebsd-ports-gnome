@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-desktop
-PORTVERSION=	3.15.90
+PORTVERSION=	3.15.92
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -11,7 +11,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Additional UI API for GNOME 3
 
 USES=		tar:xz
-
 PORTSCOUT=	limitw:1,even
 
 .if !defined(REFERENCE_PORT)
@@ -21,7 +20,6 @@ BUILD_DEPENDS=	iso-codes>=0:${PORTSDIR}/misc/iso-codes \
 		xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
 		libxkbfile>=0:${PORTSDIR}/x11/libxkbfile \
 		itstool:${PORTSDIR}/textproc/itstool
-LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification
 RUN_DEPENDS=	iso-codes>=0:${PORTSDIR}/misc/iso-codes \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
