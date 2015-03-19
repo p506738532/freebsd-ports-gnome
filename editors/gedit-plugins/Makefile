@@ -12,7 +12,8 @@ COMMENT=	Plugins for GEdit 3
 
 BUILD_DEPENDS=	gedit>=0:${PORTSDIR}/editors/gedit \
 		itstool:${PORTSDIR}/textproc/itstool
-LIB_DEPENDS=	libpeas-1.0.so:${PORTSDIR}/devel/libpeas
+LIB_DEPENDS=	libpeas-1.0.so:${PORTSDIR}/devel/libpeas \
+		libgit2-glib-1.0.so:${PORTSDIR}/devel/libgit2-glib
 RUN_DEPENDS=	gedit>=0:${PORTSDIR}/editors/gedit
 
 PORTSCOUT=	limitw:1,even
