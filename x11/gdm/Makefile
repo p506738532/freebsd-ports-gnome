@@ -21,6 +21,7 @@ LIB_DEPENDS=	libck-connector.so:${PORTSDIR}/sysutils/consolekit \
 		libaccountsservice.so:${PORTSDIR}/sysutils/accountsservice \
 		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
 RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity \
+		gnome-shell>=3.15.92:${PORTSDIR}/x11/gnome-shell \
 		gnome-settings-daemon>=3.0.0:${PORTSDIR}/sysutils/gnome-settings-daemon \
 		gnome-keyring-3:${PORTSDIR}/security/gnome-keyring \
 		gnome-session>=3.0.0:${PORTSDIR}/x11/gnome-session \
