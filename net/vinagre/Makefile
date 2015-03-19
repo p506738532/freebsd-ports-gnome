@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	vinagre
-PORTVERSION=	3.15.3
+PORTVERSION=	3.15.92
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -18,6 +18,8 @@ LIB_DEPENDS=	libgtk-vnc-2.0.so:${PORTSDIR}/net/gtk-vnc \
 		libsecret-1.so:${PORTSDIR}/security/libsecret \
 		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme
+
+PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
 		shared-mime-info tar:xz
