@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	quagga
-PORTVERSION=	0.99.24
-PORTREVISION=	1
+PORTVERSION=	0.99.24.1
+PORTREVISION=	0
 CATEGORIES=	net ipv6
 MASTER_SITES=	SAVANNAH
 
@@ -19,7 +19,7 @@ CONFLICTS=	openbgpd-[0-9]* openospfd-[0-9]* zebra-0* quagga-re-[0-9]*
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-exampledir=${PREFIX}/share/examples/quagga
 INSTALL_TARGET=	install-strip
-USES=		gmake libtool makeinfo perl5 readline compiler:c11 tar:xz autoreconf
+USES=		gmake libtool makeinfo perl5 readline compiler:c11 tar:xz autoreconf cpe
 USE_LDCONFIG=	yes
 USE_PERL5=	build
 
