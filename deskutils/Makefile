@@ -202,6 +202,8 @@
     SUBDIR += plopfolio
     SUBDIR += preferencepanes
     SUBDIR += preferences
+    SUBDIR += py-khal
+    SUBDIR += py-pycarddav
     SUBDIR += py-pystash
     SUBDIR += py-send2trash
     SUBDIR += py-spice-gtk
