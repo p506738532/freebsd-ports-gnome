@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-backgrounds
-PORTVERSION=	3.15.90
+PORTVERSION=	3.16.0
 CATEGORIES=	x11-themes graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -11,7 +11,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Collection of backgrounds for GNOME
 
 USES=		gettext gmake pathfix tar:xz
-USE_GNOME=	gnomeprefix intlhack
+USE_GNOME=	intlhack
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib
