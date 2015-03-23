@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	bijiben
-PORTVERSION=	3.15.92
+PORTVERSION=	3.16.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,10 +15,13 @@ LIB_DEPENDS=	libtracker-control-1.0.so:${PORTSDIR}/sysutils/tracker \
 		libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
 		libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
 		libclutter-gtk-1.0.so:${PORTSDIR}/graphics/clutter-gtk3
+
+PORTSCOUT=	limitw:1,even
+
 USES=		desktop-file-utils gettext gmake libtool \
 		pathfix pkgconfig shared-mime-info tar:xz
 USE_LDCONFIG=	yes
-USE_GNOME=	evolutiondataserver3 gnomedesktop3 gnomeprefix gtk30 intlhack \
+USE_GNOME=	evolutiondataserver3 gnomedesktop3 gtk30 intlhack \
 		introspection:build
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
