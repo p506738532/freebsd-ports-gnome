@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libsoup
-PORTVERSION=	2.49.92
+PORTVERSION=	2.50.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -36,8 +36,7 @@ PLIST_SUB=	VERSION="2.4" LIBVERSION=${LIBVERSION}
 
 .if defined(SOUP_SLAVE)
 USE_SQLITE=	yes
-LIB_DEPENDS+=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
-		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
+LIB_DEPENDS+=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 CONFIGURE_ARGS+=--with-gnome
 .else
 CONFIGURE_ARGS+=--without-gnome
