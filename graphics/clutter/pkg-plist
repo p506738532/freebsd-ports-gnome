@@ -143,7 +143,7 @@ lib/girepository-1.0/ClutterGdk-1.0.typelib
 lib/girepository-1.0/ClutterX11-1.0.typelib
 lib/libclutter-1.0.so
 lib/libclutter-1.0.so.0
-lib/libclutter-1.0.so.0.2108.0
+lib/libclutter-1.0.so.0.2200.0
 lib/libclutter-glx-1.0.so
 lib/libclutter-glx-1.0.so.0
 libdata/pkgconfig/cally-1.0.pc
@@ -399,6 +399,7 @@ share/locale/hu/LC_MESSAGES/clutter-1.0.mo
 share/locale/id/LC_MESSAGES/clutter-1.0.mo
 share/locale/it/LC_MESSAGES/clutter-1.0.mo
 share/locale/ja/LC_MESSAGES/clutter-1.0.mo
+share/locale/kk/LC_MESSAGES/clutter-1.0.mo
 share/locale/km/LC_MESSAGES/clutter-1.0.mo
 share/locale/kn/LC_MESSAGES/clutter-1.0.mo
 share/locale/ko/LC_MESSAGES/clutter-1.0.mo
