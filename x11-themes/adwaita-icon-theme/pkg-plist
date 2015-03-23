@@ -224,6 +224,7 @@ share/icons/Adwaita/16x16/emblems/emblem-system.png
 share/icons/Adwaita/16x16/emblems/emblem-unreadable.png
 share/icons/Adwaita/16x16/emblems/emblem-urgent.png
 share/icons/Adwaita/16x16/emblems/emblem-web.png
+share/icons/Adwaita/16x16/emotes/emote-love.png
 share/icons/Adwaita/16x16/emotes/face-angel.png
 share/icons/Adwaita/16x16/emotes/face-angry.png
 share/icons/Adwaita/16x16/emotes/face-cool.png
@@ -259,6 +260,7 @@ share/icons/Adwaita/16x16/mimetypes/text-x-generic.png
 share/icons/Adwaita/16x16/mimetypes/text-x-preview.png
 share/icons/Adwaita/16x16/mimetypes/text-x-script.png
 share/icons/Adwaita/16x16/mimetypes/video-x-generic.png
+share/icons/Adwaita/16x16/mimetypes/x-firmware.png
 share/icons/Adwaita/16x16/mimetypes/x-office-address-book.png
 share/icons/Adwaita/16x16/mimetypes/x-office-calendar.png
 share/icons/Adwaita/16x16/mimetypes/x-office-document-template.png
@@ -598,6 +600,7 @@ share/icons/Adwaita/22x22/emblems/emblem-system.png
 share/icons/Adwaita/22x22/emblems/emblem-unreadable.png
 share/icons/Adwaita/22x22/emblems/emblem-urgent.png
 share/icons/Adwaita/22x22/emblems/emblem-web.png
+share/icons/Adwaita/22x22/emotes/emote-love.png
 share/icons/Adwaita/22x22/emotes/face-angel.png
 share/icons/Adwaita/22x22/emotes/face-angry.png
 share/icons/Adwaita/22x22/emotes/face-cool.png
@@ -633,6 +636,7 @@ share/icons/Adwaita/22x22/mimetypes/text-x-generic.png
 share/icons/Adwaita/22x22/mimetypes/text-x-preview.png
 share/icons/Adwaita/22x22/mimetypes/text-x-script.png
 share/icons/Adwaita/22x22/mimetypes/video-x-generic.png
+share/icons/Adwaita/22x22/mimetypes/x-firmware.png
 share/icons/Adwaita/22x22/mimetypes/x-office-address-book.png
 share/icons/Adwaita/22x22/mimetypes/x-office-calendar.png
 share/icons/Adwaita/22x22/mimetypes/x-office-document-template.png
@@ -998,6 +1002,7 @@ share/icons/Adwaita/24x24/mimetypes/text-x-generic.png
 share/icons/Adwaita/24x24/mimetypes/text-x-preview.png
 share/icons/Adwaita/24x24/mimetypes/text-x-script.png
 share/icons/Adwaita/24x24/mimetypes/video-x-generic.png
+share/icons/Adwaita/24x24/mimetypes/x-firmware.png
 share/icons/Adwaita/24x24/mimetypes/x-office-address-book.png
 share/icons/Adwaita/24x24/mimetypes/x-office-calendar.png
 share/icons/Adwaita/24x24/mimetypes/x-office-document-template.png
@@ -1219,6 +1224,7 @@ share/icons/Adwaita/256x256/emblems/emblem-shared.png
 share/icons/Adwaita/256x256/emblems/emblem-symbolic-link.png
 share/icons/Adwaita/256x256/emblems/emblem-synchronizing.png
 share/icons/Adwaita/256x256/emblems/emblem-unreadable.png
+share/icons/Adwaita/256x256/emotes/emote-love.png
 share/icons/Adwaita/256x256/emotes/face-angel.png
 share/icons/Adwaita/256x256/emotes/face-angry.png
 share/icons/Adwaita/256x256/emotes/face-cool.png
@@ -1249,6 +1255,7 @@ share/icons/Adwaita/256x256/mimetypes/text-x-generic.png
 share/icons/Adwaita/256x256/mimetypes/text-x-preview.png
 share/icons/Adwaita/256x256/mimetypes/text-x-script.png
 share/icons/Adwaita/256x256/mimetypes/video-x-generic.png
+share/icons/Adwaita/256x256/mimetypes/x-firmware.png
 share/icons/Adwaita/256x256/mimetypes/x-office-address-book.png
 share/icons/Adwaita/256x256/mimetypes/x-office-document-template.png
 share/icons/Adwaita/256x256/mimetypes/x-office-document.png
@@ -1558,6 +1565,7 @@ share/icons/Adwaita/32x32/emblems/emblem-system.png
 share/icons/Adwaita/32x32/emblems/emblem-unreadable.png
 share/icons/Adwaita/32x32/emblems/emblem-urgent.png
 share/icons/Adwaita/32x32/emblems/emblem-web.png
+share/icons/Adwaita/32x32/emotes/emote-love.png
 share/icons/Adwaita/32x32/emotes/face-angel.png
 share/icons/Adwaita/32x32/emotes/face-angry.png
 share/icons/Adwaita/32x32/emotes/face-cool.png
@@ -1593,6 +1601,7 @@ share/icons/Adwaita/32x32/mimetypes/text-x-generic.png
 share/icons/Adwaita/32x32/mimetypes/text-x-preview.png
 share/icons/Adwaita/32x32/mimetypes/text-x-script.png
 share/icons/Adwaita/32x32/mimetypes/video-x-generic.png
+share/icons/Adwaita/32x32/mimetypes/x-firmware.png
 share/icons/Adwaita/32x32/mimetypes/x-office-address-book.png
 share/icons/Adwaita/32x32/mimetypes/x-office-calendar.png
 share/icons/Adwaita/32x32/mimetypes/x-office-document-template.png
@@ -1929,6 +1938,7 @@ share/icons/Adwaita/48x48/emblems/emblem-system.png
 share/icons/Adwaita/48x48/emblems/emblem-unreadable.png
 share/icons/Adwaita/48x48/emblems/emblem-urgent.png
 share/icons/Adwaita/48x48/emblems/emblem-web.png
+share/icons/Adwaita/48x48/emotes/emote-love.png
 share/icons/Adwaita/48x48/emotes/face-angel.png
 share/icons/Adwaita/48x48/emotes/face-angry.png
 share/icons/Adwaita/48x48/emotes/face-cool.png
@@ -1964,6 +1974,7 @@ share/icons/Adwaita/48x48/mimetypes/text-x-generic.png
 share/icons/Adwaita/48x48/mimetypes/text-x-preview.png
 share/icons/Adwaita/48x48/mimetypes/text-x-script.png
 share/icons/Adwaita/48x48/mimetypes/video-x-generic.png
+share/icons/Adwaita/48x48/mimetypes/x-firmware.png
 share/icons/Adwaita/48x48/mimetypes/x-office-address-book.png
 share/icons/Adwaita/48x48/mimetypes/x-office-calendar.png
 share/icons/Adwaita/48x48/mimetypes/x-office-document-template.png
@@ -2207,6 +2218,9 @@ share/icons/Adwaita/scalable/actions/edit-select-symbolic.svg
 share/icons/Adwaita/scalable/actions/edit-undo-symbolic-rtl.svg
 share/icons/Adwaita/scalable/actions/edit-undo-symbolic.svg
 share/icons/Adwaita/scalable/actions/find-location-symbolic.svg
+share/icons/Adwaita/scalable/actions/focus-legacy-systray-symbolic.svg
+share/icons/Adwaita/scalable/actions/focus-top-bar-symbolic.svg
+share/icons/Adwaita/scalable/actions/focus-windows-symbolic.svg
 share/icons/Adwaita/scalable/actions/folder-new-symbolic.svg
 share/icons/Adwaita/scalable/actions/font-select-symbolic.svg
 share/icons/Adwaita/scalable/actions/format-indent-less-symbolic-rtl.svg
@@ -2351,6 +2365,7 @@ share/icons/Adwaita/scalable/categories/applications-games-symbolic.svg
 share/icons/Adwaita/scalable/categories/applications-graphics-symbolic.svg
 share/icons/Adwaita/scalable/categories/applications-multimedia-symbolic.svg
 share/icons/Adwaita/scalable/categories/applications-science-symbolic.svg
+share/icons/Adwaita/scalable/categories/applications-system-symbolic.svg
 share/icons/Adwaita/scalable/categories/applications-utilities-symbolic.svg
 share/icons/Adwaita/scalable/categories/preferences-other-symbolic.svg
 share/icons/Adwaita/scalable/categories/preferences-system-symbolic.svg
@@ -2417,6 +2432,7 @@ share/icons/Adwaita/scalable/emblems/emblem-shared-symbolic.svg
 share/icons/Adwaita/scalable/emblems/emblem-synchronizing-symbolic.svg
 share/icons/Adwaita/scalable/emblems/emblem-system-symbolic.svg
 share/icons/Adwaita/scalable/emblems/emblem-videos-symbolic.svg
+share/icons/Adwaita/scalable/emotes/emote-love-symbolic.svg
 share/icons/Adwaita/scalable/emotes/face-angel-symbolic.svg
 share/icons/Adwaita/scalable/emotes/face-angry-symbolic.svg
 share/icons/Adwaita/scalable/emotes/face-confused-symbolic.svg

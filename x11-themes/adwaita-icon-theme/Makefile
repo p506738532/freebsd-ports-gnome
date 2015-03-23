@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	adwaita-icon-theme
-PORTVERSION=	3.15.90
+PORTVERSION=	3.15.92
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
