@@ -37,7 +37,7 @@ MANPAGES_USE=	GNOME=libxslt:build
 
 .include <bsd.port.options.mk>
 
-.if !exist(/usr/libdata/pkgconfig/libarchive.pc)
+.if !exists(/usr/libdata/pkgconfig/libarchive.pc)
 LIB_DEPENDS+=	libarchive.so.13:${PORTSDIR}/archivers/libarchive
 .endif
 
