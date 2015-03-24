@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-power-manager
-PORTVERSION=	3.15.90
+PORTVERSION=	3.16.0
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -34,6 +34,7 @@ BUILD_DEPENDS+=	docbook2html:${PORTSDIR}/textproc/docbook-utils \
 PLIST_SUB+=	MAN=""
 .else
 PLIST_SUB+=	MAN="@comment "
+
 post-patch:
 	@${REINPLACE_CMD} -e "s|2MAN_TRUE=$$|2MAN_TRUE='#'|g ; \
 		s|2MAN_FALSE='#'|2MAN_FALSE=|g" ${WRKSRC}/configure
