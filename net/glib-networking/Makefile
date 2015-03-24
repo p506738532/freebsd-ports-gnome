@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	glib-networking
-PORTVERSION=	2.43.92
+PORTVERSION=	2.44.0
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,6 +19,8 @@ LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls \
 		libproxy.so:${PORTSDIR}/net/libproxy
 RUN_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
+
+PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 intltool
