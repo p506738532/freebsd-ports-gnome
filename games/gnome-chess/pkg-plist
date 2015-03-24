@@ -3,8 +3,6 @@ bin/gnome-chess
 man/man6/gnome-chess.6.gz
 share/appdata/gnome-chess.appdata.xml
 share/applications/gnome-chess.desktop
-share/gnome-chess/gnome-chess.ui
-share/gnome-chess/menu.ui
 share/gnome-chess/pieces/fancy/blackBishop.svg
 share/gnome-chess/pieces/fancy/blackKing.svg
 share/gnome-chess/pieces/fancy/blackKnight.svg
@@ -29,8 +27,6 @@ share/gnome-chess/pieces/simple/whiteKnight.svg
 share/gnome-chess/pieces/simple/whitePawn.svg
 share/gnome-chess/pieces/simple/whiteQueen.svg
 share/gnome-chess/pieces/simple/whiteRook.svg
-share/gnome-chess/preferences.ui
-share/gnome-chess/promotion-type-selector.ui
 share/help/C/gnome-chess/index.docbook
 share/help/C/gnome-chess/legal.xml
 share/help/C/gnome-chess/figures/game-3-12.png
@@ -155,6 +151,7 @@ share/locale/bg/LC_MESSAGES/gnome-chess.mo
 share/locale/bn/LC_MESSAGES/gnome-chess.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-chess.mo
 share/locale/br/LC_MESSAGES/gnome-chess.mo
+share/locale/bs/LC_MESSAGES/gnome-chess.mo
 share/locale/ca/LC_MESSAGES/gnome-chess.mo
 share/locale/ca@valencia/LC_MESSAGES/gnome-chess.mo
 share/locale/cs/LC_MESSAGES/gnome-chess.mo
