@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.15.91
+PORTVERSION=	3.16.0
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -24,6 +24,8 @@ LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 		libtasn1.so:${PORTSDIR}/security/libtasn1 \
 		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 
+PORTSCOUT=	limitw:1,even
+
 USES=		bison gettext gmake gperf libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack introspection:build libxml2
 USE_OPENLDAP=	yes
@@ -44,6 +46,7 @@ GLIB_SCHEMAS=	org.gnome.Evolution.DefaultSources.gschema.xml \
 		org.gnome.evolution.eds-shell.gschema.xml \
 		org.gnome.evolution-data-server.addressbook.gschema.xml \
 		org.gnome.evolution-data-server.calendar.gschema.xml \
+		org.gnome.evolution-data-server.gschema.xml \
 		org.gnome.evolution.shell.network-config.gschema.xml
 
 PLIST_SUB=	VERSION="3.16" EVO_VERSION="1.2"
