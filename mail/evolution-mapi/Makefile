@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution-mapi
-PORTVERSION=	3.15.91
+PORTVERSION=	3.16.0
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -14,6 +14,8 @@ BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool \
 		evolution>=3.0.0:${PORTSDIR}/mail/evolution
 LIB_DEPENDS=	libmapi.so:${PORTSDIR}/mail/libmapi
 RUN_DEPENDS=	evolution>=3.0.0:${PORTSDIR}/mail/evolution
+
+PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake libtool pkgconfig tar:xz
 USE_GNOME=	intltool
