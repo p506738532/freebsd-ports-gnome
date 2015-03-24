@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution
-PORTVERSION=	3.15.91
+PORTVERSION=	3.16.0
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -24,9 +24,11 @@ LIB_DEPENDS=	libnss3.so:${PORTSDIR}/security/nss \
 RUN_DEPENDS=	highlight:${PORTSDIR}/textproc/highlight \
 		gnome-keyring>=3.0.0:${PORTSDIR}/security/gnome-keyring
 
+PORTSCOUT=	limitw:1,even
+
 USES=		desktop-file-utils bison gettext gmake libtool \
 		pathfix perl5 pkgconfig tar:xz
-USE_GNOME=	evolutiondataserver3 gnomedesktop3 gnomeprefix intlhack
+USE_GNOME=	evolutiondataserver3 gnomedesktop3 intlhack
 GNU_CONFIGURE=	yes
 USE_GSTREAMER1=	yes
 INSTALLS_ICONS=	yes
