@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution-ews
-PORTVERSION=	3.15.91
+PORTVERSION=	3.16.0
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,8 +16,10 @@ LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
 		libical.so:${PORTSDIR}/devel/libical
 RUN_DEPENDS=	evolution>=3.0.0:${PORTSDIR}/mail/evolution
 
+PORTSCOUT=	limitw:1,even
+
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomeprefix intlhack
+USE_GNOME=	intlhack
 GNU_CONFIGURE=	yes
 USE_SQLITE=	3
 USE_BDB=	5
