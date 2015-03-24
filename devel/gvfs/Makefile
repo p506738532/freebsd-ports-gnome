@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gvfs
-PORTVERSION=	1.23.90
+PORTVERSION=	1.24.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -94,6 +94,5 @@ post-patch:
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}/remote-volume-monitors
-#	${TOUCH} ${STAGEDIR}${DATADIR}/remote-volume-monitors/.keep
 
 .include <bsd.port.mk>
