@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-contacts
-PORTVERSION=	3.15.90
+PORTVERSION=	3.16.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
