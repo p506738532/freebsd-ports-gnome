@@ -41,6 +41,7 @@ share/icons/hicolor/32x32/apps/gnome-taquin.png
 share/icons/hicolor/48x48/apps/gnome-taquin.png
 share/icons/hicolor/scalable/apps/gnome-taquin-symbolic.svg
 share/locale/bs/LC_MESSAGES/gnome-taquin.mo
+share/locale/ca/LC_MESSAGES/gnome-taquin.mo
 share/locale/cs/LC_MESSAGES/gnome-taquin.mo
 share/locale/da/LC_MESSAGES/gnome-taquin.mo
 share/locale/de/LC_MESSAGES/gnome-taquin.mo
@@ -53,6 +54,7 @@ share/locale/fr/LC_MESSAGES/gnome-taquin.mo
 share/locale/gl/LC_MESSAGES/gnome-taquin.mo
 share/locale/he/LC_MESSAGES/gnome-taquin.mo
 share/locale/hu/LC_MESSAGES/gnome-taquin.mo
+share/locale/it/LC_MESSAGES/gnome-taquin.mo
 share/locale/ko/LC_MESSAGES/gnome-taquin.mo
 share/locale/lt/LC_MESSAGES/gnome-taquin.mo
 share/locale/pl/LC_MESSAGES/gnome-taquin.mo
@@ -64,5 +66,6 @@ share/locale/sr/LC_MESSAGES/gnome-taquin.mo
 share/locale/sr@latin/LC_MESSAGES/gnome-taquin.mo
 share/locale/sv/LC_MESSAGES/gnome-taquin.mo
 share/locale/tr/LC_MESSAGES/gnome-taquin.mo
+share/locale/uk/LC_MESSAGES/gnome-taquin.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-taquin.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-taquin.mo
