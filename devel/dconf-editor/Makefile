@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	dconf-editor
-PORTVERSION=	3.15.92
+PORTVERSION=	3.16.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,6 +13,8 @@ COMMENT=	Configuration database editor for GNOME
 BUILD_DEPENDS=	dconf>=0.23.2:${PORTSDIR}/devel/dconf \
 		vala>=0.18.1:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	libdconf.so:${PORTSDIR}/devel/dconf
+
+PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_GNOME=	intltool gtk30 libxml2
