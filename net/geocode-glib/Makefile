@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	geocode-glib
-PORTVERSION=	3.15.4
+PORTVERSION=	3.16.0
 CATEGORIES=	net devel gnome
 MASTER_SITES=	GNOME
 
@@ -11,6 +11,8 @@ COMMENT=	Convenience library for the geocoding and reverse geocoding
 
 LIB_DEPENDS=	libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
 		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
+
+PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	intlhack
