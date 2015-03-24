@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-photos
-PORTVERSION=	3.15.4
+PORTVERSION=	3.16.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
