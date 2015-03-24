@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-maps
-PORTVERSION=	3.15.90.1
+PORTVERSION=	3.16.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,8 +20,10 @@ LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 		libgjs.so:${PORTSDIR}/lang/gjs
 RUN_DEPENDS=	geoclue>=0:${PORTSDIR}/net/geoclue
 
+PORTSCOUT=	limitw:1,even
+
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack
+USE_GNOME=	gnomedesktop3 gtk30 intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
