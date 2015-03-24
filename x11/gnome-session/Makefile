@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-session
-PORTVERSION=	3.15.92
+PORTVERSION=	3.16.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,8 +19,7 @@ RUN_DEPENDS=	${LOCALBASE}/sbin/console-kit-daemon:${PORTSDIR}/sysutils/consoleki
 PORTSCOUT=	limitw:1,even
 
 USES=		execinfo gettext gmake pathfix pkgconfig tar:xz
-USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack intlhack \
-		libxslt:build
+USE_GNOME=	gnomedesktop3 gtk30 intlhack intlhack libxslt:build
 USE_XORG=	ice sm xau xext xtst xrender xtrans xcomposite
 USE_GL=		gl
 INSTALLS_ICONS=	yes
