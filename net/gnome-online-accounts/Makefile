@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-online-accounts
-PORTVERSION=	3.15.91
+PORTVERSION=	3.16.0
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
