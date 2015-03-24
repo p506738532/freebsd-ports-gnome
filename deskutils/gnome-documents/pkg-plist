@@ -4,7 +4,9 @@ lib/gnome-documents/girepository-1.0/Gd-1.0.typelib
 lib/gnome-documents/girepository-1.0/GdPrivate-1.0.typelib
 lib/gnome-documents/libgd.so
 lib/gnome-documents/libgdprivate-1.0.so
+man/man1/gnome-books.1.gz
 man/man1/gnome-documents.1.gz
+share/appdata/org.gnome.Books.appdata.xml
 share/appdata/org.gnome.Documents.appdata.xml
 share/applications/org.gnome.Books.desktop
 share/applications/org.gnome.Documents.desktop
@@ -19,6 +21,7 @@ share/dbus-1/services/org.gnome.Documents.service
 %%DATADIR%%/js/documents.js
 %%DATADIR%%/js/edit.js
 %%DATADIR%%/js/embed.js
+%%DATADIR%%/js/errorBox.js
 %%DATADIR%%/js/main.js
 %%DATADIR%%/js/mainBooks.js
 %%DATADIR%%/js/mainToolbar.js
@@ -546,6 +549,7 @@ share/locale/as/LC_MESSAGES/gnome-documents.mo
 share/locale/be/LC_MESSAGES/gnome-documents.mo
 share/locale/bg/LC_MESSAGES/gnome-documents.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-documents.mo
+share/locale/bs/LC_MESSAGES/gnome-documents.mo
 share/locale/ca/LC_MESSAGES/gnome-documents.mo
 share/locale/ca@valencia/LC_MESSAGES/gnome-documents.mo
 share/locale/cs/LC_MESSAGES/gnome-documents.mo
