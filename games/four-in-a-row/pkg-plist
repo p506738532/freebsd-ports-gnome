@@ -3,13 +3,14 @@ man/man6/four-in-a-row.6.gz
 share/appdata/four-in-a-row.appdata.xml
 share/applications/four-in-a-row.desktop
 %%DATADIR%%/bg_toplight.png
-%%DATADIR%%/tileset_50x50_faenza-glines-icon1.svg
-%%DATADIR%%/tileset_50x50_faenza-glines-icon2.svg
-%%DATADIR%%/tileset_50x50_faenza-gnect-icon.svg
+%%DATADIR%%/four-in-a-row.ui
 %%DATADIR%%/sounds/bad.ogg
 %%DATADIR%%/sounds/bonus.ogg
 %%DATADIR%%/sounds/reverse.ogg
 %%DATADIR%%/sounds/slide.ogg
+%%DATADIR%%/tileset_50x50_faenza-glines-icon1.svg
+%%DATADIR%%/tileset_50x50_faenza-glines-icon2.svg
+%%DATADIR%%/tileset_50x50_faenza-gnect-icon.svg
 %%DATADIR%%/tileset_50x50_hcinverse.svg
 %%DATADIR%%/tileset_50x50_hcontrast.svg
 share/help/C/four-in-a-row/appearance.page
@@ -295,6 +296,7 @@ share/locale/bg/LC_MESSAGES/four-in-a-row.mo
 share/locale/bn/LC_MESSAGES/four-in-a-row.mo
 share/locale/bn_IN/LC_MESSAGES/four-in-a-row.mo
 share/locale/br/LC_MESSAGES/four-in-a-row.mo
+share/locale/bs/LC_MESSAGES/four-in-a-row.mo
 share/locale/ca/LC_MESSAGES/four-in-a-row.mo
 share/locale/ca@valencia/LC_MESSAGES/four-in-a-row.mo
 share/locale/cs/LC_MESSAGES/four-in-a-row.mo
