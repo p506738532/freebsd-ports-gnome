@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nautilus
-PORTVERSION=	3.15.92
+PORTVERSION=	3.16.0
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,8 +22,7 @@ PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig tar:xz
-USE_GNOME=	gnomeprefix intlhack gnomedesktop3 libxml2 \
-		gvfs introspection:build
+USE_GNOME=	intlhack gnomedesktop3 libxml2 gvfs introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
