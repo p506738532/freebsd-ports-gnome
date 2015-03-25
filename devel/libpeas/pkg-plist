@@ -15,11 +15,11 @@ lib/girepository-1.0/Peas-1.0.typelib
 lib/girepository-1.0/PeasGtk-1.0.typelib
 lib/libpeas-1.0.so
 lib/libpeas-1.0.so.0
-lib/libpeas-1.0.so.0.1300.0
+lib/libpeas-1.0.so.0.1400.0
 %%PYTHON%%lib/libpeas-1.0/loaders/libpython3loader.so
 lib/libpeas-gtk-1.0.so
 lib/libpeas-gtk-1.0.so.0
-lib/libpeas-gtk-1.0.so.0.1300.0
+lib/libpeas-gtk-1.0.so.0.1400.0
 lib/peas-demo/plugins/helloworld/helloworld.plugin
 lib/peas-demo/plugins/helloworld/libhelloworld.so
 %%PYTHON%%lib/peas-demo/plugins/pythonhello/__pycache__/pythonhello.cpython-34.pyc
@@ -76,6 +76,7 @@ share/locale/ast/LC_MESSAGES/libpeas.mo
 share/locale/be/LC_MESSAGES/libpeas.mo
 share/locale/bg/LC_MESSAGES/libpeas.mo
 share/locale/bn_IN/LC_MESSAGES/libpeas.mo
+share/locale/bs/LC_MESSAGES/libpeas.mo
 share/locale/ca/LC_MESSAGES/libpeas.mo
 share/locale/ca@valencia/LC_MESSAGES/libpeas.mo
 share/locale/cs/LC_MESSAGES/libpeas.mo

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libpeas
-PORTVERSION=	1.13.0
+PORTVERSION=	1.14.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,8 +12,9 @@ COMMENT=	Next evolution of the Gedit plugins engine
 
 BUILD_DEPENDS=	valac:${PORTSDIR}/lang/vala
 
-USES=		gettext gmake libtool pathfix pkgconfig \
-		python:3 tar:xz
+PORTSCOUT=	limitw:1,even
+
+USES=		gettext gmake libtool pathfix pkgconfig python:3 tar:xz
 USE_GNOME=	gtk30 intlhack introspection:build
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
@@ -28,8 +29,8 @@ OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	PYTHON
 OPTIONS_DEFAULT=PYTHON
 
-# there is support for python2 but can't figure out a why to include that
-# in a sane way.
+# there is support for python2 but can't figure out a how to include that
+# in a sane way together with python3.
 PYTHON_USE=	GNOME=py3gobject3
 PYTHON_CONFIGURE_ENABLE=	python3
 
