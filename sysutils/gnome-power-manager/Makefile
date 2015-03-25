@@ -12,6 +12,8 @@ COMMENT=	Power management system for the GNOME Desktop
 
 LIB_DEPENDS=	libupower-glib.so:${PORTSDIR}/sysutils/upower
 
+PORTSCOUT=	limitw:1,even
+
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 INSTALLS_ICONS=	yes
 USE_GNOME=	gtk30 intlhack
