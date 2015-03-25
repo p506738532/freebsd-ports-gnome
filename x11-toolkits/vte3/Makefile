@@ -26,6 +26,8 @@ BUILD_DEPENDS+= vapigen:${PORTSDIR}/lang/vala \
 RUN_DEPENDS+=	${LOCALBASE}/libexec/gnome-pty-helper:${PORTSDIR}/x11-toolkits/gnome-pty-helper
 .endif
 
+LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls
+
 USES+=		bison gettext gmake libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
