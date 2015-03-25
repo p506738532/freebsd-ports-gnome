@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	pangomm
-PORTVERSION=	2.35.1
+PORTVERSION=	2.36.0
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -14,6 +14,7 @@ COMMENT=	C++ wrapper for Pango
 USES=		tar:xz
 
 .if !defined(REFERENCE_PORT)
+PORTSCOUT=	limitw:1,even
 
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
@@ -37,4 +38,6 @@ post-patch:
 
 .include <bsd.port.mk>
 
+.else
+PORTSCOUT=	ignore:1
 .endif
