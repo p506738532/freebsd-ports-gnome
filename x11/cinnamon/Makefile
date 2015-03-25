@@ -60,6 +60,8 @@ OPTIONS_DEFINE=	NLS
 NLS_RUN_DEPENDS=	cinnamon-translations>=0:${PORTSDIR}/misc/cinnamon-translations
 
 post-patch:
+# we need this for intltoolize otherwise it can't copy the m4 file ...
+	@${MKDIR} ${WRKSRC}/m4
 	@${MKDIR} ${WRKSRC}/files${PREFIX}
 .for d in bin lib share
 	@${MV} ${WRKSRC}/files/usr/${d} ${WRKSRC}/files${PREFIX}
