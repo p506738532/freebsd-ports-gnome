@@ -14,7 +14,7 @@ BUILD_DEPENDS=	geoclue>=0:${PORTSDIR}/net/geoclue \
 		itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libexempi.so:${PORTSDIR}/textproc/exempi \
 		libgfbgraph-0.2.so:${PORTSDIR}/net/gfbgraph \
-		libgegl-0.2.so:${PORTSDIR}/graphics/gegl \
+		libgegl-0.3.so:${PORTSDIR}/graphics/gegl3 \
 		libgrilo-0.2.so:${PORTSDIR}/net/grilo \
 		libexif.so:${PORTSDIR}/graphics/libexif \
 		libtracker-control-1.0.so:${PORTSDIR}/sysutils/tracker \
