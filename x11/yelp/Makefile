@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	yelp
-PORTVERSION=	3.15.91
+PORTVERSION=	3.16.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,7 +23,7 @@ PORTSCOUT=	limitw:1,even
 USES=		desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig tar:xz
 USE_XORG=	x11 ice
-USE_GNOME=	gnomeprefix gtk30 intlhack libxml2 libxslt
+USE_GNOME=	gtk30 intlhack libxml2 libxslt
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
