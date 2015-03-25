@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME?=	vte
-PORTVERSION=	0.39.1
+PORTVERSION=	0.40.0
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
@@ -18,6 +18,7 @@ USES=		tar:xz
 
 .if !defined(REFERENCE_PORT)
 VTE3_SLAVE?=	no
+PORTSCOUT=	limitw:1,even
 
 .if ${VTE3_SLAVE} != yes
 BUILD_DEPENDS+= vapigen:${PORTSDIR}/lang/vala \
@@ -69,4 +70,6 @@ CFLAGS+=	-lz
 
 .include <bsd.port.mk>
 
+.else
+PORTSCOUT=	ignore:1
 .endif
