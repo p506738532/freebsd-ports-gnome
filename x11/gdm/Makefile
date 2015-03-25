@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gdm
-PORTVERSION=	3.15.3.1
+PORTVERSION=	3.16.0.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -38,8 +38,10 @@ RUN_DEPENDS+=	xrdb:${PORTSDIR}/x11/xrdb \
 USERS=		gdm
 GROUPS=		gdm
 
+PORTSCOUT=	limitw:1,even
+
 USES=		execinfo gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	dconf gnomeprefix intlhack introspection librsvg2
+USE_GNOME=	dconf intlhack introspection librsvg2
 USE_LDCONFIG=	yes
 USE_XORG=	dmx dmxproto
 INSTALLS_ICONS=	yes
@@ -54,6 +56,7 @@ CONFIGURE_ARGS=	--disable-static \
 		--with-custom-conf=${PREFIX}/etc/gdm/custom.conf \
 		--with-dbus-sys=${PREFIX}/etc/dbus-1/system.d \
 		--with-log-dir=/var/log/gdm \
+		--localstatedir=/var \
 		--with-working-directory=${PREFIX}/etc/gdm/home \
 		--with-sysconfsubdir=gdm \
 		--with-pid-file=/var/run/gdm.pid \
@@ -64,6 +67,7 @@ CONFIGURE_ARGS=	--disable-static \
 		--with-user=gdm \
 		--with-group=gdm \
  		--with-initial-vt=09 \
+		--disable-wayland-support \
 		--with-systemd=no
 
 # this is a hack until we can get our own pam dir and dir in order.
@@ -126,7 +130,13 @@ post-patch:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/gdm.conf-custom \
-		${STAGEDIR}${PREFIX}/etc/gdm/custom.conf.default
+		${STAGEDIR}${PREFIX}/etc/gdm/custom.conf.sample
+	@${RM} ${STAGEDIR}${PREFIX}/etc/gdm/custom.conf
+	${MV} ${STAGEDIR}${PREFIX}/etc/gdm/PostSession/Default \
+		${STAGEDIR}${PREFIX}/etc/gdm/PostSession/Default.sample
+	${MV} ${STAGEDIR}${PREFIX}/etc/gdm/PreSession/Default \
+		${STAGEDIR}${PREFIX}/etc/gdm/PreSession/Default.sample
+
 	${MKDIR} ${STAGEDIR}${PREFIX}/share/xsessions
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/gdm/Sessions
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/dm/Sessions
