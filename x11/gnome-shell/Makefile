@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell
-PORTVERSION=	3.15.92
+PORTVERSION=	3.16.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -34,8 +34,8 @@ PORTSCOUT=	limitw:1,even
 
 USES=		compiler:c11 gettext gmake libtool pathfix pkgconfig \
 		tar:xz webplugin:native
-USE_GNOME=	evolutiondataserver3 gnomedesktop3 \
-		gtk30 intlhack introspection
+USE_GNOME=	evolutiondataserver3 gnomedesktop3 gtk30 intlhack \
+		introspection
 USE_XORG=	x11 xfixes sm
 USE_GSTREAMER1=	yes
 GNU_CONFIGURE=	yes
