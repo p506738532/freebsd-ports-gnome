@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evince
-PORTVERSION=	3.15.4
-PORTREVISION=	1
+PORTVERSION=	3.16.0
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -27,7 +26,7 @@ CONFLICT_INSTALL=	evince-lite-*
 
 USES=		compiler:c++11-lib desktop-file-utils gettext gmake libtool \
 		pathfix pkgconfig tar:xz
-USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
+USE_GNOME=	gtk30 intlhack introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_XORG=	ice
