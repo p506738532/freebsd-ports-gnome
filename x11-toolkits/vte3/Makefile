@@ -23,10 +23,12 @@ PORTSCOUT=	limitw:1,even
 .if ${VTE3_SLAVE} != yes
 BUILD_DEPENDS+= vapigen:${PORTSDIR}/lang/vala \
 		bash:${PORTSDIR}/shells/bash
-RUN_DEPENDS+=	${LOCALBASE}/libexec/gnome-pty-helper:${PORTSDIR}/x11-toolkits/gnome-pty-helper
-.endif
-
 LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls
+RUN_DEPENDS+=	${LOCALBASE}/libexec/gnome-pty-helper:${PORTSDIR}/x11-toolkits/gnome-pty-helper
+.else
+# we need gnutls for configure to pass for gnome-pty-helper ..
+BUILD_DEPENDS+=	gnutls>=0:${PORTSDIR}/security/gnutls
+.endif
 
 USES+=		bison gettext gmake libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
