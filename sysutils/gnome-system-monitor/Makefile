@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-system-monitor
-PORTVERSION=	3.15.92
+PORTVERSION=	3.16.0
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -18,7 +18,7 @@ RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme
 PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake pathfix pkgconfig tar:xz
-USE_GNOME=	gnomeprefix gtkmm30 intlhack librsvg2 libwnck3
+USE_GNOME=	gtkmm30 intlhack librsvg2 libwnck3
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib
