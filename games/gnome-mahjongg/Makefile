@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-mahjongg
-PORTVERSION=	3.15.90
+PORTVERSION=	3.16.0
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,6 +12,8 @@ COMMENT=	Gnome mahjongg
 
 BUILD_DEPENDS=	vala:${PORTSDIR}/lang/vala \
 		itstool:${PORTSDIR}/textproc/itstool
+
+PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake pathfix pkgconfig tar:xz
 INSTALLS_ICONS=	yes
