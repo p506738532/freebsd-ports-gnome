@@ -236,12 +236,12 @@ gtk-update-icon-cache_USE_GNOME_IMPL=	atk pango gdkpixbuf2
 
 gtk20_LIB_DEPENDS=	libgtk-x11-2.0.so:${PORTSDIR}/x11-toolkits/gtk20
 gtk20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtk+-x11-2.0.pc
-gtk20_USE_GNOME_IMPL=	intltool atk pango
+gtk20_USE_GNOME_IMPL=	atk pango
 GTK2_VERSION=		2.10.0
 
 gtk30_LIB_DEPENDS=	libgtk-3.so:${PORTSDIR}/x11-toolkits/gtk30
 gtk30_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtk+-3.0.pc
-gtk30_USE_GNOME_IMPL=	intltool atk pango
+gtk30_USE_GNOME_IMPL=	atk pango
 GTK3_VERSION=		3.0.0
 
 linc_LIB_DEPENDS=	liblinc.so:${PORTSDIR}/net/linc
