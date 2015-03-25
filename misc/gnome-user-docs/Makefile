@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-user-docs
-PORTVERSION=	3.15.92
+PORTVERSION=	3.16.0
 CATEGORIES=	misc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,6 +16,6 @@ PORTSCOUT=	limitw:1,even
 
 GNU_CONFIGURE=	yes
 USES=		gettext-tools gmake pathfix tar:xz
-USE_GNOME=	gnomeprefix libxml2:build
+USE_GNOME=	libxml2:build
 
 .include <bsd.port.mk>
