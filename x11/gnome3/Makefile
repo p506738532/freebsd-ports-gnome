@@ -1,9 +1,8 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11/gnome3/Makefile 19831 2014-08-26 15:33:17Z kwm $
 
 PORTNAME=	gnome3
-PORTVERSION=	3.14.2
+PORTVERSION=	3.16.0
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -42,6 +41,7 @@ RUN_DEPENDS?=	dconf-editor:${PORTSDIR}/devel/dconf-editor \
 
 NO_BUILD=	yes
 NO_MTREE=	yes
+NO_INSTALL=	yes
 
 .if ${.CURDIR:T}!="gnome3-lite"
 OPTIONS_DEFINE+=MAPI
@@ -80,7 +80,5 @@ RUN_DEPENDS+=	empathy>=3.0.0:${PORTSDIR}/net-im/empathy \
 RUN_DEPENDS+=	evolution-mapi>=3.0.0:${PORTSDIR}/mail/evolution-mapi
 .endif
 .endif # !gnome3-lite section
-
-do-install:	# empty
 
 .include <bsd.port.mk>
