@@ -14,6 +14,8 @@ Fix all the gnome-shell extensions to work with the new shell.
 gnome games scores?
 
 Before import:
+The following bug in pkg needs to be resolved.
+  https://github.com/freebsd/pkg/issues/1208
 libgit2 / libgit2-glib https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=196176
 See if we can make a way so we can build tracker 1.3+ on a system that has
  1.2.x installed.
