@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	california
-PORTVERSION=	0.3.0
+PORTVERSION=	0.4.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
