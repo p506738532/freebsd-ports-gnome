@@ -286,10 +286,6 @@ share/help/hu/seahorse/misc-key-backup.page
 share/help/hu/seahorse/misc-key-fingerprint.page
 share/help/hu/seahorse/passwords-stored-create.page
 share/help/hu/seahorse/passwords-view.page
-<<<<<<< HEAD
-=======
-share/help/hu/seahorse/passwords.page
->>>>>>> master
 share/help/hu/seahorse/pgp-create.page
 share/help/hu/seahorse/pgp-delete.page
 share/help/hu/seahorse/pgp-expiration-change.page
