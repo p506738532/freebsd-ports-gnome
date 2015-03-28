@@ -568,6 +568,9 @@ DISTNAME:=	${DISTNAME}_GH${_GITHUB_REV}
 .  endif
 .  if defined(GH_TAGNAME)
 GH_TAGNAME_SANITIZED=	${GH_TAGNAME:S,/,-,}
+# Github silently converts tags starting with v to not have v in the filename
+# and extraction directory.
+GH_TAGNAME_EXTRACT=	${GH_TAGNAME_SANITIZED:C/^v([0-9])/\1/}
 .  endif
 .endif
 .endif
@@ -1539,9 +1542,6 @@ MASTER_SITES_SUBDIRS=	APACHE_JAKARTA:${PORTNAME:S,-,/,}/source \
 			MOZDEV:${PORTNAME:tl} \
 			NETLIB:${PORTNAME} \
 			PERL_CPAN:${PORTNAME:C/-.*//} \
-			PNET:${PNET_MASTER_SITE_SUBDIR} \
-			RUBY_DBI:${RUBY_DBI_MASTER_SITE_SUBDIR} \
-			RUBY_GNOME:${RUBY_GNOME_MASTER_SITE_SUBDIR} \
 			SAVANNAH:${PORTNAME:tl} \
 			SOURCEFORGE:${PORTNAME:tl}/${PORTNAME:tl}/${PORTVERSION}
 

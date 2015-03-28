@@ -3,6 +3,7 @@
 
 PORTNAME=	gcc
 PORTVERSION=	4.8.4
+PORTREVISION=	1
 CATEGORIES=	lang java
 MASTER_SITES=	${MASTER_SITE_GCC}
 MASTER_SITE_SUBDIR=	releases/gcc-${DISTVERSION}
@@ -25,6 +26,7 @@ BUILD_DEPENDS+=	runtest:${PORTSDIR}/misc/dejagnu
 
 CONFLICTS=	gcc48*
 CPE_VENDOR=	gnu
+UNIQUENAME=	${PORTNAME}${PKGNAMESUFFIX}
 
 # DISTVERSION relates to downloads, GCC_VERSION and SUFFIX to names
 # of executables and directories once installed.
@@ -45,6 +47,7 @@ OPTIONS_DEFINE_i386=	JAVA
 OPTIONS_DEFINE_amd64=	JAVA
 OPTIONS_DEFAULT_i386=	JAVA
 OPTIONS_DEFAULT_amd64=	JAVA
+OPTIONS_EXCLUDE_DragonFly=	JAVA
 BOOTSTRAP_DESC=		Build using a full bootstrap
 
 .include <bsd.port.pre.mk>

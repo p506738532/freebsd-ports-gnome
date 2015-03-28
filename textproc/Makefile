@@ -79,6 +79,7 @@
     SUBDIR += colordiff
     SUBDIR += confetti
     SUBDIR += confget
+    SUBDIR += consul-template
     SUBDIR += crimson
     SUBDIR += cs-aspell
     SUBDIR += cs-mythes
@@ -998,6 +999,7 @@
     SUBDIR += p5-XML-Parsepp
     SUBDIR += p5-XML-Parser
     SUBDIR += p5-XML-Parser-EasyTree
+    SUBDIR += p5-XML-Parser-Lite
     SUBDIR += p5-XML-Parser-Lite-Tree
     SUBDIR += p5-XML-Parser-Style-EasyTree
     SUBDIR += p5-XML-Parser-Style-Elemental
@@ -1228,6 +1230,7 @@
     SUBDIR += py-sgrep
     SUBDIR += py-sparqlwrapper
     SUBDIR += py-sphinx
+    SUBDIR += py-sphinx-intl
     SUBDIR += py-sphinx_rtd_theme
     SUBDIR += py-sphinxcontrib-adadomain
     SUBDIR += py-sphinxcontrib-bitbucket
