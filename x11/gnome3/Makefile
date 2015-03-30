@@ -35,7 +35,6 @@ RUN_DEPENDS?=	dconf-editor:${PORTSDIR}/devel/dconf-editor \
 		gnome-control-center>=3.0.0:${PORTSDIR}/sysutils/gnome-control-center \
 		${LOCALBASE}/share/gnome-background-properties/gnome-backgrounds.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
 		caribou>=0:${PORTSDIR}/accessibility/caribou \
-		${LOCALBASE}/share/help/C/gnome-help/index.page:${PORTSDIR}/misc/gnome-user-docs \
 		${LOCALBASE}/share/sounds/freedesktop/index.theme:${PORTSDIR}/audio/freedesktop-sound-theme \
 		ekiga:${PORTSDIR}/net-im/ekiga
 
@@ -46,6 +45,8 @@ NO_INSTALL=	yes
 .if ${.CURDIR:T}!="gnome3-lite"
 OPTIONS_DEFINE+=MAPI
 MAPI_DESC=	Depend on evolution-mapi (pulls in samba4)
+
+DOCS_RUN_DEPENDS=	gnome-user-docs>=0:${PORTSDIR}/misc/gnome-user-docs
 .endif
 
 .include <bsd.port.options.mk>
