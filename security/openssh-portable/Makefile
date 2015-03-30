@@ -3,7 +3,7 @@
 
 PORTNAME=	openssh
 DISTVERSION=	6.7p1
-PORTREVISION=	2
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	security ipv6
 MASTER_SITES=	${MASTER_SITE_OPENBSD}
@@ -132,6 +132,9 @@ CONFIGURE_ARGS+=	--disable-utmp --disable-wtmp --disable-wtmpx --without-lastlog
 EXTRA_PATCHES+=		${FILESDIR}/extra-patch-sshd-utmp-size
 .endif
 
+# Keep this last
+EXTRA_PATCHES+=		${FILESDIR}/extra-patch-version-addendum
+
 .if ${PORT_OPTIONS:MX509}
 .  if ${PORT_OPTIONS:MHPN} || ${PORT_OPTIONS:MAES_THREADED} || ${PORT_OPTIONS:MNONECIPHER}
 BROKEN=		X509 patch and HPN patch do not apply cleanly together
@@ -200,30 +203,26 @@ CONFIGURE_ARGS+=	--with-libs='${CONFIGURE_LIBS}'
 .endif
 
 RC_SCRIPT_NAME=		openssh
+VERSION_ADDENDUM_DEFAULT?=	${OPSYS}-${PKGNAME}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-ldes|-lcrypto|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} \
 	    -e 's|install: \(.*\) host-key check-config|install: \1|g' \
-	    -e 's|-lpthread|${PTHREAD_LIBS}|' \
 	    ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|' \
 			${WRKSRC}/pathnames.h ${WRKSRC}/sshd_config.5 \
 			${WRKSRC}/ssh_config.5
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${LOCALBASE}|' \
 		-e 's|%%RC_SCRIPT_NAME%%|${RC_SCRIPT_NAME}|' ${WRKSRC}/sshd.8
-	@${REINPLACE_CMD} -E -e 's|SSH_VERSION|TMP_SSH_VERSION|' \
-		-e 's|.*SSH_RELEASE.*||' ${WRKSRC}/version.h
-	@${ECHO_CMD} '#define FREEBSD_PORT_VERSION	" FreeBSD-${PKGNAME}"' >> \
+	@${REINPLACE_CMD} \
+	    -e 's|\(VersionAddendum\) none|\1 ${VERSION_ADDENDUM_DEFAULT}|' \
+	    ${WRKSRC}/sshd_config
+	@${REINPLACE_CMD} \
+	    -e 's|%%SSH_VERSION_FREEBSD_PORT%%|${VERSION_ADDENDUM_DEFAULT}|' \
+	    ${WRKSRC}/sshd_config.5
+	@${ECHO_CMD} '#define SSH_VERSION_FREEBSD_PORT	"${VERSION_ADDENDUM_DEFAULT}"' >> \
 		${WRKSRC}/version.h
-	@${ECHO_CMD} '#define SSH_VERSION	TMP_SSH_VERSION SSH_PORTABLE FREEBSD_PORT_VERSION' >> \
-		${WRKSRC}/version.h
-	@${ECHO_CMD} '#define SSH_RELEASE	TMP_SSH_VERSION SSH_PORTABLE FREEBSD_PORT_VERSION' >> \
-		${WRKSRC}/version.h
-.if ${PORT_OPTIONS:MHPN}
-	@${REINPLACE_CMD} -e 's|TMP_SSH_VERSION SSH_PORTABLE|TMP_SSH_VERSION SSH_PORTABLE SSH_HPN|' \
-		${WRKSRC}/version.h
-.endif
 
 post-install:
 	${MV} ${STAGEDIR}${ETCDIR}/ssh_config \

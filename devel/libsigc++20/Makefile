@@ -18,7 +18,7 @@ USES=		gmake libtool pathfix perl5 tar:xz
 USE_PERL5=	build
 USE_LDCONFIG=	yes
 
-PLIST_SUB=	VERSION="2.0" API_VERSION="2.0"
+PLIST_SUB=	API_VERSION="2.0"
 
 OPTIONS_DEFINE=	DOCS
 

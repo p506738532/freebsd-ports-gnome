@@ -631,7 +631,6 @@
     SUBDIR += qsynth
     SUBDIR += quimup
     SUBDIR += raop_play
-    SUBDIR += raproxy
     SUBDIR += raul
     SUBDIR += rawrec
     SUBDIR += re
@@ -792,6 +791,7 @@
     SUBDIR += xcdplayer
     SUBDIR += xfce4-mixer
     SUBDIR += xfce4-mpc-plugin
+    SUBDIR += xfce4-pulseaudio-plugin
     SUBDIR += xfmpc
     SUBDIR += xhippo
     SUBDIR += ximp3

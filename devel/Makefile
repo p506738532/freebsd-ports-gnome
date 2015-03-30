@@ -632,12 +632,12 @@
     SUBDIR += gtgt
     SUBDIR += gtkparasite
     SUBDIR += gtranslator
-    SUBDIR += gumbo
     SUBDIR += guichan
     SUBDIR += guikachu
     SUBDIR += guile-lib
     SUBDIR += guiloader
     SUBDIR += guiloader-c++
+    SUBDIR += gumbo
     SUBDIR += gvfs
     SUBDIR += gwenhywfar
     SUBDIR += gwenhywfar-fox16
@@ -1720,6 +1720,7 @@
     SUBDIR += p5-Config-GitLike
     SUBDIR += p5-Config-Grammar
     SUBDIR += p5-Config-INI
+    SUBDIR += p5-Config-INI-Reader-Ordered
     SUBDIR += p5-Config-INI-Simple
     SUBDIR += p5-Config-Identity
     SUBDIR += p5-Config-IniFiles
@@ -2320,6 +2321,7 @@
     SUBDIR += p5-Lingua-Translit
     SUBDIR += p5-List-AllUtils
     SUBDIR += p5-List-Cycle
+    SUBDIR += p5-List-Flatten
     SUBDIR += p5-List-Gen
     SUBDIR += p5-List-Group
     SUBDIR += p5-List-Permutor
@@ -2601,7 +2603,6 @@
     SUBDIR += p5-PAR-Dist
     SUBDIR += p5-PAR-Packer
     SUBDIR += p5-PCSC-Card
-    SUBDIR += p5-PerlX-Maybe
     SUBDIR += p5-PHP-Serialization
     SUBDIR += p5-POE
     SUBDIR += p5-POE-API-Hooks
@@ -2715,6 +2716,7 @@
     SUBDIR += p5-PerlIO-via-MD5
     SUBDIR += p5-PerlIO-via-dynamic
     SUBDIR += p5-PerlIO-via-symlink
+    SUBDIR += p5-PerlX-Maybe
     SUBDIR += p5-Pid-File-Flock
     SUBDIR += p5-Pipeline
     SUBDIR += p5-Pithub
@@ -2758,10 +2760,12 @@
     SUBDIR += p5-Regexp-Bind
     SUBDIR += p5-Regexp-Compare
     SUBDIR += p5-Regexp-Grammars
+    SUBDIR += p5-Regexp-Lexer
     SUBDIR += p5-Regexp-RegGrp
     SUBDIR += p5-Regexp-Shellish
     SUBDIR += p5-Regexp-Subst-Parallel
     SUBDIR += p5-Religion
+    SUBDIR += p5-Reply
     SUBDIR += p5-ResourcePool
     SUBDIR += p5-Resources
     SUBDIR += p5-Return-MultiLevel
@@ -3826,6 +3830,7 @@
     SUBDIR += py-future
     SUBDIR += py-futures
     SUBDIR += py-game
+    SUBDIR += py-game_sdl2
     SUBDIR += py-gamin
     SUBDIR += py-gdata
     SUBDIR += py-gearman
@@ -4058,6 +4063,7 @@
     SUBDIR += py-smmap
     SUBDIR += py-snack
     SUBDIR += py-snackwich
+    SUBDIR += py-sortedcontainers
     SUBDIR += py-spark
     SUBDIR += py-speaklater
     SUBDIR += py-sqlcc
@@ -4225,6 +4231,7 @@
     SUBDIR += pycount
     SUBDIR += pydbus-common
     SUBDIR += pygobject3-common
+    SUBDIR += pyinstaller
     SUBDIR += pylint
     SUBDIR += pymacs
     SUBDIR += pyobfuscate
@@ -4621,7 +4628,6 @@
     SUBDIR += rubygem-rb-inotify
     SUBDIR += rubygem-rb-kqueue
     SUBDIR += rubygem-rbtrace
-    SUBDIR += rubygem-rcov
     SUBDIR += rubygem-rdoc
     SUBDIR += rubygem-recaptcha
     SUBDIR += rubygem-redis-activesupport
