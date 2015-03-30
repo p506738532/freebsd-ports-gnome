@@ -4,15 +4,14 @@
 PORTNAME=	gnome-games
 PORTVERSION=	3.15.0
 CATEGORIES=	games gnome
-MASTER_SITES=	# empty
-DISTFILES=	# empty
-EXTRACT_ONLY=	# empty
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gnome games meta port
 
-RUN_DEPENDS=	atomix:${PORTSDIR}/games/atomix \
-		five-or-more:${PORTSDIR}/games/five-or-more \
+USES=		metaport
+
+RUN_DEPENDS=	five-or-more:${PORTSDIR}/games/five-or-more \
+		atomix:${PORTSDIR}/games/atomix \
 		four-in-a-row:${PORTSDIR}/games/four-in-a-row \
 		gnome-chess:${PORTSDIR}/games/gnome-chess \
 		gnome-klotski:${PORTSDIR}/games/gnome-klotski \
@@ -30,9 +29,5 @@ RUN_DEPENDS=	atomix:${PORTSDIR}/games/atomix \
 		aisleriot>=0:${PORTSDIR}/games/aisleriot \
 		swell-foop:${PORTSDIR}/games/swell-foop \
 		tali:${PORTSDIR}/games/tali
-
-NO_BUILD=	yes
-NO_INSTALL=	yes
-NO_MTREE=	yes
 
 .include <bsd.port.mk>
