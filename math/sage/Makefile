@@ -3,6 +3,7 @@
 
 PORTNAME=	sage
 PORTVERSION=	6.5
+PORTREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://boxen.math.washington.edu/home/sagemath/sage-mirror/src/ \
 		http://mirrors.xmission.com/sage/src/ \
@@ -26,10 +27,6 @@ LIB_DEPENDS=	libatlas.so:${PORTSDIR}/math/atlas \
 		libjpeg.so:${PORTSDIR}/graphics/jpeg
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
-.if OSVERSION<1000717
-BROKEN=		https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=198893
-.endif
-
 pre-extract:
 	@${ECHO_MSG}
 	@${ECHO_MSG} Instead of installing the port, which will take a considerable amount of
@@ -39,7 +36,7 @@ pre-extract:
 	@sleep 10
 
 PLIST_FILES=	bin/sage
-USE_TEX=	latex:build
+USE_TEX=	latex:build dvipsk:build
 USES=		gmake iconv tk
 MAKE_JOBS_SAFE=	yes
 
@@ -61,6 +58,11 @@ post-patch:
 # Create wrapper for invocation of make.
 	@${MKDIR} ${WRKSRC}/local/bin
 	@${LN} -s -f ${LOCALBASE}/bin/gmake ${WRKSRC}/local/bin/make
+
+# Create wrapper for invocation of ld.
+	@${SED} -e 's#%%LD%%#${LOCALBASE}/bin/ld#' \
+		${FILESDIR}/ld.in > ${WRKSRC}/local/bin/ld
+	@${CHMOD} +x ${WRKSRC}/local/bin/ld
 
 post-build:
 	${RM} -rf ${WRKSRC}/tmp/.sage
@@ -94,10 +96,6 @@ post-install:
 		${SED} -e 's#${STAGEDIR}${PREFIX}/#@dirrm #' >> ${TMPPLIST}
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 701106
-BROKEN=		POSIX semaphores are required, and the support only works in FreeBSD 7-STABLE and later
-.endif
 
 MAKE_ENV+=	MAKE="${MAKE} -j${MAKE_JOBS_NUMBER}"
 

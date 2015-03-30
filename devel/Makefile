@@ -1720,6 +1720,7 @@
     SUBDIR += p5-Config-GitLike
     SUBDIR += p5-Config-Grammar
     SUBDIR += p5-Config-INI
+    SUBDIR += p5-Config-INI-Reader-Ordered
     SUBDIR += p5-Config-INI-Simple
     SUBDIR += p5-Config-Identity
     SUBDIR += p5-Config-IniFiles
@@ -2320,6 +2321,7 @@
     SUBDIR += p5-Lingua-Translit
     SUBDIR += p5-List-AllUtils
     SUBDIR += p5-List-Cycle
+    SUBDIR += p5-List-Flatten
     SUBDIR += p5-List-Gen
     SUBDIR += p5-List-Group
     SUBDIR += p5-List-Permutor
@@ -2758,10 +2760,12 @@
     SUBDIR += p5-Regexp-Bind
     SUBDIR += p5-Regexp-Compare
     SUBDIR += p5-Regexp-Grammars
+    SUBDIR += p5-Regexp-Lexer
     SUBDIR += p5-Regexp-RegGrp
     SUBDIR += p5-Regexp-Shellish
     SUBDIR += p5-Regexp-Subst-Parallel
     SUBDIR += p5-Religion
+    SUBDIR += p5-Reply
     SUBDIR += p5-ResourcePool
     SUBDIR += p5-Resources
     SUBDIR += p5-Return-MultiLevel
@@ -3826,6 +3830,7 @@
     SUBDIR += py-future
     SUBDIR += py-futures
     SUBDIR += py-game
+    SUBDIR += py-game_sdl2
     SUBDIR += py-gamin
     SUBDIR += py-gdata
     SUBDIR += py-gearman
@@ -4623,7 +4628,6 @@
     SUBDIR += rubygem-rb-inotify
     SUBDIR += rubygem-rb-kqueue
     SUBDIR += rubygem-rbtrace
-    SUBDIR += rubygem-rcov
     SUBDIR += rubygem-rdoc
     SUBDIR += rubygem-recaptcha
     SUBDIR += rubygem-redis-activesupport
