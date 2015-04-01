@@ -47,6 +47,7 @@ OPTIONS_DEFINE+=MAPI
 MAPI_DESC=	Depend on evolution-mapi (pulls in samba4)
 
 DOCS_RUN_DEPENDS=	gnome-user-docs>=0:${PORTSDIR}/misc/gnome-user-docs
+MAPS_RUN_DEPENDS=	evolution-mapi>=3.0.0:${PORTSDIR}/mail/evolution-mapi
 .endif
 
 .include <bsd.port.options.mk>
@@ -77,9 +78,6 @@ RUN_DEPENDS+=	empathy>=3.0.0:${PORTSDIR}/net-im/empathy \
 		cheese>=3.0.0:${PORTSDIR}/multimedia/cheese \
 		alacarte>=3.0.0:${PORTSDIR}/deskutils/alacarte
 
-.if ${PORT_OPTIONS:MMAPI}
-RUN_DEPENDS+=	evolution-mapi>=3.0.0:${PORTSDIR}/mail/evolution-mapi
-.endif
 .endif # !gnome3-lite section
 
 .include <bsd.port.mk>
