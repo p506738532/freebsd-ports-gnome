@@ -5,9 +5,11 @@ include/libappstream-builder/appstream-builder.h
 include/libappstream-builder/asb-app.h
 include/libappstream-glib/appstream-glib.h
 include/libappstream-glib/as-app.h
+include/libappstream-glib/as-bundle.h
 include/libappstream-glib/as-enums.h
 include/libappstream-glib/as-icon.h
 include/libappstream-glib/as-image.h
+include/libappstream-glib/as-inf.h
 include/libappstream-glib/as-node.h
 include/libappstream-glib/as-problem.h
 include/libappstream-glib/as-provide.h
@@ -27,6 +29,8 @@ lib/asb-plugins/libasb_plugin_dbus.a
 lib/asb-plugins/libasb_plugin_dbus.so
 lib/asb-plugins/libasb_plugin_desktop.a
 lib/asb-plugins/libasb_plugin_desktop.so
+lib/asb-plugins/libasb_plugin_firmware.a
+lib/asb-plugins/libasb_plugin_firmware.so
 lib/asb-plugins/libasb_plugin_font.a
 lib/asb-plugins/libasb_plugin_font.so
 lib/asb-plugins/libasb_plugin_gettext.a
@@ -56,11 +60,11 @@ lib/girepository-1.0/AppStreamGlib-1.0.typelib
 lib/libappstream-builder.a
 lib/libappstream-builder.so
 lib/libappstream-builder.so.7
-lib/libappstream-builder.so.7.0.2
+lib/libappstream-builder.so.7.0.4
 lib/libappstream-glib.a
 lib/libappstream-glib.so
 lib/libappstream-glib.so.7
-lib/libappstream-glib.so.7.0.2
+lib/libappstream-glib.so.7.0.4
 libdata/pkgconfig/appstream-builder.pc
 libdata/pkgconfig/appstream-glib.pc
 %%MANPAGES%%man/man1/appstream-builder.1.gz

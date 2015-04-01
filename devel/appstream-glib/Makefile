@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	appstream-glib
-PORTVERSION=	0.3.4
+PORTVERSION=	0.3.6
 CATEGORIES=	devel
 MASTER_SITES=	http://people.freedesktop.org/~hughsient/appstream-glib/releases/
 DIST_SUBDIR=	gnome3
@@ -10,11 +10,13 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library to help with AppStream metadata
 
-BUILD_DEPENDS=	gtkdoc-check:${PORTSDIR}/textproc/gtk-doc
+BUILD_DEPENDS=	gtkdoc-check:${PORTSDIR}/textproc/gtk-doc \
+		gcab:${PORTSDIR}/archivers/gcab
 LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
 		libyaml.so:${PORTSDIR}/textproc/libyaml \
 		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
 		libfreetype.so:${PORTSDIR}/print/freetype2
+RUN_DEPENDS=	gcab:${PORTSDIR}/archivers/gcab
 
 USES=		gettext gperf gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gdkpixbuf2 glib20 gtk30 intlhack introspection:build \
