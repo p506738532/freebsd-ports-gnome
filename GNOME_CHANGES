@@ -22,3 +22,4 @@ See if we can make a way so we can build tracker 1.3+ on a system that has
 Cairo options: see which options combo's don't work and update them to make this
  visauble
 Add devel/appdata-tools to MOVED
+check libpeas users if they need the py[3]-libpeas port for python plugin support.
