@@ -12,13 +12,14 @@ include/cheese/cheese.h
 lib/girepository-1.0/Cheese-3.0.typelib
 lib/libcheese-gtk.so
 lib/libcheese-gtk.so.23
-lib/libcheese-gtk.so.23.1.19
+lib/libcheese-gtk.so.23.1.22
 lib/libcheese.so
 lib/libcheese.so.7
-lib/libcheese.so.7.0.35
+lib/libcheese.so.7.0.38
 libdata/pkgconfig/cheese-gtk.pc
 libdata/pkgconfig/cheese.pc
 libexec/gnome-camera-service
+man/man1/cheese.1.gz
 share/appdata/org.gnome.Cheese.appdata.xml
 share/applications/org.gnome.Cheese.desktop
 share/dbus-1/services/org.gnome.Camera.service
@@ -452,6 +453,7 @@ share/locale/be@latin/LC_MESSAGES/cheese.mo
 share/locale/bg/LC_MESSAGES/cheese.mo
 share/locale/bn/LC_MESSAGES/cheese.mo
 share/locale/bn_IN/LC_MESSAGES/cheese.mo
+share/locale/bs/LC_MESSAGES/cheese.mo
 share/locale/ca/LC_MESSAGES/cheese.mo
 share/locale/ca@valencia/LC_MESSAGES/cheese.mo
 share/locale/cs/LC_MESSAGES/cheese.mo
