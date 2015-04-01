@@ -16,16 +16,11 @@ lib/girepository-1.0/PeasGtk-1.0.typelib
 lib/libpeas-1.0.so
 lib/libpeas-1.0.so.0
 lib/libpeas-1.0.so.0.1400.0
-%%PYTHON%%lib/libpeas-1.0/loaders/libpython3loader.so
 lib/libpeas-gtk-1.0.so
 lib/libpeas-gtk-1.0.so.0
 lib/libpeas-gtk-1.0.so.0.1400.0
 lib/peas-demo/plugins/helloworld/helloworld.plugin
 lib/peas-demo/plugins/helloworld/libhelloworld.so
-%%PYTHON%%lib/peas-demo/plugins/pythonhello/__pycache__/pythonhello.cpython-34.pyc
-%%PYTHON%%lib/peas-demo/plugins/pythonhello/__pycache__/pythonhello.cpython-34.pyo
-%%PYTHON%%lib/peas-demo/plugins/pythonhello/pythonhello.plugin
-%%PYTHON%%lib/peas-demo/plugins/pythonhello/pythonhello.py
 lib/peas-demo/plugins/secondtime/libsecondtime.so
 lib/peas-demo/plugins/secondtime/secondtime.plugin
 libdata/pkgconfig/libpeas-1.0.pc
