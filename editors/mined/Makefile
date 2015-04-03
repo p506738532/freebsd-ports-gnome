@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	mined
-PORTVERSION=	2014.24.2
+PORTVERSION=	2015.25
 CATEGORIES=	editors
-MASTER_SITES=	http://towo.net/mined/download/
+MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}
 
 MAINTAINER=	thierry@FreeBSD.org
 COMMENT=	Text mode editor with Unicode support
@@ -25,6 +25,12 @@ MAKE_JOBS_UNSAFE=	yes
 PRFX2FIX=	src/makefile.bsd usrshare/conf_user/xinitrc.mined	\
 		src/minedaux.c man/mined.1 src/mkinclud.mak		\
 		src/makefile.gcc
+
+.include <bsd.port.pre.mk>
+
+.if ${OPSYS} == "FreeBSD" && ${OSVERSION} < 1000000
+USE_GCC=	yes
+.endif
 
 pre-configure:
 .for FILE in ${PRFX2FIX}
@@ -49,4 +55,4 @@ post-install:
 	@${RM} -rf ${STAGEDIR}${DOCSDIR}/CHANGES ${STAGEDIR}${DOCSDIR}/LICENCE.GPL
 	@${RM} -rf ${STAGEDIR}${DATADIR}/doc_user ${STAGEDIR}${DATADIR}/package_doc
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

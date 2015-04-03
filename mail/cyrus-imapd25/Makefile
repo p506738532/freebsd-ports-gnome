@@ -97,7 +97,8 @@ OPTIONS_DEFAULT+=		GSSAPI_BASE
 .endif
 GSSAPI_BASE_DESC=		Use Heimdal in base
 GSSAPI_BASE_USES=		gssapi
-GSSAPI_BASE_CONFIGURE_ON=	--enable-gssapi --with-gss_impl=heimdal
+GSSAPI_BASE_CONFIGURE_ON=	--enable-gssapi="${GSSAPIBASEDIR}" \
+				--with-gss_impl=heimdal
 GSSAPI_HEIMDAL_DESC=		Use Heimdal from ports
 GSSAPI_HEIMDAL_USES=		gssapi:heimdal,flags
 GSSAPI_HEIMDAL_CONFIGURE_ON=	--enable-gssapi="${GSSAPIBASEDIR}" \
@@ -122,9 +123,7 @@ PLIST_SUB+=	CLAMAV="@comment "
 
 .if ${PORT_OPTIONS:MDRAC}
 IGNORE=		DRAC is not available
-# .if ${OSVERSION} >= 800037
 # EXTRA_PATCHES+=	${FILESDIR}/extra-patch-cmulocal__sasl2.m4
-# .endif
 # USE_AUTOTOOLS=	autoconf autoheader
 .endif
 

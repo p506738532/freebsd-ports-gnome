@@ -3,7 +3,7 @@
 
 PORTNAME=	openssh
 DISTVERSION=	6.7p1
-PORTREVISION=	4
+PORTREVISION=	5
 PORTEPOCH=	1
 CATEGORIES=	security ipv6
 MASTER_SITES=	${MASTER_SITE_OPENBSD}
@@ -25,9 +25,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV=		ac_cv_func_strnvis=no
 CONFIGURE_ARGS=		--prefix=${PREFIX} --with-md5-passwords \
 			--without-zlib-version-check --with-ssl-engine
-PRECIOUS=		ssh_config sshd_config ssh_host_key ssh_host_key.pub \
-			ssh_host_rsa_key ssh_host_rsa_key.pub ssh_host_dsa_key \
-			ssh_host_dsa_key.pub
 ETCOLD=			${PREFIX}/etc
 
 SUDO?=		# empty
@@ -156,14 +153,6 @@ BROKEN=		KERB_GSSAPI Requires either MIT or HEMIDAL, does not build with base He
 
 .if ${PORT_OPTIONS:MHEIMDAL_BASE} && !exists(/usr/lib/libkrb5.so)
 IGNORE=		you have selected HEIMDAL_BASE but do not have heimdal installed in base
-.endif
-
-.if ${PORT_OPTIONS:MPAM} && !exists(/usr/include/security/pam_modules.h)
-IGNORE=		PAM must be installed in base
-.endif
-
-.if ${PORT_OPTIONS:MTCP_WRAPPERS} && !exists(/usr/include/tcpd.h)
-IGNORE=		required /usr/include/tcpd.h missing
 .endif
 
 .if ${PORT_OPTIONS:MMIT} || ${PORT_OPTIONS:MHEIMDAL} || ${PORT_OPTIONS:MHEIMDAL_BASE}
