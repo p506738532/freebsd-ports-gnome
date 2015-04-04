@@ -37,6 +37,14 @@ INSTALL_TARGET=	install-strip
 DOCS=		AUTHORS COPYING ChangeLog NEWS README
 GLIB_SCHEMAS=	org.gnome.Cheese.gschema.xml
 
+OPTIONS_DEFINE=	MANPAGES
+OPTIONS_DEFAULT=MANPAGES
+
+MANPAGES_CONFIGURE_ENABLE=	man
+MANPAGES_BUILD_DEPENDS=	docbook-xml>=0:${PORTSDIR}/textproc/docbook-xml \
+			docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
+MANPAGES_USE=	GNOME=libxslt:build
+
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in ${DOCS}
