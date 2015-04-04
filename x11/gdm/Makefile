@@ -3,6 +3,7 @@
 
 PORTNAME=	gdm
 PORTVERSION=	3.16.0.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -57,6 +58,7 @@ CONFIGURE_ARGS=	--disable-static \
 		--with-dbus-sys=${PREFIX}/etc/dbus-1/system.d \
 		--with-log-dir=/var/log/gdm \
 		--localstatedir=/var \
+		--with-console-kit \
 		--with-working-directory=${PREFIX}/etc/gdm/home \
 		--with-sysconfsubdir=gdm \
 		--with-pid-file=/var/run/gdm.pid \
