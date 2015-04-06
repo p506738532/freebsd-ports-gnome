@@ -9,7 +9,7 @@ sbin/mate-power-backlight-helper
 share/MateConf/gsettings/mate-power-manager.convert
 share/applications/mate-power-preferences.desktop
 share/applications/mate-power-statistics.desktop
-share/dbus-1/services/mate-power-manager.service
+share/dbus-1/services/org.mate.PowerManager.service
 share/dbus-1/services/org.mate.panel.applet.BrightnessAppletFactory.service
 share/dbus-1/services/org.mate.panel.applet.InhibitAppletFactory.service
 share/help/C/mate-power-manager/figures/applet-brightness.png
@@ -317,6 +317,7 @@ share/locale/is/LC_MESSAGES/mate-power-manager.mo
 share/locale/it/LC_MESSAGES/mate-power-manager.mo
 share/locale/ja/LC_MESSAGES/mate-power-manager.mo
 share/locale/ka/LC_MESSAGES/mate-power-manager.mo
+share/locale/kk/LC_MESSAGES/mate-power-manager.mo
 share/locale/kn/LC_MESSAGES/mate-power-manager.mo
 share/locale/ko/LC_MESSAGES/mate-power-manager.mo
 share/locale/ku/LC_MESSAGES/mate-power-manager.mo
