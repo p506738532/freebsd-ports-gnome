@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	eom
-PORTVERSION=	1.9.1
+PORTVERSION=	1.9.90
 CATEGORIES=	graphics mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -21,7 +21,7 @@ USE_MATE=	desktop icontheme
 USE_XORG=	x11
 USE_GNOME=	gdkpixbuf2 glib20 gtk20 librsvg2 libxml2
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-gtk-doc \
+CONFIGURE_ARGS+=	--disable-gtk-doc \
 		--with-html-dir=${PREFIX}/share/doc \
 		--with-gtk=2.0 \
 		--disable-python \
