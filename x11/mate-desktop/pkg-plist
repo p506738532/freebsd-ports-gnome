@@ -1,5 +1,6 @@
 bin/mate-about
 bin/mate-color-select
+%%PASTE%%bin/mpaste
 include/mate-desktop-2.0/libmate-desktop/mate-aboutdialog.h
 include/mate-desktop-2.0/libmate-desktop/mate-bg-crossfade.h
 include/mate-desktop-2.0/libmate-desktop/mate-bg.h
