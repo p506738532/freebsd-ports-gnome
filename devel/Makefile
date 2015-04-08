@@ -1155,6 +1155,7 @@
     SUBDIR += librevisa
     SUBDIR += librevisa-vish
     SUBDIR += librevisa-vxi
+    SUBDIR += librolegen
     SUBDIR += libruin
     SUBDIR += libs11n
     SUBDIR += libsearpc
@@ -3995,6 +3996,7 @@
     SUBDIR += py-pyke
     SUBDIR += py-pymarc
     SUBDIR += py-pympler
+    SUBDIR += py-pymtbl
     SUBDIR += py-pyparsing15
     SUBDIR += py-pyro
     SUBDIR += py-pyshapelib
@@ -4483,7 +4485,6 @@
     SUBDIR += rubygem-ffi-compiler
     SUBDIR += rubygem-ffi-yajl
     SUBDIR += rubygem-file-tail
-    SUBDIR += rubygem-filemagic
     SUBDIR += rubygem-fluent-logger
     SUBDIR += rubygem-fog
     SUBDIR += rubygem-fog-brightbox
@@ -4659,6 +4660,7 @@
     SUBDIR += rubygem-rspec-support
     SUBDIR += rubygem-rubigen
     SUBDIR += rubygem-ruby-bugzilla
+    SUBDIR += rubygem-ruby-filemagic
     SUBDIR += rubygem-ruby-ole
     SUBDIR += rubygem-ruby-prof
     SUBDIR += rubygem-ruby-sdl-ffi
@@ -4728,7 +4730,7 @@
     SUBDIR += rubygem-tins
     SUBDIR += rubygem-tins0
     SUBDIR += rubygem-toml
-    SUBDIR += rubygem-transactionsimple
+    SUBDIR += rubygem-transaction-simple
     SUBDIR += rubygem-travis
     SUBDIR += rubygem-treetop
     SUBDIR += rubygem-trollop

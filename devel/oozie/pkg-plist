@@ -63,8 +63,8 @@ oozie/libext/hadoop-yarn-common-%%HADOOP_VERSION%%.jar
 oozie/libext/hadoop-yarn-server-common-%%HADOOP_VERSION%%.jar
 oozie/libext/httpclient-4.2.5.jar
 oozie/libext/httpcore-4.2.5.jar
-oozie/libext/jackson-core-asl-1.8.8.jar
-oozie/libext/jackson-mapper-asl-1.8.8.jar
+oozie/libext/jackson-core-asl-1.9.13.jar
+oozie/libext/jackson-mapper-asl-1.9.13.jar
 oozie/libext/jaxb-api-2.2.2.jar
 oozie/libext/jersey-core-1.9.jar
 oozie/libext/jetty-util-6.1.14.jar
@@ -79,7 +79,7 @@ oozie/libext/snappy-java-1.0.4.1.jar
 oozie/libext/stax-api-1.0-2.jar
 oozie/libext/xmlenc-0.52.jar
 oozie/libext/xz-1.0.jar
-oozie/libext/zookeeper-3.4.5.jar
+oozie/libext/zookeeper-3.4.6.jar
 oozie/libtools/JavaEWAH-0.7.9.jar
 oozie/libtools/activemq-client-5.8.0.jar
 oozie/libtools/apache-log4j-extras-1.1.jar
