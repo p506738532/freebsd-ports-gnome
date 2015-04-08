@@ -10,6 +10,28 @@ in the release notes and/or placed into UPDATING.
 
 All ports committers are allowed to commit to this file.
 
+20150407:
+AUTHOR: bapt@FreeBSD.org
+
+  USE_XZ and USE_BZIP2 are not supported anymore, they have been replaced by
+  USES=tar:bzip2 and tar:xz
+
+20150328:
+AUTHOR: bapt@FreeBSD.org
+
+  New "metaport" USES to take care of predefining correctly the needed
+  macros as expected by meta ports.
+
+20150323:
+AUTHOR: bapt@FreeBSD.org
+
+  Remove "@fc" and "@fontsdir". All fonts should always use @fcfontsdir which
+  Properly takes care of the fonts.dir and fonts.scale cache files as well
+  as ensure to properly update the fontconfig cache
+
+  New "fonts" USES. It defines the default variables needed for fonts and also
+  takes care of the run time dependencies
+
 20150326:
 AUTHOR: bdrewery@FreeBSD.org
 
