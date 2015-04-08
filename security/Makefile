@@ -789,6 +789,7 @@
     SUBDIR += py-ed25519ll
     SUBDIR += py-fail2ban
     SUBDIR += py-fchksum
+    SUBDIR += py-flask-httpauth
     SUBDIR += py-gnupg
     SUBDIR += py-gnutls
     SUBDIR += py-htpasswd
@@ -815,6 +816,7 @@
     SUBDIR += py-plone.session
     SUBDIR += py-potr
     SUBDIR += py-pow
+    SUBDIR += py-pyaff4
     SUBDIR += py-pyclamd
     SUBDIR += py-pycrypto
     SUBDIR += py-pycryptopp

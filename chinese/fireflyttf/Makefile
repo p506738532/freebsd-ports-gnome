@@ -14,6 +14,7 @@ COMMENT=	Firefly TrueType Font is combine of two arphic sung fonts
 
 CONFLICTS=	zh-opendesktop-fonts-*
 
+BROKEN=		Unfetchable
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
@@ -40,7 +41,7 @@ post-extract:
 	@${MV} ${WRKSRC}/fireflysung-1.3.0p1/fireflysung.ttf  ${WRKSRC}
 	@${RM} -rf ${WRKSRC}/fireflysung-1.3.0p1
 .else
-	${DO_NADA}
+	${TRUE}
 .endif
 
 do-install:

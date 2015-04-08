@@ -93,7 +93,6 @@
     SUBDIR += ghc
     SUBDIR += gjs
     SUBDIR += gnat_util
-    SUBDIR += gnatdroid-armv5
     SUBDIR += gnatdroid-armv7
     SUBDIR += gnatdroid-binutils
     SUBDIR += gnatdroid-sysroot
@@ -168,7 +167,7 @@
     SUBDIR += newlisp-devel
     SUBDIR += nhc98
     SUBDIR += nickle
-    SUBDIR += nimrod
+    SUBDIR += nim
     SUBDIR += nml
     SUBDIR += nqc
     SUBDIR += nwcc

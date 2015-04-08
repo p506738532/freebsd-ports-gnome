@@ -5,7 +5,7 @@ PORTNAME=	portell
 PORTVERSION=	0.2
 PORTREVISION=	1
 CATEGORIES=	ports-mgmt
-MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/${PORTNAME}%20${PORTVERSION}
+MASTER_SITES=	http://www.freebsdcluster.org/~mich/software/
 
 MAINTAINER=	mich@FreeBSD.org
 COMMENT=	Quick display of FreeBSD port descriptions
