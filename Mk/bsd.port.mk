@@ -389,10 +389,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # USE_RUBY		- If set, this port relies on the Ruby language.
 #				  Implies inclusion of bsd.ruby.mk.  (Also see
 #				  that file for more information on USE_RUBY_*).
-# USE_GNUSTEP	- If set, this port relies on the GNUstep system.
-#				  Implies the inclusion of bsd.gnustep.mk.
-#				  (Also see that file for more information on
-#				  USE_GNUSTEP_*).
 ##
 # USE_GECKO		- If set, this port uses the Gecko/Mozilla product.
 #				  See bsd.gecko.mk for more details.
@@ -517,7 +513,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # BUNDLE_LIBS	  Teach pkg(8) to not automatically add all shared libraries
 # 				  installed by a port as a "provided" shared libraries provided
 # 				  for other packages (prevent them from being exposed in the
-# 				  solver). This has to be used for ports that bundles third
+# 				  solver). This has to be used for ports that bundle third
 # 				  party libraries for internal usage.
 # MASTERDIR		- Where the port finds patches, package files, etc.  Define
 #				  this is you have two or more ports that share most of the
@@ -1373,10 +1369,6 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 .include "${PORTSDIR}/Mk/bsd.emacs.mk"
 .endif
 
-.if defined(USE_GNUSTEP)
-.include "${PORTSDIR}/Mk/bsd.gnustep.mk"
-.endif
-
 .if defined(USE_PHP)
 .include "${PORTSDIR}/Mk/bsd.php.mk"
 .endif
@@ -2047,7 +2039,7 @@ ${lang}FLAGS+=	${${lang}FLAGS_${ARCH}}
 
 # Multiple make jobs support
 .if defined(DISABLE_MAKE_JOBS) || defined(MAKE_JOBS_UNSAFE)
-_MAKE_JOBS=		#
+_MAKE_JOBS?=		#
 MAKE_JOBS_NUMBER=	1
 .else
 .if defined(MAKE_JOBS_NUMBER)
@@ -2658,6 +2650,7 @@ LATEST_LINK?=		${PKGBASE}
 PKGLATESTFILE=		${PKGLATESTREPOSITORY}/${LATEST_LINK}${PKG_SUFX}
 
 CONFIGURE_SCRIPT?=	configure
+CONFIGURE_CMD?=		./${CONFIGURE_SCRIPT}
 CONFIGURE_TARGET?=	${ARCH}-portbld-${OPSYS:tl}${OSREL}
 CONFIGURE_TARGET:=	${CONFIGURE_TARGET:S/--build=//}
 CONFIGURE_LOG?=		config.log
@@ -3395,7 +3388,7 @@ do-configure:
 	    INSTALL_LIB="${INSTALL_LIB}" \
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
-	    ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}; then \
+	    ${CONFIGURE_ENV} ${CONFIGURE_CMD} ${CONFIGURE_ARGS}; then \
 			 ${ECHO_MSG} "===>  Script \"${CONFIGURE_SCRIPT}\" failed unexpectedly."; \
 			 (${ECHO_CMD} ${CONFIGURE_FAIL_MESSAGE}) | ${FMT} 75 79 ; \
 			 ${FALSE}; \
