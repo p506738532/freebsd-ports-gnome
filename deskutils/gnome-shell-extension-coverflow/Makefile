@@ -3,6 +3,7 @@
 
 PORTNAME=	gnome-shell-extension-coverflow
 PORTVERSION=	0.0.0.20141126
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -14,19 +15,16 @@ BUILD_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 		gsettings-desktop-schemas>=3.12.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-WRKSRC=		${WRKDIR}/dmo60-CoverflowAltTab-${GH_COMMIT}
-
 USES=		gettext gmake pkgconfig tar:xz
 USE_GNOME=	glib20
-USE_GITHUB=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.shell.extensions.coverflowalttab.gschema.xml
 
+USE_GITHUB=	yes
 GH_ACCOUNT=	dmo60
-GH_TAGNAME=	c22c771
-GH_COMMIT=	c22c771
 GH_PROJECT=	CoverflowAltTab
+GH_TAGNAME=	c22c771
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 

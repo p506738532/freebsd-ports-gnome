@@ -1,6 +1,5 @@
 # Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
 # $FreeBSD$
-#   $MCom$
 
 PORTNAME=	gnome-shell-extra-extensions
 PORTVERSION=	3.14.0
