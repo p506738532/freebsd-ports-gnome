@@ -30,4 +30,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.bijiben.gschema.xml
 
+# needed for webkit
+USES+=		compiler:c++11-lib
+
 .include <bsd.port.mk>

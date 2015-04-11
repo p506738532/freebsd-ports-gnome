@@ -55,6 +55,7 @@
     SUBDIR += dvdrip
     SUBDIR += dvdstyler
     SUBDIR += dvts
+    SUBDIR += emby-server
     SUBDIR += emotion_generic_players-vlc
     SUBDIR += emovix
     SUBDIR += ffmpeg
@@ -221,7 +222,6 @@
     SUBDIR += lxdvdrip
     SUBDIR += m2tstoavi
     SUBDIR += m2vrequantiser
-    SUBDIR += mediabrowser
     SUBDIR += mediadownloader
     SUBDIR += mediainfo
     SUBDIR += mencoder

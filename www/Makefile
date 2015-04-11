@@ -96,6 +96,7 @@
     SUBDIR += coppermine
     SUBDIR += cowboy
     SUBDIR += cplanet
+    SUBDIR += cppcms
     SUBDIR += crawl
     SUBDIR += crp
     SUBDIR += css-mode.el
@@ -2038,7 +2039,6 @@
     SUBDIR += trac-advancedticketworkflow
     SUBDIR += trac-attachmentpolicy
     SUBDIR += trac-autocomplete
-    SUBDIR += trac-batchmodify
     SUBDIR += trac-bzr
     SUBDIR += trac-ccselector
     SUBDIR += trac-childtickets

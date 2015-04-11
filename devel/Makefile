@@ -470,6 +470,7 @@
     SUBDIR += frama-c
     SUBDIR += freeocl
     SUBDIR += frink
+    SUBDIR += fstrm
     SUBDIR += ftjam
     SUBDIR += ftnchek
     SUBDIR += fuel

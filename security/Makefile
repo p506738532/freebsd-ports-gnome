@@ -835,6 +835,7 @@
     SUBDIR += py-ssh
     SUBDIR += py-sslstrip
     SUBDIR += py-stem
+    SUBDIR += py-stix
     SUBDIR += py-tlslite
     SUBDIR += py-trustedpickle
     SUBDIR += py-twistedConch

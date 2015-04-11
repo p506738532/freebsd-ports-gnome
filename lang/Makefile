@@ -22,11 +22,13 @@
     SUBDIR += bigloo
     SUBDIR += bsh
     SUBDIR += bwbasic
+    SUBDIR += c
     SUBDIR += ccl
     SUBDIR += cdent
     SUBDIR += cduce
     SUBDIR += ceylon
     SUBDIR += cfortran
+    SUBDIR += chibi-scheme
     SUBDIR += chicken
     SUBDIR += cint
     SUBDIR += cjs

@@ -146,7 +146,7 @@ BUILD_DEPENDS+=	bash:${PORTSDIR}/shells/bash \
 CONFIGURE_ARGS+=--without-pulse
 USE_AUTOTOOLS=	autoconf
 
-pre-configure:
+post-extract:
 	cd ${WRKSRC} && ${TAR} xf ${DISTDIR}/${COMP_DIST} --strip-components 1
 	cd ${WRKSRC} && bash ./patches/patchinstall.sh --backend=patch DESTDIR=${WRKSRC} --all
 .endif
