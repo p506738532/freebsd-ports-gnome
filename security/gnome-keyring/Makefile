@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-keyring
-PORTVERSION=	3.15.92
+PORTVERSION=	3.16.0
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,7 +23,7 @@ RUN_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss
 
 PORTSCOUT=	limitw:1,even
 
-USE_GNOME=	gnomeprefix gtk30 intlhack libxslt:build
+USE_GNOME=	gtk30 intlhack libxslt:build
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
