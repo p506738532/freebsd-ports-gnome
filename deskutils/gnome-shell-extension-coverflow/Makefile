@@ -3,7 +3,7 @@
 
 PORTNAME=	gnome-shell-extension-coverflow
 PORTVERSION=	0.0.0.20141126
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -29,6 +29,10 @@ GH_TAGNAME=	c22c771
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 
 NO_BUILD=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|"3.14"|"3.14","3.16"|g' \
+		${WRKSRC}/CoverflowAltTab@dmo60.de/metadata.json
 
 do-install:
 		@${MKDIR} ${STAGEDIR}${PREFIX}/share/glib-2.0/schemas/
