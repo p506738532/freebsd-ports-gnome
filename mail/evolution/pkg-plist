@@ -5427,6 +5427,7 @@ share/icons/hicolor/48x48/apps/evolution-mail.png
 share/icons/hicolor/48x48/apps/evolution-memos.png
 share/icons/hicolor/48x48/apps/evolution-tasks.png
 share/icons/hicolor/48x48/apps/evolution.png
+share/icons/hicolor/symbolic/apps/evolution-symbolic.svg
 share/locale/af/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/am/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/an/LC_MESSAGES/evolution-%%VERSION%%.mo
