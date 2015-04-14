@@ -425,16 +425,9 @@ share/help/zh_CN/iagno/translate.page
 %%DATADIR%%/themes/key/adwaita.theme
 %%DATADIR%%/themes/key/classic.theme
 %%DATADIR%%/themes/key/high_contrast.theme
-%%DATADIR%%/themes/key/sun_and_star.theme
 %%DATADIR%%/themes/svg/black_and_white.svg
 %%DATADIR%%/themes/svg/high_contrast.svg
 %%DATADIR%%/themes/svg/sun_and_star.svg
-share/icons/HighContrast/16x16/apps/iagno.png
-share/icons/HighContrast/22x22/apps/iagno.png
-share/icons/HighContrast/24x24/apps/iagno.png
-share/icons/HighContrast/256x256/apps/iagno.png
-share/icons/HighContrast/32x32/apps/iagno.png
-share/icons/HighContrast/48x48/apps/iagno.png
 share/icons/hicolor/16x16/apps/iagno.png
 share/icons/hicolor/22x22/apps/iagno.png
 share/icons/hicolor/24x24/apps/iagno.png
