@@ -23,4 +23,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
+GLIB_SCHEMAS=	org.mate.Caja.Sendto.gschema.xml \
+		org.mate.caja-open-terminal.gschema.xml
+
 .include <bsd.port.mk>
