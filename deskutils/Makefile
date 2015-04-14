@@ -64,6 +64,7 @@
     SUBDIR += glipper
     SUBDIR += gnochm
     SUBDIR += gnome-blog
+    SUBDIR += gnome-characters
     SUBDIR += gnome-clocks
     SUBDIR += gnome-contacts
     SUBDIR += gnome-dictionary
