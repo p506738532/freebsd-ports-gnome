@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-clocks
-PORTVERSION=	3.16.0
+PORTVERSION=	3.16.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,6 +26,8 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib
+
+GLIB_SCHEMAS=	org.gnome.clocks.gschema.xml
 
 post-patch:
 # for base gcc on 9.x
