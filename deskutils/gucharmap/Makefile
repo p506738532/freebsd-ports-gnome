@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gucharmap
-PORTVERSION=	3.16.0
+PORTVERSION=	3.16.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -11,7 +11,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Unicode/ISO10646 character map and font viewer
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
-#		appdata-validate>=0:${PORTSDIR}/devel/appstream-glib
 
 PORTSCOUT=	limitw:1,even
 
