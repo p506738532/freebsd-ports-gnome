@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	caribou
-PORTVERSION=	0.4.18
+PORTVERSION=	0.4.18.1
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
