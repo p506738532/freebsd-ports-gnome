@@ -10,7 +10,7 @@ lib/gnome-panel/5.0/libnotification-area-applet.so
 lib/gnome-panel/5.0/libwnck-applet.so
 lib/libpanel-applet.so
 lib/libpanel-applet.so.0
-lib/libpanel-applet.so.0.0.2
+lib/libpanel-applet.so.0.0.3
 libdata/pkgconfig/libpanel-applet.pc
 man/man1/gnome-panel.1.gz
 share/applications/gnome-panel.desktop
