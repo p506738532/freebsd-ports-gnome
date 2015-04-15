@@ -56,7 +56,7 @@ MAPS_RUN_DEPENDS=	evolution-mapi>=3.0.0:${PORTSDIR}/mail/evolution-mapi
 RUN_DEPENDS+=	empathy>=3.0.0:${PORTSDIR}/net-im/empathy \
 		epiphany>=3.0.0:${PORTSDIR}/www/epiphany \
 		gucharmap>=3.0.0:${PORTSDIR}/deskutils/gucharmap \
-		gnome-characters>=3.0.0:${PORTSDIR}/desktutils/gnome-characters \
+		gnome-characters>=3.0.0:${PORTSDIR}/deskutils/gnome-characters \
 		eog>=3.0.0:${PORTSDIR}/graphics/eog \
 		eog-plugins>=3.0.0:${PORTSDIR}/graphics/eog-plugins \
 		gedit>=3.0.0:${PORTSDIR}/editors/gedit \
