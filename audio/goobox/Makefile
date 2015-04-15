@@ -3,8 +3,7 @@
 #   $MCom: ports/trunk/audio/goobox/Makefile 19823 2014-08-20 09:28:14Z gusi $
 
 PORTNAME=	goobox
-PORTVERSION=	3.3.2
-PORTREVISION=	1
+PORTVERSION=	3.4.0
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
