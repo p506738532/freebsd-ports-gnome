@@ -34,16 +34,12 @@ GLIB_SCHEMAS=	org.gnome.gnote.gschema.xml
 
 DOCS=		AUTHORS ChangeLog NEWS README TODO
 
-.include <bsd.port.options.mk>
-
 PLIST_SUB+=	VERSION=${PORTVERSION}
 
 post-install:
-.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for i in ${DOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
-.endif
 
 .include <bsd.port.mk>
