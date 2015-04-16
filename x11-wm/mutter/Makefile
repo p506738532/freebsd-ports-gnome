@@ -39,6 +39,11 @@ PLIST_SUB=	VERSION=${PORTVERSION:R}
 
 .include <bsd.port.options.mk>
 
+.if ${OSVERSION} < 1000000 && ${OPSYS} == FreeBSD
+EXTRA_PATCHES=	${FILESDIR}/extra-src_core_keybindings-private.h \
+		${FILESDIR}/extra-src_ui_frames.h
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wcast-align||g' \
 		${WRKSRC}/configure
