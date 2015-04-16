@@ -43,4 +43,10 @@ MANPAGES_USE=	GNOME=libxslt:build
 LIB_DEPENDS+=	libarchive.so.13:${PORTSDIR}/archivers/libarchive
 .endif
 
+.if ${OSVERSION} < 1000000 && ${OPSYS} == FreeBSD
+post-patch:
+	${REINPLACE_CMD} -e 's|-Wtype-limits||g' \
+		${WRKSRC}/configure
+.endif
+
 .include <bsd.port.mk>
