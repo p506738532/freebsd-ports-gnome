@@ -99,6 +99,10 @@ CONFIGURE_ARGS+=	--enable-debug=yes \
 			--disable-silent-rules
 .endif
 
+.if ${OSVERSION} < 900000
+EXTRA_PATCHES+=	${FILESDIR}/extra-gio_giotypes.h
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
 		s|/usr/share/locale/locale|${LOCALBASE}/share/locale/locale|g' \
