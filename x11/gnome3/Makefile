@@ -57,6 +57,7 @@ RUN_DEPENDS+=	empathy>=3.0.0:${PORTSDIR}/net-im/empathy \
 		epiphany>=3.0.0:${PORTSDIR}/www/epiphany \
 		gucharmap>=3.0.0:${PORTSDIR}/deskutils/gucharmap \
 		gnome-characters>=3.0.0:${PORTSDIR}/deskutils/gnome-characters \
+		gnome-calendar>=3.0:${PORTSDIR}/deskutils/gnome-calendar \
 		eog>=3.0.0:${PORTSDIR}/graphics/eog \
 		eog-plugins>=3.0.0:${PORTSDIR}/graphics/eog-plugins \
 		gedit>=3.0.0:${PORTSDIR}/editors/gedit \
