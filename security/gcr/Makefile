@@ -3,6 +3,7 @@
 
 PORTNAME=	gcr
 PORTVERSION=	3.15.92
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
@@ -28,5 +29,11 @@ INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.crypto.pgp.gschema.xml
+
+.include <bsd.port.options.mk>
+
+.if ${OSVERSION} < 900000
+EXTRA_PATCHES=	${FILESDIR}/extra-gck_gck.h
+.endif
 
 .include <bsd.port.mk>
