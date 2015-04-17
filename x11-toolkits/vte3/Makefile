@@ -53,16 +53,19 @@ PLIST_SUB=	VERSION=2.91
 EXTRA_PATCHES+=		${FILESDIR}/extra-patch-gnome-pty-helper_gnome-utmp.c
 .endif
 
+.if ${OSVERSION} < 1000000
+CFLAGS+=	-lz
+.endif
+
 post-patch:
 .if ${VTE3_SLAVE} != yes
 	@${REINPLACE_CMD} -e 's|-Wno-unused-but-set-variable||g' \
 		${WRKSRC}/src/Makefile.in
+.endif
 # zlib.pc only is available on 10.1-R and newer.
 .if ${OSVERSION} < 1000000
-CFLAGS+=	-lz
 	@${REINPLACE_CMD} -e 's|gio-unix-2.0 zlib|gio-unix-2.0|g' \
 		${WRKSRC}/configure
-.endif
 .endif
 # borrowed osversion from bsd.ssp.mk
 .if ${OSVERSION} < 1000036 && ${ARCH} == i386
