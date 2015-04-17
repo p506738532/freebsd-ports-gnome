@@ -31,4 +31,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.gnome.online-accounts.gschema.xml
 
+# for webkit2-gtk3
+USES+=		compiler:c++11-lib
+
 .include <bsd.port.mk>

@@ -49,6 +49,8 @@ GLIB_SCHEMAS=	org.gnome.Epiphany.enums.xml \
 PLIST_SUB+=	EPHY_VERSION=${PORTVERSION:R}
 
 CONFIGURE_ARGS+=	--enable-compile-warnings=no
+# for webkit2-gtk3
+USES+=		compiler:c++11-lib
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|execinfo.h|#|g ; s|-ldl"$$|"|g' \
