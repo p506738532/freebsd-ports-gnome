@@ -17,7 +17,6 @@ LIB_DEPENDS=	libnss3.so:${PORTSDIR}/security/nss \
 		libgtkspell3-3.so:${PORTSDIR}/textproc/gtkspell3 \
 		libgeocode-glib.so:${PORTSDIR}/net/geocode-glib \
 		libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
-		libgnome-autoar-gtk.so:${PORTSDIR}/archivers/gnome-autoar \
 		libcryptui.so:${PORTSDIR}/security/libcryptui \
 		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 		libnotify.so:${PORTSDIR}/devel/libnotify
@@ -34,9 +33,8 @@ USE_GSTREAMER1=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-nss=yes \
+		--disable-autoar \
 		--with-sub-version=" FreeBSD GNOME Team Port"
-# gtkimageview needs to get a gtk3 release first.
-CONFIGURE_ARGS+=--disable-image-inline
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
@@ -85,11 +83,11 @@ LDAP_USE=	OPENLDAP=yes
 WEATHER_LIB_DEPENDS=	libgweather-3.so:${PORTSDIR}/net/libgweather
 WEATHER_CONFIGURE_ENABLE=	weather
 
-SPAMASSASSIN_CONFIGURE_ENABLE=	spamassassin
+SPAMASSASSIN_CONFIGURE_WITH=	spamassassin
 SPAMASSASSIN_BUILD_DEPENDS=	spamassassin:${PORTSDIR}/mail/spamassassin
 SPAMASSASSIN_RUN_DEPENDS=	spamassassin:${PORTSDIR}/mail/spamassassin
 
-BOGOFILTER_CONFIGURE_ENABLE=	bogofilter
+BOGOFILTER_CONFIGURE_WITH=	bogofilter
 BOGOFILTER_BUILD_DEPENDS=	bogofilter:${PORTSDIR}/mail/bogofilter
 BOGOFILTER_RUN_DEPENDS=	bogofilter:${PORTSDIR}/mail/bogofilter
 
