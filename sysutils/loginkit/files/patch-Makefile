@@ -1,0 +1,13 @@
+--- Makefile.orig	2015-02-21 13:29:30.000000000 +0100
++++ Makefile	2015-04-18 23:14:20.842958000 +0200
+@@ -11,8 +11,8 @@
+ 	cd loginkitd; $(MAKE)
+ 
+ install: all
+-	$(INSTALL) -D -m 755 loginkitd/loginkitd $(DESTDIR)/$(SBIN_DIR)/loginkitd
+-	$(INSTALL) -D -m 644 loginkitd/org.freedesktop.login1.service $(DESTDIR)/$(DATA_DIR)/dbus-1/system-services/org.freedesktop.login1.service
++	$(INSTALL) -m 755 loginkitd/loginkitd $(DESTDIR)/$(SBIN_DIR)/loginkitd
++	$(INSTALL) -m 644 loginkitd/org.freedesktop.login1.service $(DESTDIR)/$(DATA_DIR)/dbus-1/system-services/org.freedesktop.login1.service
+ 
+ clean:
+ 	cd loginkitd; $(MAKE) clean

@@ -479,6 +479,7 @@
     SUBDIR += lnav
     SUBDIR += log_analysis
     SUBDIR += loganalyzer
+    SUBDIR += loginkit
     SUBDIR += logrotate
     SUBDIR += logstalgia
     SUBDIR += logstash

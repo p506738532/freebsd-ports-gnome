@@ -1,0 +1,5 @@
+LoginKit is an attempt to implement a logind
+(http://www.freedesktop.org/wiki/Software/systemd) shim, which allows packages
+that depend on it to work, without dependency on a specific init system.
+
+WWW: https://github.com/dimkr/LoginKit
