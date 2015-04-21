@@ -2,16 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	gnome3
-PORTVERSION=	3.16.0
+PORTVERSION=	3.16.1
 CATEGORIES?=	x11 gnome
-MASTER_SITES=	# empty
-DISTFILES=	# empty
-EXTRACT_ONLY=	# empty
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT?=	The "meta-port" for the GNOME 3 integrated X11 desktop
-
-CONFLICTS?=	gnome3-lite-[0-9]*
+COMMENT?=	"meta-port" for the GNOME 3 integrated X11 desktop
 
 RUN_DEPENDS?=	dconf-editor:${PORTSDIR}/devel/dconf-editor \
 		gnome-session>=3.0.0:${PORTSDIR}/x11/gnome-session \
@@ -38,9 +33,9 @@ RUN_DEPENDS?=	dconf-editor:${PORTSDIR}/devel/dconf-editor \
 		${LOCALBASE}/share/sounds/freedesktop/index.theme:${PORTSDIR}/audio/freedesktop-sound-theme \
 		ekiga:${PORTSDIR}/net-im/ekiga
 
-NO_BUILD=	yes
-NO_MTREE=	yes
-NO_INSTALL=	yes
+CONFLICTS?=	gnome3-lite-[0-9]*
+
+USES=		metaport
 
 .if ${.CURDIR:T}!="gnome3-lite"
 OPTIONS_DEFINE+=MAPI
