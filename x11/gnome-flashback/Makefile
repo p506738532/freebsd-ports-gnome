@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnome-flashback
-PORTVERSION=	3.15.2
+PORTVERSION=	3.16.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,7 +12,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Unofficial session and helper application
 
 LIB_DEPENDS=	libpulse.so.0:${PORTSDIR}/audio/pulseaudio \
-		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
+		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
+		libupower-glib.so:${PORTSDIR}/sysutils/upower
 RUN_DEPENDS=	gnome-panel>=0:${PORTSDIR}/x11/gnome-panel \
 		gnome-keyring>=3.0.0:${PORTSDIR}/security/gnome-keyring \
 		gnome-power-manager>=3.0.0:${PORTSDIR}/sysutils/gnome-power-manager \
@@ -30,7 +31,6 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-#NO_BUILD=	yes
 
 GLIB_SCHEMAS=	org.gnome.gnome-flashback.gschema.xml
 
