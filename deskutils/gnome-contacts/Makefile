@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-contacts
-PORTVERSION=	3.16.1
+PORTVERSION=	3.16.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -45,7 +45,7 @@ CHEESE_CONFIGURE_WITH=	cheese
 CHEESE_LIB_DEPENDS=	libcheese-gtk.so:${PORTSDIR}/multimedia/cheese
 
 MANPAGES_CONFIGURE_ENABLE=	man-pages
-MANPAGES_USE		GNOME=libxslt:build
+MANPAGES_USE=		GNOME=libxslt:build
 MANPAGES_BUILD_DEPENDS=	docbook-xml>=0:${PORTSDIR}/textproc/docbook-xml \
 			docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
 
