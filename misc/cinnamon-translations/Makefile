@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/misc/cinnamon-translations/Makefile 19857 2014-09-13 09:46:37Z gusi $
 
 PORTNAME=	cinnamon-translations
-PORTVERSION=	2.4.2
+PORTVERSION=	2.4.4
 CATEGORIES=	misc x11 gnome
 MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3

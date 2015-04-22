@@ -20,9 +20,12 @@ share/locale/as/LC_MESSAGES/cinnamon-bluetooth.mo
 share/locale/as/LC_MESSAGES/cinnamon-control-center.mo
 share/locale/as/LC_MESSAGES/cinnamon-screensaver.mo
 share/locale/as/LC_MESSAGES/nemo.mo
+share/locale/ast/LC_MESSAGES/cinnamon-bluetooth.mo
 share/locale/ast/LC_MESSAGES/cinnamon-control-center.mo
 share/locale/ast/LC_MESSAGES/cinnamon-screensaver.mo
+share/locale/ast/LC_MESSAGES/cinnamon-session.mo
 share/locale/ast/LC_MESSAGES/cinnamon.mo
+share/locale/ast/LC_MESSAGES/nemo.mo
 share/locale/az/LC_MESSAGES/cinnamon-control-center.mo
 share/locale/az/LC_MESSAGES/cinnamon-session.mo
 share/locale/az/LC_MESSAGES/cinnamon.mo
@@ -151,7 +154,11 @@ share/locale/fi/LC_MESSAGES/cinnamon-screensaver.mo
 share/locale/fi/LC_MESSAGES/cinnamon-session.mo
 share/locale/fi/LC_MESSAGES/cinnamon.mo
 share/locale/fi/LC_MESSAGES/nemo.mo
+share/locale/fil/LC_MESSAGES/cinnamon-bluetooth.mo
+share/locale/fil/LC_MESSAGES/cinnamon-screensaver.mo
+share/locale/fil/LC_MESSAGES/cinnamon-session.mo
 share/locale/fil/LC_MESSAGES/cinnamon.mo
+share/locale/fil/LC_MESSAGES/nemo.mo
 share/locale/fo/LC_MESSAGES/cinnamon.mo
 share/locale/fr/LC_MESSAGES/cinnamon-bluetooth.mo
 share/locale/fr/LC_MESSAGES/cinnamon-control-center.mo
@@ -162,8 +169,13 @@ share/locale/fr/LC_MESSAGES/nemo.mo
 share/locale/fr_CA/LC_MESSAGES/cinnamon-bluetooth.mo
 share/locale/fr_CA/LC_MESSAGES/cinnamon-control-center.mo
 share/locale/fr_CA/LC_MESSAGES/cinnamon-screensaver.mo
+share/locale/fr_CA/LC_MESSAGES/cinnamon-session.mo
 share/locale/fr_CA/LC_MESSAGES/cinnamon.mo
 share/locale/fr_CA/LC_MESSAGES/nemo.mo
+share/locale/fy/LC_MESSAGES/cinnamon-bluetooth.mo
+share/locale/fy/LC_MESSAGES/cinnamon-session.mo
+share/locale/fy/LC_MESSAGES/cinnamon.mo
+share/locale/fy/LC_MESSAGES/nemo.mo
 share/locale/ga/LC_MESSAGES/cinnamon-control-center.mo
 share/locale/ga/LC_MESSAGES/cinnamon-screensaver.mo
 share/locale/ga/LC_MESSAGES/cinnamon.mo
@@ -180,6 +192,7 @@ share/locale/gl/LC_MESSAGES/cinnamon.mo
 share/locale/gl/LC_MESSAGES/nemo.mo
 share/locale/gu/LC_MESSAGES/cinnamon-control-center.mo
 share/locale/gu/LC_MESSAGES/cinnamon-screensaver.mo
+share/locale/gu/LC_MESSAGES/cinnamon-session.mo
 share/locale/gu/LC_MESSAGES/cinnamon.mo
 share/locale/he/LC_MESSAGES/cinnamon-bluetooth.mo
 share/locale/he/LC_MESSAGES/cinnamon-control-center.mo
@@ -256,8 +269,11 @@ share/locale/ko/LC_MESSAGES/nemo.mo
 share/locale/ksw/LC_MESSAGES/cinnamon-bluetooth.mo
 share/locale/ksw/LC_MESSAGES/cinnamon.mo
 share/locale/ksw/LC_MESSAGES/nemo.mo
+share/locale/ku/LC_MESSAGES/cinnamon-bluetooth.mo
 share/locale/ku/LC_MESSAGES/cinnamon-control-center.mo
 share/locale/ku/LC_MESSAGES/cinnamon-screensaver.mo
+share/locale/ku/LC_MESSAGES/cinnamon-session.mo
+share/locale/ku/LC_MESSAGES/cinnamon.mo
 share/locale/ky/LC_MESSAGES/cinnamon-control-center.mo
 share/locale/ky/LC_MESSAGES/cinnamon.mo
 share/locale/ky/LC_MESSAGES/nemo.mo
@@ -333,6 +349,7 @@ share/locale/nl/LC_MESSAGES/cinnamon-screensaver.mo
 share/locale/nl/LC_MESSAGES/cinnamon-session.mo
 share/locale/nl/LC_MESSAGES/cinnamon.mo
 share/locale/nl/LC_MESSAGES/nemo.mo
+share/locale/nn/LC_MESSAGES/cinnamon-bluetooth.mo
 share/locale/nn/LC_MESSAGES/cinnamon-control-center.mo
 share/locale/nn/LC_MESSAGES/cinnamon-screensaver.mo
 share/locale/nn/LC_MESSAGES/cinnamon.mo
@@ -456,8 +473,11 @@ share/locale/th/LC_MESSAGES/cinnamon-session.mo
 share/locale/th/LC_MESSAGES/cinnamon.mo
 share/locale/th/LC_MESSAGES/nemo.mo
 share/locale/tl/LC_MESSAGES/cinnamon-bluetooth.mo
+share/locale/tl/LC_MESSAGES/cinnamon-control-center.mo
 share/locale/tl/LC_MESSAGES/cinnamon-screensaver.mo
+share/locale/tl/LC_MESSAGES/cinnamon-session.mo
 share/locale/tl/LC_MESSAGES/cinnamon.mo
+share/locale/tl/LC_MESSAGES/nemo.mo
 share/locale/tlh/LC_MESSAGES/cinnamon.mo
 share/locale/tlh/LC_MESSAGES/nemo.mo
 share/locale/tpi/LC_MESSAGES/cinnamon-bluetooth.mo
@@ -469,8 +489,8 @@ share/locale/tr/LC_MESSAGES/cinnamon-session.mo
 share/locale/tr/LC_MESSAGES/cinnamon.mo
 share/locale/tr/LC_MESSAGES/nemo.mo
 share/locale/ts/LC_MESSAGES/cinnamon.mo
-share/locale/ug/LC_MESSAGES/cinnamon-control-center.mo
 share/locale/ug/LC_MESSAGES/cinnamon-bluetooth.mo
+share/locale/ug/LC_MESSAGES/cinnamon-control-center.mo
 share/locale/ug/LC_MESSAGES/cinnamon-screensaver.mo
 share/locale/ug/LC_MESSAGES/cinnamon.mo
 share/locale/uk/LC_MESSAGES/cinnamon-bluetooth.mo
@@ -480,6 +500,8 @@ share/locale/uk/LC_MESSAGES/cinnamon-session.mo
 share/locale/uk/LC_MESSAGES/cinnamon.mo
 share/locale/uk/LC_MESSAGES/nemo.mo
 share/locale/ur/LC_MESSAGES/cinnamon-bluetooth.mo
+share/locale/ur/LC_MESSAGES/cinnamon-screensaver.mo
+share/locale/ur/LC_MESSAGES/cinnamon-session.mo
 share/locale/ur/LC_MESSAGES/cinnamon.mo
 share/locale/uz/LC_MESSAGES/cinnamon-control-center.mo
 share/locale/uz/LC_MESSAGES/cinnamon.mo
@@ -491,6 +513,7 @@ share/locale/vi/LC_MESSAGES/cinnamon-session.mo
 share/locale/vi/LC_MESSAGES/cinnamon.mo
 share/locale/vi/LC_MESSAGES/nemo.mo
 share/locale/wa/LC_MESSAGES/cinnamon-control-center.mo
+share/locale/wa/LC_MESSAGES/cinnamon.mo
 share/locale/xh/LC_MESSAGES/cinnamon-control-center.mo
 share/locale/xh/LC_MESSAGES/cinnamon-screensaver.mo
 share/locale/xh/LC_MESSAGES/cinnamon.mo
