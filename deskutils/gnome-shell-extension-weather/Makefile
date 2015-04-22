@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell-extension-weather
-PORTVERSION=	0.0.0.20141126
+PORTVERSION=	0.0.0.20150421
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -20,14 +20,10 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	Neroth
-GH_TAGNAME=	329139f
+GH_TAGNAME=	746debe
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 
 GLIB_SCHEMAS=	org.gnome.shell.extensions.weather.gschema.xml
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|"3.14"|"3.14", "3.16"|g' \
-		${WRKSRC}/data/metadata.json.in
 
 .include <bsd.port.mk>
