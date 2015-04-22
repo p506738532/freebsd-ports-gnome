@@ -3,6 +3,7 @@
 
 PORTNAME=	clutter
 PORTVERSION=	1.22.0
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -24,7 +25,10 @@ USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-x --enable-conformance=no \
-		--enable-egl-backend=yes
+		--enable-egl-backend=yes \
+		--enable-x11-backend=yes \
+		--enable-gdk-backend=no \
+		--enable-wayland-compositor=no
 CPPFLAGS+=	-I${LOCALBASE}/include -fno-omit-frame-pointer
 LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
