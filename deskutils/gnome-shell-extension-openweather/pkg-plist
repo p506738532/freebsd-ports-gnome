@@ -1,6 +1,8 @@
 share/gnome-shell/extensions/openweather-extension@jenslody.de/convenience.js
 share/gnome-shell/extensions/openweather-extension@jenslody.de/extension.js
+share/gnome-shell/extensions/openweather-extension@jenslody.de/forecast_io.js
 share/gnome-shell/extensions/openweather-extension@jenslody.de/metadata.json
+share/gnome-shell/extensions/openweather-extension@jenslody.de/openweathermap_org.js
 share/gnome-shell/extensions/openweather-extension@jenslody.de/prefs.js
 share/gnome-shell/extensions/openweather-extension@jenslody.de/stylesheet.css
 share/gnome-shell/extensions/openweather-extension@jenslody.de/weather-settings.ui

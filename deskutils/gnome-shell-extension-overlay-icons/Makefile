@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell-extension-overlay-icons
-PORTVERSION=	0.0.0.20141126
-PORTREVISION=	1
+PORTVERSION=	0.0.0.20150422
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -24,15 +23,11 @@ GLIB_SCHEMAS=	org.gnome.shell.extensions.windowoverlay-icons.gschema.xml
 USE_GITHUB=	yes
 GH_ACCOUNT=	sustmi
 GH_PROJECT=	gnome-shell-extensions-sustmi
-GH_TAGNAME=	c2a340f
+GH_TAGNAME=	9072ba8
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 
 NO_BUILD=	yes
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|"3.14"]|"3.14","3.16"]|g' \
-		${WRKSRC}/windowoverlay-icons/metadata.json
 
 do-install:
 		@${MKDIR} ${STAGEDIR}${PREFIX}/share/glib-2.0/schemas/

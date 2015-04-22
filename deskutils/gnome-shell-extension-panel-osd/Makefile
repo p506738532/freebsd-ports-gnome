@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell-extension-panel-osd
-PORTVERSION=	0.0.0.20141126
-PORTREVISION=	1
+PORTVERSION=	0.0.0.20150422
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -25,12 +24,8 @@ GLIB_SCHEMAS=	org.gnome.shell.extensions.panel-osd.gschema.xml
 USE_GITHUB=	yes
 GH_ACCOUNT=	jenslody
 GH_PROJECT=	gnome-shell-extension-panel-osd
-GH_TAGNAME=	927f303
+GH_TAGNAME=	f388fe7
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|"3.14"|"3.14", "3.16"|g' \
-		${WRKSRC}/data/metadata.json.in
 
 .include <bsd.port.mk>

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell-extension-lockkeys
-PORTVERSION=	0.0.0.20150320
+PORTVERSION=	0.0.0.20150422
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -22,15 +22,11 @@ GLIB_SCHEMAS=	org.gnome.shell.extensions.lockkeys.gschema.xml
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	kazysmaster
-GH_TAGNAME=	5f113d4
+GH_TAGNAME=	1df3ffb
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 
 NO_BUILD=	yes
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|"3.14"|"3.14","3.16"|g' \
-		${WRKSRC}/lockkeys@vaina.lt/metadata.json
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/glib-2.0/schemas/

@@ -1,7 +1,7 @@
-share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/About.ui
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/COPYING
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/Makefile
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/README.md
+share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/Settings.ui
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/convenience.js
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/dockedDash.js
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/extension.js
@@ -27,6 +27,7 @@ share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/media/two_rtl.svg
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/media/two_top.svg
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/metadata.json
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/myDash.js
+share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/po/ar.po
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/po/cs.po
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/po/de.po
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/po/fr.po
