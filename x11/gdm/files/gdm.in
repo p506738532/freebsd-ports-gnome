@@ -65,6 +65,7 @@ gdm_start()
 
 gdm_stop()
 {
+    echo "Stopping ${name}."
 	/bin/kill -9 $(/bin/cat "${pidfile}")
 	pkill -9 -u gdm
 	pkill -9 X
