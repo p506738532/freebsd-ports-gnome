@@ -682,6 +682,7 @@
     SUBDIR += sidplayer
     SUBDIR += simplemod
     SUBDIR += siren
+    SUBDIR += skype-call-recorder
     SUBDIR += slv2
     SUBDIR += smasher
     SUBDIR += snack
