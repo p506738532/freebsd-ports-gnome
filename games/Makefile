@@ -914,6 +914,7 @@
     SUBDIR += starfighter
     SUBDIR += starlanes
     SUBDIR += steelstorm
+    SUBDIR += stendhal
     SUBDIR += stepmania-devel
     SUBDIR += stockfish
     SUBDIR += stonesoup

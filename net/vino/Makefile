@@ -20,7 +20,8 @@ LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		cpe gettext gmake pathfix pkgconfig tar:xz
+CPE_VENDOR=	david_king
 USE_GNOME=	gtk30 intlhack
 USE_XORG=	xdamage xfixes xtst
 GNU_CONFIGURE=	yes
