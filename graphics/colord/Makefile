@@ -1,19 +1,19 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/trunk/graphics/colord/Makefile 20031 2014-11-02 21:47:55Z kwm $
 
 PORTNAME=	colord
-PORTVERSION=	1.2.4
-PORTREVISION=	1
+PORTVERSION=	1.2.10
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.freedesktop.org/software/colord/releases/
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Manage color profiles to accurately color input/output devices
 
+BUILD_DEPENDS=	spotread:${PORTSDIR}/graphics/argyllcms
 LIB_DEPENDS=	libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit \
 		libdbus-1.so:${PORTSDIR}/devel/dbus \
 		liblcms2.so:${PORTSDIR}/graphics/lcms2
+RUN_DEPENDS=	spotread:${PORTSDIR}/graphics/argyllcms
 
 USERS=		colord
 GROUPS=		colord
@@ -42,17 +42,14 @@ INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.freedesktop.ColorHelper.gschema.xml
 
+OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	MANPAGES
+OPTIONS_DEFAULT=MANPAGES
+
+MANPAGES_BUILD_DEPENDS=	docbook2html:${PORTSDIR}/textproc/docbook-utils \
+			docbook-sgml>0:${PORTSDIR}/textproc/docbook-sgml
 
 .include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MMANPAGES}
-BUILD_DEPENDS+=	docbook2html:${PORTSDIR}/textproc/docbook-utils \
-		docbook-sgml>0:${PORTSDIR}/textproc/docbook-sgml
-PLIST_SUB+=	MAN=""
-.else
-PLIST_SUB+=	MAN="@comment "
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wclobbered||g' \
