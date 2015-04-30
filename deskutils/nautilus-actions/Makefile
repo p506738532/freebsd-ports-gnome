@@ -15,7 +15,7 @@ LIB_DEPENDS=	libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid \
 		libunique-3.0.so:${PORTSDIR}/x11-toolkits/libunique3
 
 USES=		gettext gmake libtool pkgconfig tar:xz
-USE_GNOME=	gtk30 nautilus3
+USE_GNOME=	gtk30 intltool nautilus3
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
