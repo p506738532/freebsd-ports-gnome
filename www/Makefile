@@ -331,6 +331,7 @@
     SUBDIR += interchange
     SUBDIR += iojs
     SUBDIR += ismail
+    SUBDIR += itop
     SUBDIR += iwebcal
     SUBDIR += jawstats
     SUBDIR += jdresolve
@@ -851,7 +852,6 @@
     SUBDIR += p5-FurlX-Coro
     SUBDIR += p5-Gantry
     SUBDIR += p5-Geo-Caching
-    SUBDIR += p5-Google-Code-Upload
     SUBDIR += p5-Google-Search
     SUBDIR += p5-Gtk2-WebKit
     SUBDIR += p5-Gungho
@@ -1056,6 +1056,7 @@
     SUBDIR += p5-Mojolicious-Plugin-Authentication
     SUBDIR += p5-Mojolicious-Plugin-Database
     SUBDIR += p5-Mojolicious-Plugin-Mongodb
+    SUBDIR += p5-Mojolicious-Plugin-SetUserGroup
     SUBDIR += p5-Mojolicious-Plugin-TtRenderer
     SUBDIR += p5-Mojolicious-Plugin-YamlConfig
     SUBDIR += p5-Monoceros
@@ -1550,6 +1551,7 @@
     SUBDIR += py-flask-admin
     SUBDIR += py-flask-bootstrap
     SUBDIR += py-flask-cache
+    SUBDIR += py-flask-cors
     SUBDIR += py-flask-flatpages
     SUBDIR += py-flask-oauthlib
     SUBDIR += py-flask-restful

@@ -910,7 +910,6 @@
     SUBDIR += spicetrade
     SUBDIR += spider
     SUBDIR += spring
-    SUBDIR += springlobby
     SUBDIR += starfighter
     SUBDIR += starlanes
     SUBDIR += steelstorm
@@ -1036,7 +1035,6 @@
     SUBDIR += widelands
     SUBDIR += wizznic
     SUBDIR += wmeyes
-    SUBDIR += wmfortune
     SUBDIR += wmminichess
     SUBDIR += wmpuzzle
     SUBDIR += wmqstat

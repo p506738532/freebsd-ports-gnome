@@ -2814,6 +2814,7 @@
     SUBDIR += p5-SVN-Statistics
     SUBDIR += p5-SVN-Web
     SUBDIR += p5-Safe-Isa
+    SUBDIR += p5-Sah
     SUBDIR += p5-Scalar-Defer
     SUBDIR += p5-Scalar-Does
     SUBDIR += p5-Scalar-Listify
@@ -3197,6 +3198,7 @@
     SUBDIR += p5-UUID-Random-Patch-UseMRS
     SUBDIR += p5-UUID-Tiny
     SUBDIR += p5-Uniq
+    SUBDIR += p5-Unix-Groups
     SUBDIR += p5-Unix-Statgrab
     SUBDIR += p5-Unix-Uptime
     SUBDIR += p5-User-Identity
@@ -3230,7 +3232,6 @@
     SUBDIR += p5-autodie
     SUBDIR += p5-autovivification
     SUBDIR += p5-bareword-filehandles
-    SUBDIR += p5-base
     SUBDIR += p5-boolean
     SUBDIR += p5-capitalization
     SUBDIR += p5-carton
@@ -3945,6 +3946,7 @@
     SUBDIR += py-parsedatetime
     SUBDIR += py-parsing
     SUBDIR += py-path.py
+    SUBDIR += py-pathlib
     SUBDIR += py-pathtools
     SUBDIR += py-paver
     SUBDIR += py-pbr
