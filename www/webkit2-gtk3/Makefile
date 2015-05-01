@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	webkit
-PORTVERSION=	2.8.0
+PORTVERSION=	2.8.1
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	2-gtk3
@@ -72,10 +72,6 @@ DEBUG_CONFIGURE_ON=	--enable-debug-symbols=yes
 DEBUG_CONFIGURE_OFF=	--disable-debug-symbols
 
 .include <bsd.port.options.mk>
-
-.if ${OSVERSION} < 900000
-#IGNORE=		Not supported on 8.x due to c++ madness
-.endif
 
 .if ${ARCH} == powerpc64
 CFLAGS+=	-mminimal-toc
