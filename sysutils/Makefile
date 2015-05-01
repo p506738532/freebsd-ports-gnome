@@ -980,6 +980,7 @@
     SUBDIR += u-boot-duovero
     SUBDIR += u-boot-pandaboard
     SUBDIR += u-boot-rpi
+    SUBDIR += u-boot-rpi2
     SUBDIR += u-boot-wandboard
     SUBDIR += ua
     SUBDIR += ucspi-ipc

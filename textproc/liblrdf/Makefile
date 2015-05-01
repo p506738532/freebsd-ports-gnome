@@ -3,7 +3,7 @@
 
 PORTNAME=	liblrdf
 PORTVERSION=	0.5.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	GENTOO/distfiles
 
@@ -27,5 +27,8 @@ CFLAGS+=	-I${OPENSSLINC}
 LDFLAGS+=	-L${OPENSSLLIB}
 
 WRKSRC=		${WRKDIR}/swh-LRDF-7ebc032
+
+post-patch:
+	@${FIND} ${WRKSRC}/m4 -type l -delete
 
 .include <bsd.port.mk>
