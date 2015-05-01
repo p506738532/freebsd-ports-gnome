@@ -27,11 +27,13 @@ LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	QUVI
-OPTIONS_DEFAULT=QUVI
+OPTIONS_DEFINE=	GCRYPT QUVI
+OPTIONS_DEFAULT=GCRYPT QUVI
 QUVI_DESC=	Flash media stream URL support
 QUVI_CONFIGURE_ENABLE=	quvi
 QUVI_LIB_DEPENDS=	libquvi-0.9.so:${PORTSDIR}/multimedia/libquvi09
+GCRYPT_LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt
+GCRYPT_CONFIGURE_ENABLE=	libgcrypt
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|pkg_modules libarchive"|pkg_modules"|g' \
