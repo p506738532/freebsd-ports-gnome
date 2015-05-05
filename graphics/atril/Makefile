@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	atril
-PORTVERSION=	1.9.90
+PORTVERSION=	1.10.0
 CATEGORIES=	graphics print mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
