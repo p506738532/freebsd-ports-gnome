@@ -1,5 +1,4 @@
 bin/mate-power-manager
-bin/mate-power-manager-bugreport
 bin/mate-power-preferences
 bin/mate-power-statistics
 etc/xdg/autostart/mate-power-manager.desktop
