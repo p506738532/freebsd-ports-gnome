@@ -8,7 +8,7 @@ MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Caja extension which allows you to open a terminal
+COMMENT=	Set of extensions for Caja
 
 LIB_DEPENDS=	libgupnp-1.0.so:${PORTSDIR}/net/gupnp
 
