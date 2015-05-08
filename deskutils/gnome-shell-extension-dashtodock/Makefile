@@ -16,14 +16,14 @@ RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 
 USES=		gettext gmake pkgconfig tar:xz
 USE_GNOME=	glib20
+USE_GITHUB=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.shell.extensions.dash-to-dock.gschema.xml
 
-USE_GITHUB=	yes
 GH_ACCOUNT=	micheleg
+GH_TAGNAME=	8d2ccc7
 GH_PROJECT=	dash-to-dock
-GH_TAGNAME=	6b2d9e3
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 

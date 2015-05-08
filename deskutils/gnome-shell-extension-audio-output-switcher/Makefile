@@ -22,8 +22,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 GH_ACCOUNT=	anduchs
-GH_PROJECT=	audio-output-switcher
 GH_TAGNAME=	2bec66d
+GH_PROJECT=	audio-output-switcher
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 

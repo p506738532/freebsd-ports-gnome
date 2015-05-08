@@ -20,13 +20,14 @@ RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-sc
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		cpe gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	dconf gtk30 intlhack nautilus3 vte3
 USE_XORG=	sm ice
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
+CPE_VENDOR=	gnome
 
 GLIB_SCHEMAS=	org.gnome.Terminal.gschema.xml
 
