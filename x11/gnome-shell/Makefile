@@ -32,7 +32,7 @@ RUN_DEPENDS=	py*-dbus>=0:${PORTSDIR}/devel/py-dbus \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c11 gettext gmake libtool pathfix pkgconfig \
+USES=		compiler:c11 cpe gettext gmake libtool pathfix pkgconfig \
 		tar:xz webplugin:native
 USE_GNOME=	evolutiondataserver3 gnomedesktop3 gtk30 intlhack \
 		introspection
@@ -48,6 +48,7 @@ CONFIGURE_ARGS+=--enable-compile-warnings=no \
 CPPFLAGS+=	-I${LOCALASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
+CPE_VENDOR=	gnome
 
 GLIB_SCHEMAS=	org.gnome.shell.gschema.xml
 
