@@ -16,13 +16,13 @@ RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 
 USES=		gettext gmake pkgconfig tar:xz
 USE_GNOME=	glib20
+USE_GITHUB=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-USE_GITHUB=	yes
 GH_ACCOUNT=	bertoldia
+GH_TAGNAME=	f7f335b
 GH_PROJECT=	gnome-shell-trash-extension
-GH_TAGNAME=	5367d6e
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 

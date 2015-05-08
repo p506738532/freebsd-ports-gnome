@@ -16,14 +16,14 @@ RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 
 USES=		gettext gmake pkgconfig tar:xz
 USE_GNOME=	glib20
+USE_GITHUB=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.shell.extensions.coverflowalttab.gschema.xml
 
-USE_GITHUB=	yes
 GH_ACCOUNT=	dmo60
+GH_TAGNAME=	c22c771
 GH_PROJECT=	CoverflowAltTab
-GH_TAGNAME=	9d333a9
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 

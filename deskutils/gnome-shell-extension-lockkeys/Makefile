@@ -16,11 +16,11 @@ RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 
 USES=		gettext gmake pkgconfig tar:xz
 USE_GNOME=	glib20
+USE_GITHUB=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.shell.extensions.lockkeys.gschema.xml
 
-USE_GITHUB=	yes
 GH_ACCOUNT=	kazysmaster
 GH_TAGNAME=	1df3ffb
 

@@ -14,13 +14,13 @@ BUILD_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell
 RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell
 
 USES=		gettext gmake pkgconfig tar:xz
+USE_GITHUB=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-USE_GITHUB=	yes
 GH_ACCOUNT=	eonpatapon
-GH_PROJECT=	gnome-shell-extension-calc
 GH_TAGNAME=	e4f4ac5
+GH_PROJECT=	gnome-shell-extension-calc
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 

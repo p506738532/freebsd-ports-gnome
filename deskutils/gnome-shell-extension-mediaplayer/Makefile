@@ -16,13 +16,13 @@ RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 
 USES=		autoreconf:build gettext gmake libtool pkgconfig tar:xz
 USE_GNOME=	glib20 intltool
+USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.shell.extensions.mediaplayer.gschema.xml
 
-USE_GITHUB=	yes
 GH_ACCOUNT=	eonpatapon
 GH_PROJECT=	gnome-shell-extensions-mediaplayer
 GH_TAGNAME=	788c552162
