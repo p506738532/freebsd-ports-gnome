@@ -1211,6 +1211,7 @@
     SUBDIR += p5-Text-MultiMarkdown-ApacheHandler
     SUBDIR += p5-Tie-TinyURL
     SUBDIR += p5-Toader
+    SUBDIR += p5-Toadfarm
     SUBDIR += p5-Twiggy
     SUBDIR += p5-Twiggy-TLS
     SUBDIR += p5-URI-Encode
@@ -1535,6 +1536,7 @@
     SUBDIR += py-django-tinymce
     SUBDIR += py-django14
     SUBDIR += py-django16
+    SUBDIR += py-django17
     SUBDIR += py-django_compressor
     SUBDIR += py-djangotoolbox
     SUBDIR += py-djblets
@@ -1820,6 +1822,7 @@
     SUBDIR += rubygem-gitlab-flowdock-git-hook
     SUBDIR += rubygem-gitlab-gollum-lib
     SUBDIR += rubygem-gitlab-grack
+    SUBDIR += rubygem-gollum-grit_adapter
     SUBDIR += rubygem-gollum-lib
     SUBDIR += rubygem-gon
     SUBDIR += rubygem-gon-rails4

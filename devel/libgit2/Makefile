@@ -2,6 +2,7 @@
 
 PORTNAME=	libgit2
 PORTVERSION=	0.22.1
+DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
 MAINTAINER=	wg@FreeBSD.org
@@ -11,8 +12,6 @@ LICENSE=	GPLv2
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	libgit2
-GH_TAGNAME=	v${PORTVERSION}
-GH_COMMIT=	1ce9ea3
 
 USES=		cmake pkgconfig python:build
 USE_LDCONFIG=	yes
