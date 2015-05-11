@@ -142,7 +142,6 @@
     SUBDIR += launchy
     SUBDIR += libgcal
     SUBDIR += libopensync-plugin-file
-    SUBDIR += libopensync-plugin-python
     SUBDIR += libopensync-plugin-sunbird
     SUBDIR += libopensync-plugin-vformat-devel
     SUBDIR += libstreamanalyzer
@@ -159,7 +158,6 @@
     SUBDIR += moregroupware
     SUBDIR += mozo
     SUBDIR += mrundlg
-    SUBDIR += msynctool
     SUBDIR += multisync
     SUBDIR += multisync-backup
     SUBDIR += multisync-syncml

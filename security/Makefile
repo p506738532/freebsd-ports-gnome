@@ -899,6 +899,7 @@
     SUBDIR += ruby-tcpwrap
     SUBDIR += rubygem-bcrypt
     SUBDIR += rubygem-bcrypt-ruby
+    SUBDIR += rubygem-doorkeeper
     SUBDIR += rubygem-ezcrypto
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
@@ -918,6 +919,10 @@
     SUBDIR += rubygem-net-ssh27
     SUBDIR += rubygem-nmap-parser
     SUBDIR += rubygem-omniauth
+    SUBDIR += rubygem-omniauth-bitbucket
+    SUBDIR += rubygem-omniauth-gitlab
+    SUBDIR += rubygem-omniauth-multipassword
+    SUBDIR += rubygem-omniauth-shibboleth
     SUBDIR += rubygem-origami
     SUBDIR += rubygem-pyu-ruby-sasl
     SUBDIR += rubygem-razorback-scriptNugget

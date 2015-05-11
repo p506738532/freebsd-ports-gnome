@@ -1,7 +1,7 @@
-# $FreeBSD: head/devel/libgit2/Makefile 377075 2015-01-15 11:01:25Z wg $
+# $FreeBSD$
 
 PORTNAME=	libgit2
-PORTVERSION=	0.22.1
+PORTVERSION=	0.22.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 

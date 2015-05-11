@@ -315,6 +315,7 @@
     SUBDIR += libnfs
     SUBDIR += libnids
     SUBDIR += libnids-libnet11
+    SUBDIR += libnss-cache
     SUBDIR += libnss-mysql
     SUBDIR += liboauth
     SUBDIR += libopennet
@@ -430,6 +431,7 @@
     SUBDIR += nss-pam-ldapd
     SUBDIR += nss-pam-ldapd-sasl
     SUBDIR += nss_ldap
+    SUBDIR += nsscache
     SUBDIR += nstxd
     SUBDIR += ntimed
     SUBDIR += ntlmaps
@@ -1046,6 +1048,7 @@
     SUBDIR += rubygem-fog-atmos
     SUBDIR += rubygem-fog-aws
     SUBDIR += rubygem-fog-ecloud
+    SUBDIR += rubygem-fog-google
     SUBDIR += rubygem-fog-local
     SUBDIR += rubygem-fog-powerdns
     SUBDIR += rubygem-fog-profitbricks

@@ -1,8 +1,8 @@
 # Created by: Gustau Perez <gustau.perez@gmail.com>
-# $FreeBSD: head/devel/libgit2-glib/Makefile 377086 2015-01-15 12:21:56Z amdmi3 $
+# $FreeBSD$
 
 PORTNAME=	libgit2-glib
-PORTVERSION=	0.22.2
+PORTVERSION=	0.22.8
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3

@@ -1789,9 +1789,12 @@
     SUBDIR += rubygem-akami
     SUBDIR += rubygem-amazon-ecs
     SUBDIR += rubygem-anemone
+    SUBDIR += rubygem-asana
     SUBDIR += rubygem-async_sinatra
     SUBDIR += rubygem-bluecloth
     SUBDIR += rubygem-bootstrap-sass
+    SUBDIR += rubygem-browser
+    SUBDIR += rubygem-cal-heatmap-rails
     SUBDIR += rubygem-carrierwave
     SUBDIR += rubygem-cgi_multipart_eof_fix
     SUBDIR += rubygem-chosen-rails
@@ -1874,6 +1877,7 @@
     SUBDIR += rubygem-merb-helpers
     SUBDIR += rubygem-merb-param-protection
     SUBDIR += rubygem-modernizr
+    SUBDIR += rubygem-mousetrap-rails
     SUBDIR += rubygem-multipart-post
     SUBDIR += rubygem-nanoc
     SUBDIR += rubygem-net-http-digest_auth
@@ -1912,6 +1916,7 @@
     SUBDIR += rubygem-redis-rack
     SUBDIR += rubygem-redis-rails
     SUBDIR += rubygem-redmine_acts_as_taggable_on
+    SUBDIR += rubygem-responders
     SUBDIR += rubygem-rest-client
     SUBDIR += rubygem-rfacebook
     SUBDIR += rubygem-rfeedfinder
@@ -1943,6 +1948,7 @@
     SUBDIR += rubygem-uglifier
     SUBDIR += rubygem-underscore-rails
     SUBDIR += rubygem-unicorn
+    SUBDIR += rubygem-unicorn-worker-killer
     SUBDIR += rubygem-url-mount
     SUBDIR += rubygem-url_escape
     SUBDIR += rubygem-wasabi

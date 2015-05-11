@@ -581,6 +581,7 @@
     SUBDIR += openipmi
     SUBDIR += openupsd
     SUBDIR += ori
+    SUBDIR += osquery
     SUBDIR += p5-BSD-Jail-Object
     SUBDIR += p5-BSD-Process
     SUBDIR += p5-BSD-Sysctl
@@ -836,6 +837,7 @@
     SUBDIR += rubygem-hammer_cli_foreman_salt
     SUBDIR += rubygem-hammer_cli_foreman_ssh
     SUBDIR += rubygem-hiera
+    SUBDIR += rubygem-hiera-file
     SUBDIR += rubygem-librarian-puppet
     SUBDIR += rubygem-log4r
     SUBDIR += rubygem-logify
