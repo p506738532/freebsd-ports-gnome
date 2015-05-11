@@ -22,8 +22,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.shell.extensions.dash-to-dock.gschema.xml
 
 GH_ACCOUNT=	micheleg
-GH_TAGNAME=	8d2ccc7
 GH_PROJECT=	dash-to-dock
+GH_TAGNAME=	6b2d9e3
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 

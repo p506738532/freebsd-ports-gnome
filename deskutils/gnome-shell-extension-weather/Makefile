@@ -11,7 +11,7 @@ COMMENT=	Weather extension for the GNOME3 shell
 
 RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell
 
-USES=		autoreconf:build gettext gmake libtool pkgconfig tar:xz
+USES=		autoreconf gettext gmake libtool pkgconfig tar:xz
 USE_GNOME=	glib20 intlhack
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
