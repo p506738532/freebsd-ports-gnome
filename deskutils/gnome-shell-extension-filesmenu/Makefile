@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell-extension-filesmenu
-PORTVERSION=	0.0.0.20150422
+PORTVERSION=	0.0.0.20150512
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -22,19 +22,15 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 USE_GITHUB=	yes
 GH_ACCOUNT=	bertoldia
 GH_PROJECT=	files-menu
-GH_TAGNAME=	76c0bf3
+GH_TAGNAME=	abb078d
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 
 NO_BUILD=	yes
 
-post-patch:
-		@${REINPLACE_CMD} -e 's|3.14"|3.16", "3.14"|g' \
-			${WRKSRC}/metadata.json
-
 do-install:
 		@${MKDIR} ${STAGEDIR}${PREFIX}/share/gnome-shell/extensions/gnome-shell-files-menu
-		@(cd ${WRKSRC} && ${CP} -pPR * \
-			${STAGEDIR}${PREFIX}/share/gnome-shell/extensions/gnome-shell-files-menu)
+		@cd ${WRKSRC} && ${COPYTREE_SHARE} . \
+			${STAGEDIR}${PREFIX}/share/gnome-shell/extensions/gnome-shell-files-menu
 
 .include <bsd.port.mk>
