@@ -1,3 +1,4 @@
+share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/.gitignore
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/COPYING
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/Makefile
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/README.md
@@ -37,6 +38,7 @@ share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/po/pl.po
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/po/pt.po
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/po/pt_BR.po
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/po/ru.po
+share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/po/sk.po
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/po/zh_CN.po
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/prefs.js
 share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/stylesheet.css
