@@ -14,7 +14,7 @@ BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
 RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 		gsettings-desktop-schemas>=3.12.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USES=		autoreconf:build gettext gmake libtool pkgconfig tar:xz
+USES=		autoreconf gettext gmake libtool pkgconfig tar:xz
 USE_GNOME=	glib20 intltool
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
@@ -28,8 +28,5 @@ GH_PROJECT=	gnome-shell-extensions-mediaplayer
 GH_TAGNAME=	788c552162
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
-
-pre-configure:
-		cd ${WRKSRC} && ${SETENV} NOCONFIGURE=yes ${SH} ./autogen.sh
 
 .include <bsd.port.mk>
