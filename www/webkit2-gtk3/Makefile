@@ -3,6 +3,7 @@
 
 PORTNAME=	webkit
 PORTVERSION=	2.8.1
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	2-gtk3
@@ -68,8 +69,7 @@ DEBUG_DESC=	Just enable debug symbols
 FULLDEBUG_DESC=	Enable asserts and other debug support
 
 FULLDEBUG_CONFIGURE_ENABLE=	debug
-DEBUG_CONFIGURE_ON=	--enable-debug-symbols=yes
-DEBUG_CONFIGURE_OFF=	--disable-debug-symbols
+DEBUG_CMAKE_OFF=	-DCMAKE_BUILD_TYPE=Release
 
 .include <bsd.port.options.mk>
 
