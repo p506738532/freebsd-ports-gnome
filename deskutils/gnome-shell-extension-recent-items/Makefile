@@ -2,11 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell-extension-recent-items
-PORTVERSION=	0.0.0.20141001
-PORTREVISION=	2
+PORTVERSION=	11
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	http://www.bananenfisch.net/code/
-DISTNAME=	RecentItems-11
+DISTNAME=	RecentItems-${PORTVERSION}
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
