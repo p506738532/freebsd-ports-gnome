@@ -45,8 +45,6 @@ MIGRATION_DESC=		Profile migration to gsettings (pulls in gconf2)
 .include <bsd.port.options.mk>
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|VTE_REQUIRED=0.40.2|VTE_REQUIRED=0.40.0|g' \
-		${WRKSRC}/configure
 	@${TOUCH} ${WRKSRC}/aclocal.m4 ${WRKSRC}/Makefile.in \
 		${WRKSRC}/configure ${WRKSRC}/config.h.in
 .if ${OSVERSION} < 1000000
