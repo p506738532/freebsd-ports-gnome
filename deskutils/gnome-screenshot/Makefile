@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-screenshot
-PORTVERSION=	3.16.0
+PORTVERSION=	3.16.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
