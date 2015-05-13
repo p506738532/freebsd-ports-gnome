@@ -1515,6 +1515,7 @@ share/icons/hicolor/22x22/apps/eog.png
 share/icons/hicolor/24x24/apps/eog.png
 share/icons/hicolor/256x256/apps/eog.png
 share/icons/hicolor/32x32/apps/eog.png
+share/icons/hicolor/scalable/apps/eog-symbolic.svg
 share/locale/af/LC_MESSAGES/eog.mo
 share/locale/am/LC_MESSAGES/eog.mo
 share/locale/an/LC_MESSAGES/eog.mo
