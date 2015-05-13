@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-mahjongg
-PORTVERSION=	3.16.0
+PORTVERSION=	3.16.1
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
