@@ -25,7 +25,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-obexftp \
 		--disable-bluray \
-		--disable-afc
 
 CONFIGURE_ARGS+=\
 		--disable-gudev \
@@ -35,7 +34,6 @@ CONFIGURE_ARGS+=\
 		--disable-udev \
 		--disable-goa \
 		--disable-keyring \
-		--disable-bluray \
 		--disable-libmtp \
 		--disable-gtk
 
@@ -44,11 +42,12 @@ INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.gnome.system.gvfs.enums.xml
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	AVAHI SAMBA GPHOTO2 CDDA HAL FUSE
+OPTIONS_DEFINE=	AVAHI SAMBA GPHOTO2 CDDA HAL FUSE AFC
 OPTIONS_DEFAULT=AVAHI SAMBA GPHOTO2 CDDA HAL FUSE
 CDDA_DESC=	CDDA (enables HAL)
 GPHOTO2_DESC=	Gphoto 2 camera support (enables HAL)
 SAMBA_DESC=	Samba support
+AFC_DESC=	Apple device support
 
 FUSE_USES=	fuse
 FUSE_CONFIGURE_ENABLE=	fuse
@@ -64,6 +63,10 @@ GPHOTO2_CONFIGURE_ENABLE=	gphoto2
 
 AVAHI_LIB_DEPENDS=	libavahi-client.so:${PORTSDIR}/net/avahi-app
 AVAHI_CONFIGURE_ENABLE=	avahi
+
+AFC_LIB_DEPENDS=	libimobiledevice.so:${PORTSDIR}/comms/libimobiledevice \
+			libplist.so:${PORTSDIR}/devel/libplist
+AFC_CONFIGURE_ENABLE=	afc
 
 .include <bsd.port.options.mk>
 

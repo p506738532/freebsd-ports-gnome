@@ -22,10 +22,12 @@ lib/gio/modules/libgioremote-volume-monitor.so
 lib/gio/modules/libgvfsdbus.so
 lib/gvfs/libgvfscommon.so
 lib/gvfs/libgvfsdaemon.so
-libexec/gvfsd-afp
-libexec/gvfsd-afp-browse
+%%AFC%%libexec/gvfs-afc-volume-monitor
 %%GPHOTO2%%libexec/gvfs-gphoto2-volume-monitor
 %%HAL%%libexec/gvfs-hal-volume-monitor
+libexec/gvfsd-afp
+libexec/gvfsd-afp-browse
+%%AFC%%libexec/gvfsd-afc
 libexec/gvfsd
 libexec/gvfsd-archive
 libexec/gvfsd-burn
@@ -86,8 +88,10 @@ share/bash-completion/completions/gvfs-trash
 share/bash-completion/completions/gvfs-tree
 share/dbus-1/services/gvfs-daemon.service
 share/dbus-1/services/gvfs-metadata.service
+%%AFC%%share/dbus-1/services/org.gtk.Private.AfcVolumeMonitor.service
 %%GPHOTO2%%share/dbus-1/services/org.gtk.Private.GPhoto2VolumeMonitor.service
 %%HAL%%share/dbus-1/services/org.gtk.Private.HalVolumeMonitor.service
+%%AFC%%%%DATADIR%%/mounts/afc.mount
 share/gvfs/mounts/afp-browse.mount
 share/gvfs/mounts/afp.mount
 %%DATADIR%%/mounts/archive.mount
@@ -106,6 +110,7 @@ share/gvfs/mounts/afp.mount
 %%SAMBA%%%%DATADIR%%/mounts/smb-browse.mount
 %%SAMBA%%%%DATADIR%%/mounts/smb.mount
 %%DATADIR%%/mounts/trash.mount
+%%AFC%%%%DATADIR%%/remote-volume-monitors/afc.monitor
 %%GPHOTO2%%%%DATADIR%%/remote-volume-monitors/gphoto2.monitor
 %%HAL%%%%DATADIR%%/remote-volume-monitors/hal.monitor
 share/locale/af/LC_MESSAGES/gvfs.mo
