@@ -132,14 +132,13 @@ share/help/zh_CN/gnome-chess/legal.xml
 share/help/zh_CN/gnome-chess/figures/game-3-12.png
 share/help/zh_CN/gnome-chess/figures/preferences-appearance-3-12.png
 share/help/zh_CN/gnome-chess/figures/preferences-game-3-12.png
-share/icons/HighContrast/scalable/apps/gnome-chess.svg
 share/icons/hicolor/16x16/apps/gnome-chess.png
 share/icons/hicolor/22x22/apps/gnome-chess.png
 share/icons/hicolor/24x24/apps/gnome-chess.png
 share/icons/hicolor/256x256/apps/gnome-chess.png
 share/icons/hicolor/32x32/apps/gnome-chess.png
 share/icons/hicolor/48x48/apps/gnome-chess.png
-share/icons/hicolor/512x512/apps/gnome-chess.png
+share/icons/hicolor/scalable/apps/gnome-chess-symbolic.svg
 share/locale/af/LC_MESSAGES/gnome-chess.mo
 share/locale/am/LC_MESSAGES/gnome-chess.mo
 share/locale/ar/LC_MESSAGES/gnome-chess.mo
