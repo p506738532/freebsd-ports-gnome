@@ -3,8 +3,7 @@
 #   $MCom: ports/trunk/deskutils/gnome-initial-setup/Makefile 20032 2014-11-02 21:57:34Z kwm $
 
 PORTNAME=	gnome-initial-setup
-PORTVERSION=	3.12.1
-PORTREVISION=	1
+PORTVERSION=	3.16.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -43,7 +42,6 @@ EXTRA_PATCHES+=		${FILESDIR}/extra-patch-gnome-initial-setup_gis-account-page.c
 
 post-patch:
 		@${REINPLACE_CMD} -e 's|krb5/krb5.h|krb5.h|g' \
-			${WRKSRC}/gnome-initial-setup/pages/password/um-realm-manager.c \
 			${WRKSRC}/gnome-initial-setup/pages/account/um-realm-manager.c
 
 pre-configure:
