@@ -439,6 +439,7 @@
     SUBDIR += ntopng
     SUBDIR += ntp
     SUBDIR += ntp-devel
+    SUBDIR += ntp-rc
     SUBDIR += ntraceroute
     SUBDIR += nusoap
     SUBDIR += nxproxy
@@ -944,6 +945,7 @@
     SUBDIR += py-pyzmq
     SUBDIR += py-qt4-network
     SUBDIR += py-radix
+    SUBDIR += py-raet
     SUBDIR += py-s3cmd
     SUBDIR += py-simplesoap
     SUBDIR += py-smb

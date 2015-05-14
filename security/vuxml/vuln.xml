@@ -57,6 +57,283 @@ Notes:
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="c6e31869-f99f-11e4-9f91-6805ca0b3d42">
+    <topic>phpMyAdmin -- XSRF and man-in-the-middle vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>phpMyAdmin</name>
+	<range><ge>4.4.0</ge><lt>4.4.6.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The phpMyAdmin development team reports:</p>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2015-2.php">
+	  <p>XSRF/CSRF vulnerability in phpMyAdmin setup.</p>
+	  <p>By deceiving a user to click on a crafted URL, it is
+	    possible to alter the configuration file being generated
+	    with phpMyAdmin setup.</p>
+	  <p>This vulnerability only affects the configuration file
+	    generation process and does not affect the effective
+	    configuration file. Moreover, the configuration file being
+	    generated is at risk only during the period when it's
+	    writable.</p>
+	</blockquote>
+	<blockquote cite="http://www.phpmyadmin.net/home_page/security/PMASA-2015-3.php">
+	  <p> Vulnerability allowing man-in-the-middle attack on API
+	    call to GitHub.</p>
+	  <p>A vulnerability in the API call to GitHub can be
+	    exploited to perform a man-in-the-middle attack.</p>
+	  <p>We consider this vulnerability to be serious.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2015-2.php</url>
+      <url>http://www.phpmyadmin.net/home_page/security/PMASA-2015-3.php</url>
+      <cvename>CVE-2015-3902</cvename>
+      <cvename>CVE-2015-3903</cvename>
+    </references>
+    <dates>
+      <discovery>2015-05-13</discovery>
+      <entry>2015-05-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e206df57-f97b-11e4-b799-c485083ca99c">
+    <topic>Adobe Flash Player -- critical vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>linux-c6-flashplugin11</name>
+	<range><le>11.2r202.457</le></range>
+      </package>
+      <package>
+	<name>linux-f10-flashplugin11</name>
+	<range><le>11.2r202.457</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Adobe reports:</p>
+	<blockquote cite="https://helpx.adobe.com/security/products/flash-player/apsb15-09.html">
+	  <p>
+	   Adobe has released security updates for Adobe Flash Player for
+	   Windows, Macintosh and Linux. These updates address vulnerabilities
+	   that could potentially allow an attacker to take control of the
+	   affected system. Adobe recommends users update their product
+	   installations to the latest versions.
+	  </p>
+	  <p>
+	   These updates resolve memory corruption vulnerabilities that could
+	   lead to code execution (CVE-2015-3078, CVE-2015-3089, CVE-2015-3090,
+	   CVE-2015-3093).
+	  </p>
+	  <p>
+	   These updates resolve a heap overflow vulnerability that could lead
+	   to code execution (CVE-2015-3088).
+	  </p>
+	  <p>
+	   These updates resolve a time-of-check time-of-use (TOCTOU) race
+	   condition that could be exploited to bypass Protected Mode in
+	   Internet Explorer (CVE-2015-3081).
+	  </p>
+	  <p>
+	   These updates resolve validation bypass issues that could be
+	   exploited to write arbitrary data to the file system under user
+	   permissions (CVE-2015-3082, CVE-2015-3083, CVE-2015-3085).
+	  </p>
+	  <p>
+	   These updates resolve an integer overflow vulnerability that could
+	   lead to code execution (CVE-2015-3087).
+	  </p>
+	  <p>
+	   These updates resolve a type confusion vulnerability that could lead
+	   to code execution (CVE-2015-3077, CVE-2015-3084, CVE-2015-3086).
+	  </p>
+	  <p>
+	   These updates resolve a use-after-free vulnerability that could lead
+	   to code execution (CVE-2015-3080).
+	  </p>
+	  <p>
+	   These updates resolve memory leak vulnerabilities that could be used
+	   to bypass ASLR (CVE-2015-3091, CVE-2015-3092).
+	  </p>
+	  <p>
+	   These updates resolve a security bypass vulnerability that could lead
+	   to information disclosure (CVE-2015-3079), and provide additional
+	   hardening to protect against CVE-2015-3044.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-3044</cvename>
+      <cvename>CVE-2015-3077</cvename>
+      <cvename>CVE-2015-3078</cvename>
+      <cvename>CVE-2015-3079</cvename>
+      <cvename>CVE-2015-3080</cvename>
+      <cvename>CVE-2015-3081</cvename>
+      <cvename>CVE-2015-3082</cvename>
+      <cvename>CVE-2015-3083</cvename>
+      <cvename>CVE-2015-3084</cvename>
+      <cvename>CVE-2015-3085</cvename>
+      <cvename>CVE-2015-3086</cvename>
+      <cvename>CVE-2015-3087</cvename>
+      <cvename>CVE-2015-3088</cvename>
+      <cvename>CVE-2015-3089</cvename>
+      <cvename>CVE-2015-3090</cvename>
+      <cvename>CVE-2015-3091</cvename>
+      <cvename>CVE-2015-3092</cvename>
+      <cvename>CVE-2015-3093</cvename>
+      <url>https://helpx.adobe.com/security/products/flash-player/apsb15-09.html</url>
+    </references>
+    <dates>
+      <discovery>2015-05-12</discovery>
+      <entry>2015-05-13</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d9b43004-f5fd-4807-b1d7-dbf66455b244">
+    <topic>mozilla -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>38.0,1</lt></range>
+      </package>
+      <package>
+	<name>linux-firefox</name>
+	<range><lt>38.0,1</lt></range>
+      </package>
+      <package>
+	<name>seamonkey</name>
+	<range><lt>2.35</lt></range>
+      </package>
+      <package>
+	<name>linux-seamonkey</name>
+	<range><lt>2.35</lt></range>
+      </package>
+      <package>
+	<name>firefox-esr</name>
+	<range><lt>31.7.0,1</lt></range>
+      </package>
+      <package>
+	<name>libxul</name>
+	<range><lt>31.7.0</lt></range>
+	<range><ge>32.0</ge><lt>38.0</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><lt>31.7.0</lt></range>
+	<range><ge>32.0</ge><lt>38.0</lt></range>
+      </package>
+      <package>
+	<name>linux-thunderbird</name>
+	<range><lt>31.7.0</lt></range>
+	<range><ge>32.0</ge><lt>38.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Mozilla Project reports:</p>
+	<blockquote cite="https://www.mozilla.org/en-US/security/advisories/">
+	  <p>MFSA-2015-46 Miscellaneous memory safety hazards (rv:38.0
+	    / rv:31.7)</p>
+	  <p>MFSA-2015-47 Buffer overflow parsing H.264 video with
+	    Linux Gstreamer</p>
+	  <p>MFSA-2015-48 Buffer overflow with SVG content and CSS</p>
+	  <p>MFSA-2015-49 Referrer policy ignored when links opened by
+	    middle-click and context menu</p>
+	  <p>MFSA-2015-50 Out-of-bounds read and write in asm.js validation</p>
+	  <p>MFSA-2015-51 Use-after-free during text processing with
+	    vertical text enabled</p>
+	  <p>MFSA-2015-52 Sensitive URL encoded information written to
+	    Android logcat</p>
+	  <p>MFSA-2015-53 Use-after-free due to Media Decoder Thread creation
+	    during shutdown</p>
+	  <p>MFSA-2015-54 Buffer overflow when parsing compressed XML</p>
+	  <p>MFSA-2015-55 Buffer overflow and out-of-bounds read while
+	    parsing MP4 video metadata</p>
+	  <p>MFSA-2015-56 Untrusted site hosting trusted page can
+	    intercept webchannel responses</p>
+	  <p>MFSA-2015-57 Privilege escalation through IPC channel messages</p>
+	  <p>MFSA-2015-58 Mozilla Windows updater can be run outside
+	    of application directory</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2011-3079</cvename>
+      <cvename>CVE-2015-0797</cvename>
+      <cvename>CVE-2015-0833</cvename>
+      <cvename>CVE-2015-2708</cvename>
+      <cvename>CVE-2015-2709</cvename>
+      <cvename>CVE-2015-2710</cvename>
+      <cvename>CVE-2015-2711</cvename>
+      <cvename>CVE-2015-2712</cvename>
+      <cvename>CVE-2015-2713</cvename>
+      <cvename>CVE-2015-2714</cvename>
+      <cvename>CVE-2015-2715</cvename>
+      <cvename>CVE-2015-2716</cvename>
+      <cvename>CVE-2015-2717</cvename>
+      <cvename>CVE-2015-2718</cvename>
+      <cvename>CVE-2015-2720</cvename>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-46/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-47/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-48/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-49/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-50/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-51/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-52/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-53/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-54/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-55/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-56/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-57/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-58/</url>
+    </references>
+    <dates>
+      <discovery>2015-05-12</discovery>
+      <entry>2015-05-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fe910ed6-f88d-11e4-9ae3-0050562a4d7b">
+    <topic>suricata -- TLS/DER Parser Bug (DoS)</topic>
+    <affects>
+      <package>
+	<name>suricata</name>
+	<range><lt>2.0.8</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>OISF Development Team reports:</p>
+	<blockquote cite="https://lists.openinfosecfoundation.org/pipermail/oisf-devel/2015-May/003406.html">
+	  <p>The OISF development team is pleased to announce Suricata 2.0.8.
+	   This release fixes a number of issues in the 2.0 series.</p>
+
+	  <p>The most important issue is a bug in the DER parser which is used to
+	   decode SSL/TLS certificates could crash Suricata. This issue was
+	   reported by Kostya Kortchinsky of the Google Security Team and was fixed
+	   by Pierre Chifflier of ANSSI.</p>
+
+	  <p>Those processing large numbers of (untrusted) pcap files need to update
+	   as a malformed pcap could crash Suricata. Again, credits go to Kostya
+	   Kortchinsky.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-0971</cvename>
+      <url>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0971</url>
+      <url>https://github.com/inliniac/suricata/commit/fa73a0bb8f312fd0a95cc70f6b3ee4e4997bdba7</url>
+    </references>
+    <dates>
+      <discovery>2015-05-06</discovery>
+      <entry>2015-05-12</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="0b040e24-f751-11e4-b24d-5453ed2e2b49">
     <topic>libssh -- null pointer dereference</topic>
     <affects>

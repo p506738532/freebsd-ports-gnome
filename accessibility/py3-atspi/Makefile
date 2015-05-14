@@ -4,8 +4,7 @@
 PORTNAME=	atspi
 PORTVERSION=	2.16.0
 CATEGORIES=	accessibility x11-toolkits python
-MASTER_SITES=	GNOME
-MASTER_SITE_SUBDIR=	sources/pyatspi/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+MASTER_SITES=	GNOME/sources/pyatspi/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	pyatspi-${PORTVERSION}
 DIST_SUBDIR=	gnome3
