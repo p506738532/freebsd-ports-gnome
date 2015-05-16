@@ -675,15 +675,7 @@ SUB_LIST+=		GNOME_SUBR=${GNOME_SUBR}
 
 .if defined(GCONF_SCHEMAS) || defined(INSTALLS_OMF) || defined(INSTALLS_ICONS) \
 	|| defined(GLIB_SCHEMAS)
-pre-su-install: gnome-pre-su-install
 post-install: gnome-post-install
-
-gnome-pre-su-install:
-.if defined(GCONF_SCHEMAS)
-	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/gconf/gconf.xml.defaults/
-.else
-	@${DO_NADA}
-.endif
 
 gnome-post-install:
 .  if defined(GCONF_SCHEMAS)

@@ -773,6 +773,7 @@
     SUBDIR += pycadia
     SUBDIR += pyching
     SUBDIR += pydance
+    SUBDIR += pyfa
     SUBDIR += pykawari
     SUBDIR += pysolfc
     SUBDIR += pyspacewar
@@ -1048,6 +1049,8 @@
     SUBDIR += worldofpadman
     SUBDIR += wtf
     SUBDIR += wxlauncher
+    SUBDIR += wyrmgus
+    SUBDIR += wyrmsun
     SUBDIR += xabacus
     SUBDIR += xasteroids
     SUBDIR += xataxx
