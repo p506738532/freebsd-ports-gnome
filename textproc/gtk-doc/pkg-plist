@@ -12,6 +12,7 @@ bin/gtkdoc-scangobj
 bin/gtkdocize
 libdata/pkgconfig/gtk-doc.pc
 share/aclocal/gtk-doc.m4
+%%DATADIR%%/data/devhelp2.xsd
 %%DATADIR%%/data/devhelp2.xsl
 %%DATADIR%%/data/gtk-doc.dcl
 %%DATADIR%%/data/gtk-doc.dsl
