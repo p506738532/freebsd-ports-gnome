@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/deskutils/gnome-initial-setup/Makefile 20032 2014-11-02 21:57:34Z kwm $
 
 PORTNAME=	gnome-initial-setup
-PORTVERSION=	3.16.2
+PORTVERSION=	3.16.3
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
