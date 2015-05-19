@@ -3,10 +3,10 @@
 
 PORTNAME=	nginx
 PORTVERSION=	1.9.0
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
-MASTER_SITES+=	${MASTER_SITE_LOCAL}
-MASTER_SITE_SUBDIR=	osa
+MASTER_SITES+=	LOCAL/osa
 PKGNAMESUFFIX=	-devel
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -271,8 +271,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/giom-nginx_accept_language_module-${GIT_A
 
 .if ${PORT_OPTIONS:MHTTP_ACCESSKEY}
 NGINX_ACCESSKEY_VERSION=	2.0.3
-MASTER_SITES+=	${MASTER_SITE_LOCAL:S/$/:accesskey/}
-MASTER_SITE_SUBDIR+=	osa/:accesskey
+MASTER_SITES+=	LOCAL/osa:accesskey
 DISTFILES+=	nginx-accesskey-${NGINX_ACCESSKEY_VERSION}.tar.gz:accesskey
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/nginx-accesskey-${NGINX_ACCESSKEY_VERSION}
 .endif
@@ -454,8 +453,7 @@ CONFIGURE_ARGS+=--with-http_realip_module
 
 .if ${PORT_OPTIONS:MHTTP_REDIS}
 NGINX_REDIS_VERSION=	0.3.7
-MASTER_SITES+=	${MASTER_SITE_LOCAL:S/$/:redis/}
-MASTER_SITE_SUBDIR+=	osa/:redis
+MASTER_SITES+=	LOCAL/osa:redis
 DISTFILES+=	ngx_http_redis-${NGINX_REDIS_VERSION}.tar.gz:redis
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/ngx_http_redis-${NGINX_REDIS_VERSION}
 .endif
@@ -497,8 +495,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/masterzen-nginx-upload-progress-module-${
 
 .if !empty(PORT_OPTIONS:MHTTP_UPSTREAM_FAIR)
 NGINX_UPSTREAM_FAIR_VERSION=	20090923
-MASTER_SITES+=	${MASTER_SITE_LOCAL:S/$/:upstreamfair/}
-MASTER_SITE_SUBDIR+=	osa/:upstreamfair
+MASTER_SITES+=	LOCAL/osa:upstreamfair
 DISTFILES+=	nginx_upstream_fair-${NGINX_UPSTREAM_FAIR_VERSION}.tar.gz:upstreamfair
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/nginx_upstream_fair-${NGINX_UPSTREAM_FAIR_VERSION}
 .endif
@@ -512,7 +509,7 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/nginx-goodies-nginx-sticky-module-ng-c825
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_XSLT}
-USE_GNOME=	libxml2 libxslt
+USE_GNOME+=	libxml2 libxslt
 CONFIGURE_ARGS+=--with-http_xslt_module
 .endif
 
@@ -596,7 +593,7 @@ LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre \
 		libcurl.so:${PORTSDIR}/ftp/curl \
 		libyajl.so:${PORTSDIR}/devel/yajl
 USE_APACHE=	22+
-USE_GNOME=	libxml2
+USE_GNOME+=	libxml2
 MASTER_SITES+=	http://www.modsecurity.org/tarball/${NGINX_MODSECURITY_VERSION}/:modsecurity
 DISTFILES+=	modsecurity-${NGINX_MODSECURITY_VERSION}.tar.gz:modsecurity
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/modsecurity-${NGINX_MODSECURITY_VERSION}/nginx/modsecurity

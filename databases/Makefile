@@ -29,6 +29,7 @@
     SUBDIR += cassandra2
     SUBDIR += cdb
     SUBDIR += cego
+    SUBDIR += cegobridge
     SUBDIR += couchdb
     SUBDIR += courier-authlib-mysql
     SUBDIR += courier-authlib-pgsql
@@ -51,6 +52,7 @@
     SUBDIR += dbview
     SUBDIR += emma
     SUBDIR += epgsql
+    SUBDIR += eredis
     SUBDIR += erlang-mysql
     SUBDIR += evolution-data-server
     SUBDIR += fastdb
@@ -178,7 +180,6 @@
     SUBDIR += mongodb
     SUBDIR += mrtg-mysql-load
     SUBDIR += mtop
-    SUBDIR += my2cego
     SUBDIR += mydbf2mysql
     SUBDIR += mydumper
     SUBDIR += mysac
@@ -741,6 +742,7 @@
     SUBDIR += py-postgresql
     SUBDIR += py-psycopg
     SUBDIR += py-psycopg2
+    SUBDIR += py-psycogreen
     SUBDIR += py-pyPgSQL
     SUBDIR += py-pyhs
     SUBDIR += py-pylibmc

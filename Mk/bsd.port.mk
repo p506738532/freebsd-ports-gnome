@@ -1558,11 +1558,7 @@ WRKDIR?=		${WRKDIRPREFIX}${.CURDIR}/work
 .  if defined(GH_COMMIT)
 WRKSRC?=		${WRKDIR}/${GH_ACCOUNT}-${GH_PROJECT}-${GH_COMMIT}
 .  else
-.    if defined(GH_TAGNAME)
 WRKSRC?=		${WRKDIR}/${GH_PROJECT}-${GH_TAGNAME_EXTRACT}
-.    else
-WRKSRC?=		${WRKDIR}/${GH_PROJECT}-${DISTVERSION}
-.    endif
 .  endif
 .endif
 .if defined(NO_WRKSUBDIR)
@@ -2146,32 +2142,15 @@ MTREE_ARGS?=	-U ${MTREE_FOLLOWS_SYMLINKS} -f ${MTREE_FILE} -d -e -p
 
 READLINK_CMD?=	/usr/bin/readlink
 
-# Determine whether or not we can use rootly owner/group functions.
-.if ${UID} == 0
-_BINOWNGRP=	-o ${BINOWN} -g ${BINGRP}
-_SHROWNGRP=	-o ${SHAREOWN} -g ${SHAREGRP}
-_MANOWNGRP=	-o ${MANOWN} -g ${MANGRP}
-.else
-_BINOWNGRP=
-_SHROWNGRP=
-_MANOWNGRP=
-.endif
-
 _SHAREMODE?=	0644
 
 # A few aliases for *-install targets
-INSTALL_PROGRAM= \
-	${INSTALL} ${COPY} ${STRIP} ${_BINOWNGRP} -m ${BINMODE}
-INSTALL_KLD= \
-	${INSTALL} ${COPY} ${_BINOWNGRP} -m ${BINMODE}
-INSTALL_LIB= \
-	${INSTALL} ${COPY} ${STRIP} ${_SHROWNGRP} -m ${SHAREMODE}
-INSTALL_SCRIPT= \
-	${INSTALL} ${COPY} ${_BINOWNGRP} -m ${BINMODE}
-INSTALL_DATA= \
-	${INSTALL} ${COPY} ${_SHROWNGRP} -m ${_SHAREMODE}
-INSTALL_MAN= \
-	${INSTALL} ${COPY} ${_MANOWNGRP} -m ${MANMODE}
+INSTALL_PROGRAM=	${INSTALL} ${COPY} ${STRIP} -m ${BINMODE}
+INSTALL_KLD=	${INSTALL} ${COPY} -m ${BINMODE}
+INSTALL_LIB=	${INSTALL} ${COPY} ${STRIP} -m ${SHAREMODE}
+INSTALL_SCRIPT=	${INSTALL} ${COPY} -m ${BINMODE}
+INSTALL_DATA=	${INSTALL} ${COPY} -m ${_SHAREMODE}
+INSTALL_MAN=	${INSTALL} ${COPY} -m ${MANMODE}
 
 INSTALL_MACROS=	BSD_INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 			BSD_INSTALL_LIB="${INSTALL_LIB}" \
@@ -3198,7 +3177,11 @@ do-fetch:
 	${_PATCH_SITES_ENV} ; \
 	for _file in ${PATCHFILES}; do \
 		file=`${ECHO_CMD} $$_file | ${SED} -E -e 's/:[^-:][^:]*$$//'` ; \
-		select=`${ECHO_CMD} $${_file#$${file}} | ${SED} -e 's/^://' -e 's/,/ /g'` ; \
+		if [ $$_file = $$file ]; then	\
+			select='';	\
+		else	\
+			select=`${ECHO_CMD} $${_file##*:} | ${SED} -e 's/,/ /g'` ;	\
+		fi;	\
 		file=`${ECHO_CMD} $$file | ${SED} -E -e 's/:-[^:]+$$//'` ; \
 		force_fetch=false; \
 		filebasename=$${file##*/}; \
@@ -3403,7 +3386,7 @@ do-configure:
 		if ! ${SETENV} CC="${CC}" CPP="${CPP}" CXX="${CXX}" \
 	    CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 	    LDFLAGS="${LDFLAGS}" LIBS="${LIBS}" \
-	    INSTALL="/usr/bin/install -c ${_BINOWNGRP}" \
+	    INSTALL="/usr/bin/install -c" \
 	    INSTALL_DATA="${INSTALL_DATA}" \
 	    INSTALL_LIB="${INSTALL_LIB}" \
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
@@ -4018,7 +4001,11 @@ fetch-list:
 	 ${_MASTER_SITES_ENV} ; \
 	 for _file in ${DISTFILES}; do \
 		file=`${ECHO_CMD} $$_file | ${SED} -E -e 's/:[^:]+$$//'` ; \
-		select=`${ECHO_CMD} $${_file#$${file}} | ${SED} -e 's/^://' -e 's/,/ /g'` ; \
+		if [ $$_file = $$file ]; then	\
+			select='';	\
+		else	\
+			select=`${ECHO_CMD} $${_file##*:} | ${SED} -e 's/,/ /g'` ;	\
+		fi;	\
 		if [ ! -f $$file -a ! -f $${file##*/} ]; then \
 			if [ ! -z "$$select" ] ; then \
 				__MASTER_SITES_TMP= ; \
@@ -4055,7 +4042,11 @@ fetch-list:
 	 ${_PATCH_SITES_ENV} ; \
 	 for _file in ${PATCHFILES}; do \
 		file=`${ECHO_CMD} $$_file | ${SED} -E -e 's/:[^-:][^:]*$$//'` ; \
-		select=`${ECHO_CMD} $${_file#$${file}} | ${SED} -e 's/^://' -e 's/,/ /g'` ; \
+		if [ $$_file = $$file ]; then	\
+			select='';	\
+		else	\
+			select=`${ECHO_CMD} $${_file##*:} | ${SED} -e 's/,/ /g'` ;	\
+		fi;	\
 		file=`${ECHO_CMD} $$file | ${SED} -E -e 's/:-[^:]+$$//'` ; \
 		if [ ! -f $$file -a ! -f $${file##*/} ]; then \
 			if [ ! -z "$$select" ] ; then \
@@ -4093,7 +4084,11 @@ fetch-url-list-int:
 	for _file in ${DISTFILES}; do \
 		file=`${ECHO_CMD} $$_file | ${SED} -E -e 's/:[^:]+$$//'` ; \
 			fileptn=`${ECHO_CMD} $$file | ${SED} 's|/|\\\\/|g;s/\./\\\\./g;s/\+/\\\\+/g;s/\?/\\\\?/g'` ; \
-		select=`${ECHO_CMD} $${_file#$${file}} | ${SED} -e 's/^://' -e 's/,/ /g'` ; \
+		if [ $$_file = $$file ]; then	\
+			select='';	\
+		else	\
+			select=`${ECHO_CMD} $${_file##*:} | ${SED} -e 's/,/ /g'` ;	\
+		fi;	\
 		if [ ! -z "${LISTALL}" -o ! -f $$file -a ! -f $${file##*/} ]; then \
 			if [ ! -z "$$select" ] ; then \
 				__MASTER_SITES_TMP= ; \
@@ -4122,7 +4117,11 @@ fetch-url-list-int:
 	${_PATCH_SITES_ENV} ; \
 	for _file in ${PATCHFILES}; do \
 		file=`${ECHO_CMD} $$_file | ${SED} -E -e 's/:[^-:][^:]*$$//'` ; \
-		select=`${ECHO_CMD} $${_file#$${file}} | ${SED} -e 's/^://' -e 's/,/ /g'` ; \
+		if [ $$_file = $$file ]; then	\
+			select='';	\
+		else	\
+			select=`${ECHO_CMD} $${_file##*:} | ${SED} -e 's/,/ /g'` ;	\
+		fi;	\
 		file=`${ECHO_CMD} $$file | ${SED} -E -e 's/:-[^:]+$$//'` ; \
 		fileptn=`${ECHO_CMD} $$file | ${SED} 's|/|\\\\/|g;s/\./\\\\./g;s/\+/\\\\+/g;s/\?/\\\\?/g'` ; \
 		if [ ! -z "${LISTALL}" -o ! -f $$file -a ! -f $${file##*/} ]; then \

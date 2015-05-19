@@ -35,7 +35,7 @@ UPLOADSCRIPT_DESC=	Uploadscript daemon support
 UTF8_DESC=		UTF-8 filenames
 VIRTUALCHROOT_DESC=	Follow symlinks outside a chroot jail
 
-CONFIGURE_ARGS=	--localstatedir=/var --sysconfdir=${PREFIX}/etc \
+CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc \
 		--with-altlog --with-cookie --with-diraliases \
 		--with-everything --with-extauth --with-ftpwho \
 		--with-language=${LANG} --with-paranoidmsg --with-puredb \
@@ -65,9 +65,9 @@ PAM_TARGET?=	pure-ftpd
 PAM_TEMPL?=	${FILESDIR}/pam.conf.5
 TLS_CERTFILE?=	/etc/ssl/private/pure-ftpd.pem
 
-ANONDELETE_CFLAGS=	-DANON_CAN_DELETE
-ANONRENAME_CFLAGS=	-DANON_CAN_RENAME
-ANONRESUME_CFLAGS=	-DANON_CAN_RESUME
+ANONDELETE_CPPFLAGS=	-DANON_CAN_DELETE
+ANONRENAME_CPPFLAGS=	-DANON_CAN_RENAME
+ANONRESUME_CPPFLAGS=	-DANON_CAN_RESUME
 LARGEFILE_CONFIGURE_ENABLE=	largefile
 LDAP_CONFIGURE_WITH=	ldap
 LDAP_USE=		OPENLDAP=yes
@@ -83,6 +83,9 @@ SENDFILE_CONFIGURE_WITH=sendfile
 THROTTLING_CONFIGURE_WITH=	throttling
 TLS_CONFIGURE_OFF=	--without-tls
 TLS_CONFIGURE_ON=	--with-certfile=${TLS_CERTFILE} --with-tls
+TLS_CPPFLAGS=		-I${OPENSSLINC}
+TLS_LDFLAGS=		-L${OPENSSLLIB}
+TLS_USE=		OPENSSL=yes
 UPLOADSCRIPT_CONFIGURE_WITH=	uploadscript
 UTF8_CONFIGURE_WITH=	rfc2640
 UTF8_USES=		iconv

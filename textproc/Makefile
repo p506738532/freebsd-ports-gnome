@@ -6,6 +6,7 @@
     SUBDIR += 2bsd-diff
     SUBDIR += R-cran-R2HTML
     SUBDIR += R-cran-XML
+    SUBDIR += R-cran-stringi
     SUBDIR += R-cran-stringr
     SUBDIR += R-cran-xtable
     SUBDIR += ack
@@ -1182,6 +1183,7 @@
     SUBDIR += py-genshi
     SUBDIR += py-genshi-devel
     SUBDIR += py-gettext
+    SUBDIR += py-hexdump
     SUBDIR += py-html2text
     SUBDIR += py-hyperestraier-python
     SUBDIR += py-jaxml
@@ -1325,6 +1327,7 @@
     SUBDIR += rubygem-colored
     SUBDIR += rubygem-compass
     SUBDIR += rubygem-compass-rails
+    SUBDIR += rubygem-creole
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diffy
@@ -1347,6 +1350,8 @@
     SUBDIR += rubygem-gitlab-linguist
     SUBDIR += rubygem-heredoc_unindent
     SUBDIR += rubygem-hikidoc
+    SUBDIR += rubygem-html-pipeline
+    SUBDIR += rubygem-html-pipeline-gitlab
     SUBDIR += rubygem-htmlentities
     SUBDIR += rubygem-ini
     SUBDIR += rubygem-itextomml
@@ -1365,6 +1370,7 @@
     SUBDIR += rubygem-markaby
     SUBDIR += rubygem-multi_xml
     SUBDIR += rubygem-nokogiri
+    SUBDIR += rubygem-nokogiri-diff
     SUBDIR += rubygem-nokogiri14
     SUBDIR += rubygem-nokogumbo
     SUBDIR += rubygem-opml
@@ -1382,6 +1388,7 @@
     SUBDIR += rubygem-rouge
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-rubypants
+    SUBDIR += rubygem-rugments
     SUBDIR += rubygem-sanitize
     SUBDIR += rubygem-sass
     SUBDIR += rubygem-sass-rails
@@ -1396,9 +1403,11 @@
     SUBDIR += rubygem-terminal-table
     SUBDIR += rubygem-text
     SUBDIR += rubygem-tidy
+    SUBDIR += rubygem-twitter-text
     SUBDIR += rubygem-unf
     SUBDIR += rubygem-unf_ext
     SUBDIR += rubygem-version_sorter
+    SUBDIR += rubygem-wikicloth
     SUBDIR += rubygem-xml-simple
     SUBDIR += rubygem-xslt
     SUBDIR += rubygem-ya2yaml
@@ -1458,6 +1467,7 @@
     SUBDIR += source-highlight
     SUBDIR += sowing
     SUBDIR += spellutils
+    SUBDIR += spiff
     SUBDIR += sphinxsearch
     SUBDIR += sphinxsearch-devel
     SUBDIR += sq-hunspell

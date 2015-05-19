@@ -3,7 +3,7 @@
 PORTNAME=	xen
 PKGNAMESUFFIX=	-tools
 PORTVERSION=	4.5.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils emulators
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${PORTVERSION}/ \
 		http://code.coreboot.org/p/seabios/downloads/get/:seabios
@@ -25,12 +25,12 @@ ONLY_FOR_ARCHS=	amd64
 ONLY_FOR_ARCHS_REASON=	"not yet ported to anything other than amd64"
 
 SEABIOSVERSION=	1.8.1
-DISTFILES+=	${PORTNAME}-${PORTVERSION}.tar.gz \
+DISTFILES+=	${DISTNAME}.tar.gz \
 		seabios-${SEABIOSVERSION}.tar.gz:seabios
 
 WRKSRC=		${WRKDIR}/xen-${PORTVERSION}
 
-USES=		gmake perl5 python shebangfix libtool pkgconfig
+USES=		cpe gmake perl5 python shebangfix libtool pkgconfig
 USE_GNOME=	glib20
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	HOSTCC="${CC}" CC="${CC}" \
@@ -41,7 +41,6 @@ QEMU_ARGS=	--disable-gtk \
 		--disable-smartcard-nss \
 		--disable-sdl \
 		--disable-vte \
-		--disable-vnc \
 		--disable-glx \
 		--disable-curses \
 		--disable-tools \

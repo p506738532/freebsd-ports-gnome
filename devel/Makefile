@@ -24,6 +24,7 @@
     SUBDIR += R-cran-gtools
     SUBDIR += R-cran-iterators
     SUBDIR += R-cran-itertools
+    SUBDIR += R-cran-magrittr
     SUBDIR += R-cran-memoise
     SUBDIR += R-cran-microbenchmark
     SUBDIR += R-cran-plyr
@@ -238,6 +239,7 @@
     SUBDIR += clanlib1
     SUBDIR += clanlib22
     SUBDIR += cld
+    SUBDIR += cld2
     SUBDIR += clewn
     SUBDIR += clig
     SUBDIR += clisp-hyperspec
@@ -271,6 +273,7 @@
     SUBDIR += cowlib
     SUBDIR += cpan-upload
     SUBDIR += cpan-upload-http
+    SUBDIR += cpp-netlib
     SUBDIR += cppcheck
     SUBDIR += cppi
     SUBDIR += cpptest
@@ -406,6 +409,10 @@
     SUBDIR += eric4
     SUBDIR += eric6
     SUBDIR += eris
+    SUBDIR += erlang-getopt
+    SUBDIR += erlang-msgpack
+    SUBDIR += erlang-mustache
+    SUBDIR += erlang-protobuffs
     SUBDIR += esdl
     SUBDIR += etcd
     SUBDIR += etcdctl
@@ -482,6 +489,7 @@
     SUBDIR += gauche-readline
     SUBDIR += gaul
     SUBDIR += gazpacho
+    SUBDIR += gb
     SUBDIR += gcc-arm-embedded
     SUBDIR += gccmakedep
     SUBDIR += gconf2
@@ -556,6 +564,7 @@
     SUBDIR += git-modes
     SUBDIR += git-review
     SUBDIR += git-subversion
+    SUBDIR += gitflow
     SUBDIR += gitg
     SUBDIR += gitg0
     SUBDIR += gitinspector
@@ -592,6 +601,7 @@
     SUBDIR += gnulibiberty
     SUBDIR += gnustep
     SUBDIR += gnustep-make
+    SUBDIR += go-bindata
     SUBDIR += go-flags
     SUBDIR += go-hashicorp-logutils
     SUBDIR += go-json-rest
@@ -1073,6 +1083,7 @@
     SUBDIR += libical
     SUBDIR += libical-glib
     SUBDIR += libinotify
+    SUBDIR += libiomp5-devel
     SUBDIR += libiqxmlrpc
     SUBDIR += libisofs
     SUBDIR += libixp
@@ -1364,6 +1375,7 @@
     SUBDIR += ndesk-dbus
     SUBDIR += ndesk-dbus-glib
     SUBDIR += ndesk-options
+    SUBDIR += neotoma
     SUBDIR += netscape-java40
     SUBDIR += newfile
     SUBDIR += newt
@@ -1383,16 +1395,19 @@
     SUBDIR += ocaml-annexlib
     SUBDIR += ocaml-calendar
     SUBDIR += ocaml-camljava
+    SUBDIR += ocaml-camlp4
     SUBDIR += ocaml-camlp5
     SUBDIR += ocaml-camomile
     SUBDIR += ocaml-camomile-examples
     SUBDIR += ocaml-cfg
     SUBDIR += ocaml-classes
+    SUBDIR += ocaml-cmdliner
     SUBDIR += ocaml-cppo
     SUBDIR += ocaml-deriving-ocsigen
     SUBDIR += ocaml-equeue
     SUBDIR += ocaml-extlib
     SUBDIR += ocaml-findlib
+    SUBDIR += ocaml-ipaddr
     SUBDIR += ocaml-lacaml
     SUBDIR += ocaml-lwt
     SUBDIR += ocaml-magic
@@ -1400,6 +1415,7 @@
     SUBDIR += ocaml-ounit
     SUBDIR += ocaml-pcre
     SUBDIR += ocaml-pomap
+    SUBDIR += ocaml-ppx-tools
     SUBDIR += ocaml-react
     SUBDIR += ocaml-res
     SUBDIR += ocaml-sdl
@@ -2237,6 +2253,7 @@
     SUBDIR += p5-IO-Digest
     SUBDIR += p5-IO-Event
     SUBDIR += p5-IO-FDPass
+    SUBDIR += p5-IO-File-AtomicChange
     SUBDIR += p5-IO-HTML
     SUBDIR += p5-IO-Handle-Util
     SUBDIR += p5-IO-Interactive
@@ -2604,6 +2621,7 @@
     SUBDIR += p5-Object-Tiny-Lvalue
     SUBDIR += p5-Olson-Abbreviations
     SUBDIR += p5-Opcodes
+    SUBDIR += p5-OrePAN2
     SUBDIR += p5-Ouch
     SUBDIR += p5-PAR
     SUBDIR += p5-PAR-Dist
@@ -2672,7 +2690,9 @@
     SUBDIR += p5-Parse-CPAN-Packages-Fast
     SUBDIR += p5-Parse-ErrorString-Perl
     SUBDIR += p5-Parse-ExuberantCTags
+    SUBDIR += p5-Parse-LocalDistribution
     SUBDIR += p5-Parse-Method-Signatures
+    SUBDIR += p5-Parse-PMFile
     SUBDIR += p5-Parse-PerlConfig
     SUBDIR += p5-Parse-Pidl
     SUBDIR += p5-Parse-PlainConfig
@@ -3186,6 +3206,8 @@
     SUBDIR += p5-Types-Core
     SUBDIR += p5-Types-Path-Tiny
     SUBDIR += p5-Types-Serialiser
+    SUBDIR += p5-Types-URI
+    SUBDIR += p5-Types-UUID
     SUBDIR += p5-UDCode
     SUBDIR += p5-UI-Dialog
     SUBDIR += p5-UNIVERSAL-can
@@ -3496,6 +3518,7 @@
     SUBDIR += pecl-intl
     SUBDIR += pecl-jsmin
     SUBDIR += pecl-jsonc
+    SUBDIR += pecl-jsond
     SUBDIR += pecl-judy
     SUBDIR += pecl-libevent
     SUBDIR += pecl-mcve
@@ -3524,6 +3547,7 @@
     SUBDIR += pecl-uopz
     SUBDIR += pecl-uploadprogress
     SUBDIR += pecl-uri_template
+    SUBDIR += pecl-uuid
     SUBDIR += pecl-vld
     SUBDIR += pecl-xhprof
     SUBDIR += pecl-yac
@@ -3596,6 +3620,7 @@
     SUBDIR += poco-devel
     SUBDIR += poco-ssl
     SUBDIR += ponscripter-sekai
+    SUBDIR += poolboy
     SUBDIR += popt
     SUBDIR += poslib
     SUBDIR += powerpc64-binutils
@@ -4323,8 +4348,10 @@
     SUBDIR += re2c
     SUBDIR += readline
     SUBDIR += rebar
+    SUBDIR += rebar3
     SUBDIR += regexx
     SUBDIR += regexxer
+    SUBDIR += relx
     SUBDIR += remake
     SUBDIR += renpy
     SUBDIR += replay
@@ -4350,7 +4377,6 @@
     SUBDIR += ruby-date2
     SUBDIR += ruby-dialogs
     SUBDIR += ruby-event-loop
-    SUBDIR += ruby-flexmock
     SUBDIR += ruby-gems
     SUBDIR += ruby-intl
     SUBDIR += ruby-korundum
@@ -4389,6 +4415,7 @@
     SUBDIR += rubygem-atomic
     SUBDIR += rubygem-atoulme-antwrap
     SUBDIR += rubygem-attic
+    SUBDIR += rubygem-attr_required
     SUBDIR += rubygem-authlogic
     SUBDIR += rubygem-awesome_print
     SUBDIR += rubygem-axiom-types
@@ -4437,6 +4464,7 @@
     SUBDIR += rubygem-crack
     SUBDIR += rubygem-cri
     SUBDIR += rubygem-cucumber
+    SUBDIR += rubygem-cucumber-core
     SUBDIR += rubygem-daemon_controller
     SUBDIR += rubygem-daemons
     SUBDIR += rubygem-debugger
@@ -4479,6 +4507,7 @@
     SUBDIR += rubygem-ffi-compiler
     SUBDIR += rubygem-ffi-yajl
     SUBDIR += rubygem-file-tail
+    SUBDIR += rubygem-flexmock
     SUBDIR += rubygem-fluent-logger
     SUBDIR += rubygem-fog
     SUBDIR += rubygem-fog-brightbox
@@ -4496,6 +4525,7 @@
     SUBDIR += rubygem-generator_spec
     SUBDIR += rubygem-generator_spec-rails4
     SUBDIR += rubygem-georuby
+    SUBDIR += rubygem-get_process_mem
     SUBDIR += rubygem-getopt
     SUBDIR += rubygem-gettext
     SUBDIR += rubygem-gh
@@ -4565,10 +4595,8 @@
     SUBDIR += rubygem-metaclass
     SUBDIR += rubygem-metaid
     SUBDIR += rubygem-method_source
-    SUBDIR += rubygem-mini_portile
     SUBDIR += rubygem-minitest
     SUBDIR += rubygem-minitest4
-    SUBDIR += rubygem-mirror
     SUBDIR += rubygem-mixlib-authentication
     SUBDIR += rubygem-mixlib-cli
     SUBDIR += rubygem-mixlib-config
@@ -4590,6 +4618,7 @@
     SUBDIR += rubygem-needle
     SUBDIR += rubygem-nenv
     SUBDIR += rubygem-nesty
+    SUBDIR += rubygem-newrelic_rpm
     SUBDIR += rubygem-nice-ffi
     SUBDIR += rubygem-nio4r
     SUBDIR += rubygem-nori
@@ -4660,6 +4689,7 @@
     SUBDIR += rubygem-ruby2ruby
     SUBDIR += rubygem-ruby_parser
     SUBDIR += rubygem-rubygame
+    SUBDIR += rubygem-rubygems-mirror
     SUBDIR += rubygem-rubygems-tasks
     SUBDIR += rubygem-rubyinline
     SUBDIR += rubygem-rubyinlineaccel
@@ -4708,6 +4738,7 @@
     SUBDIR += rubygem-sysinfo
     SUBDIR += rubygem-systemu
     SUBDIR += rubygem-table_print
+    SUBDIR += rubygem-tdiff
     SUBDIR += rubygem-templater
     SUBDIR += rubygem-temple
     SUBDIR += rubygem-term-ansicolor
@@ -4805,6 +4836,7 @@
     SUBDIR += spark
     SUBDIR += spatialindex
     SUBDIR += spdict
+    SUBDIR += spice-protocol
     SUBDIR += spin
     SUBDIR += splint
     SUBDIR += srecord

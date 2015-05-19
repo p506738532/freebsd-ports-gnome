@@ -9,7 +9,6 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v3/${PORTVERSION:R}/ \
 		http://www1.at.squid-cache.org/Versions/v3/${PORTVERSION:R}/ \
 		http://www.eu.squid-cache.org/Versions/v3/${PORTVERSION:R}/ \
 		http://www1.jp.squid-cache.org/Versions/v3/${PORTVERSION:R}/
-MASTER_SITE_SUBDIR=	squid
 DIST_SUBDIR=	squid${PORTVERSION:R}
 
 PATCH_SITES=	http://www.squid-cache.org/%SUBDIR%/ \
@@ -21,7 +20,7 @@ PATCH_SITES=	http://www.squid-cache.org/%SUBDIR%/ \
 PATCH_SITE_SUBDIR=	Versions/v3/${PORTVERSION:R}/changesets
 PATCHFILES=	# empty
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	timp87@gmail.com
 COMMENT=	HTTP Caching Proxy
 
 LICENSE=	GPLv2

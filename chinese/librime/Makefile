@@ -3,9 +3,8 @@
 
 PORTNAME=	librime
 PORTVERSION=	1.1
+DISTVERSIONPREFIX=	rime-
 CATEGORIES=	chinese textproc
-MASTER_SITES=	http://github.com/rime/${PORTNAME}/archive/rime-${PORTVERSION}.tar.gz?dummy=/
-DISTNAME=	${PORTNAME}-rime-${DISTVERSION}
 
 MAINTAINER=	lichray@gmail.com
 COMMENT=	Rime Input Method Engine, the core library
@@ -18,11 +17,13 @@ LIB_DEPENDS=	libboost_thread.so:${PORTSDIR}/devel/boost-libs \
 		libopencc.so:${PORTSDIR}/chinese/opencc \
 		libyaml-cpp.so:${PORTSDIR}/devel/yaml-cpp
 
-USES=		cmake compiler:c++11-lang pkgconfig gettext perl5
+USES=		cmake compiler:c++11-lib pkgconfig gettext perl5
 USE_PERL5=	build patch
 USE_LDCONFIG=	yes
 USE_XORG=	xproto
 LDFLAGS+=	-lintl
+USE_GITHUB=	yes
+GH_ACCOUNT=	rime
 
 PLIST_SUB=	VER=${PORTVERSION}.0
 

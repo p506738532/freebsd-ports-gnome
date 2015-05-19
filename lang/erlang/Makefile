@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	erlang
-PORTVERSION=	17.5.2
-PORTREVISION=	1
+PORTVERSION=	17.5.4
 PORTEPOCH=	3
 CATEGORIES=	lang parallel java
 MASTER_SITES=	http://www.erlang.org/download/:erlangorg		\
@@ -12,7 +11,7 @@ MASTER_SITES=	http://www.erlang.org/download/:erlangorg		\
 		http://www.erlang.se/doc/:erlangse			\
 		http://www.erlang.se/publications/:publications		\
 		http://www.sics.se/~joe/thesis/:joe			\
-		${MASTER_SITE_LOCAL:S/$/:local/:S,%SUBDIR%/,olgeni/,}
+		LOCAL/olgeni:local
 DISTNAME=	otp_src_${ERL_RELEASE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:erlangorg	\
 		${ERLANG_MAN}:erlangorg
@@ -55,6 +54,7 @@ GNU_CONFIGURE=	yes
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 EI_VSN=		3.7.20
+SNMP_VSN=	5.1.2
 TOOLS_VSN=	2.7.2
 
 .include <bsd.port.options.mk>
@@ -207,13 +207,33 @@ post-install:
 	${TAR} --unlink -xzpf ${DISTDIR}/${DIST_SUBDIR}/${ERLANG_DOCS} \
 		-C ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}
 
+	${MV} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/erts-6.4/* \
+		${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/erts-6.4.1
+	${RMDIR} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/erts-6.4
+
 	${MV} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/inets-5.10.6/* \
-		${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/inets-5.10.7
+		${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/inets-5.10.8
 	${RMDIR} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/inets-5.10.6
 
 	${MV} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/ssh-3.2/* \
-		${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/ssh-3.2.2
+		${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/ssh-3.2.3
 	${RMDIR} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/ssh-3.2
+
+	${MV} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/common_test-1.10/* \
+		${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/common_test-1.10.1
+	${RMDIR} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/common_test-1.10
+
+	${MV} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/diameter-1.9/* \
+		${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/diameter-1.9.1
+	${RMDIR} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/diameter-1.9
+
+	${MV} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/snmp-5.1.1/* \
+		${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/snmp-5.1.2
+	${RMDIR} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/snmp-5.1.1
+
+	${MV} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/test_server-3.8/* \
+		${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/test_server-3.8.1 
+	${RMDIR} ${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/test_server-3.8
 
 	${INSTALL_DATA} ${WRKSRC}/lib/dialyzer/doc/*.txt \
 		${STAGEDIR}${PREFIX}/lib/${ERLANG_LIB}/lib/dialyzer-*/doc/
@@ -222,7 +242,6 @@ post-install:
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$(expr ${FILE} : '\([^:]*\)') ${STAGEDIR}/${DOCSDIR}
 .endfor
 .endif
-
 .if ! ${PORT_OPTIONS:MGS}
 	${RM} -r ${STAGEDIR}${PREFIX}/lib/erlang/lib/gs-*
 .endif
@@ -240,6 +259,8 @@ post-install:
 .if ! ${PORT_OPTIONS:MWX}
 	${RM} -r ${STAGEDIR}${PREFIX}/lib/erlang/lib/wx-*
 .endif
+
+	${LN} -s ../lib/erlang/lib/snmp-${SNMP_VSN}/bin/snmpc ${STAGEDIR}${PREFIX}/bin/snmpc
 
 	@cd ${STAGEDIR}${PREFIX}; ${FIND} lib/${ERLANG_LIB}/* -type d -empty \
 		| ${SORT} \
