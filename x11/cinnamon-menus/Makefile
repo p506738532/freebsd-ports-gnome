@@ -4,7 +4,6 @@
 PORTNAME=	cinnamon-menus
 PORTVERSION=	2.4.1
 CATEGORIES=	x11 gnome
-MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -19,6 +18,8 @@ RUN_DEPENDS=	xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
 USES=		autoreconf gettext gmake libtool pathfix pkgconfig \
 		python:2 tar:xz
 USE_GNOME=	gnomemenus3 gnomeprefix gtk30 introspection:build
+USE_GITHUB=	yes
+GH_ACCOUNT=	linuxmint
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 PATHFIX_MAKEFILEIN=	Makefile.am
