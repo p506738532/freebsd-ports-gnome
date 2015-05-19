@@ -1,13 +1,11 @@
 # Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
 # $FreeBSD$
-#   $MCom: ports/trunk/devel/pygobject3-common/Makefile 19953 2014-10-15 08:51:31Z gusi $
 
 PORTNAME=	gobject
-PORTVERSION=	3.14.0
+PORTVERSION=	3.16.1
 PORTREVISION?=	0
 CATEGORIES=	devel python
-MASTER_SITES=	GNOME
-MASTER_SITE_SUBDIR=	sources/pygobject/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+MASTER_SITES=	GNOME/sources/pygobject/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 PKGNAMEPREFIX?=	py
 PKGNAMESUFFIX?=	3-common
 DISTNAME=	pygobject-${PORTVERSION}
