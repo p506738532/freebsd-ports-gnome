@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cjs
-PORTVERSION=	2.4.2
+PORTVERSION=	2.6.0
 CATEGORIES=	lang gnome
 DIST_SUBDIR=	gnome3
 
