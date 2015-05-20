@@ -42,6 +42,7 @@
     SUBDIR += fuse-roms
     SUBDIR += fuse-utils
     SUBDIR += gbe
+    SUBDIR += gem5
     SUBDIR += generator
     SUBDIR += generator-cbiere
     SUBDIR += gens
@@ -163,6 +164,8 @@
     SUBDIR += x49gp
     SUBDIR += xbraitenberg
     SUBDIR += xcpc
+    SUBDIR += xen
+    SUBDIR += xen-kernel
     SUBDIR += xhomer
     SUBDIR += xsystem35
     SUBDIR += xzx

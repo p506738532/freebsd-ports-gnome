@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	sage
-PORTVERSION=	6.5
-PORTREVISION=	1
+PORTVERSION=	6.6
 CATEGORIES=	math
 MASTER_SITES=	http://boxen.math.washington.edu/home/sagemath/sage-mirror/src/ \
 		http://mirrors.xmission.com/sage/src/ \
@@ -36,7 +35,7 @@ pre-extract:
 	@sleep 10
 
 PLIST_FILES=	bin/sage
-USE_TEX=	latex:build dvipsk:build
+USE_TEX=	latex:build
 USES=		gmake iconv tk
 MAKE_JOBS_SAFE=	yes
 

@@ -5,8 +5,7 @@ PORTNAME=	armv7
 PORTVERSION=	${SNAPSHOT}
 PORTREVISION=	${ARMV7_PR}
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GCC}
-MASTER_SITE_SUBDIR=	releases/gcc-${GCC_VERSION}
+MASTER_SITES=	GCC/releases/gcc-${GCC_VERSION}
 PKGNAMEPREFIX=	gnatdroid-
 DISTFILES=	${IDENTIFICATION}.tar.bz2
 
@@ -59,6 +58,10 @@ CROSS=			gnat gnatbind gnatchop gnatclean gnatfind gnatkr \
 			gnatlink gnatls gnatmake gnatprep gnatxref
 
 .include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSREL:R:M8}
+BROKEN=	multiple definition of __x86.get_pc_thunk.cx on FreeBSD 8
+.endif
 
 .if ${PORT_OPTIONS:MFORT}
 LANGS+=		fortran

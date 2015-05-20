@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://ocsigen.org/download/
 PKGNAMEPREFIX=	ocaml-
 
-MAINTAINER=	jaapb@kerguelen.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Cooperative threading library for OCaml
 
 LICENSE=	LGPL21
@@ -24,6 +24,7 @@ USES=			gmake
 USE_OCAML=		yes
 OCAMLC_DEPEND=		ocaml>=3.11:${OCAMLC_PORT}
 USE_OCAML_FINDLIB=	yes
+USE_OCAML_CAMLP4=	yes
 USE_OCAMLFIND_PLIST=	yes
 USE_OCAML_LDCONFIG=	yes
 HAS_CONFIGURE=		yes

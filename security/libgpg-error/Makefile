@@ -2,10 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	libgpg-error
-PORTVERSION=	1.17
+PORTVERSION=	1.19
 CATEGORIES=	security devel
-MASTER_SITES=	${MASTER_SITE_GNUPG}
-MASTER_SITE_SUBDIR=	${PORTNAME}
+MASTER_SITES=	GNUPG
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Common error values for all GnuPG components

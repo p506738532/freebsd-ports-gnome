@@ -4,8 +4,7 @@ PORTNAME=		${SAMBA_BASENAME}36
 PORTVERSION=		3.6.25
 PORTREVISION?=		0
 CATEGORIES?=		net
-MASTER_SITES=		${MASTER_SITE_SAMBA}
-MASTER_SITE_SUBDIR=	samba samba/stable samba/pre
+MASTER_SITES=		SAMBA/samba SAMBA/samba/stable SAMBA/samba/pre
 DISTNAME=		${SAMBA_BASENAME}-${PORTVERSION:S|.p|pre|:S|.r|rc|:S|.t|tp|:S|.a|alpha|}
 
 MAINTAINER?=		timur@FreeBSD.org
@@ -260,18 +259,13 @@ CONFIGURE_ARGS+=	--disable-fam
 
 .if ${PORT_OPTIONS:MACL_SUPPORT}
 CONFIGURE_ARGS+=	--with-acl-support
-.	if ${OSVERSION} > 800000
 WANT_EXP_MODULES+=	vfs_zfsacl
 LIB_DEPENDS+=		libsunacl.so:${PORTSDIR}/sysutils/libsunacl
-.	endif
 .else
 CONFIGURE_ARGS+=	--without-acl-support
 .endif
 
 .if ${PORT_OPTIONS:MAIO_SUPPORT}
-.if ${OSVERSION} < 700055
-IGNORE=			an AIO support requires 7.0-RELEASE or later. Disable AIO support
-.endif
 CONFIGURE_ARGS+=	--with-aio-support
 .else
 CONFIGURE_ARGS+=	--without-aio-support

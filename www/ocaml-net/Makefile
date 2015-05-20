@@ -8,7 +8,7 @@ MASTER_SITES=	http://download.camlcity.org/download/
 PKGNAMEPREFIX=	ocaml-
 DISTNAME=	ocaml${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	jaapb@kerguelen.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	OCaml modules for Internet applications
 
 LICENSE=	GPLv2
@@ -21,6 +21,7 @@ CONFLICTS=	ocaml-equeue-2* ocaml-netclient-0*
 USES=			gmake
 USE_OCAML=		yes
 USE_OCAML_FINDLIB=	yes
+USE_OCAML_CAMLP4=	yes
 USE_OCAML_LDCONFIG=	yes
 USE_OCAMLFIND_PLIST=	yes
 HAS_CONFIGURE=		yes

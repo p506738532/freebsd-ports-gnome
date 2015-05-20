@@ -4,7 +4,7 @@
 PORTNAME=	sudo
 DISTVERSION=	1.8.13
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_SUDO}
+MASTER_SITES=	SUDO
 
 MAINTAINER=	garga@FreeBSD.org
 COMMENT=	Allow others to run commands as root
@@ -14,7 +14,8 @@ LICENSE_NAME=	Sudo license
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-USES=		libtool
+USES=		cpe libtool
+CPE_VENDOR=	todd_miller
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-lgcc

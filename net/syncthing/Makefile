@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	syncthing
-PORTVERSION=	0.10.30
-CATEGORIES=	net
+PORTVERSION=	0.11.2
 DISTVERSIONPREFIX=	v
+CATEGORIES=	net
 
 MAINTAINER=	swills@FreeBSD.org
 COMMENT=	Encrypted file sync tool

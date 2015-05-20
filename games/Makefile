@@ -15,6 +15,7 @@
     SUBDIR += CaribbeanStud
     SUBDIR += HeroesOfMightAndMagic
     SUBDIR += KnightCap
+    SUBDIR += abbayedesmorts
     SUBDIR += abe
     SUBDIR += abuse_sdl
     SUBDIR += acm
@@ -25,7 +26,6 @@
     SUBDIR += affenspiel
     SUBDIR += afternoonstalker
     SUBDIR += agame
-    SUBDIR += airstrike
     SUBDIR += aisleriot
     SUBDIR += alephone
     SUBDIR += alephone-data
@@ -372,6 +372,7 @@
     SUBDIR += greed
     SUBDIR += gretools
     SUBDIR += grhino
+    SUBDIR += griels-quest
     SUBDIR += gru
     SUBDIR += grubik
     SUBDIR += gshisen
@@ -673,6 +674,7 @@
     SUBDIR += openarena-oax
     SUBDIR += openarena-server
     SUBDIR += openastromenace
+    SUBDIR += openbor
     SUBDIR += openbubbles
     SUBDIR += opencity
     SUBDIR += openclonk
@@ -770,6 +772,7 @@
     SUBDIR += pycadia
     SUBDIR += pyching
     SUBDIR += pydance
+    SUBDIR += pyfa
     SUBDIR += pykawari
     SUBDIR += pysolfc
     SUBDIR += pyspacewar
@@ -908,10 +911,10 @@
     SUBDIR += spicetrade
     SUBDIR += spider
     SUBDIR += spring
-    SUBDIR += springlobby
     SUBDIR += starfighter
     SUBDIR += starlanes
     SUBDIR += steelstorm
+    SUBDIR += stendhal
     SUBDIR += stepmania-devel
     SUBDIR += stockfish
     SUBDIR += stonesoup
@@ -1033,7 +1036,6 @@
     SUBDIR += widelands
     SUBDIR += wizznic
     SUBDIR += wmeyes
-    SUBDIR += wmfortune
     SUBDIR += wmminichess
     SUBDIR += wmpuzzle
     SUBDIR += wmqstat
@@ -1046,6 +1048,8 @@
     SUBDIR += worldofpadman
     SUBDIR += wtf
     SUBDIR += wxlauncher
+    SUBDIR += wyrmgus
+    SUBDIR += wyrmsun
     SUBDIR += xabacus
     SUBDIR += xasteroids
     SUBDIR += xataxx

@@ -4,7 +4,7 @@
 PORTNAME=	ut2003-demo
 PORTVERSION=	2206
 CATEGORIES=	games linux
-MASTER_SITES=	GENTOO/distfiles
+MASTER_SITES=	GENTOO
 PKGNAMEPREFIX=	linux-
 DISTNAME=	ut2003demo-lnx-${PORTVERSION}
 EXTRACT_SUFX=	.sh.bin
@@ -35,7 +35,6 @@ LIBDIRS=	Animations Benchmark ForceFeedback KarmaData Maps Music \
 		Sounds StaticMeshes System Textures Web
 
 OPTIONS_DEFINE=	DOCS NVIDIA_GL
-NVIDIA_GL_DESC=	Use GL driver from nvidia-driver
 
 NVIDIA_GL_RUN_DEPENDS=	${LINUXBASE}/usr/lib/libGL.so.1:${PORTSDIR}/x11/nvidia-driver
 

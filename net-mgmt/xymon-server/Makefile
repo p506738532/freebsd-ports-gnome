@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	xymon
-PORTVERSION=	4.3.18
-PORTREVISION=	6
+PORTVERSION=	4.3.20
+PORTREVISION=	0
 CATEGORIES=	net-mgmt www
 MASTER_SITES=	SF/xymon/Xymon/${PORTVERSION}
 PKGNAMESUFFIX=	-server${PKGNAMESUFFIX2}
@@ -30,8 +30,6 @@ XYMONHOSTNAME?=	xymon.example.com
 XYMONHOSTIP?=	127.0.0.1
 
 USES=		cpe gmake shebangfix
-CPE_VENDOR=	xymon
-CPE_PRODUCT=	xymon
 SHEBANG_FILES=	${WRKSRC}/xymond/xymonreports.sh.DIST ${WRKSRC}/build/upgrade430.sh
 USE_OPENSSL=	yes
 MAKE_JOBS_UNSAFE=	yes
@@ -53,7 +51,7 @@ FIXME1=		alerts.cfg hosts.cfg xymon-apache-open xymon-apache-secure
 FIXME2=		analysis.cfg combo.cfg holidays.cfg rrddefinitions.cfg \
 		snmpmibs.cfg xymonmenu.cfg xymonserver-migration.cfg
 
-OPTIONS_DEFINE=LDAP NETSNMP
+OPTIONS_DEFINE=DEBUG LDAP NETSNMP
 NETSNMP_DESC=Enable Net-SNMP support
 
 .include <bsd.port.options.mk>

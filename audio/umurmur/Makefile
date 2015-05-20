@@ -15,7 +15,6 @@ LIB_DEPENDS=	libconfig.so:${PORTSDIR}/devel/libconfig \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	fatbob313
-GH_COMMIT=	17daa7e
 
 USES=		autoreconf gmake libtool
 GNU_CONFIGURE=	yes

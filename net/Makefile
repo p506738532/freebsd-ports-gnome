@@ -64,6 +64,7 @@
     SUBDIR += c3270
     SUBDIR += cagibi
     SUBDIR += ccxstream
+    SUBDIR += cf
     SUBDIR += chrony
     SUBDIR += citrix_ica
     SUBDIR += clamz
@@ -314,6 +315,7 @@
     SUBDIR += libnfs
     SUBDIR += libnids
     SUBDIR += libnids-libnet11
+    SUBDIR += libnss-cache
     SUBDIR += libnss-mysql
     SUBDIR += liboauth
     SUBDIR += libopennet
@@ -363,6 +365,7 @@
     SUBDIR += mad_fcl
     SUBDIR += malo-firmware-kmod
     SUBDIR += mcast-tools
+    SUBDIR += mdns-repeater
     SUBDIR += mediastreamer
     SUBDIR += mediatomb
     SUBDIR += megatools
@@ -375,6 +378,7 @@
     SUBDIR += miniupnpc
     SUBDIR += miniupnpd
     SUBDIR += miredo
+    SUBDIR += miruo
     SUBDIR += mono-zeroconf
     SUBDIR += mopd
     SUBDIR += morebalance
@@ -391,6 +395,7 @@
     SUBDIR += mtr
     SUBDIR += mtr-nox11
     SUBDIR += nakenchat
+    SUBDIR += nanomsg
     SUBDIR += nast
     SUBDIR += nbd-server
     SUBDIR += nc
@@ -426,6 +431,7 @@
     SUBDIR += nss-pam-ldapd
     SUBDIR += nss-pam-ldapd-sasl
     SUBDIR += nss_ldap
+    SUBDIR += nsscache
     SUBDIR += nstxd
     SUBDIR += ntimed
     SUBDIR += ntlmaps
@@ -433,6 +439,7 @@
     SUBDIR += ntopng
     SUBDIR += ntp
     SUBDIR += ntp-devel
+    SUBDIR += ntp-rc
     SUBDIR += ntraceroute
     SUBDIR += nusoap
     SUBDIR += nxproxy
@@ -757,6 +764,8 @@
     SUBDIR += p5-URI-Template
     SUBDIR += p5-URI-Template-Restrict
     SUBDIR += p5-URI-ws
+    SUBDIR += p5-VM-EC2
+    SUBDIR += p5-VM-EC2-Security-CredentialCache
     SUBDIR += p5-Validate-Net
     SUBDIR += p5-WebService-Dropbox
     SUBDIR += p5-WebService-Prowl
@@ -850,16 +859,12 @@
     SUBDIR += php5-soap
     SUBDIR += php5-sockets
     SUBDIR += php5-xmlrpc
-    SUBDIR += php53-ldap
-    SUBDIR += php53-soap
-    SUBDIR += php53-sockets
-    SUBDIR += php53-xmlrpc
     SUBDIR += php55-ldap
     SUBDIR += php55-soap
     SUBDIR += php55-sockets
     SUBDIR += php55-xmlrpc
-    SUBDIR += php56-ldap  
-    SUBDIR += php56-soap  
+    SUBDIR += php56-ldap
+    SUBDIR += php56-soap
     SUBDIR += php56-sockets
     SUBDIR += php56-xmlrpc
     SUBDIR += phpldapadmin
@@ -867,6 +872,7 @@
     SUBDIR += pimdd
     SUBDIR += pipsecd
     SUBDIR += pjsip
+    SUBDIR += pjsip-extsrtp
     SUBDIR += pktanon
     SUBDIR += pload
     SUBDIR += plugdaemon
@@ -891,6 +897,7 @@
     SUBDIR += pxe
     SUBDIR += pxe-pdhcp
     SUBDIR += py-GeoIP
+    SUBDIR += py-GeoIP2
     SUBDIR += py-amqp
     SUBDIR += py-amqplib
     SUBDIR += py-avahi
@@ -912,6 +919,7 @@
     SUBDIR += py-libcloud
     SUBDIR += py-libdnet
     SUBDIR += py-libnet
+    SUBDIR += py-maxminddb
     SUBDIR += py-medusa
     SUBDIR += py-miniupnpc
     SUBDIR += py-msrplib
@@ -929,6 +937,7 @@
     SUBDIR += py-port-for
     SUBDIR += py-pybeanstalk
     SUBDIR += py-pygeoip
+    SUBDIR += py-pynmsg
     SUBDIR += py-pynsq
     SUBDIR += py-pypcap
     SUBDIR += py-pysendfile
@@ -938,6 +947,7 @@
     SUBDIR += py-pyzmq
     SUBDIR += py-qt4-network
     SUBDIR += py-radix
+    SUBDIR += py-raet
     SUBDIR += py-s3cmd
     SUBDIR += py-simplesoap
     SUBDIR += py-smb
@@ -971,7 +981,6 @@
     SUBDIR += qt5-network
     SUBDIR += qtweetlib
     SUBDIR += quagga
-    SUBDIR += quagga23
     SUBDIR += queso
     SUBDIR += quiterss
     SUBDIR += quoted
@@ -1043,8 +1052,12 @@
     SUBDIR += rubygem-fog-atmos
     SUBDIR += rubygem-fog-aws
     SUBDIR += rubygem-fog-ecloud
+    SUBDIR += rubygem-fog-google
+    SUBDIR += rubygem-fog-local
+    SUBDIR += rubygem-fog-powerdns
     SUBDIR += rubygem-fog-profitbricks
     SUBDIR += rubygem-fog-radosgw
+    SUBDIR += rubygem-fog-riakcs
     SUBDIR += rubygem-fog-sakuracloud
     SUBDIR += rubygem-fog-serverlove
     SUBDIR += rubygem-fog-softlayer

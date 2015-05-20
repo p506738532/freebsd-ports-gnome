@@ -2,12 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	doublecmd
-PORTVERSION=	0.6.0
+PORTVERSION=	0.6.1
 CATEGORIES=	x11-fm
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
-MASTER_SITE_SUBDIR=	${PORTNAME}/Double%20Commander%20Source
+MASTER_SITES=	SF/${PORTNAME}/Double%20Commander%20Source
 DISTNAME=	${PORTNAME}-${PORTVERSION}-src
-DISTFILES=	${PORTNAME}-${PORTVERSION}-src.tar.gz ${PORTNAME}-help-${HELPVERSION}-src.tar.gz
+DISTFILES=	${DISTNAME}.tar.gz ${PORTNAME}-help-${HELPVERSION}-src.tar.gz
 
 MAINTAINER=	bbtruk@users.sourceforge.net
 COMMENT=	Total Commander like file manager for the X Window System

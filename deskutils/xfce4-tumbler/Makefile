@@ -4,7 +4,7 @@
 PORTNAME=	tumbler
 PORTVERSION=	0.1.31
 CATEGORIES=	deskutils xfce
-MASTER_SITES=	${MASTER_SITE_XFCE}
+MASTER_SITES=	XFCE
 PKGNAMEPREFIX=	xfce4-
 DIST_SUBDIR=	xfce4
 
@@ -19,7 +19,7 @@ LIB_DEPENDS=	libpng.so:${PORTSDIR}/graphics/png \
 
 USES=		pathfix pkgconfig gmake libtool gettext-tools xfce tar:bzip2
 GNU_CONFIGURE=	yes
-USE_GNOME=	glib20 intltool intlhack gdkpixbuf2
+USE_GNOME=	glib20 intltool intlhack gdkpixbuf2 librsvg2
 USE_LDCONFIG=	yes
 
 CONFIGURE_ARGS=	--enable-xdg-cache \

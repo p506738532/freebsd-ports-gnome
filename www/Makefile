@@ -96,6 +96,7 @@
     SUBDIR += coppermine
     SUBDIR += cowboy
     SUBDIR += cplanet
+    SUBDIR += cppcms
     SUBDIR += crawl
     SUBDIR += crp
     SUBDIR += css-mode.el
@@ -155,6 +156,7 @@
     SUBDIR += dtse
     SUBDIR += dummyflash
     SUBDIR += e107
+    SUBDIR += e2guardian
     SUBDIR += eaccelerator
     SUBDIR += edbrowse
     SUBDIR += efront
@@ -329,6 +331,7 @@
     SUBDIR += interchange
     SUBDIR += iojs
     SUBDIR += ismail
+    SUBDIR += itop
     SUBDIR += iwebcal
     SUBDIR += jawstats
     SUBDIR += jdresolve
@@ -351,6 +354,7 @@
     SUBDIR += kplaylist
     SUBDIR += kwebkitpart
     SUBDIR += larbin
+    SUBDIR += lessc
     SUBDIR += libapreq2
     SUBDIR += libecap
     SUBDIR += libepc
@@ -514,9 +518,9 @@
     SUBDIR += monast
     SUBDIR += mongoose
     SUBDIR += mongrel2
-    SUBDIR += moodle26
     SUBDIR += moodle27
     SUBDIR += moodle28
+    SUBDIR += moodle29
     SUBDIR += mozplugger
     SUBDIR += multisort
     SUBDIR += multiwatch
@@ -849,7 +853,6 @@
     SUBDIR += p5-FurlX-Coro
     SUBDIR += p5-Gantry
     SUBDIR += p5-Geo-Caching
-    SUBDIR += p5-Google-Code-Upload
     SUBDIR += p5-Google-Search
     SUBDIR += p5-Gtk2-WebKit
     SUBDIR += p5-Gungho
@@ -1054,6 +1057,7 @@
     SUBDIR += p5-Mojolicious-Plugin-Authentication
     SUBDIR += p5-Mojolicious-Plugin-Database
     SUBDIR += p5-Mojolicious-Plugin-Mongodb
+    SUBDIR += p5-Mojolicious-Plugin-SetUserGroup
     SUBDIR += p5-Mojolicious-Plugin-TtRenderer
     SUBDIR += p5-Mojolicious-Plugin-YamlConfig
     SUBDIR += p5-Monoceros
@@ -1208,6 +1212,7 @@
     SUBDIR += p5-Text-MultiMarkdown-ApacheHandler
     SUBDIR += p5-Tie-TinyURL
     SUBDIR += p5-Toader
+    SUBDIR += p5-Toadfarm
     SUBDIR += p5-Twiggy
     SUBDIR += p5-Twiggy-TLS
     SUBDIR += p5-URI-Encode
@@ -1416,8 +1421,6 @@
     SUBDIR += php-templates
     SUBDIR += php5-session
     SUBDIR += php5-tidy
-    SUBDIR += php53-session
-    SUBDIR += php53-tidy
     SUBDIR += php55-opcache
     SUBDIR += php55-session
     SUBDIR += php55-tidy
@@ -1534,6 +1537,7 @@
     SUBDIR += py-django-tinymce
     SUBDIR += py-django14
     SUBDIR += py-django16
+    SUBDIR += py-django17
     SUBDIR += py-django_compressor
     SUBDIR += py-djangotoolbox
     SUBDIR += py-djblets
@@ -1548,7 +1552,9 @@
     SUBDIR += py-feedgenerator
     SUBDIR += py-flask
     SUBDIR += py-flask-admin
+    SUBDIR += py-flask-bootstrap
     SUBDIR += py-flask-cache
+    SUBDIR += py-flask-cors
     SUBDIR += py-flask-flatpages
     SUBDIR += py-flask-oauthlib
     SUBDIR += py-flask-restful
@@ -1570,6 +1576,7 @@
     SUBDIR += py-html5lib
     SUBDIR += py-http-parser
     SUBDIR += py-httplib2
+    SUBDIR += py-hyper
     SUBDIR += py-imdbpy
     SUBDIR += py-jonpy
     SUBDIR += py-jswebkit
@@ -1783,9 +1790,12 @@
     SUBDIR += rubygem-akami
     SUBDIR += rubygem-amazon-ecs
     SUBDIR += rubygem-anemone
+    SUBDIR += rubygem-asana
     SUBDIR += rubygem-async_sinatra
     SUBDIR += rubygem-bluecloth
     SUBDIR += rubygem-bootstrap-sass
+    SUBDIR += rubygem-browser
+    SUBDIR += rubygem-cal-heatmap-rails
     SUBDIR += rubygem-carrierwave
     SUBDIR += rubygem-cgi_multipart_eof_fix
     SUBDIR += rubygem-chosen-rails
@@ -1812,11 +1822,11 @@
     SUBDIR += rubygem-feed-normalizer
     SUBDIR += rubygem-feedjira
     SUBDIR += rubygem-flowdock
-    SUBDIR += rubygem-form_data
     SUBDIR += rubygem-geminabox
     SUBDIR += rubygem-gitlab-flowdock-git-hook
     SUBDIR += rubygem-gitlab-gollum-lib
     SUBDIR += rubygem-gitlab-grack
+    SUBDIR += rubygem-gollum-grit_adapter
     SUBDIR += rubygem-gollum-lib
     SUBDIR += rubygem-gon
     SUBDIR += rubygem-gon-rails4
@@ -1868,6 +1878,7 @@
     SUBDIR += rubygem-merb-helpers
     SUBDIR += rubygem-merb-param-protection
     SUBDIR += rubygem-modernizr
+    SUBDIR += rubygem-mousetrap-rails
     SUBDIR += rubygem-multipart-post
     SUBDIR += rubygem-nanoc
     SUBDIR += rubygem-net-http-digest_auth
@@ -1906,6 +1917,7 @@
     SUBDIR += rubygem-redis-rack
     SUBDIR += rubygem-redis-rails
     SUBDIR += rubygem-redmine_acts_as_taggable_on
+    SUBDIR += rubygem-responders
     SUBDIR += rubygem-rest-client
     SUBDIR += rubygem-rfacebook
     SUBDIR += rubygem-rfeedfinder
@@ -1937,6 +1949,7 @@
     SUBDIR += rubygem-uglifier
     SUBDIR += rubygem-underscore-rails
     SUBDIR += rubygem-unicorn
+    SUBDIR += rubygem-unicorn-worker-killer
     SUBDIR += rubygem-url-mount
     SUBDIR += rubygem-url_escape
     SUBDIR += rubygem-wasabi
@@ -2037,7 +2050,6 @@
     SUBDIR += trac-advancedticketworkflow
     SUBDIR += trac-attachmentpolicy
     SUBDIR += trac-autocomplete
-    SUBDIR += trac-batchmodify
     SUBDIR += trac-bzr
     SUBDIR += trac-ccselector
     SUBDIR += trac-childtickets
@@ -2130,7 +2142,6 @@
     SUBDIR += twms
     SUBDIR += typo3
     SUBDIR += typo3-lts
-    SUBDIR += typo345
     SUBDIR += typolight
     SUBDIR += udmsearch
     SUBDIR += uglifyjs

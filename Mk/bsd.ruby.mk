@@ -174,15 +174,15 @@ RUBY?=			${LOCALBASE}/bin/${RUBY_NAME}
 RUBY_RELVERSION=	2.0.0
 RUBY_PORTREVISION=	0
 RUBY_PORTEPOCH=		1
-RUBY_PATCHLEVEL=	643
+RUBY_PATCHLEVEL=	645
 RUBY20=			""	# PLIST_SUB helpers
 
 . elif ${RUBY_VER} == 2.1
 #
 # Ruby 2.1
 #
-RUBY_RELVERSION=	2.1.5
-RUBY_PORTREVISION=	2
+RUBY_RELVERSION=	2.1.6
+RUBY_PORTREVISION=	0
 RUBY_PORTEPOCH=		1
 RUBY_PATCHLEVEL=	0
 RUBY21=			""	# PLIST_SUB helpers
@@ -191,7 +191,7 @@ RUBY21=			""	# PLIST_SUB helpers
 #
 # Ruby 2.2
 #
-RUBY_RELVERSION=	2.2.1
+RUBY_RELVERSION=	2.2.2
 RUBY_PORTREVISION=	0
 RUBY_PORTEPOCH=		1
 RUBY_PATCHLEVEL=	0
@@ -202,8 +202,11 @@ RUBY22=			""	# PLIST_SUB helpers
 # Other versions
 #
 IGNORE=	Only ruby 2.0, 2.1 and 2.2 are supported
+_INVALID_RUBY_VER=	1
 . endif
 .endif # defined(RUBY_VER)
+
+.if !defined(_INVALID_RUBY_VER)
 
 RUBY20?=		"@comment "
 RUBY21?=		"@comment "
@@ -233,7 +236,10 @@ _RUBY_SYSLIBDIR?=	${PREFIX}/lib
 _RUBY_SITEDIR?=		${_RUBY_SYSLIBDIR}/ruby/site_ruby
 _RUBY_VENDORDIR?=	${_RUBY_SYSLIBDIR}/ruby/vendor_ruby
 .endif
+.endif
 #      defined(RUBY)
+
+.if !defined(_INVALID_RUBY_VER)
 
 .if defined(LANG) && !empty(LANG)
 GEM_ENV+=		LANG=${LANG}
@@ -617,4 +623,5 @@ PLIST_SUB+=		RUBY_RD_HTML_FILES="@comment "
 BUILD_DEPENDS+=		${DEPEND_RUBY_RDTOOL}
 .endif
 
+.endif # _INVALID_RUBY_VER
 .endif

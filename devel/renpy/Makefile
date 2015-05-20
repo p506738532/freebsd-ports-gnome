@@ -1,12 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	renpy
-PORTVERSION=	6.99.1
+PORTVERSION=	6.99.2
 DISTVERSIONSUFFIX=-source
-PORTREVISION=	1
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.renpy.org/dl/${PORTVERSION}/ \
-		GENTOO/distfiles
+		GENTOO
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Framework for developing visual-novel type games
@@ -26,10 +25,12 @@ LIB_DEPENDS=	libfribidi.so:${PORTSDIR}/converters/fribidi \
 		libfreetype.so:${PORTSDIR}/print/freetype2
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}game_sdl2>0:${PORTSDIR}/devel/py-game_sdl2
 
+PORTSCOUT=	skipv:6.99.3 # only version bump
+
 USES=		python:2.7 shebangfix tar:bz2
 USE_PYTHON=	autoplist distutils
 USE_SDL=	sdl2
-EXTRACT_AFTER_ARGS=--exclude gen
+EXTRACT_AFTER_ARGS=--exclude gen --exclude '*.py[co]'
 SHEBANG_FILES=	renpy.py launcher/game/tkaskdir.py
 python_OLD_CMD=	/usr/bin/env python
 python_CMD=	${PYTHON_CMD}

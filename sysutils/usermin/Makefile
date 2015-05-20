@@ -5,20 +5,23 @@ PORTVERSION=	1.650
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.webmin.com/uupdates/:up \
 		SF/webadmin/${PORTNAME}/${PORTVERSION}:sf \
-		${MASTER_SITE_LOCAL:S/$/:up/}
-MASTER_SITE_SUBDIR=	olgeni/:up
+		LOCAL/olgeni/:up
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}:sf ${USERMIN_MODULES:S/gz$/gz:up/}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	olgeni@FreeBSD.org
 COMMENT=	Web-based interface for performing some user tasks
 
+LICENSE=	BSD3CLAUSE
+
 RUN_DEPENDS=	p5-Net-SSLeay>=0:${PORTSDIR}/security/p5-Net-SSLeay \
 		p5-IO-Tty>=0:${PORTSDIR}/devel/p5-IO-Tty \
 		p5-Authen-PAM>=0:${PORTSDIR}/security/p5-Authen-PAM
 
+NO_ARCH=	yes
 NO_BUILD=	yes
-USES=		perl5
+USES=		cpe perl5
+CPE_VENDOR=	webmin
 USE_RC_SUBR=	usermin
 SUB_LIST=	PERL5=${PERL}
 SUB_FILES=	pkg-message
@@ -53,8 +56,8 @@ post-patch:
 	@${FIND} ${WRKSRC} -name "*.pl" -print \
 		| ${XARGS} ${REINPLACE_CMD} -e "s@#!/usr/bin/perl@#!${PERL}@"
 
-	@${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM}
-	@${FIND} ${WRKSRC} -name "*.bak" -print | ${XARGS} ${RM}
+	@${FIND} ${WRKSRC} -name "*.orig" -delete
+	@${FIND} ${WRKSRC} -name "*.bak" -delete
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/usermin

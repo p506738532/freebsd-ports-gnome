@@ -22,11 +22,13 @@
     SUBDIR += bigloo
     SUBDIR += bsh
     SUBDIR += bwbasic
+    SUBDIR += c
     SUBDIR += ccl
     SUBDIR += cdent
     SUBDIR += cduce
     SUBDIR += ceylon
     SUBDIR += cfortran
+    SUBDIR += chibi-scheme
     SUBDIR += chicken
     SUBDIR += cint
     SUBDIR += cjs
@@ -88,12 +90,13 @@
     SUBDIR += gcc49
     SUBDIR += gcc5
     SUBDIR += gcc5-aux
+    SUBDIR += gcc5-devel
+    SUBDIR += gcc6-devel
     SUBDIR += gcl
     SUBDIR += gforth
     SUBDIR += ghc
     SUBDIR += gjs
     SUBDIR += gnat_util
-    SUBDIR += gnatdroid-armv5
     SUBDIR += gnatdroid-armv7
     SUBDIR += gnatdroid-binutils
     SUBDIR += gnatdroid-sysroot
@@ -168,7 +171,7 @@
     SUBDIR += newlisp-devel
     SUBDIR += nhc98
     SUBDIR += nickle
-    SUBDIR += nimrod
+    SUBDIR += nim
     SUBDIR += nml
     SUBDIR += nqc
     SUBDIR += nwcc
@@ -215,6 +218,7 @@
     SUBDIR += pbasic
     SUBDIR += pcc
     SUBDIR += pecl-perl
+    SUBDIR += perl5-devel
     SUBDIR += perl5.16
     SUBDIR += perl5.18
     SUBDIR += perl5.20
@@ -226,8 +230,6 @@
     SUBDIR += php-mode.el
     SUBDIR += php5
     SUBDIR += php5-extensions
-    SUBDIR += php53
-    SUBDIR += php53-extensions
     SUBDIR += php55
     SUBDIR += php55-extensions
     SUBDIR += php56
@@ -308,6 +310,7 @@
     SUBDIR += starlogo
     SUBDIR += stldoc
     SUBDIR += swi-pl
+    SUBDIR += tcbasic
     SUBDIR += tcc
     SUBDIR += tcl-manual
     SUBDIR += tcl-wrapper

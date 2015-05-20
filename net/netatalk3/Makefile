@@ -7,7 +7,6 @@ PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	net
 MASTER_SITES=	SF
-#MASTER_SITE_SUBDIR=${PORTNAME}/${PORTNAME}/3.1
 PKGNAMESUFFIX=	3
 
 MAINTAINER=	marcus@FreeBSD.org
@@ -137,12 +136,6 @@ CONFIGURE_ARGS+=--without-acls
 CONFIGURE_ARGS+=--enable-tcp-wrappers
 .else
 CONFIGURE_ARGS+=--disable-tcp-wrappers
-.endif
-
-.if ${OSVERSION} < 800031
-PLIST_SUB+=	ATFUNCS="@comment "
-.else
-PLIST_SUB+=	ATFUNCS=""
 .endif
 
 post-patch:

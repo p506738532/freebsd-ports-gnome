@@ -2,12 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	mod_rivet
-PORTVERSION=	2.2.0
-PORTREVISION=	1
+PORTVERSION=	2.2.2
 CATEGORIES=	www tcl
-MASTER_SITES=		${MASTER_SITE_APACHE}
-MASTER_SITE_SUBDIR=	tcl/rivet
-DISTNAME=		rivet-${PORTVERSION}
+MASTER_SITES=	APACHE/tcl/rivet
+DISTNAME=	rivet-${PORTVERSION}
 
 MAINTAINER=	jeff.lawson@flightaware.com
 COMMENT=	Embeds a Tcl interpreter in the Apache server

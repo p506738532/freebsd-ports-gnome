@@ -54,6 +54,7 @@
     SUBDIR += dvdrip
     SUBDIR += dvdstyler
     SUBDIR += dvts
+    SUBDIR += emby-server
     SUBDIR += emotion_generic_players-vlc
     SUBDIR += emovix
     SUBDIR += ffmpeg
@@ -220,7 +221,6 @@
     SUBDIR += lxdvdrip
     SUBDIR += m2tstoavi
     SUBDIR += m2vrequantiser
-    SUBDIR += mediabrowser
     SUBDIR += mediadownloader
     SUBDIR += mediainfo
     SUBDIR += mencoder
@@ -254,11 +254,14 @@
     SUBDIR += mps-youtube
     SUBDIR += mpv
     SUBDIR += msdl
+    SUBDIR += msopenh264
+    SUBDIR += msx264
     SUBDIR += mxflib
     SUBDIR += mythtv
     SUBDIR += mythtv-frontend
     SUBDIR += naludump
     SUBDIR += nxtvepg
+    SUBDIR += obs-studio
     SUBDIR += oggvideotools
     SUBDIR += ogmrip
     SUBDIR += ogmtools
@@ -322,6 +325,10 @@
     SUBDIR += qt4-mobility
     SUBDIR += qt4-multimedia
     SUBDIR += qt5-multimedia
+    SUBDIR += qt5-phonon4
+    SUBDIR += qt5-phonon4-designerplugin
+    SUBDIR += qt5-phonon4-gstreamer
+    SUBDIR += qt5-phonon4-vlc
     SUBDIR += quark
     SUBDIR += quodlibet
     SUBDIR += quvi

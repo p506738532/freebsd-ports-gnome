@@ -5,14 +5,11 @@ PORTNAME?=	postgresql
 DISTVERSION?=	9.1.15
 PORTREVISION?=	0
 CATEGORIES?=	databases
-MASTER_SITES=	PGSQL
-MASTER_SITE_SUBDIR=	source/v${DISTVERSION}
+MASTER_SITES=	PGSQL/source/v${DISTVERSION}
 PKGNAMESUFFIX?=	${DISTVERSION:R:S/.//}${COMPONENT}
 
 MAINTAINER?=	pgsql@FreeBSD.org
 COMMENT?=	The most advanced open-source database available anywhere
-
-USES+=	cpe
 
 #CONFLICTS?=	${PORTNAME}[^${PORTVERSION:R:R}]?-client* \
 #		${PORTNAME}${COMPONENT}-[^${PORTVERSION:R:R}].* \
@@ -22,7 +19,7 @@ USES+=	cpe
 WRKSRC=		${WRKDIR}/postgresql-${DISTVERSION}
 DIST_SUBDIR=	postgresql
 
-ICU_PATCHFILE?=	pg-928-icu-2014-06-09.diff.gz
+ICU_PATCHFILE?=	pg-929-icu-2015-04-18.diff.gz
 
 .if !defined(SLAVE_ONLY)
 UNIQUENAME?=	${PORTNAME}${DISTVERSION:R:S/.//}
@@ -31,7 +28,7 @@ UNIQUENAME?=	${PORTNAME}${DISTVERSION:R:S/.//}${PKGNAMESUFFIX}
 .endif
 
 PKGINSTALL?=	${PKGDIR}/pkg-install${COMPONENT}
-USES+=		tar:bzip2
+USES+=		tar:bzip2 cpe
 .if !defined(NO_BUILD)
 USES+=	gmake
 GNU_CONFIGURE=	yes
@@ -63,6 +60,7 @@ BUILD_DIRS?=	src/port ${INSTALL_DIRS}
 
 .if !defined(CLIENT_ONLY) && !defined(SLAVE_ONLY)
 COMPONENT=	-server
+PORTREVISION=	1
 SERVER_ONLY=	yes
 USE_RC_SUBR=	postgresql
 USES+=		pgsql:${DISTVERSION:C/([0-9][0-9]*\.[0-9][0-9]*).*/\1/g}

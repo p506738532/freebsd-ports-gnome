@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	npm
-PORTVERSION=	2.7.3
+PORTVERSION=	2.9.1
 CATEGORIES=	www
 MASTER_SITES=	LOCAL/sunpoet
 
@@ -25,6 +25,8 @@ REINPLACE_ARGS=	-i ''
 USES=		cpe python:2 tar:xz
 
 MANPREFIX=	${PREFIX}/lib/node_modules/npm
+
+ONLY_FOR_ARCHS=	amd64
 
 CPE_VENDOR=	npmjs
 CPE_PRODUCT=	node_packaged_modules
