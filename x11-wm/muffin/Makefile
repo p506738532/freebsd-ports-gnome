@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	muffin
-PORTVERSION=	2.4.5
+PORTVERSION=	2.6.0
 CATEGORIES=	x11-wm gnome
 DIST_SUBDIR=	gnome3
 
@@ -11,7 +11,8 @@ COMMENT=	Compositing window manager forked from Mutter for use with Cinnamon
 
 BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity \
 		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
-		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas
+		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas \
+		gtkdoc-check:${PORTSDIR}/textproc/gtk-doc
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libclutter-glx-1.0.so:${PORTSDIR}/graphics/clutter \
 		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
@@ -33,7 +34,8 @@ CFLAGS+=	-I${LOCALBASE}/include -Wno-error=unused-function
 LDFLAGS+=	-L${LOCALBASE}/lib
 PATHFIX_MAKEFILEIN=	Makefile.am
 CONFIGURE_ENV=	LIBS="-lexecinfo"
-CONFIGURE_ARGS=	--enable-compile-warnings=maximum
+CONFIGURE_ARGS=	--enable-compile-warnings=maximum \
+		--with-gnome-distributor="FreeBSD GNOME Project"
 MAKE_ARGS=	V=1
 GLIB_SCHEMAS=	org.cinnamon.muffin.gschema.xml
 INSTALL_TARGET=	install-strip
