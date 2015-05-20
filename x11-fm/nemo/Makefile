@@ -50,6 +50,9 @@ post-patch:
 
 	@${MV} ${WRKSRC}/files/usr/share ${WRKSRC}/files${PREFIX}
 
+	@${REINPLACE_CMD} -e 's|unused-variable|unused-variable -Wno-error=unused-const-variable|g' \
+		${WRKSRC}/configure.ac
+
 	@${REINPLACE_CMD} -e 's|find|find ${WRKSRC}/files|g' \
 		${WRKSRC}/files/Makefile.in
 

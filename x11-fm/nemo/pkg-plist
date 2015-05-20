@@ -28,7 +28,7 @@ man/man1/nemo.1.gz
 share/applications/nemo-autorun-software.desktop
 share/applications/nemo-autostart.desktop
 share/applications/nemo.desktop
-share/dbus-1/services/org.freedesktop.NemoFileManager1.service
+share/dbus-1/services/org.Nemo.service
 share/dbus-1/services/org.nemo.freedesktop.FileManager1.service
 share/gir-1.0/Nemo-3.0.gir
 share/gtksourceview-2.0/language-specs/nemo_action.lang
