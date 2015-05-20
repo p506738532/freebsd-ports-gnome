@@ -50,20 +50,11 @@ post-patch:
 
 	@${MV} ${WRKSRC}/files/usr/share ${WRKSRC}/files${PREFIX}
 
-#	@${REINPLACE_CMD} -e 's|0.16|1.0|g' \
-#		${WRKSRC}/configure.in
-
 	@${REINPLACE_CMD} -e 's|find|find ${WRKSRC}/files|g' \
 		${WRKSRC}/files/Makefile.in
 
-#	@${REINPLACE_CMD} -e 's|-DGTK_DISABLE_DEPRECATED||g' \
-#		${WRKSRC}/configure.in
-
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g' \
 		${WRKSRC}/src/nemo-properties-window.c
-
-#	@${REINPLACE_CMD} -e 's|"-DG_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED"|""|g' \
-#		${WRKSRC}/configure.in
 
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g ;\
 		s|@INTROSPECTION_TYPELIBDIR@|$$(libdir)/girepository-1.0|g ;\
