@@ -22,6 +22,8 @@ USES=		autoreconf:build execinfo gettext gmake libtool \
 		pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack
 USE_XORG=	ice sm xau xext xtst xrender xtrans xcomposite
+USE_GITHUB=	yes
+GH_ACCOUNT=	linuxmint
 USE_GL=		gl
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes

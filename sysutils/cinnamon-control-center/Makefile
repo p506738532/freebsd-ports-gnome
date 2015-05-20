@@ -4,7 +4,6 @@
 PORTNAME=	cinnamon-control-center
 PORTVERSION=	2.4.2
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -40,6 +39,8 @@ USES=		autoreconf:build gettext gmake libtool pathfix \
 USE_GNOME=	evolutiondataserver3 gconf2 gnomeprefix \
 		gtk30 intlhack libgnomekbd
 USE_XORG=	x11 xfixes sm
+USE_GITHUB=	yes
+GH_ACCOUNT=	linuxmint
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

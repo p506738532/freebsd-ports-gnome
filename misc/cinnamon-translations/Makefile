@@ -5,13 +5,14 @@
 PORTNAME=	cinnamon-translations
 PORTVERSION=	2.4.4
 CATEGORIES=	misc x11 gnome
-MASTER_SITES=	http://github.com/linuxmint/${PORTNAME}/archive/${PORTVERSION}.tar.gz?dummy=/
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Translations for the cinnamon desktop
 
 USES=		gettext-tools tar:xz
+USE_GITHUB=	yes
+GH_ACCOUNT=	linuxmint
 NO_CONFIGURE=	yes
 INSTALL_TARGET=	all
 
