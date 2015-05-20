@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cinnamon-desktop
-PORTVERSION=	2.4.2
+PORTVERSION=	2.6.0
 CATEGORIES=	x11 gnome
 DIST_SUBDIR=	gnome3
 
@@ -61,7 +61,10 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|find -min|find . -|g' \
 		${WRKSRC}/files/Makefile.am
 
+	@${REINPLACE_CMD} -e 's|$$(libgsystem_srcpath)|libgsystem|g' \
+		${WRKSRC}/libcinnamon-desktop/libgsystem/Makefile-libgsystem.am
+
 pre-configure:
-	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
+	cd ${WRKSRC} && ${SETENV} NOCONFIGURE=yes ${SH} ./autogen.sh
 
 .include <bsd.port.mk>
