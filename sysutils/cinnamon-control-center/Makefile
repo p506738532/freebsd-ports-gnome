@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cinnamon-control-center
-PORTVERSION=	2.4.2
+PORTVERSION=	2.6.0
 CATEGORIES=	sysutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -13,7 +13,6 @@ BUILD_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss \
 		cinnamon-settings-daemon>=0:${PORTSDIR}/sysutils/cinnamon-settings-daemon \
 		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
-		libupower-glib.so:${PORTSDIR}/sysutils/upower \
 		libcheese.so:${PORTSDIR}/multimedia/cheese \
 		libcaribou.so:${PORTSDIR}/accessibility/caribou \
 		libgtop-2.0.so:${PORTSDIR}/devel/libgtop \
@@ -44,7 +43,8 @@ GH_ACCOUNT=	linuxmint
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--enable-compile-warnings=no
+CONFIGURE_ARGS+=--enable-compile-warnings=no \
+		--with-gnome-distributor="FreeBSD GNOME Project"
 CFLAGS+=	-I${LOCALBASE}/include
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -57,8 +57,6 @@ CUPS_CONFIGURE_ENABLE=	cups
 CUPS_LIB_DEPENDS=	libcups.so:${PORTSDIR}/print/cups-client
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|find|find ${WRKSRC}/files|g' \
-		${WRKSRC}/files/Makefile.in
 	@${REINPLACE_CMD} -e 's|/usr/share/|${PREFIX}/share/|g' \
 		${WRKSRC}/panels/common/cc-common-language.c
 
