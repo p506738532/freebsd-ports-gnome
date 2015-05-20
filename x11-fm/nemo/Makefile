@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nemo
-PORTVERSION=	2.4.5
+PORTVERSION=	2.6.0
 CATEGORIES=	x11-fm gnome
 DIST_SUBDIR=	gnome3
 
@@ -33,7 +33,8 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 INSTALL_TARGET=	install-strip
-CONFIGURE_ARGS=	--enable-static --disable-packagekit
+CONFIGURE_ARGS=	--enable-static --disable-packagekit \
+		--with-gnome-distributor="FreeBSD GNOME Project"	
 
 GLIB_SCHEMAS=	org.nemo.gschema.xml
 
@@ -49,20 +50,20 @@ post-patch:
 
 	@${MV} ${WRKSRC}/files/usr/share ${WRKSRC}/files${PREFIX}
 
-	@${REINPLACE_CMD} -e 's|0.16|1.0|g' \
-		${WRKSRC}/configure.in
+#	@${REINPLACE_CMD} -e 's|0.16|1.0|g' \
+#		${WRKSRC}/configure.in
 
 	@${REINPLACE_CMD} -e 's|find|find ${WRKSRC}/files|g' \
 		${WRKSRC}/files/Makefile.in
 
-	@${REINPLACE_CMD} -e 's|-DGTK_DISABLE_DEPRECATED||g' \
-		${WRKSRC}/configure.in
+#	@${REINPLACE_CMD} -e 's|-DGTK_DISABLE_DEPRECATED||g' \
+#		${WRKSRC}/configure.in
 
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g' \
 		${WRKSRC}/src/nemo-properties-window.c
 
-	@${REINPLACE_CMD} -e 's|"-DG_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED"|""|g' \
-		${WRKSRC}/configure.in
+#	@${REINPLACE_CMD} -e 's|"-DG_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED"|""|g' \
+#		${WRKSRC}/configure.in
 
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share|g ;\
 		s|@INTROSPECTION_TYPELIBDIR@|$$(libdir)/girepository-1.0|g ;\

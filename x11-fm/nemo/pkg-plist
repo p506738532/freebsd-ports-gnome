@@ -11,6 +11,7 @@ include/nemo/libnemo-extension/nemo-location-widget-provider.h
 include/nemo/libnemo-extension/nemo-menu-item.h
 include/nemo/libnemo-extension/nemo-menu-provider.h
 include/nemo/libnemo-extension/nemo-menu.h
+include/nemo/libnemo-extension/nemo-name-and-desc-provider.h
 include/nemo/libnemo-extension/nemo-property-page-provider.h
 include/nemo/libnemo-extension/nemo-property-page.h
 include/nemo/libnemo-extension/nemo-simple-button.h
@@ -21,13 +22,14 @@ lib/libnemo-extension.so.1
 lib/libnemo-extension.so.1.4.0
 libdata/pkgconfig/libnemo-extension.pc
 libexec/nemo-convert-metadata
+libexec/nemo-extensions-list
 man/man1/nemo-connect-server.1.gz
 man/man1/nemo.1.gz
 share/applications/nemo-autorun-software.desktop
 share/applications/nemo-autostart.desktop
 share/applications/nemo.desktop
-share/dbus-1/services/org.Nemo.service
 share/dbus-1/services/org.freedesktop.NemoFileManager1.service
+share/dbus-1/services/org.nemo.freedesktop.FileManager1.service
 share/gir-1.0/Nemo-3.0.gir
 share/gtksourceview-2.0/language-specs/nemo_action.lang
 share/gtksourceview-3.0/language-specs/nemo_action.lang
@@ -73,4 +75,5 @@ share/nemo/icons/hicolor/24x24/emblems/emblem-note.png
 share/nemo/icons/hicolor/48x48/emblems/emblem-note.png
 share/nemo/nemo-extras.placeholder
 share/nemo/nemo-suggested.placeholder
+share/nemo/script-info.md
 share/polkit-1/actions/org.nemo.root.policy
