@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cinnamon
-PORTVERSION=	2.4.8
-PORTREVISION=	1
+PORTVERSION=	2.6.1
 CATEGORIES=	x11 gnome
 DIST_SUBDIR=	gnome3
 
@@ -11,6 +10,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Fork of GNOME Shell with layout similar to GNOME 2
 
 BUILD_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss \
+		gtkdoc-check:${PORTSDIR}/textproc/gtk-doc \
 		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libcaribou.so:${PORTSDIR}/accessibility/caribou \
@@ -44,15 +44,19 @@ USE_GNOME=	evolutiondataserver3 gconf2 gnomedesktop3 \
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
 # this happens before moving the file to ${PREFIX} (which then will be copied to ${STAGEDIR}${PREFIX})
-SHEBANG_FILES=	files/usr/bin/cinnamon2d
+SHEBANG_FILES=	files/usr/bin/cinnamon2d \
+		files/usr/bin/cinnamon-preload-wrapper
 USE_XORG=	x11 xfixes sm
 USE_GSTREAMER=	theora vp8 ogg
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-compile-warnings=no \
-		--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
-CPPFLAGS+=	-I${LOCALASE}/include
+		--with-ca-certificates=no \
+		--with-gnome-distributor="FreeBSD GNOME Project"
+CFLAGS+=	-I${LOCALBASE}/include \
+		-I${LOCALBASE}/include/gtk-3.0
+CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
@@ -60,6 +64,9 @@ GLIB_SCHEMAS=	org.cinnamon.gschema.xml
 
 OPTIONS_DEFINE=	NLS
 NLS_RUN_DEPENDS=	cinnamon-translations>=0:${PORTSDIR}/misc/cinnamon-translations
+
+pre-configure:
+	cd ${WRKSRC} && ${SETENV} NOCONFIGURE=yes ${SH} ./autogen.sh
 
 post-patch:
 	@${MKDIR} ${WRKSRC}/files${PREFIX}
