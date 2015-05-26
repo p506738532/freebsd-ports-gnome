@@ -1,9 +1,8 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/trunk/graphics/evince/Makefile 20078 2014-11-13 09:06:29Z gusi $
 
 PORTNAME=	evince
-PORTVERSION=	3.14.2
+PORTVERSION=	3.17.1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,11 +21,12 @@ RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 		adwaita-icon-theme>=0:${PORTSDIR}/x11-themes/adwaita-icon-theme \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
+PORTSCOUT=	limitw:1,even
 CONFLICT_INSTALL=	evince-lite-*
 
 USES=		compiler:c++11-lib desktop-file-utils gettext gmake libtool \
 		pathfix pkgconfig tar:xz
-USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
+USE_GNOME=	gtk30 intlhack introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_XORG=	ice
@@ -40,14 +40,13 @@ GLIB_SCHEMAS=	org.gnome.Evince.gschema.xml
 
 PLIST_SUB=	VERSION=3.0
 
-OPTIONS_DEFINE=	DVI XPS T1LIB NAUTILUS KEYRING COMICS IMPRESS DJVU
+OPTIONS_DEFINE=	DVI XPS T1LIB NAUTILUS KEYRING COMICS DJVU
 OPTIONS_DEFAULT=NAUTILUS KEYRING COMICS XPS
 DVI_DESC=	DVI viewer support
 T1LIB_DESC=	T1LIB for TYPE1 fonts to DVI (Enables DVI)
 NAUTILUS_DESC=	Nautilus plugin
 KEYRING_DESC=	Gnome-Keyring without Nautilus
 COMICS_DESC=	Comic book archives support
-IMPRESS_DESC=	Impress presentations support
 DJVU_DESC=	DJVU support
 XPS_DESC=	XPS support
 
@@ -83,14 +82,6 @@ CONFIGURE_ARGS+=	--without-keyring
 .endif
 CONFIGURE_ARGS+=	--disable-nautilus
 PLIST_SUB+=		NAUTILUS="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MIMPRESS}
-CONFIGURE_ARGS+=	--enable-impress
-PLIST_SUB+=		IMPRESS=""
-.else
-CONFIGURE_ARGS+=	--disable-impress
-PLIST_SUB+=		IMPRESS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MXPS}
