@@ -49,7 +49,6 @@ include/gtksourceviewmm-3.0/gtksourceviewmm/undomanager.h
 include/gtksourceviewmm-3.0/gtksourceviewmm/view.h
 include/gtksourceviewmm-3.0/gtksourceviewmm/wrap_init.h
 lib/gtksourceviewmm-3.0/include/gtksourceviewmmconfig.h
-lib/libgtksourceviewmm-3.0.la
 lib/libgtksourceviewmm-3.0.so
 lib/libgtksourceviewmm-3.0.so.0
 lib/libgtksourceviewmm-3.0.so.0.0.0
