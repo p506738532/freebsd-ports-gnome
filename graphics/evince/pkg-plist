@@ -138,6 +138,7 @@ share/dbus-1/services/org.gnome.evince.Daemon.service
 %%DATADIR%%/icons/hicolor/48x48/actions/view-page-facing.png
 %%DATADIR%%/icons/hicolor/scalable/actions/object-rotate-left.svg
 %%DATADIR%%/icons/hicolor/scalable/actions/object-rotate-right.svg
+%%DATADIR%%/icons/hicolor/scalable/apps/evince-symbolic.svg
 %%DATADIR%%/icons/hicolor/scalable/mimetypes/x-office-presentation.svg
 share/gir-1.0/EvinceDocument-%%VERSION%%.gir
 share/gir-1.0/EvinceView-%%VERSION%%.gir
@@ -2936,6 +2937,7 @@ share/locale/he/LC_MESSAGES/evince.mo
 share/locale/hi/LC_MESSAGES/evince.mo
 share/locale/hu/LC_MESSAGES/evince.mo
 share/locale/id/LC_MESSAGES/evince.mo
+share/locale/is/LC_MESSAGES/evince.mo
 share/locale/it/LC_MESSAGES/evince.mo
 share/locale/ja/LC_MESSAGES/evince.mo
 share/locale/ka/LC_MESSAGES/evince.mo
