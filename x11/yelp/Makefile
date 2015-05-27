@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/x11/yelp/Makefile 19967 2014-10-16 06:45:29Z gusi $
 
 PORTNAME=	yelp
-PORTVERSION=	3.16.1
+PORTVERSION=	3.17.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3

@@ -170,8 +170,6 @@ share/locale/zu/LC_MESSAGES/yelp.mo
 %%DATADIR%%/icons/hicolor/16x16/status/yelp-page-tip.png
 %%DATADIR%%/icons/hicolor/16x16/status/yelp-page-ui.png
 %%DATADIR%%/icons/hicolor/16x16/status/yelp-page-video.png
-%%DATADIR%%/icons/hicolor/scalable/actions/yelp-bookmark-add-symbolic.svg
-%%DATADIR%%/icons/hicolor/scalable/actions/yelp-bookmark-remove-symbolic.svg
 %%DATADIR%%/icons/hicolor/scalable/status/yelp-page-problem-symbolic.svg
 %%DATADIR%%/icons/hicolor/scalable/status/yelp-page-search-symbolic.svg
 %%DATADIR%%/icons/hicolor/scalable/status/yelp-page-symbolic.svg
