@@ -3,8 +3,7 @@
 #   $MCom: ports/trunk/lang/gjs/Makefile 19944 2014-10-15 05:33:09Z gusi $
 
 PORTNAME=	gjs
-PORTVERSION=	1.42.0
-PORTREVISION=	1
+PORTVERSION=	1.43.3
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3

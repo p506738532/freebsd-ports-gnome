@@ -35,3 +35,4 @@ lib/libgjs.so.0
 lib/libgjs.so.0.0.0
 libdata/pkgconfig/gjs-1.0.pc
 libdata/pkgconfig/gjs-internals-1.0.pc
+@dir libexec/gjs/installed-tests/js
