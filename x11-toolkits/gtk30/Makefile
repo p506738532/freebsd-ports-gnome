@@ -4,7 +4,7 @@
 # adwaita-icon-theme, gnome-themes-standard and mate-themes
 
 PORTNAME=	gtk
-PORTVERSION=	3.17.1
+PORTVERSION=	3.17.2
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME/sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -47,7 +47,7 @@ LIBS+=		-L${LOCALBASE}/lib
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
-LIBVERSION=	0.1700.1
+LIBVERSION=	0.1702.0
 PLIST_SUB+=	LIBVERSION=${LIBVERSION}
 
 GLIB_SCHEMAS=	org.gtk.Demo.gschema.xml \
