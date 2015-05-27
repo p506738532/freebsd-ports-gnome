@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	webkit
-PORTVERSION=	2.6.5
-PORTREVISION=	1
+PORTVERSION=	2.8.3
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	2-gtk3
@@ -20,9 +19,9 @@ LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
 		libwebp.so:${PORTSDIR}/graphics/webp \
 		libpng.so:${PORTSDIR}/graphics/png \
 		libsecret-1.so:${PORTSDIR}/security/libsecret \
+		libicutu.so:${PORTSDIR}/devel/icu \
 		libharfbuzz.so:${PORTSDIR}/print/harfbuzz \
 		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
-#add		libicu
 RUN_DEPENDS=	geoclue>=0:${PORTSDIR}/net/geoclue 
 
 PORTSCOUT=	limitw:1,even
@@ -34,8 +33,7 @@ USES=		bison compiler:c++11-lib gettext gmake gperf perl5 \
 		pkgconfig python:2 tar:xz
 USE_RUBY=	yes
 RUBY_NO_RUN_DEPENDS=yes
-USE_GNOME=	cairo gtk20 gtk30 introspection:build \
-		libxml2 libxslt:build
+USE_GNOME=	cairo gtk20 gtk30 introspection:build libxml2 libxslt:build
 USE_GL=		gl egl
 USE_SQLITE=	3
 USE_PERL5=	build
@@ -58,6 +56,7 @@ CMAKE_ENV+=	XDG_CACHE_HOME=${WRKDIR} \
 		LDFLAGS="${LDFLAGS}" \
 		CC="${CC}" CXX="${CXX}" CPP="${CPP}"
 
+#CMAKE_ARGS+=	-GNinja -DUSE_LD_GOLD:BOOL=0
 #CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=1
 #MAKE_ARGS+=	V=1 VERBOSE=1
 
@@ -69,14 +68,9 @@ DEBUG_DESC=	Just enable debug symbols
 FULLDEBUG_DESC=	Enable asserts and other debug support
 
 FULLDEBUG_CONFIGURE_ENABLE=	debug
-DEBUG_CONFIGURE_ON=	--enable-debug-symbols=yes
-DEBUG_CONFIGURE_OFF=	--disable-debug-symbols
+DEBUG_CMAKE_OFF=	-DCMAKE_BUILD_TYPE=Release
 
 .include <bsd.port.options.mk>
-
-.if ${OSVERSION} < 900000
-IGNORE=		Not supported on 8.x due to c++ madness
-.endif
 
 .if ${ARCH} == powerpc64
 CFLAGS+=	-mminimal-toc
@@ -89,7 +83,7 @@ CONFIGURE_ENV+=	FLEX_PATH="${LOCALBASE}/bin/flex"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%BROWSER_PLUGINS_DIR%%|${BROWSER_PLUGINS_DIR}|' \
-		${WRKSRC}/Source/WebCore/plugins/PluginDatabase.cpp
+		${WRKSRC}/Source/WebKit2/UIProcess/Plugins/unix/PluginInfoStoreUnix.cpp
 
 do-configure:
 	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} CFLAGS="${CFLAGS}" \
