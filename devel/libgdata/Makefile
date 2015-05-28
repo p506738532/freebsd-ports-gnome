@@ -3,7 +3,7 @@
 #    $MCom: ports/trunk/devel/libgdata/Makefile 20049 2014-11-10 09:22:03Z gusi $
 
 PORTNAME=	libgdata
-PORTVERSION=	0.16.1
+PORTVERSION=	0.17.1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 

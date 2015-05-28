@@ -36,6 +36,7 @@ include/libgdata/gdata/gdata-enums.h
 include/libgdata/gdata/gdata-feed.h
 include/libgdata/gdata/gdata-goa-authorizer.h
 include/libgdata/gdata/gdata-oauth1-authorizer.h
+include/libgdata/gdata/gdata-oauth2-authorizer.h
 include/libgdata/gdata/gdata-parsable.h
 include/libgdata/gdata/gdata-query.h
 include/libgdata/gdata/gdata-service.h
@@ -95,6 +96,7 @@ include/libgdata/gdata/services/youtube/gdata-youtube-comment.h
 include/libgdata/gdata/services/youtube/gdata-youtube-content.h
 include/libgdata/gdata/services/youtube/gdata-youtube-credit.h
 include/libgdata/gdata/services/youtube/gdata-youtube-enums.h
+include/libgdata/gdata/services/youtube/gdata-youtube-feed.h
 include/libgdata/gdata/services/youtube/gdata-youtube-query.h
 include/libgdata/gdata/services/youtube/gdata-youtube-service.h
 include/libgdata/gdata/services/youtube/gdata-youtube-state.h
@@ -102,8 +104,8 @@ include/libgdata/gdata/services/youtube/gdata-youtube-video.h
 lib/girepository-1.0/GData-0.0.typelib
 lib/libgdata.a
 lib/libgdata.so
-lib/libgdata.so.19
-lib/libgdata.so.19.2.1
+lib/libgdata.so.22
+lib/libgdata.so.22.0.0
 libdata/pkgconfig/libgdata.pc
 share/doc/gdata/GDataAPPCategories.html
 share/doc/gdata/GDataAccessHandler.html
@@ -174,6 +176,7 @@ share/doc/gdata/GDataMediaContent.html
 share/doc/gdata/GDataMediaCredit.html
 share/doc/gdata/GDataMediaThumbnail.html
 share/doc/gdata/GDataOAuth1Authorizer.html
+share/doc/gdata/GDataOAuth2Authorizer.html
 share/doc/gdata/GDataParsable.html
 share/doc/gdata/GDataPicasaWebAlbum.html
 share/doc/gdata/GDataPicasaWebComment.html
@@ -193,6 +196,7 @@ share/doc/gdata/GDataYouTubeCategory.html
 share/doc/gdata/GDataYouTubeComment.html
 share/doc/gdata/GDataYouTubeContent.html
 share/doc/gdata/GDataYouTubeCredit.html
+share/doc/gdata/GDataYouTubeFeed.html
 share/doc/gdata/GDataYouTubeQuery.html
 share/doc/gdata/GDataYouTubeService.html
 share/doc/gdata/GDataYouTubeState.html
@@ -248,6 +252,7 @@ share/doc/gdata/ix18.html
 share/doc/gdata/ix19.html
 share/doc/gdata/ix20.html
 share/doc/gdata/ix21.html
+share/doc/gdata/ix22.html
 share/doc/gdata/left-insensitive.png
 share/doc/gdata/left.png
 share/doc/gdata/pt01.html
@@ -267,6 +272,7 @@ share/locale/as/LC_MESSAGES/gdata.mo
 share/locale/be/LC_MESSAGES/gdata.mo
 share/locale/bg/LC_MESSAGES/gdata.mo
 share/locale/bn_IN/LC_MESSAGES/gdata.mo
+share/locale/bs/LC_MESSAGES/gdata.mo
 share/locale/ca/LC_MESSAGES/gdata.mo
 share/locale/ca@valencia/LC_MESSAGES/gdata.mo
 share/locale/cs/LC_MESSAGES/gdata.mo
