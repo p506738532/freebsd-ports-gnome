@@ -17,6 +17,7 @@ include/evince/%%VERSION%%/libdocument/ev-document-images.h
 include/evince/%%VERSION%%/libdocument/ev-document-info.h
 include/evince/%%VERSION%%/libdocument/ev-document-layers.h
 include/evince/%%VERSION%%/libdocument/ev-document-links.h
+include/evince/%%VERSION%%/libdocument/ev-document-media.h
 include/evince/%%VERSION%%/libdocument/ev-document-misc.h
 include/evince/%%VERSION%%/libdocument/ev-document-print.h
 include/evince/%%VERSION%%/libdocument/ev-document-security.h
@@ -35,6 +36,7 @@ include/evince/%%VERSION%%/libdocument/ev-link-dest.h
 include/evince/%%VERSION%%/libdocument/ev-link.h
 include/evince/%%VERSION%%/libdocument/ev-macros.h
 include/evince/%%VERSION%%/libdocument/ev-mapping-list.h
+include/evince/%%VERSION%%/libdocument/ev-media.h
 include/evince/%%VERSION%%/libdocument/ev-page.h
 include/evince/%%VERSION%%/libdocument/ev-render-context.h
 include/evince/%%VERSION%%/libdocument/ev-selection.h
