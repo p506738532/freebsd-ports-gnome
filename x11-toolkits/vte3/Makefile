@@ -72,8 +72,8 @@ post-patch:
 		s|-fstack-protector||g' \
 		${WRKSRC}/configure
 .endif
-	@${REINPLACE_CMD} -e 's|(AM_MAKEFLAGS) install-exec-hook|(AM_MAKEFLAGS)|g' \
-		${WRKSRC}/gnome-pty-helper/Makefile.in
+#	@${REINPLACE_CMD} -e 's|(AM_MAKEFLAGS) install-exec-hook|(AM_MAKEFLAGS)|g' \
+#		${WRKSRC}/gnome-pty-helper/Makefile.in
 	@${REINPLACE_CMD} -e 's|zlib"|"|g' \
 		${WRKSRC}/configure
 
