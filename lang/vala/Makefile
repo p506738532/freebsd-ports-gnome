@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	vala
-PORTVERSION=	0.28.0
+PORTVERSION=	0.29.1
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
@@ -21,7 +21,9 @@ INSTALL_TARGET=	install-strip
 
 VALA_VER=	${PORTVERSION:R}
 
-PLIST_SUB=	VERSION=${VALA_VER}
+# Version got bumped to 0.30, replace VERSION with that instead
+# of using VALA_VER. Replace 0.30 with VALA_VER when vala gets to 0.30.0
+PLIST_SUB=	VERSION=0.30
 
 post-install:
 	${LN} -fs ${PREFIX}/libdata/pkgconfig/libvala-${VALA_VER}.pc \
