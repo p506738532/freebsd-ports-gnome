@@ -1,4 +1,4 @@
-include/evolution-data-server/camel/camel-address.h
+include/evolution-data-server/camel/camel-address.r
 include/evolution-data-server/camel/camel-async-closure.h
 include/evolution-data-server/camel/camel-block-file.h
 include/evolution-data-server/camel/camel-certdb.h
@@ -656,8 +656,6 @@ share/gtk-doc/html/eds/eds-Calendar-utilities.html
 share/gtk-doc/html/eds/eds-Debug-logging.html
 share/gtk-doc/html/eds/eds-Deprecated-addressbook-types.html
 share/gtk-doc/html/eds/eds-EAddressWestern.html
-share/gtk-doc/html/eds/eds-EAuthenticationMediator.html
-share/gtk-doc/html/eds/eds-EAuthenticationSession.html
 share/gtk-doc/html/eds/eds-EBackend.html
 share/gtk-doc/html/eds/eds-EBackendFactory.html
 share/gtk-doc/html/eds/eds-EBook.html
@@ -727,7 +725,6 @@ share/gtk-doc/html/eds/eds-ESource.html
 share/gtk-doc/html/eds/eds-ESourceAddressBook.html
 share/gtk-doc/html/eds/eds-ESourceAlarms.html
 share/gtk-doc/html/eds/eds-ESourceAuthentication.html
-share/gtk-doc/html/eds/eds-ESourceAuthenticator.html
 share/gtk-doc/html/eds/eds-ESourceAutocomplete.html
 share/gtk-doc/html/eds/eds-ESourceBackend.html
 share/gtk-doc/html/eds/eds-ESourceBackendSummarySetup.html
