@@ -3,8 +3,7 @@
 #   $MCom: ports/trunk/games/gnome-games/Makefile 20023 2014-10-25 14:22:37Z gusi $
 
 PORTNAME=	gnome-games
-PORTVERSION=	3.14.0
-PORTREVISION=	1
+PORTVERSION=	3.17.2
 CATEGORIES=	games gnome
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -21,6 +20,7 @@ RUN_DEPENDS=	five-or-more:${PORTSDIR}/games/five-or-more \
 		gnome-nibbles:${PORTSDIR}/games/gnome-nibbles \
 		gnome-robots:${PORTSDIR}/games/gnome-robots \
 		gnome-sudoku:${PORTSDIR}/games/gnome-sudoku \
+		gnome-taquin:${PORTSDIR}/games/gnome-taquin \
 		gnome-tetravex:${PORTSDIR}/games/gnome-tetravex \
 		hitori:${PORTSDIR}/games/hitori \
 		iagno:${PORTSDIR}/games/iagno \
