@@ -3,8 +3,7 @@
 #   $MCom: ports/trunk/audio/rhythmbox/Makefile 20039 2014-11-03 13:42:48Z kwm $
 
 PORTNAME=	rhythmbox
-PORTVERSION=	3.2
-PORTREVISION=	1
+PORTVERSION=	3.2.1
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
