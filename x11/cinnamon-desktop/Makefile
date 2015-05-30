@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cinnamon-desktop
-PORTVERSION=	2.6.0
+PORTVERSION=	2.6.3
 CATEGORIES=	x11 gnome
 DIST_SUBDIR=	gnome3
 
