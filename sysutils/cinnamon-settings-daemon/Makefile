@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cinnamon-settings-daemon
-PORTVERSION=	2.6.0
+PORTVERSION=	2.6.2
 CATEGORIES=	sysutils gnome
 DIST_SUBDIR=	gnome3
 
