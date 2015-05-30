@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cinnamon-screensaver
-PORTVERSION=	2.4.2
+PORTVERSION=	2.6.2
 CATEGORIES=	x11 gnome
 DIST_SUBDIR=	gnome3
 
@@ -12,6 +12,7 @@ COMMENT=	GNOME screen saver and locker
 BUILD_DEPENDS=	gsettings-desktop-schemas>=3.2.0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common
 LIB_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify \
+		libwebkit2gtk-4.0.so:${PORTSDIR}/www/webkit2-gtk3 \
 		libcinnamon-desktop.so:${PORTSDIR}/x11/cinnamon-desktop \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
 RUN_DEPENDS=	pam_helper:${PORTSDIR}/security/pam_helper \
@@ -39,8 +40,9 @@ SUB_FILES+=	cinnamon-screensaver.pam
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/pam.d|${PREFIX}/etc/pam.d|g' \
 		${WRKSRC}/src/gs-auth-pam.c
-	@${REINPLACE_CMD} -e 's|find -m|find . -m|g' \
-		${WRKSRC}/files/Makefile.in
+	@${REINPLACE_CMD} -e 's|find -min|find . -|g' \
+		${WRKSRC}/files/Makefile.in \
+		${WRKSRC}/data/screensavers/Makefile.in
 	@${ECHO} "#define PASSWD_HELPER_PROGRAM \"/usr/local/bin/pam_helper\"" \
 		>> ${WRKSRC}/config.h.in
 
