@@ -147,9 +147,6 @@ post-patch:
 	@${FIND} ${WRKSRC} -name '*.orig' -delete
 	@${FIND} ${WRKSRC} -name '*.bak' -delete
 
-pre-configure:
-	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
-
 post-install:
 	@${PYTHON_CMD} ${WRKSRC}/files/generate_desktop_files
 
