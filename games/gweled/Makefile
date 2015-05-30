@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libmikmod.so:${PORTSDIR}/audio/libmikmod
 
 USES=		gmake pathfix pkgconfig
-USE_GNOME=	gnomeprefix gnomehack gnomehier libgnomeui librsvg2
+USE_GNOME=	gnomeprefix libgnomeui librsvg2
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -28,8 +28,8 @@ post-patch:
 		${WRKSRC}/install-sh
 
 post-install:
-	${RM} ${STAGEDIR}${PREFIX}/share/games/gweled.easy.scores
-	${TOUCH} ${STAGEDIR}${PREFIX}/share/games/gweled.easy.scores.sample
-	${TOUCH} ${STAGEDIR}${PREFIX}/share/games/gweled.timed.scores.sample
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/games
+	${TOUCH} ${STAGEDIR}${PREFIX}/share/games/gweled.Normal.scores.sample
+	${TOUCH} ${STAGEDIR}${PREFIX}/share/games/gweled.Timed.scores.sample
 
 .include <bsd.port.mk>

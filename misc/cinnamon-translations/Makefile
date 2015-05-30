@@ -15,6 +15,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
 NO_CONFIGURE=	yes
 INSTALL_TARGET=	all
+USE_GITHUB=	yes
+GH_ACCOUNT=	linuxmint
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|usr/share|${STAGEDIR}${PREFIX}/share|g' \

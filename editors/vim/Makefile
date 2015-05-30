@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	vim
-PORTVERSION=	7.4.712
-PORTREVISION?=	1
+PORTVERSION=	7.4.729
 CATEGORIES?=	editors
 
 MAINTAINER?=	sunpoet@FreeBSD.org
@@ -33,7 +32,7 @@ PORTDATA=	${VIM_VER}
 
 VIM_VER=	${PORTNAME}${PORTVERSION:R:S/.//g}
 
-GH_TAGNAME=	bc466bf
+GH_TAGNAME=	db9bc0b
 USE_GITHUB=	yes
 
 CPE_VERSION=	${PORTVERSION:R}
@@ -112,7 +111,7 @@ CTAGS_CMD=	${FIND} . -type f \\| ${XARGS} ctags
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPYTHON}
-.if ${PYTHON_REL} < 300
+.if ${PYTHON_REL} < 3000
 MAKE_ARGS+=	CONF_OPT_PYTHON="--enable-pythoninterp --disable-python3interp"
 .else
 MAKE_ARGS+=	CONF_OPT_PYTHON="--enable-python3interp --disable-pythoninterp"

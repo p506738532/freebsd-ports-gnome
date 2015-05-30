@@ -37,6 +37,8 @@ USES=		autoreconf:build gettext gmake libtool pathfix \
 		python:2 pkgconfig
 USE_GNOME=	evolutiondataserver3 gconf2 gnomeprefix \
 		gtk30 intlhack libgnomekbd
+USE_GITHUB=	yes
+GH_ACCOUNT=	linuxmint
 USE_XORG=	x11 xfixes sm
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint

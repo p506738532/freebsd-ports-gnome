@@ -30,6 +30,8 @@ USES=		autoreconf:build gettext gmake libtool pathfix \
 		pkgconfig tar:xz
 USE_GNOME=	gnomeprefix intlhack libgnomekbd \
 		libxslt:build
+USE_GITHUB=	yes
+GH_ACCOUNT=	linuxmint
 USE_XORG=	xxf86misc
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint

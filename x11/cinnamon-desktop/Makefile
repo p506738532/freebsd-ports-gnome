@@ -17,6 +17,8 @@ RUN_DEPENDS=	xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
 
 USES=		autoreconf:build gettext gmake libtool pathfix pkgconfig \
 		shebangfix tar:xz
+USE_GITHUB=	yes
+GH_ACCOUNT=	linuxmint
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
 USE_XORG=	x11 xrandr xext
 USE_GITHUB=	yes
