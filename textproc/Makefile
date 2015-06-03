@@ -145,6 +145,7 @@
     SUBDIR += elasticsearch-plugin-head
     SUBDIR += elasticsearch-plugin-hq
     SUBDIR += elasticsearch-plugin-marvel
+    SUBDIR += elasticsearch-plugin-sql
     SUBDIR += elasticsearch-river-rabbitmq
     SUBDIR += emacs-wiki
     SUBDIR += en-aspell
@@ -217,7 +218,6 @@
     SUBDIR += gv-aspell
     SUBDIR += heirloom-doctools
     SUBDIR += hevea
-    SUBDIR += hgrep
     SUBDIR += hhm
     SUBDIR += hi-aspell
     SUBDIR += highlight
@@ -1319,15 +1319,17 @@
     SUBDIR += rubygem-albino
     SUBDIR += rubygem-amatch
     SUBDIR += rubygem-asciidoctor
-    SUBDIR += rubygem-augeas
     SUBDIR += rubygem-autoprefixer-rails
     SUBDIR += rubygem-charlock_holmes
     SUBDIR += rubygem-coderay
     SUBDIR += rubygem-colorator
     SUBDIR += rubygem-colored
     SUBDIR += rubygem-compass
+    SUBDIR += rubygem-compass-core
+    SUBDIR += rubygem-compass-import-once
     SUBDIR += rubygem-compass-rails
     SUBDIR += rubygem-creole
+    SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diffy
@@ -1355,6 +1357,7 @@
     SUBDIR += rubygem-htmlentities
     SUBDIR += rubygem-ini
     SUBDIR += rubygem-itextomml
+    SUBDIR += rubygem-jekyll-assets
     SUBDIR += rubygem-jekyll-gist
     SUBDIR += rubygem-jekyll-paginate
     SUBDIR += rubygem-jekyll-sass-converter
@@ -1387,6 +1390,8 @@
     SUBDIR += rubygem-rmmseg-cpp
     SUBDIR += rubygem-rouge
     SUBDIR += rubygem-rttool
+    SUBDIR += rubygem-ruby-augeas
+    SUBDIR += rubygem-ruby-xslt
     SUBDIR += rubygem-rubypants
     SUBDIR += rubygem-rugments
     SUBDIR += rubygem-sanitize
@@ -1409,7 +1414,6 @@
     SUBDIR += rubygem-version_sorter
     SUBDIR += rubygem-wikicloth
     SUBDIR += rubygem-xml-simple
-    SUBDIR += rubygem-xslt
     SUBDIR += rubygem-ya2yaml
     SUBDIR += rubygem-yard
     SUBDIR += rubygem-yard-chef

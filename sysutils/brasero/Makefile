@@ -1,6 +1,5 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/trunk/sysutils/brasero/Makefile 20079 2014-11-13 21:34:45Z gusi $
 
 PORTNAME=	brasero
 PORTVERSION=	3.12.1

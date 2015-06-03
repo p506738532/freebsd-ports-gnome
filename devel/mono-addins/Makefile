@@ -2,6 +2,7 @@
 
 PORTNAME=	mono-addins
 PORTVERSION=	1.1
+DISTVERSIONPREFIX=	${PORTNAME}-
 CATEGORIES=	devel
 
 MAINTAINER=	mono@FreeBSD.org
@@ -11,9 +12,9 @@ LICENSE=	MIT
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mono
-GH_TAGNAME=	${PORTNAME}-${PORTVERSION}
 
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	ac_cv_path_MCS=${LOCALBASE}/bin/mcs
 USES=		autoreconf gmake mono pkgconfig
 WANT_GNOME=	yes
 
