@@ -3,6 +3,7 @@ bin/cinnamon-desktop-editor
 bin/cinnamon-extension-tool
 bin/cinnamon-file-dialog
 bin/cinnamon-json-makepot
+bin/cinnamon-killer-daemon
 bin/cinnamon-launcher
 bin/cinnamon-looking-glass
 bin/cinnamon-menu-editor
@@ -104,6 +105,7 @@ man/man1/cinnamon.1.gz
 man/man1/cinnamon2d.1.gz
 man/man1/gnome-session-cinnamon.1.gz
 man/man1/gnome-session-cinnamon2d.1.gz
+share/applications/cinnamon-killer-daemon.desktop
 share/applications/cinnamon-menu-editor.desktop
 share/applications/cinnamon-settings-applets.desktop
 share/applications/cinnamon-settings-backgrounds.desktop
