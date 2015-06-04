@@ -1,9 +1,8 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/archivers/file-roller/Makefile 20062 2014-11-10 22:05:52Z gusi $
 
 PORTNAME=	file-roller
-PORTVERSION=	3.14.2
+PORTVERSION=	3.16.2
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	GNOME
@@ -16,9 +15,11 @@ BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 RUN_DEPENDS=	gtar:${PORTSDIR}/archivers/gtar \
     		unzip:${PORTSDIR}/archivers/unzip
 
+PORTSCOUT=	limitw:1,even
+
 USES=		desktop-file-utils gettext gmake libtool \
 		pathfix pkgconfig tar:xz
-USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
+USE_GNOME=	gtk30 intlhack introspection:build
 USE_XORG=	sm
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
