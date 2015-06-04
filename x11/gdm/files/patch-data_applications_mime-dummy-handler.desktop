@@ -1,10 +1,10 @@
---- data/applications/mime-dummy-handler.desktop.orig	2013-08-26 10:09:17.171162980 +0000
-+++ data/applications/mime-dummy-handler.desktop	2013-08-26 10:09:28.342160146 +0000
+--- data/applications/mime-dummy-handler.desktop.orig	2015-05-29 13:27:05.000000000 +0200
++++ data/applications/mime-dummy-handler.desktop	2015-06-04 07:47:55.014724000 +0200
 @@ -1,6 +1,6 @@
  [Desktop Entry]
  Type=Application
  Name=Dummy URI Handler
--Exec=/bin/true %U
+-Exec=true %U
 +Exec=/usr/bin/true %U
  Terminal=false
  StartupNotify=false
