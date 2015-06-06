@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	notification-daemon
-PORTVERSION=	3.17.1
+PORTVERSION=	3.17.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
