@@ -1,8 +1,8 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/multimedia/gstreamer1/Makefile 375225 2014-12-22 10:22:38Z kwm $
 
 PORTNAME=	gstreamer1
-PORTVERSION=	1.4.5
+PORTVERSION=	1.5.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gstreamer/
 DISTNAME=	${PORTNAME:S/1//}-${PORTVERSION}
@@ -27,7 +27,7 @@ CONFIGURE_ARGS=	--disable-tests \
 CONFIGURE_ENV=	ac_cv_func_register_printf_function="no"
 INSTALL_TARGET=	install-strip
 PLIST_SUB=	VERSION=${GST10_VERSION} \
-		SOVERSION=0.405.0
+		SOVERSION=0.501.0
 USE_LDCONFIG=	yes
 GST10_VERSION=	1.0
 
