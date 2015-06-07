@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=		krb5
-PORTVERSION=		1.12.3
-PORTREVISION=		2
+PORTVERSION=		1.12.4
+PORTREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://web.mit.edu/kerberos/dist/${PORTNAME}/${PORTVERSION:C/^[0-9]*\.[0-9]*/&X/:C/X\.[0-9]*$//:C/X//}/
 PKGNAMESUFFIX=		-112
@@ -28,7 +28,8 @@ USE_PERL5=		build
 USE_LDCONFIG=		yes
 USE_CSTD=		gnu99
 GNU_CONFIGURE=		yes
-USES=			cpe gettext gmake perl5 libtool:build
+USES=			cpe gettext gmake perl5 libtool:build \
+			gssapi:boostrap,mit
 CONFIGURE_ARGS?=	--enable-shared --without-system-verto \
 			--disable-rpath --localstatedir="${PREFIX}/var"
 CONFIGURE_ENV=		INSTALL="${INSTALL}" INSTALL_LIB="${INSTALL_LIB}" YACC="${YACC}"
