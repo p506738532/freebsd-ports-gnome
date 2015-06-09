@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution-ews
-PORTVERSION=	3.16.2
+PORTVERSION=	3.16.3
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -27,6 +27,14 @@ USE_OPENLDAP=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+CONFIGURE_ARGS=	--datarootdir=${PREFIX}/share \
+		--localedir=${PREFIX}/share/locale \
+		--prefix=${PREFIX}
 INSTALL_TARGET=	install-strip
+
+post-patch:
+#	@${REINPLACE_CMD} -e "s,^localedir=''$(prefix)/$(DATADIRNAME),localedir=''$(prefix)/share/locale,g"
+	@${REINPLACE_CMD} -e 's|$$(prefix)/$$(DATADIRNAME)/|$$(prefix)/share/|g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>
