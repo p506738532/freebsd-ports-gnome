@@ -3460,6 +3460,7 @@ share/locale/zh_CN/LC_MESSAGES/mate-themes.mo
 share/locale/zh_HK/LC_MESSAGES/mate-themes.mo
 share/locale/zh_TW/LC_MESSAGES/mate-themes.mo
 share/themes/BlackMATE/README
+share/themes/BlackMATE/apps/yumex.css
 share/themes/BlackMATE/cinnamon/add-workspace-hover.png
 share/themes/BlackMATE/cinnamon/add-workspace.png
 share/themes/BlackMATE/cinnamon/calendar-arrow-left.svg
@@ -3755,6 +3756,7 @@ share/themes/BlueMenta/gtk-3.0/assets/menuitem-radio-checked.svg
 share/themes/BlueMenta/gtk-3.0/assets/null.png
 share/themes/BlueMenta/gtk-3.0/assets/pane-separator-grip-vertical.svg
 share/themes/BlueMenta/gtk-3.0/assets/pane-separator-grip.svg
+share/themes/BlueMenta/gtk-3.0/assets/panel-grid.svg
 share/themes/BlueMenta/gtk-3.0/assets/radio-active-ins.png
 share/themes/BlueMenta/gtk-3.0/assets/radio-active.png
 share/themes/BlueMenta/gtk-3.0/assets/radio-mixed-active-ins.png
@@ -4438,6 +4440,7 @@ share/themes/Menta/gtk-3.0/assets/menuitem-radio-checked.svg
 share/themes/Menta/gtk-3.0/assets/null.png
 share/themes/Menta/gtk-3.0/assets/pane-separator-grip-vertical.svg
 share/themes/Menta/gtk-3.0/assets/pane-separator-grip.svg
+share/themes/Menta/gtk-3.0/assets/panel-grid.svg
 share/themes/Menta/gtk-3.0/assets/radio-active-ins.png
 share/themes/Menta/gtk-3.0/assets/radio-active.png
 share/themes/Menta/gtk-3.0/assets/radio-mixed-active-ins.png
