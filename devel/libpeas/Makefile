@@ -47,15 +47,6 @@ USE_GNOME+=	py3gobject3
 CONFIGURE_ARGS+=	--disable-python3
 .endif
 
-#OPTIONS_SUB=	yes
-#OPTIONS_DEFINE=	PYTHON
-#OPTIONS_DEFAULT=PYTHON
-
-# there is support for python2 but can't figure out a how to include that
-# in a sane way together with python3.
-#PYTHON_USE=	GNOME=py3gobject3
-#PYTHON_CONFIGURE_ENABLE=	python3
-
 # lua needs lua 5.1 and devel/lua-lgi. The latter is build for lua 5.2 however..
 CONFIGURE_ARGS+=	--disable-lua5.1 --disable-luajit
 

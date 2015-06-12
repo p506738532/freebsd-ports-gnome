@@ -3,6 +3,7 @@
 
 PORTNAME=	gedit-plugins
 PORTVERSION=	3.17.0
+PORTREVISION=	1
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -35,7 +36,8 @@ PLIST_SUB+=	PYVER=${PYTHON_VER:S/.//}
 USES+=		python
 BUILD_DEPENDS+=	py3?-dbus>=0:${PORTSDIR}/devel/py3-dbus
 LIB_DEPENDS+=	libgucharmap_2_90.so:${PORTSDIR}/deskutils/gucharmap
-RUN_DEPENDS+=	py3?-dbus>=0:${PORTSDIR}/devel/py3-dbus
+RUN_DEPENDS+=	py3?-dbus>=0:${PORTSDIR}/devel/py3-dbus \
+		${PYTHON_PKGNAMEPREFIX}libpeas>=0:${PORTSDIR}/devel/py3-libpeas
 USE_GNOME+=	vte3
 CONFIGURE_ARGS+=--enable-python
 GLIB_SCHEMAS+=	org.gnome.gedit.plugins.terminal.gschema.xml
