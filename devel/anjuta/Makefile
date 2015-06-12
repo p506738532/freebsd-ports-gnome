@@ -11,10 +11,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Integrated Development Environment for C and C++
 
 BUILD_DEPENDS=	autogen:${PORTSDIR}/devel/autogen \
-		vala:${PORTSDIR}/lang/vala \
 		itstool:${PORTSDIR}/textproc/itstool
-LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre \
-		libgladeui-2.so:${PORTSDIR}/devel/glade \
+LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre \
 		libgdl-3.so:${PORTSDIR}/x11-toolkits/gdl
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
 		autogen:${PORTSDIR}/devel/autogen \
@@ -22,10 +20,11 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 		autoconf>=0:${PORTSDIR}/devel/autoconf \
 		libtool>=2.4:${PORTSDIR}/devel/libtool \
 		gdb>=7.3:${PORTSDIR}/devel/gdb \
+		gmake:${PORTSDIR}/devel/gmake \
 		yelp>=3.0.0:${PORTSDIR}/x11/yelp
 
-USES=		bison desktop-file-utils gettext gmake libtool pathfix perl5 \
-		pkgconfig python:3 shared-mime-info shebangfix tar:xz
+USES=		bison desktop-file-utils gettext gmake libtool pathfix \
+		perl5 pkgconfig python shared-mime-info shebangfix tar:xz
 SHEBANG_FILES=	plugins/project-wizard/templates/js_minimal/src/main.js \
 		plugins/tools/scripts/find-fixmes.pl \
 		plugins/tools/scripts/translation-status.pl \
@@ -33,17 +32,18 @@ SHEBANG_FILES=	plugins/project-wizard/templates/js_minimal/src/main.js \
 SHEBANG_LANG+=	gjs
 gjs_OLD_CMD=	/usr/bin/gjs
 gjs_CMD=	${LOCALBASE}/bin/gjs
+
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	gtksourceview3 intltool libgda5 libwnck3 vte3
 GNU_CONFIGURE=	yes
+USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-symbol-db-shm=/tmp \
-		--enable-compile-warnings=no \
 		--disable-packagekit \
+		--enable-compile-warnings=minimum \
 		--enable-introspection=yes
-#no/minimum/yes/maximum/error
 DOCSDIR=	share/doc/libanjuta
 INSTALL_TARGET=	install-strip
 
@@ -71,11 +71,10 @@ GLIB_SCHEMAS=	org.gnome.anjuta.cvs.gschema.xml \
 		org.gnome.anjuta.terminal.gschema.xml \
 		org.gnome.anjuta.tools.gschema.xml
 
-OPTIONS_DEFINE=	SVN DEVHELP GRAPHVIZ VALA
-OPTIONS_DEFAULT=DEVHELP GRAPHVIZ
+OPTIONS_DEFINE=	SVN DEVHELP VALA
+OPTIONS_DEFAULT=SVN DEVHELP VALA
 SVN_DESC=	Subversion plugin
 DEVHELP_DESC=	Devhelp plugin
-GRAPHVIZ_DESC=	Inheritance plugin
 VALA_DESC=	Vala support
 
 .include <bsd.port.options.mk>
@@ -100,16 +99,6 @@ CONFIGURE_ARGS+=--disable-plugin-devhelp
 # See if versions beyond 2.26.1.0 still do this.
 #PLIST_SUB+=	DEVHELP="@comment "
 PLIST_SUB+=	DEVHELP=""
-.endif
-
-.if ${PORT_OPTIONS:MGRAPHVIZ}
-CONFIGURE_ARGS+=--enable-graphviz
-BUILD_DEPENDS+=	neato:${PORTSDIR}/graphics/graphviz
-RUN_DEPENDS+=	neato:${PORTSDIR}/graphics/graphviz
-PLIST_SUB+=	GRAPHVIZ=""
-.else
-CONFIGURE_ARGS+=--disable-graphviz
-PLIST_SUB+=	GRAPHVIZ="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MVALA}

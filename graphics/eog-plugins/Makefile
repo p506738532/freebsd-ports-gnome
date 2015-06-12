@@ -3,6 +3,7 @@
 
 PORTNAME=	eog-plugins
 PORTVERSION=	3.16.0
+PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -43,6 +44,7 @@ PLIST_SUB+=	CHAMPLAIN="@comment "
 
 PLIST_SUB+=	PYVER=${PYTHON_VER:S|.||}
 .if ${PORT_OPTIONS:MPYTHON}
+RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}libpeas>=0:${PORTSDIR}/devel/py3-libpeas
 CONFIGURE_ARGS+=--enable-python
 USES+=		python:3
 PLIST_SUB+=	PYTHON=""

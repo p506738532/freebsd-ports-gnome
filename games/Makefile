@@ -390,7 +390,6 @@
     SUBDIR += gturing
     SUBDIR += gtypist
     SUBDIR += gunfudeadlands
-    SUBDIR += gweled
     SUBDIR += hangman
     SUBDIR += hedgewars
     SUBDIR += help_hannahs_horse
@@ -767,7 +766,6 @@
     SUBDIR += py-fife
     SUBDIR += py-mnemosyne
     SUBDIR += py-poker-eval
-    SUBDIR += py-pychess
     SUBDIR += py-sgflib
     SUBDIR += py-sgfsummary
     SUBDIR += pyawale

@@ -347,6 +347,7 @@
     SUBDIR += jtoolkit
     SUBDIR += junkbuster
     SUBDIR += kannel
+    SUBDIR += kannel-sqlbox
     SUBDIR += kcgi
     SUBDIR += kdewebdev4
     SUBDIR += kpartsplugin
@@ -1537,6 +1538,7 @@
     SUBDIR += py-django-tastypie
     SUBDIR += py-django-threaded-multihost
     SUBDIR += py-django-tinymce
+    SUBDIR += py-django-voting
     SUBDIR += py-django14
     SUBDIR += py-django16
     SUBDIR += py-django17
@@ -1751,6 +1753,7 @@
     SUBDIR += qdecoder
     SUBDIR += qooxdoo
     SUBDIR += qt5-webchannel
+    SUBDIR += qt5-websockets
     SUBDIR += quickie
     SUBDIR += qupzilla-qt4
     SUBDIR += qupzilla-qt5
@@ -1911,6 +1914,7 @@
     SUBDIR += rubygem-rack-ssl
     SUBDIR += rubygem-rack-test
     SUBDIR += rubygem-rack15
+    SUBDIR += rubygem-rack16
     SUBDIR += rubygem-rails
     SUBDIR += rubygem-rails4
     SUBDIR += rubygem-rails_autolink
