@@ -20,6 +20,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 GH_ACCOUNT=	Neroth
+GH_PROJECT=	gnome-shell-extension-weather
 GH_TAGNAME=	746debe
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves

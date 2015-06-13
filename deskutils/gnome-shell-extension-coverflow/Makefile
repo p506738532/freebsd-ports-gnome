@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell-extension-coverflow
-PORTVERSION=	0.0.0.20150422
-PORTREVISION=	1
+PORTVERSION=	0.0.0.20150613
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -23,7 +22,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.shell.extensions.coverflowalttab.gschema.xml
 
 GH_ACCOUNT=	dmo60
-GH_TAGNAME=	9d333a9
+GH_TAGNAME=	db5bd2c
 GH_PROJECT=	CoverflowAltTab
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell-extension-hidetopbar
-PORTVERSION=	0.0.0.20150512
+PORTVERSION=	0.0.0.20150613
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -23,7 +23,7 @@ GLIB_SCHEMAS=	org.gnome.shell.extensions.hidetopbar.gschema.xml
 
 GH_ACCOUNT=	mlutfy
 GH_PROJECT=	hidetopbar
-GH_TAGNAME=	1c8bda7
+GH_TAGNAME=	9758a91
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 
