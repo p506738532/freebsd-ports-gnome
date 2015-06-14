@@ -26,4 +26,3 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.taquin.gschema.xml
 
 .include <bsd.port.mk>
-
