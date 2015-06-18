@@ -35,7 +35,6 @@ share/MateConf/gsettings/eom.convert
 share/appdata/eom.appdata.xml
 share/applications/eom.desktop
 %%PORTDOCS%%%%DOCSDIR%%/EomDialog.html
-%%PORTDOCS%%%%DOCSDIR%%/EomExifDetails.html
 %%PORTDOCS%%%%DOCSDIR%%/EomFileChooser.html
 %%PORTDOCS%%%%DOCSDIR%%/EomImageSaveInfo.html
 %%PORTDOCS%%%%DOCSDIR%%/EomMetadataReaderJpg.html
@@ -55,6 +54,7 @@ share/applications/eom.desktop
 %%PORTDOCS%%%%DOCSDIR%%/ch05.html
 %%PORTDOCS%%%%DOCSDIR%%/ch06.html
 %%PORTDOCS%%%%DOCSDIR%%/ch07.html
+%%PORTDOCS%%%%DOCSDIR%%/eom-EomExifDetails.html
 %%PORTDOCS%%%%DOCSDIR%%/eom-eom-application.html
 %%PORTDOCS%%%%DOCSDIR%%/eom-eom-clipboard-handler.html
 %%PORTDOCS%%%%DOCSDIR%%/eom-eom-config-keys.html
