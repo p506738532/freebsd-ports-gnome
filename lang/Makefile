@@ -85,7 +85,6 @@
     SUBDIR += gcc-ecj45
     SUBDIR += gcc46
     SUBDIR += gcc47
-    SUBDIR += gcc47-aux
     SUBDIR += gcc48
     SUBDIR += gcc49
     SUBDIR += gcc5
@@ -142,6 +141,7 @@
     SUBDIR += linux-f10-libg2c
     SUBDIR += linux-f10-tcl85
     SUBDIR += linux-j
+    SUBDIR += lua-ada
     SUBDIR += lua-mode.el
     SUBDIR += lua51
     SUBDIR += lua52
