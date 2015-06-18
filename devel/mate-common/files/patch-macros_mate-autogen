@@ -1,3 +1,6 @@
+https://bugs.gentoo.org/show_bug.cgi?id=427432
+https://bugzilla.gnome.org/show_bug.cgi?id=680363
+
 --- macros/mate-autogen.orig	2015-01-12 08:15:17.000000000 +0100
 +++ macros/mate-autogen	2015-01-13 07:59:16.690666241 +0100
 @@ -97,6 +97,7 @@
