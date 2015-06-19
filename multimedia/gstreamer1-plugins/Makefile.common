@@ -257,6 +257,7 @@ gst_gdk_pixbuf_PLIST_FILES=	${GST_LIB_DIR}/libgstgdkpixbuf.so
 
 # gl
 gst_gl_USE_GL=	gl glu glesv2 egl
+gst_gl_USE_GNOME=	introspection:build
 gst_gl_CONFIGURE_ARGS=	--enable-gl --enable-glx \
 			--enable-egl --enable-gles2
 gst_gl_PLIST_FILES=		#
