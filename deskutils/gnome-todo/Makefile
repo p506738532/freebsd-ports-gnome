@@ -1,0 +1,26 @@
+# Created by: Gustau Perez <gustau.perez@gmail.com>
+# $FreeBSD$
+
+PORTNAME=	gnome-todo
+PORTVERSION=	3.17.3
+CATEGORIES=	deskutils gnome
+MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome3
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	Small application to manage your personal tasks
+
+PORTSCOUT=	limitw:1,even
+
+USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USE_GNOME=	evolutiondataserver3 gnomedesktop3 gtk30 intlhack
+USE_LDCONFIG=	yes
+GNU_CONFIGURE=	yes
+INSTALLS_ICONS=	yes
+CPPFLAGS+=	-I${LOCALBASE}/include
+CFLAGS=		-I${LOCALBASE}/include
+LIBS+=		-L${LOCALBASE}/lib
+
+GLIB_SCHEMAS=	org.gnome.todo.gschema.xml
+
+.include <bsd.port.mk>
