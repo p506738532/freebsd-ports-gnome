@@ -1,6 +1,5 @@
 # Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
 # $FreeBSD$
-#    $MCom: ports/trunk/x11-fm/sushi/Makefile 19578 2014-04-25 21:50:30Z kwm $
 
 PORTNAME=	sushi
 PORTVERSION=	3.16.0

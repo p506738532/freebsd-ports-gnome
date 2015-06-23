@@ -731,6 +731,7 @@
     SUBDIR += pstacku
     SUBDIR += pstree
     SUBDIR += ptools
+    SUBDIR += puppet37
     SUBDIR += puppet
     SUBDIR += puppet-lint
     SUBDIR += puppet-mode.el
@@ -760,6 +761,7 @@
     SUBDIR += py-power
     SUBDIR += py-psutil
     SUBDIR += py-psutil121
+    SUBDIR += py-ptyprocess
     SUBDIR += py-pytsk
     SUBDIR += py-queuelib
     SUBDIR += py-ranger
@@ -966,6 +968,7 @@
     SUBDIR += tdir
     SUBDIR += tenshi
     SUBDIR += tentakel
+    SUBDIR += terraform
     SUBDIR += testdisk
     SUBDIR += thefish
     SUBDIR += timelimit

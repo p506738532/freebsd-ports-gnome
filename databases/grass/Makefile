@@ -3,7 +3,7 @@
 
 PORTNAME=	grass
 PORTVERSION=	6.4.4
-PORTREVISION=	4
+PORTREVISION=	5
 PORTEPOCH=	2
 CATEGORIES=	databases geography
 MASTER_SITES=	http://grass.osgeo.org/%SUBDIR%/ \
@@ -26,7 +26,6 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/swig:${PORTSDIR}/devel/swig13
 LIB_DEPENDS=	libgdal.so:${PORTSDIR}/graphics/gdal \
-		libjpeg.so:${PORTSDIR}/graphics/jpeg \
 		libpng.so:${PORTSDIR}/graphics/png \
 		libproj.so:${PORTSDIR}/graphics/proj \
 		libtiff.so:${PORTSDIR}/graphics/tiff \
@@ -34,7 +33,7 @@ LIB_DEPENDS=	libgdal.so:${PORTSDIR}/graphics/gdal \
 		libfreetype.so:${PORTSDIR}/print/freetype2
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
-USES=		fortran gettext gmake iconv perl5 pkgconfig python:2 readline \
+USES=		fortran gettext gmake iconv jpeg perl5 pkgconfig python:2 readline \
 		shebangfix tk
 SHEBANG_FILES=	scripts/i.spectral/i.spectral \
 		scripts/r.tileset/r.tileset
