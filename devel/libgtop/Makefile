@@ -3,8 +3,7 @@
 #   $MCom: ports/trunk/devel/libgtop/Makefile 19959 2014-10-15 14:06:28Z kwm $
 
 PORTNAME=	libgtop
-PORTVERSION=	2.30.0
-PORTREVISION=	3
+PORTVERSION=	2.31.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
