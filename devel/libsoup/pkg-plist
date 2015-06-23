@@ -46,6 +46,8 @@ include/libsoup-%%VERSION%%/libsoup/soup-types.h
 include/libsoup-%%VERSION%%/libsoup/soup-uri.h
 include/libsoup-%%VERSION%%/libsoup/soup-value-utils.h
 include/libsoup-%%VERSION%%/libsoup/soup-version.h
+include/libsoup-%%VERSION%%/libsoup/soup-websocket-connection.h
+include/libsoup-%%VERSION%%/libsoup/soup-websocket.h
 include/libsoup-%%VERSION%%/libsoup/soup-xmlrpc.h
 include/libsoup-%%VERSION%%/libsoup/soup.h
 lib/girepository-1.0/Soup-%%VERSION%%.typelib
@@ -104,6 +106,7 @@ share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-Soup-Miscellaneous-Ut
 share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-SoupServer-deprecated-API.html
 share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-Top-Level-Domain-utils.html
 share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-Version-Information.html
+share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-WebSockets.html
 share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-XMLRPC-Support.html
 share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-soup-method.html
 share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-soup-status.html
@@ -123,6 +126,7 @@ share/locale/as/LC_MESSAGES/libsoup.mo
 share/locale/be/LC_MESSAGES/libsoup.mo
 share/locale/bg/LC_MESSAGES/libsoup.mo
 share/locale/bn_IN/LC_MESSAGES/libsoup.mo
+share/locale/bs/LC_MESSAGES/libsoup.mo
 share/locale/ca/LC_MESSAGES/libsoup.mo
 share/locale/ca@valencia/LC_MESSAGES/libsoup.mo
 share/locale/cs/LC_MESSAGES/libsoup.mo
@@ -153,6 +157,7 @@ share/locale/ml/LC_MESSAGES/libsoup.mo
 share/locale/mr/LC_MESSAGES/libsoup.mo
 share/locale/nb/LC_MESSAGES/libsoup.mo
 share/locale/nl/LC_MESSAGES/libsoup.mo
+share/locale/oc/LC_MESSAGES/libsoup.mo
 share/locale/or/LC_MESSAGES/libsoup.mo
 share/locale/pa/LC_MESSAGES/libsoup.mo
 share/locale/pl/LC_MESSAGES/libsoup.mo

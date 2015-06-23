@@ -3,8 +3,7 @@
 #   $MCom: ports/trunk/devel/libsoup/Makefile 20035 2014-11-03 08:16:10Z kwm $
 
 PORTNAME=	libsoup
-PORTVERSION=	2.48.1
-PORTREVISION=	1
+PORTVERSION=	2.51.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -47,8 +46,10 @@ CONFIGURE_ARGS+=--without-gnome
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
 		${WRKSRC}/configure
-	 @${REINPLACE_CMD} -e 's|env python|env ${PYTHON_VERSION}|g' \
+	@${REINPLACE_CMD} -e 's|env python|env ${PYTHON_VERSION}|g' \
 		${WRKSRC}/libsoup/tld-parser.py
+	@${REINPLACE_CMD} -e 's|DATADIRNAME=lib|DATADIRNAME=share|g' \
+		${WRKSRC}/configure
 
 .if defined(SOUP_SLAVE)
 do-install:
