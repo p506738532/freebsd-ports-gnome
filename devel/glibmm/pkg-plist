@@ -176,6 +176,7 @@ include/giomm-%%VERSION%%/giomm/private/seekable_p.h
 include/giomm-%%VERSION%%/giomm/private/settings_p.h
 include/giomm-%%VERSION%%/giomm/private/simpleaction_p.h
 include/giomm-%%VERSION%%/giomm/private/simpleactiongroup_p.h
+include/giomm-%%VERSION%%/giomm/private/simpleiostream_p.h
 include/giomm-%%VERSION%%/giomm/private/socket_p.h
 include/giomm-%%VERSION%%/giomm/private/socketaddress_p.h
 include/giomm-%%VERSION%%/giomm/private/socketaddressenumerator_p.h
@@ -218,6 +219,7 @@ include/giomm-%%VERSION%%/giomm/seekable.h
 include/giomm-%%VERSION%%/giomm/settings.h
 include/giomm-%%VERSION%%/giomm/simpleaction.h
 include/giomm-%%VERSION%%/giomm/simpleactiongroup.h
+include/giomm-%%VERSION%%/giomm/simpleiostream.h
 include/giomm-%%VERSION%%/giomm/simplepermission.h
 include/giomm-%%VERSION%%/giomm/socket.h
 include/giomm-%%VERSION%%/giomm/socketaddress.h
@@ -306,6 +308,7 @@ include/glibmm-%%VERSION%%/glibmm/private/interface_p.h
 include/glibmm-%%VERSION%%/glibmm/private/iochannel_p.h
 include/glibmm-%%VERSION%%/glibmm/private/keyfile_p.h
 include/glibmm-%%VERSION%%/glibmm/private/markup_p.h
+include/glibmm-%%VERSION%%/glibmm/private/miscutils_p.h
 include/glibmm-%%VERSION%%/glibmm/private/module_p.h
 include/glibmm-%%VERSION%%/glibmm/private/nodetree_p.h
 include/glibmm-%%VERSION%%/glibmm/private/object_p.h
