@@ -281,6 +281,7 @@
     SUBDIR += xpostitPlus
     SUBDIR += xrolo
     SUBDIR += xwrits
+    SUBDIR += zim
     SUBDIR += znotes
     SUBDIR += zorro
 

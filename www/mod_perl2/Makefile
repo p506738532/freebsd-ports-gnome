@@ -2,12 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	mod_perl
-DISTVERSION=	2.0.9-rc2
-PORTREVISION=	1
+PORTVERSION=	2.0.9
 PORTEPOCH=	3
 CATEGORIES=	www perl5
-#MASTER_SITES=	APACHE/perl
-MASTER_SITES=	LOCAL/ohauer http://people.apache.org/~stevehay/
+MASTER_SITES=	APACHE/perl
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	2
 
@@ -46,25 +44,6 @@ PLIST_SUB+=	AP22="@comment "
 PLIST_SUB+=	AP22=""
 .endif
 
-# PR 200697
-# Test whether the system uses a multithreaded perl
-.if exists(${PERL})
-HAS_ITHREADS!=	${PERL} -e 'use Config; print $$Config{useithreads} ? 1 : 0'
-.else
-# ASsume true when building packages5.
-HAS_ITHREADS=	1
-.endif
-.if ${HAS_ITHREADS:M1}
-PLIST_SUB+=	ITHREADS=""
-.else
-#. if !${APACHE_VERSION:M22}
-#XXX build is correct, but this test fails in poudriere.
-#    Let it fail in configure until we find a working condition
-#IGNORE=		requires PERL with "THREADS=on", please rebuild PERL and all depending ports
-#. endif
-#PLIST_SUB+=	ITHREADS="@comment "
-.endif
-
 CONFIGURE_ARGS=	PREFIX=${PREFIX} MP_APXS=${APXS} \
 		MP_APR_CONFIG=${LOCALBASE}/bin/apr-1-config
 
@@ -78,9 +57,27 @@ post-patch:
 pre-configure:
 	${FIND} ${WRKSRC} -type f \( -name \*.bak -o -name \*.orig \) -delete
 
+# PR 200697: Test whether the system uses a multithreaded perl
+.if exists(${PERL})
+HAS_ITHREADS!=	${PERL} -e 'use Config; print $$Config{useithreads} ? 1 : 0'
+.else
+# Assume true when building packages.
+HAS_ITHREADS=	1
+.endif
+
+.if ${HAS_ITHREADS:M1}
+PLIST_SUB+=	ITHREADS=""
+.else
+PLIST_SUB+=	ITHREADS="@comment "
+. if !${APACHE_VERSION:M22}
+IGNORE=		requires PERL with "THREADS=on", please rebuild PERL and all depending ports
+. endif
+.endif
+
 post-configure:
 	${REINPLACE_CMD} -e 's/-pthread -Wl,-E//g' \
 		${PATCH_WRKSRC}/xs/APR/APR/Makefile
+	@${ECHO_CMD} == PERL: \"${PERL_VER}\", ITHREADS: \"${HAS_ITHREADS}\", Apache: \"${APACHE_VERSION}\"
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/${APACHEINCLUDEDIR}/modules/perl
