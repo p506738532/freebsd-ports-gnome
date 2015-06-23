@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.17.2
+PORTVERSION=	3.17.3
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -42,6 +42,7 @@ CONFIGURE_ARGS=	--enable-static \
 		--with-openldap=yes \
 		--disable-uoa \
 		--enable-vala-bindings \
+		--enable-gtk-doc=no \
 		--with-libdb=${LOCALBASE}
 CPPFLAGS+=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR}
 LDFLAGS+=	-L${LOCALBASE}/lib
