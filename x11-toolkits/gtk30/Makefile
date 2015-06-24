@@ -4,7 +4,7 @@
 # adwaita-icon-theme, gnome-themes-standard and mate-themes
 
 PORTNAME=	gtk
-PORTVERSION=	3.17.3
+PORTVERSION=	3.17.4
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME/sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -34,8 +34,7 @@ USE_PERL5=	build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	atk gdkpixbuf2 introspection:build pango
-#gtk-update-icon-cache \
-#		introspection:build pango
+#gtk-update-icon-cache
 USES+=		gettext gmake libtool pathfix perl5 pkgconfig
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
@@ -47,7 +46,7 @@ LIBS+=		-L${LOCALBASE}/lib
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
-LIBVERSION=	0.1703.0
+LIBVERSION=	0.1704.0
 PLIST_SUB+=	LIBVERSION=${LIBVERSION}
 
 GLIB_SCHEMAS=	org.gtk.Demo.gschema.xml \
