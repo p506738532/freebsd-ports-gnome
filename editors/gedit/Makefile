@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gedit
-PORTVERSION=	3.17.0
-PORTREVISION=	1
+PORTVERSION=	3.17.1
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -36,6 +35,7 @@ CONFIGURE_ARGS+=--disable-zeitgeist \
 CPPFLAGS+=	-I${LOCALBASE}/include -Wno-error=format-nonliteral
 CFLAGS+=	-I${LOCALBASE}/include -Wno-error=format-nonliteral
 LDFLAGS+=	-L${LOCALBASE}/lib
+USE_LDCONFIG=	yes
 PLIST_SUB=	VERSION="3.14"
 INSTALL_TARGET=	install-strip
 
