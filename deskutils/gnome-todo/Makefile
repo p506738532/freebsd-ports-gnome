@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-todo
-PORTVERSION=	3.17.3
+PORTVERSION=	3.17.3.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,9 +17,8 @@ USE_GNOME=	evolutiondataserver3 gnomedesktop3 gtk30 intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-CFLAGS=		-I${LOCALBASE}/include
-LIBS+=		-L${LOCALBASE}/lib
+CFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.todo.gschema.xml
 

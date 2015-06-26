@@ -1,9 +1,5 @@
 bin/gnome-todo
 share/appdata/org.gnome.Todo.appdata.xml
 share/applications/org.gnome.Todo.desktop
-%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
-%%PORTDOCS%%%%DOCSDIR%%/COPYING
-%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
-%%PORTDOCS%%%%DOCSDIR%%/INSTALL
-%%PORTDOCS%%%%DOCSDIR%%/NEWS
-%%PORTDOCS%%%%DOCSDIR%%/README
+share/locale/pl/LC_MESSAGES/gnome-todo.mo
+share/locale/sk/LC_MESSAGES/gnome-todo.mo
