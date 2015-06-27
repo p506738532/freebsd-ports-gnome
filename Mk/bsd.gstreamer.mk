@@ -91,7 +91,7 @@ _GSTREAMER_PLUGINS+= \
 _GSTREAMER_PLUGINS+= \
 		assrender curl dvdread editing-services kate libav \
 		modplug openjpeg png rtmp \
-		spandsp vpx webp x ximagesrc zbar
+		spandsp vpx webp x x265 ximagesrc zbar
 # vaapi?
 .endif
 
@@ -334,6 +334,8 @@ ugly_DEPENDS=	multimedia/gstreamer-plugins-ugly
 vdpau_DEPENDS=	multimedia/gstreamer-plugins-vdpau
 
 x264_DEPENDS=	multimedia/gstreamer-plugins-x264
+
+x265_DEPENDS=	multimedia/gstreamer-plugins-x265
 
 xvid_DEPENDS=	multimedia/gstreamer-plugins-xvid
 

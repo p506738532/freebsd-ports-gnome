@@ -113,6 +113,7 @@
     SUBDIR += gstreamer-plugins-vdpau
     SUBDIR += gstreamer-plugins-vp8
     SUBDIR += gstreamer-plugins-x264
+    SUBDIR += gstreamer-plugins-x265
     SUBDIR += gstreamer-plugins-xvid
     SUBDIR += gstreamer-qt4
     SUBDIR += gstreamer1

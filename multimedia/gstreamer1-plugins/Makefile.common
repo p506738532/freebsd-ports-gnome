@@ -1,5 +1,4 @@
 # $FreeBSD: head/multimedia/gstreamer1-plugins/Makefile.common 375594 2014-12-25 19:04:25Z antoine $
-#    $MCom: kwm/multimedia/gstreamer1-plugins/Makefile.common 11415 2013-04-26 22:58:21Z kwm $
 
 BASE_GST_ALL_PLUGINS= \
 		alsa \
@@ -41,6 +40,7 @@ BAD_GST_ALL_PLUGINS+= \
 		soundtouch \
 		spandsp \
 		webp \
+		x265 \
 		zbar \
 
 # plugins not yet ported to the 1.0 API, or not portable
@@ -55,7 +55,6 @@ BAD_GST_ALL_PLUGINS+= \
 		mimic \
 		mpg123 \
 		musepack \
-		mythtv \
 		nas \
 		opensles \
 		pvr \
@@ -82,7 +81,6 @@ BAD_GST_NON_PLUGINS= \
 		--enable-bz2 \
 		--enable-dvb \
 		--enable-shm \
-		--enable-quicktime \
 		--disable-wgl \
 		--disable-gsettings \
 		--disable-acm \
@@ -92,10 +90,8 @@ BAD_GST_NON_PLUGINS= \
 		--disable-dc1394 \
 		--disable-dccp \
 		--disable-direct3d \
-		--disable-directdraw \
 		--disable-directsound \
 		--disable-fbdev \
-		--disable-osx_video \
 		--disable-uvch264 \
 		--disable-vcd \
 		--disable-wildmidi \
@@ -413,6 +409,9 @@ gst_x_PLIST_FILES=	${GST_LIB_DIR}/libgstximagesrc.so
 gst_x264_LIB_DEPENDS=	libx264.so:${PORTSDIR}/multimedia/libx264
 gst_x264_PLIST_FILES=	${GST_LIB_DIR}/libgstx264.so \
 			share/gstreamer-${VERSION}/presets/GstX264Enc.prs
+
+# x265
+gst_x265_LIB_DEPENDS=	libx265.so:${PORTSDIR}/multimedia/x265
 
 # xvid
 gst_xvid_LIB_DEPENDS=	libxvidcore.so:${PORTSDIR}/multimedia/xvid
