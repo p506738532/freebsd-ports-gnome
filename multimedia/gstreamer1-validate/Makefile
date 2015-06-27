@@ -13,7 +13,7 @@ COMMENT=	Gstreamer element validation suite
 USES=		gmake libtool pathfix pkgconfig python:2 tar:xz
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	glib20 introspection:build
+USE_GNOME=	glib20 gtk30 introspection:build
 USE_GSTREAMER1=	yes
 INSTALL_TARGET=	install-strip
 
