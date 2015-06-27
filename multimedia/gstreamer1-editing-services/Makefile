@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gstreamer1-editing-services
-PORTVERSION=	1.4.0
+PORTVERSION=	1.5.2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gstreamer-editing-services/
 DISTNAME=	gstreamer-editing-services-${PORTVERSION}
@@ -17,7 +17,8 @@ USE_GNOME=	glib20 introspection:build libxml2
 USE_GSTREAMER1=	gnonlin
 INSTALL_TARGET=	install-strip
 
-CONFIGURE_ARGS=	--enable-introspection=yes
+CONFIGURE_ARGS=	--enable-introspection=yes \
+		--with-bash-completion-dir=${PREFIX}/share/bash-completion/completions
 PLIST_SUB=	VERSION=1.0
 
 .include <bsd.port.mk>
