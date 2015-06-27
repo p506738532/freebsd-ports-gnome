@@ -93,6 +93,7 @@ include/gstreamer-%%VERSION%%/gst/video/video-event.h
 include/gstreamer-%%VERSION%%/gst/video/video-format.h
 include/gstreamer-%%VERSION%%/gst/video/video-frame.h
 include/gstreamer-%%VERSION%%/gst/video/video-info.h
+include/gstreamer-%%VERSION%%/gst/video/video-multiview.h
 include/gstreamer-%%VERSION%%/gst/video/video-overlay-composition.h
 include/gstreamer-%%VERSION%%/gst/video/video-resampler.h
 include/gstreamer-%%VERSION%%/gst/video/video-scaler.h
@@ -105,7 +106,6 @@ lib/girepository-1.0/GstApp-%%VERSION%%.typelib
 lib/girepository-1.0/GstAudio-%%VERSION%%.typelib
 lib/girepository-1.0/GstFft-%%VERSION%%.typelib
 lib/girepository-1.0/GstPbutils-%%VERSION%%.typelib
-lib/girepository-1.0/GstRiff-%%VERSION%%.typelib
 lib/girepository-1.0/GstRtp-%%VERSION%%.typelib
 lib/girepository-1.0/GstRtsp-%%VERSION%%.typelib
 lib/girepository-1.0/GstSdp-%%VERSION%%.typelib
@@ -181,7 +181,6 @@ share/gir-1.0/GstApp-%%VERSION%%.gir
 share/gir-1.0/GstAudio-%%VERSION%%.gir
 share/gir-1.0/GstFft-%%VERSION%%.gir
 share/gir-1.0/GstPbutils-%%VERSION%%.gir
-share/gir-1.0/GstRiff-%%VERSION%%.gir
 share/gir-1.0/GstRtp-%%VERSION%%.gir
 share/gir-1.0/GstRtsp-%%VERSION%%.gir
 share/gir-1.0/GstSdp-%%VERSION%%.gir
