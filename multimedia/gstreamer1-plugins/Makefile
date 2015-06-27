@@ -64,7 +64,8 @@ SOVERSION=	0.501.0
 PLIST_SUB+=	VERSION="${VERSION}" \
 		SOVERSION="${SOVERSION}"
 
-.include <bsd.port.pre.mk>
+# Include bsd.port.options.mk and not bsd.port.pre.mk to be able to use USES
+.include <bsd.port.options.mk>
 
 .if ${GST_PLUGIN} == "base"
 DIST=	base
@@ -170,4 +171,4 @@ USE_GCC=	any
 pre-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/gstreamer-1.0
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

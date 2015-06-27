@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	curl
-PORTVERSION=	7.42.1
+PORTVERSION=	7.43.0
 PORTREVISION=	1
 CATEGORIES=	ftp www
 MASTER_SITES=	http://curl.haxx.se/download/ \
@@ -52,12 +52,11 @@ PORTEXAMPLES=	*
 CPE_VENDOR=	haxx
 
 DOCS=		BINDINGS BUGS CONTRIBUTE DISTRO-DILEMMA FAQ FEATURES HISTORY \
-		HTTP-COOKIES INSTALL INSTALL.devcpp INTERNALS KNOWN_BUGS \
-		LIBCURL-STRUCTS LICENSE-MIXING MAIL-ETIQUETTE MANUAL \
-		README.netware README.win32 RELEASE-PROCEDURE RESOURCES \
-		SECURITY SSL-PROBLEMS SSLCERTS THANKS TODO \
-		TheArtOfHttpScripting VERSIONS curl-config.html \
-		curl-config.pdf curl.html curl.pdf index.html \
+		HTTP-COOKIES HTTP2.md INSTALL INSTALL.devcpp INTERNALS \
+		KNOWN_BUGS LICENSE-MIXING MAIL-ETIQUETTE MANUAL \
+		RELEASE-PROCEDURE RESOURCES ROADMAP.md SECURITY SSL-PROBLEMS \
+		SSLCERTS THANKS TODO TheArtOfHttpScripting VERSIONS \
+		curl-config.html curl-config.pdf curl.html curl.pdf index.html \
 		mk-ca-bundle.html mk-ca-bundle.pdf
 .endif
 
@@ -94,11 +93,11 @@ GSSAPI_MIT_LDFLAGS=	${GSSAPILDFLAGS}
 GSSAPI_MIT_LIBS=	${GSSAPILIBS}
 GSSAPI_MIT_USES=	gssapi:mit
 GSSAPI_NONE_CONFIGURE_ON=	--without-gssapi
-HTTP2_BUILD_DEPENDS=	nghttp2>=0.6.0:${PORTSDIR}/www/nghttp2
+HTTP2_BUILD_DEPENDS=	nghttp2>=1.0.0:${PORTSDIR}/www/nghttp2
 HTTP2_CONFIGURE_OFF=	--without-nghttp2
 HTTP2_CONFIGURE_ON=	--with-nghttp2=${LOCALBASE}
 HTTP2_LIB_DEPENDS=	libnghttp2.so:${PORTSDIR}/www/nghttp2
-HTTP2_RUN_DEPENDS=	nghttp2>=0.6.0:${PORTSDIR}/www/nghttp2
+HTTP2_RUN_DEPENDS=	nghttp2>=1.0.0:${PORTSDIR}/www/nghttp2
 HTTP2_USES=		pkgconfig
 IDN_CONFIGURE_OFF=	--without-libidn
 IDN_CONFIGURE_ON=	--with-libidn=${LOCALBASE}
@@ -163,11 +162,14 @@ IGNORE=		only supports LDAPS with SSL
 IGNORE=		only supports LIBSSH2 with OpenSSL
 .endif
 
-.if ${PORT_OPTIONS:MOPENSSL} && defined(OPENSSL_PORT) && ${OPENSSL_PORT} == "security/libressl"
+.if ${PORT_OPTIONS:MOPENSSL} && ( \
+	defined(WITH_OPENSSL_PORT) || \
+	(!defined(WITH_OPENSSL_BASE) && exists(${LOCALBASE}/lib/libcrypto.so)) || \
+	(defined(OPENSSL_PORT) && ${OPENSSL_PORT} == "security/libressl"))
 .if ${PORT_OPTIONS:MGSSAPI_BASE}
-IGNORE=		with GSSAPI_BASE, configure failed to detect OpenSSL/LibreSSL from ports and link against base OpenSSL
+IGNORE=		GSSAPI_BASE is set, which is not compatible with OpenSSL/LibreSSL from ports. Set GSSAPI_NONE or do not use ports SSL.
 .endif
-.if ${PORT_OPTIONS:MTLS_SRP}
+.if ${PORT_OPTIONS:MTLS_SRP} && defined(OPENSSL_PORT) && ${OPENSSL_PORT} == "security/libressl"
 IGNORE=		unsupported TLS-SRP in LibreSSL
 .endif
 .endif

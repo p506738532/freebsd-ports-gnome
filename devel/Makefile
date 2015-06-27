@@ -57,7 +57,9 @@
     SUBDIR += amd64-gcc
     SUBDIR += amd64-xtoolchain-gcc
     SUBDIR += android-tools-adb
+    SUBDIR += android-tools-adb-devel
     SUBDIR += android-tools-fastboot
+    SUBDIR += android-tools-fastboot-devel
     SUBDIR += anjuta
     SUBDIR += anjuta-extras
     SUBDIR += antlr
@@ -246,6 +248,9 @@
     SUBDIR += clig
     SUBDIR += clisp-hyperspec
     SUBDIR += clojure-cider
+    SUBDIR += cloudabi-binutils
+    SUBDIR += cloudabi-cloudlibc
+    SUBDIR += cloudabi-compiler-rt
     SUBDIR += cmake
     SUBDIR += cmake-fedora
     SUBDIR += cmake-gui
@@ -412,13 +417,13 @@
     SUBDIR += eric4
     SUBDIR += eric6
     SUBDIR += eris
+    SUBDIR += erlang-bbmustache
     SUBDIR += erlang-gen_leader
     SUBDIR += erlang-gen_smtp
     SUBDIR += erlang-getopt
     SUBDIR += erlang-gproc
     SUBDIR += erlang-ibrowse
     SUBDIR += erlang-msgpack
-    SUBDIR += erlang-mustache
     SUBDIR += erlang-protobuffs
     SUBDIR += erlang-recon
     SUBDIR += erlang-syslog
@@ -568,6 +573,7 @@
     SUBDIR += gio-sharp
     SUBDIR += git
     SUBDIR += git-bzr-ng
+    SUBDIR += git-codereview
     SUBDIR += git-extras
     SUBDIR += git-lite
     SUBDIR += git-merge-changelog
@@ -1034,6 +1040,7 @@
     SUBDIR += libdatrie
     SUBDIR += libdbusmenu
     SUBDIR += libdbusmenu-qt
+    SUBDIR += libdbusmenu-qt5
     SUBDIR += libdevq
     SUBDIR += libdfui
     SUBDIR += libdict
@@ -1375,6 +1382,7 @@
     SUBDIR += mph
     SUBDIR += mq4cpp
     SUBDIR += msgpack
+    SUBDIR += msgpuck
     SUBDIR += msp430-binutils
     SUBDIR += msp430-gcc
     SUBDIR += msp430-gdb
@@ -3892,6 +3900,7 @@
     SUBDIR += py-gflags
     SUBDIR += py-gitdb
     SUBDIR += py-gitosis
+    SUBDIR += py-gitpython
     SUBDIR += py-glob2
     SUBDIR += py-gobject
     SUBDIR += py-gobject3
@@ -3950,6 +3959,7 @@
     SUBDIR += py-libpeas
     SUBDIR += py-libplist
     SUBDIR += py-libvirt
+    SUBDIR += py-libzfs
     SUBDIR += py-ll-core
     SUBDIR += py-lock_file
     SUBDIR += py-lockfile
@@ -3985,6 +3995,7 @@
     SUBDIR += py-ocempgui
     SUBDIR += py-ode
     SUBDIR += py-odfpy
+    SUBDIR += py-offtrac
     SUBDIR += py-olefile
     SUBDIR += py-oletools
     SUBDIR += py-omnijson
@@ -4054,6 +4065,7 @@
     SUBDIR += py-pytest-runner
     SUBDIR += py-pytest-timeout
     SUBDIR += py-pytest-xdist
+    SUBDIR += py-python-bugzilla
     SUBDIR += py-python-jenkins
     SUBDIR += py-python-statsd
     SUBDIR += py-python2-pythondialog
@@ -4163,6 +4175,7 @@
     SUBDIR += py-turbokid
     SUBDIR += py-tvrage
     SUBDIR += py-tw.forms
+    SUBDIR += py-twiggy
     SUBDIR += py-twisted
     SUBDIR += py-twistedCore
     SUBDIR += py-twistedFlow
