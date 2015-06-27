@@ -5,6 +5,7 @@ include/gstreamer-%%VERSION%%/gst/gl/gl.h
 include/gstreamer-%%VERSION%%/gst/gl/glprototypes/all_functions.h
 include/gstreamer-%%VERSION%%/gst/gl/glprototypes/base.h
 include/gstreamer-%%VERSION%%/gst/gl/glprototypes/blending.h
+include/gstreamer-%%VERSION%%/gst/gl/glprototypes/buffers.h
 include/gstreamer-%%VERSION%%/gst/gl/glprototypes/debug.h
 include/gstreamer-%%VERSION%%/gst/gl/glprototypes/eglimage.h
 include/gstreamer-%%VERSION%%/gst/gl/glprototypes/fbo.h
@@ -16,10 +17,9 @@ include/gstreamer-%%VERSION%%/gst/gl/glprototypes/opengl.h
 include/gstreamer-%%VERSION%%/gst/gl/glprototypes/shaders.h
 include/gstreamer-%%VERSION%%/gst/gl/glprototypes/sync.h
 include/gstreamer-%%VERSION%%/gst/gl/glprototypes/vao.h
-include/gstreamer-%%VERSION%%/gst/gl/gpuprocess/gstglcontext_gpu_process.h
-include/gstreamer-%%VERSION%%/gst/gl/gpuprocess/gstglwindow_gpu_process.h
 include/gstreamer-%%VERSION%%/gst/gl/gstgl_fwd.h
 include/gstreamer-%%VERSION%%/gst/gl/gstglapi.h
+include/gstreamer-%%VERSION%%/gst/gl/gstglbasebuffer.h
 include/gstreamer-%%VERSION%%/gst/gl/gstglbasefilter.h
 include/gstreamer-%%VERSION%%/gst/gl/gstglbufferpool.h
 include/gstreamer-%%VERSION%%/gst/gl/gstglcolorconvert.h
@@ -36,6 +36,7 @@ include/gstreamer-%%VERSION%%/gst/gl/gstglsyncmeta.h
 include/gstreamer-%%VERSION%%/gst/gl/gstglupload.h
 include/gstreamer-%%VERSION%%/gst/gl/gstgluploadmeta.h
 include/gstreamer-%%VERSION%%/gst/gl/gstglutils.h
+include/gstreamer-%%VERSION%%/gst/gl/gstglviewconvert.h
 include/gstreamer-%%VERSION%%/gst/gl/gstglwindow.h
 include/gstreamer-%%VERSION%%/gst/gl/x11/gstgldisplay_x11.h
 lib/girepository-%%VERSION%%/GstGL-%%VERSION%%.typelib
