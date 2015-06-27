@@ -142,6 +142,7 @@
     SUBDIR += gstreamer1-qt4
     SUBDIR += gstreamer1-rtsp-server
     SUBDIR += gstreamer1-vaapi
+    SUBDIR += gstreamer1-validate
     SUBDIR += gstreamermm
     SUBDIR += gtk-recordmydesktop
     SUBDIR += gtk-youtube-viewer
