@@ -599,6 +599,14 @@ PLIST_SUB+=			GTK2_VERSION="${GTK2_VERSION}" \
 USE_CSTD=	gnu89
 .endif
 
+.if defined(_USE_GNOME) && !empty(_USE_GNOME:Mglib20) && defined(GLIB_SCHEMAS)
+IGNORE=		GLIB_SCHEMAS is set, but needs USE_GNOME=glib20 to work
+.endif
+
+.if defined(_USE_GNOME) && !empty(_USE_GNOME:Mgconf2) && defined(GCONF_SCHEMAS)
+IGNORE=		GCONF_SCHEMAS is set, but needs USE_GNOME=gconf2 to work
+.endif
+
 # Then traverse through all components, check which of them
 # exist in ${_USE_GNOME} and set variables accordingly
 .ifdef _USE_GNOME
