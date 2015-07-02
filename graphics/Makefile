@@ -530,6 +530,7 @@
     SUBDIR += libwmf-nox11
     SUBDIR += libwpg
     SUBDIR += libwpg03
+    SUBDIR += lightzone
     SUBDIR += linplasma
     SUBDIR += linux-XnViewMP
     SUBDIR += linux-adobesvg
@@ -802,6 +803,7 @@
     SUBDIR += pstoedit
     SUBDIR += pstoepsi
     SUBDIR += pure-gl
+    SUBDIR += py-pyganim
     SUBDIR += py-PyX
     SUBDIR += py-PyX12
     SUBDIR += py-aafigure

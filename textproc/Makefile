@@ -30,6 +30,7 @@
     SUBDIR += archmage
     SUBDIR += artha
     SUBDIR += asciidoc
+    SUBDIR += asciinema
     SUBDIR += asm-xml
     SUBDIR += asm2html
     SUBDIR += aspell
@@ -154,6 +155,7 @@
     SUBDIR += enchant
     SUBDIR += eo-aspell
     SUBDIR += eqe
+    SUBDIR += erlang-edown
     SUBDIR += es-aspell
     SUBDIR += es-hunspell
     SUBDIR += es-hyphen
@@ -161,7 +163,6 @@
     SUBDIR += estraier
     SUBDIR += et-aspell
     SUBDIR += exempi
-    SUBDIR += exmpp
     SUBDIR += expat2
     SUBDIR += exslt
     SUBDIR += extract_url
@@ -1171,6 +1172,7 @@
     SUBDIR += py-chardet
     SUBDIR += py-cloud_sptheme
     SUBDIR += py-creole
+    SUBDIR += py-diff-match-patch
     SUBDIR += py-docutils
     SUBDIR += py-dsv
     SUBDIR += py-elasticsearch-py
@@ -1243,6 +1245,7 @@
     SUBDIR += py-whoosh
     SUBDIR += py-wicked
     SUBDIR += py-wordnet
+    SUBDIR += py-wstools
     SUBDIR += py-wtforms
     SUBDIR += py-xlrd
     SUBDIR += py-xlutils
