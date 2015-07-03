@@ -155,6 +155,7 @@
     SUBDIR += enchant
     SUBDIR += eo-aspell
     SUBDIR += eqe
+    SUBDIR += erlang-edown
     SUBDIR += es-aspell
     SUBDIR += es-hunspell
     SUBDIR += es-hyphen
@@ -162,7 +163,6 @@
     SUBDIR += estraier
     SUBDIR += et-aspell
     SUBDIR += exempi
-    SUBDIR += exmpp
     SUBDIR += expat2
     SUBDIR += exslt
     SUBDIR += extract_url

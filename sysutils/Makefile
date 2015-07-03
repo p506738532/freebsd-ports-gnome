@@ -316,6 +316,7 @@
     SUBDIR += gaffitter
     SUBDIR += gai-leds
     SUBDIR += ganglia-monitor-core
+    SUBDIR += ganglia-webfrontend
     SUBDIR += gapcmon
     SUBDIR += garcon
     SUBDIR += gather
@@ -742,6 +743,7 @@
     SUBDIR += py-analyzemft
     SUBDIR += py-bcfg2
     SUBDIR += py-croniter
+    SUBDIR += py-crontab
     SUBDIR += py-danzfs
     SUBDIR += py-drmaa
     SUBDIR += py-execnet
@@ -765,7 +767,6 @@
     SUBDIR += py-queuelib
     SUBDIR += py-ranger
     SUBDIR += py-salt
-    SUBDIR += py-salt-api
     SUBDIR += py-shutilwhich
     SUBDIR += py-stdiff
     SUBDIR += py-supervisor

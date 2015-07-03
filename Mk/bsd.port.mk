@@ -185,6 +185,11 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  release of ${OPSYS}, e.g BROKEN_FreeBSD_8
 #				  would affect all point releases of FreeBSD 8
 #				  unless TRYBROKEN is also set.
+# BROKEN_${OPSYS}_${OSREL:R}_${ARCH} -  Port is believed to be broken on a
+#				  single release of ${OPSYS} and specific architecture,
+#				  e.g BROKEN_FreeBSD_8_i386 would affect all point
+#				  releases of FreeBSD 8 in i386
+#				  unless TRYBROKEN is also set.
 # DEPRECATED	- Port is deprecated to install. Advisory only.
 # EXPIRATION_DATE
 #				- If DEPRECATED is set, determines a date when
@@ -2823,6 +2828,10 @@ IGNORE=		is marked as broken on ${ARCH}: ${BROKEN_${ARCH}}
 .if !defined(TRYBROKEN)
 IGNORE=		is marked as broken on ${OPSYS} ${OSREL}: ${BROKEN_${OPSYS}_${OSREL:R}}
 .endif
+.elif defined(BROKEN_${OPSYS}_${OSREL:R}_${ARCH})
+.if !defined(TRYBROKEN)
+IGNORE=		is marked as broken on ${OPSYS} ${OSREL} ${ARCH}: ${BROKEN_${OPSYS}_${OSREL:R}_${ARCH}}
+.endif
 .elif defined(BROKEN_${OPSYS})
 .if !defined(TRYBROKEN)
 IGNORE=		is marked as broken on ${OPSYS}: ${BROKEN_${OPSYS}}
@@ -4320,176 +4329,32 @@ package-noinstall: package
 .if !target(depends)
 depends: pkg-depends extract-depends patch-depends lib-depends fetch-depends build-depends run-depends
 
-.if defined(ALWAYS_BUILD_DEPENDS)
-_DEPEND_ALWAYS=	1
-.else
-_DEPEND_ALWAYS=	0
-.endif
-
-_INSTALL_DEPENDS=	\
-		if [ -n "${USE_PACKAGE_DEPENDS}" -o -n "${USE_PACKAGE_DEPENDS_ONLY}" ]; then \
-			subpkgfile=`(cd $$dir; ${MAKE} $$depends_args -V PKGFILE)`; \
-			subpkgname=$${subpkgfile%-*} ; \
-			subpkgname=$${subpkgname\#\#*/} ; \
-			if [ -r "$${subpkgfile}" -a "$$target" = "${DEPENDS_TARGET}" ]; then \
-				${ECHO_MSG} "===>   Installing existing package $${subpkgfile}"; \
-				if [ $${subpkgname} = "pkg" ]; then \
-					[ -d ${WRKDIR} ] || ${MKDIR} ${WRKDIR} ; \
-					${TAR} xf $${subpkgfile} -C ${WRKDIR} -s ",/.*/,,g" "*/pkg-static" ; \
-					${WRKDIR}/pkg-static add $${subpkgfile}; \
-					${RM} -f ${WRKDIR}/pkg-static; \
-				else \
-					${PKG_ADD} -A $${subpkgfile}; \
-				fi; \
-			elif [ -n "${USE_PACKAGE_DEPENDS_ONLY}" -a "$${target}" = "${DEPENDS_TARGET}" ]; then \
-				${ECHO_MSG} "===>   ${PKGNAME} depends on package: $${subpkgfile} - not found"; \
-				${ECHO_MSG} "===>   USE_PACKAGE_DEPENDS_ONLY set - not building missing dependency from source"; \
-				exit 1; \
-			else \
-			  (cd $$dir; ${MAKE} -DINSTALLS_DEPENDS $$target $$depends_args) ; \
-			fi; \
-		elif [ -z "${STRICT_DEPENDS}" ]; then \
-			(cd $$dir; ${MAKE} -DINSTALLS_DEPENDS $$target $$depends_args) ; \
-		fi; \
-		${ECHO_MSG} "===>   Returning to build of ${PKGNAME}";
-
-.for deptype in PKG EXTRACT PATCH FETCH BUILD RUN
+.for deptype in PKG EXTRACT PATCH FETCH BUILD LIB RUN
 ${deptype:tl}-depends:
-.if defined(${deptype}_DEPENDS)
-.if !defined(NO_DEPENDS)
-	@set -e ; anynotfound=0; for i in `${ECHO_CMD} "${${deptype}_DEPENDS}"`; do \
-		prog=$${i%%:*}; \
-		if [ -z "$$prog" ]; then \
-			${ECHO_MSG} "Error: there is an empty port dependency in ${deptype}_DEPENDS."; \
-			break; \
-		fi; \
-		dir=`${ECHO_CMD} $$i | ${SED} -e 's/[^:]*://'`; \
-		if ${EXPR} "$$dir" : '.*:' > /dev/null; then \
-			target=$${dir##*:}; \
-			dir=$${dir%%:*}; \
-			if [ X${DEPENDS_PRECLEAN} != "X" ]; then \
-				target="clean $$target"; \
-				depends_args="$$depends_args NOCLEANDEPENDS=yes"; \
-			fi; \
-			if [ X${DEPENDS_CLEAN} != "X" ]; then \
-				target="$$target clean"; \
-				depends_args="$$depends_args NOCLEANDEPENDS=yes"; \
-			fi; \
-		else \
-			target="${DEPENDS_TARGET}"; \
-			depends_args="${DEPENDS_ARGS}"; \
-		fi; \
-		if ${EXPR} "$$prog" : \\/ >/dev/null; then \
-			if [ -e "$$prog" ]; then \
-				if [ "$$prog" = "${NONEXISTENT}" ]; then \
-					${ECHO_MSG} "Error: ${NONEXISTENT} exists.  Please remove it, and restart the build."; \
-					${FALSE}; \
-				else \
-					${ECHO_MSG} "===>   ${PKGNAME} depends on file: $$prog - found"; \
-					if [ ${_DEPEND_ALWAYS} = 1 ]; then \
-						${ECHO_MSG} "       (but building it anyway)"; \
-						notfound=1; \
-					else \
-						notfound=0; \
-					fi; \
-				fi; \
-			else \
-				${ECHO_MSG} "===>   ${PKGNAME} depends on file: $$prog - not found"; \
-				notfound=1; \
-			fi; \
-		else \
-			case $${prog} in \
-				*\>*|*\<*|*=*)	pkg=yes;; \
-				*)		pkg="";; \
-			esac; \
-			if [ "$$pkg" != "" ]; then \
-				if ${PKG_INFO} "$$prog" > /dev/null 2>&1 ; then \
-					${ECHO_MSG} "===>   ${PKGNAME} depends on package: $$prog - found"; \
-					if [ ${_DEPEND_ALWAYS} = 1 ]; then \
-						${ECHO_MSG} "       (but building it anyway)"; \
-						notfound=1; \
-					else \
-						notfound=0; \
-					fi; \
-				else \
-					${ECHO_MSG} "===>   ${PKGNAME} depends on package: $$prog - not found"; \
-					notfound=1; \
-				fi; \
-				if [ $$notfound != 0 ]; then \
-					inverse_dep=`${ECHO_CMD} $$prog | ${SED} \
-						-e 's/<=/=gt=/; s/</=ge=/; s/>=/=lt=/; s/>/=le=/' \
-						-e 's/=gt=/>/; s/=ge=/>=/; s/=lt=/</; s/=le=/<=/'`; \
-					pkg_info=`${PKG_INFO} -E "$$inverse_dep" 2>/dev/null || ${TRUE}`; \
-					if [ "$$pkg_info" != "" ]; then \
-						${ECHO_MSG} "===>   Found $$pkg_info, but you need to upgrade to $$prog."; \
-						exit 1; \
-					fi; \
-				fi; \
-			elif ${WHICH} "$$prog" > /dev/null 2>&1 ; then \
-				${ECHO_MSG} "===>   ${PKGNAME} depends on executable: $$prog - found"; \
-				if [ ${_DEPEND_ALWAYS} = 1 ]; then \
-					${ECHO_MSG} "       (but building it anyway)"; \
-					notfound=1; \
-				else \
-					notfound=0; \
-				fi; \
-			else \
-				${ECHO_MSG} "===>   ${PKGNAME} depends on executable: $$prog - not found"; \
-				notfound=1; \
-			fi; \
-		fi; \
-		if [ $$notfound != 0 ]; then \
-			if [ "$$prog" != "${NONEXISTENT}" ]; then \
-				anynotfound=1; \
-			fi; \
-			${ECHO_MSG} "===>    Verifying $$target for $$prog in $$dir"; \
-			if [ ! -d "$$dir" ]; then \
-				${ECHO_MSG} "     => No directory for $$prog.  Skipping.."; \
-			else \
-				${_INSTALL_DEPENDS} \
-			fi; \
-		fi; \
-	done; \
-	if [ -n "${STRICT_DEPENDS}" -a $${anynotfound} -eq 1 ]; then \
-		${ECHO_MSG} "===>   STRICT_DEPENDS set - Not installing missing dependencies."; \
-		${ECHO_MSG} "       This means a dependency is wrong since it was not satisfied in the ${deptype:tl}-depends phase."; \
-		exit 1; \
-	fi
-.endif
-.else
-	@${DO_NADA}
+.if defined(${deptype}_DEPENDS) && !defined(NO_DEPENDS)
+	@${SETENV} \
+		dp_RAWDEPENDS="${${deptype}_DEPENDS}" \
+		dp_DEPTYPE="${deptype}_DEPENDS" \
+		dp_DEPENDS_TARGET="${DEPENDS_TARGET}" \
+		dp_DEPENDS_PRECLEAN="${DEPENDS_PRECLEAN}" \
+		dp_DEPENDS_CLEAN="${DEPENDS_CLEAN}" \
+		dp_DEPENDS_ARGS="${DEPENDS_ARGS}" \
+		dp_USE_PACKAGE_DEPENDS="${USE_PACKAGE_DEPENDS}" \
+		dp_USE_PACKAGE_DEPENDS_ONLY="${USE_PACKAGE_DEPENDS_ONLY}" \
+		dp_PKG_ADD="${PKG_ADD}" \
+		dp_PKG_INFO="${PKG_INFO}" \
+		dp_WRKDIR="${WRKDIR}" \
+		dp_PKGNAME="${PKGNAME}" \
+		dp_STRICT_DEPENDS="${STRICT_DEPENDS}" \
+		dp_LOCALBASE="${LOCALBASE}" \
+		dp_LIB_DIRS="${LIB_DIRS}" \
+		dp_SH="${SH}" \
+		dp_SCRIPTSDIR="${SCRIPTSDIR}" \
+		dp_PORTSDIR="${PORTSDIR}" \
+		dp_MAKE="${MAKE}" \
+		${SH} ${SCRIPTSDIR}/do-depends.sh
 .endif
 .endfor
-
-lib-depends:
-.if defined(LIB_DEPENDS) && !defined(NO_DEPENDS)
-	@set -e ; \
-	anynotfound=0; for i in ${LIB_DEPENDS}; do \
-		lib=$${i%%:*} ; \
-		dir=$${i#*:}  ; \
-		target="${DEPENDS_TARGET}"; \
-		depends_args="${DEPENDS_ARGS}"; \
-		${ECHO_MSG}  -n "===>   ${PKGNAME} depends on shared library: $${lib}" ; \
-		libfile=`${SETENV} LIB_DIRS="${LIB_DIRS}" LOCALBASE="${LOCALBASE}" ${SH} ${SCRIPTSDIR}/find-lib.sh $${lib}` ; \
-		if [ -z "$${libfile}" ]; then \
-			anynotfound=1; \
-			${ECHO_MSG} " - not found"; \
-			${ECHO_MSG} "===>    Verifying for $$lib in $$dir"; \
-			if [ ! -d "$$dir" ] ; then \
-				${ECHO_MSG} "    => No directory for $$lib.  Skipping.."; \
-			else \
-				${_INSTALL_DEPENDS} \
-			fi ; \
-		else \
-			${ECHO_MSG} " - found ($${libfile})"; \
-		fi ; \
-	done; \
-	if [ -n "${STRICT_DEPENDS}" -a $${anynotfound} -eq 1 ]; then \
-		${ECHO_MSG} "===>   STRICT_DEPENDS set - Not installing missing dependencies."; \
-		${ECHO_MSG} "       This means a dependency is wrong since it was not satisfied in the lib-depends phase."; \
-		exit 1; \
-	fi
-.endif
 
 .endif
 
@@ -4503,35 +4368,12 @@ all-depends-list:
 	@${ALL-DEPENDS-LIST}
 
 ALL-DEPENDS-LIST= \
-	L="${_DEPEND_DIRS}";						\
-	checked="";							\
-	while [ -n "$$L" ]; do						\
-		l="";							\
-		for d in $$L; do					\
-			case $$checked in				\
-			$$d\ *|*\ $$d\ *|*\ $$d)			\
-				continue;;				\
-			esac;						\
-			checked="$$checked $$d";			\
-			if [ ! -d $$d ]; then				\
-				${ECHO_MSG} "${PKGNAME}: \"$$d\" non-existent -- dependency list incomplete" >&2; \
-				continue;				\
-			fi;						\
-			${ECHO_CMD} $$d;				\
-			if ! children=$$(cd $$d && ${MAKE} -V _DEPEND_DIRS); then\
-				${ECHO_MSG} "${PKGNAME}: \"$$d\" erroneous -- dependency list incomplete" >&2; \
-				continue;				\
-			fi;						\
-			for child in $$children; do			\
-				case "$$checked $$l" in			\
-				$$child\ *|*\ $$child\ *|*\ $$child)	\
-					continue;;			\
-				esac;					\
-				l="$$l $$child";			\
-			done;						\
-		done;							\
-		L=$$l;							\
-	done
+	${SETENV} dp_ALLDEPENDS="${_UNIFIED_DEPENDS}" \
+			dp_PORTSDIR="${PORTSDIR}" \
+			dp_MAKE="${MAKE}" \
+			dp_PKGNAME="${PKGNAME}" \
+			dp_SCRIPTSDIR="${SCRIPTSDIR}" \
+			${SH} ${SCRIPTSDIR}/all-depends-list.sh
 
 CLEAN-DEPENDS-FULL= \
 	L="${_DEPEND_DIRS}";						\
@@ -5856,33 +5698,33 @@ _SANITY_SEQ=	post-chroot pre-everything check-makefile \
 _PKG_DEP=		check-sanity
 _PKG_SEQ=		pkg-depends
 _FETCH_DEP=		pkg
-_FETCH_SEQ=		fetch-depends pre-fetch pre-fetch-script \
-				do-fetch fetch-specials post-fetch post-fetch-script
+_FETCH_SEQ=		fetch-depends pre-fetch ${_OPTIONS_pre_fetch} pre-fetch-script \
+				do-fetch fetch-specials post-fetch ${_OPTIONS_post_fetch} post-fetch-script
 _EXTRACT_DEP=	fetch
 _EXTRACT_SEQ=	check-build-conflicts extract-message checksum extract-depends \
-				clean-wrkdir ${WRKDIR} pre-extract pre-extract-script do-extract \
-				post-extract post-extract-script
+				clean-wrkdir ${WRKDIR} pre-extract ${_OPTIONS_pre_extract} pre-extract-script do-extract \
+				post-extract ${_OPTIONS_post_extract} post-extract-script
 _PATCH_DEP=		extract
 _PATCH_SEQ=		ask-license patch-message patch-depends pathfix dos2unix fix-shebang \
-				pre-patch \
-				pre-patch-script do-patch charsetfix-post-patch post-patch post-patch-script
+				pre-patch ${_OPTIONS_pre_patch} \
+				pre-patch-script do-patch charsetfix-post-patch post-patch ${_OPTIONS_post_patch} post-patch-script
 _CONFIGURE_DEP=	patch
 _CONFIGURE_SEQ=	build-depends lib-depends configure-message \
-				pre-configure pre-configure-script \
+				pre-configure ${_OPTIONS_pre_configure} pre-configure-script \
 				run-autotools do-autoreconf patch-libtool run-autotools-fixup do-configure \
-				post-configure post-configure-script
+				post-configure ${_OPTIONS_post_configure} post-configure-script
 _BUILD_DEP=		configure
-_BUILD_SEQ=		build-message pre-build pre-build-script do-build \
-				post-build post-build-script
+_BUILD_SEQ=		build-message pre-build ${_OPTIONS_pre_build} pre-build-script do-build \
+				post-build ${_OPTIONS_post_build} post-build-script
 
 _STAGE_DEP=		build
-_STAGE_SEQ=		stage-message stage-dir run-depends lib-depends apply-slist pre-install generate-plist \
+_STAGE_SEQ=		stage-message stage-dir run-depends lib-depends apply-slist pre-install ${_OPTIONS_pre_install} ${_OPTIONS_pre_stage} generate-plist \
 				pre-su-install
 # ${POST_PLIST} must be after anything that modifies TMPPLIST
 _STAGE_SEQ+=	create-users-groups do-install \
 				kmod-post-install fix-perl-things \
-				webplugin-post-install post-install post-install-script \
-				move-uniquefiles patch-lafiles post-stage compress-man \
+				webplugin-post-install post-install ${_OPTIONS_post_install} post-install-script \
+				move-uniquefiles patch-lafiles post-stage ${_OPTIONS_post_stage} compress-man \
 				install-rc-script install-ldconfig-file install-license \
 				install-desktop-entries add-plist-info add-plist-docs \
 				add-plist-examples add-plist-data add-plist-post \
@@ -5895,7 +5737,7 @@ _INSTALL_SEQ=	install-message run-depends lib-depends check-already-installed
 _INSTALL_SUSEQ=	fake-pkg security-check
 
 _PACKAGE_DEP=	stage
-_PACKAGE_SEQ=	package-message pre-package pre-package-script do-package post-package-script
+_PACKAGE_SEQ=	package-message pre-package ${_OPTIONS_pre_package} pre-package-script do-package ${_OPTIONS_post_package} post-package-script
 
 # Enforce order for -jN builds
 
