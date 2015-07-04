@@ -19,7 +19,7 @@ USES=		tar:bzip2
 RUN_DEPENDS=	update-mime-database:${PORTSDIR}/misc/shared-mime-info
 
 USES+=		gettext gmake libtool:keepla pathfix pkgconfig
-USE_GNOME=	gnomeprefix intlhack gnomemimedata gconf2 \
+USE_GNOME=	gconf2 glib20 gnomemimedata intlhack \
 		referencehack
 INSTALL_TARGET=	install-strip
 USE_OPENSSL=	yes
