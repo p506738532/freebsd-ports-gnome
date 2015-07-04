@@ -33,7 +33,7 @@ RUN_DEPENDS+=	hicolor-icon-theme>=0:${PORTSDIR}/misc/hicolor-icon-theme \
 USE_PERL5=	build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	atk gdkpixbuf2 introspection:build pango
+USE_GNOME=	atk gdkpixbuf2 glib20 introspection:build pango
 #gtk-update-icon-cache \
 #		introspection:build pango
 USES+=		gettext gmake libtool pathfix perl5 pkgconfig
