@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nemo
-PORTVERSION=	2.6.5
+PORTVERSION=	2.6.7
 CATEGORIES=	x11-fm gnome
 DIST_SUBDIR=	gnome3
 
