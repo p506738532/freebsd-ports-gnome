@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cinnamon-screensaver
-PORTVERSION=	2.6.3
+PORTVERSION=	2.6.4
 CATEGORIES=	x11 gnome
 DIST_SUBDIR=	gnome3
 
