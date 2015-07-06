@@ -3,7 +3,7 @@
 
 PORTNAME=	gmerlin
 PORTVERSION=	1.2.0
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	multimedia
 MASTER_SITES=	SF
 
@@ -11,6 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Multimedia framework
 
 LICENSE=	GPLv3
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 		libgavl.so:${PORTSDIR}/multimedia/gavl \
@@ -26,6 +27,7 @@ CONFIGURE_ENV=	ac_cv_func_inotify_init=no
 CONFIGURE_ARGS=	--disable-v4l --disable-v4l2 --disable-v4lconvert \
 		--without-doxygen --with-cpuflags=none --disable-musicbrainz
 USE_LDCONFIG=	yes
+INSTALL_TARGET=	install-strip
 INSTALL_ICONS=	yes
 
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -49,7 +51,7 @@ ESOUND_USE=		gnome=esound
 ESOUND_CONFIGURE_OFF=	--disable-esd
 JACK_LIB_DEPENDS=	libjack.so:${PORTSDIR}/audio/jack
 JACK_CONFIGURE_OFF=	--disable-jack
-JPEG_LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg
+JPEG_USES=		jpeg
 JPEG_CONFIGURE_OFF=	--disable-libjpeg
 LIBVISUAL_LIB_DEPENDS=	libvisual-0.4.so:${PORTSDIR}/graphics/libvisual04
 LIBVISUAL_CONFIGURE_OFF=--disable-libvisual

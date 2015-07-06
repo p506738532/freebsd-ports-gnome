@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	filezilla
-PORTVERSION=	3.11.0
+PORTVERSION=	3.11.0.1
 CATEGORIES=	ftp
 MASTER_SITES=	SF/${PORTNAME}/FileZilla_Client/${PORTVERSION}
 DISTNAME=	FileZilla_${PORTVERSION}_src
@@ -19,6 +19,8 @@ LIB_DEPENDS=	libgcrypt.so:${PORTSDIR}/security/libgcrypt \
 		libgnutls.so:${PORTSDIR}/security/gnutls \
 		libidn.so:${PORTSDIR}/dns/libidn \
 		libtinyxml.so:${PORTSDIR}/textproc/tinyxml
+
+BROKEN_FreeBSD_9=	does not build on FreeBSD 9.x (gcc segfault)
 
 INSTALLS_ICONS=	yes
 USES=		compiler:c++11-lib gmake pkgconfig tar:bzip2

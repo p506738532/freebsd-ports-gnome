@@ -94,7 +94,6 @@
     SUBDIR += cocoon
     SUBDIR += codeigniter
     SUBDIR += coppermine
-    SUBDIR += cowboy
     SUBDIR += cplanet
     SUBDIR += cppcms
     SUBDIR += crawl
@@ -162,11 +161,20 @@
     SUBDIR += elgg
     SUBDIR += elinks
     SUBDIR += eliom
+    SUBDIR += elixir-maru
+    SUBDIR += elixir-phoenix
+    SUBDIR += elixir-phoenix_ecto
+    SUBDIR += elixir-phoenix_html
     SUBDIR += emacs-w3m
     SUBDIR += encode-explorer
     SUBDIR += entrans
     SUBDIR += ephemera
     SUBDIR += epiphany
+    SUBDIR += erlang-cowboy
+    SUBDIR += erlang-hackney
+    SUBDIR += erlang-mochiweb
+    SUBDIR += erlang-mochiweb-basho
+    SUBDIR += erlang-webmachine
     SUBDIR += erwn
     SUBDIR += eventum
     SUBDIR += extjs
@@ -347,6 +355,7 @@
     SUBDIR += jtoolkit
     SUBDIR += junkbuster
     SUBDIR += kannel
+    SUBDIR += kannel-sqlbox
     SUBDIR += kcgi
     SUBDIR += kdewebdev4
     SUBDIR += kpartsplugin
@@ -416,8 +425,6 @@
     SUBDIR += mkapachepw
     SUBDIR += mknmz-wwwoffle
     SUBDIR += mnogosearch
-    SUBDIR += mochiweb
-    SUBDIR += mochiweb-basho
     SUBDIR += mod_amazon_proxy
     SUBDIR += mod_antiloris
     SUBDIR += mod_asn
@@ -542,8 +549,8 @@
     SUBDIR += nginx-devel
     SUBDIR += nibbleblog
     SUBDIR += node
-    SUBDIR += node010
     SUBDIR += node-devel
+    SUBDIR += node010
     SUBDIR += nostromo
     SUBDIR += npapi-vlc
     SUBDIR += npapi-xine
@@ -1535,8 +1542,10 @@
     SUBDIR += py-django-tagging
     SUBDIR += py-django-taggit
     SUBDIR += py-django-tastypie
+    SUBDIR += py-django16-tastypie
     SUBDIR += py-django-threaded-multihost
     SUBDIR += py-django-tinymce
+    SUBDIR += py-django-voting
     SUBDIR += py-django14
     SUBDIR += py-django16
     SUBDIR += py-django17
@@ -1736,9 +1745,10 @@
     SUBDIR += py-webware
     SUBDIR += py-webware-component
     SUBDIR += py-werkzeug
+    SUBDIR += py-wikipedia
     SUBDIR += py-wikitools
-    SUBDIR += py-wsaccel
     SUBDIR += py-ws4py
+    SUBDIR += py-wsaccel
     SUBDIR += py-wsgiauth
     SUBDIR += py-wsgidav
     SUBDIR += py-zope.app.wsgi
@@ -1751,6 +1761,7 @@
     SUBDIR += qdecoder
     SUBDIR += qooxdoo
     SUBDIR += qt5-webchannel
+    SUBDIR += qt5-websockets
     SUBDIR += quickie
     SUBDIR += qupzilla-qt4
     SUBDIR += qupzilla-qt5
@@ -1779,7 +1790,6 @@
     SUBDIR += rsstool
     SUBDIR += rt40
     SUBDIR += rt42
-    SUBDIR += ruby-amazon
     SUBDIR += ruby-aws
     SUBDIR += ruby-google
     SUBDIR += ruby-wgettsv
@@ -1788,9 +1798,9 @@
     SUBDIR += rubygem-actionpack4
     SUBDIR += rubygem-activeresource
     SUBDIR += rubygem-activeresource4
-    SUBDIR += rubygem-acts_as_taggable
     SUBDIR += rubygem-acts-as-taggable-on
     SUBDIR += rubygem-acts-as-taggable-on3
+    SUBDIR += rubygem-acts_as_taggable
     SUBDIR += rubygem-addressable
     SUBDIR += rubygem-akami
     SUBDIR += rubygem-amazon-ecs
@@ -1911,6 +1921,7 @@
     SUBDIR += rubygem-rack-ssl
     SUBDIR += rubygem-rack-test
     SUBDIR += rubygem-rack15
+    SUBDIR += rubygem-rack16
     SUBDIR += rubygem-rails
     SUBDIR += rubygem-rails4
     SUBDIR += rubygem-rails_autolink
@@ -2156,10 +2167,9 @@
     SUBDIR += uwsgitop
     SUBDIR += uzbl
     SUBDIR += validator
-    SUBDIR += varnish
-    SUBDIR += varnish4
     SUBDIR += varnish-libvmod-header
     SUBDIR += varnish-nagios
+    SUBDIR += varnish4
     SUBDIR += vdr-plugin-live
     SUBDIR += vdradmin-am
     SUBDIR += vee
@@ -2192,7 +2202,6 @@
     SUBDIR += webkit2-gtk3
     SUBDIR += weblint
     SUBDIR += weblint++
-    SUBDIR += webmachine
     SUBDIR += webpy
     SUBDIR += webreport
     SUBDIR += webresolve

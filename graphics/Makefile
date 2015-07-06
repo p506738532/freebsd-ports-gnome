@@ -95,6 +95,7 @@
     SUBDIR += commons-utilities
     SUBDIR += compupic
     SUBDIR += converseen
+    SUBDIR += copperspice
     SUBDIR += cosmoplayer
     SUBDIR += crw
     SUBDIR += cthumb
@@ -282,7 +283,6 @@
     SUBDIR += gpicview
     SUBDIR += gplot
     SUBDIR += gpsmanshp
-    SUBDIR += gqview
     SUBDIR += gracula
     SUBDIR += grads
     SUBDIR += grafx2
@@ -530,6 +530,7 @@
     SUBDIR += libwmf-nox11
     SUBDIR += libwpg
     SUBDIR += libwpg03
+    SUBDIR += lightzone
     SUBDIR += linplasma
     SUBDIR += linux-XnViewMP
     SUBDIR += linux-adobesvg
@@ -802,6 +803,7 @@
     SUBDIR += pstoedit
     SUBDIR += pstoepsi
     SUBDIR += pure-gl
+    SUBDIR += py-pyganim
     SUBDIR += py-PyX
     SUBDIR += py-PyX12
     SUBDIR += py-aafigure
@@ -834,6 +836,7 @@
     SUBDIR += py-opencv
     SUBDIR += py-openexr
     SUBDIR += py-opengl
+    SUBDIR += py-opengl-accelerate
     SUBDIR += py-openimageio
     SUBDIR += py-paint
     SUBDIR += py-pillow

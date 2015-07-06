@@ -30,6 +30,7 @@
     SUBDIR += archmage
     SUBDIR += artha
     SUBDIR += asciidoc
+    SUBDIR += asciinema
     SUBDIR += asm-xml
     SUBDIR += asm2html
     SUBDIR += aspell
@@ -154,6 +155,7 @@
     SUBDIR += enchant
     SUBDIR += eo-aspell
     SUBDIR += eqe
+    SUBDIR += erlang-edown
     SUBDIR += es-aspell
     SUBDIR += es-hunspell
     SUBDIR += es-hyphen
@@ -161,7 +163,6 @@
     SUBDIR += estraier
     SUBDIR += et-aspell
     SUBDIR += exempi
-    SUBDIR += exmpp
     SUBDIR += expat2
     SUBDIR += exslt
     SUBDIR += extract_url
@@ -1171,6 +1172,7 @@
     SUBDIR += py-chardet
     SUBDIR += py-cloud_sptheme
     SUBDIR += py-creole
+    SUBDIR += py-diff-match-patch
     SUBDIR += py-docutils
     SUBDIR += py-dsv
     SUBDIR += py-elasticsearch-py
@@ -1243,6 +1245,7 @@
     SUBDIR += py-whoosh
     SUBDIR += py-wicked
     SUBDIR += py-wordnet
+    SUBDIR += py-wstools
     SUBDIR += py-wtforms
     SUBDIR += py-xlrd
     SUBDIR += py-xlutils
@@ -1380,6 +1383,8 @@
     SUBDIR += rubygem-org-ruby
     SUBDIR += rubygem-parslet
     SUBDIR += rubygem-phone
+    SUBDIR += rubygem-rails-dom-testing
+    SUBDIR += rubygem-rails-html-sanitizer
     SUBDIR += rubygem-rak
     SUBDIR += rubygem-rchardet
     SUBDIR += rubygem-rdiscount
@@ -1398,6 +1403,7 @@
     SUBDIR += rubygem-sass
     SUBDIR += rubygem-sass-rails
     SUBDIR += rubygem-sass-rails4
+    SUBDIR += rubygem-sass-rails5
     SUBDIR += rubygem-sass32
     SUBDIR += rubygem-sax-machine
     SUBDIR += rubygem-simplecov-html
@@ -1471,9 +1477,9 @@
     SUBDIR += source-highlight
     SUBDIR += sowing
     SUBDIR += spellutils
-    SUBDIR += spiff
     SUBDIR += sphinxsearch
     SUBDIR += sphinxsearch-devel
+    SUBDIR += spiff
     SUBDIR += sq-hunspell
     SUBDIR += sr-aspell
     SUBDIR += sr-hunspell

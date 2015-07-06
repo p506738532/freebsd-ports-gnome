@@ -4,6 +4,7 @@
 PORTNAME=		crits
 PORTVERSION=		3.1.0
 DISTVERSIONPREFIX=	v
+PORTREVISION=		1
 CATEGORIES=		security
 PKGNAMEPREFIX=		${PYTHON_PKGNAMEPREFIX}
 
@@ -43,8 +44,8 @@ RUN_DEPENDS+=	7z:${PORTSDIR}/archivers/p7zip     \
 		${PYTHON_PKGNAMEPREFIX}pymongo>=2.7.1:${PORTSDIR}/databases/pymongo        \
 		${PYTHON_PKGNAMEPREFIX}defusedxml>=0.4.1:${PORTSDIR}/devel/py-defusedxml   \
 		${PYTHON_PKGNAMEPREFIX}django16>=1.6.5:${PORTSDIR}/www/py-django16         \
-		${PYTHON_PKGNAMEPREFIX}django-tastypie>=0.11.0:${PORTSDIR}/www/py-django-tastypie \
-		${PYTHON_PKGNAMEPREFIX}django-tastypie-mongoengine>=0.4.5:${PORTSDIR}/devel/py-django-tastypie-mongoengine \
+		${PYTHON_PKGNAMEPREFIX}django-tastypie16>0:${PORTSDIR}/www/py-django16-tastypie \
+		${PYTHON_PKGNAMEPREFIX}django-tastypie-mongoengine16>=0.4.5:${PORTSDIR}/devel/py-django16-tastypie-mongoengine \
 		${PYTHON_PKGNAMEPREFIX}mongoengine>=0.8.7:${PORTSDIR}/devel/py-mongoengine \
 		${PYTHON_PKGNAMEPREFIX}pydeep>=0.2:${PORTSDIR}/security/py-pydeep          \
 		${PYTHON_PKGNAMEPREFIX}pefile>=1.2.10.114:${PORTSDIR}/devel/py-pefile      \
@@ -58,7 +59,7 @@ RUN_DEPENDS+=	7z:${PORTSDIR}/archivers/p7zip     \
 		${PYTHON_PKGNAMEPREFIX}requests1>=1.1.0_9:${PORTSDIR}/www/py-requests1     \
 		${PKGNAMEPREFIX}pillow>=2.4.0:${PORTSDIR}/graphics/py-pillow               \
 		${PYTHON_PKGNAMEPREFIX}parsing>=1.5.1:${PORTSDIR}/devel/py-parsing         \
-		${PYTHON_PKGNAMEPREFIX}ldap2>=2.4.15:${PORTSDIR}/net/py-ldap2              \
+		${PYTHON_PKGNAMEPREFIX}ldap>=2.4.15:${PORTSDIR}/net/py-ldap                \
 		${PYTHON_PKGNAMEPREFIX}magic>0:${PORTSDIR}/devel/py-magic                  \
 		${PYTHON_PKGNAMEPREFIX}mimeparse>=0.1.4:${PORTSDIR}/devel/py-mimeparse     \
 		${PYTHON_PKGNAMEPREFIX}cybox>=2.1.0.5:${PORTSDIR}/security/py-cybox        \

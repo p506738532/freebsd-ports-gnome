@@ -117,7 +117,8 @@
     SUBDIR += echoping
     SUBDIR += empty
     SUBDIR += enet
-    SUBDIR += erlang_xmlrpc
+    SUBDIR += erlang-ranch
+    SUBDIR += erlang-xmlrpc
     SUBDIR += etrace
     SUBDIR += exabgp
     SUBDIR += exaddos
@@ -440,7 +441,6 @@
     SUBDIR += ntopng
     SUBDIR += ntp
     SUBDIR += ntp-devel
-    SUBDIR += ntp-rc
     SUBDIR += ntraceroute
     SUBDIR += nusoap
     SUBDIR += nxproxy
@@ -462,7 +462,6 @@
     SUBDIR += openldap24-sasl-client
     SUBDIR += openldap24-server
     SUBDIR += openmpi
-    SUBDIR += openmpi-devel
     SUBDIR += openmq
     SUBDIR += openmq-client
     SUBDIR += openntpd
@@ -678,6 +677,7 @@
     SUBDIR += p5-Net-Subnet
     SUBDIR += p5-Net-Syslog
     SUBDIR += p5-Net-TCLink
+    SUBDIR += p5-Net-TacacsPlus
     SUBDIR += p5-Net-TcpDumpLog
     SUBDIR += p5-Net-Telnet
     SUBDIR += p5-Net-Telnet-Netscreen
@@ -890,7 +890,6 @@
     SUBDIR += proxychains-ng
     SUBDIR += prtunnel
     SUBDIR += ptpd2
-    SUBDIR += ptpd2-devel
     SUBDIR += ptunnel
     SUBDIR += pure-sockets
     SUBDIR += pvm
@@ -915,7 +914,8 @@
     SUBDIR += py-ipaddress
     SUBDIR += py-iplib
     SUBDIR += py-kombu
-    SUBDIR += py-ldap2
+    SUBDIR += py-ldap
+    SUBDIR += py-ldap3
     SUBDIR += py-ldaptor
     SUBDIR += py-libcloud
     SUBDIR += py-libdnet
@@ -954,10 +954,10 @@
     SUBDIR += py-smb
     SUBDIR += py-smbpasswd
     SUBDIR += py-soappy
-    SUBDIR += py-soappy-devel
     SUBDIR += py-soapy
     SUBDIR += py-speedtest-cli
     SUBDIR += py-suds
+    SUBDIR += py-terminado
     SUBDIR += py-tofu
     SUBDIR += py-tweepy
     SUBDIR += py-twistedPair
@@ -996,7 +996,6 @@
     SUBDIR += radsecproxy
     SUBDIR += radvd
     SUBDIR += raggle
-    SUBDIR += ranch
     SUBDIR += rdapper
     SUBDIR += rdesktop
     SUBDIR += rdist6
@@ -1040,7 +1039,6 @@
     SUBDIR += rubygem-aws-s3
     SUBDIR += rubygem-aws-ses
     SUBDIR += rubygem-bunny
-    SUBDIR += rubygem-bunny060
     SUBDIR += rubygem-connection_pool
     SUBDIR += rubygem-dogapi
     SUBDIR += rubygem-domain_name
@@ -1100,6 +1098,7 @@
     SUBDIR += rubygem-right_gogrid
     SUBDIR += rubygem-right_http_connection
     SUBDIR += rubygem-right_slicehost
+    SUBDIR += rubygem-rsync
     SUBDIR += rubygem-ruby-growl
     SUBDIR += rubygem-ruby-openid
     SUBDIR += rubygem-ruby-yadis
@@ -1125,6 +1124,7 @@
     SUBDIR += samba36
     SUBDIR += samba4
     SUBDIR += samba41
+    SUBDIR += samba42
     SUBDIR += samplicator
     SUBDIR += sbd
     SUBDIR += scamper
@@ -1140,11 +1140,9 @@
     SUBDIR += sendsms
     SUBDIR += sendsnpp
     SUBDIR += serveez
-    SUBDIR += service-discovery-applet
     SUBDIR += serviio
     SUBDIR += sflowtool
     SUBDIR += shadowsocks-libev
-    SUBDIR += shaperprobe
     SUBDIR += shelldap
     SUBDIR += shmux
     SUBDIR += sie-nmsg

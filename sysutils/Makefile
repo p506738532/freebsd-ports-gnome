@@ -316,6 +316,7 @@
     SUBDIR += gaffitter
     SUBDIR += gai-leds
     SUBDIR += ganglia-monitor-core
+    SUBDIR += ganglia-webfrontend
     SUBDIR += gapcmon
     SUBDIR += garcon
     SUBDIR += gather
@@ -653,6 +654,7 @@
     SUBDIR += p5-ZConf-Cron
     SUBDIR += p5-arclog
     SUBDIR += p5-reslog
+    SUBDIR += packer
     SUBDIR += pacman
     SUBDIR += paicc
     SUBDIR += pam_mount
@@ -714,6 +716,7 @@
     SUBDIR += polkit-gnome
     SUBDIR += polkit-kde
     SUBDIR += polkit-qt
+    SUBDIR += polkit-qt5
     SUBDIR += powerman
     SUBDIR += pp
     SUBDIR += pprotectd
@@ -728,6 +731,7 @@
     SUBDIR += pstacku
     SUBDIR += pstree
     SUBDIR += ptools
+    SUBDIR += puppet37
     SUBDIR += puppet
     SUBDIR += puppet-lint
     SUBDIR += puppet-mode.el
@@ -739,6 +743,7 @@
     SUBDIR += py-analyzemft
     SUBDIR += py-bcfg2
     SUBDIR += py-croniter
+    SUBDIR += py-crontab
     SUBDIR += py-danzfs
     SUBDIR += py-drmaa
     SUBDIR += py-execnet
@@ -757,11 +762,11 @@
     SUBDIR += py-power
     SUBDIR += py-psutil
     SUBDIR += py-psutil121
+    SUBDIR += py-ptyprocess
     SUBDIR += py-pytsk
     SUBDIR += py-queuelib
     SUBDIR += py-ranger
     SUBDIR += py-salt
-    SUBDIR += py-salt-api
     SUBDIR += py-shutilwhich
     SUBDIR += py-stdiff
     SUBDIR += py-supervisor
@@ -814,7 +819,10 @@
     SUBDIR += ruby-quota
     SUBDIR += rubygem-SyslogLogger
     SUBDIR += rubygem-backup
+    SUBDIR += rubygem-bosh-gen
+    SUBDIR += rubygem-bosh_cli
     SUBDIR += rubygem-bundler
+    SUBDIR += rubygem-bundler17
     SUBDIR += rubygem-bundler_ext
     SUBDIR += rubygem-capistrano
     SUBDIR += rubygem-capistrano-ext
@@ -849,6 +857,8 @@
     SUBDIR += rubygem-murder
     SUBDIR += rubygem-ohai
     SUBDIR += rubygem-parallel
+    SUBDIR += rubygem-puppet_forge
+    SUBDIR += rubygem-r10k
     SUBDIR += rubygem-rubyipmi
     SUBDIR += rubygem-shellany
     SUBDIR += rubygem-smart_proxy_chef
@@ -958,6 +968,7 @@
     SUBDIR += tdir
     SUBDIR += tenshi
     SUBDIR += tentakel
+    SUBDIR += terraform
     SUBDIR += testdisk
     SUBDIR += thefish
     SUBDIR += timelimit

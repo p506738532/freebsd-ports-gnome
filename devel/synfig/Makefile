@@ -16,14 +16,13 @@ LIB_DEPENDS=	libboost_program_options.so:${PORTSDIR}/devel/boost-libs \
 		libltdl.so:${PORTSDIR}/devel/libltdl \
 		libMagickWand-6.so:${PORTSDIR}/graphics/ImageMagick \
 		libIlmImf.so:${PORTSDIR}/graphics/OpenEXR \
-		libjpeg.so:${PORTSDIR}/graphics/jpeg \
 		libmng.so:${PORTSDIR}/graphics/libmng \
 		libpng.so:${PORTSDIR}/graphics/png \
 		libtiff.so:${PORTSDIR}/graphics/tiff \
 		libavcodec.so:${PORTSDIR}/multimedia/ffmpeg \
 		libdv.so:${PORTSDIR}/multimedia/libdv
 
-USES=		gettext iconv libtool pathfix pkgconfig
+USES=		gettext iconv jpeg libtool pathfix pkgconfig
 USE_GNOME=	cairo glibmm libxml++26
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	${ICONV_CONFIGURE_ARG}
@@ -37,7 +36,6 @@ post-patch:
 	@${REINPLACE_CMD} -e \
 		'/optimization_flags/s|CXXFLAGS=|#CXXFLAGS=| ; \
 		 /optimization_flags/s|CFLAGS=|#CFLAGS=| ; \
-		 s|"GNU strip"|"strip"| ; \
 		 s|el_GR|el| ; \
 		 s|ja_JP|ja| ; \
 		 s|no_NO|no| ; \

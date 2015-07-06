@@ -775,7 +775,6 @@
     SUBDIR += py-Products.PluggableAuthService
     SUBDIR += py-RestrictedPython
     SUBDIR += py-SecretStorage
-    SUBDIR += py-backports.ssl_match_hostname
     SUBDIR += py-bcrypt
     SUBDIR += py-borg.localrole
     SUBDIR += py-cerealizer
@@ -795,6 +794,7 @@
     SUBDIR += py-flask-httpauth
     SUBDIR += py-gnupg
     SUBDIR += py-gnutls
+    SUBDIR += py-gpsoauth
     SUBDIR += py-htpasswd
     SUBDIR += py-itsdangerous
     SUBDIR += py-kerberos
@@ -811,6 +811,7 @@
     SUBDIR += py-paramiko
     SUBDIR += py-passlib
     SUBDIR += py-pbkdf2
+    SUBDIR += py-pgpdump
     SUBDIR += py-plaso
     SUBDIR += py-plone.app.openid
     SUBDIR += py-plone.keyring
@@ -908,7 +909,6 @@
     SUBDIR += rubygem-ezcrypto
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
-    SUBDIR += rubygem-hmac
     SUBDIR += rubygem-jugyo-twitter_oauth
     SUBDIR += rubygem-metasploit-concern
     SUBDIR += rubygem-metasploit-credential
@@ -1047,6 +1047,7 @@
     SUBDIR += unhide
     SUBDIR += unicornscan
     SUBDIR += unssh
+    SUBDIR += vault
     SUBDIR += vinetto
     SUBDIR += vlock
     SUBDIR += vlog
@@ -1061,8 +1062,8 @@
     SUBDIR += webshag
     SUBDIR += whatweb
     SUBDIR += wipe
-    SUBDIR += wpa_supplicant
     SUBDIR += wolfssl
+    SUBDIR += wpa_supplicant
     SUBDIR += xca
     SUBDIR += xinetd
     SUBDIR += xml-security

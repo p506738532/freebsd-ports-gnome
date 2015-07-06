@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	railties
-PORTVERSION=	3.2.21
-PORTREVISION=	2
+PORTVERSION=	3.2.22
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
@@ -20,6 +19,7 @@ RUN_DEPENDS=	rubygem-actionpack>=${PORTVERSION}:${PORTSDIR}/www/rubygem-actionpa
 
 CONFLICTS_INSTALL=	rubygem-railties4-[0-9]*
 
+NO_ARCH=	yes
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes

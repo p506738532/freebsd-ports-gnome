@@ -57,6 +57,1695 @@ Notes:
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="9c7177ff-1fe1-11e5-9a01-bcaec565249c">
+    <topic>libxml2 -- Enforce the reader to run in constant memory</topic>
+    <affects>
+      <package>
+	<name>libxml2</name>
+	<range><lt>2.9.2_3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Daniel Veilland reports:</p>
+	<blockquote cite="https://git.gnome.org/browse/libxml2/commit/?id=213f1fe0d76d30eaed6e5853057defc43e6df2c9">
+	  <p>Enforce the reader to run in constant memory. One of the
+	    operation on the reader could resolve entities leading to
+	    the classic expansion issue. Make sure the buffer used for
+	    xmlreader operation is bounded. Introduce a new allocation
+	    type for the buffers for this effect.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-1819</cvename>
+      <url>https://git.gnome.org/browse/libxml2/commit/?id=213f1fe0d76d30eaed6e5853057defc43e6df2c9</url>
+    </references>
+    <dates>
+      <discovery>2015-04-14</discovery>
+      <entry>2015-07-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2a8b7d21-1ecc-11e5-a4a5-002590263bf5">
+    <topic>wesnoth -- disclosure of .pbl files with lowercase, uppercase, and mixed-case extension</topic>
+    <affects>
+      <package>
+	<name>wesnoth</name>
+	<range><lt>1.12.4,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Ignacio R. Morelle reports:</p>
+	<blockquote cite="http://forums.wesnoth.org/viewtopic.php?t=42776">
+	  <p>As mentioned in the Wesnoth 1.12.4 and Wesnoth 1.13.1 release
+	    announcements, a security vulnerability targeting add-on authors
+	    was found (bug #23504) which allowed a malicious user to obtain
+	    add-on server passphrases from the client's .pbl files and transmit
+	    them over the network, or store them in saved game files intended
+	    to be shared by the victim. This vulnerability affects all existing
+	    releases up to and including versions 1.12.2 and 1.13.0.
+	    Additionally, version 1.12.3 included only a partial fix that failed
+	    to guard users against attempts to read from .pbl files with an
+	    uppercase or mixed-case extension. CVE-2015-5069 and CVE-2015-5070
+	    have been assigned to the vulnerability affecting .pbl files with a
+	    lowercase extension, and .pbl files with an uppercase or mixed-case
+	    extension, respectively.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-5069</cvename>
+      <cvename>CVE-2015-5070</cvename>
+      <url>http://forums.wesnoth.org/viewtopic.php?t=42776</url>
+      <url>http://forums.wesnoth.org/viewtopic.php?t=42775</url>
+    </references>
+    <dates>
+      <discovery>2015-06-28</discovery>
+      <entry>2015-07-01</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b19da422-1e02-11e5-b43d-002590263bf5">
+    <topic>cups-filters -- buffer overflow in texttopdf size allocation</topic>
+    <affects>
+      <package>
+	<name>cups-filters</name>
+	<range><lt>1.0.70</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Stefan Cornelius from Red Hat reports:</p>
+	<blockquote cite="http://www.openwall.com/lists/oss-security/2015/06/26/4">
+	  <p>A heap-based buffer overflow was discovered in the way the
+	    texttopdf utility of cups-filters processed print jobs with a
+	    specially crafted line size. An attacker being able to submit
+	    print jobs could exploit this flaw to crash texttopdf or,
+	    possibly, execute arbitrary code.</p>
+	</blockquote>
+	<p>Till Kamppeter reports:</p>
+	<blockquote cite="http://bzr.linuxfoundation.org/loggerhead/openprinting/cups-filters/revision/7363">
+	  <p>texttopdf: Fixed buffer overflow on size allocation of texttopdf
+	    when working with extremely small line sizes, which causes the size
+	    calculation to result in 0 (CVE-2015-3258, thanks to Stefan
+	    Cornelius from Red Hat for the patch).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-3258</cvename>
+      <mlist>http://www.openwall.com/lists/oss-security/2015/06/26/4</mlist>
+      <url>http://bzr.linuxfoundation.org/loggerhead/openprinting/cups-filters/revision/7363</url>
+    </references>
+    <dates>
+      <discovery>2015-06-26</discovery>
+      <entry>2015-06-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0d0f3050-1f69-11e5-9ba9-d050996490d0">
+    <topic>ntp -- control message remote Deinal of Service vulnerability</topic>
+    <affects>
+      <package>
+	<name>ntp</name>
+	<range><lt>4.2.8p3</lt></range>
+      </package>
+      <package>
+	<name>ntp-devel</name>
+	<range><lt>4.3.25</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>ntp.org reports:</p>
+	<blockquote cite="http://support.ntp.org/bin/view/Main/SecurityNotice#June_2015_NTP_Security_Vulnerabi">
+	  <p>Under limited and specific circumstances an attacker can send a
+	    crafted packet to cause a vulnerable ntpd instance to crash.
+	    This requires each of the following to be true:</p>
+	  <ul>
+	    <li>ntpd set up to allow for remote configuration (not
+	      allowed by default), and</li>
+	    <li>knowledge of the configuration password, and</li>
+	    <li>access to a computer entrusted to perform remote
+	      configuration.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://bugs.ntp.org/show_bug.cgi?id=2853</url>
+      <url>https://www.kb.cert.org/vuls/id/668167</url>
+      <url>http://support.ntp.org/bin/view/Main/SecurityNotice#June_2015_NTP_Security_Vulnerabi</url>
+    </references>
+    <dates>
+      <discovery>2015-06-29</discovery>
+      <entry>2015-06-30</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="acd5d037-1c33-11e5-be9c-6805ca1d3bb1">
+    <topic>qemu -- Heap overflow in QEMU PCNET controller, allowing guest to host escape (CVE-2015-3209)</topic>
+    <affects>
+      <package>
+	<name>qemu</name>
+	<name>qemu-devel</name>
+	<range><lt>0.11.1_20</lt></range>
+	<range><ge>0.12</ge><lt>2.3.0_2</lt></range>
+      </package>
+      <package>
+	<name>qemu-sbruno</name>
+	<range><lt>2.3.50.g20150618_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The QEMU security team reports:</p>
+	<blockquote cite="http://xenbits.xen.org/xsa/advisory-135.html">
+	  <p>A guest which has access to an emulated PCNET network
+	    device (e.g. with "model=pcnet" in their VIF configuration)
+	    can exploit this vulnerability to take over the qemu
+	    process elevating its privilege to that of the qemu
+	    process.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://xenbits.xen.org/xsa/advisory-135.html</url>
+      <cvename>CVE-2015-3209</cvename>
+    </references>
+    <dates>
+      <discovery>2015-04-10</discovery>
+      <entry>2015-06-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="23232028-1ba4-11e5-b43d-002590263bf5">
+    <topic>elasticsearch -- security fix for shared file-system repositories</topic>
+    <affects>
+      <package>
+	<name>elasticsearch</name>
+	<range><ge>1.0.0</ge><lt>1.6.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Elastic reports:</p>
+	<blockquote cite="https://www.elastic.co/community/security">
+	  <p>Vulnerability Summary: All Elasticsearch versions from 1.0.0 to
+	    1.5.2 are vulnerable to an attack that uses Elasticsearch to modify
+	    files read and executed by certain other applications.</p>
+	  <p>Remediation Summary: Users should upgrade to 1.6.0. Alternately,
+	    ensure that other applications are not present on the system, or
+	    that Elasticsearch cannot write into areas where these applications
+	    would read.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4165</cvename>
+      <freebsdpr>ports/201008</freebsdpr>
+      <url>https://www.elastic.co/community/security</url>
+      <url>https://www.elastic.co/blog/elasticsearch-1-6-0-released</url>
+    </references>
+    <dates>
+      <discovery>2015-06-09</discovery>
+      <entry>2015-06-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a71e7440-1ba3-11e5-b43d-002590263bf5">
+    <topic>elasticsearch -- directory traversal attack with site plugins</topic>
+    <affects>
+      <package>
+	<name>elasticsearch</name>
+	<range><lt>1.4.5</lt></range>
+	<range><ge>1.5.0</ge><lt>1.5.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Elastic reports:</p>
+	<blockquote cite="https://www.elastic.co/community/security">
+	  <p>Vulnerability Summary: All Elasticsearch versions prior to 1.5.2
+	    and 1.4.5 are vulnerable to a directory traversal attack that allows
+	    an attacker to retrieve files from the server running Elasticsearch
+	    when one or more site plugins are installed, or when Windows is the
+	    server OS.</p>
+	  <p>Remediation Summary: Users should upgrade to 1.4.5 or 1.5.2. Users
+	    that do not want to upgrade can address the vulnerability by
+	    disabling site plugins. See the CVE description for additional
+	    options.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-3337</cvename>
+      <bid>74353</bid>
+      <url>https://www.elastic.co/community/security</url>
+      <url>https://www.elastic.co/blog/elasticsearch-1-5-2-and-1-4-5-released</url>
+      <url>https://www.exploit-db.com/exploits/37054/</url>
+      <url>https://packetstormsecurity.com/files/131646/Elasticsearch-Directory-Traversal.html</url>
+      <url>http://www.securityfocus.com/archive/1/535385</url>
+    </references>
+    <dates>
+      <discovery>2015-04-27</discovery>
+      <entry>2015-06-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="026759e0-1ba3-11e5-b43d-002590263bf5">
+    <topic>elasticsearch -- remote OS command execution via Groovy scripting engine</topic>
+    <affects>
+      <package>
+	<name>elasticsearch</name>
+	<range><ge>1.3.0</ge><lt>1.3.8</lt></range>
+	<range><ge>1.4.0</ge><lt>1.4.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Elastic reports:</p>
+	<blockquote cite="https://www.elastic.co/community/security">
+	  <p>Vulnerability Summary: Elasticsearch versions 1.3.0-1.3.7 and
+	    1.4.0-1.4.2 have vulnerabilities in the Groovy scripting engine that
+	    were introduced in 1.3.0. The vulnerability allows an attacker to
+	    construct Groovy scripts that escape the sandbox and execute shell
+	    commands as the user running the Elasticsearch Java VM.</p>
+	  <p>Remediation Summary: Users should upgrade to 1.3.8 or 1.4.3. Users
+	    that do not want to upgrade can address the vulnerability by setting
+	    script.groovy.sandbox.enabled to false in elasticsearch.yml and
+	    restarting the node.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-1427</cvename>
+      <bid>72585</bid>
+      <url>https://www.elastic.co/community/security</url>
+      <url>https://www.elastic.co/blog/elasticsearch-1-4-3-and-1-3-8-released</url>
+      <url>http://www.securityfocus.com/archive/1/archive/1/534689/100/0/threaded</url>
+      <url>https://packetstormsecurity.com/files/130368/Elasticsearch-1.3.7-1.4.2-Sandbox-Escape-Command-Execution.html</url>
+      <url>https://packetstormsecurity.com/files/130784/ElasticSearch-Unauthenticated-Remote-Code-Execution.html</url>
+    </references>
+    <dates>
+      <discovery>2015-02-11</discovery>
+      <entry>2015-06-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5951fb49-1ba2-11e5-b43d-002590263bf5">
+    <topic>elasticsearch -- cross site scripting vulnerability in the CORS functionality</topic>
+    <affects>
+      <package>
+	<name>elasticsearch</name>
+	<range><lt>1.4.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Elastic reports:</p>
+	<blockquote cite="https://www.elastic.co/community/security">
+	  <p>Vulnerability Summary: Elasticsearch versions 1.3.x and prior have
+	    a default configuration for CORS that allows an attacker to craft
+	    links that could cause a user's browser to send requests to
+	    Elasticsearch instances on their local network. These requests could
+	    cause data loss or compromise.</p>
+	  <p>Remediation Summary: Users should either set "http.cors.enabled" to
+	    false, or set "http.cors.allow-origin" to the value of the server
+	    that should be allowed access, such as localhost or a server hosting
+	    Kibana. Disabling CORS entirely with the former setting is more
+	    secure, but may not be suitable for all use cases.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-6439</cvename>
+      <bid>70233</bid>
+      <url>https://www.elastic.co/community/security</url>
+      <url>https://www.elastic.co/blog/elasticsearch-1-4-0-beta-released</url>
+      <url>https://packetstormsecurity.com/files/128556/Elasticsearch-1.3.x-CORS-Issue.html</url>
+      <url>http://www.securityfocus.com/archive/1/archive/1/533602/100/0/threaded</url>
+    </references>
+    <dates>
+      <discovery>2014-10-01</discovery>
+      <entry>2015-06-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="43ac9d42-1b9a-11e5-b43d-002590263bf5">
+    <topic>elasticsearch and logstash -- remote OS command execution via dynamic scripting</topic>
+    <affects>
+      <package>
+	<name>elasticsearch</name>
+	<range><lt>1.2.0</lt></range>
+      </package>
+      <package>
+	<name>logstash</name>
+	<range><lt>1.4.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Elastic reports:</p>
+	<blockquote cite="https://www.elastic.co/community/security">
+	  <p>Vulnerability Summary: In Elasticsearch versions 1.1.x and prior,
+	    dynamic scripting is enabled by default. This could allow an
+	    attacker to execute OS commands.</p>
+	  <p>Remediation Summary: Disable dynamic scripting.</p>
+	</blockquote>
+	<blockquote cite="https://www.elastic.co/blog/logstash-1-4-3-released">
+	  <p>Logstash 1.4.2 was bundled with Elasticsearch 1.1.1, which is
+	    vulnerable to CVE-2014-3120. These binaries are used in
+	    Elasticsearch output specifically when using the node protocol.
+	    Since a node client joins the Elasticsearch cluster, the attackers
+	    could use scripts to execute commands on the host OS using the node
+	    client's URL endpoint. With 1.4.3 release, we are packaging Logstash
+	    with Elasticsearch 1.5.2 binaries which by default disables the
+	    ability to run scripts. This also affects users who are using the
+	    configuration option embedded=&gt;true in the Elasticsearch output
+	    which starts a local embedded Elasticsearch cluster. This is
+	    typically used in development environment and proof of concept
+	    deployments. Regardless of this vulnerability, we strongly recommend
+	    not using embedded in production.</p>
+	  <p>Note that users of transport and http protocol are not vulnerable
+	    to this attack.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-3120</cvename>
+      <bid>67731</bid>
+      <url>https://www.elastic.co/community/security</url>
+      <url>https://www.elastic.co/blog/elasticsearch-1-2-0-released</url>
+      <url>https://www.elastic.co/blog/logstash-1-4-3-released</url>
+      <url>https://www.exploit-db.com/exploits/33370/</url>
+      <url>http://bouk.co/blog/elasticsearch-rce/</url>
+      <url>http://www.rapid7.com/db/modules/exploit/multi/elasticsearch/script_mvel_rce</url>
+      <url>https://www.found.no/foundation/elasticsearch-security/#staying-safe-while-developing-with-elasticsearch</url>
+    </references>
+    <dates>
+      <discovery>2014-05-22</discovery>
+      <entry>2015-06-26</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="24bde04f-1a10-11e5-b43d-002590263bf5">
+    <topic>logstash -- Directory traversal vulnerability in the file output plugin</topic>
+    <affects>
+      <package>
+	<name>logstash</name>
+	<range><lt>1.4.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Elastic reports:</p>
+	<blockquote cite="https://www.elastic.co/blog/logstash-1-4-3-released">
+	  <p>An attacker could use the File output plugin with dynamic field
+	    references in the path option to traverse paths outside of Logstash
+	    directory. This technique could also be used to overwrite any files
+	    which can be accessed with permissions associated with Logstash
+	    user. This release sandboxes the paths which can be traversed using
+	    the configuration. We have also disallowed use of dynamic field
+	    references if the path options is pointing to an absolute path.</p>
+	  <p>We have added this vulnerability to our CVE page and are working
+	    on filling out the CVE. We would like to thank Colin Coghill for
+	    reporting the issue and working with us on the resolution.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4152</cvename>
+      <url>https://www.elastic.co/blog/logstash-1-4-3-released</url>
+      <url>https://www.elastic.co/community/security</url>
+    </references>
+    <dates>
+      <discovery>2015-06-09</discovery>
+      <entry>2015-06-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2184ccad-1a10-11e5-b43d-002590263bf5">
+    <topic>logstash -- Remote command execution in Logstash zabbix and nagios_nsca outputs</topic>
+    <affects>
+      <package>
+	<name>logstash</name>
+	<range><lt>1.4.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Elastic reports:</p>
+	<blockquote cite="https://www.elastic.co/blog/logstash-1-4-2">
+	  <p>The vulnerability impacts deployments that use the either the
+	    zabbix or the nagios_nsca outputs. In these cases, an attacker
+	    with an ability to send crafted events to any source of data for
+	    Logstash could execute operating system commands with the
+	    permissions of the Logstash process.</p>
+	  <p>Deployments that do not use the zabbix or the nagios_nsca outputs
+	    are not vulnerable and do not need to upgrade for this reason.</p>
+	  <p>We have added this vulnerability to our CVE page and are working
+	    on filling out the CVE.</p>
+	  <p>We would like to thank Jan Karwowski and Danila Borisiuk for
+	    reporting the issue and working with us on the resolution.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-4326</cvename>
+      <url>https://www.elastic.co/blog/logstash-1-4-2</url>
+      <url>https://www.elastic.co/community/security</url>
+    </references>
+    <dates>
+      <discovery>2014-06-24</discovery>
+      <entry>2015-06-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ad4d3871-1a0d-11e5-b43d-002590263bf5">
+    <topic>logstash-forwarder and logstash -- susceptibility to POODLE vulnerability</topic>
+    <affects>
+      <package>
+	<name>logstash-forwarder</name>
+	<range><lt>0.4.0.20150507</lt></range>
+      </package>
+      <package>
+	<name>logstash</name>
+	<range><lt>1.4.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Elastic reports:</p>
+	<blockquote cite="https://www.elastic.co/blog/logstash-1-4-3-released">
+	  <p>The combination of Logstash Forwarder and Lumberjack input (and
+	    output) was vulnerable to the POODLE attack in SSLv3 protocol. We
+	    have disabled SSLv3 for this combination and set the minimum version
+	    to be TLSv1.0. We have added this vulnerability to our CVE page and
+	    are working on filling out the CVE.</p>
+	  <p>Thanks to Tray Torrance, Marc Chadwick, and David Arena for
+	    reporting this.</p>
+	</blockquote>
+	<blockquote cite="https://www.elastic.co/blog/logstash-forwarder-0-4-0-released">
+	  <p>SSLv3 is no longer supported; TLS 1.0+ is required (compatible
+	    with Logstash 1.4.2+).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <!-- POODLE CVE pending -->
+      <freebsdpr>ports/201065</freebsdpr>
+      <freebsdpr>ports/201065</freebsdpr>
+      <url>https://www.elastic.co/blog/logstash-1-4-3-released</url>
+      <url>https://www.elastic.co/blog/logstash-forwarder-0-4-0-released</url>
+    </references>
+    <dates>
+      <discovery>2015-06-09</discovery>
+      <entry>2015-06-24</entry>
+      <modified>2015-06-24</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="d02f6b01-1a3f-11e5-8bd6-c485083ca99c">
+    <topic>Adobe Flash Player -- critical vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>linux-c6-flashplugin11</name>
+	<range><lt>11.2r202.466</lt></range>
+      </package>
+      <package>
+	<name>linux-f10-flashplugin11</name>
+	<range><lt>11.2r202.466</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Adobe reports:</p>
+	<blockquote cite="https://helpx.adobe.com/security/products/flash-player/apsb15-14.html">
+	  <p>
+	    Adobe has released security updates for Adobe Flash Player for
+	    Windows, Macintosh and Linux. These updates address a critical
+	    vulnerability (CVE-2015-3113) that could potentially allow an
+	    attacker to take control of the affected system.
+	  </p>
+	  <p>
+	    Adobe is aware of reports that CVE-2015-3113 is being actively
+	    exploited in the wild via limited, targeted attacks. Systems running
+	    Internet Explorer for Windows 7 and below, as well as Firefox on
+	    Windows XP, are known targets.
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://helpx.adobe.com/security/products/flash-player/apsb15-14.html</url>
+      <cvename>CVE-2015-3113</cvename>
+    </references>
+    <dates>
+      <discovery>2015-06-23</discovery>
+      <entry>2015-06-24</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="f5225b23-192d-11e5-a1cf-002590263bf5">
+    <topic>rubygem-bson -- DoS and possible injection</topic>
+    <affects>
+      <package>
+	<name>rubygem-bson</name>
+	<range><lt>3.0.4</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Phill MV reports:</p>
+	<blockquote cite="http://www.openwall.com/lists/oss-security/2015/06/06/1">
+	  <p>By submitting a specially crafted string to a service relying on
+	    the bson rubygem, an attacker may trigger denials of service or even
+	    inject data into victim's MongoDB instances.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4412</cvename>
+      <mlist>http://www.openwall.com/lists/oss-security/2015/06/06/1</mlist>
+      <url>http://sakurity.com/blog/2015/06/04/mongo_ruby_regexp.html</url>
+      <url>https://github.com/mongodb/bson-ruby/commit/976da329ff03ecdfca3030eb6efe3c85e6db9999</url>
+    </references>
+    <dates>
+      <discovery>2015-06-04</discovery>
+      <entry>2015-06-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="cdff0af2-1492-11e5-a1cf-002590263bf5">
+    <topic>php5 -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>php5-dom</name>
+	<name>php5-ftp</name>
+	<name>php5-gd</name>
+	<name>php5-pgsql</name>
+	<range><lt>5.4.42</lt></range>
+      </package>
+      <package>
+	<name>php55-dom</name>
+	<name>php55-ftp</name>
+	<name>php55-gd</name>
+	<name>php55-pgsql</name>
+	<range><lt>5.5.26</lt></range>
+      </package>
+      <package>
+	<name>php56-dom</name>
+	<name>php56-ftp</name>
+	<name>php56-gd</name>
+	<name>php56-psql</name>
+	<range><lt>5.6.10</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The PHP project reports:</p>
+	<blockquote cite="http://www.php.net/ChangeLog-5.php">
+	  <p>DOM and GD:</p>
+	  <ul>
+	    <li>Fixed bug #69719 (Incorrect handling of paths with NULs).</li>
+	  </ul>
+	  <p>FTP:</p>
+	  <ul>
+	    <li>Improved fix for bug #69545 (Integer overflow in ftp_genlist()
+	       resulting in heap overflow). (CVE-2015-4643)</li>
+	  </ul>
+	  <p>Postgres:</p>
+	  <ul>
+	    <li>Fixed bug #69667 (segfault in php_pgsql_meta_data).
+	      (CVE-2015-4644)</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4643</cvename>
+      <cvename>CVE-2015-4644</cvename>
+      <url>http://www.php.net/ChangeLog-5.php#5.4.42</url>
+      <url>http://www.php.net/ChangeLog-5.php#5.5.26</url>
+      <url>http://www.php.net/ChangeLog-5.php#5.6.10</url>
+      <mlist>http://openwall.com/lists/oss-security/2015/06/18/3</mlist>
+    </references>
+    <dates>
+      <discovery>2015-06-11</discovery>
+      <entry>2015-06-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a4460ac7-192c-11e5-9c01-bcaec55be5e5">
+    <topic>devel/ipython -- remote execution</topic>
+    <affects>
+      <package>
+	<name>ipython</name>
+	<range><lt>3.2.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Kyle Kelley reports:</p>
+	<blockquote cite="http://seclists.org/oss-sec/2015/q2/779">
+	  <p>Summary: JSON error responses from the IPython notebook REST API
+	  contained URL parameters and were incorrectly reported as text/html
+	  instead of application/json. The error messages included some of these
+	  URL params, resulting in a cross site scripting attack. This affects
+	  users on Mozilla Firefox but not Chromium/Google Chrome.</p>
+	  <p>API paths with issues:</p>
+	  <ul>
+	    <li>/api/contents (3.0-3.1)</li>
+	    <li>/api/notebooks (2.0-2.4, 3.0-3.1)</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4706</cvename>
+      <cvename>CVE-2015-4707</cvename>
+      <url>http://seclists.org/oss-sec/2015/q2/779</url>
+    </references>
+    <dates>
+      <discovery>2015-06-22</discovery>
+      <entry>2015-06-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d46ed7b8-1912-11e5-9fdf-00262d5ed8ee">
+    <topic>www/chromium -- mulitple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>43.0.2357.130</lt></range>
+      </package>
+      <package>
+	<!-- pcbsd -->
+	<name>chromium-npapi</name>
+	<range><lt>43.0.2357.130</lt></range>
+      </package>
+      <package>
+	<!-- pcbsd -->
+	<name>chromium-pulse</name>
+	<range><lt>43.0.2357.130</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Google Chrome Releases reports:</p>
+	<blockquote cite="http://googlechromereleases.blogspot.nl/2015/06/chrome-stable-update.html">
+	  <p>4 security fixes in this release:</p>
+	  <ul>
+	    <li>[464922] High CVE-2015-1266: Scheme validation error in WebUI.
+	      Credit to anonymous.</li>
+	    <li>[494640] High CVE-2015-1268: Cross-origin bypass in Blink.
+	      Credit to Mariusz Mlynski.</li>
+	    <li>[497507] Medium CVE-2015-1267: Cross-origin bypass in Blink.
+	      Credit to anonymous.</li>
+	    <li>[461481] Medium CVE-2015-1269: Normalization error in HSTS/HPKP
+	      preload list. Credit to Mike Ruddy.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-1266</cvename>
+      <cvename>CVE-2015-1267</cvename>
+      <cvename>CVE-2015-1268</cvename>
+      <cvename>CVE-2015-1269</cvename>
+      <url>http://googlechromereleases.blogspot.nl/2015/06/chrome-stable-update.html</url>
+    </references>
+    <dates>
+      <discovery>2015-06-22</discovery>
+      <entry>2015-06-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0f154810-16e4-11e5-a1cf-002590263bf5">
+    <topic>rubygem-paperclip -- validation bypass vulnerabilitiy</topic>
+    <affects>
+      <package>
+	<name>rubygem-paperclip</name>
+	<range><lt>4.2.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Jon Yurek reports:</p>
+	<blockquote cite="https://github.com/thoughtbot/paperclip/commit/9aee4112f36058cd28d5fe4a006d6981bd1eda57">
+	  <p>Thanks to MORI Shingo of DeNA Co., Ltd. for reporting this.</p>
+	  <p>There is an issue where if an HTML file is uploaded with a .html
+	    extension, but the content type is listed as being `image/jpeg`,
+	    this will bypass a validation checking for images. But it will also
+	    pass the spoof check, because a file named .html and containing
+	    actual HTML passes the spoof check.</p>
+	  <p>This change makes it so that we also check the supplied content
+	    type. So even if the file contains HTML and ends with .html, it
+	    doesn't match the content type of `image/jpeg` and so it fails.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-2963</cvename>
+      <url>https://github.com/thoughtbot/paperclip/commit/9aee4112f36058cd28d5fe4a006d6981bd1eda57</url>
+      <url>https://robots.thoughtbot.com/paperclip-security-release</url>
+      <url>http://jvn.jp/en/jp/JVN83881261/index.html</url>
+    </references>
+    <dates>
+      <discovery>2015-06-05</discovery>
+      <entry>2015-06-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0da404ad-1891-11e5-a1cf-002590263bf5">
+    <topic>chicken -- Potential buffer overrun in string-translate*</topic>
+    <affects>
+      <package>
+	<name>chicken</name>
+	<range><lt>4.10.0,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>chicken developer Peter Bex reports:</p>
+	<blockquote cite="http://lists.nongnu.org/archive/html/chicken-announce/2015-06/msg00010.html">
+	  <p>Using gcc's Address Sanitizer, it was discovered that the string-translate*
+	    procedure from the data-structures unit can scan beyond the input string's
+	    length up to the length of the source strings in the map that's passed to
+	    string-translate*.	This issue was fixed in master 8a46020, and it will
+	    make its way into CHICKEN 4.10.</p>
+	  <p>This bug is present in all released versions of CHICKEN.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4556</cvename>
+      <freebsdpr>ports/200980</freebsdpr>
+      <mlist>http://lists.nongnu.org/archive/html/chicken-announce/2015-06/msg00010.html</mlist>
+      <mlist>http://lists.nongnu.org/archive/html/chicken-hackers/2015-06/msg00037.html</mlist>
+    </references>
+    <dates>
+      <discovery>2015-06-15</discovery>
+      <entry>2015-06-22</entry>
+      <modified>2015-06-23</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="e7b7f2b5-177a-11e5-ad33-f8d111029e6a">
+    <topic>chicken -- buffer overrun in substring-index[-ci]</topic>
+    <affects>
+      <package>
+	<name>chicken</name>
+	<range><lt>4.10.0.r1,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>chicken developer Moritz Heidkamp reports:</p>
+	<blockquote cite="http://lists.gnu.org/archive/html/chicken-users/2015-01/msg00048.html">
+	  <p>The substring-index[-ci] procedures of the data-structures unit are
+	    vulnerable to a buffer overrun attack when passed an integer greater
+	    than zero as the optional START argument.</p>
+	  <p>As a work-around you can switch to SRFI 13's
+	    string-contains procedure which also returns the substring's index in
+	    case it is found.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-9651</cvename>
+      <mlist>http://lists.gnu.org/archive/html/chicken-users/2015-01/msg00048.html</mlist>
+      <mlist>http://lists.nongnu.org/archive/html/chicken-hackers/2014-12/txt2UqAS9CtvH.txt</mlist>
+    </references>
+    <dates>
+      <discovery>2015-01-12</discovery>
+      <entry>2015-06-22</entry>
+      <modified>2015-06-23</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="a3929112-181b-11e5-a1cf-002590263bf5">
+    <topic>cacti -- Multiple XSS and SQL injection vulerabilities</topic>
+    <affects>
+      <package>
+	<name>cacti</name>
+	<range><lt>0.8.8d</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Cacti Group, Inc. reports:</p>
+	<blockquote cite="http://www.cacti.net/release_notes_0_8_8d.php">
+	  <p>Important Security Fixes</p>
+	  <ul>
+	    <li>Multiple XSS and SQL injection vulerabilities</li>
+	  </ul>
+	  <p>Changelog</p>
+	  <ul>
+	    <li>bug: Fixed SQL injection VN: JVN#78187936 /
+	       TN:JPCERT#98968540</li>
+	    <li>bug#0002542: [FG-VD-15-017] Cacti Cross-Site Scripting
+	       Vulnerability Notification</li>
+	    <li>bug#0002571: SQL Injection and Location header injection from
+	       cdef id CVE-2015-4342</li>
+	    <li>bug#0002572: SQL injection in graph template</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4342</cvename>
+      <freebsdpr>ports/200963</freebsdpr>
+      <url>http://www.cacti.net/release_notes_0_8_8d.php</url>
+      <mlist>http://seclists.org/fulldisclosure/2015/Jun/19</mlist>
+    </references>
+    <dates>
+      <discovery>2015-06-09</discovery>
+      <entry>2015-06-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a0e74731-181b-11e5-a1cf-002590263bf5">
+    <topic>cacti -- multiple security vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>cacti</name>
+	<range><lt>0.8.8c</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Cacti Group, Inc. reports:</p>
+	<blockquote cite="http://www.cacti.net/release_notes_0_8_8c.php">
+	  <p>Important Security Fixes</p>
+	  <ul>
+	    <li>CVE-2013-5588 - XSS issue via installer or device editing</li>
+	    <li>CVE-2013-5589 - SQL injection vulnerability in device editing</li>
+	    <li>CVE-2014-2326 - XSS issue via CDEF editing</li>
+	    <li>CVE-2014-2327 - Cross-site request forgery (CSRF) vulnerability</li>
+	    <li>CVE-2014-2328 - Remote Command Execution Vulnerability in graph export</li>
+	    <li>CVE-2014-4002 - XSS issues in multiple files</li>
+	    <li>CVE-2014-5025 - XSS issue via data source editing</li>
+	    <li>CVE-2014-5026 - XSS issues in multiple files</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2013-5588</cvename>
+      <cvename>CVE-2013-5589</cvename>
+      <cvename>CVE-2014-2326</cvename>
+      <cvename>CVE-2014-2327</cvename>
+      <cvename>CVE-2014-2328</cvename>
+      <cvename>CVE-2014-4002</cvename>
+      <cvename>CVE-2014-5025</cvename>
+      <cvename>CVE-2014-5026</cvename>
+      <freebsdpr>ports/198586</freebsdpr>
+      <mlist>http://sourceforge.net/p/cacti/mailman/message/33072838/</mlist>
+      <url>http://www.cacti.net/release_notes_0_8_8c.php</url>
+    </references>
+    <dates>
+      <discovery>2014-11-23</discovery>
+      <entry>2015-06-21</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="968d1e74-1740-11e5-a643-40a8f0757fb4">
+    <topic>p5-Dancer -- possible to abuse session cookie values</topic>
+    <affects>
+      <package>
+	<name>p5-Dancer</name>
+	<range><lt>1.3138</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Russell Jenkins reports:</p>
+	<blockquote cite="INSERT URL HERE">
+	  <p>It was possible to abuse session cookie values so that
+	    file-based session stores such as Dancer::Session::YAML or
+	    Dancer2::Session::YAML would attempt to read/write from
+	    any file on the filesystem with the same extension the
+	    file-based store uses, such as '*.yml' for the YAML
+	    stores.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://lists.preshweb.co.uk/pipermail/dancer-users/2015-June/004621.html</url>
+    </references>
+    <dates>
+      <discovery>2015-06-12</discovery>
+      <entry>2015-06-20</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="d605edb1-1616-11e5-a000-d050996490d0">
+    <topic>drupal -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>drupal6</name>
+	<range><lt>6.36</lt></range>
+      </package>
+      <package>
+	<name>drupal7</name>
+	<range><lt>7.38</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Drupal development team reports:</p>
+	<blockquote cite="https://www.drupal.org/SA-CORE-2015-002">
+	  <h3>Impersonation (OpenID module - Drupal 6 and 7 - Critical)</h3>
+	  <p>A vulnerability was found in the OpenID module that allows
+	    a malicious user to log in as other users on the site,
+	    including administrators, and hijack their accounts.</p>
+	  <p>This vulnerability is mitigated by the fact that the victim
+	    must have an account with an associated OpenID identity from
+	    a particular set of OpenID providers (including, but not
+	    limited to, Verisign, LiveJournal, or StackExchange).</p>
+	  <h3>Open redirect (Field UI module - Drupal 7 - Less critical)</h3>
+	  <p>The Field UI module uses a "destinations" query string parameter
+	    in URLs to redirect users to new destinations after completing
+	    an action on a few administration pages. Under certain
+	    circumstances, malicious users can use this parameter to
+	    construct a URL that will trick users into being redirected
+	    to a 3rd party website, thereby exposing the users to potential
+	    social engineering attacks.</p>
+	  <p>This vulnerability is mitigated by the fact that only sites
+	    with the Field UI module enabled are affected.</p>
+	  <p>Drupal 6 core is not affected, but see the similar advisory
+	    for the Drupal 6 contributed CCK module:
+	    <a href="https://www.drupal.org/node/2507753">SA-CONTRIB-2015-126</a></p>
+	  <h3>Open redirect (Overlay module - Drupal 7 - Less critical)</h3>
+	  <p>The Overlay module displays administrative pages as a layer
+	    over the current page (using JavaScript), rather than replacing
+	    the page in the browser window. The Overlay module does not
+	    sufficiently validate URLs prior to displaying their contents,
+	    leading to an open redirect vulnerability.</p>
+	  <p>This vulnerability is mitigated by the fact that it can only
+	    be used against site users who have the "Access the administrative
+	    overlay" permission, and that the Overlay module must be enabled.</p>
+	  <h3>Information disclosure (Render cache system - Drupal 7
+	    - Less critical)</h3>
+	  <p>On sites utilizing Drupal 7's render cache system to cache
+	    content on the site by user role, private content viewed by
+	    user 1 may be included in the cache and exposed to non-privileged
+	    users.</p>
+	  <p>This vulnerability is mitigated by the fact that render caching
+	    is not used in Drupal 7 core itself (it requires custom code or
+	    the contributed <a href="https://www.drupal.org/project/render_cache">Render
+	      Cache</a> module to enable) and that it only affects sites that
+	    have user 1 browsing the live site. Exposure is also limited if an
+	    administrative role has been assigned to the user 1 account (which
+	    is done, for example, by the Standard install profile that ships
+	    with Drupal core).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-3231</cvename>
+      <cvename>CVE-2015-3232</cvename>
+      <cvename>CVE-2015-3233</cvename>
+      <cvename>CVE-2015-3234</cvename>
+      <url>https://www.drupal.org/SA-CORE-2015-002</url>
+    </references>
+    <dates>
+      <discovery>2015-06-17</discovery>
+      <entry>2015-06-19</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="2438d4af-1538-11e5-a106-3c970e169bc2">
+    <topic>cURL -- Multiple Vulnerability</topic>
+    <affects>
+      <package>
+	<name>curl</name>
+	<range><ge>7.40</ge><lt>7.43</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>cURL reports:</p>
+	<blockquote cite="http://curl.haxx.se/docs/adv_20150617A.html">
+	  <p>libcurl can wrongly send HTTP credentials when re-using
+	    connections.</p>
+	  <p>libcurl allows applications to set credentials for the
+	    upcoming transfer with HTTP Basic authentication, like
+	    with CURLOPT_USERPWD for example. Name and password.
+	    Just like all other libcurl options the credentials
+	    are sticky and are kept associated with the "handle"
+	    until something is made to change the situation.</p>
+	  <p>Further, libcurl offers a curl_easy_reset() function
+	    that resets a handle back to its pristine state in
+	    terms of all settable options. A reset is of course
+	    also supposed to clear the credentials. A reset is
+	    typically used to clear up the handle and prepare
+	    it for a new, possibly unrelated, transfer.</p>
+	  <p>Within such a handle, libcurl can also store a
+	    set of previous connections in case a second transfer
+	    is requested to a host name for which an existing
+	    connection is already kept alive.</p>
+	  <p>With this flaw present, using the handle even
+	    after a reset would make libcurl accidentally use
+	    those credentials in a subseqent request if done
+	    to the same host name and connection as was
+	    previously accessed.</p>
+	  <p>An example case would be first requesting a password
+	    protected resource from one section of a web site, and
+	    then do a second request of a public resource from a
+	    completely different part of the site without
+	    authentication. This flaw would then inadvertently
+	    leak the credentials in the second request.</p>
+	</blockquote>
+	<blockquote cite="http://curl.haxx.se/docs/adv_20150617B.html">
+	  <p>libcurl can get tricked by a malicious SMB server to
+	    send off data it did not intend to.</p>
+	  <p>In libcurl's state machine function handling the SMB
+	    protocol (smb_request_state()), two length and offset
+	    values are extracted from data that has arrived over
+	    the network, and those values are subsequently used
+	    to figure out what data range to send back.</p>
+	  <p>The values are used and trusted without boundary
+	    checks and are just assumed to be valid. This allows
+	    carefully handicrafted packages to trick libcurl
+	    into responding and sending off data that was not
+	    intended. Or just crash if the values cause libcurl
+	    to access invalid memory.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-3236</cvename>
+      <cvename>CVE-2015-3237</cvename>
+      <url>http://curl.haxx.se/docs/adv_20150617A.html</url>
+      <url>http://curl.haxx.se/docs/adv_20150617B.html</url>
+    </references>
+    <dates>
+      <discovery>2015-06-17</discovery>
+      <entry>2015-06-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="eb8a8978-8dd5-49ce-87f4-49667b2166dd">
+    <topic>rubygem-rails -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>rubygem-activesupport</name>
+	<range><lt>3.2.22</lt></range>
+      </package>
+      <package>
+	<name>rubygem-activesupport4</name>
+	<range><lt>4.2.2</lt></range>
+      </package>
+      <package>
+	<name>rubygem-jquery-rails</name>
+	<range><lt>3.1.3</lt></range>
+      </package>
+      <package>
+	<name>rubygem-jquery-rails4</name>
+	<range><lt>4.0.4</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack</name>
+	<range><lt>1.4.6</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack15</name>
+	<range><lt>1.5.4</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rack16</name>
+	<range><lt>1.6.2</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rails</name>
+	<range><lt>3.2.22</lt></range>
+      </package>
+      <package>
+	<name>rubygem-rails4</name>
+	<range><lt>4.2.2</lt></range>
+      </package>
+      <package>
+	<name>rubygem-web-console</name>
+	<range><lt>2.1.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Ruby on Rails blog:</p>
+	<blockquote cite="http://weblog.rubyonrails.org/2015/6/16/Rails-3-2-22-4-1-11-and-4-2-2-have-been-released-and-more/">
+	  <p>Rails 3.2.22, 4.1.11 and 4.2.2 have been released, along with web
+	    console and jquery-rails plugins and Rack 1.5.4 and 1.6.2.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-1840</cvename>
+      <cvename>CVE-2015-3224</cvename>
+      <cvename>CVE-2015-3225</cvename>
+      <cvename>CVE-2015-3226</cvename>
+      <cvename>CVE-2015-3227</cvename>
+      <url>http://weblog.rubyonrails.org/2015/6/16/Rails-3-2-22-4-1-11-and-4-2-2-have-been-released-and-more/</url>
+    </references>
+    <dates>
+      <discovery>2015-06-16</discovery>
+      <entry>2015-06-17</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c67069dc-0986-11e5-bb90-002590263bf5">
+    <topic>testdisk -- buffer overflow with malicious disk image</topic>
+    <affects>
+      <package>
+	<name>testdisk</name>
+	<range><lt>7.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>CGSecurity TestDisk Changelog reports:</p>
+	<blockquote cite="http://www.cgsecurity.org/wiki/TestDisk_7.0_Release">
+	  <p>Various fix including security fix, thanks to:</p>
+	  <ul>
+	    <li><p>Coverity scan (Static Analysis of source code)</p></li>
+	    <li><p>afl-fuzz (security-oriented fuzzer).</p></li>
+	    <li><p>Denis Andzakovic from Security Assessment for reporting an
+	       exploitable Stack Buffer Overflow.</p></li>
+	  </ul>
+	</blockquote>
+	<p>Denis Andzakovic reports:</p>
+	<blockquote cite="http://www.security-assessment.com/files/documents/advisory/Testdisk%20Check_OS2MB%20Stack%20Buffer%20Overflow%20-%20Release.pdf">
+	  <p>A buffer overflow is triggered within the software when a malicious
+	    disk image is attempted to be recovered. This may be leveraged by an
+	    attacker to crash TestDisk and gain control of program execution. An
+	    attacker would have to coerce the victim to run TestDisk against
+	    their malicious image.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://www.cgsecurity.org/wiki/TestDisk_7.0_Release</url>
+      <url>http://www.security-assessment.com/files/documents/advisory/Testdisk%20Check_OS2MB%20Stack%20Buffer%20Overflow%20-%20Release.pdf</url>
+    </references>
+    <dates>
+      <discovery>2015-04-30</discovery>
+      <entry>2015-06-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="25e0593d-13c0-11e5-9afb-3c970e169bc2">
+    <topic>tomcat -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>tomcat6</name>
+	<range><lt>6.0.44</lt></range>
+      </package>
+      <package>
+	<name>tomcat7</name>
+	<range><lt>7.0.55</lt></range>
+      </package>
+      <package>
+	<name>tomcat8</name>
+	<range><lt>8.0.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Apache Software Foundation reports:</p>
+	<blockquote cite="https://tomcat.apache.org/security-6.html#Fixed_in_Apache_Tomcat_6.0.44">
+	  <p>Low: Denial of Service CVE-2014-0230</p>
+	  <p>When a response for a request with a request body is
+	    returned to the user agent before the request body is
+	    fully read, by default Tomcat swallows the remaining
+	    request body so that the next request on the connection
+	    may be processed. There was no limit to the size of
+	    request body that Tomcat would swallow. This permitted
+	    a limited Denial of Service as Tomcat would never close
+	    the connection and a processing thread would remain
+	    allocated to the connection.</p>
+	  <p>Moderate: Security Manager bypass CVE-2014-7810</p>
+	  <p>Malicious web applications could use expression
+	    language to bypass the protections of a Security
+	    Manager as expressions were evaluated within a
+	    privileged code section.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-0230</cvename>
+      <cvename>CVE-2014-7810</cvename>
+      <url>https://tomcat.apache.org/security-6.html#Fixed_in_Apache_Tomcat_6.0.44</url>
+    </references>
+    <dates>
+      <discovery>2015-05-12</discovery>
+      <entry>2015-06-16</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c470db07-1098-11e5-b6a8-002590263bf5">
+    <topic>security/ossec-hids-* -- root escalation via syscheck feature</topic>
+    <affects>
+      <package>
+	<name>ossec-hids-server</name>
+	<name>ossec-hids-client</name>
+	<name>ossec-hids-local</name>
+	<range><ge>2.7</ge><lt>2.8.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>OSSEC reports:</p>
+	<blockquote cite="http://www.ossec.net/?p=1198">
+	  <p>The CVE-2015-3222 vulnerability, which allows for root escalation
+	    via sys check has been fixed in OSSEC 2.8.2.  This issue does not
+	    affect agents.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-3222</cvename>
+      <freebsdpr>ports/200801</freebsdpr>
+      <url>http://www.ossec.net/?p=1198</url>
+      <url>https://github.com/ossec/ossec-hids/releases/tag/2.8.2</url>
+    </references>
+    <dates>
+      <discovery>2015-06-11</discovery>
+      <entry>2015-06-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8305e215-1080-11e5-8ba2-000c2980a9f3">
+    <topic>openssl -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>openssl</name>
+	<range><lt>1.0.2_2</lt></range>
+      </package>
+      <package>
+	<name>mingw32-openssl</name>
+	<range><ge>1.0.1</ge><lt>1.0.2b</lt></range>
+      </package>
+      <package>
+	<name>linux-c6-openssl</name>
+	<range><lt>1.0.2b</lt></range>
+      </package>
+      <package>
+	<name>libressl</name>
+	<range><lt>2.1.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL team reports:</p>
+	<blockquote cite="https://www.openssl.org/news/secadv_20150611.txt">
+	  <ul>
+	    <li>Missing DHE man-in-the-middle protection (Logjam)
+	      (CVE-2015-4000)</li>
+	    <li>Malformed ECParameters causes infinite loop (CVE-2015-1788)</li>
+	    <li>Exploitable out-of-bounds read in X509_cmp_time
+	      (CVE-2015-1789)</li>
+	    <li>iPKCS7 crash with missing EnvelopedContent (CVE-2015-1790)</li>
+	    <li>CMS verify infinite loop with unknown hash function
+	      (CVE-2015-1792)</li>
+	    <li>Race condition handling NewSessionTicket (CVE-2015-1791)</li>
+	    <li>Invalid free in DTLS (CVE-2014-8176)</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-8176</cvename>
+      <cvename>CVE-2015-1788</cvename>
+      <cvename>CVE-2015-1789</cvename>
+      <cvename>CVE-2015-1790</cvename>
+      <cvename>CVE-2015-1791</cvename>
+      <cvename>CVE-2015-1792</cvename>
+      <url>https://www.openssl.org/news/secadv_20150611.txt</url>
+    </references>
+    <dates>
+      <discovery>2015-06-11</discovery>
+      <entry>2015-06-11</entry>
+      <modified>2015-06-11</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="1e63db88-1050-11e5-a4df-c485083ca99c">
+    <topic>Adobe Flash Player -- critical vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>linux-c6-flashplugin11</name>
+	<range><lt>11.2r202.466</lt></range>
+      </package>
+      <package>
+	<name>linux-f10-flashplugin11</name>
+	<range><lt>11.2r202.466</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Adobe reports:</p>
+	<blockquote cite="https://helpx.adobe.com/security/products/flash-player/apsb15-11.html">
+	  <p>
+	    Adobe has released security updates for Adobe Flash Player for
+	    Windows, Macintosh and Linux.  These updates address vulnerabilities
+	    that could potentially allow an attacker to take control of the
+	    affected system.
+	  </p>
+	  <p>
+	    These updates resolve a vulnerability (CVE-2015-3096) that could be
+	    exploited to bypass the fix for CVE-2014-5333.
+	  </p>
+	  <p>
+	    These updates improve memory address randomization of the Flash heap
+	    for the Window 7 64-bit platform (CVE-2015-3097).
+	  </p>
+	  <p>
+	    These updates resolve vulnerabilities that could be exploited to
+	    bypass the same-origin-policy and lead to information disclosure
+	    (CVE-2015-3098, CVE-2015-3099, CVE-2015-3102).
+	  </p>
+	  <p>
+	    These updates resolve a stack overflow vulnerability that could lead
+	    to code execution (CVE-2015-3100).
+	  </p>
+	  <p>
+	    These updates resolve a permission issue in the Flash broker for
+	    Internet Explorer that could be exploited to perform privilege
+	    escalation from low to medium integrity level (CVE-2015-3101).
+	  </p>
+	  <p>
+	    These updates resolve an integer overflow vulnerability that could
+	    lead to code execution (CVE-2015-3104).
+	  </p>
+	  <p>
+	    These updates resolve a memory corruption vulnerability that could
+	    lead to code execution (CVE-2015-3105).
+	  </p>
+	  <p>
+	    These updates resolve use-after-free vulnerabilities that could lead
+	    to code execution (CVE-2015-3103, CVE-2015-3106, CVE-2015-3107).
+	  </p>
+	  <p>
+	    These updates resolve a memory leak vulnerability that could be used
+	    to bypass ASLR (CVE-2015-3108).
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://helpx.adobe.com/security/products/flash-player/apsb15-11.html</url>
+      <cvename>CVE-2015-3096</cvename>
+      <cvename>CVE-2015-3097</cvename>
+      <cvename>CVE-2015-3098</cvename>
+      <cvename>CVE-2015-3099</cvename>
+      <cvename>CVE-2015-3100</cvename>
+      <cvename>CVE-2015-3101</cvename>
+      <cvename>CVE-2015-3102</cvename>
+      <cvename>CVE-2015-3103</cvename>
+      <cvename>CVE-2015-3104</cvename>
+      <cvename>CVE-2015-3105</cvename>
+      <cvename>CVE-2015-3106</cvename>
+      <cvename>CVE-2015-3107</cvename>
+      <cvename>CVE-2015-3108</cvename>
+    </references>
+    <dates>
+      <discovery>2015-06-09</discovery>
+      <entry>2015-06-11</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="10a6d0aa-0b1c-11e5-bb90-002590263bf5">
+    <topic>libzmq4 -- V3 protocol handler vulnerable to downgrade attacks</topic>
+    <affects>
+      <package>
+	<name>libzmq4</name>
+	<range><ge>4.0.0</ge><lt>4.0.6</lt></range>
+	<range><ge>4.1.0</ge><lt>4.1.1</lt></range>
+      </package>
+    </affects>
+    <description>
+       <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Pieter Hintjens reports:</p>
+	<blockquote cite="https://github.com/zeromq/libzmq/issues/1273">
+	  <p>It is easy to bypass the security mechanism in 4.1.0 and 4.0.5 by
+	    sending a ZMTP v2 or earlier header. The library accepts such
+	    connections without applying its security mechanism.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2014-9721</cvename>
+      <url>https://github.com/zeromq/libzmq/issues/1273</url>
+      <mlist>http://www.openwall.com/lists/oss-security/2015/05/07/8</mlist>
+      <freebsdpr>200502</freebsdpr>
+    </references>
+    <dates>
+      <discovery>2014-12-04</discovery>
+      <entry>2015-06-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8fbd4187-0f18-11e5-b6a8-002590263bf5">
+    <topic>pgbouncer -- remote denial of service</topic>
+    <affects>
+      <package>
+	<name>pgbouncer</name>
+	<range><lt>1.5.5</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>PgBouncer reports:</p>
+	<blockquote cite="https://pgbouncer.github.io/2015/04/pgbouncer-1-5-5/">
+	  <p>Fix remote crash - invalid packet order causes lookup of NULL pointer. Not
+	    exploitable, just DoS.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4054</cvename>
+      <url>https://pgbouncer.github.io/2015/04/pgbouncer-1-5-5/</url>
+      <mlist>http://www.openwall.com/lists/oss-security/2015/05/21/2</mlist>
+      <freebsdpr>200507</freebsdpr>
+    </references>
+    <dates>
+      <discovery>2015-04-08</discovery>
+      <entry>2015-06-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="a40ec970-0efa-11e5-90e4-d050996490d0">
+    <topic>cups -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>cups-base</name>
+	<range><lt>2.0.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>CUPS development team reports:</p>
+	<blockquote cite="https://cups.org/blog.php?L1082">
+	  <p>The new release addresses two security vulnerabilities,
+	    add localizations for German and Russian, and includes
+	    several general bug fixes. Changes include:</p>
+	  <p>Security: Fixed CERT VU #810572/CVE-2015-1158/CVE-2015-1159
+	    exploiting the dynamic linker (STR #4609)</p>
+	  <p>Security: The scheduler could hang with malformed
+	    gzip data (STR #4602)</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-1158</cvename>
+      <cvename>CVE-2015-1159</cvename>
+      <url>https://cups.org/blog.php?L1082</url>
+      <url>https://www.kb.cert.org/vuls/id/810572</url>
+    </references>
+    <dates>
+      <discovery>2015-06-09</discovery>
+      <entry>2015-06-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="55363e65-0e71-11e5-8027-00167671dd1d">
+    <topic>strongswan -- Denial-of-service and potential remote code execution vulnerability</topic>
+    <affects>
+      <package>
+	<name>strongswan</name>
+	<range><ge>5.2.2</ge><lt>5.3.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>trongSwan Project reports</p>
+	<blockquote cite="https://www.strongswan.org/blog/2015/06/01/strongswan-vulnerability-(cve-2015-3991).html">
+	  <p>A denial-of-service and potential remote code execution vulnerability
+	    triggered by crafted IKE messages was discovered in strongSwan. Versions
+	    5.2.2 and 5.3.0 are affected.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-3991</cvename>
+      <url>https://www.strongswan.org/blog/2015/06/01/strongswan-vulnerability-(cve-2015-3991).html</url>
+    </references>
+    <dates>
+      <discovery>2015-05-15</discovery>
+      <entry>2015-06-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="10d14955-0e45-11e5-b6a8-002590263bf5">
+    <topic>strongswan -- Information Leak Vulnerability</topic>
+    <affects>
+      <package>
+	<name>strongswan</name>
+	<range><ge>4.3.0</ge><lt>5.3.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>strongSwan Project reports:</p>
+	<blockquote cite="http://www.strongswan.org/blog/2015/06/08/strongswan-5.3.2-released.html">
+	  <p>An information leak vulnerability was fixed that, in certain IKEv2
+	    setups, allowed rogue servers with a valid certificate accepted by
+	    the client to trick it into disclosing user credentials (even plain
+	    passwords if the client accepts EAP-GTC). This was caused because
+	    constraints against the server's authentication were enforced too
+	    late. All versions since 4.3.0 are affected.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4171</cvename>
+      <url>http://www.strongswan.org/blog/2015/06/08/strongswan-5.3.2-released.html</url>
+    </references>
+    <dates>
+      <discovery>2015-06-08</discovery>
+      <entry>2015-06-09</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="838fa84a-0e25-11e5-90e4-d050996490d0">
+    <topic>redis -- EVAL Lua Sandbox Escape</topic>
+    <affects>
+      <package>
+	<name>redis</name>
+	<name>redis-devel</name>
+	<range><ge>2.6.0</ge><lt>2.8.21</lt></range>
+	<range><ge>3.0</ge><lt>3.0.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Ben Murphy reports:</p>
+	<blockquote cite="http://benmmurphy.github.io/blog/2015/06/04/redis-eval-lua-sandbox-escape/">
+	  <p>It is possible to break out of the Lua sandbox in
+	    Redis and execute arbitrary code.</p>
+	  <p>This shouldn’t pose a threat to users under the
+	    trusted Redis security model where only trusted
+	    users can connect to the database. However, in real
+	    deployments there could be databases that can be
+	    accessed by untrusted users. The main deployments
+	    that are vulnerable are developers machines, places
+	    where redis servers can be reached via SSRF attacks
+	    and cloud hosting.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4335</cvename>
+      <url>http://benmmurphy.github.io/blog/2015/06/04/redis-eval-lua-sandbox-escape/</url>
+    </references>
+    <dates>
+      <discovery>2015-06-04</discovery>
+      <entry>2015-06-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bd1ab7a5-0e01-11e5-9976-a0f3c100ae18">
+    <topic>tidy -- heap-buffer-overflow</topic>
+    <affects>
+      <package>
+	<name>tidy4</name>
+	<range><le>20000804_3</le></range>
+      </package>
+      <package>
+	<name>tidy-devel</name>
+	<range><le>090315.c_2</le></range>
+      </package>
+      <package>
+	<name>tidy-lib</name>
+	<range><le>090315.c_2</le></range>
+      </package>
+      <package>
+	<name>tidy-html5</name>
+	<range><lt>4.9.31</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Geoff McLane reports:</p>
+	<blockquote cite="http://seclists.org/oss-sec/2015/q2/633">
+	  <p>tidy is affected by a write out of bounds when processing malformed html files.</p>
+	  <p>This issue could be abused on server side applications that use php-tidy extension with user input.</p>
+	  <p>The issue was confirmed, analysed and fixed by the tidy5 maintainer.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/htacg/tidy-html5/issues/217</url>
+      <url>http://seclists.org/oss-sec/2015/q2/633</url>
+    </references>
+    <dates>
+      <discovery>2015-06-03</discovery>
+      <entry>2015-06-08</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="e69af246-0ae2-11e5-90e4-d050996490d0">
+    <topic>pcre -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>pcre</name>
+	<range><lt>8.37_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Venustech ADLAB reports:</p>
+	<blockquote cite="https://bugs.exim.org/show_bug.cgi?id=1636">
+	  <p>PCRE library is prone to a vulnerability which leads
+	    to Heap Overflow. During the compilation of a malformed
+	    regular expression, more data is written on the malloced
+	    block than the expected size output by compile_regex.</p>
+	</blockquote>
+	<blockquote cite="https://bugs.exim.org/show_bug.cgi?id=1638">
+	  <p>PCRE library is prone to a vulnerability which leads to
+	    Stack Overflow. Without enough bound checking inside
+	    match(), the stack memory could be overflowed via a
+	    crafted regular expression.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-3210</cvename>
+      <cvename>CVE-2015-3217</cvename>
+      <url>https://bugs.exim.org/show_bug.cgi?id=1636</url>
+      <url>https://bugs.exim.org/show_bug.cgi?id=1638</url>
+    </references>
+    <dates>
+      <discovery>2015-05-29</discovery>
+      <entry>2015-06-04</entry>
+      <modified>2015-06-07</modified>
+    </dates>
+  </vuln>
+
   <vuln vid="bbc0db92-084c-11e5-bb90-002590263bf5">
     <topic>hostapd and wpa_supplicant -- multiple vulnerabilities</topic>
     <affects>
@@ -886,18 +2575,6 @@ Notes:
 	<name>pcre</name>
 	<range><lt>8.37</lt></range>
       </package>
-      <package>
-	<name>php5</name>
-	<range><lt>5.4.41</lt></range>
-      </package>
-      <package>
-	<name>php55</name>
-	<range><lt>5.5.25</lt></range>
-      </package>
-      <package>
-	<name>php56</name>
-	<range><lt>5.6.9</lt></range>
-      </package>
     </affects>
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
@@ -929,6 +2606,7 @@ Notes:
     <dates>
       <discovery>2015-04-28</discovery>
       <entry>2015-05-22</entry>
+      <modified>2015-06-07</modified>
     </dates>
   </vuln>
 
@@ -1373,11 +3051,62 @@ Notes:
   </vuln>
 
   <vuln vid="57325ecf-facc-11e4-968f-b888e347c638">
-    <topic>kodi, rawstudio, and ufraw -- integer overflow condition</topic>
+    <topic>dcraw -- integer overflow condition</topic>
     <affects>
+      <package>
+	<name>cinepaint</name>
+	<!-- no known fixed version -->
+	<range><ge>0.22.0</ge></range>
+      </package>
+      <package>
+	<name>darktable</name>
+	<range><lt>1.6.7</lt></range>
+      </package>
+      <package>
+	<name>dcraw</name>
+	<range><ge>7.00</ge><lt>9.26</lt></range>
+      </package>
+      <package>
+	<name>dcraw-m</name>
+	<!-- no known fixed version -->
+	<range><ge>0</ge></range>
+      </package>
+      <package>
+	<name>exact-image</name>
+	<!-- no known fixed version -->
+	<range><ge>0</ge></range>
+      </package>
+      <package>
+	<name>flphoto</name>
+	<!-- no known fixed version -->
+	<range><ge>0</ge></range>
+      </package>
+      <package>
+	<name>freeimage</name>
+	<!-- no known fixed version -->
+	<range><ge>3.13.0</ge></range>
+      </package>
       <package>
 	<name>kodi</name>
 	<range><lt>14.2_1</lt></range>
+      </package>
+      <package>
+	<name>libraw</name>
+	<range><lt>0.16.1</lt></range>
+      </package>
+      <package>
+	<name>lightzone</name>
+	<!-- no known fixed version -->
+	<range><ge>0</ge></range>
+      </package>
+      <package>
+	<name>netpbm</name>
+	<range><lt>10.35.96</lt></range>
+      </package>
+      <package>
+	<name>opengtl</name>
+	<!-- no known fixed version -->
+	<range><ge>0</ge></range>
       </package>
       <package>
 	<name>rawstudio</name>
@@ -1407,11 +3136,13 @@ Notes:
       <cvename>CVE-2015-3885</cvename>
       <url>http://www.ocert.org/advisories/ocert-2015-006.html</url>
       <url>https://github.com/rawstudio/rawstudio/commit/983bda1f0fa5fa86884381208274198a620f006e</url>
+      <url>https://github.com/LibRaw/LibRaw/commit/4606c28f494a750892c5c1ac7903e62dd1c6fdb5</url>
+      <url>https://sourceforge.net/p/netpbm/code/2512/</url>
     </references>
     <dates>
       <discovery>2015-04-24</discovery>
       <entry>2015-05-15</entry>
-      <modified>2015-06-01</modified>
+      <modified>2015-07-01</modified>
     </dates>
   </vuln>
 
@@ -2599,6 +4330,10 @@ Notes:
 	<name>mailman-with-htdig</name>
 	<range><lt>2.1.20</lt></range>
       </package>
+      <package>
+	<name>ja-mailman</name>
+	<range><lt>2.1.14.j7_2,1</lt></range>
+      </package>
     </affects>
     <description>
       <body xmlns="http://www.w3.org/1999/xhtml">
@@ -2620,6 +4355,7 @@ Notes:
     <dates>
       <discovery>2015-03-27</discovery>
       <entry>2015-04-09</entry>
+      <modified>2015-06-17</modified>
     </dates>
   </vuln>
 

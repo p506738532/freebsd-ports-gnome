@@ -3,7 +3,7 @@
 
 PORTNAME=	nemo-extensions
 PORTVERSION=	2.4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -32,6 +32,8 @@ LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 		libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3
 RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
+
+BROKEN_FreeBSD_9=	does not build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint

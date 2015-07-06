@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	webkit
-PORTVERSION=	2.6.5
-PORTREVISION=	1
+PORTVERSION=	2.6.6
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	2-gtk3
@@ -16,7 +15,6 @@ BUILD_DEPENDS=	geoclue>=0:${PORTSDIR}/net/geoclue
 LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
 		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
 		libfreetype.so:${PORTSDIR}/print/freetype2 \
-		libjpeg.so:${PORTSDIR}/graphics/jpeg \
 		libwebp.so:${PORTSDIR}/graphics/webp \
 		libpng.so:${PORTSDIR}/graphics/png \
 		libsecret-1.so:${PORTSDIR}/security/libsecret \
@@ -25,12 +23,12 @@ LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
 #add		libicu
 RUN_DEPENDS=	geoclue>=0:${PORTSDIR}/net/geoclue 
 
-PORTSCOUT=	limitw:1,even
+PORTSCOUT=	^${PORTVERSION:R:S|.|\.|}\.*$$
 
 USE_GSTREAMER1=	yes
 USE_XORG=	x11 xext ice
 # when it USES=cmake safe
-USES=		bison compiler:c++11-lib gettext gmake gperf perl5 \
+USES=		bison compiler:c++11-lib gettext gmake gperf jpeg perl5 \
 		pkgconfig python:2 tar:xz
 USE_RUBY=	yes
 RUBY_NO_RUN_DEPENDS=yes

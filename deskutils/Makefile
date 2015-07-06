@@ -34,7 +34,6 @@
     SUBDIR += cycle
     SUBDIR += dailystrips
     SUBDIR += deforaos-todo
-    SUBDIR += deskbar-applet
     SUBDIR += devd-notifier
     SUBDIR += displaycalibrator
     SUBDIR += dlume
@@ -58,11 +57,8 @@
     SUBDIR += gcal
     SUBDIR += gcalcli
     SUBDIR += genius
-    SUBDIR += gimmie
     SUBDIR += gkrellm-reminder2
     SUBDIR += glabels
-    SUBDIR += glipper
-    SUBDIR += gnochm
     SUBDIR += gnome-blog
     SUBDIR += gnome-clocks
     SUBDIR += gnome-contacts
@@ -113,7 +109,6 @@
     SUBDIR += gworkspace-gwmetadata
     SUBDIR += gxmessage
     SUBDIR += gxneur
-    SUBDIR += hamster-applet
     SUBDIR += hebcal
     SUBDIR += helpviewer
     SUBDIR += homerun
@@ -136,7 +131,6 @@
     SUBDIR += kdeplasma-addons
     SUBDIR += kruler
     SUBDIR += ksshaskpass
-    SUBDIR += kupfer
     SUBDIR += launchy
     SUBDIR += libgcal
     SUBDIR += libopensync-plugin-file
@@ -166,7 +160,6 @@
     SUBDIR += notecase
     SUBDIR += notification-daemon
     SUBDIR += notify-osd
-    SUBDIR += ontv
     SUBDIR += openproj
     SUBDIR += orage
     SUBDIR += osmo
@@ -198,10 +191,12 @@
     SUBDIR += plopfolio
     SUBDIR += preferences
     SUBDIR += py-khal
+    SUBDIR += py-bugwarrior
     SUBDIR += py-pycarddav
     SUBDIR += py-pystash
     SUBDIR += py-send2trash
     SUBDIR += py-spice-gtk
+    SUBDIR += py-taskw
     SUBDIR += py-vdirsyncer
     SUBDIR += py-vobject
     SUBDIR += pybookreader
@@ -241,7 +236,6 @@
     SUBDIR += teapot
     SUBDIR += tel
     SUBDIR += thinkingrock
-    SUBDIR += timer-applet
     SUBDIR += tine20
     SUBDIR += tnote
     SUBDIR += todo
@@ -285,6 +279,7 @@
     SUBDIR += xpostitPlus
     SUBDIR += xrolo
     SUBDIR += xwrits
+    SUBDIR += zim
     SUBDIR += znotes
     SUBDIR += zorro
 

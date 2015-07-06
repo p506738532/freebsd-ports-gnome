@@ -3,7 +3,7 @@
 
 PORTNAME=	qemu
 PORTVERSION=	2.3.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/:release \
 		LOCAL/nox:snapshot
@@ -15,7 +15,7 @@ MAINTAINER=	nox@FreeBSD.org
 COMMENT?=	QEMU CPU Emulator - development version
 
 HAS_CONFIGURE=	yes
-USES=		gmake pkgconfig bison perl5 python:2,build tar:bzip2
+USES=		cpe gmake pkgconfig bison perl5 python:2,build tar:bzip2
 USE_PERL5=	build
 USE_XORG=	pixman
 USE_GNOME+=	glib20
@@ -152,7 +152,7 @@ LIB_DEPENDS+=	libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
 .if empty(PORT_OPTIONS:MJPEG)
 CONFIGURE_ARGS+=	--disable-vnc-jpeg
 .else
-LIB_DEPENDS+=	libjpeg.so:${PORTSDIR}/graphics/jpeg
+USES+=		jpeg
 .endif
 
 .if empty(PORT_OPTIONS:MPNG)

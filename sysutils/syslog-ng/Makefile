@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	syslog-ng
-PORTVERSION=	3.6.2
-PORTREVISION=	4
+PORTVERSION=	3.6.4
 CATEGORIES=	sysutils
 DISTVERSION=	$(PORTVERSION:S/a/alpha/:S/b/beta/:S/r/rc/)
-DISTFILES=	syslog-ng_${DISTVERSION}.tar.gz
-MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/open-source-edition/${DISTVERSION}/source/
+DISTFILES=	syslog-ng-${DISTVERSION}.tar.gz
+MASTER_SITES=	https://github.com/balabit/${PORTNAME}/releases/download/${PORTNAME}-${DISTVERSION}/ \
+		http://www.balabit.com/downloads/files/syslog-ng/open-source-edition/${DISTVERSION}/source/ \
 
 MAINTAINER=	cy@FreeBSD.org
 COMMENT=	Powerful syslogd replacement
@@ -42,7 +42,7 @@ INSTALL_TARGET=	install-strip
 
 CONFIGURE_ARGS=	--sysconfdir=${LOCALBASE}/etc --localstatedir=/var/db \
 		--enable-dynamic-linking \
-		--enable-debug \
+		--enable-debug --enable-manpages \
 		--datadir=${PREFIX}/share/syslog-ng/
 
 BROKEN_sparc64=	Does not compile on sparc64: gcc core dump

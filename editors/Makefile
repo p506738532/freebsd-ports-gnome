@@ -224,7 +224,6 @@
     SUBDIR += py-room
     SUBDIR += rox-edit
     SUBDIR += scite
-    SUBDIR += scribes
     SUBDIR += se
     SUBDIR += semi
     SUBDIR += shed
@@ -267,7 +266,6 @@
     SUBDIR += yui
     SUBDIR += yzis
     SUBDIR += zile
-    SUBDIR += zim
     SUBDIR += zoinks
 
 .include <bsd.port.subdir.mk>

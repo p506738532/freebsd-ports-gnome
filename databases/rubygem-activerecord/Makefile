@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	activerecord
-PORTVERSION=	3.2.21
-PORTREVISION=	0
+PORTVERSION=	3.2.22
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
@@ -16,6 +15,8 @@ RUN_DEPENDS=	rubygem-activemodel>=${PORTVERSION}:${PORTSDIR}/databases/rubygem-a
 		rubygem-activesupport>=${PORTVERSION}:${PORTSDIR}/devel/rubygem-activesupport \
 		rubygem-arel3>=3.0.3:${PORTSDIR}/databases/rubygem-arel3 \
 		rubygem-tzinfo03>=0.3.29:${PORTSDIR}/devel/rubygem-tzinfo03
+
+NO_ARCH=	yes
 
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes

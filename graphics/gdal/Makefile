@@ -3,7 +3,7 @@
 
 PORTNAME=	gdal
 PORTVERSION=	1.11.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics geography
 MASTER_SITES=	http://download.osgeo.org/gdal/${PORTVERSION}/ \
 		ftp://ftp.remotesensing.org/pub/gdal/${PORTVERSION}/ \
@@ -16,7 +16,6 @@ LICENSE=	MIT
 
 LIB_DEPENDS=	libgeotiff.so:${PORTSDIR}/graphics/libgeotiff \
 		libgif.so:${PORTSDIR}/graphics/giflib \
-		libjpeg.so:${PORTSDIR}/graphics/jpeg \
 		libjson-c.so:${PORTSDIR}/devel/json-c \
 		libpng.so:${PORTSDIR}/graphics/png \
 		libtiff.so:${PORTSDIR}/graphics/tiff
@@ -43,12 +42,10 @@ CONFIGURE_ARGS=	--datadir=${DATADIR} \
 		--with-threads=yes \
 		--without-libtool
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE} -lpthread
 MAKE_JOBS_UNSAFE=	yes
 MAKEFILE=	GNUmakefile
 USE_LDCONFIG=	yes
-USES=		gmake tar:xz
+USES=		gmake jpeg tar:xz
 
 PLIST_SUB=	PORTVERSION=${PORTVERSION}
 PORTDATA=	*
@@ -84,6 +81,7 @@ HDF5_CONFIGURE_ON=	--with-hdf5=${LOCALBASE}
 HDF5_LIB_DEPENDS=	libhdf5.so:${PORTSDIR}/science/hdf5
 ICONV_CONFIGURE_OFF=	--with-libiconv-prefix=no
 ICONV_CONFIGURE_ON=	${ICONV_CONFIGURE_ARG}
+ICONV_CPPFLAGS=		-I${LOCALBASE}/include
 ICONV_LDFLAGS=		-L${ICONV_PREFIX}/lib ${ICONV_LIB}
 ICONV_USES=		iconv
 JASPER_CONFIGURE_OFF=	--with-jasper=no
