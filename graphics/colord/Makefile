@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	colord
-PORTVERSION=	1.2.10
+PORTVERSION=	1.2.11
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.freedesktop.org/software/colord/releases/
 
@@ -32,8 +32,6 @@ CONFIGURE_ARGS=	--disable-udev \
 		--disable-sane \
 		--with-daemon-user=colord \
 		--disable-systemd-login
-# takes ages we don't want to wait.
-CONFIGURE_ARGS+=--disable-print-profiles
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	USB_CFLAGS="-I/usr/include" \
@@ -43,11 +41,13 @@ INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.freedesktop.ColorHelper.gschema.xml
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	MANPAGES
+OPTIONS_DEFINE=	MANPAGES PPROFILES
 OPTIONS_DEFAULT=MANPAGES
 
 MANPAGES_BUILD_DEPENDS=	docbook2html:${PORTSDIR}/textproc/docbook-utils \
 			docbook-sgml>0:${PORTSDIR}/textproc/docbook-sgml
+PPROFILES_DESC=		Build extra print profiles (long build time)
+PPROFILES_CONFIGURE_ENABLE=	print-profiles
 
 .include <bsd.port.options.mk>
 
