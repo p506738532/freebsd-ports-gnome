@@ -94,7 +94,6 @@
     SUBDIR += cocoon
     SUBDIR += codeigniter
     SUBDIR += coppermine
-    SUBDIR += cowboy
     SUBDIR += cplanet
     SUBDIR += cppcms
     SUBDIR += crawl
@@ -162,11 +161,26 @@
     SUBDIR += elgg
     SUBDIR += elinks
     SUBDIR += eliom
+    SUBDIR += elixir-httpoison
+    SUBDIR += elixir-httpotion
+    SUBDIR += elixir-joken
+    SUBDIR += elixir-maru
+    SUBDIR += elixir-phoenix
+    SUBDIR += elixir-phoenix_ecto
+    SUBDIR += elixir-phoenix_html
+    SUBDIR += elixir-webassembly
     SUBDIR += emacs-w3m
     SUBDIR += encode-explorer
     SUBDIR += entrans
     SUBDIR += ephemera
     SUBDIR += epiphany
+    SUBDIR += erlang-cowboy
+    SUBDIR += erlang-cowlib
+    SUBDIR += erlang-hackney
+    SUBDIR += erlang-ibrowse
+    SUBDIR += erlang-mochiweb
+    SUBDIR += erlang-mochiweb-basho
+    SUBDIR += erlang-webmachine
     SUBDIR += erwn
     SUBDIR += eventum
     SUBDIR += extjs
@@ -417,8 +431,6 @@
     SUBDIR += mkapachepw
     SUBDIR += mknmz-wwwoffle
     SUBDIR += mnogosearch
-    SUBDIR += mochiweb
-    SUBDIR += mochiweb-basho
     SUBDIR += mod_amazon_proxy
     SUBDIR += mod_antiloris
     SUBDIR += mod_asn
@@ -1536,6 +1548,7 @@
     SUBDIR += py-django-tagging
     SUBDIR += py-django-taggit
     SUBDIR += py-django-tastypie
+    SUBDIR += py-django16-tastypie
     SUBDIR += py-django-threaded-multihost
     SUBDIR += py-django-tinymce
     SUBDIR += py-django-voting
@@ -1738,6 +1751,7 @@
     SUBDIR += py-webware
     SUBDIR += py-webware-component
     SUBDIR += py-werkzeug
+    SUBDIR += py-wikipedia
     SUBDIR += py-wikitools
     SUBDIR += py-ws4py
     SUBDIR += py-wsaccel
@@ -1782,7 +1796,6 @@
     SUBDIR += rsstool
     SUBDIR += rt40
     SUBDIR += rt42
-    SUBDIR += ruby-amazon
     SUBDIR += ruby-aws
     SUBDIR += ruby-google
     SUBDIR += ruby-wgettsv
@@ -2160,7 +2173,6 @@
     SUBDIR += uwsgitop
     SUBDIR += uzbl
     SUBDIR += validator
-    SUBDIR += varnish
     SUBDIR += varnish-libvmod-header
     SUBDIR += varnish-nagios
     SUBDIR += varnish4
@@ -2196,7 +2208,6 @@
     SUBDIR += webkit2-gtk3
     SUBDIR += weblint
     SUBDIR += weblint++
-    SUBDIR += webmachine
     SUBDIR += webpy
     SUBDIR += webreport
     SUBDIR += webresolve

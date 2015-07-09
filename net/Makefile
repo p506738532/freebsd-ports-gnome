@@ -117,7 +117,8 @@
     SUBDIR += echoping
     SUBDIR += empty
     SUBDIR += enet
-    SUBDIR += erlang_xmlrpc
+    SUBDIR += erlang-ranch
+    SUBDIR += erlang-xmlrpc
     SUBDIR += etrace
     SUBDIR += exabgp
     SUBDIR += exaddos
@@ -440,7 +441,6 @@
     SUBDIR += ntopng
     SUBDIR += ntp
     SUBDIR += ntp-devel
-    SUBDIR += ntp-rc
     SUBDIR += ntraceroute
     SUBDIR += nusoap
     SUBDIR += nxproxy
@@ -890,7 +890,6 @@
     SUBDIR += proxychains-ng
     SUBDIR += prtunnel
     SUBDIR += ptpd2
-    SUBDIR += ptpd2-devel
     SUBDIR += ptunnel
     SUBDIR += pure-sockets
     SUBDIR += pvm
@@ -908,7 +907,6 @@
     SUBDIR += py-ec2-cli-tools
     SUBDIR += py-eventlet
     SUBDIR += py-gntp
-    SUBDIR += py-google
     SUBDIR += py-gspread
     SUBDIR += py-gspreadsheet
     SUBDIR += py-impacket
@@ -933,6 +931,7 @@
     SUBDIR += py-novaclient
     SUBDIR += py-oauth
     SUBDIR += py-oauth2
+    SUBDIR += py-paho-mqtt
     SUBDIR += py-pcap
     SUBDIR += py-pcapy
     SUBDIR += py-pcs
@@ -955,7 +954,6 @@
     SUBDIR += py-smb
     SUBDIR += py-smbpasswd
     SUBDIR += py-soappy
-    SUBDIR += py-soappy-devel
     SUBDIR += py-soapy
     SUBDIR += py-speedtest-cli
     SUBDIR += py-suds
@@ -998,7 +996,6 @@
     SUBDIR += radsecproxy
     SUBDIR += radvd
     SUBDIR += raggle
-    SUBDIR += ranch
     SUBDIR += rdapper
     SUBDIR += rdesktop
     SUBDIR += rdist6
@@ -1042,7 +1039,6 @@
     SUBDIR += rubygem-aws-s3
     SUBDIR += rubygem-aws-ses
     SUBDIR += rubygem-bunny
-    SUBDIR += rubygem-bunny060
     SUBDIR += rubygem-connection_pool
     SUBDIR += rubygem-dogapi
     SUBDIR += rubygem-domain_name

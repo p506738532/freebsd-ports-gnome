@@ -201,6 +201,7 @@
     SUBDIR += djmount
     SUBDIR += dmg2img
     SUBDIR += dmidecode
+    SUBDIR += docker-freebsd
     SUBDIR += doinkd
     SUBDIR += dolly
     SUBDIR += downtime
@@ -316,6 +317,7 @@
     SUBDIR += gaffitter
     SUBDIR += gai-leds
     SUBDIR += ganglia-monitor-core
+    SUBDIR += ganglia-webfrontend
     SUBDIR += gapcmon
     SUBDIR += garcon
     SUBDIR += gather
@@ -743,6 +745,7 @@
     SUBDIR += py-analyzemft
     SUBDIR += py-bcfg2
     SUBDIR += py-croniter
+    SUBDIR += py-crontab
     SUBDIR += py-danzfs
     SUBDIR += py-drmaa
     SUBDIR += py-execnet
@@ -766,7 +769,6 @@
     SUBDIR += py-queuelib
     SUBDIR += py-ranger
     SUBDIR += py-salt
-    SUBDIR += py-salt-api
     SUBDIR += py-shutilwhich
     SUBDIR += py-stdiff
     SUBDIR += py-supervisor
@@ -993,7 +995,10 @@
     SUBDIR += ttyload
     SUBDIR += tw_cli
     SUBDIR += tzdialog
+    SUBDIR += u-boot-bananapi
     SUBDIR += u-boot-beaglebone
+    SUBDIR += u-boot-cubieboard
+    SUBDIR += u-boot-cubieboard2
     SUBDIR += u-boot-cubox-hummingboard
     SUBDIR += u-boot-duovero
     SUBDIR += u-boot-pandaboard

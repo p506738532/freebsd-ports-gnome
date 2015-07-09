@@ -52,9 +52,14 @@
     SUBDIR += dbow
     SUBDIR += dbtool
     SUBDIR += dbview
+    SUBDIR += elixir-ecto
+    SUBDIR += elixir-mariaex
+    SUBDIR += elixir-mongo
+    SUBDIR += elixir-postgrex
+    SUBDIR += elixir-timex_ecto
     SUBDIR += emma
-    SUBDIR += epgsql
-    SUBDIR += eredis
+    SUBDIR += erlang-epgsql
+    SUBDIR += erlang-eredis
     SUBDIR += erlang-mysql
     SUBDIR += evolution-data-server
     SUBDIR += fastdb
@@ -99,6 +104,7 @@
     SUBDIR += hs-persistent-sqlite
     SUBDIR += hs-persistent-template
     SUBDIR += hsqldb
+    SUBDIR += influxdb
     SUBDIR += innotop
     SUBDIR += ip4r
     SUBDIR += ipa_sdb
@@ -181,6 +187,7 @@
     SUBDIR += monetdb
     SUBDIR += mongodb
     SUBDIR += mrtg-mysql-load
+    SUBDIR += mtools-mongodb
     SUBDIR += mtop
     SUBDIR += mydbf2mysql
     SUBDIR += mydumper

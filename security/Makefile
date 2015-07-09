@@ -775,7 +775,6 @@
     SUBDIR += py-Products.PluggableAuthService
     SUBDIR += py-RestrictedPython
     SUBDIR += py-SecretStorage
-    SUBDIR += py-backports.ssl_match_hostname
     SUBDIR += py-bcrypt
     SUBDIR += py-borg.localrole
     SUBDIR += py-cerealizer
@@ -829,6 +828,7 @@
     SUBDIR += py-pylibacl
     SUBDIR += py-pyme
     SUBDIR += py-pyptlib
+    SUBDIR += py-pyscard
     SUBDIR += py-pysha3
     SUBDIR += py-python-registry
     SUBDIR += py-rekall
@@ -910,7 +910,6 @@
     SUBDIR += rubygem-ezcrypto
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
-    SUBDIR += rubygem-hmac
     SUBDIR += rubygem-jugyo-twitter_oauth
     SUBDIR += rubygem-metasploit-concern
     SUBDIR += rubygem-metasploit-credential
@@ -1049,6 +1048,7 @@
     SUBDIR += unhide
     SUBDIR += unicornscan
     SUBDIR += unssh
+    SUBDIR += vault
     SUBDIR += vinetto
     SUBDIR += vlock
     SUBDIR += vlog

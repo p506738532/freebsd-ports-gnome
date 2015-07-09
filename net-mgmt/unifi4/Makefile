@@ -2,10 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	unifi4
-PORTVERSION=	4.6.4
+PORTVERSION=	4.6.6
 PORTREVISION=	0
 CATEGORIES=	net-mgmt java
-MASTER_SITES=	http://dl.ubnt.com/unifi/${PORTVERSION}-${UBNT_BUILD}/
+MASTER_SITES=	http://dl.ubnt.com/unifi/${PORTVERSION}-${UBNT_BUILD}/ \
+		https://www.ubnt.com/downloads/unifi/${PORTVERSION}/
 DISTNAME=	UniFi.unix
 DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}
 
@@ -17,7 +18,7 @@ RUN_DEPENDS=	mongodb>0:${PORTSDIR}/databases/mongodb
 SUB_LIST+=	USERS=${USERS} GROUPS=${GROUPS} JAVASHAREDIR=${JAVASHAREDIR}
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
 
-UBNT_BUILD=	ade9eed
+UBNT_BUILD=	bec4a09
 
 USES=		cpe zip
 CPE_VENDOR=	ubnt
