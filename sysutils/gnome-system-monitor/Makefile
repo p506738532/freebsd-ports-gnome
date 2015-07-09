@@ -17,7 +17,7 @@ RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		allias gettext gmake pathfix pkgconfig tar:xz
 USE_GNOME=	gtkmm30 intlhack librsvg2 libwnck3
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

@@ -408,12 +408,21 @@
     SUBDIR += elfrc
     SUBDIR += elfsh
     SUBDIR += elftoaout
+    SUBDIR += elixir-bson
+    SUBDIR += elixir-calendar
     SUBDIR += elixir-conform
     SUBDIR += elixir-decimal
+    SUBDIR += elixir-dialyze
+    SUBDIR += elixir-exactor
+    SUBDIR += elixir-exjsx
     SUBDIR += elixir-exrm
     SUBDIR += elixir-lager_logger
+    SUBDIR += elixir-msgpax
     SUBDIR += elixir-plug
     SUBDIR += elixir-poison
+    SUBDIR += elixir-timex
+    SUBDIR += elixir-timex-interval
+    SUBDIR += elixir-tzdata
     SUBDIR += embb
     SUBDIR += epl.el
     SUBDIR += epm
@@ -424,7 +433,6 @@
     SUBDIR += erlang-bbmustache
     SUBDIR += erlang-bear
     SUBDIR += erlang-common_lib
-    SUBDIR += erlang-cowlib
     SUBDIR += erlang-cuttlefish
     SUBDIR += erlang-erlware_commons
     SUBDIR += erlang-esdl
@@ -435,7 +443,6 @@
     SUBDIR += erlang-getopt
     SUBDIR += erlang-goldrush
     SUBDIR += erlang-gproc
-    SUBDIR += erlang-ibrowse
     SUBDIR += erlang-jobs
     SUBDIR += erlang-jsx
     SUBDIR += erlang-lager
@@ -1038,6 +1045,7 @@
     SUBDIR += libbobcat
     SUBDIR += libbonobo
     SUBDIR += libbonobo-reference
+    SUBDIR += libbson
     SUBDIR += libburn
     SUBDIR += libc++
     SUBDIR += libccid
@@ -1242,6 +1250,7 @@
     SUBDIR += libtap
     SUBDIR += libtar
     SUBDIR += libtecla
+    SUBDIR += libtermkey
     SUBDIR += libthai
     SUBDIR += libtifiles2
     SUBDIR += libtool
@@ -2280,6 +2289,7 @@
     SUBDIR += p5-Hash-MultiKey
     SUBDIR += p5-Hash-MultiValue
     SUBDIR += p5-Hash-NoRef
+    SUBDIR += p5-Hash-Slice
     SUBDIR += p5-Hash-Union
     SUBDIR += p5-Hash-Util-FieldHash-Compat
     SUBDIR += p5-Hash-WithDefaults
@@ -4081,6 +4091,7 @@
     SUBDIR += py-pyshapelib
     SUBDIR += py-pytemplate
     SUBDIR += py-pytest
+    SUBDIR += py-pytest-cache
     SUBDIR += py-pytest-capturelog
     SUBDIR += py-pytest-runner
     SUBDIR += py-pytest-timeout
@@ -4137,6 +4148,7 @@
     SUBDIR += py-sanetime
     SUBDIR += py-scripttest
     SUBDIR += py-sdl2
+    SUBDIR += py-semantic_version
     SUBDIR += py-serpent
     SUBDIR += py-setproctitle
     SUBDIR += py-setuptools
@@ -4519,7 +4531,12 @@
     SUBDIR += rubygem-cairo-gobject
     SUBDIR += rubygem-capybara
     SUBDIR += rubygem-celluloid
+    SUBDIR += rubygem-celluloid-essentials
+    SUBDIR += rubygem-celluloid-extras
+    SUBDIR += rubygem-celluloid-fsm
     SUBDIR += rubygem-celluloid-io
+    SUBDIR += rubygem-celluloid-pool
+    SUBDIR += rubygem-celluloid-supervision
     SUBDIR += rubygem-cf-uaa-lib
     SUBDIR += rubygem-childprocess
     SUBDIR += rubygem-chronic
@@ -4665,6 +4682,7 @@
     SUBDIR += rubygem-librarianp
     SUBDIR += rubygem-libyajl2
     SUBDIR += rubygem-listen
+    SUBDIR += rubygem-listen2
     SUBDIR += rubygem-little-plugger
     SUBDIR += rubygem-locale
     SUBDIR += rubygem-lockfile
@@ -4769,6 +4787,7 @@
     SUBDIR += rubygem-rspec
     SUBDIR += rubygem-rspec-core
     SUBDIR += rubygem-rspec-expectations
+    SUBDIR += rubygem-rspec-logsplit
     SUBDIR += rubygem-rspec-mocks
     SUBDIR += rubygem-rspec-support
     SUBDIR += rubygem-rubigen
@@ -4856,6 +4875,7 @@
     SUBDIR += rubygem-travis
     SUBDIR += rubygem-treetop
     SUBDIR += rubygem-trollop
+    SUBDIR += rubygem-trollop1
     SUBDIR += rubygem-turn
     SUBDIR += rubygem-typed-array
     SUBDIR += rubygem-tzinfo
