@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution-ews
-PORTVERSION=	3.16.3
+PORTVERSION=	3.16.4
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -33,7 +33,6 @@ CONFIGURE_ARGS=	--datarootdir=${PREFIX}/share \
 INSTALL_TARGET=	install-strip
 
 post-patch:
-#	@${REINPLACE_CMD} -e "s,^localedir=''$(prefix)/$(DATADIRNAME),localedir=''$(prefix)/share/locale,g"
 	@${REINPLACE_CMD} -e 's|$$(prefix)/$$(DATADIRNAME)/|$$(prefix)/share/|g' \
 		${WRKSRC}/configure
 
