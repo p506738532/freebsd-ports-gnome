@@ -48,6 +48,13 @@ libexec/mate-stickynotes-applet
 libexec/mate-timer-applet
 libexec/mate-trashapplet
 libexec/mateweather-applet
+man/man1/mate-charpick-applet.1.gz
+man/man1/mate-cpufreq-selector.1.gz
+man/man1/mate-drivemount-applet.1.gz
+man/man1/mate-geyes-applet.1.gz
+man/man1/mate-invest-chart.1.gz
+man/man1/mate-multiload-applet.1.gz
+man/man1/mateweather.1.gz
 share/MateConf/gsettings/stickynotes-applet.convert
 share/dbus-1/services/org.mate.panel.applet.AccessxStatusAppletFactory.service
 %%BATTERY%%share/dbus-1/services/org.mate.panel.applet.BattstatAppletFactory.service
