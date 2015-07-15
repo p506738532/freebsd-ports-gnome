@@ -23,7 +23,7 @@ SLAVEPORT?=	no
 
 USES=		desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig tar:xz
-USE_MATE=	icontheme
+USE_MATE=	desktop icontheme
 USE_XORG=	sm
 USE_GNOME=	cairo gtk20 intlhack libxml2
 USE_LDCONFIG=	yes
