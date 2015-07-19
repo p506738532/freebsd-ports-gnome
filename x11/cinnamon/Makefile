@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cinnamon
-PORTVERSION=	2.6.12
+PORTVERSION=	2.6.13
 CATEGORIES=	x11 gnome
 DIST_SUBDIR=	gnome3
 
@@ -40,7 +40,7 @@ WRKSRC=		${WRKDIR}/Cinnamon-${PORTVERSION}
 USES=		autoreconf:build compiler:c11 gettext gmake libtool \
 		pathfix pkgconfig python shebangfix
 USE_GNOME=	evolutiondataserver3 gconf2 gnomedesktop3 \
-		gnomeprefix gtk30 intlhack introspection:build
+		gnomeprefix gtk30 intltool introspection:build
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
 # this happens before moving the file to ${PREFIX} (which then will be copied to ${STAGEDIR}${PREFIX})
