@@ -152,6 +152,7 @@
     SUBDIR += elixir-earmark
     SUBDIR += elixir-ex_doc
     SUBDIR += elixir-funnel
+    SUBDIR += elixir-sweet_xml
     SUBDIR += emacs-wiki
     SUBDIR += en-aspell
     SUBDIR += en-hunspell
@@ -869,6 +870,7 @@
     SUBDIR += p5-Text-Reform
     SUBDIR += p5-Text-Report
     SUBDIR += p5-Text-Repository
+    SUBDIR += p5-Text-Roman
     SUBDIR += p5-Text-Sass
     SUBDIR += p5-Text-Shellwords
     SUBDIR += p5-Text-Similarity
