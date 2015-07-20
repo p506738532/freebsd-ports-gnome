@@ -6,6 +6,7 @@
     SUBDIR += 2bsd-diff
     SUBDIR += R-cran-R2HTML
     SUBDIR += R-cran-XML
+    SUBDIR += R-cran-pystr
     SUBDIR += R-cran-stringi
     SUBDIR += R-cran-stringr
     SUBDIR += R-cran-xtable
@@ -151,6 +152,7 @@
     SUBDIR += elixir-earmark
     SUBDIR += elixir-ex_doc
     SUBDIR += elixir-funnel
+    SUBDIR += elixir-sweet_xml
     SUBDIR += emacs-wiki
     SUBDIR += en-aspell
     SUBDIR += en-hunspell
@@ -159,6 +161,7 @@
     SUBDIR += eo-aspell
     SUBDIR += eqe
     SUBDIR += erlang-edown
+    SUBDIR += erlang-yamerl
     SUBDIR += es-aspell
     SUBDIR += es-hunspell
     SUBDIR += es-hyphen
@@ -191,7 +194,6 @@
     SUBDIR += ga-aspell
     SUBDIR += gastex
     SUBDIR += gd-aspell
-    SUBDIR += gdict
     SUBDIR += gdome2
     SUBDIR += gl-aspell
     SUBDIR += gladtex
@@ -868,6 +870,7 @@
     SUBDIR += p5-Text-Reform
     SUBDIR += p5-Text-Report
     SUBDIR += p5-Text-Repository
+    SUBDIR += p5-Text-Roman
     SUBDIR += p5-Text-Sass
     SUBDIR += p5-Text-Shellwords
     SUBDIR += p5-Text-Similarity
@@ -1170,6 +1173,7 @@
     SUBDIR += py-MarkupSafe
     SUBDIR += py-Tempita
     SUBDIR += py-acora
+    SUBDIR += py-alabaster
     SUBDIR += py-asciinema
     SUBDIR += py-asv
     SUBDIR += py-bugzillatools
@@ -1230,6 +1234,7 @@
     SUBDIR += py-rstyoutube
     SUBDIR += py-rxp
     SUBDIR += py-sgrep
+    SUBDIR += py-snowballstemmer
     SUBDIR += py-sparqlwrapper
     SUBDIR += py-sphinx
     SUBDIR += py-sphinx-intl
@@ -1538,6 +1543,7 @@
     SUBDIR += translate-toolkit
     SUBDIR += ts-hunspell
     SUBDIR += tth
+    SUBDIR += turboxsl
     SUBDIR += txt2html
     SUBDIR += txt2man
     SUBDIR += txt2tags
