@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	appstream-glib
-PORTVERSION=	0.3.6
+PORTVERSION=	0.4.1
 CATEGORIES=	devel
 MASTER_SITES=	http://people.freedesktop.org/~hughsient/appstream-glib/releases/
 DIST_SUBDIR=	gnome3
@@ -27,6 +27,8 @@ USE_GNOME=	gdkpixbuf2 glib20 gtk30 intlhack introspection:build \
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_SQLITE=	3
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-xml-catalog=${LOCALBASE}/share/xml/catalog \
 		--disable-rpm \
 		--disable-ostree
