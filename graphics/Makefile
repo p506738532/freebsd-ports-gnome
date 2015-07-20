@@ -11,6 +11,8 @@
     SUBDIR += IPA
     SUBDIR += ImageMagick
     SUBDIR += ImageMagick-nox11
+    SUBDIR += ImageMagick7
+    SUBDIR += ImageMagick7-nox11
     SUBDIR += O2-tools
     SUBDIR += OpenEXR
     SUBDIR += R-cran-GDD
@@ -511,6 +513,7 @@
     SUBDIR += libpano13
     SUBDIR += libpcd
     SUBDIR += libpgf
+    SUBDIR += libpotrace
     SUBDIR += libprojectm
     SUBDIR += libpuzzle
     SUBDIR += libqrencode
@@ -860,6 +863,7 @@
     SUBDIR += py-sorl-thumbnail
     SUBDIR += py-soya3d
     SUBDIR += py-stltools
+    SUBDIR += py-toyplot
     SUBDIR += py-wand
     SUBDIR += py-webcolors
     SUBDIR += py3-cairo

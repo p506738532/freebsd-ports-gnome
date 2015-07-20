@@ -3,7 +3,7 @@
 
 PORTNAME=	atril
 PORTVERSION=	1.10.1
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	graphics print mate
 MASTER_SITES=	MATE
 DIST_SUBDIR=	mate
@@ -23,7 +23,7 @@ SLAVEPORT?=	no
 
 USES=		desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig tar:xz
-USE_MATE=	desktop icontheme
+USE_MATE=	icontheme
 USE_XORG=	sm
 USE_GNOME=	cairo gtk20 intlhack libxml2
 USE_LDCONFIG=	yes
@@ -36,12 +36,10 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 .if ${SLAVEPORT} == lite
-CONFIGURE_ARGS+=--disable-introspection \
-		--disable-thumbnailer \
+CONFIGURE_ARGS+=--disable-thumbnailer \
 		--disable-previewer
 .else
-USE_GNOME+=	introspection:build
-CONFIGURE_ARGS+=	--enable-introspection
+USE_MATE+=	desktop
 .endif
 
 GLIB_SCHEMAS=	org.mate.Atril.gschema.xml
@@ -70,6 +68,18 @@ XPS_CONFIGURE_ENABLE=	xps
 XPS_LIB_DEPENDS=	libgxps.so:${PORTSDIR}/graphics/libgxps
 EPUB_CONFIGURE_ENABLE=	epub
 EPUB_LIB_DEPENDS=	libwebkitgtk-1.0.so:${PORTSDIR}/www/webkit-gtk2
+
+OPTIONS_SUB=	yes
+
+CAJA_CONFIGURE_ENABLE=	caja
+CAJA_USE=		MATE=caja
+DJVU_LIB_DEPENDS=	libdjvulibre.so:${PORTSDIR}/graphics/djvulibre
+DJVU_CONFIGURE_ENABLE=	djvu
+COMICS_CONFIGURE_ENABLE=	comics
+KEYRING_CONFIGURE_WITH=	keyring
+KEYRING_LIB_DEPENDS=	libsecret-1.so:${PORTSDIR}/security/libsecret
+XPS_CONFIGURE_ENABLE=	xps
+XPS_LIB_DEPENDS=	libgxps.so:${PORTSDIR}/graphics/libgxps
 
 .include <bsd.port.options.mk>
 

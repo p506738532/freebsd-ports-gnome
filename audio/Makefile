@@ -661,7 +661,6 @@
     SUBDIR += rubygem-ruby-mp3info
     SUBDIR += rubygem-ruby-ogginfo
     SUBDIR += rubygem-ruby-shout
-    SUBDIR += rubyripper
     SUBDIR += s3mod
     SUBDIR += sbagen
     SUBDIR += schism
