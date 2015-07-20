@@ -54,6 +54,7 @@
     SUBDIR += dbview
     SUBDIR += elixir-calecto
     SUBDIR += elixir-ecto
+    SUBDIR += elixir-ecto_migrate
     SUBDIR += elixir-mariaex
     SUBDIR += elixir-mongo
     SUBDIR += elixir-postgrex
@@ -129,6 +130,7 @@
     SUBDIR += leo_center
     SUBDIR += leofs
     SUBDIR += leveldb
+    SUBDIR += levigo
     SUBDIR += libdbi
     SUBDIR += libdbi-drivers
     SUBDIR += libdrizzle

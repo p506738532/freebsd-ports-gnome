@@ -426,6 +426,9 @@
     SUBDIR += elixir-msgpax
     SUBDIR += elixir-plug
     SUBDIR += elixir-poison
+    SUBDIR += elixir-quantum
+    SUBDIR += elixir-red_black_tree
+    SUBDIR += elixir-sorted_set
     SUBDIR += elixir-timex
     SUBDIR += elixir-timex-interval
     SUBDIR += elixir-tzdata
@@ -2494,6 +2497,7 @@
     SUBDIR += p5-Metabase-Fact
     SUBDIR += p5-Method-Alias
     SUBDIR += p5-Method-Signatures-Simple
+    SUBDIR += p5-Minilla
     SUBDIR += p5-Minion
     SUBDIR += p5-Mixin-Linewise
     SUBDIR += p5-Mknod
@@ -4021,6 +4025,7 @@
     SUBDIR += py-more-itertools
     SUBDIR += py-mox
     SUBDIR += py-msgpack
+    SUBDIR += py-multipledispatch
     SUBDIR += py-mwlib
     SUBDIR += py-mwlib.ext
     SUBDIR += py-mwlib.rl
@@ -4588,9 +4593,9 @@
     SUBDIR += rubygem-deprecated2
     SUBDIR += rubygem-descendants_tracker
     SUBDIR += rubygem-devise
-    SUBDIR += rubygem-devise-rails4
     SUBDIR += rubygem-devise-async
     SUBDIR += rubygem-devise-async-rails4
+    SUBDIR += rubygem-devise-rails4
     SUBDIR += rubygem-directory_watcher
     SUBDIR += rubygem-ditz
     SUBDIR += rubygem-docile
@@ -5031,6 +5036,8 @@
     SUBDIR += tesla
     SUBDIR += tevent
     SUBDIR += tex-kpathsea
+    SUBDIR += tex-libtexlua
+    SUBDIR += tex-libtexluajit
     SUBDIR += tex-web2c
     SUBDIR += thrift
     SUBDIR += thrift-c_glib

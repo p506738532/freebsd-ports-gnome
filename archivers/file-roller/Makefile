@@ -3,6 +3,7 @@
 
 PORTNAME=	file-roller
 PORTVERSION=	3.16.3
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	GNOME
@@ -17,7 +18,7 @@ RUN_DEPENDS=	gtar:${PORTSDIR}/archivers/gtar \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake libtool \
+USES=		desktop-file-utils gettext gmake libarchive libtool \
 		pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack introspection:build
 USE_XORG=	sm
