@@ -11,6 +11,8 @@
     SUBDIR += IPA
     SUBDIR += ImageMagick
     SUBDIR += ImageMagick-nox11
+    SUBDIR += ImageMagick7
+    SUBDIR += ImageMagick7-nox11
     SUBDIR += O2-tools
     SUBDIR += OpenEXR
     SUBDIR += R-cran-GDD
@@ -47,6 +49,7 @@
     SUBDIR += argyllcms
     SUBDIR += asciio
     SUBDIR += atril
+    SUBDIR += atril-lite
     SUBDIR += autopano-sift-c
     SUBDIR += autoq3d
     SUBDIR += autotrace
@@ -154,6 +157,7 @@
     SUBDIR += evas_generic_loaders-svg
     SUBDIR += evas_generic_loaders-xcf
     SUBDIR += evince
+    SUBDIR += evince-lite
     SUBDIR += evolvotron
     SUBDIR += exact-image
     SUBDIR += exif
@@ -168,7 +172,6 @@
     SUBDIR += figurine
     SUBDIR += flam3
     SUBDIR += flasm
-    SUBDIR += fli2gif
     SUBDIR += flphoto
     SUBDIR += fly
     SUBDIR += fortytwo
@@ -176,7 +179,6 @@
     SUBDIR += fotoxx
     SUBDIR += founts
     SUBDIR += fpc-cairo
-    SUBDIR += fpc-fpgtk
     SUBDIR += fpc-graph
     SUBDIR += fpc-hermes
     SUBDIR += fpc-imagemagick
@@ -359,6 +361,7 @@
     SUBDIR += import-pictures
     SUBDIR += impressive
     SUBDIR += inkscape
+    SUBDIR += intel-backlight
     SUBDIR += intergif
     SUBDIR += inventor
     SUBDIR += ipe
@@ -510,6 +513,7 @@
     SUBDIR += libpano13
     SUBDIR += libpcd
     SUBDIR += libpgf
+    SUBDIR += libpotrace
     SUBDIR += libprojectm
     SUBDIR += libpuzzle
     SUBDIR += libqrencode
@@ -859,6 +863,7 @@
     SUBDIR += py-sorl-thumbnail
     SUBDIR += py-soya3d
     SUBDIR += py-stltools
+    SUBDIR += py-toyplot
     SUBDIR += py-wand
     SUBDIR += py-webcolors
     SUBDIR += py3-cairo

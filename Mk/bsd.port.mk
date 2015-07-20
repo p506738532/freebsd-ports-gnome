@@ -148,9 +148,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				- If set, prepend the MASTER_SITES setting with this value.
 # MASTER_SITE_FREEBSD
 #				- If set, prepend ${MASTER_SITE_BACKUP} in MASTER_SITES.
-# CD_MOUNTPTS	- List of CDROM mountpoints to look for distfiles under.
-#				  This variable supercedes CD_MOUNTPT, which is
-#				  obsolete.
 #
 # Set these if your port should not be built under certain circumstances.
 # These are string variables; you should set them to the reason why
@@ -344,27 +341,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # CFLAGS_${ARCH}  Append the cflags to CFLAGS only on the specified architecture
 # CXXFLAGS_${ARCH}
 #				 Append the cxxflags to CXXFLAGS only on the specified architecture
-##
-# USE_GHOSTSCRIPT
-#				- If set, this port needs ghostscript to both
-#				  build and run.  If a number is specified,
-#				  the specified version will be used.
-#				  The valid value is '7', '8', or '9' in that case.
-# USE_GHOSTSCRIPT_BUILD
-#				- If set, this port needs ghostscript to build.
-# USE_GHOSTSCRIPT_RUN
-#				- If set, this port needs ghostscript to run.
-# GHOSTSCRIPT_PORT
-#				- The port that provides postscript functionality.
-#				  Some installations may wish to override the default
-#				  to specify a version without X11 and/or localized
-#				  versions for their nationality.
-#				  Default: print/ghostscript9
-# WITH_GHOSTSCRIPT_VER
-#				- If set, the specified version of ghostscript will be
-#				  used.  The valid value is "7", "8", or "9".  Note that
-#				  this is for users, not for port maintainers.  This
-#				  should not be used in Makefile.
 ##
 # USE_GL		- A list of Mesa or GL related dependencies needed by the port.
 #				  Supported components are: egl, glesv2, glut, glu, glw, and gl.
@@ -1473,9 +1449,6 @@ EXTRACT_SUFX?=			.tar.gz
 .endif
 .endif
 
-# Location of mounted CDROM(s) to search for files
-CD_MOUNTPTS?=	/cdrom ${CD_MOUNTPT}
-
 # Owner and group of the WWW user
 WWWOWN?=	www
 WWWGRP?=	www
@@ -1523,7 +1496,8 @@ QA_ENV+=		STAGEDIR=${STAGEDIR} \
 				LINUXBASE=${LINUXBASE} \
 				LOCALBASE=${LOCALBASE} \
 				"STRIP=${STRIP}" \
-				TMPPLIST=${TMPPLIST}
+				TMPPLIST=${TMPPLIST} \
+				PKGBASE=${PKGBASE}
 .if !empty(USES:Mdesktop-file-utils)
 QA_ENV+=		USESDESKTOPFILEUTILS=yes
 .endif
@@ -1931,58 +1905,6 @@ ${_f}_ARGS:=	${f:C/^[^\:]*(\:|\$)//:S/,/ /g}
 .if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS+=--x-libraries=${LOCALBASE}/lib --x-includes=${LOCALBASE}/include
 .endif
-.endif
-
-# Set the default for the installation of Postscript(TM)-
-# compatible functionality.
-.if !defined(USE_GHOSTSCRIPT)
-.	if defined(USE_GHOSTSCRIPT_BUILD)
-_USE_GHOSTSCRIPT=	${USE_GHOSTSCRIPT_BUILD}
-.	elif defined(USE_GHOSTSCRIPT_RUN)
-_USE_GHOSTSCRIPT=	${USE_GHOSTSCRIPT_RUN}
-.	endif
-.else
-_USE_GHOSTSCRIPT=	${USE_GHOSTSCRIPT}
-.endif
-
-.if defined(WITH_GHOSTSCRIPT_VER) && !empty(WITH_GHOSTSCRIPT_VER:M[789])
-_USE_GHOSTSCRIPT_DEFAULT_VER=	${WITH_GHOSTSCRIPT_VER}
-.else
-_USE_GHOSTSCRIPT_DEFAULT_VER=	9
-.endif
-
-.if defined(_USE_GHOSTSCRIPT)
-.	if !defined(WITHOUT_X11)
-_USE_GHOSTSCRIPT_PKGNAME_SUFFIX=
-.	else
-_USE_GHOSTSCRIPT_PKGNAME_SUFFIX=-nox11
-.	endif
-.	if !empty(_USE_GHOSTSCRIPT:M[789])
-_USE_GHOSTSCRIPT_VER=${_USE_GHOSTSCRIPT:M[789]}
-.	else
-_USE_GHOSTSCRIPT_VER=${_USE_GHOSTSCRIPT_DEFAULT_VER}
-.	endif
-.else
-_USE_GHOSTSCRIPT_VER=${_USE_GHOSTSCRIPT_DEFAULT_VER}
-.endif
-
-# Sanity check
-.if defined(_USE_GHOSTSCRIPT) && defined(WITH_GHOSTSCRIPT_VER)
-.	if empty(WITH_GHOSTSCRIPT_VER:M[789])
-.		error You set an invalid value "${WITH_GHOSTSCRIPT_VER}" in WITH_GHOSTSCRIPT_VER.  Abort.
-.	elif ${_USE_GHOSTSCRIPT_VER} != ${WITH_GHOSTSCRIPT_VER}
-.		error You set WITH_GHOSTSCRIPT_VER as ${WITH_GHOSTSCRIPT_VER} but ${PKGNAME} requires print/ghostscript${_USE_GHOSTSCRIPT_VER}.  Abort.
-.	endif
-.endif
-
-GHOSTSCRIPT_PORT?=	print/ghostscript${_USE_GHOSTSCRIPT_VER}${_USE_GHOSTSCRIPT_PKGNAME_SUFFIX}
-
-# Set up the ghostscript dependencies.
-.if defined(USE_GHOSTSCRIPT) || defined(USE_GHOSTSCRIPT_BUILD)
-BUILD_DEPENDS+=	gs:${PORTSDIR}/${GHOSTSCRIPT_PORT}
-.endif
-.if defined(USE_GHOSTSCRIPT) || defined(USE_GHOSTSCRIPT_RUN)
-RUN_DEPENDS+=	gs:${PORTSDIR}/${GHOSTSCRIPT_PORT}
 .endif
 
 # Macro for doing in-place file editing using regexps
@@ -2411,17 +2333,6 @@ _MASTER_SITE_BACKUP:=	# empty
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE}
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP}
 .endif
-
-# Search CDROM first if mounted, symlink instead of copy if
-# FETCH_SYMLINK_DISTFILES is set
-.for MOUNTPT in ${CD_MOUNTPTS}
-.if exists(${MOUNTPT}/ports/distfiles)
-_MASTER_SITE_OVERRIDE:=	file:${MOUNTPT}/ports/distfiles/${DIST_SUBDIR}/ ${_MASTER_SITE_OVERRIDE}
-.if defined(FETCH_SYMLINK_DISTFILES)
-FETCH_BEFORE_ARGS+=	-l
-.endif
-.endif
-.endfor
 
 NOFETCHFILES?=
 
@@ -4361,7 +4272,6 @@ ${deptype:tl}-depends:
 # Dependency lists: both build and runtime, recursive.  Print out directory names.
 
 _UNIFIED_DEPENDS=${PKG_DEPENDS} ${EXTRACT_DEPENDS} ${PATCH_DEPENDS} ${FETCH_DEPENDS} ${BUILD_DEPENDS} ${LIB_DEPENDS} ${RUN_DEPENDS}
-_DEPEND_DIRS=	${_UNIFIED_DEPENDS:C,^[^:]*:([^:]*).*$,\1,}
 _DEPEND_SPECIALS=	${_UNIFIED_DEPENDS:M*\:*\:*:C,^[^:]*:([^:]*):.*$,\1,}
 
 all-depends-list:
@@ -4375,95 +4285,24 @@ ALL-DEPENDS-LIST= \
 			dp_SCRIPTSDIR="${SCRIPTSDIR}" \
 			${SH} ${SCRIPTSDIR}/all-depends-list.sh
 
-CLEAN-DEPENDS-FULL= \
-	L="${_DEPEND_DIRS}";						\
-	checked="";							\
-	while [ -n "$$L" ]; do						\
-		l="";							\
-		for d in $$L; do					\
-			case $$checked in				\
-			$$d\ *|*\ $$d\ *|*\ $$d)			\
-				continue;;				\
-			esac;						\
-			checked="$$checked $$d";			\
-			if [ ! -d $$d ]; then				\
-				${ECHO_MSG} "${PKGNAME}: \"$$d\" non-existent -- dependency list incomplete" >&2; \
-				continue;				\
-			fi;						\
-			if ! children=$$(cd $$d && ${MAKE} -V WRKDIR -V _DEPEND_DIRS); then \
-				${ECHO_MSG} "${PKGNAME}: \"$$d\" erroneous -- dependency list incomplete" >&2; \
-				continue;				\
-			fi;						\
-			state=0;					\
-			for child in $$children; do			\
-				case $$state in				\
-				0)					\
-					if [ -d $$child ]; then 	\
-						${ECHO_CMD} $$d;	\
-					fi;				\
-					state=1;;			\
-				1)					\
-					case "$$checked $$l" in		\
-					$$child\ *|*\ $$child\ *|*\ $$child) \
-						continue;;		\
-					esac;				\
-					l="$$l $$child";;		\
-				esac;					\
-			done;						\
-		done;							\
-		L=$$l;							\
-	done
-
-CLEAN-DEPENDS-LIMITED= \
-	L="${_DEPEND_DIRS}";						\
-	checked="";							\
-	while [ -n "$$L" ]; do						\
-		l="";							\
-		for d in $$L; do					\
-			case $$checked in				\
-			$$d\ *|*\ $$d\ *|*\ $$d)			\
-				continue;;				\
-			esac;						\
-			checked="$$checked $$d";			\
-			if [ ! -d $$d ]; then				\
-				${ECHO_MSG} "${PKGNAME}: \"$$d\" non-existent -- dependency list incomplete" >&2; \
-				continue;				\
-			fi;						\
-			if ! children=$$(cd $$d && ${MAKE} -V WRKDIR -V _DEPEND_DIRS); then \
-				${ECHO_MSG} "${PKGNAME}: \"$$d\" erroneous -- dependency list incomplete" >&2; \
-				continue;				\
-			fi;						\
-			state=0;					\
-			for child in $$children; do			\
-				case $$state in				\
-				0)					\
-					if [ ! -d $$child ]; then 	\
-						break;		\
-					fi;				\
-					state=1;			\
-					${ECHO_CMD} $$d;;		\
-				1)					\
-					case "$$checked $$l" in		\
-					$$child\ *|*\ $$child\ *|*\ $$child) \
-						continue;;		\
-					esac;				\
-					l="$$l $$child";;		\
-				esac;					\
-			done;						\
-		done;							\
-		L=$$l;							\
-	done
+CLEAN-DEPENDS-LIST= \
+	${SETENV} dp_ALLDEPENDS="${_UNIFIED_DEPENDS}" \
+			dp_PORTSDIR="${PORTSDIR}" \
+			dp_MAKE="${MAKE}" \
+			dp_PKGNAME="${PKGNAME}" \
+			dp_SCRIPTSDIR="${SCRIPTSDIR}" \
+			${SH} ${SCRIPTSDIR}/clean-depends-list.sh
 
 .if !target(clean-depends)
 clean-depends:
-	@for dir in $$(${CLEAN-DEPENDS-FULL}); do \
+	@for dir in $$(${CLEAN-DEPENDS-LIST} full); do \
 		(cd $$dir; ${MAKE} NOCLEANDEPENDS=yes clean); \
 	done
 .endif
 
 .if !target(limited-clean-depends)
 limited-clean-depends:
-	@for dir in $$(${CLEAN-DEPENDS-LIMITED}); do \
+	@for dir in $$(${CLEAN-DEPENDS-LIST} limited); do \
 		(cd $$dir; ${MAKE} NOCLEANDEPENDS=yes clean); \
 	done
 .endif

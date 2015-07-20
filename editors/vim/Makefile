@@ -3,7 +3,7 @@
 
 PORTNAME=	vim
 DISTVERSIONPREFIX=	v
-DISTVERSION=	7-4-764
+DISTVERSION=	7-4-778
 CATEGORIES?=	editors
 
 MAINTAINER?=	sunpoet@FreeBSD.org
@@ -33,7 +33,7 @@ WANT_GNOME=	yes
 PLIST_SUB=	VIM_VER=${VIM_VER}
 PORTDATA=	${VIM_VER}
 
-VIM_VER=	${PORTNAME}${PORTVERSION:R:S/.//g}
+VIM_VER=	${PORTNAME}${PORTVERSION:R:S|.||g}
 
 USE_GITHUB=	yes
 
@@ -152,15 +152,18 @@ post-install:
 	${TEST} -e ${STAGEDIR}${PREFIX}/bin/${file} || ${LN} -fs vim ${STAGEDIR}${PREFIX}/bin/${file}
 .endfor
 .endif
-.if ${PORT_OPTIONS:MDEFAULT_VIMRC}
+
+post-install-DEFAULT_VIMRC-on:
 	${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${FILESDIR}/vimrc ${STAGEDIR}${ETCDIR}/gvimrc.sample
 	${INSTALL_DATA} ${FILESDIR}/vimrc ${STAGEDIR}${ETCDIR}/vimrc.sample
-.endif
-.if !${PORT_OPTIONS:MNLS}
+
+post-install-NLS-off:
 	${MKDIR} ${STAGEDIR}${DATADIR}/${VIM_VER}/keymap/
 	${INSTALL_DATA} ${WRKSRC}/runtime/keymap/* ${STAGEDIR}${DATADIR}/${VIM_VER}/keymap/
-.endif
+	${INSTALL_DATA} ${FILESDIR}/vietnamese_viscii.vim ${STAGEDIR}${DATADIR}/${VIM_VER}/keymap/
+
+post-install-NLS-on:
 	${INSTALL_DATA} ${FILESDIR}/vietnamese_viscii.vim ${STAGEDIR}${DATADIR}/${VIM_VER}/keymap/
 
 .include <bsd.port.post.mk>

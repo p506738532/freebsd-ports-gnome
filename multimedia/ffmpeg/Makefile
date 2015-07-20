@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	ffmpeg
-PORTVERSION=	2.3.6
-PORTREVISION=	6
+PORTVERSION=	2.7.1
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio ipv6 net
 MASTER_SITES=	http://ffmpeg.org/releases/
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	yasm:${PORTSDIR}/devel/yasm \
 
 HAS_CONFIGURE=	yes
 CONFIGURE_LOG=	config.err
-USES=		cpe gmake pkgconfig perl5 tar:bzip2
+USES=		compiler cpe gmake perl5 pkgconfig tar:bzip2
 USE_LDCONFIG=	yes
 USE_PERL5=	build
 WANT_SDL=	yes
@@ -245,7 +245,9 @@ CONFIGURE_ARGS+=	--enable-memalign-hack
 .endif
 
 .if ${ARCH} == "armv6"
+.if ${CHOSEN_COMPILER_TYPE} == "clang"
 CONFIGURE_ENV+=	ASFLAGS=-no-integrated-as
+.endif
 .endif
 
 DATADIR=	${PREFIX}/share/${PORTNAME}${PKGNAMESUFFIX}
@@ -256,6 +258,7 @@ MAKE_ENV+=	COMPILER_PATH=${LOCALBASE}/bin
 CONFIGURE_ARGS+=--prefix="${PREFIX}" \
 		--mandir="${PREFIX}/man" \
 		--datadir="${DATADIR}" \
+		--pkgconfigdir="${PREFIX}/libdata/pkgconfig" \
 		--enable-shared \
 		--enable-gpl \
 		--enable-postproc \
@@ -353,8 +356,6 @@ LICENSE_FILE_LGPL3=	${WRKSRC}/COPYING.LGPLv3
 
 post-patch:
 # {C,LD}FLAGS safeness
-	@${REINPLACE_CMD} -e 's|$$(LIBDIR)/pkgconfig|$$(DESTDIR)$$(prefix)/libdata/pkgconfig|' \
-		${WRKSRC}/library.mak
 	@${REINPLACE_CMD} -e 's|/etc/ffserver.conf|${PREFIX}/etc/ffserver.conf|' \
 		${WRKSRC}/ffserver.c
 	@${REINPLACE_CMD} -E \

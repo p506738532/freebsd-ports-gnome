@@ -13,6 +13,7 @@
     SUBDIR += abgx360
     SUBDIR += abgx360gui
     SUBDIR += accountsservice
+    SUBDIR += acerhdf-kmod
     SUBDIR += acpi_call
     SUBDIR += acpica-tools
     SUBDIR += acts
@@ -134,6 +135,7 @@
     SUBDIR += clone
     SUBDIR += clonehdd
     SUBDIR += cloop-utils
+    SUBDIR += cloudabi-utils
     SUBDIR += clsync
     SUBDIR += cmdwatch
     SUBDIR += cmockery2
@@ -201,6 +203,7 @@
     SUBDIR += djmount
     SUBDIR += dmg2img
     SUBDIR += dmidecode
+    SUBDIR += docker-freebsd
     SUBDIR += doinkd
     SUBDIR += dolly
     SUBDIR += downtime
@@ -402,6 +405,7 @@
     SUBDIR += installwatch
     SUBDIR += intel-pcm
     SUBDIR += iocage
+    SUBDIR += iocage-devel
     SUBDIR += iogen
     SUBDIR += iograph
     SUBDIR += ioping
@@ -751,6 +755,7 @@
     SUBDIR += py-filelike
     SUBDIR += py-glances
     SUBDIR += py-halite
+    SUBDIR += py-honcho
     SUBDIR += py-iowait
     SUBDIR += py-nagiosplugin
     SUBDIR += py-ploy
@@ -802,6 +807,7 @@
     SUBDIR += rename
     SUBDIR += renameutils
     SUBDIR += reoback
+    SUBDIR += reptyr
     SUBDIR += respond
     SUBDIR += retail
     SUBDIR += rfstool
@@ -993,7 +999,10 @@
     SUBDIR += ttyload
     SUBDIR += tw_cli
     SUBDIR += tzdialog
+    SUBDIR += u-boot-bananapi
     SUBDIR += u-boot-beaglebone
+    SUBDIR += u-boot-cubieboard
+    SUBDIR += u-boot-cubieboard2
     SUBDIR += u-boot-cubox-hummingboard
     SUBDIR += u-boot-duovero
     SUBDIR += u-boot-pandaboard

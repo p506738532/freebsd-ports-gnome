@@ -52,9 +52,13 @@
     SUBDIR += dbow
     SUBDIR += dbtool
     SUBDIR += dbview
+    SUBDIR += elixir-calecto
     SUBDIR += elixir-ecto
+    SUBDIR += elixir-ecto_migrate
     SUBDIR += elixir-mariaex
+    SUBDIR += elixir-mongo
     SUBDIR += elixir-postgrex
+    SUBDIR += elixir-timex_ecto
     SUBDIR += emma
     SUBDIR += erlang-epgsql
     SUBDIR += erlang-eredis
@@ -126,6 +130,7 @@
     SUBDIR += leo_center
     SUBDIR += leofs
     SUBDIR += leveldb
+    SUBDIR += levigo
     SUBDIR += libdbi
     SUBDIR += libdbi-drivers
     SUBDIR += libdrizzle
@@ -185,6 +190,7 @@
     SUBDIR += monetdb
     SUBDIR += mongodb
     SUBDIR += mrtg-mysql-load
+    SUBDIR += mtools-mongodb
     SUBDIR += mtop
     SUBDIR += mydbf2mysql
     SUBDIR += mydumper

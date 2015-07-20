@@ -212,6 +212,7 @@
     SUBDIR += p5-Switch
     SUBDIR += p5-Tcl
     SUBDIR += p5-Test-XPath
+    SUBDIR += p5-Try-Catch
     SUBDIR += p5-Try-Tiny
     SUBDIR += p5-Try-Tiny-Retry
     SUBDIR += p5-TryCatch
@@ -280,6 +281,7 @@
     SUBDIR += ruby22
     SUBDIR += runawk
     SUBDIR += rust
+    SUBDIR += rust-nightly
     SUBDIR += s9fes
     SUBDIR += sagittarius-scheme
     SUBDIR += sather-specification

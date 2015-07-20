@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	mariaex
-PORTVERSION=	0.3.2
+PORTVERSION=	0.4.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=	databases
 PKGNAMEPREFIX=	elixir-
@@ -11,11 +11,11 @@ COMMENT=	Database driver for MariaDB and MySQL written in Elixir
 
 LICENSE=	APACHE20
 
+USES=		elixir
 USE_GITHUB=	yes
 GH_ACCOUNT=	xerions
 
 MIX_BUILD_DEPS=	devel/elixir-decimal
 MIX_RUN_DEPS:=	${MIX_BUILD_DEPS}
 
-.include "${PORTSDIR}/lang/elixir/bsd.elixir.mk"
 .include <bsd.port.mk>

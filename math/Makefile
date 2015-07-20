@@ -290,6 +290,7 @@
     SUBDIR += octave-forge-dataframe
     SUBDIR += octave-forge-dicom
     SUBDIR += octave-forge-divand
+    SUBDIR += octave-forge-doctest
     SUBDIR += octave-forge-econometrics
     SUBDIR += octave-forge-engine
     SUBDIR += octave-forge-fenv
@@ -550,8 +551,10 @@
     SUBDIR += py-apgl
     SUBDIR += py-basemap
     SUBDIR += py-basemap-data
+    SUBDIR += py-bitmath
     SUBDIR += py-bitvector
     SUBDIR += py-bottleneck
+    SUBDIR += py-colormath
     SUBDIR += py-cryptominisat
     SUBDIR += py-fastcluster
     SUBDIR += py-ffc

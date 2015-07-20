@@ -215,6 +215,7 @@
     SUBDIR += gramofile
     SUBDIR += grip
     SUBDIR += gsm
+    SUBDIR += gsound
     SUBDIR += gspeakers
     SUBDIR += gstreamer-plugins-a52dec
     SUBDIR += gstreamer-plugins-amrnb
@@ -659,7 +660,6 @@
     SUBDIR += rubygem-ruby-mp3info
     SUBDIR += rubygem-ruby-ogginfo
     SUBDIR += rubygem-ruby-shout
-    SUBDIR += rubyripper
     SUBDIR += s3mod
     SUBDIR += sbagen
     SUBDIR += schism

@@ -2,7 +2,6 @@
 
 PORTNAME=	openjdk
 PORTVERSION=	${JDK_MAJOR_VERSION}.${JDK_UPDATE_VERSION}.${JDK_BUILD_NUMBER:S/^0//}
-PORTREVISION=	2
 CATEGORIES=	java devel
 MASTER_SITES=	http://download.java.net/openjdk/jdk${JDK_MAJOR_VERSION}/promoted/b${DIST_BUILD_NUMBER}/:jdk \
 		https://adopt-openjdk.ci.cloudbees.com/job/jtreg/${JTREG_JENKINS_BUILD}/artifact/:jtreg \
@@ -94,8 +93,8 @@ NO_CCACHE=		yes
 NOPRECIOUSMAKEVARS=	yes
 
 JDK_MAJOR_VERSION=	8
-JDK_UPDATE_VERSION=	45
-JDK_BUILD_NUMBER=	14
+JDK_UPDATE_VERSION=	51
+JDK_BUILD_NUMBER=	16
 DIST_BUILD_NUMBER=	132
 JTREG_VERSION=		4.1
 JTREG_BUILD_NUMBER=	b08
@@ -221,6 +220,9 @@ post-extract:
 	    ${WRKSRC}/nashorn/test/script/jfx/kaleidoscope/golden/bsd.png
 	@${CP} ${FILESDIR}/nashorn-test-script-jfx-spread-golden-bsd.png \
 	    ${WRKSRC}/nashorn/test/script/jfx/spread/golden/bsd.png
+.if ${PORT_OPTIONS:MTEST}
+	@${LN} -sf ${WRKDIR}/jtreg/linux/bin ${WRKDIR}/jtreg/
+.endif
 
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.orig' -delete

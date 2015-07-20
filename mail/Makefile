@@ -215,6 +215,7 @@
     SUBDIR += mailagent
     SUBDIR += maildirsync
     SUBDIR += maildrop
+    SUBDIR += mailest
     SUBDIR += mailfmt
     SUBDIR += mailfront
     SUBDIR += mailgraph
@@ -542,6 +543,7 @@
     SUBDIR += queue-fix
     SUBDIR += queue-repair
     SUBDIR += rainloop
+    SUBDIR += rainloop-community
     SUBDIR += raysfilter
     SUBDIR += razor-agents
     SUBDIR += rbl-milter
