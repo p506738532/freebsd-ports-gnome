@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	3.16.2
+PORTVERSION=	3.16.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -32,7 +32,7 @@ RUN_DEPENDS=	gnome-session>=0:${PORTSDIR}/x11/gnome-session \
 PORTSCOUT=	limitw:1,even
 
 USE_XORG=	xxf86misc
-USE_GNOME=	gnomedesktop3 intlhack libxslt
+USE_GNOME=	gnomedesktop3 intltool libxslt
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
