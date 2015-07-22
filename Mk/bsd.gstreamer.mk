@@ -89,9 +89,9 @@ _GSTREAMER_PLUGINS+= \
 # plugins only in 1.0
 .if defined(USE_GSTREAMER1)
 _GSTREAMER_PLUGINS+= \
-		assrender curl dvdread editing-services kate libav \
-		modplug openjpeg png rtmp \
-		spandsp vpx webp x x265 ximagesrc zbar
+		assrender bs2b chromaprint curl dtls dvdread editing-services \
+		kate libav libde265 modplug mpg123 openh264 openjpeg \
+		png rsvg rtmp spandsp vpx webp x x265 ximagesrc zbar
 # vaapi?
 .endif
 
@@ -120,9 +120,13 @@ artsd_DEPENDS=	audio/gstreamer-plugins-artsd
 
 audiofile_DEPENDS=	audio/gstreamer-plugins-audiofile
 
+bs2b_DEPEND=	audio/gstreamer-plugins-bs2b
+
 cdaudio_DEPENDS=	audio/gstreamer-plugins-cdaudio
 
 cdparanoia_DEPENDS=	audio/gstreamer-plugins-cdparanoia
+
+chromaprint_DEPENDS=	audio/gstreamer-plugins-chromaprint
 
 esound_DEPENDS=	audio/gstreamer-plugins-esound
 
@@ -155,6 +159,8 @@ mikmod_DEPENDS=	audio/gstreamer-plugins-mikmod
 modplug_DEPENDS=	audio/gstreamer-plugins-modplug
 
 mp3_DEPENDS=	audio/gstreamer-plugins-mp3
+
+mpg123_DEPENDS=	audio/gstreamer-plugins-mpg123
 
 musepack_DEPENDS=	audio/gstreamer-plugins-musepack
 
@@ -246,6 +252,8 @@ openjpeg_DEPENDS=	graphics/gstreamer-plugins-openjpeg
 
 png_DEPENDS=	graphics/gstreamer-plugins-png
 
+rsvg_DEPENDS=	graphics/gstreamer-plugins-rsvg
+
 webp_DEPENDS=	graphics/gstreamer-plugins-webp
 
 zbar_DEPENDS=	graphics/gstreamer-plugins-zbar
@@ -287,6 +295,8 @@ libav_GST_PREFIX=	gstreamer1-
 libav_GST_SUFX=		# empty
 libav_GST_VERSION=	1.0.0
 
+libde265_DEPEND=	multimedia/gstreamer-plugins-libde265
+
 libfame_DEPENDS=	multimedia/gstreamer-plugins-libfame
 
 mm_DEPENDS=	multimedia/gstreamermm
@@ -299,6 +309,8 @@ mpeg2dec_DEPENDS=	multimedia/gstreamer-plugins-mpeg2dec
 mpeg2enc_DEPENDS=	multimedia/gstreamer-plugins-mpeg2enc
 
 mplex_DEPENDS=	multimedia/gstreamer-plugins-mplex
+
+openh264_DEPEND=	multimedia/gstreamer-plugins-openh264
 
 qt4_DEPENDS=	multimedia/gstreamer-qt4
 qt4_GST_PREFIX=	gstreamer-
@@ -343,6 +355,10 @@ xvid_DEPENDS=	multimedia/gstreamer-plugins-xvid
 #-- Net Plugins Section ---------------------------------------------------#
 
 libmms_DEPENDS=	net/gstreamer-plugins-libmms
+
+#-- security plugins section ----------------------------------------------#
+
+dtls_DEPEND=	security/gstreamer-plugins-dtls
 
 #-- sysutils plugins section ----------------------------------------------#
 

@@ -129,8 +129,10 @@
     SUBDIR += gstreamer1-plugins-gnonlin
     SUBDIR += gstreamer1-plugins-good
     SUBDIR += gstreamer1-plugins-kate
+    SUBDIR += gstreamer1-plugins-libde265
     SUBDIR += gstreamer1-plugins-mpeg2dec
     SUBDIR += gstreamer1-plugins-mpeg2enc
+    SUBDIR += gstreamer1-plugins-openh264
     SUBDIR += gstreamer1-plugins-resindvd
     SUBDIR += gstreamer1-plugins-rtmp
     SUBDIR += gstreamer1-plugins-schroedinger
