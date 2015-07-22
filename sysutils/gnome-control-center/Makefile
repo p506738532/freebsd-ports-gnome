@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	3.16.2
+PORTVERSION=	3.16.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -40,7 +40,7 @@ CONFLICTS=	gnome-media-2.[0-9]*
 PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake pathfix pkgconfig tar:xz
-USE_GNOME=	gnomedesktop3 gnomemenus3 intlhack libxml2
+USE_GNOME=	gnomedesktop3 gnomemenus3 intltool libxml2
 USE_XORG=	xscrnsaver x11 xxf86misc kbproto xi
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
