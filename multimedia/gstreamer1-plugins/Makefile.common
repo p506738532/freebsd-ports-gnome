@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/gstreamer1-plugins/Makefile.common 375594 2014-12-25 19:04:25Z antoine $
+# $FreeBSD$
 
 BASE_GST_ALL_PLUGINS= \
 		alsa \
@@ -14,6 +14,7 @@ BASE_GST_ALL_PLUGINS= \
 
 BAD_GST_ALL_PLUGINS+= \
 		assrender \
+		chromaprint \
 		curl \
 		dts \
 		faac \
@@ -26,6 +27,7 @@ BAD_GST_ALL_PLUGINS+= \
 		librfb \
 		modplug \
 		mpeg2enc \
+		mpg123 \
 		mplex \
 		neon \
 		ofa \
@@ -36,6 +38,7 @@ BAD_GST_ALL_PLUGINS+= \
 		opus \
 		resindvd \
 		rtmp \
+		rsvg \
 		schro \
 		soundtouch \
 		spandsp \
@@ -45,30 +48,27 @@ BAD_GST_ALL_PLUGINS+= \
 
 # plugins not yet ported to the 1.0 API, or not portable
 BAD_GST_ALL_PLUGINS+= \
+		acm \
 		apexsink \
-		chromaprint \
-		decklink \
-		directfb \
-		ladspa \
+		cdxaparse \
+		dc1394 \
+		dccp \
+		faceoverlay \
+		hdvparse \
 		linsys \
 		lv2 \
-		mimic \
-		mpg123 \
 		musepack \
+		mve \
 		nas \
-		opensles \
-		pvr \
-		rsvg \
+		nuvdemux \
+		patchdetect \
+		sdi \
 		sdl \
-		sndfile \
 		sndio \
-		spc \
 		teletextdec \
 		timidity \
-		vdpau \
-		voaacenc \
-		voamrwbenc \
-		wayland \
+		tta \
+		wininet \
 		xvid
 
 # --with-egl-window-system=none --disable-opengl --disable-gles2 --disable-egl --disable-glx \
@@ -114,8 +114,8 @@ GOOD_GST_ALL_PLUGINS+= \
 		taglib \
 		vpx \
 		wavpack \
-		x
-#	xxx	pulse \
+		x \
+		pulse
 
 GOOD_GST_NON_PLUGINS=	\
 		--disable-dv1394 \
@@ -220,6 +220,9 @@ gst_cdparanoia_LIB_DEPENDS=	libcdda_interface.so:${PORTSDIR}/audio/cdparanoia
 # cdio
 gst_cdio_LIB_DEPENDS=	libcdio.so:${PORTSDIR}/sysutils/libcdio
 
+# chromaprint
+gst_chromaprint_LIB_DEPENDS=	libchromaprint.so:${PORTSDIR}/audio/chromaprint
+
 # curl
 gst_curl_LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 
@@ -253,7 +256,8 @@ gst_gdk_pixbuf_PLIST_FILES=	${GST_LIB_DIR}/libgstgdkpixbuf.so
 
 # gl
 gst_gl_USE_GL=	gl glu glesv2 egl
-gst_gl_USE_GNOME=	introspection:build
+#xxxx do we need it?
+#gst_gl_USE_GNOME=	introspection:build
 gst_gl_CONFIGURE_ARGS=	--enable-gl --enable-glx \
 			--enable-egl --enable-gles2
 gst_gl_PLIST_FILES=		#
@@ -303,6 +307,9 @@ gst_mpeg2enc_LIB_DEPENDS=	libmjpegutils.so:${PORTSDIR}/multimedia/mjpegtools
 # mpeg2dec
 gst_mpeg2dec_LIB_DEPENDS=	libmpeg2.so:${PORTSDIR}/multimedia/libmpeg2
 
+# mpg123
+gst_mpg123_LIB_DEPENDS=	libmpg123.so:${PORTSDIR}/audio/mpg123
+
 # neon
 gst_neon_LIB_DEPENDS+=  libneon.so:${PORTSDIR}/www/neon
 gst_neon_PLIST_FILES=	${GST_LIB_DIR}/libgstneonhttpsrc.so
@@ -334,6 +341,9 @@ gst_resindvd_RUN_DEPENDS=	libdvdnav>=4.1.2:${PORTSDIR}/multimedia/libdvdnav
 
 # rtmp xxx
 gst_rtmp_LIB_DEPENDS=	librtmp.so.0:${PORTSDIR}/multimedia/librtmp
+
+# rsvg
+gst_rsvg_USE_GNOME=	librsvg2
 
 # shout2
 gst_shout2_LIB_DEPENDS=	libshout.so:${PORTSDIR}/audio/libshout

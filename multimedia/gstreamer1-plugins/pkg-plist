@@ -186,7 +186,7 @@ share/gir-1.0/GstRtsp-%%VERSION%%.gir
 share/gir-1.0/GstSdp-%%VERSION%%.gir
 share/gir-1.0/GstTag-%%VERSION%%.gir
 share/gir-1.0/GstVideo-%%VERSION%%.gir
-share/gst-plugins-base/1.0/license-translations.dict
+share/gst-plugins-base/%%VERSION%%/license-translations.dict
 share/locale/af/LC_MESSAGES/gst-plugins-base-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/gst-plugins-base-%%VERSION%%.mo
 share/locale/bg/LC_MESSAGES/gst-plugins-base-%%VERSION%%.mo

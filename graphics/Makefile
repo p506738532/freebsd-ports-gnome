@@ -314,6 +314,7 @@
     SUBDIR += gstreamer1-plugins-opencv
     SUBDIR += gstreamer1-plugins-openjpeg
     SUBDIR += gstreamer1-plugins-png
+    SUBDIR += gstreamer1-plugins-rsvg
     SUBDIR += gstreamer1-plugins-webp
     SUBDIR += gstreamer1-plugins-zbar
     SUBDIR += gthumb
