@@ -598,6 +598,7 @@
     SUBDIR += pocketsphinx
     SUBDIR += portaudio
     SUBDIR += praat
+    SUBDIR += pragha
     SUBDIR += puddletag
     SUBDIR += pulseaudio
     SUBDIR += pure-audio
