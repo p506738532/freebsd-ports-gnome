@@ -90,7 +90,7 @@ _GSTREAMER_PLUGINS+= \
 .if defined(USE_GSTREAMER1)
 _GSTREAMER_PLUGINS+= \
 		assrender bs2b chromaprint curl dtls dvdread editing-services \
-		kate libav libde265 modplug mpg123 openh264 openjpeg \
+		hls kate libav libde265 modplug mpg123 openh264 openjpeg \
 		png rsvg rtmp spandsp vpx webp x x265 ximagesrc zbar
 # vaapi?
 .endif
@@ -287,6 +287,8 @@ dvd_DEPENDS=	multimedia/gstreamer-plugins-dvd
 good_DEPENDS=	multimedia/gstreamer-plugins-good
 
 gnonlin_DEPENDS=	multimedia/gstreamer-plugins-gnonlin
+
+hls_DEPEND=	multimedia/gstreamer-plugins-hls
 
 kate_DEPENDS=		multimedia/gstreamer-plugins-kate
 
