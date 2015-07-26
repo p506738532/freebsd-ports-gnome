@@ -128,6 +128,7 @@
     SUBDIR += gstreamer1-plugins-dvdread
     SUBDIR += gstreamer1-plugins-gnonlin
     SUBDIR += gstreamer1-plugins-good
+    SUBDIR += gstreamer1-plugins-hls
     SUBDIR += gstreamer1-plugins-kate
     SUBDIR += gstreamer1-plugins-libde265
     SUBDIR += gstreamer1-plugins-mpeg2dec

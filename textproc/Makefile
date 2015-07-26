@@ -279,6 +279,7 @@
     SUBDIR += htdig
     SUBDIR += html
     SUBDIR += html-pretty
+    SUBDIR += html-xml-utils
     SUBDIR += html2fo
     SUBDIR += html2tex
     SUBDIR += html2text
@@ -1175,7 +1176,6 @@
     SUBDIR += py-Tempita
     SUBDIR += py-acora
     SUBDIR += py-alabaster
-    SUBDIR += py-asciinema
     SUBDIR += py-asv
     SUBDIR += py-bugzillatools
     SUBDIR += py-chardet
