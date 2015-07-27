@@ -4141,6 +4141,7 @@
     SUBDIR += py-qt4-scripttools
     SUBDIR += py-qt4-test
     SUBDIR += py-rauth
+    SUBDIR += py-raven
     SUBDIR += py-repl
     SUBDIR += py-repoze.lru
     SUBDIR += py-repoze.tm2
@@ -4196,6 +4197,7 @@
     SUBDIR += py-speaklater
     SUBDIR += py-sqlcc
     SUBDIR += py-statgrab
+    SUBDIR += py-stdnum
     SUBDIR += py-stevedore
     SUBDIR += py-stsci.distutils
     SUBDIR += py-subversion
