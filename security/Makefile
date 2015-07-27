@@ -781,6 +781,7 @@
     SUBDIR += py-Products.PluggableAuthService
     SUBDIR += py-RestrictedPython
     SUBDIR += py-SecretStorage
+    SUBDIR += py-artifacts
     SUBDIR += py-bcrypt
     SUBDIR += py-borg.localrole
     SUBDIR += py-cerealizer
@@ -923,12 +924,10 @@
     SUBDIR += rubygem-metasploit-payloads
     SUBDIR += rubygem-metasploit_data_models
     SUBDIR += rubygem-net-scp
-    SUBDIR += rubygem-net-scp11
     SUBDIR += rubygem-net-sftp
     SUBDIR += rubygem-net-ssh
     SUBDIR += rubygem-net-ssh-gateway
     SUBDIR += rubygem-net-ssh-multi
-    SUBDIR += rubygem-net-ssh27
     SUBDIR += rubygem-nmap-parser
     SUBDIR += rubygem-omniauth
     SUBDIR += rubygem-omniauth-bitbucket
@@ -1002,6 +1001,7 @@
     SUBDIR += sshguard
     SUBDIR += sshguard-ipfilter
     SUBDIR += sshguard-ipfw
+    SUBDIR += sshguard-null
     SUBDIR += sshguard-pf
     SUBDIR += sshit
     SUBDIR += sshpass
