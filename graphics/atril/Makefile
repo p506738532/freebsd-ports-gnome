@@ -37,6 +37,7 @@ INSTALL_TARGET=	install-strip
 
 .if ${SLAVEPORT} == lite
 CONFIGURE_ARGS+=--disable-thumbnailer \
+		--without-matedesktop \
 		--disable-previewer
 .else
 USE_MATE+=	desktop
@@ -62,7 +63,7 @@ CAJA_USE=		MATE=caja
 DJVU_LIB_DEPENDS=	libdjvulibre.so:${PORTSDIR}/graphics/djvulibre
 DJVU_CONFIGURE_ENABLE=	djvu
 COMICS_CONFIGURE_ENABLE=	comics
-KEYRING_CONFIGURE_ENABLE=	keyring
+KEYRING_CONFIGURE_WITH=	keyring
 KEYRING_LIB_DEPENDS=	libsecret-1.so:${PORTSDIR}/security/libsecret
 XPS_CONFIGURE_ENABLE=	xps
 XPS_LIB_DEPENDS=	libgxps.so:${PORTSDIR}/graphics/libgxps

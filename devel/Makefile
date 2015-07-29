@@ -101,7 +101,6 @@
     SUBDIR += autogen
     SUBDIR += automake
     SUBDIR += automake-wrapper
-    SUBDIR += automake14
     SUBDIR += automoc4
     SUBDIR += autotools
     SUBDIR += avalon-framework
@@ -409,6 +408,7 @@
     SUBDIR += elftoaout
     SUBDIR += elixir-bson
     SUBDIR += elixir-calendar
+    SUBDIR += elixir-combine
     SUBDIR += elixir-conform
     SUBDIR += elixir-coverex
     SUBDIR += elixir-csv
@@ -416,6 +416,7 @@
     SUBDIR += elixir-dialyze
     SUBDIR += elixir-estree
     SUBDIR += elixir-exactor
+    SUBDIR += elixir-excoveralls
     SUBDIR += elixir-exjsx
     SUBDIR += elixir-exprotobuf
     SUBDIR += elixir-exrm
@@ -455,6 +456,7 @@
     SUBDIR += erlang-gproc
     SUBDIR += erlang-jobs
     SUBDIR += erlang-jsx
+    SUBDIR += erlang-jsxd
     SUBDIR += erlang-lager
     SUBDIR += erlang-lager_syslog
     SUBDIR += erlang-meck
