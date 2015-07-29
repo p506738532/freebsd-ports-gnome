@@ -12,10 +12,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	MATE multi-format document viewer
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
-
 LIB_DEPENDS=	libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib \
 		libspectre.so:${PORTSDIR}/print/libspectre
-
 RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme \
 
 PORTSCOUT=	limitw:1,even
@@ -23,7 +21,7 @@ SLAVEPORT?=	no
 
 USES=		desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig tar:xz
-USE_MATE=	icontheme
+USE_MATE=	desktop icontheme
 USE_XORG=	sm
 USE_GNOME=	cairo gtk20 intltool libxml2
 USE_LDCONFIG=	yes
@@ -37,9 +35,11 @@ INSTALL_TARGET=	install-strip
 
 .if ${SLAVEPORT} == lite
 CONFIGURE_ARGS+=--disable-thumbnailer \
+		--disable-introspection \
 		--disable-previewer
 .else
-USE_MATE+=	desktop
+CONFIGURE_ARGS+=--enable-introspection
+USE_GNOME+=	introspection:build
 .endif
 
 GLIB_SCHEMAS=	org.mate.Atril.gschema.xml
@@ -62,24 +62,12 @@ CAJA_USE=		MATE=caja
 DJVU_LIB_DEPENDS=	libdjvulibre.so:${PORTSDIR}/graphics/djvulibre
 DJVU_CONFIGURE_ENABLE=	djvu
 COMICS_CONFIGURE_ENABLE=	comics
-KEYRING_CONFIGURE_ENABLE=	keyring
+KEYRING_CONFIGURE_WITH=	keyring
 KEYRING_LIB_DEPENDS=	libsecret-1.so:${PORTSDIR}/security/libsecret
 XPS_CONFIGURE_ENABLE=	xps
 XPS_LIB_DEPENDS=	libgxps.so:${PORTSDIR}/graphics/libgxps
 EPUB_CONFIGURE_ENABLE=	epub
 EPUB_LIB_DEPENDS=	libwebkitgtk-1.0.so:${PORTSDIR}/www/webkit-gtk2
-
-OPTIONS_SUB=	yes
-
-CAJA_CONFIGURE_ENABLE=	caja
-CAJA_USE=		MATE=caja
-DJVU_LIB_DEPENDS=	libdjvulibre.so:${PORTSDIR}/graphics/djvulibre
-DJVU_CONFIGURE_ENABLE=	djvu
-COMICS_CONFIGURE_ENABLE=	comics
-KEYRING_CONFIGURE_WITH=	keyring
-KEYRING_LIB_DEPENDS=	libsecret-1.so:${PORTSDIR}/security/libsecret
-XPS_CONFIGURE_ENABLE=	xps
-XPS_LIB_DEPENDS=	libgxps.so:${PORTSDIR}/graphics/libgxps
 
 .include <bsd.port.options.mk>
 
