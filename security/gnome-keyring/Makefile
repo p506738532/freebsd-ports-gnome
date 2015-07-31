@@ -24,7 +24,8 @@ RUN_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss
 PORTSCOUT=	limitw:1,even
 
 USE_GNOME=	gtk30 intlhack libxslt:build
-USES=		cpe gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		compiler:c11 cpe gettext gmake libtool pathfix \
+		pkgconfig tar:xz
 CPE_VENDOR=	gnome
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
