@@ -75,8 +75,11 @@
     SUBDIR += gnome-clipboard-daemon
     SUBDIR += gnome-desktop
     SUBDIR += gnome-desktop-reference
+    SUBDIR += gnome-flashback
     SUBDIR += gnome-menus
+    SUBDIR += gnome-panel
     SUBDIR += gnome-pie
+    SUBDIR += gnome-screensaver
     SUBDIR += gnome-session
     SUBDIR += gnome-shell
     SUBDIR += gnome-shell-extensions
