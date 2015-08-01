@@ -8,7 +8,6 @@ bin/tracker-search
 bin/tracker-sparql
 bin/tracker-stats
 bin/tracker-tag
-etc/bash_completion.d/tracker-prompt.sh
 etc/xdg/autostart/tracker-extract.desktop
 etc/xdg/autostart/tracker-miner-apps.desktop
 etc/xdg/autostart/tracker-miner-fs.desktop
@@ -39,15 +38,15 @@ lib/girepository-%%TRACKER_VER%%/TrackerMiner-1.0.typelib
 lib/libtracker-control-%%TRACKER_VER%%.a
 lib/libtracker-control-%%TRACKER_VER%%.so
 lib/libtracker-control-%%TRACKER_VER%%.so.0
-lib/libtracker-control-%%TRACKER_VER%%.so.0.%%LIBVER%%.0
+lib/libtracker-control-%%TRACKER_VER%%.so.0.%%LIBVER%%.1
 lib/libtracker-miner-%%TRACKER_VER%%.a
 lib/libtracker-miner-%%TRACKER_VER%%.so
 lib/libtracker-miner-%%TRACKER_VER%%.so.0
-lib/libtracker-miner-%%TRACKER_VER%%.so.0.%%LIBVER%%.0
+lib/libtracker-miner-%%TRACKER_VER%%.so.0.%%LIBVER%%.1
 lib/libtracker-sparql-%%TRACKER_VER%%.a
 lib/libtracker-sparql-%%TRACKER_VER%%.so
 lib/libtracker-sparql-%%TRACKER_VER%%.so.0
-lib/libtracker-sparql-%%TRACKER_VER%%.so.0.%%LIBVER%%.0
+lib/libtracker-sparql-%%TRACKER_VER%%.so.0.%%LIBVER%%.1
 %%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-tracker-tags.a
 %%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-tracker-tags.so
 %%DOCUMENT_MINERS%%lib/tracker-%%TRACKER_VER%%/extract-modules/libextract-abw.a
@@ -149,6 +148,7 @@ share/appdata/tracker-preferences.appdata.xml
 share/applications/tracker-needle.desktop
 share/applications/tracker-preferences.desktop
 %%WEB_MINERS%%share/applications/trackerbird-launcher.desktop
+share/bash-completion/completions/tracker
 share/dbus-1/services/org.freedesktop.Tracker1.Miner.Applications.service
 share/dbus-1/services/org.freedesktop.Tracker1.Miner.Extract.service
 share/dbus-1/services/org.freedesktop.Tracker1.Miner.Files.service
@@ -170,7 +170,6 @@ share/gtk-doc/html/libtracker-control/left-insensitive.png
 share/gtk-doc/html/libtracker-control/TrackerMinerManager.html
 share/gtk-doc/html/libtracker-control/right.png
 share/gtk-doc/html/libtracker-control/left.png
-share/gtk-doc/html/libtracker-control/index.sgml
 share/gtk-doc/html/libtracker-control/annotation-glossary.html
 share/gtk-doc/html/libtracker-control/index.html
 share/gtk-doc/html/libtracker-miner/libtracker-miner-TrackerFileEnumerator.html
@@ -181,7 +180,6 @@ share/gtk-doc/html/libtracker-miner/libtracker-miner-TrackerFileDataProvider.htm
 share/gtk-doc/html/libtracker-miner/ch02.html
 share/gtk-doc/html/libtracker-miner/left-insensitive.png
 share/gtk-doc/html/libtracker-miner/libtracker-miner-reference.html
-share/gtk-doc/html/libtracker-miner/index.sgml
 share/gtk-doc/html/libtracker-miner/home.png
 share/gtk-doc/html/libtracker-miner/libtracker-miner-TrackerThumbnailer.html
 share/gtk-doc/html/libtracker-miner/ch03.html
@@ -215,7 +213,6 @@ share/gtk-doc/html/libtracker-sparql/left.png
 share/gtk-doc/html/libtracker-sparql/libtracker-sparql-Version-Information.html
 share/gtk-doc/html/libtracker-sparql/tracker-overview-environment-variables.html
 share/gtk-doc/html/libtracker-sparql/style.css
-share/gtk-doc/html/libtracker-sparql/index.sgml
 share/gtk-doc/html/libtracker-sparql/tracker-overview-connection-methods.html
 share/gtk-doc/html/libtracker-sparql/index.html
 share/gtk-doc/html/libtracker-sparql/tracker-examples-writeonly-with-blank-nodes.html
@@ -241,6 +238,7 @@ share/icons/hicolor/scalable/apps/tracker.svg
 share/locale/ar/LC_MESSAGES/tracker.mo
 share/locale/as/LC_MESSAGES/tracker.mo
 share/locale/be@latin/LC_MESSAGES/tracker.mo
+share/locale/bg/LC_MESSAGES/tracker.mo
 share/locale/bs/LC_MESSAGES/tracker.mo
 share/locale/ca/LC_MESSAGES/tracker.mo
 share/locale/ca@valencia/LC_MESSAGES/tracker.mo
