@@ -14,7 +14,8 @@ LIB_DEPENDS=	libwebkit2gtk-4.0.so:${PORTSDIR}/www/webkit2-gtk3
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		compiler:c++11-lib gettext gmake libtool pathfix \
+		pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack libxslt
 USE_XORG=	x11
 GNU_CONFIGURE=	yes
