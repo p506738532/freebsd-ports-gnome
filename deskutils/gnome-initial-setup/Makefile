@@ -1,6 +1,5 @@
 # Created by: Gustau Perez <gustau.perez@gmail.com>
 # $FreeBSD$
-#   $MCom: ports/trunk/deskutils/gnome-initial-setup/Makefile 20032 2014-11-02 21:57:34Z kwm $
 
 PORTNAME=	gnome-initial-setup
 PORTVERSION=	3.16.3
@@ -19,7 +18,8 @@ LIB_DEPENDS=	libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
 		libgweather-3.so:${PORTSDIR}/net/libgweather
 RUN_DEPENDS=	gdm>=3.0.0:${PORTSDIR}/x11/gdm
 
-USES=		autoreconf:build gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		autoreconf compiler:c++11-lib gettext gmake libtool \
+		pathfix pkgconfig tar:xz
 USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -43,8 +43,5 @@ EXTRA_PATCHES+=		${FILESDIR}/extra-patch-gnome-initial-setup_gis-account-page.c
 post-patch:
 		@${REINPLACE_CMD} -e 's|krb5/krb5.h|krb5.h|g' \
 			${WRKSRC}/gnome-initial-setup/pages/account/um-realm-manager.c
-
-pre-configure:
-		cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
 
 .include <bsd.port.mk>
