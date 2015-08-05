@@ -17,6 +17,7 @@ LIB_DEPENDS=	libnss3.so:${PORTSDIR}/security/nss \
 		libgtkspell3-3.so:${PORTSDIR}/textproc/gtkspell3 \
 		libgeocode-glib.so:${PORTSDIR}/net/geocode-glib \
 		libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
+		libcryptui.so:${PORTSDIR}/security/libcryptui \
 		libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 		libnotify.so:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	highlight:${PORTSDIR}/textproc/highlight \
@@ -33,7 +34,6 @@ INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-nss=yes \
 		--disable-autoar \
-		--disable-libcryptui \
 		--with-sub-version=" FreeBSD GNOME Team Port"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

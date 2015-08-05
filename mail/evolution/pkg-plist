@@ -441,7 +441,6 @@ include/evolution/mail/e-mail-print-config-headers.h
 include/evolution/mail/e-mail-printer.h
 include/evolution/mail/e-mail-reader-utils.h
 include/evolution/mail/e-mail-reader.h
-include/evolution/mail/e-mail-remote-content.h
 include/evolution/mail/e-mail-request.h
 include/evolution/mail/e-mail-send-account-override.h
 include/evolution/mail/e-mail-sidebar.h

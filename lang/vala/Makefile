@@ -25,8 +25,4 @@ VALA_VER=	${PORTVERSION:R}
 # of using VALA_VER. Replace 0.30 with VALA_VER when vala gets to 0.30.0
 PLIST_SUB=	VERSION=0.30
 
-post-install:
-	${LN} -fs ${PREFIX}/libdata/pkgconfig/libvala-${VALA_VER}.pc \
-		${STAGEDIR}${PREFIX}/libdata/pkgconfig/vala-1.0.pc
-
 .include <bsd.port.mk>

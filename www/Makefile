@@ -715,6 +715,7 @@
     SUBDIR += p5-Catalyst-Controller-HTML-FormFu
     SUBDIR += p5-Catalyst-Controller-RateLimit
     SUBDIR += p5-Catalyst-Controller-RequestToken
+    SUBDIR += p5-Catalyst-Controller-SOAP
     SUBDIR += p5-Catalyst-Devel
     SUBDIR += p5-Catalyst-DispatchType-Regex
     SUBDIR += p5-Catalyst-Engine-Apache
@@ -1080,6 +1081,7 @@
     SUBDIR += p5-Net-Akismet
     SUBDIR += p5-Net-Amazon-AWIS
     SUBDIR += p5-Net-Async-FastCGI
+    SUBDIR += p5-Net-Async-HTTP
     SUBDIR += p5-Net-FastCGI
     SUBDIR += p5-Net-FireEagle
     SUBDIR += p5-Net-Flickr-API
@@ -1550,12 +1552,12 @@
     SUBDIR += py-django-tagging
     SUBDIR += py-django-taggit
     SUBDIR += py-django-tastypie
-    SUBDIR += py-django16-tastypie
     SUBDIR += py-django-threaded-multihost
     SUBDIR += py-django-tinymce
     SUBDIR += py-django-voting
     SUBDIR += py-django14
     SUBDIR += py-django16
+    SUBDIR += py-django16-tastypie
     SUBDIR += py-django17
     SUBDIR += py-django_compressor
     SUBDIR += py-djangotoolbox
@@ -1584,6 +1586,7 @@
     SUBDIR += py-flup
     SUBDIR += py-formalchemy
     SUBDIR += py-formencode
+    SUBDIR += py-frappe-bench
     SUBDIR += py-frozen-flask
     SUBDIR += py-funkload
     SUBDIR += py-gandi.cli
@@ -1901,7 +1904,6 @@
     SUBDIR += rubygem-merb-haml
     SUBDIR += rubygem-merb-helpers
     SUBDIR += rubygem-merb-param-protection
-    SUBDIR += rubygem-modernizr
     SUBDIR += rubygem-mousetrap-rails
     SUBDIR += rubygem-multipart-post
     SUBDIR += rubygem-nanoc
@@ -2037,6 +2039,7 @@
     SUBDIR += swish++
     SUBDIR += swish-e
     SUBDIR += sws
+    SUBDIR += sxweb
     SUBDIR += syndigator
     SUBDIR += tclhttpd
     SUBDIR += tclwebtest
@@ -2126,7 +2129,6 @@
     SUBDIR += transmission-web
     SUBDIR += transproxy
     SUBDIR += trytond28_google_maps
-    SUBDIR += trytond_google_maps
     SUBDIR += tt-rss
     SUBDIR += ttf2eot
     SUBDIR += twig

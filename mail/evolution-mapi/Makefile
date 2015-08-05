@@ -24,12 +24,14 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -Wno-error=format-nonliteral
 CFLAGS+=	-I${LOCALBASE}/include -Wno-error=format-nonliteral
 LDFLAGS+=	-L${LOCALBASE}/lib
+CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/
 INSTALL_TARGET=	install-strip
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|(libdir)/pkgconfig|(prefix)/libdata/pkgconfig|g' \
 		${WRKSRC}/src/libexchangemapi/Makefile.in
 	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
+		-e 's|$$(prefix)/$$(DATADIRNAME)/|$$(prefix)/share/|g' \
 	    	${WRKSRC}/configure
 
 .include <bsd.port.mk>

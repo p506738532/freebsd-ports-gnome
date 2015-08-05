@@ -1,6 +1,5 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/trunk/accessibility/caribou/Makefile 20031 2014-11-02 21:47:55Z kwm $
 
 PORTNAME=	caribou
 PORTVERSION=	0.4.18.1
@@ -33,6 +32,5 @@ INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS=	--enable-gtk2-module=no
 GLIB_SCHEMAS=	org.gnome.caribou.gschema.xml \
 		org.gnome.antler.gschema.xml
-python_CMD=	${PYTHON_CMD}
 
 .include <bsd.port.mk>

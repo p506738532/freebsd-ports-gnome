@@ -370,6 +370,7 @@
     SUBDIR += liblo
     SUBDIR += liblscp
     SUBDIR += libmad
+    SUBDIR += libmatemixer
     SUBDIR += libmikmod
     SUBDIR += libmodplug
     SUBDIR += libmp3-archive-perl
@@ -595,6 +596,7 @@
     SUBDIR += pocketsphinx
     SUBDIR += portaudio
     SUBDIR += praat
+    SUBDIR += pragha
     SUBDIR += puddletag
     SUBDIR += pulseaudio
     SUBDIR += pure-audio

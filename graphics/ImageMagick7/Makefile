@@ -2,6 +2,7 @@
 
 PORTNAME=	ImageMagick
 DISTVERSION=	7.0.0-0~beta${DATE}
+PORTREVISION=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	http://www.imagemagick.org/download/ \
 		http://www.imagemagick.org/download/beta/ \
@@ -225,7 +226,11 @@ PLIST_SUB+=		TIFF="@comment "
 
 .if ${PORT_OPTIONS:MGSLIB}
 CONFIGURE_ARGS+=	--with-gslib
-USE_GHOSTSCRIPT=	yes
+. if ${PORT_OPTIONS:MX11}
+USES+=		ghostscript
+. else
+USES+=		ghostscript:nox11
+. endif
 .else
 CONFIGURE_ARGS+=	--without-gslib
 .endif
@@ -358,7 +363,11 @@ PLIST_SUB+=		PANGO="@comment "
 
 # PDF (Adobe Portable Document Format) support
 .if ${PORT_OPTIONS:MPDF}
-USE_GHOSTSCRIPT=	yes
+. if ${PORT_OPTIONS:MX11}
+USES+=		ghostscript
+. else
+USES+=		ghostscript:nox11
+. endif
 .endif
 
 .if ! ${PORT_OPTIONS:MX11}
@@ -381,10 +390,14 @@ INSTALL_TARGET=	install-strip
 .endif
 
 .if ${PORT_OPTIONS:MTESTS}
-USE_GHOSTSCRIPT_BUILD=yes
+. if ${PORT_OPTIONS:MX11}
+USES+=		ghostscript:build
+. else
+USES+=		ghostscript:build,nox11
+. endif
 .endif
 
-.if ${USER} == kwm
+.if defined(USER) && ${USER} == kwm
 upload:
 	scp ${DISTDIR}/${DISTNAME}.tar.xz \
 		kwm@freefall.freebsd.org:public_distfiles/

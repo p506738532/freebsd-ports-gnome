@@ -58,6 +58,590 @@ Notes:
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="da451130-365d-11e5-a4a5-002590263bf5">
+    <topic>xen-tools -- QEMU heap overflow flaw with certain ATAPI commands</topic>
+    <affects>
+      <package>
+	<name>xen-tools</name>
+	<range><lt>4.5.0_9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Xen Project reports:</p>
+	<blockquote cite="http://xenbits.xen.org/xsa/advisory-138.html">
+	  <p>A heap overflow flaw was found in the way QEMU's IDE subsystem
+	    handled I/O buffer access while processing certain ATAPI
+	    commands.</p>
+	  <p>A privileged guest user in a guest with CDROM drive enabled could
+	    potentially use this flaw to execute arbitrary code on the host
+	    with the privileges of the host's QEMU process corresponding to
+	    the guest.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-5154</cvename>
+      <url>http://xenbits.xen.org/xsa/advisory-138.html</url>
+    </references>
+    <dates>
+      <discovery>2015-07-27</discovery>
+      <entry>2015-08-04</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="4622635f-37a1-11e5-9970-14dae9d210b8">
+    <topic>net-snmp -- snmptrapd crash</topic>
+    <affects>
+      <package>
+	<name>net-snmp</name>
+	<range><ge>5.7.0</ge><le>5.7.2.1</le></range>
+	<range><ge>5.6.0</ge><le>5.6.2.1</le></range>
+	<range><ge>5.5.0</ge><le>5.5.2.1</le></range>
+	<range><ge>5.4.0</ge><le>5.4.4</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Murray McAllister reports:</p>
+	<blockquote cite="http://seclists.org/oss-sec/2014/q3/473">
+	  <p>A remote denial-of-service flaw was found in the way
+	    snmptrapd handled certain SNMP traps when started with the
+	    "-OQ" option. If an attacker sent an SNMP trap containing a
+	    variable with a NULL type where an integer variable type was
+	    expected, it would cause snmptrapd to crash.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://seclists.org/oss-sec/2014/q3/473</url>
+      <url>http://sourceforge.net/p/net-snmp/code/ci/7f4a7b891332899cea26e95be0337aae01648742/</url>
+      <url>https://sourceforge.net/p/net-snmp/official-patches/48/</url>
+      <cvename>CVE-2014-3565</cvename>
+    </references>
+    <dates>
+      <discovery>2014-07-31</discovery>
+      <entry>2015-07-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="381183e8-3798-11e5-9970-14dae9d210b8">
+    <topic>net-snmp -- snmp_pdu_parse() function incomplete initialization</topic>
+    <affects>
+      <package>
+	<name>net-snmp</name>
+	<range><le>5.7.3_7</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Qinghao Tang reports:</p>
+	<blockquote cite="http://seclists.org/oss-sec/2015/q2/116">
+	  <p>Incompletely initialized vulnerability exists in the function
+	    ‘snmp_pdu_parse()’ of ‘snmp_api.c', and remote attackers can cause memory
+	    leak, DOS and possible command executions by sending malicious packets.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://seclists.org/oss-sec/2015/q2/116</url>
+      <url>http://sourceforge.net/p/net-snmp/code/ci/f23bcd3ac6ddee5d0a48f9703007ccc738914791/</url>
+      <url>https://bugzilla.redhat.com/show_bug.cgi?id=1212408</url>
+      <cvename>CVE-2015-5621</cvename>
+    </references>
+    <dates>
+      <discovery>2015-04-11</discovery>
+      <entry>2015-07-31</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="731cdeaa-3564-11e5-9970-14dae9d210b8">
+    <topic>bind -- denial of service vulnerability</topic>
+    <affects>
+      <package>
+	<name>bind910</name>
+	<range><lt>9.10.2P3</lt></range>
+      </package>
+      <package>
+	<name>bind99</name>
+	<range><lt>9.9.7P2</lt></range>
+      </package>
+      <package>
+	<name>bind910-base</name>
+	<name>bind99-base</name>
+	<range><gt>0</gt></range>
+      </package>
+      <package>
+	<name>FreeBSD</name>
+	<range><gt>9.3</gt><le>9.3_20</le></range>
+	<range><gt>8.4</gt><le>8.4_34</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>ISC reports:</p>
+	<blockquote cite="https://kb.isc.org/article/AA-01272/">
+	  <p>An error in the handling of TKEY queries can be exploited
+	    by an attacker for use as a denial-of-service vector, as a constructed
+	    packet can use the defect to trigger a REQUIRE assertion failure,
+	    causing BIND to exit.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-5477</cvename>
+      <url>https://kb.isc.org/article/AA-01272/</url>
+    </references>
+    <dates>
+      <discovery>2015-07-21</discovery>
+      <entry>2015-07-28</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="5b74a5bc-348f-11e5-ba05-c80aa9043978">
+    <topic>OpenSSH -- MaxAuthTries limit bypass via duplicates in KbdInteractiveDevices</topic>
+    <affects>
+      <package>
+	<name>openssh-portable</name>
+	<range><lt>6.9.p1_2,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<blockquote cite="https://access.redhat.com/security/cve/CVE-2015-5600">
+	  <p>It was discovered that the OpenSSH sshd daemon did not check the
+	    list of keyboard-interactive authentication methods for duplicates.
+	    A remote attacker could use this flaw to bypass the MaxAuthTries
+	    limit, making it easier to perform password guessing attacks.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://access.redhat.com/security/cve/CVE-2015-5600</url>
+      <cvename>CVE-2015-5600</cvename>
+    </references>
+    <dates>
+      <discovery>2015-07-21</discovery>
+      <entry>2015-07-27</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="c470bcc7-33fe-11e5-a4a5-002590263bf5">
+    <topic>logstash -- SSL/TLS vulnerability with Lumberjack input</topic>
+    <affects>
+      <package>
+	<name>logstash</name>
+	<range><lt>1.4.4</lt></range>
+	<range><ge>1.5.0</ge><lt>1.5.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Elastic reports:</p>
+	<blockquote cite="https://www.elastic.co/community/security">
+	  <p>Vulnerability Summary: All Logstash versions prior to 1.5.2 that
+	    use Lumberjack input (in combination with Logstash Forwarder agent)
+	    are vulnerable to a SSL/TLS security issue called the FREAK attack.
+	    This allows an attacker to intercept communication and access secure
+	    data. Users should upgrade to 1.5.3 or 1.4.4.</p>
+	  <p>Remediation Summary: Users that do not want to upgrade can address
+	    the vulnerability by disabling the Lumberjack input.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-5378</cvename>
+      <url>https://www.elastic.co/community/security</url>
+    </references>
+    <dates>
+      <discovery>2015-07-22</discovery>
+      <entry>2015-07-27</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="9d732078-32c7-11e5-b263-00262d5ed8ee">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>44.0.2403.89</lt></range>
+      </package>
+      <package>
+	<!-- pcbsd -->
+	<name>chromium-npapi</name>
+	<range><lt>44.0.2403.89</lt></range>
+      </package>
+      <package>
+	<!-- pcbsd -->
+	<name>chromium-pulse</name>
+	<range><lt>44.0.2403.89</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Google Chrome Releases reports:</p>
+	<blockquote cite="http://googlechromereleases.blogspot.nl/">
+	  <p>43 security fixes in this release, including:</p>
+	  <ul>
+	    <li>[446032] High CVE-2015-1271: Heap-buffer-overflow in pdfium.
+	      Credit to cloudfuzzer.</li>
+	    <li>[459215] High CVE-2015-1273: Heap-buffer-overflow in pdfium.
+	      Credit to makosoft.</li>
+	    <li>[461858] High CVE-2015-1274: Settings allowed executable files
+	      to run immediately after download. Credit to andrewm.bpi.</li>
+	    <li>[462843] High CVE-2015-1275: UXSS in Chrome for Android. Credit
+	      to WangTao(neobyte) of Baidu X-Team.</li>
+	    <li>[472614] High CVE-2015-1276: Use-after-free in IndexedDB.
+	      Credit to Collin Payne.</li>
+	    <li>[483981] High CVE-2015-1279: Heap-buffer-overflow in pdfium.
+	      Credit to mlafon.</li>
+	    <li>[486947] High CVE-2015-1280: Memory corruption in skia. Credit
+	      to cloudfuzzer.</li>
+	    <li>[487155] High CVE-2015-1281: CSP bypass. Credit to Masato
+	      Kinugawa.</li>
+	    <li>[487928] High CVE-2015-1282: Use-after-free in pdfium. Credit
+	      to Chamal de Silva.</li>
+	    <li>[492052] High CVE-2015-1283: Heap-buffer-overflow in expat.
+	      Credit to sidhpurwala.huzaifa.</li>
+	    <li>[493243] High CVE-2015-1284: Use-after-free in blink. Credit to
+	      Atte Kettunen of OUSPG.</li>
+	    <li>[504011] High CVE-2015-1286: UXSS in blink. Credit to
+	      anonymous.</li>
+	    <li>[505374] High CVE-2015-1290: Memory corruption in V8. Credit to
+	      Yongjun Liu of NSFOCUS Security Team.</li>
+	    <li>[419383] Medium CVE-2015-1287: SOP bypass with CSS. Credit to
+	      filedescriptor.</li>
+	    <li>[444573] Medium CVE-2015-1270: Uninitialized memory read in
+	      ICU. Credit to Atte Kettunen of OUSPG.</li>
+	    <li>[451456] Medium CVE-2015-1272: Use-after-free related to
+	      unexpected GPU process termination. Credit to Chamal de
+	      Silva.</li>
+	    <li>[479743] Medium CVE-2015-1277: Use-after-free in accessibility.
+	      Credit to SkyLined.</li>
+	    <li>[482380] Medium CVE-2015-1278: URL spoofing using pdf files.
+	      Credit to Chamal de Silva.</li>
+	    <li>[498982] Medium CVE-2015-1285: Information leak in XSS auditor.
+	      Credit to gazheyes.</li>
+	    <li>[479162] Low CVE-2015-1288: Spell checking dictionaries fetched
+	      over HTTP. Credit to mike@michaelruddy.com.</li>
+	    <li>[512110] CVE-2015-1289: Various fixes from internal audits,
+	      fuzzing and other initiatives.</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-1270</cvename>
+      <cvename>CVE-2015-1271</cvename>
+      <cvename>CVE-2015-1272</cvename>
+      <cvename>CVE-2015-1273</cvename>
+      <cvename>CVE-2015-1274</cvename>
+      <cvename>CVE-2015-1275</cvename>
+      <cvename>CVE-2015-1276</cvename>
+      <cvename>CVE-2015-1277</cvename>
+      <cvename>CVE-2015-1278</cvename>
+      <cvename>CVE-2015-1279</cvename>
+      <cvename>CVE-2015-1280</cvename>
+      <cvename>CVE-2015-1281</cvename>
+      <cvename>CVE-2015-1282</cvename>
+      <cvename>CVE-2015-1283</cvename>
+      <cvename>CVE-2015-1284</cvename>
+      <cvename>CVE-2015-1285</cvename>
+      <cvename>CVE-2015-1286</cvename>
+      <cvename>CVE-2015-1287</cvename>
+      <cvename>CVE-2015-1288</cvename>
+      <cvename>CVE-2015-1289</cvename>
+      <cvename>CVE-2015-1290</cvename>
+      <url>http://googlechromereleases.blogspot.nl/</url>
+    </references>
+    <dates>
+      <discovery>2015-07-21</discovery>
+      <entry>2015-07-25</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="b202e4ce-3114-11e5-aa32-0026551a22dc">
+   <topic>shibboleth-sp -- DoS vulnerability</topic>
+   <affects>
+     <package>
+	<name>xmltooling</name>
+	<range><lt>1.5.5</lt></range>
+     </package>
+     <package>
+	<name>opensaml2</name>
+	<range><lt>2.5.5</lt></range>
+     </package>
+     <package>
+	<name>shibboleth-sp</name>
+	<range><lt>2.5.5</lt></range>
+     </package>
+   </affects>
+   <description>
+     <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Shibboleth consortium reports:</p>
+	<blockquote cite="http://shibboleth.net/community/advisories/secadv_20150721.txt">
+	  <p>
+	    Shibboleth SP software crashes on well-formed but invalid XML.
+	  </p>
+	  <p>
+	    The Service Provider software contains a code path with an uncaught
+	    exception that can be triggered by an unauthenticated attacker by
+	    supplying well-formed but schema-invalid XML in the form of SAML
+	    metadata or SAML protocol messages. The result is a crash and so
+	    causes a denial of service.
+	  </p>
+	  <p>
+	    You must rebuild opensaml and shibboleth with xmltooling-1.5.5 or
+	    later. The easiest way to do so is to update the whole chain including
+	    shibboleth-2.5.5 an opensaml2.5.5.
+	  </p>
+	</blockquote>
+     </body>
+   </description>
+   <references>
+     <url>http://shibboleth.net/community/advisories/secadv_20150721.txt</url>
+     <cvename>CVE-2015-2684</cvename>
+   </references>
+   <dates>
+     <discovery>2015-07-21</discovery>
+     <entry>2015-07-23</entry>
+   </dates>
+ </vuln>
+
+  <vuln vid="c80b27a2-3165-11e5-8a1d-14dae9d210b8">
+    <topic>wordpress -- XSS vulnerability</topic>
+    <affects>
+      <package>
+	<name>wordpress</name>
+	<range><lt>4.2.3,1</lt></range>
+      </package>
+      <package>
+	<name>de-wordpress</name>
+	<name>ja-wordpress</name>
+	<name>ru-wordpress</name>
+	<name>zh-wordpress-zh_CH</name>
+	<name>zh-wordpress-zh_TW</name>
+	<range><lt>4.2.3</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Gary Pendergast reports:</p>
+	<blockquote cite="https://wordpress.org/news/2015/07/wordpress-4-2-3/">
+	  <p>WordPress versions 4.2.2 and earlier are affected by a
+	    cross-site scripting vulnerability, which could allow users with the
+	    Contributor or Author role to compromise a site. This was reported by
+	    Jon Cave and fixed by Robert Chapin, both of the WordPress security
+	    team.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://wordpress.org/news/2015/07/wordpress-4-2-3/</url>
+      <cvename>CVE-2015-5622</cvename>
+      <cvename>CVE-2015-5623</cvename>
+    </references>
+    <dates>
+      <discovery>2015-07-23</discovery>
+      <entry>2015-07-23</entry>
+      <modified>2015-07-24</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="4caf01e2-30e6-11e5-a4a5-002590263bf5">
+    <topic>libidn -- out-of-bounds read issue with invalid UTF-8 input</topic>
+    <affects>
+      <package>
+	<name>libidn</name>
+	<range><lt>1.31</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Simon Josefsson reports:</p>
+	<blockquote cite="http://git.savannah.gnu.org/cgit/libidn.git/plain/NEWS?id=libidn-1-31">
+	  <p>stringprep_utf8_to_ucs4 now rejects invalid UTF-8. This function
+	    has always been documented to not validate that the input UTF-8
+	    string is actually valid UTF-8...
+	  </p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-2059</cvename>
+      <url>http://git.savannah.gnu.org/cgit/libidn.git/plain/NEWS?id=libidn-1-31</url>
+    </references>
+    <dates>
+      <discovery>2015-02-09</discovery>
+      <entry>2015-07-23</entry>
+      <modified>2015-08-03</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="9dd761ff-30cb-11e5-a4a5-002590263bf5">
+    <topic>sox -- memory corruption vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>sox</name>
+	<range><le>14.4.2</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Michele Spagnuolo, Google Security Team, reports:</p>
+	<blockquote cite="http://seclists.org/oss-sec/2015/q3/167">
+	  <p>The write heap buffer overflows are related to ADPCM handling in
+	    WAV files, while the read heap buffer overflow is while opening a
+	    .VOC.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://seclists.org/oss-sec/2015/q3/167</url>
+    </references>
+    <dates>
+      <discovery>2015-07-22</discovery>
+      <entry>2015-07-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="92cda470-30cb-11e5-a4a5-002590263bf5">
+    <topic>sox -- input sanitization errors</topic>
+    <affects>
+      <package>
+	<name>sox</name>
+	<range><lt>14.4.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>oCERT reports:</p>
+	<blockquote cite="http://www.ocert.org/advisories/ocert-2014-010.html">
+	  <p>The sox command line tool is affected by two heap-based buffer
+	    overflows, respectively located in functions start_read() and
+	    AdpcmReadBlock().</p>
+	  <p>A specially crafted wav file can be used to trigger the
+	    vulnerabilities.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <bid>71774</bid>
+      <cvename>CVE-2014-8145</cvename>
+      <url>http://www.ocert.org/advisories/ocert-2014-010.html</url>
+    </references>
+    <dates>
+      <discovery>2014-11-20</discovery>
+      <entry>2015-07-23</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="95eee71d-3068-11e5-a9b5-bcaec565249c">
+    <topic>gdk-pixbuf2 -- heap overflow and DoS affecting Firefox and other programs</topic>
+    <affects>
+      <package>
+	<name>gdk-pixbuf2</name>
+	<range><lt>2.31.2_2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>gustavo.grieco@imag.fr reports:</p>
+	<blockquote cite="https://bugzilla.gnome.org/show_bug.cgi?id=752297">
+	  <p>We found a heap overflow and a DoS in the gdk-pixbuf
+	    implementation triggered by the scaling of a malformed bmp.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://bugzilla.gnome.org/show_bug.cgi?id=752297</url>
+    </references>
+    <dates>
+      <discovery>2015-07-12</discovery>
+      <entry>2015-07-22</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="8a1d0e63-1e07-11e5-b43d-002590263bf5">
+    <topic>pcre -- Heap Overflow Vulnerability in find_fixedlength()</topic>
+    <affects>
+      <package>
+	<name>pcre</name>
+	<range><le>8.37_1</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Venustech ADLAB reports:</p>
+	<blockquote cite="https://bugs.exim.org/show_bug.cgi?id=1651">
+	  <p>PCRE library is prone to a vulnerability which leads to Heap
+	    Overflow. During subpattern calculation of a malformed regular
+	    expression, an offset that is used as an array index is fully
+	    controlled and can be large enough so that unexpected heap
+	    memory regions are accessed.</p>
+	  <p>One could at least exploit this issue to read objects nearby of
+	    the affected application's memory.</p>
+	  <p>Such information disclosure may also be used to bypass memory
+	    protection method such as ASLR.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-5073</cvename>
+      <url>https://bugs.exim.org/show_bug.cgi?id=1651</url>
+      <url>http://vcs.pcre.org/pcre?view=revision&amp;revision=1571</url>
+      <mlist>http://www.openwall.com/lists/oss-security/2015/06/26/1</mlist>
+    </references>
+    <dates>
+      <discovery>2015-06-23</discovery>
+      <entry>2015-06-29</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0bfda05f-2e6f-11e5-a4a5-002590263bf5">
+    <topic>cacti -- Multiple XSS and SQL injection vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>cacti</name>
+	<range><lt>0.8.8e</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Cacti Group, Inc. reports:</p>
+	<blockquote cite="http://www.cacti.net/release_notes_0_8_8e.php">
+	  <p>Important Security Fixes</p>
+	  <ul>
+	    <li>Multiple XSS and SQL injection vulnerabilities</li>
+	    <li>CVE-2015-4634 - SQL injection in graphs.php</li>
+	  </ul>
+	  <p>Changelog</p>
+	  <ul>
+	    <li>bug: Fixed various SQL Injection vectors</li>
+	    <li>bug#0002574: SQL Injection Vulnerabilities in graph items and
+	       graph template items</li>
+	    <li>bug#0002577: CVE-2015-4634 - SQL injection in graphs.php</li>
+	    <li>bug#0002579: SQL Injection Vulnerabilities in data sources</li>
+	    <li>bug#0002580: SQL Injection in cdef.php</li>
+	    <li>bug#0002582: SQL Injection in data_templates.php</li>
+	    <li>bug#0002583: SQL Injection in graph_templates.php</li>
+	    <li>bug#0002584: SQL Injection in host_templates.php</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4634</cvename>
+      <freebsdpr>ports/201702</freebsdpr>
+      <url>http://www.cacti.net/release_notes_0_8_8e.php</url>
+      <mlist>http://seclists.org/oss-sec/2015/q3/150</mlist>
+    </references>
+    <dates>
+      <discovery>2015-07-12</discovery>
+      <entry>2015-07-20</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="8b1f53f3-2da5-11e5-86ff-14dae9d210b8">
     <topic>php-phar -- multiple vulnerabilities</topic>
     <affects>
@@ -134,11 +718,12 @@ Notes:
       <mlist>http://seclists.org/oss-sec/2015/q3/94</mlist>
       <url>https://docs.moodle.org/dev/Moodle_2.7.9_release_notes</url>
       <url>https://docs.moodle.org/dev/Moodle_2.8.7_release_notes</url>
-      <url>https://docs.moodle.org/dev/Moodle_2.7.9_release_notes</url>
+      <url>https://docs.moodle.org/dev/Moodle_2.9.1_release_notes</url>
     </references>
     <dates>
       <discovery>2015-07-06</discovery>
       <entry>2015-07-18</entry>
+      <modified>2015-07-19</modified>
     </dates>
   </vuln>
 
@@ -151,7 +736,7 @@ Notes:
 	<name>apache22-itk-mpm</name>
 	<name>apache22-peruser-mpm</name>
 	<name>apache22-worker-mpm</name>
-	<range><lt>2.2.31</lt></range>
+	<range><le>2.2.29_5</le></range>
       </package>
     </affects>
     <description>
@@ -786,12 +1371,14 @@ Notes:
       </body>
     </description>
     <references>
+      <cvename>CVE-2015-5607</cvename>
       <url>http://seclists.org/oss-sec/2015/q3/92</url>
       <url>http://ipython.org/ipython-doc/3/whatsnew/version3.html#ipython-3-2-1</url>
     </references>
     <dates>
       <discovery>2015-07-12</discovery>
       <entry>2015-07-13</entry>
+      <modified>2015-07-22</modified>
     </dates>
   </vuln>
 
@@ -3014,7 +3601,7 @@ Notes:
     <affects>
       <package>
 	<name>chicken</name>
-	<range><lt>4.10.0,1</lt></range>
+	<range><lt>4.10.0.r2,1</lt></range>
       </package>
     </affects>
     <description>
@@ -3035,11 +3622,12 @@ Notes:
       <freebsdpr>ports/200980</freebsdpr>
       <mlist>http://lists.nongnu.org/archive/html/chicken-announce/2015-06/msg00010.html</mlist>
       <mlist>http://lists.nongnu.org/archive/html/chicken-hackers/2015-06/msg00037.html</mlist>
+      <mlist>http://lists.nongnu.org/archive/html/chicken-announce/2015-07/msg00001.html</mlist>
     </references>
     <dates>
       <discovery>2015-06-15</discovery>
       <entry>2015-06-22</entry>
-      <modified>2015-06-23</modified>
+      <modified>2015-07-31</modified>
     </dates>
   </vuln>
 

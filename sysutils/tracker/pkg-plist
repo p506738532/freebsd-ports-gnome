@@ -149,6 +149,7 @@ share/appdata/tracker-preferences.appdata.xml
 share/applications/tracker-needle.desktop
 share/applications/tracker-preferences.desktop
 %%WEB_MINERS%%share/applications/trackerbird-launcher.desktop
+share/bash-completion/completions/tracker
 share/dbus-1/services/org.freedesktop.Tracker1.Miner.Applications.service
 share/dbus-1/services/org.freedesktop.Tracker1.Miner.Extract.service
 share/dbus-1/services/org.freedesktop.Tracker1.Miner.Files.service
@@ -241,6 +242,7 @@ share/icons/hicolor/scalable/apps/tracker.svg
 share/locale/ar/LC_MESSAGES/tracker.mo
 share/locale/as/LC_MESSAGES/tracker.mo
 share/locale/be@latin/LC_MESSAGES/tracker.mo
+share/locale/bg/LC_MESSAGES/tracker.mo
 share/locale/bs/LC_MESSAGES/tracker.mo
 share/locale/ca/LC_MESSAGES/tracker.mo
 share/locale/ca@valencia/LC_MESSAGES/tracker.mo

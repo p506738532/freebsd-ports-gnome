@@ -25,7 +25,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-obexftp \
-		--disable-bluray \
+		--disable-bluray
 
 CONFIGURE_ARGS+=\
 		--disable-gudev \

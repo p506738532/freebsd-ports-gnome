@@ -13,10 +13,11 @@ include/clutter-gst-3.0/clutter-gst/clutter-gst-version.h
 include/clutter-gst-3.0/clutter-gst/clutter-gst-video-sink.h
 include/clutter-gst-3.0/clutter-gst/clutter-gst.h
 lib/girepository-1.0/ClutterGst-3.0.typelib
-lib/gstreamer-1.0/libgstclutter-3.0.so
+@comment See Makefile for comments on this.
+@comment lib/gstreamer-1.0/libgstclutter-3.0.so
 lib/libclutter-gst-3.0.so
 lib/libclutter-gst-3.0.so.0
-lib/libclutter-gst-3.0.so.0.6.0
+lib/libclutter-gst-3.0.so.0.8.0
 libdata/pkgconfig/clutter-gst-3.0.pc
 %%DOCSDIR%%-3.0/ClutterGstAspectratio.html
 %%DOCSDIR%%-3.0/ClutterGstCamera.html

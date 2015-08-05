@@ -15,7 +15,7 @@ LIB_DEPENDS=	libmpfr.so:${PORTSDIR}/math/mpfr
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake libtool pkgconfig tar:xz
+USES=		gettext gmake pkgconfig tar:xz
 USE_GNOME=	gtksourceview3 gtk30 intlhack libxml2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

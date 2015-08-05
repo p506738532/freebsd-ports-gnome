@@ -8,9 +8,10 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Gnome taquin
+COMMENT=	Move tiles so that they reach their places.
 
-BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
+BUILD_DEPENDS=	vala:${PORTSDIR}/lang/vala \
+		itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3
 
 PORTSCOUT=	limitw:1,even
@@ -21,5 +22,7 @@ INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+GLIB_SCHEMAS=	org.gnome.taquin.gschema.xml
 
 .include <bsd.port.mk>

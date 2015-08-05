@@ -56,6 +56,7 @@
     SUBDIR += claws-mail-gdata
     SUBDIR += claws-mail-libravatar
     SUBDIR += claws-mail-mailmbox
+    SUBDIR += claws-mail-managesieve
     SUBDIR += claws-mail-newmail
     SUBDIR += claws-mail-notification
     SUBDIR += claws-mail-pdf_viewer
@@ -109,6 +110,7 @@
     SUBDIR += elm
     SUBDIR += elmo
     SUBDIR += elmo-devel
+    SUBDIR += emailrelay
     SUBDIR += emil
     SUBDIR += enma
     SUBDIR += eps
@@ -213,7 +215,6 @@
     SUBDIR += lurker
     SUBDIR += mail2sms
     SUBDIR += mailagent
-    SUBDIR += maildirsync
     SUBDIR += maildrop
     SUBDIR += mailest
     SUBDIR += mailfmt
@@ -513,7 +514,6 @@
     SUBDIR += pymsgauth
     SUBDIR += pysieved
     SUBDIR += pyzor
-    SUBDIR += qar-bufo
     SUBDIR += qconfirm
     SUBDIR += qgmailnotifier
     SUBDIR += qmail

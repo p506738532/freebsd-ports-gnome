@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	scilab
-PORTVERSION=	5.5.0
-PORTREVISION=	3
+PORTVERSION=	5.5.2
 CATEGORIES=	math cad java
 MASTER_SITES=	http://www.scilab.org/download/${PORTVERSION}/
 DISTFILES=	${DISTNAME}-src${EXTRACT_SUFX}
@@ -36,6 +35,8 @@ CONFIGURE_ENV=	BLAS_LIBS="${BLASLIB}" LAPACK_LIBS="${LAPACKLIB}"
 MAKE_ENV=	LANG=en_US.UTF-8 \
 		LC_ALL=en_US.UTF-8
 INSTALL_TARGET=	install-strip
+
+PLIST_SUB=	SHLIB_VER=${PORTVERSION}
 
 OPTIONS_DEFINE=	GUI OCAML TK
 OPTIONS_RADIO=	BLAS
@@ -110,7 +111,15 @@ TK_CONFIGURE_ON=	--with-tk-library=${LOCALBASE}/lib \
 TK_USES=	tk
 TK_USE=		XORG=x11
 
+.if !exists(/usr/include/omp.h)
+CONFIGURE_ARGS+=	--without-openmp
+.endif
+
 .include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MOCAML} && empty(PORT_OPTIONS:MGUI)
+IGNORE=	with OCAML option requies GUI. Please rerun 'make config' and select GUI
+.endif
 
 .if ${PORT_OPTIONS:MGUI}
 USE_JAVA=	yes
@@ -161,8 +170,7 @@ post-patch:
 .endif
 
 pre-install:
-	@${MKDIR} ${STAGEDIR}${DATADIR}/.atoms
-	@${TOUCH} ${STAGEDIR}${DATADIR}/.atoms/.keep_me
+	${MKDIR} ${STAGEDIR}${DATADIR}/.atoms
 
 post-install:
 	@# Remove empty dirs in DATADIR/modules - they will be removed by the

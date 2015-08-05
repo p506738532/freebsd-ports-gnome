@@ -3,7 +3,6 @@ man/man6/gnome-taquin.6.gz
 share/appdata/org.gnome.taquin.appdata.xml
 share/applications/org.gnome.taquin.desktop
 share/dbus-1/services/org.gnome.taquin.service
-share/glib-2.0/schemas/org.gnome.taquin.gschema.xml
 %%DATADIR%%/sounds/gameover.ogg
 %%DATADIR%%/sounds/sliding-1.ogg
 %%DATADIR%%/sounds/sliding-n.ogg

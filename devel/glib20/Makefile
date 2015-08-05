@@ -1,6 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/devel/glib20/Makefile 20052 2014-11-10 10:21:14Z gusi $
 
 PORTNAME=	glib
 PORTVERSION=	2.45.4

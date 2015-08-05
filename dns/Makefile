@@ -109,6 +109,7 @@
     SUBDIR += p5-DNS-Zone
     SUBDIR += p5-DNS-ZoneParse
     SUBDIR += p5-Data-Validate-Domain
+    SUBDIR += p5-IO-Async-Resolver-DNS
     SUBDIR += p5-Mozilla-PublicSuffix
     SUBDIR += p5-Net-Amazon-Route53
     SUBDIR += p5-Net-Bonjour
@@ -184,9 +185,11 @@
     SUBDIR += unbound
     SUBDIR += updatedd
     SUBDIR += validns
+    SUBDIR += vhostcname
     SUBDIR += vizone
     SUBDIR += walker
     SUBDIR += wdns
+    SUBDIR += whoseip
     SUBDIR += wrapsrv
     SUBDIR += yadifa
     SUBDIR += zkt

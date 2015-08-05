@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	clutter-gst
-PORTVERSION=	3.0.6
+PORTVERSION=	3.0.8
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
@@ -24,5 +25,9 @@ MAKE_ENV=	XDG_CACHE_HOME=${WRKDIR}
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 INSTALL_TARGET=	install-strip
+
+# The clutter-gst gstreamer plugin is not parrallel installable with
+# the 2.0 version. Don't install it (see @comment in plist) until
+# all users can be ported (upstream task) to the 3.0 version.
 
 .include <bsd.port.mk>

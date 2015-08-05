@@ -27,6 +27,9 @@ USE_OPENLDAP=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+CONFIGURE_ARGS=	--datarootdir=${PREFIX}/share \
+		--localedir=${PREFIX}/share/locale \
+		--prefix=${PREFIX}
 INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>

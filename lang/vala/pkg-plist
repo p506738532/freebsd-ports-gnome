@@ -17,7 +17,6 @@ lib/libvala-%%VERSION%%.so.0
 lib/libvala-%%VERSION%%.so.0.0.0
 lib/vala-%%VERSION%%/gen-introspect-%%VERSION%%
 libdata/pkgconfig/libvala-%%VERSION%%.pc
-libdata/pkgconfig/vala-1.0.pc
 libdata/pkgconfig/vapigen-%%VERSION%%.pc
 libdata/pkgconfig/vapigen.pc
 man/man1/vala-gen-introspect-%%VERSION%%.1.gz
