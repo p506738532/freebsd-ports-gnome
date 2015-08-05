@@ -11,7 +11,7 @@ MASTER_SITES=	LOCAL/kwm
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Glib wrapper around libarchives
 
-USES=		gmake libtool pathfix pkgconfig tar:xz
+USES=		gmake libarchive libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 introspection:build
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
