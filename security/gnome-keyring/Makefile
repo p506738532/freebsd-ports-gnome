@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-keyring
-PORTVERSION=	3.16.0
+PORTVERSION=	3.17.4
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,7 +19,8 @@ LIB_DEPENDS=	libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring \
 		libtasn1.so:${PORTSDIR}/security/libtasn1 \
 		libp11-kit.so:${PORTSDIR}/security/p11-kit \
 		libgcrypt.so:${PORTSDIR}/security/libgcrypt
-RUN_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss
+RUN_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss \
+		pinentry-gnome3:${PORTSDIR}/security/pinentry-gnome3
 
 PORTSCOUT=	limitw:1,even
 
