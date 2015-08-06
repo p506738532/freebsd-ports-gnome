@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gcr
-PORTVERSION=	3.16.0
+PORTVERSION=	3.17.4
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
@@ -24,15 +24,10 @@ USES=		desktop-file-utils gettext gmake libtool pathfix \
 		pkgconfig shared-mime-info tar:xz
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+CONFIGURE_ARGS=	--disable-valgrind
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.crypto.pgp.gschema.xml
-
-.include <bsd.port.options.mk>
-
-.if ${OSVERSION} < 900000
-EXTRA_PATCHES=	${FILESDIR}/extra-gck_gck.h
-.endif
 
 .include <bsd.port.mk>
