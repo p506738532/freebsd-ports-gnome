@@ -1,9 +1,8 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/accessibility/atkmm/Makefile 19865 2014-09-14 12:34:28Z kwm $
 
 PORTNAME=	atkmm
-PORTVERSION=	2.22.7
+PORTVERSION=	2.23.2
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 
