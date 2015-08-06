@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	seahorse
-PORTVERSION=	3.16.0
+PORTVERSION=	3.17.4
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -10,15 +10,16 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME application for managing encryption keys (PGP, SSH)
 
-BUILD_DEPENDS=	gnupg>=2.1:${PORTSDIR}/security/gnupg \
+# seahorse hardcodes the exact version (in 3.17.4) check 3.18 if this is still
+# the case.
+BUILD_DEPENDS=	gnupg=${GNUPG_VERSION}:${PORTSDIR}/security/gnupg \
 		valac:${PORTSDIR}/lang/vala \
 		itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libgpgme.so:${PORTSDIR}/security/gpgme \
-		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libgcr-3.so:${PORTSDIR}/security/gcr \
 		libsecret-1.so:${PORTSDIR}/security/libsecret \
 		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
-RUN_DEPENDS=	gnupg>=2.1:${PORTSDIR}/security/gnupg
+RUN_DEPENDS=	gnupg=${GNUPG_VERSION}:${PORTSDIR}/security/gnupg
 
 PORTSCOUT=	limitw:1,even
 
@@ -31,18 +32,24 @@ INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+GNUPG_VERSION=	2.1.6
+
 GLIB_SCHEMAS=	org.gnome.seahorse.gschema.xml \
 		org.gnome.seahorse.manager.gschema.xml \
 		org.gnome.seahorse.window.gschema.xml
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	LDAP NOTIFY AVAHI
-OPTIONS_DEFAULT=LDAP NOTIFY AVAHI
+OPTIONS_DEFINE=	LDAP AVAHI
+OPTIONS_DEFAULT=LDAP AVAHI
 LDAP_CONFIGURE_ENABLE=	ldap
 LDAP_USE=	OPENLDAP=yes
-NOTIFY_CONFIGURE_ENABLE=	libnotify
-NOTIFY_LIB_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify
+LDAP_DESC=	LDAP keyserver support (for gpg)
+AVAHI_DESC=	DNS-SD key sharing
 AVAHI_CONFIGURE_ENABLE=	sharing
 AVAHI_LIB_DEPENDS=	libavahi-client.so:${PORTSDIR}/net/avahi-app
+
+post-patch:
+	@${REINPLACE_CMD}  '/^GNUPG_ACCEPTED/s/2.1.4/2.1.6/' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>
