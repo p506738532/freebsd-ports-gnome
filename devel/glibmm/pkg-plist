@@ -394,7 +394,6 @@ lib/glibmm-%%VERSION%%/proc/m4/initialize_base.m4
 lib/glibmm-%%VERSION%%/proc/m4/initialize_gio.m4
 lib/glibmm-%%VERSION%%/proc/m4/initialize_glib.m4
 lib/glibmm-%%VERSION%%/proc/m4/initialize_glibmm.m4
-lib/glibmm-%%VERSION%%/proc/m4/list.m4
 lib/glibmm-%%VERSION%%/proc/m4/member.m4
 lib/glibmm-%%VERSION%%/proc/m4/method.m4
 lib/glibmm-%%VERSION%%/proc/m4/property.m4
