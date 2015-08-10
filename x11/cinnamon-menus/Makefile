@@ -9,17 +9,17 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Additional UI API for cinnamon
 
-BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
-		xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
+BUILD_DEPENDS=	xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
 		libxkbfile>=0:${PORTSDIR}/x11/libxkbfile
 RUN_DEPENDS=	xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
 		libxkbfile>=0:${PORTSDIR}/x11/libxkbfile
 
+USE_GITHUB=	yes
+GH_ACCOUNT=	linuxmint
+
 USES=		autoreconf gettext gmake libtool pathfix pkgconfig \
 		python:2 tar:xz
 USE_GNOME=	gnomemenus3 gnomeprefix gtk30 introspection:build
-USE_GITHUB=	yes
-GH_ACCOUNT=	linuxmint
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 PATHFIX_MAKEFILEIN=	Makefile.am
