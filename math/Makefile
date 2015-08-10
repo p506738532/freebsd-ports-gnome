@@ -237,7 +237,6 @@
     SUBDIR += ltl
     SUBDIR += ltl2ba
     SUBDIR += lybniz
-    SUBDIR += mate-calc
     SUBDIR += mathomatic
     SUBDIR += matio
     SUBDIR += matlab-installer
@@ -489,6 +488,7 @@
     SUBDIR += p5-NetCDF
     SUBDIR += p5-Number-Compare
     SUBDIR += p5-Number-Fraction
+    SUBDIR += p5-Number-Misc
     SUBDIR += p5-Number-Uncertainty
     SUBDIR += p5-Number-WithError
     SUBDIR += p5-Number-WithError-LaTeX

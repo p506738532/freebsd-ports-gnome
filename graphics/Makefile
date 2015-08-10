@@ -448,7 +448,6 @@
     SUBDIR += ksaneplugin
     SUBDIR += ksnapshot
     SUBDIR += kudu
-    SUBDIR += kuickshow-kde4
     SUBDIR += l2p
     SUBDIR += laternamagica
     SUBDIR += lcdtest
@@ -472,6 +471,7 @@
     SUBDIR += libcaca
     SUBDIR += libcdr01
     SUBDIR += libchamplain
+    SUBDIR += libchamplain08
     SUBDIR += libdmtx
     SUBDIR += libdrm
     SUBDIR += libecwj2
@@ -974,9 +974,7 @@
     SUBDIR += simpleviewer
     SUBDIR += sk1libs
     SUBDIR += skanlite
-    SUBDIR += skencil
     SUBDIR += sketch
-    SUBDIR += sng
     SUBDIR += springgraph
     SUBDIR += squish
     SUBDIR += sswf

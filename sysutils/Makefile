@@ -67,6 +67,11 @@
     SUBDIR += bacula5-client-static
     SUBDIR += bacula5-docs
     SUBDIR += bacula5-server
+    SUBDIR += bareos-bat
+    SUBDIR += bareos-client
+    SUBDIR += bareos-client-static
+    SUBDIR += bareos-docs
+    SUBDIR += bareos-server
     SUBDIR += baloo
     SUBDIR += baloo-widgets
     SUBDIR += bamf
@@ -124,6 +129,7 @@
     SUBDIR += cfengine34
     SUBDIR += cfengine35
     SUBDIR += cfengine36
+    SUBDIR += cfengine37
     SUBDIR += chgrep
     SUBDIR += cinnamon-control-center
     SUBDIR += cinnamon-settings-daemon
@@ -471,7 +477,6 @@
     SUBDIR += libsunacl
     SUBDIR += liburcu
     SUBDIR += libutempter
-    SUBDIR += libzeitgeist
     SUBDIR += life-preserver
     SUBDIR += lineak-defaultplugin
     SUBDIR += lineak-xosdplugin
@@ -878,6 +883,7 @@
     SUBDIR += rubygem-sys-uptime
     SUBDIR += rubygem-teamocil
     SUBDIR += rubygem-winrm
+    SUBDIR += rubygem-winrm-fs
     SUBDIR += rubygem-yell
     SUBDIR += rundeck
     SUBDIR += runit
@@ -922,7 +928,7 @@
     SUBDIR += sleuthkit
     SUBDIR += sloth
     SUBDIR += slst
-    SUBDIR += slurm-hpc
+    SUBDIR += slurm-wlm
     SUBDIR += smartmontools
     SUBDIR += smp_utils
     SUBDIR += snap
@@ -1042,7 +1048,6 @@
     SUBDIR += vagrant
     SUBDIR += vbetool
     SUBDIR += vcp
-    SUBDIR += vhdtool
     SUBDIR += videogen
     SUBDIR += vii
     SUBDIR += vils

@@ -3,6 +3,7 @@
 
     COMMENT = Miscellaneous utilities
 
+    SUBDIR += R-cran-mime
     SUBDIR += achievo
     SUBDIR += aclgen
     SUBDIR += amanda-client
@@ -413,6 +414,7 @@
     SUBDIR += sloccount
     SUBDIR += sls
     SUBDIR += smssend
+    SUBDIR += solarized
     SUBDIR += spamcalc
     SUBDIR += sshbuddy
     SUBDIR += sssnips

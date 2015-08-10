@@ -37,7 +37,7 @@ RUN_DEPENDS=	py*-dbus>=0:${PORTSDIR}/devel/py-dbus \
 
 WRKSRC=		${WRKDIR}/Cinnamon-${PORTVERSION}
 
-USES=		autoreconf:build compiler:c11 gettext gmake libtool \
+USES=		autoreconf compiler:c11 gettext gmake libtool \
 		pathfix pkgconfig python shebangfix
 USE_GNOME=	evolutiondataserver3 gconf2 gnomedesktop3 \
 		gnomeprefix gtk30 intltool introspection:build
@@ -69,6 +69,8 @@ pre-configure:
 	cd ${WRKSRC} && ${SETENV} NOCONFIGURE=yes ${SH} ./autogen.sh
 
 post-patch:
+# we need this for intltoolize otherwise it can't copy the m4 file ...
+	@${MKDIR} ${WRKSRC}/m4
 	@${MKDIR} ${WRKSRC}/files${PREFIX}
 .for d in bin lib share
 	@${MV} ${WRKSRC}/files/usr/${d} ${WRKSRC}/files${PREFIX}

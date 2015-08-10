@@ -7,6 +7,7 @@
     SUBDIR += adsuck
     SUBDIR += ares
     SUBDIR += autotrust
+    SUBDIR += axfr2acl
     SUBDIR += bind-tools
     SUBDIR += bind10
     SUBDIR += bind910
@@ -33,6 +34,8 @@
     SUBDIR += dnscheck
     SUBDIR += dnscheckengine
     SUBDIR += dnscrypt-proxy
+    SUBDIR += dnsdbck
+    SUBDIR += dnsdist
     SUBDIR += dnsflood
     SUBDIR += dnshistory
     SUBDIR += dnsjava
@@ -70,7 +73,7 @@
     SUBDIR += inadyn-mt
     SUBDIR += ipcheck
     SUBDIR += ironsides
-    SUBDIR += knot
+    SUBDIR += knot1
     SUBDIR += knot2
     SUBDIR += ldapdns
     SUBDIR += ldns
@@ -109,6 +112,7 @@
     SUBDIR += p5-DNS-Zone
     SUBDIR += p5-DNS-ZoneParse
     SUBDIR += p5-Data-Validate-Domain
+    SUBDIR += p5-IO-Async-Resolver-DNS
     SUBDIR += p5-Mozilla-PublicSuffix
     SUBDIR += p5-Net-Amazon-Route53
     SUBDIR += p5-Net-Bonjour
@@ -169,6 +173,8 @@
     SUBDIR += rbldnsd
     SUBDIR += rbllookup
     SUBDIR += rbllookup-ng
+    SUBDIR += renewck
+    SUBDIR += rpsl2acl
     SUBDIR += rubygem-dnsruby
     SUBDIR += rubygem-net-dns
     SUBDIR += rubygem-public_suffix
@@ -184,9 +190,11 @@
     SUBDIR += unbound
     SUBDIR += updatedd
     SUBDIR += validns
+    SUBDIR += vhostcname
     SUBDIR += vizone
     SUBDIR += walker
     SUBDIR += wdns
+    SUBDIR += whoseip
     SUBDIR += wrapsrv
     SUBDIR += yadifa
     SUBDIR += zkt

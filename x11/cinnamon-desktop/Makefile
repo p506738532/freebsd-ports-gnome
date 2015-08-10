@@ -15,7 +15,7 @@ BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
 RUN_DEPENDS=	xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
 		libxkbfile>=0:${PORTSDIR}/x11/libxkbfile
 
-USES=		autoreconf:build gettext gmake libtool pathfix pkgconfig \
+USES=		autoreconf gettext gmake libtool pathfix pkgconfig \
 		shebangfix tar:xz
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
@@ -65,8 +65,5 @@ post-patch:
 
 	@${REINPLACE_CMD} -e 's|$$(libgsystem_srcpath)|libgsystem|g' \
 		${WRKSRC}/libcinnamon-desktop/libgsystem/Makefile-libgsystem.am
-
-pre-configure:
-	cd ${WRKSRC} && ${SETENV} NOCONFIGURE=yes ${SH} ./autogen.sh
 
 .include <bsd.port.mk>

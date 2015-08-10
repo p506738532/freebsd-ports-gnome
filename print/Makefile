@@ -3,6 +3,7 @@
 
     COMMENT = Desktop publishing
 
+    SUBDIR += R-cran-knitr
     SUBDIR += a2pdf
     SUBDIR += a2ps
     SUBDIR += abc2mtex
@@ -229,6 +230,7 @@
     SUBDIR += t1utils
     SUBDIR += tex
     SUBDIR += tex-aleph
+    SUBDIR += tex-basic-engines
     SUBDIR += tex-dvipdfmx
     SUBDIR += tex-dvipsk
     SUBDIR += tex-formats

@@ -175,7 +175,6 @@
     SUBDIR += navi2ch
     SUBDIR += ne
     SUBDIR += nethack34
-    SUBDIR += netype
     SUBDIR += newosaka
     SUBDIR += ng
     SUBDIR += ng-canna
@@ -185,7 +184,6 @@
     SUBDIR += nkf
     SUBDIR += ochusha
     SUBDIR += onew
-    SUBDIR += p5-Acme-Lou
     SUBDIR += p5-Date-Japanese-Era
     SUBDIR += p5-Date-Japanese-Holiday
     SUBDIR += p5-DateTime-Calendar-Japanese-Era
@@ -198,6 +196,7 @@
     SUBDIR += p5-HTML-MobileJp
     SUBDIR += p5-Jcode
     SUBDIR += p5-Lingua-JA-Kana
+    SUBDIR += p5-Lingua-JA-Moji
     SUBDIR += p5-Lingua-JA-Numbers
     SUBDIR += p5-Lingua-JA-Regular-Unicode
     SUBDIR += p5-Lingua-JA-Summarize-Extract

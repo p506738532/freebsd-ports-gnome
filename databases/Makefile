@@ -55,6 +55,7 @@
     SUBDIR += elixir-calecto
     SUBDIR += elixir-ecto
     SUBDIR += elixir-ecto_migrate
+    SUBDIR += elixir-geo
     SUBDIR += elixir-mariaex
     SUBDIR += elixir-mongo
     SUBDIR += elixir-postgrex
@@ -305,7 +306,6 @@
     SUBDIR += p5-DBD-ODBC
     SUBDIR += p5-DBD-Oracle
     SUBDIR += p5-DBD-Pg
-    SUBDIR += p5-DBD-Pg32
     SUBDIR += p5-DBD-PgLite
     SUBDIR += p5-DBD-PgPP
     SUBDIR += p5-DBD-SQLite
@@ -824,7 +824,9 @@
     SUBDIR += ruby-tokyocabinet
     SUBDIR += rubygem-activemodel
     SUBDIR += rubygem-activemodel4
+    SUBDIR += rubygem-activemodel41
     SUBDIR += rubygem-activerecord
+    SUBDIR += rubygem-activerecord41
     SUBDIR += rubygem-activerecord-jdbc-adapter
     SUBDIR += rubygem-activerecord-jdbcmysql-adapter
     SUBDIR += rubygem-activerecord-mysql-adapter

@@ -32,6 +32,7 @@
     SUBDIR += clipgrab
     SUBDIR += clive
     SUBDIR += clutter-gst
+    SUBDIR += clutter-gst3
     SUBDIR += cuse4bsd-kmod
     SUBDIR += cx88
     SUBDIR += deforaos-player
@@ -127,6 +128,7 @@
     SUBDIR += gstreamer1-plugins-dvdread
     SUBDIR += gstreamer1-plugins-gnonlin
     SUBDIR += gstreamer1-plugins-good
+    SUBDIR += gstreamer1-plugins-hls
     SUBDIR += gstreamer1-plugins-kate
     SUBDIR += gstreamer1-plugins-mpeg2dec
     SUBDIR += gstreamer1-plugins-mpeg2enc
@@ -168,6 +170,7 @@
     SUBDIR += libcec
     SUBDIR += libdc1394
     SUBDIR += libdca
+    SUBDIR += libde265
     SUBDIR += libdv
     SUBDIR += libdvbcsa
     SUBDIR += libdvbpsi
@@ -363,6 +366,7 @@
     SUBDIR += tivodecode
     SUBDIR += totem
     SUBDIR += totem-pl-parser
+    SUBDIR += tovid
     SUBDIR += transcode
     SUBDIR += tstools
     SUBDIR += tvheadend
