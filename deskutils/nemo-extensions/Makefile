@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nemo-extensions
-PORTVERSION=	2.4.0
-PORTREVISION=	2
+PORTVERSION=	2.6.0
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -33,11 +32,9 @@ LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-BROKEN_FreeBSD_9=	does not build
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
-GH_TAGNAME=	6c8ec3a
+GH_TAGNAME=	2.6.x
 
 USE_GNOME=	gconf2 gnomeprefix gnomedocutils gtksourceview3 intlhack \
 		introspection:build libxml2 pygtk2
@@ -49,8 +46,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
-NON_AUTO_EXTENSIONS=	nemo-dropbox nemo-fileroller nemo-preview
-AUTO_EXTENSIONS=	nemo-share
+NON_AUTO_EXTENSIONS=	nemo-dropbox nemo-fileroller nemo-preview nemo-share
+AUTO_EXTENSIONS=
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|AM_GNU_GETTEXT_VERSION(\[0.17\])||g ;\
