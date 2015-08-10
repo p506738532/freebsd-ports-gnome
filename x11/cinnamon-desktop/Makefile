@@ -9,28 +9,26 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Additional UI API for cinnamon
 
-BUILD_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
-		xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
+BUILD_DEPENDS=	xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
 		libxkbfile>=0:${PORTSDIR}/x11/libxkbfile
 RUN_DEPENDS=	xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
 		libxkbfile>=0:${PORTSDIR}/x11/libxkbfile
 
+USE_GITHUB=	yes
+GH_ACCOUNT=	linuxmint
+
 USES=		autoreconf gettext gmake libtool pathfix pkgconfig \
 		shebangfix tar:xz
-USE_GITHUB=	yes
-GH_ACCOUNT=	linuxmint
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
 USE_XORG=	x11 xrandr xext
-USE_GITHUB=	yes
-GH_ACCOUNT=	linuxmint
 SHEBANG_FILES=	files/usr/bin/cinnamon-desktop-migrate-mediakeys
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 PATHFIX_MAKEFILEIN=	Makefile.am
-CONFIGURE_ARGS=	--with-gnome-distributor="FreeBSD GNOME Project"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
+
 GLIB_SCHEMAS=	org.cinnamon.desktop.a11y.applications.gschema.xml \
 		org.cinnamon.desktop.a11y.keyboard.gschema.xml \
 		org.cinnamon.desktop.a11y.magnifier.gschema.xml \
