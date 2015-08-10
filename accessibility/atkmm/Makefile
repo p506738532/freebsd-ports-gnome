@@ -9,6 +9,8 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ wrapper for ATK API library
 
+PORTSCOUT=	limitw:1,even
+
 USES=		gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	atk glibmm
 USE_LDCONFIG=	yes

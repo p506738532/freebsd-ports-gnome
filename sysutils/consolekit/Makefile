@@ -28,12 +28,12 @@ CONFIGURE_ARGS=	--with-pid-file=/var/run/${PORTNAME}.pid \
 		--localstatedir=/var
 INSTALL_TARGET=	install-strip
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|(libdir)/pkgconfig|(prefix)/libdata/pkgconfig|g'  \
-		${WRKSRC}/libck-connector/Makefile.am
 
 post-install:
+	${INSTALL_SCRIPT} ${FILESDIR}/ck-get-x11-display-device \
+		${STAGEDIR}${PREFIX}/libexec/ck-get-x11-display-device
+	${INSTALL_SCRIPT} ${FILESDIR}/ck-get-x11-server-pid \
+		${STAGEDIR}${PREFIX}/libexec/ck-get-x11-server-pid
 	@${MKDIR} ${STAGEDIR}/var/log/ConsoleKit
-	${TOUCH} ${STAGEDIR}/var/log/ConsoleKit/history
 
 .include <bsd.port.mk>
