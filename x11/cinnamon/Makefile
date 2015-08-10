@@ -10,8 +10,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Fork of GNOME Shell with layout similar to GNOME 2
 
 BUILD_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss \
-		gtkdoc-check:${PORTSDIR}/textproc/gtk-doc \
-		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common
+		gtkdoc-check:${PORTSDIR}/textproc/gtk-doc
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libcaribou.so:${PORTSDIR}/accessibility/caribou \
 		libmuffin.so:${PORTSDIR}/x11-wm/muffin \
@@ -37,12 +36,13 @@ RUN_DEPENDS=	py*-dbus>=0:${PORTSDIR}/devel/py-dbus \
 
 WRKSRC=		${WRKDIR}/Cinnamon-${PORTVERSION}
 
-USES=		autoreconf compiler:c11 gettext gmake libtool \
+USE_GITHUB=	yes
+GH_ACCOUNT=	linuxmint
+
+USES=		autoreconf:build compiler:c11 gettext gmake libtool \
 		pathfix pkgconfig python shebangfix
 USE_GNOME=	evolutiondataserver3 gconf2 gnomedesktop3 \
 		gnomeprefix gtk30 intltool introspection:build
-USE_GITHUB=	yes
-GH_ACCOUNT=	linuxmint
 # this happens before moving the file to ${PREFIX} (which then will be copied to ${STAGEDIR}${PREFIX})
 SHEBANG_FILES=	files/usr/bin/cinnamon2d \
 		files/usr/bin/cinnamon-preload-wrapper
@@ -52,8 +52,7 @@ INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-compile-warnings=no \
-		--with-ca-certificates=no \
-		--with-gnome-distributor="FreeBSD GNOME Project"
+		--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
 CFLAGS+=	-I${LOCALBASE}/include \
 		-I${LOCALBASE}/include/gtk-3.0
 CPPFLAGS+=	-I${LOCALBASE}/include
