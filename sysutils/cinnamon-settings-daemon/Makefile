@@ -10,7 +10,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 settings daemon
 
 BUILD_DEPENDS=	cinnamon-session:${PORTSDIR}/x11/cinnamon-session \
-		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
 LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
@@ -26,15 +25,13 @@ LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 RUN_DEPENDS=	cinnamon-session:${PORTSDIR}/x11/cinnamon-session \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
+USE_GITHUB=	yes
+GH_ACCOUNT=	linuxmint
+
 USES=		autoreconf gettext gmake libtool pathfix \
 		pkgconfig tar:xz
-USE_GNOME=	gnomeprefix intlhack libgnomekbd \
-		libxslt:build
-USE_GITHUB=	yes
-GH_ACCOUNT=	linuxmint
+USE_GNOME=	gnomeprefix intlhack libgnomekbd libxslt:build
 USE_XORG=	xxf86misc
-USE_GITHUB=	yes
-GH_ACCOUNT=	linuxmint
 GNU_CONFIGURE=	yes
 PATHFIX_MAKEFILEIN=	Makefile.am
 INSTALLS_ICONS=	yes
