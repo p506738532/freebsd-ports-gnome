@@ -15,11 +15,12 @@ LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 
 CONFLICTS_BUILD=spidermonkey17-1.7.*
 
-USES=		autoreconf compiler:c11 gettext libtool gmake \
-		pathfix pkgconfig python:build shebangfix
-USE_GNOME=	cairo glib20 gnomeprefix introspection:build
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
+
+USES=		autoreconf compiler:c11 gettext libtool gmake \
+		pathfix pkgconfig readline
+USE_GNOME=	cairo glib20 gnomeprefix introspection:build
 USE_LDCONFIG=	yes
 PATHFIX_MAKEFILEIN=	Makefile.am
 GNU_CONFIGURE=	yes
@@ -28,7 +29,5 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS+=--enable-compile-warnings=no
-
-python_OLD_CMD=	/usr/bin/env python
 
 .include <bsd.port.mk>
