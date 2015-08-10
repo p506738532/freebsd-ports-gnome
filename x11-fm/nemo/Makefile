@@ -12,7 +12,6 @@ COMMENT=	File manager for the Cinnamon desktop
 BUILD_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 		gtkdocize:${PORTSDIR}/textproc/gtk-doc \
 		py*-polib>=0:${PORTSDIR}/devel/py-polib \
-		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 		libcinnamon-desktop.so:${PORTSDIR}/x11/cinnamon-desktop \
@@ -21,20 +20,20 @@ LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USES=		autoreconf:build desktop-file-utils gettext gmake libtool pathfix \
-		pkgconfig python:2 shared-mime-info
-USE_GNOME=	gnomedesktop3 gnomeprefix intlhack introspection:build \
-		libxml2 pygobject3
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
-GNU_CONFIGURE=	yes	
+
+USES=		autoreconf:build desktop-file-utils gettext gmake libtool \
+		pathfix pkgconfig python:2 shared-mime-info
+USE_GNOME=	gnomedesktop3 gnomeprefix intlhack introspection:build \
+		libxml2 pygobject3
+GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 INSTALL_TARGET=	install-strip
-CONFIGURE_ARGS=	--enable-static --disable-packagekit \
-		--with-gnome-distributor="FreeBSD GNOME Project"	
+CONFIGURE_ARGS=	--enable-static
 
 GLIB_SCHEMAS=	org.nemo.gschema.xml
 
