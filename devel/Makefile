@@ -10,12 +10,16 @@
     SUBDIR += ORBit2-reference
     SUBDIR += R-cran-Defaults
     SUBDIR += R-cran-Hmisc
+    SUBDIR += R-cran-R6
     SUBDIR += R-cran-RUnit
     SUBDIR += R-cran-Rcpp
+    SUBDIR += R-cran-bit
+    SUBDIR += R-cran-bit64
     SUBDIR += R-cran-bitops
     SUBDIR += R-cran-caTools
     SUBDIR += R-cran-caret
     SUBDIR += R-cran-chron
+    SUBDIR += R-cran-evaluate
     SUBDIR += R-cran-foreach
     SUBDIR += R-cran-gbm
     SUBDIR += R-cran-gdata
@@ -79,6 +83,7 @@
     SUBDIR += arm-gnueabi-binutils
     SUBDIR += arm-none-eabi-binutils
     SUBDIR += arm-none-eabi-gcc
+    SUBDIR += arm-none-eabi-gcc492
     SUBDIR += aros-sdk
     SUBDIR += art
     SUBDIR += as31
@@ -1483,6 +1488,7 @@
     SUBDIR += ocaml-pcre
     SUBDIR += ocaml-pomap
     SUBDIR += ocaml-ppx-tools
+    SUBDIR += ocaml-re
     SUBDIR += ocaml-react
     SUBDIR += ocaml-res
     SUBDIR += ocaml-sdl
@@ -4507,6 +4513,7 @@
     SUBDIR += rubygem-abstract
     SUBDIR += rubygem-actionpack-action_caching
     SUBDIR += rubygem-actionview
+    SUBDIR += rubygem-actionview41
     SUBDIR += rubygem-active_scaffold
     SUBDIR += rubygem-activejob
     SUBDIR += rubygem-activemessaging
@@ -4577,6 +4584,7 @@
     SUBDIR += rubygem-coercible
     SUBDIR += rubygem-coffee-rails
     SUBDIR += rubygem-coffee-rails4
+    SUBDIR += rubygem-coffee-rails41
     SUBDIR += rubygem-coffee-script
     SUBDIR += rubygem-coffee-script-source
     SUBDIR += rubygem-colorize
@@ -4686,6 +4694,7 @@
     SUBDIR += rubygem-holidays
     SUBDIR += rubygem-i18n
     SUBDIR += rubygem-icalendar
+    SUBDIR += rubygem-ice_cube
     SUBDIR += rubygem-ice_nine
     SUBDIR += rubygem-igraph
     SUBDIR += rubygem-inflecto
@@ -4694,6 +4703,7 @@
     SUBDIR += rubygem-iobuffer
     SUBDIR += rubygem-jammit
     SUBDIR += rubygem-jbuilder
+    SUBDIR += rubygem-jbuilder-rails41
     SUBDIR += rubygem-jekyll-coffeescript
     SUBDIR += rubygem-jeweler
     SUBDIR += rubygem-jmespath
@@ -4809,6 +4819,7 @@
     SUBDIR += rubygem-retryable
     SUBDIR += rubygem-rgl
     SUBDIR += rubygem-rodzilla
+    SUBDIR += rubygem-rotp
     SUBDIR += rubygem-rr
     SUBDIR += rubygem-rrd-ffi
     SUBDIR += rubygem-rscm
@@ -4850,6 +4861,7 @@
     SUBDIR += rubygem-shoulda-context
     SUBDIR += rubygem-shoulda-matchers
     SUBDIR += rubygem-sidekiq
+    SUBDIR += rubygem-sidetiq
     SUBDIR += rubygem-sigdump
     SUBDIR += rubygem-simple_form
     SUBDIR += rubygem-simplecov
@@ -4861,6 +4873,7 @@
     SUBDIR += rubygem-sprockets
     SUBDIR += rubygem-sprockets-helpers
     SUBDIR += rubygem-sprockets-rails
+    SUBDIR += rubygem-sprockets-rails-rails41
     SUBDIR += rubygem-sprockets-sass
     SUBDIR += rubygem-sprockets211
     SUBDIR += rubygem-sprockets22
@@ -4963,6 +4976,7 @@
     SUBDIR += silentbob
     SUBDIR += simgear
     SUBDIR += simian
+    SUBDIR += simple_components
     SUBDIR += simpletest
     SUBDIR += skalibs
     SUBDIR += slf4j
