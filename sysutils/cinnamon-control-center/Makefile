@@ -10,8 +10,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Control center for Cinnamon
 
 BUILD_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss \
-		cinnamon-settings-daemon>=0:${PORTSDIR}/sysutils/cinnamon-settings-daemon \
-		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common
+		cinnamon-settings-daemon>=0:${PORTSDIR}/sysutils/cinnamon-settings-daemon
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libcheese.so:${PORTSDIR}/multimedia/cheese \
 		libcaribou.so:${PORTSDIR}/accessibility/caribou \
@@ -33,20 +32,17 @@ RUN_DEPENDS=	py*-dbus>=0:${PORTSDIR}/devel/py-dbus \
 		ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss \
 		py*-lxml>=0:${PORTSDIR}/devel/py-lxml
 
-USES=		autoreconf gettext gmake libtool pathfix \
-		python:2 pkgconfig
+USE_GITHUB=	yes
+GH_ACCOUNT=	linuxmint
+
+USES=		autoreconf gettext gmake libtool pathfix python:2 pkgconfig
 USE_GNOME=	evolutiondataserver3 gconf2 gnomeprefix \
 		gtk30 intlhack libgnomekbd
-USE_GITHUB=	yes
-GH_ACCOUNT=	linuxmint
 USE_XORG=	x11 xfixes sm
-USE_GITHUB=	yes
-GH_ACCOUNT=	linuxmint
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--enable-compile-warnings=no \
-		--with-gnome-distributor="FreeBSD GNOME Project"
+CONFIGURE_ARGS+=--enable-compile-warnings=no
 CFLAGS+=	-I${LOCALBASE}/include
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
