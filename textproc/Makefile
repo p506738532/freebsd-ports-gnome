@@ -6,10 +6,15 @@
     SUBDIR += 2bsd-diff
     SUBDIR += R-cran-R2HTML
     SUBDIR += R-cran-XML
+    SUBDIR += R-cran-formatR
+    SUBDIR += R-cran-highr
+    SUBDIR += R-cran-htmltools
+    SUBDIR += R-cran-markdown
     SUBDIR += R-cran-pystr
     SUBDIR += R-cran-stringi
     SUBDIR += R-cran-stringr
     SUBDIR += R-cran-xtable
+    SUBDIR += R-cran-yaml
     SUBDIR += ack
     SUBDIR += adabrowse
     SUBDIR += add-css-links
@@ -335,7 +340,8 @@
     SUBDIR += jshon
     SUBDIR += kdiff3
     SUBDIR += kenlm
-    SUBDIR += kibana
+    SUBDIR += kibana3
+    SUBDIR += kibana4
     SUBDIR += kmfl-european-latin
     SUBDIR += kmfl-khmer
     SUBDIR += kmfl-sil-ezra
@@ -1221,6 +1227,7 @@
     SUBDIR += py-pyscss
     SUBDIR += py-pysrt
     SUBDIR += py-pystache
+    SUBDIR += py-pystemmer
     SUBDIR += py-python-augeas
     SUBDIR += py-pytidylib
     SUBDIR += py-pyx12
@@ -1243,7 +1250,6 @@
     SUBDIR += py-sphinxcontrib-adadomain
     SUBDIR += py-sphinxcontrib-bitbucket
     SUBDIR += py-sphinxcontrib-httpdomain
-    SUBDIR += py-stripogram
     SUBDIR += py-syck
     SUBDIR += py-texttable
     SUBDIR += py-tinycss
@@ -1273,7 +1279,6 @@
     SUBDIR += py2html
     SUBDIR += py3-libxml2
     SUBDIR += pychm
-    SUBDIR += pystemmer
     SUBDIR += qprint
     SUBDIR += qstardict
     SUBDIR += qt4-xml
@@ -1413,6 +1418,7 @@
     SUBDIR += rubygem-sass
     SUBDIR += rubygem-sass-rails
     SUBDIR += rubygem-sass-rails4
+    SUBDIR += rubygem-sass-rails4-rails41
     SUBDIR += rubygem-sass-rails5
     SUBDIR += rubygem-sass32
     SUBDIR += rubygem-sax-machine

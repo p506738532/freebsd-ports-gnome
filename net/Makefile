@@ -930,6 +930,7 @@
     SUBDIR += py-msrplib
     SUBDIR += py-ndg_httpsclient
     SUBDIR += py-netaddr
+    SUBDIR += py-netif
     SUBDIR += py-netifaces
     SUBDIR += py-netlib
     SUBDIR += py-netstring
@@ -949,6 +950,7 @@
     SUBDIR += py-pysendfile
     SUBDIR += py-pysocks
     SUBDIR += py-pysphere
+    SUBDIR += py-python-bitcoinrpc
     SUBDIR += py-pyvmomi
     SUBDIR += py-pyzmq
     SUBDIR += py-qt4-network
@@ -959,7 +961,6 @@
     SUBDIR += py-smb
     SUBDIR += py-smbpasswd
     SUBDIR += py-soappy
-    SUBDIR += py-soapy
     SUBDIR += py-speedtest-cli
     SUBDIR += py-suds
     SUBDIR += py-terminado
@@ -973,7 +974,6 @@
     SUBDIR += py-urllib3
     SUBDIR += py-wolframalpha
     SUBDIR += py-xmlrpc
-    SUBDIR += py-xmlrpclib
     SUBDIR += py-zope.proxy
     SUBDIR += py-zsi
     SUBDIR += pygopherd

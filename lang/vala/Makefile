@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	vala
-PORTVERSION=	0.26.2
+PORTVERSION=	0.28.0
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
@@ -10,6 +10,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Programming language and compiler that converts Vala code into C code
 
 LICENSE=	LGPL21
+
+PORTSCOUT=	limitw:1,even
 
 USES=		bison gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 gnomeprefix libxslt
@@ -21,10 +23,6 @@ INSTALL_TARGET=	install-strip
 
 VALA_VER=	${PORTVERSION:R}
 
-PLIST_SUB=	VERSION=${VALA_VER}
-
-post-install:
-	${LN} -fs ${PREFIX}/libdata/pkgconfig/libvala-${VALA_VER}.pc \
-		${STAGEDIR}${PREFIX}/libdata/pkgconfig/vala-1.0.pc
+PLIST_SUB=	VERSION=0.28
 
 .include <bsd.port.mk>
