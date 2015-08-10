@@ -1,6 +1,5 @@
 # Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
 # $FreeBSD$
-#   $MCom: ports/trunk/misc/cinnamon-translations/Makefile 19857 2014-09-13 09:46:37Z gusi $
 
 PORTNAME=	cinnamon-translations
 PORTVERSION=	2.6.3
@@ -10,13 +9,12 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Translations for the cinnamon desktop
 
-USES=		gettext-tools tar:xz
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
+
+USES=		gettext-tools tar:xz
 NO_CONFIGURE=	yes
 INSTALL_TARGET=	all
-USE_GITHUB=	yes
-GH_ACCOUNT=	linuxmint
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|usr/share|${STAGEDIR}${PREFIX}/share|g' \
