@@ -9,8 +9,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME screen saver and locker
 
-BUILD_DEPENDS=	gsettings-desktop-schemas>=3.2.0:${PORTSDIR}/devel/gsettings-desktop-schemas \
-		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common
+BUILD_DEPENDS=	gsettings-desktop-schemas>=3.2.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify \
 		libwebkit2gtk-4.0.so:${PORTSDIR}/www/webkit2-gtk3 \
 		libcinnamon-desktop.so:${PORTSDIR}/x11/cinnamon-desktop \
@@ -19,13 +18,12 @@ RUN_DEPENDS=	pam_helper:${PORTSDIR}/security/pam_helper \
 		gsettings-desktop-schemas>=3.2.0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		gnome-keyring>=0:${PORTSDIR}/security/gnome-keyring
 
-USES=		autoreconf:build gettext gmake libtool pathfix pkgconfig tar:xz
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
+
+USES=		autoreconf gettext gmake libtool pathfix pkgconfig tar:xz
 USE_XORG=	x11 xext xxf86vm xxf86misc xscrnsaver
 USE_GNOME=	gnomedesktop3 gnomeprefix intltool libgnomekbd libxml2
-USE_GITHUB=	yes
-GH_ACCOUNT=	linuxmint
 GNU_CONFIGURE=	yes
 PATHFIX_MAKEFILEIN=	Makefile.am
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -50,8 +48,5 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/cinnamon-screensaver.pam \
 		${STAGEDIR}${PREFIX}/etc/pam.d/cinnamon-screensaver
 	${RM} -fr ${STAGEDIR}${PREFIX}/etc/pam.d/pam.d/
-
-pre-configure:
-	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
 
 .include <bsd.port.mk>
