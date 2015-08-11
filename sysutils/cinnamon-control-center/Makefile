@@ -10,6 +10,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Control center for Cinnamon
 
 BUILD_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss \
+		gnome-common>=0:${PORTSDIR}/devel/gnome-common \
 		cinnamon-settings-daemon>=0:${PORTSDIR}/sysutils/cinnamon-settings-daemon
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
 		libcheese.so:${PORTSDIR}/multimedia/cheese \
