@@ -10,6 +10,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Compositing window manager forked from Mutter for use with Cinnamon
 
 BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity \
+		gnome-common>=0:${PORTSDIR}/devel/gnome-common \
 		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		gtkdoc-check:${PORTSDIR}/textproc/gtk-doc
 LIB_DEPENDS=	libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \

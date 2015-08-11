@@ -10,6 +10,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	File manager for the Cinnamon desktop
 
 BUILD_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
+		gnome-common>=0:${PORTSDIR}/devel/gnome-common \
 		gtkdocize:${PORTSDIR}/textproc/gtk-doc \
 		py*-polib>=0:${PORTSDIR}/devel/py-polib \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas

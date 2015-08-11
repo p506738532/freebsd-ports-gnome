@@ -9,7 +9,8 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME screen saver and locker
 
-BUILD_DEPENDS=	gsettings-desktop-schemas>=3.2.0:${PORTSDIR}/devel/gsettings-desktop-schemas
+BUILD_DEPENDS=	gsettings-desktop-schemas>=3.2.0:${PORTSDIR}/devel/gsettings-desktop-schemas \
+		gnome-common>=0:${PORTSDIR}/devel/gnome-common
 LIB_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify \
 		libwebkit2gtk-4.0.so:${PORTSDIR}/www/webkit2-gtk3 \
 		libcinnamon-desktop.so:${PORTSDIR}/x11/cinnamon-desktop \
