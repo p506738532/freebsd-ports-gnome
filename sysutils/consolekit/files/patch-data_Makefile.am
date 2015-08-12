@@ -1,0 +1,13 @@
+--- data/Makefile.am.orig	2015-08-12 13:48:24.986459000 +0200
++++ data/Makefile.am	2015-08-12 13:48:49.490994000 +0200
+@@ -76,10 +76,6 @@
+ install-log:
+ 	$(INSTALL_PROGRAM) consolekit.logrotate $(logdir)
+ 
+-install-xinitrc:
+-	$(INSTALL_PROGRAM) 90-consolekit $(xinitrcdir) && \
+-	chmod +x $(xinitrcdir)/90-consolekit
+-
+ EXTRA_DIST =						\
+ 	ck-log-system-restart				\
+ 	ck-log-system-start				\
