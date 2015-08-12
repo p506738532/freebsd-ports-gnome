@@ -17,7 +17,8 @@ LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2 \
 		libcroco-0.6.so:${PORTSDIR}/textproc/libcroco
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gnomeprefix libgsf gdkpixbuf2 introspection:build libxml2
+USE_GNOME=	gnomeprefix libgsf gdkpixbuf2 introspection:build libxml2 \
+		pango
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
