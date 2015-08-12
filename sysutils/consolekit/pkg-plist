@@ -4,6 +4,7 @@ bin/ck-list-sessions
 etc/ConsoleKit/seats.d/00-primary.seat
 etc/X11/xinit/xinitrc.d/90-consolekit
 etc/dbus-1/system.d/ConsoleKit.conf
+etc/logrotate.d/consolekit
 include/ConsoleKit/ck-connector/ck-connector.h
 lib/ConsoleKit/scripts/ck-get-x11-display-device
 lib/ConsoleKit/scripts/ck-get-x11-server-pid
@@ -33,6 +34,10 @@ share/dbus-1/interfaces/org.freedesktop.ConsoleKit.Manager.xml
 share/dbus-1/interfaces/org.freedesktop.ConsoleKit.Seat.xml
 share/dbus-1/interfaces/org.freedesktop.ConsoleKit.Session.xml
 share/dbus-1/system-services/org.freedesktop.ConsoleKit.service
+share/locale/bg/LC_MESSAGES/ConsoleKit2.mo
+share/locale/es/LC_MESSAGES/ConsoleKit2.mo
+share/locale/es_419/LC_MESSAGES/ConsoleKit2.mo
+share/locale/ru/LC_MESSAGES/ConsoleKit2.mo
 share/polkit-1/actions/org.freedesktop.consolekit.policy
 @dir /var/run/ConsoleKit
 @dir /var/log/ConsoleKit

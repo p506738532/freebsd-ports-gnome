@@ -14,7 +14,6 @@ LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 USE_GITHUB=	yes
 GH_ACCOUNT=	ConsoleKit2
 GH_PROJECT=	ConsoleKit2
-GH_TAGNAME=	fb6de51
 
 USES=		autoreconf gettext gmake libtool pathfix pkgconfig tar:bzip2
 USE_XORG=	x11
@@ -34,14 +33,7 @@ PATHFIX_MAKEFILEIN=	Makefile.am
 
 INSTALL_TARGET=	install-strip
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|/usr/bin/|${PREFIX}/bin/|g' \
-		${WRKSRC}/data/90-consolekit
-
 post-install:
 	@${MKDIR} ${STAGEDIR}/var/log/ConsoleKit
-	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/X11/xinit/xinitrc.d
-	${INSTALL_DATA} ${WRKSRC}/data/90-consolekit \
-		${STAGEDIR}${PREFIX}/etc/X11/xinit/xinitrc.d
 
 .include <bsd.port.mk>
