@@ -8,7 +8,7 @@ CATEGORIES=	sysutils gnome
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Framework for defining and tracking users
 
-LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
     		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
 
 USE_GITHUB=	yes
