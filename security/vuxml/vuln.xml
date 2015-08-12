@@ -58,6 +58,308 @@ Notes:
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="f3778328-d288-4b39-86a4-65877331eaf7">
+    <topic>Adobe Flash Player -- critical vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>linux-c6-flashplugin</name>
+	<name>linux-c6_64-flashplugin</name>
+	<range><lt>11.2r202.508</lt></range>
+      </package>
+      <package>
+	<name>linux-f10-flashplugin</name>
+	<range><lt>11.2r202.508</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Adobe reports:</p>
+	<blockquote cite="https://helpx.adobe.com/security/products/flash-player/apsb15-19.html">
+	  <p>Adobe has released security updates for Adobe Flash Player.
+	    These updates address critical vulnerabilities that could
+	    potentially allow an attacker to take control of the affected
+	    system.</p>
+	  <p>These updates resolve type confusion vulnerabilities that could
+	    lead to code execution (CVE-2015-5128, CVE-2015-5554,
+	    CVE-2015-5555, CVE-2015-5558, CVE-2015-5562).</p>
+	  <p>These updates include further hardening to a mitigation
+	    introduced in version 18.0.0.209 to defend against vector
+	    length corruptions (CVE-2015-5125).</p>
+	  <p>These updates resolve use-after-free vulnerabilities that could
+	    lead to code execution (CVE-2015-5550, CVE-2015-5551,
+	    CVE-2015-3107, CVE-2015-5556, CVE-2015-5130, CVE-2015-5134,
+	    CVE-2015-5539, CVE-2015-5540, CVE-2015-5557, CVE-2015-5559,
+	    CVE-2015-5127, CVE-2015-5563, CVE-2015-5561, CVE-2015-5124,
+	    CVE-2015-5564).</p>
+	  <p>These updates resolve heap buffer overflow vulnerabilities
+	    that could lead to code execution (CVE-2015-5129,
+	    CVE-2015-5541).</p>
+	  <p>These updates resolve buffer overflow vulnerabilities that
+	    could lead to code execution (CVE-2015-5131, CVE-2015-5132,
+	    CVE-2015-5133).</p>
+	  <p>These updates resolve memory corruption vulnerabilities that
+	    could lead to code execution (CVE-2015-5544, CVE-2015-5545,
+	    CVE-2015-5546, CVE-2015-5547, CVE-2015-5548, CVE-2015-5549,
+	    CVE-2015-5552, CVE-2015-5553).</p>
+	  <p>These updates resolve an integer overflow vulnerability that
+	    could lead to code execution (CVE-2015-5560).</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-3107</cvename>
+      <cvename>CVE-2015-5124</cvename>
+      <cvename>CVE-2015-5125</cvename>
+      <cvename>CVE-2015-5127</cvename>
+      <cvename>CVE-2015-5128</cvename>
+      <cvename>CVE-2015-5129</cvename>
+      <cvename>CVE-2015-5130</cvename>
+      <cvename>CVE-2015-5131</cvename>
+      <cvename>CVE-2015-5132</cvename>
+      <cvename>CVE-2015-5133</cvename>
+      <cvename>CVE-2015-5134</cvename>
+      <cvename>CVE-2015-5539</cvename>
+      <cvename>CVE-2015-5540</cvename>
+      <cvename>CVE-2015-5541</cvename>
+      <cvename>CVE-2015-5544</cvename>
+      <cvename>CVE-2015-5545</cvename>
+      <cvename>CVE-2015-5546</cvename>
+      <cvename>CVE-2015-5547</cvename>
+      <cvename>CVE-2015-5548</cvename>
+      <cvename>CVE-2015-5549</cvename>
+      <cvename>CVE-2015-5550</cvename>
+      <cvename>CVE-2015-5551</cvename>
+      <cvename>CVE-2015-5552</cvename>
+      <cvename>CVE-2015-5553</cvename>
+      <cvename>CVE-2015-5554</cvename>
+      <cvename>CVE-2015-5555</cvename>
+      <cvename>CVE-2015-5556</cvename>
+      <cvename>CVE-2015-5557</cvename>
+      <cvename>CVE-2015-5558</cvename>
+      <cvename>CVE-2015-5559</cvename>
+      <cvename>CVE-2015-5560</cvename>
+      <cvename>CVE-2015-5561</cvename>
+      <cvename>CVE-2015-5562</cvename>
+      <cvename>CVE-2015-5563</cvename>
+      <cvename>CVE-2015-5564</cvename>
+      <url>https://helpx.adobe.com/security/products/flash-player/apsb15-19.html</url>
+    </references>
+    <dates>
+      <discovery>2015-08-11</discovery>
+      <entry>2015-08-12</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="34e60332-2448-4ed6-93f0-12713749f250">
+    <topic>libvpx -- multiple buffer overflows</topic>
+    <affects>
+      <package>
+	<name>libvpx</name>
+	<range><lt>1.5.0</lt></range>
+      </package>
+      <package>
+	<name>firefox</name>
+	<range><lt>40.0,1</lt></range>
+      </package>
+      <package>
+	<name>linux-firefox</name>
+	<range><lt>40.0,1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Mozilla Project reports:</p>
+	<blockquote cite="https://www.mozilla.org/security/advisories/mfsa2015-89/">
+	  <p>Security researcher Abhishek Arya (Inferno) of the Google
+	    Chrome Security Team used the Address Sanitizer tool to
+	    discover two buffer overflow issues in the Libvpx library
+	    used for WebM video when decoding a malformed WebM video
+	    file. These buffer overflows result in potentially
+	    exploitable crashes.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4485</cvename>
+      <cvename>CVE-2015-4486</cvename>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-89/</url>
+    </references>
+    <dates>
+      <discovery>2015-08-11</discovery>
+      <entry>2015-08-11</entry>
+      <modified>2015-08-11</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="c66a5632-708a-4727-8236-d65b2d5b2739">
+    <topic>mozilla -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>firefox</name>
+	<range><lt>40.0,1</lt></range>
+      </package>
+      <package>
+	<name>linux-firefox</name>
+	<range><lt>40.0,1</lt></range>
+      </package>
+      <package>
+	<name>seamonkey</name>
+	<range><lt>2.37</lt></range>
+      </package>
+      <package>
+	<name>linux-seamonkey</name>
+	<range><lt>2.37</lt></range>
+      </package>
+      <package>
+	<name>firefox-esr</name>
+	<range><lt>38.2.0,1</lt></range>
+      </package>
+      <package>
+	<name>libxul</name>
+	<range><lt>38.2.0</lt></range>
+      </package>
+      <package>
+	<name>thunderbird</name>
+	<range><lt>38.2.0</lt></range>
+      </package>
+      <package>
+	<name>linux-thunderbird</name>
+	<range><lt>38.2.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Mozilla Project reports:</p>
+	<blockquote cite="https://www.mozilla.org/en-US/security/advisories/">
+	  <p>MFSA 2015-79 Miscellaneous memory safety hazards (rv:40.0
+	    / rv:38.2)</p>
+	  <p>MFSA 2015-80 Out-of-bounds read with malformed MP3
+	    file</p>
+	  <p>MFSA 2015-81 Use-after-free in MediaStream playback</p>
+	    <p>MFSA 2015-82 Redefinition of non-configurable JavaScript object properties</p>
+	  <p>MFSA 2015-83 Overflow issues in libstagefright</p>
+	  <p>MFSA 2015-84 Arbitrary file overwriting through Mozilla
+	    Maintenance Service with hard links</p>
+	  <p>MFSA 2015-85 Out-of-bounds write with Updater and
+	    malicious MAR file</p>
+	  <p>MFSA 2015-86 Feed protocol with POST bypasses mixed
+	    content protections</p>
+	  <p>MFSA 2015-87 Crash when using shared memory in
+	    JavaScript</p>
+	  <p>MFSA 2015-88 Heap overflow in gdk-pixbuf when scaling
+	    bitmap images</p>
+	  <p>MFSA 2015-90 Vulnerabilities found through code
+	    inspection</p>
+	  <p>MFSA 2015-91 Mozilla Content Security Policy allows for
+	    asterisk wildcards in violation of CSP specification</p>
+	  <p>MFSA 2015-92 Use-after-free in XMLHttpRequest with shared
+	    workers</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-4473</cvename>
+      <cvename>CVE-2015-4474</cvename>
+      <cvename>CVE-2015-4475</cvename>
+      <cvename>CVE-2015-4477</cvename>
+      <cvename>CVE-2015-4478</cvename>
+      <cvename>CVE-2015-4479</cvename>
+      <cvename>CVE-2015-4480</cvename>
+      <cvename>CVE-2015-4481</cvename>
+      <cvename>CVE-2015-4482</cvename>
+      <cvename>CVE-2015-4483</cvename>
+      <cvename>CVE-2015-4484</cvename>
+      <cvename>CVE-2015-4487</cvename>
+      <cvename>CVE-2015-4488</cvename>
+      <cvename>CVE-2015-4489</cvename>
+      <cvename>CVE-2015-4490</cvename>
+      <cvename>CVE-2015-4491</cvename>
+      <cvename>CVE-2015-4492</cvename>
+      <cvename>CVE-2015-4493</cvename>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-79/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-80/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-81/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-82/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-83/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-84/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-85/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-86/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-87/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-88/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-90/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-91/</url>
+      <url>https://www.mozilla.org/security/advisories/mfsa2015-92/</url>
+    </references>
+    <dates>
+      <discovery>2015-08-11</discovery>
+      <entry>2015-08-11</entry>
+      <modified>2015-08-11</modified>
+    </dates>
+  </vuln>
+
+  <vuln vid="dd7f29cc-3ee9-11e5-93ad-002590263bf5">
+    <topic>lighttpd -- Log injection vulnerability in mod_auth</topic>
+    <affects>
+      <package>
+	<name>lighttpd</name>
+	<range><lt>1.4.36</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>MITRE reports:</p>
+	<blockquote cite="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3200">
+	  <p>mod_auth in lighttpd before 1.4.36 allows remote attackers to
+	    inject arbitrary log entries via a basic HTTP authentication string
+	    without a colon character, as demonstrated by a string containing a
+	    NULL and new line character.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2015-3200</cvename>
+      <url>http://redmine.lighttpd.net/issues/2646</url>
+    </references>
+    <dates>
+      <discovery>2015-05-25</discovery>
+      <entry>2015-08-10</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="ff0acfb4-3efa-11e5-93ad-002590263bf5">
+    <topic>pcre -- heap overflow vulnerability in '(?|' situations</topic>
+    <affects>
+      <package>
+	<name>pcre</name>
+	<range><le>8.37_2</le></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Venustech ADLAB reports:</p>
+	<blockquote cite="https://bugs.exim.org/show_bug.cgi?id=1667">
+	  <p>PCRE library is prone to a vulnerability which leads to Heap
+	    Overflow. During the compilation of a malformed regular expression,
+	    more data is written on the malloced block than the expected size
+	    output by compile_regex. Exploits with advanced Heap Fengshui
+	    techniques may allow an attacker to execute arbitrary code in the
+	    context of the user running the affected application.</p>
+	  <p>Latest version of PCRE is prone to a Heap Overflow vulnerability
+	    which could caused by the following regular expression.</p>
+	  <p>/(?J:(?|(:(?|(?'R')(\k'R')|((?'R')))H'Rk'Rf)|s(?'R'))))/</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <freebsdpr>ports/202209</freebsdpr>
+      <url>https://bugs.exim.org/show_bug.cgi?id=1667</url>
+    </references>
+    <dates>
+      <discovery>2015-08-05</discovery>
+      <entry>2015-08-10</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="8eee06d4-c21d-4f07-a669-455151ff426f">
     <topic>mozilla -- multiple vulnerabilities</topic>
     <affects>
