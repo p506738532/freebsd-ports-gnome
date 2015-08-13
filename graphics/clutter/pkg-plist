@@ -15,6 +15,7 @@ include/clutter-1.0/clutter/clutter-actor-meta.h
 include/clutter-1.0/clutter/clutter-actor.h
 include/clutter-1.0/clutter/clutter-align-constraint.h
 include/clutter-1.0/clutter/clutter-animatable.h
+include/clutter-1.0/clutter/clutter-autocleanups.h
 include/clutter-1.0/clutter/clutter-backend.h
 include/clutter-1.0/clutter/clutter-bin-layout.h
 include/clutter-1.0/clutter/clutter-bind-constraint.h
@@ -58,11 +59,9 @@ include/clutter-1.0/clutter/clutter-keyframe-transition.h
 include/clutter-1.0/clutter/clutter-keysyms.h
 include/clutter-1.0/clutter/clutter-layout-manager.h
 include/clutter-1.0/clutter/clutter-layout-meta.h
-include/clutter-1.0/clutter/clutter-list-model.h
 include/clutter-1.0/clutter/clutter-macros.h
 include/clutter-1.0/clutter/clutter-main.h
 include/clutter-1.0/clutter/clutter-marshal.h
-include/clutter-1.0/clutter/clutter-model.h
 include/clutter-1.0/clutter/clutter-offscreen-effect.h
 include/clutter-1.0/clutter/clutter-page-turn-effect.h
 include/clutter-1.0/clutter/clutter-paint-node.h
@@ -117,8 +116,10 @@ include/clutter-1.0/clutter/deprecated/clutter-frame-source.h
 include/clutter-1.0/clutter/deprecated/clutter-group.h
 include/clutter-1.0/clutter/deprecated/clutter-input-device.h
 include/clutter-1.0/clutter/deprecated/clutter-keysyms.h
+include/clutter-1.0/clutter/deprecated/clutter-list-model.h
 include/clutter-1.0/clutter/deprecated/clutter-main.h
 include/clutter-1.0/clutter/deprecated/clutter-media.h
+include/clutter-1.0/clutter/deprecated/clutter-model.h
 include/clutter-1.0/clutter/deprecated/clutter-rectangle.h
 include/clutter-1.0/clutter/deprecated/clutter-score.h
 include/clutter-1.0/clutter/deprecated/clutter-shader.h
@@ -141,7 +142,7 @@ lib/girepository-1.0/Clutter-1.0.typelib
 lib/girepository-1.0/ClutterX11-1.0.typelib
 lib/libclutter-1.0.so
 lib/libclutter-1.0.so.0
-lib/libclutter-1.0.so.0.2302.0
+lib/libclutter-1.0.so.0.2304.0
 lib/libclutter-glx-1.0.so
 lib/libclutter-glx-1.0.so.0
 libdata/pkgconfig/cally-1.0.pc
