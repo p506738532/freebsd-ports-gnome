@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-dictionary
-PORTVERSION=	3.17.3
+PORTVERSION=	3.17.4
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
