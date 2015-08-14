@@ -40,6 +40,7 @@
     SUBDIR += R-cran-reshape
     SUBDIR += R-cran-reshape2
     SUBDIR += R-cran-rngtools
+    SUBDIR += R-cran-rstudioapi
     SUBDIR += SpecTcl
     SUBDIR += aap
     SUBDIR += aarch64-binutils
@@ -65,6 +66,7 @@
     SUBDIR += android-tools-adb-devel
     SUBDIR += android-tools-fastboot
     SUBDIR += android-tools-fastboot-devel
+    SUBDIR += android-tools-simpleperf
     SUBDIR += anjuta
     SUBDIR += anjuta-extras
     SUBDIR += antlr
@@ -4009,6 +4011,7 @@
     SUBDIR += py-jsonrpclib
     SUBDIR += py-jsonschema
     SUBDIR += py-kaptan
+    SUBDIR += py-kayako
     SUBDIR += py-kazoo
     SUBDIR += py-kid
     SUBDIR += py-kjbuckets
@@ -4184,6 +4187,7 @@
     SUBDIR += py-sanetime
     SUBDIR += py-scripttest
     SUBDIR += py-sdl2
+    SUBDIR += py-selection
     SUBDIR += py-semantic_version
     SUBDIR += py-serpent
     SUBDIR += py-setproctitle
@@ -4270,6 +4274,7 @@
     SUBDIR += py-virtualenvwrapper
     SUBDIR += py-watchdog
     SUBDIR += py-wcwidth
+    SUBDIR += py-weblib
     SUBDIR += py-wheel
     SUBDIR += py-wsgi_xmlrpc
     SUBDIR += py-wsgitools
