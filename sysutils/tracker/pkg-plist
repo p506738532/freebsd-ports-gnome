@@ -8,7 +8,6 @@ bin/tracker-search
 bin/tracker-sparql
 bin/tracker-stats
 bin/tracker-tag
-etc/bash_completion.d/tracker-prompt.sh
 etc/xdg/autostart/tracker-extract.desktop
 etc/xdg/autostart/tracker-miner-apps.desktop
 etc/xdg/autostart/tracker-miner-fs.desktop
@@ -171,7 +170,6 @@ share/gtk-doc/html/libtracker-control/left-insensitive.png
 share/gtk-doc/html/libtracker-control/TrackerMinerManager.html
 share/gtk-doc/html/libtracker-control/right.png
 share/gtk-doc/html/libtracker-control/left.png
-share/gtk-doc/html/libtracker-control/index.sgml
 share/gtk-doc/html/libtracker-control/annotation-glossary.html
 share/gtk-doc/html/libtracker-control/index.html
 share/gtk-doc/html/libtracker-miner/libtracker-miner-TrackerFileEnumerator.html
@@ -182,7 +180,6 @@ share/gtk-doc/html/libtracker-miner/libtracker-miner-TrackerFileDataProvider.htm
 share/gtk-doc/html/libtracker-miner/ch02.html
 share/gtk-doc/html/libtracker-miner/left-insensitive.png
 share/gtk-doc/html/libtracker-miner/libtracker-miner-reference.html
-share/gtk-doc/html/libtracker-miner/index.sgml
 share/gtk-doc/html/libtracker-miner/home.png
 share/gtk-doc/html/libtracker-miner/libtracker-miner-TrackerThumbnailer.html
 share/gtk-doc/html/libtracker-miner/ch03.html
@@ -216,7 +213,6 @@ share/gtk-doc/html/libtracker-sparql/left.png
 share/gtk-doc/html/libtracker-sparql/libtracker-sparql-Version-Information.html
 share/gtk-doc/html/libtracker-sparql/tracker-overview-environment-variables.html
 share/gtk-doc/html/libtracker-sparql/style.css
-share/gtk-doc/html/libtracker-sparql/index.sgml
 share/gtk-doc/html/libtracker-sparql/tracker-overview-connection-methods.html
 share/gtk-doc/html/libtracker-sparql/index.html
 share/gtk-doc/html/libtracker-sparql/tracker-examples-writeonly-with-blank-nodes.html

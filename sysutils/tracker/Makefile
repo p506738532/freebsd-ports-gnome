@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	tracker
-PORTVERSION=	1.4.1
+PORTVERSION=	1.5.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -50,12 +50,13 @@ GLIB_SCHEMAS=	org.freedesktop.Tracker.DB.gschema.xml \
 		org.freedesktop.Tracker.Extract.gschema.xml \
 		org.freedesktop.Tracker.FTS.gschema.xml \
 		org.freedesktop.Tracker.Miner.Files.gschema.xml \
+		org.freedesktop.Tracker.Needle.gschema.xml \
 		org.freedesktop.Tracker.Store.gschema.xml \
 		org.freedesktop.Tracker.Writeback.gschema.xml \
 		org.freedesktop.Tracker.enums.xml \
 		org.freedesktop.Tracker.gschema.xml
 
-PLIST_SUB=	TRACKER_VER="1.0" LIBVER=400
+PLIST_SUB=	TRACKER_VER="1.0" LIBVER=501
 
 OPTIONS_DEFINE=		AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINERS \
 			NAUTILUS WEB_MINERS
