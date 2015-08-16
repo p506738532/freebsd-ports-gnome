@@ -3,6 +3,7 @@
 
 PORTNAME=	gnome-panel
 PORTVERSION=	3.16.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,7 +26,7 @@ USES+=		gettext gmake libtool pathfix pkgconfig
 USE_XORG=	ice sm x11 xau xrandr
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-USE_GNOME=	dconf gconf2 gnomedesktop3 gnomemenus3 gnomeprefix \
+USE_GNOME=	dconf gconf2 gnomedesktop3 gnomeprefix \
 		intltool librsvg2 libwnck3
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-network-manager
