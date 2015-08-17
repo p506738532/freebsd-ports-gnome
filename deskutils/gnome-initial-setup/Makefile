@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-initial-setup
-PORTVERSION=	3.16.3
+PORTVERSION=	3.17.90
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -33,10 +33,6 @@ OPTIONS_DEFINE=	KERBEROS
 OPTIONS_DEFAULT=KERBEROS
 
 .include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 900007
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-gnome-initial-setup_pages_account_um-utils.c
-.endif
 
 .if !${PORT_OPTIONS:MKERBEROS}
 EXTRA_PATCHES+=		${FILESDIR}/extra-patch-gnome-initial-setup_gis-account-page.c
