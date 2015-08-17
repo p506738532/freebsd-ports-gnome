@@ -7,7 +7,7 @@ CATEGORIES=	x11 gnome
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	GNOME screen saver and locker
+COMMENT=	Cinnamon screensaver and locker
 
 BUILD_DEPENDS=	gsettings-desktop-schemas>=3.2.0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		gnome-common>=0:${PORTSDIR}/devel/gnome-common
