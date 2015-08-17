@@ -48,6 +48,7 @@ include/libsoup-%%VERSION%%/libsoup/soup-value-utils.h
 include/libsoup-%%VERSION%%/libsoup/soup-version.h
 include/libsoup-%%VERSION%%/libsoup/soup-websocket-connection.h
 include/libsoup-%%VERSION%%/libsoup/soup-websocket.h
+include/libsoup-%%VERSION%%/libsoup/soup-xmlrpc-old.h
 include/libsoup-%%VERSION%%/libsoup/soup-xmlrpc.h
 include/libsoup-%%VERSION%%/libsoup/soup.h
 lib/girepository-1.0/Soup-%%VERSION%%.typelib
@@ -100,7 +101,6 @@ share/gtk-doc/html/libsoup-%%VERSION%%/index.sgml
 share/gtk-doc/html/libsoup-%%VERSION%%/ix01.html
 share/gtk-doc/html/libsoup-%%VERSION%%/left-insensitive.png
 share/gtk-doc/html/libsoup-%%VERSION%%/left.png
-share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-GValue-Support.html
 share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-HTML-Form-Support.html
 share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-Soup-Miscellaneous-Utilities.html
 share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-SoupServer-deprecated-API.html
