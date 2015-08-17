@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	3.17.2
+PORTVERSION=	3.17.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,7 +15,6 @@ BUILD_DEPENDS=	gnome-settings-daemon>=3.4.0:${PORTSDIR}/sysutils/gnome-settings-
 		docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl \
 		iso-codes>=0:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
-		libxklavier.so:${PORTSDIR}/x11/libxklavier \
 		libupower-glib.so:${PORTSDIR}/sysutils/upower \
 		libaccountsservice.so:${PORTSDIR}/sysutils/accountsservice \
 		libcolord.so:${PORTSDIR}/graphics/colord \
@@ -40,7 +39,7 @@ CONFLICTS=	gnome-media-2.[0-9]*
 PORTSCOUT=	limitw:1,even
 
 USES=		compiler:c++11-lib gettext gmake pathfix pkgconfig tar:xz
-USE_GNOME=	gnomedesktop3 gnomemenus3 intltool libxml2
+USE_GNOME=	gnomedesktop3 intltool libxml2
 USE_XORG=	xscrnsaver x11 xxf86misc kbproto xi
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
