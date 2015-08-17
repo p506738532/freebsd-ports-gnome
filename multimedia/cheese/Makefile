@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cheese
-PORTVERSION=	3.17.1
+PORTVERSION=	3.17.90
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	v4l_compat>=0:${PORTSDIR}/multimedia/v4l_compat \
 LIB_DEPENDS=	libcanberra-gtk3.so:${PORTSDIR}/audio/libcanberra-gtk3 \
 		libhal.so:${PORTSDIR}/sysutils/hal \
 		libclutter-gtk-1.0.so:${PORTSDIR}/graphics/clutter-gtk3 \
-		libclutter-gst-2.0.so:${PORTSDIR}/multimedia/clutter-gst
+		libclutter-gst-3.0.so:${PORTSDIR}/multimedia/clutter-gst3
 RUN_DEPENDS=	gnome-video-effects>=0:${PORTSDIR}/graphics/gnome-video-effects
 
 PORTSCOUT=	limitw:1,even

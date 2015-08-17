@@ -11,11 +11,11 @@ include/cheese/cheese-widget.h
 include/cheese/cheese.h
 lib/girepository-1.0/Cheese-3.0.typelib
 lib/libcheese-gtk.so
-lib/libcheese-gtk.so.23
-lib/libcheese-gtk.so.23.1.24
+lib/libcheese-gtk.so.25
+lib/libcheese-gtk.so.25.0.0
 lib/libcheese.so
-lib/libcheese.so.7
-lib/libcheese.so.7.0.40
+lib/libcheese.so.8
+lib/libcheese.so.8.0.0
 libdata/pkgconfig/cheese-gtk.pc
 libdata/pkgconfig/cheese.pc
 libexec/gnome-camera-service
@@ -50,7 +50,6 @@ share/gtk-doc/html/cheese/cheese.html
 share/gtk-doc/html/cheese/cheese_architecture.png
 share/gtk-doc/html/cheese/home.png
 share/gtk-doc/html/cheese/index.html
-share/gtk-doc/html/cheese/index.sgml
 share/gtk-doc/html/cheese/left-insensitive.png
 share/gtk-doc/html/cheese/left.png
 share/gtk-doc/html/cheese/libcheese-gtk.html
