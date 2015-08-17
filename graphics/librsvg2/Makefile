@@ -11,7 +11,6 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library for parsing and rendering SVG vector-graphic files
 
-BUILD_DEPENDS=	valac:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2 \
 		libpng.so:${PORTSDIR}/graphics/png \
 		libcroco-0.6.so:${PORTSDIR}/textproc/libcroco
@@ -24,7 +23,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
-CONFIGURE_ARGS=	--enable-vala \
+CONFIGURE_ARGS=	--disable-vala \
 		--disable-Bsymbolic
 
 post-patch:
