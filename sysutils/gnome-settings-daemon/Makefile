@@ -64,6 +64,7 @@ GLIB_SCHEMAS=	org.gnome.settings-daemon.enums.xml \
 		org.gnome.settings-daemon.plugins.keyboard.gschema.xml \
 		org.gnome.settings-daemon.plugins.media-keys.gschema.xml \
 		org.gnome.settings-daemon.plugins.power.gschema.xml \
+		org.gnome.settings-daemon.plugins.power.gschema.xml.override \
 		org.gnome.settings-daemon.plugins.print-notifications.gschema.xml \
 		org.gnome.settings-daemon.plugins.sharing.gschema.xml \
 		org.gnome.settings-daemon.plugins.xrandr.gschema.xml \
@@ -72,5 +73,9 @@ GLIB_SCHEMAS=	org.gnome.settings-daemon.enums.xml \
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/gnome|${PREFIX}/etc/gnome|g' \
 		${WRKSRC}/data/org.gnome.settings-daemon.plugins.xrandr.gschema.xml.in.in
+
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/org.gnome.settings-daemon.plugins.power.gschema.xml.override \
+		${STAGEDIR}${PREFIX}/share/glib-2.0/schemas/
 
 .include <bsd.port.mk>
