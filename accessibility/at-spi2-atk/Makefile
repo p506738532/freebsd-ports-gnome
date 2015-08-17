@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	at-spi2-atk
-PORTVERSION=	2.17.1
+PORTVERSION=	2.17.90
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,9 +12,9 @@ COMMENT=	Assisted Technology Provider module for GTK+
 
 LICENSE=	LGPL21
 
-BUILD_DEPENDS=	at-spi2-core>=2.8.0:${PORTSDIR}/accessibility/at-spi2-core
+BUILD_DEPENDS=	at-spi2-core>=2.17.90:${PORTSDIR}/accessibility/at-spi2-core
 LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus
-RUN_DEPENDS=	at-spi2-core>=2.8.0:${PORTSDIR}/accessibility/at-spi2-core
+RUN_DEPENDS=	at-spi2-core>=2.17.90:${PORTSDIR}/accessibility/at-spi2-core
 
 PORTSCOUT=	limitw:1,even
 
