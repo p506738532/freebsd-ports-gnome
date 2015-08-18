@@ -14,6 +14,7 @@ BUILD_DEPENDS=	docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
 LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
 		libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 		libgcrypt.so:${PORTSDIR}/security/libgcrypt \
+		libgcr-base-3.so:${PORTSDIR}/security/gcr \
 		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 
 PORTSCOUT=	limitw:1,even
