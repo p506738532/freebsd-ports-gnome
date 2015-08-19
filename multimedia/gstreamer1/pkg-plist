@@ -20,6 +20,7 @@ include/gstreamer-%%VERSION%%/gst/base/gsttypefindhelper.h
 %%LIBCHECK%%include/gstreamer-%%VERSION%%/gst/check/gstbufferstraw.h
 %%LIBCHECK%%include/gstreamer-%%VERSION%%/gst/check/gstcheck.h
 %%LIBCHECK%%include/gstreamer-%%VERSION%%/gst/check/gstconsistencychecker.h
+%%LIBCHECK%%include/gstreamer-%%VERSION%%/gst/check/gstharness.h
 %%LIBCHECK%%include/gstreamer-%%VERSION%%/gst/check/gsttestclock.h
 %%LIBCHECK%%include/gstreamer-%%VERSION%%/gst/check/internal-check.h
 include/gstreamer-%%VERSION%%/gst/controller/controller.h
