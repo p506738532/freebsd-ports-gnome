@@ -280,7 +280,6 @@
     SUBDIR += fpc-users
     SUBDIR += fpc-utmp
     SUBDIR += fpc-uuid
-    SUBDIR += fpkg
     SUBDIR += freebsd-snapshot
     SUBDIR += freecolor
     SUBDIR += freedt
@@ -551,8 +550,13 @@
     SUBDIR += monitorix
     SUBDIR += mono-kmod
     SUBDIR += moosefs-chunkserver
+    SUBDIR += moosefs-cgi
+    SUBDIR += moosefs-cgiserv
+    SUBDIR += moosefs-cli
     SUBDIR += moosefs-client
     SUBDIR += moosefs-master
+    SUBDIR += moosefs-metalogger
+    SUBDIR += moosefs-netdump
     SUBDIR += moreutils
     SUBDIR += most
     SUBDIR += mount.app
@@ -833,7 +837,6 @@
     SUBDIR += rubygem-bosh-gen
     SUBDIR += rubygem-bosh_cli
     SUBDIR += rubygem-bundler
-    SUBDIR += rubygem-bundler17
     SUBDIR += rubygem-bundler_ext
     SUBDIR += rubygem-capistrano
     SUBDIR += rubygem-capistrano-ext
@@ -846,6 +849,7 @@
     SUBDIR += rubygem-fluent-plugin-file-alternative
     SUBDIR += rubygem-fluent-plugin-tail-asis
     SUBDIR += rubygem-fluentd
+    SUBDIR += rubygem-fluentd010
     SUBDIR += rubygem-fssm
     SUBDIR += rubygem-god
     SUBDIR += rubygem-guard
@@ -859,6 +863,7 @@
     SUBDIR += rubygem-hammer_cli_foreman_salt
     SUBDIR += rubygem-hammer_cli_foreman_ssh
     SUBDIR += rubygem-hiera
+    SUBDIR += rubygem-hiera1
     SUBDIR += rubygem-hiera-file
     SUBDIR += rubygem-librarian-puppet
     SUBDIR += rubygem-log4r
@@ -869,6 +874,7 @@
     SUBDIR += rubygem-ohai
     SUBDIR += rubygem-parallel
     SUBDIR += rubygem-puppet_forge
+    SUBDIR += rubygem-puppet_forge1
     SUBDIR += rubygem-r10k
     SUBDIR += rubygem-rubyipmi
     SUBDIR += rubygem-shellany
