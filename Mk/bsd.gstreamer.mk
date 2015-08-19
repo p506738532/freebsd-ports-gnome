@@ -120,7 +120,7 @@ artsd_DEPENDS=	audio/gstreamer-plugins-artsd
 
 audiofile_DEPENDS=	audio/gstreamer-plugins-audiofile
 
-bs2b_DEPEND=	audio/gstreamer-plugins-bs2b
+bs2b_DEPENDS=	audio/gstreamer-plugins-bs2b
 
 cdaudio_DEPENDS=	audio/gstreamer-plugins-cdaudio
 
