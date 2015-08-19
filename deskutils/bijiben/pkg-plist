@@ -7,7 +7,6 @@ share/applications/bijiben.desktop
 %%DATADIR%%/icons/hicolor/24x24/actions/note.png
 %%DATADIR%%/icons/hicolor/48x48/actions/note.png
 %%DATADIR%%/icons/hicolor/scalable/actions/link.svg
-%%DATADIR%%/icons/hicolor/scalable/actions/note.svg
 share/dbus-1/services/org.gnome.Bijiben.SearchProvider.service
 share/gnome-shell/search-providers/bijiben-search-provider.ini
 share/help/C/bijiben/colors.page
