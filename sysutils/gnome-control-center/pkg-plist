@@ -26,7 +26,6 @@ share/applications/gnome-user-accounts-panel.desktop
 share/bash-completion/completions/gnome-control-center
 share/dbus-1/services/org.gnome.ControlCenter.SearchProvider.service
 share/dbus-1/services/org.gnome.ControlCenter.service
-%%DATADIR%%/datetime/backward
 %%DATADIR%%/icons/hicolor/16x16/devices/audio-headset.svg
 %%DATADIR%%/icons/hicolor/16x16/status/audio-input-microphone-high.png
 %%DATADIR%%/icons/hicolor/16x16/status/audio-input-microphone-low.png
