@@ -14,8 +14,8 @@ include/gdict-1.0/gdict/gdict-version.h
 include/gdict-1.0/gdict/gdict.h
 lib/girepository-1.0/Gdict-1.0.typelib
 lib/libgdict-1.0.so
-lib/libgdict-1.0.so.8
-lib/libgdict-1.0.so.8.0.0
+lib/libgdict-1.0.so.9
+lib/libgdict-1.0.so.9.0.0
 libdata/pkgconfig/gdict-1.0.pc
 man/man1/gnome-dictionary.1.gz
 share/appdata/org.gnome.Dictionary.appdata.xml
