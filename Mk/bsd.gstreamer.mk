@@ -288,7 +288,7 @@ good_DEPENDS=	multimedia/gstreamer-plugins-good
 
 gnonlin_DEPENDS=	multimedia/gstreamer-plugins-gnonlin
 
-hls_DEPEND=	multimedia/gstreamer-plugins-hls
+hls_DEPENDS=	multimedia/gstreamer-plugins-hls
 
 kate_DEPENDS=		multimedia/gstreamer-plugins-kate
 
@@ -297,7 +297,7 @@ libav_GST_PREFIX=	gstreamer1-
 libav_GST_SUFX=		# empty
 libav_GST_VERSION=	1.0.0
 
-libde265_DEPEND=	multimedia/gstreamer-plugins-libde265
+libde265_DEPENDS=	multimedia/gstreamer-plugins-libde265
 
 libfame_DEPENDS=	multimedia/gstreamer-plugins-libfame
 
@@ -312,7 +312,7 @@ mpeg2enc_DEPENDS=	multimedia/gstreamer-plugins-mpeg2enc
 
 mplex_DEPENDS=	multimedia/gstreamer-plugins-mplex
 
-openh264_DEPEND=	multimedia/gstreamer-plugins-openh264
+openh264_DEPENDS=	multimedia/gstreamer-plugins-openh264
 
 qt4_DEPENDS=	multimedia/gstreamer-qt4
 qt4_GST_PREFIX=	gstreamer-
@@ -360,7 +360,7 @@ libmms_DEPENDS=	net/gstreamer-plugins-libmms
 
 #-- security plugins section ----------------------------------------------#
 
-dtls_DEPEND=	security/gstreamer-plugins-dtls
+dtls_DEPENDS=	security/gstreamer-plugins-dtls
 
 #-- sysutils plugins section ----------------------------------------------#
 
