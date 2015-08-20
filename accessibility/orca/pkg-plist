@@ -19,7 +19,6 @@ etc/xdg/autostart/orca-autostart.desktop
 %%PYTHON_SITELIBDIR%%/orca/__pycache__/brltablenames.cpython-%%PYVER%%.pyo
 %%PYTHON_SITELIBDIR%%/orca/__pycache__/caret_navigation.cpython-%%PYVER%%.pyc
 %%PYTHON_SITELIBDIR%%/orca/__pycache__/caret_navigation.cpython-%%PYVER%%.pyo
-%%PYTHON_SITELIBDIR%%/orca/caret_navigation.py
 %%PYTHON_SITELIBDIR%%/orca/__pycache__/chat.cpython-%%PYVER%%.pyc
 %%PYTHON_SITELIBDIR%%/orca/__pycache__/chat.cpython-%%PYVER%%.pyo
 %%PYTHON_SITELIBDIR%%/orca/__pycache__/chnames.cpython-%%PYVER%%.pyc
@@ -110,8 +109,6 @@ etc/xdg/autostart/orca-autostart.desktop
 %%PYTHON_SITELIBDIR%%/orca/__pycache__/settings.cpython-%%PYVER%%.pyo
 %%PYTHON_SITELIBDIR%%/orca/__pycache__/settings_manager.cpython-%%PYVER%%.pyc
 %%PYTHON_SITELIBDIR%%/orca/__pycache__/settings_manager.cpython-%%PYVER%%.pyo
-%%PYTHON_SITELIBDIR%%/orca/__pycache__/sound.cpython-%%PYVER%%.pyc
-%%PYTHON_SITELIBDIR%%/orca/__pycache__/sound.cpython-%%PYVER%%.pyo
 %%PYTHON_SITELIBDIR%%/orca/__pycache__/speech.cpython-%%PYVER%%.pyc
 %%PYTHON_SITELIBDIR%%/orca/__pycache__/speech.cpython-%%PYVER%%.pyo
 %%PYTHON_SITELIBDIR%%/orca/__pycache__/speech_generator.cpython-%%PYVER%%.pyc
@@ -143,6 +140,7 @@ etc/xdg/autostart/orca-autostart.desktop
 %%PYTHON_SITELIBDIR%%/orca/braille_rolenames.py
 %%PYTHON_SITELIBDIR%%/orca/brlmon.py
 %%PYTHON_SITELIBDIR%%/orca/brltablenames.py
+%%PYTHON_SITELIBDIR%%/orca/caret_navigation.py
 %%PYTHON_SITELIBDIR%%/orca/chat.py
 %%PYTHON_SITELIBDIR%%/orca/chnames.py
 %%PYTHON_SITELIBDIR%%/orca/cmdnames.py
@@ -467,6 +465,8 @@ etc/xdg/autostart/orca-autostart.desktop
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/__pycache__/script_utilities.cpython-%%PYVER%%.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/__pycache__/speech_generator.cpython-%%PYVER%%.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/__pycache__/speech_generator.cpython-%%PYVER%%.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/__pycache__/spellcheck.cpython-%%PYVER%%.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/__pycache__/spellcheck.cpython-%%PYVER%%.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/__pycache__/structural_navigation.cpython-%%PYVER%%.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/__pycache__/structural_navigation.cpython-%%PYVER%%.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/braille_generator.py
@@ -474,6 +474,7 @@ etc/xdg/autostart/orca-autostart.desktop
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/script.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/script_utilities.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/speech_generator.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/spellcheck.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/structural_navigation.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/xfwm4/__init__.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/xfwm4/__pycache__/__init__.cpython-%%PYVER%%.pyc
@@ -584,7 +585,6 @@ etc/xdg/autostart/orca-autostart.desktop
 %%PYTHON_SITELIBDIR%%/orca/scripts/web/tutorial_generator.py
 %%PYTHON_SITELIBDIR%%/orca/settings.py
 %%PYTHON_SITELIBDIR%%/orca/settings_manager.py
-%%PYTHON_SITELIBDIR%%/orca/sound.py
 %%PYTHON_SITELIBDIR%%/orca/speech.py
 %%PYTHON_SITELIBDIR%%/orca/speech_generator.py
 %%PYTHON_SITELIBDIR%%/orca/speechdispatcherfactory.py
@@ -1141,8 +1141,8 @@ share/icons/hicolor/22x22/apps/orca.png
 share/icons/hicolor/24x24/apps/orca.png
 share/icons/hicolor/32x32/apps/orca.png
 share/icons/hicolor/48x48/apps/orca.png
-share/icons/hicolor/symbolic/apps/orca-symbolic.svg
 share/icons/hicolor/scalable/apps/orca.svg
+share/icons/hicolor/symbolic/apps/orca-symbolic.svg
 share/locale/an/LC_MESSAGES/orca.mo
 share/locale/ar/LC_MESSAGES/orca.mo
 share/locale/ast/LC_MESSAGES/orca.mo
