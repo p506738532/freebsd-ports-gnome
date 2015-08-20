@@ -39,6 +39,7 @@ share/locale/lt/LC_MESSAGES/polari.mo
 share/locale/lv/LC_MESSAGES/polari.mo
 share/locale/nb/LC_MESSAGES/polari.mo
 share/locale/ne/LC_MESSAGES/polari.mo
+share/locale/oc/LC_MESSAGES/polari.mo
 share/locale/pa/LC_MESSAGES/polari.mo
 share/locale/pl/LC_MESSAGES/polari.mo
 share/locale/pt/LC_MESSAGES/polari.mo
@@ -51,6 +52,7 @@ share/locale/sr/LC_MESSAGES/polari.mo
 share/locale/sr@latin/LC_MESSAGES/polari.mo
 share/locale/sv/LC_MESSAGES/polari.mo
 share/locale/te/LC_MESSAGES/polari.mo
+share/locale/tg/LC_MESSAGES/polari.mo
 share/locale/tr/LC_MESSAGES/polari.mo
 share/locale/uk/LC_MESSAGES/polari.mo
 share/locale/zh_CN/LC_MESSAGES/polari.mo
