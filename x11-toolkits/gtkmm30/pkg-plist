@@ -9,6 +9,7 @@ include/gdkmm-%%API_VERSION%%/gdkmm/displaymanager.h
 include/gdkmm-%%API_VERSION%%/gdkmm/dragcontext.h
 include/gdkmm-%%API_VERSION%%/gdkmm/event.h
 include/gdkmm-%%API_VERSION%%/gdkmm/general.h
+include/gdkmm-%%API_VERSION%%/gdkmm/glcontext.h
 include/gdkmm-%%API_VERSION%%/gdkmm/pixbuf.h
 include/gdkmm-%%API_VERSION%%/gdkmm/pixbufanimation.h
 include/gdkmm-%%API_VERSION%%/gdkmm/pixbufanimationiter.h
@@ -23,6 +24,7 @@ include/gdkmm-%%API_VERSION%%/gdkmm/private/display_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/displaymanager_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/dragcontext_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/event_p.h
+include/gdkmm-%%API_VERSION%%/gdkmm/private/glcontext_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/pixbuf_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/pixbufanimation_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/pixbufanimationiter_p.h
@@ -137,6 +139,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/gesturerotate.h
 include/gtkmm-%%API_VERSION%%/gtkmm/gesturesingle.h
 include/gtkmm-%%API_VERSION%%/gtkmm/gestureswipe.h
 include/gtkmm-%%API_VERSION%%/gtkmm/gesturezoom.h
+include/gtkmm-%%API_VERSION%%/gtkmm/glarea.h
 include/gtkmm-%%API_VERSION%%/gtkmm/grid.h
 include/gtkmm-%%API_VERSION%%/gtkmm/handlebox.h
 include/gtkmm-%%API_VERSION%%/gtkmm/headerbar.h
@@ -186,9 +189,9 @@ include/gtkmm-%%API_VERSION%%/gtkmm/pagesetupunixdialog.h
 include/gtkmm-%%API_VERSION%%/gtkmm/paned.h
 include/gtkmm-%%API_VERSION%%/gtkmm/papersize.h
 include/gtkmm-%%API_VERSION%%/gtkmm/placessidebar.h
-include/gtkmm-%%API_VERSION%%/gtkmm/popovermenu.h
 include/gtkmm-%%API_VERSION%%/gtkmm/plug.h
 include/gtkmm-%%API_VERSION%%/gtkmm/popover.h
+include/gtkmm-%%API_VERSION%%/gtkmm/popovermenu.h
 include/gtkmm-%%API_VERSION%%/gtkmm/printcontext.h
 include/gtkmm-%%API_VERSION%%/gtkmm/printer.h
 include/gtkmm-%%API_VERSION%%/gtkmm/printjob.h
@@ -283,6 +286,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/gesturerotate_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/gesturesingle_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/gestureswipe_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/gesturezoom_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/glarea_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/grid_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/handlebox_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/headerbar_p.h
