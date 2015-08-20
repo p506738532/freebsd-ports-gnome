@@ -1486,7 +1486,6 @@
     SUBDIR += ocaml-cmdliner
     SUBDIR += ocaml-cppo
     SUBDIR += ocaml-deriving-ocsigen
-    SUBDIR += ocaml-equeue
     SUBDIR += ocaml-extlib
     SUBDIR += ocaml-findlib
     SUBDIR += ocaml-ipaddr
@@ -4664,7 +4663,6 @@
     SUBDIR += rubygem-flexmock
     SUBDIR += rubygem-fluent-logger
     SUBDIR += rubygem-fog
-    SUBDIR += rubygem-fog-brightbox
     SUBDIR += rubygem-fog-core
     SUBDIR += rubygem-fog-json
     SUBDIR += rubygem-font-awesome-rails
