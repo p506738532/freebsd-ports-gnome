@@ -32,7 +32,7 @@ INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-GNUPG_VERSION=	2.1.6
+GNUPG_VERSION=	2.1.7
 
 GLIB_SCHEMAS=	org.gnome.seahorse.gschema.xml \
 		org.gnome.seahorse.manager.gschema.xml \
@@ -49,7 +49,7 @@ AVAHI_CONFIGURE_ENABLE=	sharing
 AVAHI_LIB_DEPENDS=	libavahi-client.so:${PORTSDIR}/net/avahi-app
 
 post-patch:
-	@${REINPLACE_CMD}  '/^GNUPG_ACCEPTED/s/2.1.4/2.1.6/' \
+	@${REINPLACE_CMD}  '/^GNUPG_ACCEPTED/s/2.1.4/${GNUPG_VERSION}/' \
 		${WRKSRC}/configure
 
 .include <bsd.port.mk>
