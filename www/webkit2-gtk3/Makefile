@@ -88,9 +88,9 @@ pre-configure:
 post-install:
 	${MV} ${STAGEDIR}${PREFIX}/bin/jsc \
 		${STAGEDIR}/${PREFIX}/bin/jsc-4
-#	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.*
-#	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/webkit2gtk-4.0/injected-bundle/*.so
-#	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/jsc-4
-#	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/webkit2gtk-4.0/WebKit*
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.*.*
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/webkit2gtk-4.0/injected-bundle/*.so
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/jsc-4
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/libexec/webkit2gtk-4.0/WebKit*
 
 .include <bsd.port.mk>
