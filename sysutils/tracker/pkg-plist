@@ -47,8 +47,8 @@ lib/libtracker-sparql-%%TRACKER_VER%%.a
 lib/libtracker-sparql-%%TRACKER_VER%%.so
 lib/libtracker-sparql-%%TRACKER_VER%%.so.0
 lib/libtracker-sparql-%%TRACKER_VER%%.so.0.%%LIBVER%%.0
-%%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-tracker-tags.a
-%%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-tracker-tags.so
+@comment %%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-tracker-tags.a
+@comment %%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-tracker-tags.so
 %%DOCUMENT_MINERS%%lib/tracker-%%TRACKER_VER%%/extract-modules/libextract-abw.a
 %%DOCUMENT_MINERS%%lib/tracker-%%TRACKER_VER%%/extract-modules/libextract-abw.so
 %%GRAPHIC_MINERS%%lib/tracker-%%TRACKER_VER%%/extract-modules/libextract-bmp.a

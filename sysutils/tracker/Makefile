@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	tracker
-PORTVERSION=	1.5.1
+PORTVERSION=	1.5.2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -56,10 +56,10 @@ GLIB_SCHEMAS=	org.freedesktop.Tracker.DB.gschema.xml \
 		org.freedesktop.Tracker.enums.xml \
 		org.freedesktop.Tracker.gschema.xml
 
-PLIST_SUB=	TRACKER_VER="1.0" LIBVER=501
+PLIST_SUB=	TRACKER_VER="1.0" LIBVER=502
 
 OPTIONS_DEFINE=		AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINERS \
-			NAUTILUS WEB_MINERS
+			WEB_MINERS
 OPTIONS_DEFAULT=	AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINERS
 OPTIONS_SUB=yes
 WEB_MINERS_DESC=	Support for Firefox, Thunderbird
@@ -98,7 +98,9 @@ GRAPHIC_MINERS_LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 				libpng.so:${PORTSDIR}/graphics/png \
 				libtiff.so:${PORTSDIR}/graphics/tiff
 
-NAUTILUS_CONFIGURE_ENABLE=	nautilus-extension
-NAUTILUS_USE=		GNOME=nautilus3
+# cirular dependancy tracker -> nautilus -> tracker
+CONFIGURE_ARGS=		--disable-nautilus-extension
+#NAUTILUS_CONFIGURE_ENABLE=	nautilus-extension
+#NAUTILUS_USE=		GNOME=nautilus3
 
 .include <bsd.port.mk>
