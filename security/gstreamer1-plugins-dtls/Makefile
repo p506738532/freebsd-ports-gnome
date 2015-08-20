@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTREVISION=	0
-CATEGORIES=	multimedia
+CATEGORIES=	security
 
 COMMENT=	Gstreamer Datagram TLS (dtls) plugin
 
