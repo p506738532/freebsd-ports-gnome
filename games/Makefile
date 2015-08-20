@@ -510,6 +510,7 @@
     SUBDIR += lianliankan
     SUBDIR += libdungeonmaker
     SUBDIR += libfov
+    SUBDIR += libgames-support
     SUBDIR += libggz
     SUBDIR += libkdegames
     SUBDIR += libkmahjongg
