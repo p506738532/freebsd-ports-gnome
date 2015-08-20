@@ -51,8 +51,7 @@ CMAKE_ARGS+=	-DPORT=GTK \
 # do we want to use system malloc?
 #USE_SYSTEM_MALLOC
 #CMAKE_ARGS+=	-GNinja
-
-CMAKE_ENV+=	XDG_CACHE_HOME=${WRKDIR}
+CONFIGURE_ENV+=	XDG_CACHE_HOME=${WRKDIR}
 
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk3
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
