@@ -32,8 +32,7 @@ CONFIGURE_ARGS=	--disable-gtk-doc --with-html-dir=${PREFIX}/share/doc \
 		--enable-static=yes \
 		--with-pcre=system \
 		--disable-fam
-CONFIGURE_ENV=	ac_cv_header_sys_inotify_h= \
-		ac_cv_header_sys_event_h=
+CONFIGURE_ENV=	ac_cv_header_sys_inotify_h=
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
