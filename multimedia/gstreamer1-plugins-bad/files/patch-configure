@@ -1,0 +1,11 @@
+--- configure.orig	2015-08-21 11:35:30.459208000 +0200
++++ configure	2015-08-21 11:35:45.150784000 +0200
+@@ -37959,7 +37959,7 @@
+ $as_echo "yes" >&6; }
+ 
+     HAVE_CURL="yes"
+-    for ac_header in unistd.h sys/socket.h sys/types.h netinet/in.h netinet/ip.h netinet/tcp.h fcntl.h
++    for ac_header in unistd.h sys/socket.h sys/types.h netinet/in.h netinet/tcp.h fcntl.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
