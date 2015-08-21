@@ -142,7 +142,7 @@ lib/girepository-1.0/Clutter-1.0.typelib
 lib/girepository-1.0/ClutterX11-1.0.typelib
 lib/libclutter-1.0.so
 lib/libclutter-1.0.so.0
-lib/libclutter-1.0.so.0.2304.0
+lib/libclutter-1.0.so.0.2306.0
 lib/libclutter-glx-1.0.so
 lib/libclutter-glx-1.0.so.0
 libdata/pkgconfig/cally-1.0.pc
@@ -308,7 +308,6 @@ share/gtk-doc/html/clutter/flow-layout.png
 share/gtk-doc/html/clutter/go01.html
 share/gtk-doc/html/clutter/home.png
 share/gtk-doc/html/clutter/index.html
-share/gtk-doc/html/clutter/index.sgml
 share/gtk-doc/html/clutter/iterating-paths.html
 share/gtk-doc/html/clutter/ix01.html
 share/gtk-doc/html/clutter/ix02.html
