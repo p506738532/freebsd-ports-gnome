@@ -1,6 +1,5 @@
 bin/nautilus
 bin/nautilus-autorun-software
-bin/nautilus-connect-server
 etc/xdg/autostart/nautilus-autostart.desktop
 include/nautilus/libnautilus-extension/nautilus-column-provider.h
 include/nautilus/libnautilus-extension/nautilus-column.h
@@ -20,13 +19,11 @@ lib/libnautilus-extension.so.1.4.0
 lib/nautilus/extensions-3.0/libnautilus-sendto.so
 libdata/pkgconfig/libnautilus-extension.pc
 libexec/nautilus-convert-metadata
-man/man1/nautilus-connect-server.1.gz
 man/man1/nautilus.1.gz
 share/GConf/gsettings/nautilus.convert
 share/appdata/org.gnome.Nautilus.appdata.xml
 share/applications/nautilus-autorun-software.desktop
 share/applications/nautilus-classic.desktop
-share/applications/nautilus-connect-server.desktop
 share/applications/org.gnome.Nautilus.desktop
 share/dbus-1/services/org.freedesktop.FileManager1.service
 share/dbus-1/services/org.gnome.Nautilus.service
@@ -45,7 +42,6 @@ share/gtk-doc/html/libnautilus-extension/NautilusPropertyPageProvider.html
 share/gtk-doc/html/libnautilus-extension/ch01.html
 share/gtk-doc/html/libnautilus-extension/home.png
 share/gtk-doc/html/libnautilus-extension/index.html
-share/gtk-doc/html/libnautilus-extension/index.sgml
 share/gtk-doc/html/libnautilus-extension/ix01.html
 share/gtk-doc/html/libnautilus-extension/left-insensitive.png
 share/gtk-doc/html/libnautilus-extension/left.png
