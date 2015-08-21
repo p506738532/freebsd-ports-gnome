@@ -1,6 +1,6 @@
---- configure.orig	2015-08-21 11:35:30.459208000 +0200
-+++ configure	2015-08-21 11:35:45.150784000 +0200
-@@ -37959,7 +37959,7 @@
+--- configure.orig	2015-08-21 20:57:38.546440000 +0200
++++ configure	2015-08-21 20:58:22.337444000 +0200
+@@ -38554,7 +38554,7 @@
  $as_echo "yes" >&6; }
  
      HAVE_CURL="yes"
@@ -9,3 +9,31 @@
  do :
    as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
  ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
+@@ -38585,6 +38585,27 @@
+ 
+ done
+ 
++    for ac_header in netinet/ip.h
++do :
++  ac_fn_c_check_header_compile "$LINENO" "netinet/ip.h" "ac_cv_header_netinet_ip_h" "#ifdef HAVE_SYS_TYPES_H
++     # include <sys/types.h>
++     #endif
++     #ifdef HAVE_NETINET_IN_H
++     # include <netinet/in.h>
++     #endif
++
++"
++if test "x$ac_cv_header_netinet_ip_h" = xyes; then :
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_NETINET_IP_H 1
++_ACEOF
++
++else
++  HAVE_CURL="no"
++fi
++
++done
++
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for socket support needed by curlsink" >&5
+ $as_echo_n "checking for socket support needed by curlsink... " >&6; }
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: $HAVE_CURL" >&5
