@@ -161,6 +161,7 @@
     SUBDIR += gnu-radius
     SUBDIR += go-amqp
     SUBDIR += go-cs
+    SUBDIR += go-geoip
     SUBDIR += go.net
     SUBDIR += gofish
     SUBDIR += gogoc
@@ -204,6 +205,7 @@
     SUBDIR += howl
     SUBDIR += hping
     SUBDIR += hping-devel
+    SUBDIR += hs-aws
     SUBDIR += hs-connection
     SUBDIR += hs-gsasl
     SUBDIR += hs-hoauth2
@@ -214,6 +216,7 @@
     SUBDIR += hs-network-info
     SUBDIR += hs-network-multicast
     SUBDIR += hs-network-protocol-xmpp
+    SUBDIR += hs-network-uri
     SUBDIR += hs-pcap
     SUBDIR += hs-publicsuffixlist
     SUBDIR += hs-sendfile
@@ -1057,6 +1060,7 @@
     SUBDIR += rubygem-epp-client-smallregistry
     SUBDIR += rubygem-fog-atmos
     SUBDIR += rubygem-fog-aws
+    SUBDIR += rubygem-fog-brightbox
     SUBDIR += rubygem-fog-dynect
     SUBDIR += rubygem-fog-ecloud
     SUBDIR += rubygem-fog-google

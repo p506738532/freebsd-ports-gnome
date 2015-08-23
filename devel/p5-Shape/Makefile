@@ -3,17 +3,22 @@
 
 PORTNAME=	Shape
 PORTVERSION=	0.04
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://users.tkk.fi/~jolma/pub/
 PKGNAMEPREFIX=	p5-
 
-MAINTAINER=	pedersen@meridian-enviro.com
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Perl5 module to read and write shapefiles via shapelib
 
 LIB_DEPENDS=	libshp.so:${PORTSDIR}/devel/shapelib
 
 USES=		perl5
 USE_PERL5=	configure
+
+post-install:
+	${CHMOD} u+w ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Shape/Shape.so
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Shape/Shape.so
+	${CHMOD} u-w ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Shape/Shape.so
 
 .include <bsd.port.mk>

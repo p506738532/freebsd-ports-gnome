@@ -292,10 +292,11 @@
     SUBDIR += hs-http-reverse-proxy
     SUBDIR += hs-http-server
     SUBDIR += hs-http-types
+    SUBDIR += hs-http2
+    SUBDIR += hs-multipart
     SUBDIR += hs-oeis
     SUBDIR += hs-path-pieces
     SUBDIR += hs-recaptcha
-    SUBDIR += hs-scgi
     SUBDIR += hs-shakespeare
     SUBDIR += hs-snap
     SUBDIR += hs-snap-core
@@ -316,8 +317,6 @@
     SUBDIR += hs-yesod-core
     SUBDIR += hs-yesod-form
     SUBDIR += hs-yesod-persistent
-    SUBDIR += hs-yesod-platform
-    SUBDIR += hs-yesod-routes
     SUBDIR += hs-yesod-static
     SUBDIR += hs-yesod-test
     SUBDIR += htdigest
@@ -571,8 +570,8 @@
     SUBDIR += nspluginwrapper
     SUBDIR += ocaml-net
     SUBDIR += ocsigen
+    SUBDIR += offline-npm
     SUBDIR += ojs2
-    SUBDIR += ompload
     SUBDIR += opencart
     SUBDIR += openxmldir
     SUBDIR += opera
@@ -927,6 +926,7 @@
     SUBDIR += p5-HTML-QuickCheck
     SUBDIR += p5-HTML-RSSAutodiscovery
     SUBDIR += p5-HTML-ResolveLink
+    SUBDIR += p5-HTML-Restrict
     SUBDIR += p5-HTML-RobotsMETA
     SUBDIR += p5-HTML-Scrubber
     SUBDIR += p5-HTML-Seamstress

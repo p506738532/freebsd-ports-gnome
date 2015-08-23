@@ -401,6 +401,7 @@
     SUBDIR += hs-cpu
     SUBDIR += hs-ekg
     SUBDIR += hs-ekg-core
+    SUBDIR += hs-ekg-json
     SUBDIR += htop
     SUBDIR += httplog
     SUBDIR += hwstat
@@ -849,6 +850,7 @@
     SUBDIR += rubygem-fluent-plugin-file-alternative
     SUBDIR += rubygem-fluent-plugin-tail-asis
     SUBDIR += rubygem-fluentd
+    SUBDIR += rubygem-fluentd010
     SUBDIR += rubygem-fssm
     SUBDIR += rubygem-god
     SUBDIR += rubygem-guard

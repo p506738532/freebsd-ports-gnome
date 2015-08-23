@@ -242,11 +242,14 @@
     SUBDIR += hs-appar
     SUBDIR += hs-attoparsec
     SUBDIR += hs-attoparsec-enumerator
+    SUBDIR += hs-bencode
     SUBDIR += hs-blaze-html
     SUBDIR += hs-blaze-markup
     SUBDIR += hs-bytestring-csv
     SUBDIR += hs-case-insensitive
+    SUBDIR += hs-cassava
     SUBDIR += hs-citeproc-hs
+    SUBDIR += hs-cmark
     SUBDIR += hs-csv
     SUBDIR += hs-double-conversion
     SUBDIR += hs-feed
@@ -263,14 +266,18 @@
     SUBDIR += hs-libxml
     SUBDIR += hs-libxml-sax
     SUBDIR += hs-pandoc
+    SUBDIR += hs-pandoc-citeproc
     SUBDIR += hs-pandoc-types
     SUBDIR += hs-parsec
     SUBDIR += hs-polyparse
+    SUBDIR += hs-regex-applicative
     SUBDIR += hs-regex-base
     SUBDIR += hs-regex-compat
+    SUBDIR += hs-regex-compat-tdfa
     SUBDIR += hs-regex-pcre-builtin
     SUBDIR += hs-regex-posix
     SUBDIR += hs-regex-tdfa
+    SUBDIR += hs-rfc5051
     SUBDIR += hs-stringsearch
     SUBDIR += hs-tagsoup
     SUBDIR += hs-tagstream-conduit
@@ -885,6 +892,7 @@
     SUBDIR += p5-Text-Shellwords
     SUBDIR += p5-Text-Similarity
     SUBDIR += p5-Text-SimpleTable
+    SUBDIR += p5-Text-SimpleTable-AutoWidth
     SUBDIR += p5-Text-SimpleTemplate
     SUBDIR += p5-Text-Soundex
     SUBDIR += p5-Text-SpellChecker
@@ -1175,7 +1183,6 @@
     SUBDIR += popup-stacks
     SUBDIR += ppower4
     SUBDIR += print-n-times
-    SUBDIR += prosper
     SUBDIR += pugixml
     SUBDIR += pure-csv
     SUBDIR += pure-xml
@@ -1428,6 +1435,7 @@
     SUBDIR += rubygem-simplecov-html
     SUBDIR += rubygem-spreadsheet
     SUBDIR += rubygem-stamp
+    SUBDIR += rubygem-string-scrub
     SUBDIR += rubygem-syntax
     SUBDIR += rubygem-termcolor
     SUBDIR += rubygem-terminal-table
