@@ -37,4 +37,6 @@ LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.gnome.crypto.cache.gschema.xml
 
+SUB_FILES=	pkg-message
+
 .include <bsd.port.mk>
