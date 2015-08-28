@@ -1,5 +1,5 @@
---- sysdeps/freebsd/netload.c.orig	2015-08-05 22:10:24.000000000 +0200
-+++ sysdeps/freebsd/netload.c	2015-08-13 21:10:34.479469000 +0200
+--- sysdeps/freebsd/netload.c.orig	2015-08-17 20:59:37.000000000 +0200
++++ sysdeps/freebsd/netload.c	2015-08-28 09:50:02.522090000 +0200
 @@ -1,7 +1,9 @@
  /* Copyright (C) 1998-99 Martin Baulig
 +   Copyright (C) 2014 Gleb Smirnoff
@@ -36,7 +36,7 @@
  
  static const unsigned long _glibtop_sysdeps_netload =
  (1L << GLIBTOP_NETLOAD_IF_FLAGS) +
-@@ -64,24 +56,11 @@
+@@ -64,24 +56,11 @@ static const unsigned long _glibtop_sysd
  (1L << GLIBTOP_NETLOAD_ADDRESS6) +
  (1L << GLIBTOP_NETLOAD_SCOPE6);
  
@@ -53,7 +53,7 @@
  void
  _glibtop_init_netload_p (glibtop *server)
  {
--        if (kvm_nlist (server->machine.kd, nlst) < 0) {
+-        if (kvm_nlist (server->machine->kd, nlst) < 0) {
 -                glibtop_warn_io_r (server, "kvm_nlist");
 -		return;
 -	}
@@ -61,7 +61,7 @@
  	server->sysdeps.netload = _glibtop_sysdeps_netload;
  }
  
-@@ -91,156 +70,127 @@
+@@ -91,154 +70,125 @@ void
  glibtop_get_netload_p (glibtop *server, glibtop_netload *buf,
                         const char *interface)
  {
@@ -73,31 +73,32 @@
 -                struct ifaddr ifa;
 -                struct in_ifaddr in;
 -        } ifaddr;
-+	struct ifaddrs *ifap, *ifa;
- 
-         glibtop_init_p (server, (1L << GLIBTOP_SYSDEPS_NETLOAD), 0);
++        struct ifaddrs *ifap, *ifa;
  
          memset (buf, 0, sizeof (glibtop_netload));
  
 -	if (server->sysdeps.netload == 0) return;
 +	if (server->sysdeps.netload == 0)
-+		return;
- 
--        if (kvm_read (server->machine.kd, nlst [0].n_value,
--                        &ifnetaddr, sizeof (ifnetaddr)) != sizeof (ifnetaddr)) {
--                glibtop_warn_io_r (server, "kvm_read (ifnet)");
++                return;
++
 +        if (getifaddrs(&ifap) != 0) {
 +                glibtop_warn_io_r (server, "getifaddrs");
- 		return;
- 	}
++                return;
++        }
  
+-        if (kvm_read (server->machine->kd, nlst [0].n_value,
+-                        &ifnetaddr, sizeof (ifnetaddr)) != sizeof (ifnetaddr)) {
+-                glibtop_warn_io_r (server, "kvm_read (ifnet)");
+-		return;
+-	}
+-
 -        for (/* NOP */; ifnetaddr; ifnetaddr = (u_long) ifnet.if_link.tqe_next)
 -        {
 -                struct sockaddr_in *sin;
 -                register char *cp;
 -                u_long ifaddraddr;
 -
--		if (kvm_read (server->machine.kd, ifnetaddr, &ifnet,
+-		if (kvm_read (server->machine->kd, ifnetaddr, &ifnet,
 -			      sizeof (ifnet)) != sizeof (ifnet)) {
 -			glibtop_warn_io_r (server,
 -					   "kvm_read (ifnetaddr)");
@@ -107,7 +108,7 @@
  
 -		if (strcmp (ifnet.if_xname, interface) != 0)
 +	for (ifa = ifap; ifa; ifa = ifa->ifa_next) {
-+		if (strcmp(ifa->ifa_name, interface) != 0) 
++	        if (strcmp (ifa->ifa_name, interface) != 0)
  			continue;
 -		
 -	        if (ifnet.if_flags & IFF_UP)
@@ -167,90 +168,13 @@
 -                buf->flags = _glibtop_sysdeps_netload;
 -
 -                for (ifaddraddr = (u_long) ifnet.if_addrhead.tqh_first; ifaddraddr; ifaddraddr = (u_long) ifaddr.ifa.ifa_link.tqe_next) {
--                        if ((kvm_read (server->machine.kd, ifaddraddr, &ifaddr,
+-                        if ((kvm_read (server->machine->kd, ifaddraddr, &ifaddr,
 -                                        sizeof (ifaddr)) != sizeof (ifaddr))) {
 -                                glibtop_warn_io_r (server,
 -						   "kvm_read (ifaddraddr)");
-+
-+		switch (ifa->ifa_addr->sa_family) {
-+		case AF_LINK: {
-+			struct sockaddr_dl *sdl;
-+			struct ifreq ifr;
-+			int s, flags;
-+
-+			s = socket(AF_INET, SOCK_DGRAM, 0);
-+			if (s < 0) {
-+				glibtop_warn_io_r(server, "socket(AF_INET)");
-+				break;
-+			}
-+			memset(&ifr, 0, sizeof(ifr));
-+			(void)strlcpy(ifr.ifr_name, ifa->ifa_name,
-+				sizeof(ifr.ifr_name));
-+			if (ioctl(s, SIOCGIFFLAGS, (caddr_t)&ifr) < 0) {
-+				glibtop_warn_io_r(server, "ioctl(SIOCGIFFLAGS)");
-+				close(s);
- 				break;
- 			}
-+			close(s);
-+
-+			flags = (ifr.ifr_flags & 0xffff) | (ifr.ifr_flagshigh << 16);
-+
-+	        	if (flags & IFF_UP)
-+                        	buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_UP);
-+	                if (flags & IFF_BROADCAST)
-+        	                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_BROADCAST);
-+                	if (flags & IFF_DEBUG)
-+                        	buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_DEBUG);
-+	                if (flags & IFF_LOOPBACK)
-+        	                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_LOOPBACK);
-+                	if (flags & IFF_POINTOPOINT)
-+	                        buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_POINTOPOINT);
-+        	        if (flags & IFF_RUNNING)
-+                	        buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_RUNNING);
-+	                if (flags & IFF_NOARP)
-+        	                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_NOARP);
-+                	if (flags & IFF_PROMISC)
-+	                        buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_PROMISC);
-+        	        if (flags & IFF_ALLMULTI)
-+                	        buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_ALLMULTI);
-+	                if (flags & IFF_SIMPLEX)
-+        	                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_SIMPLEX);
-+                	if (flags & IFF_LINK0)
-+                        	buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_LINK0);
-+	                if (flags & IFF_LINK1)
-+        	                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_LINK1);
-+                	if (flags & IFF_LINK2)
-+	                        buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_LINK2);
-+        	        if (flags & IFF_ALTPHYS)
-+                	        buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_ALTPHYS);
-+	                if (flags & IFF_MULTICAST)
-+        	                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_MULTICAST);
-+
-+                	buf->packets_in = IFA_STAT(ipackets);
-+	                buf->packets_out = IFA_STAT(opackets);
-+        	        buf->packets_total = buf->packets_in + buf->packets_out;
-+
-+                	buf->bytes_in = IFA_STAT(ibytes);
-+	                buf->bytes_out = IFA_STAT(obytes);
-+        	        buf->bytes_total = buf->bytes_in + buf->bytes_out;
-+
-+                	buf->errors_in = IFA_STAT(ierrors);
-+	                buf->errors_out = IFA_STAT(oerrors);
-+        	        buf->errors_total = buf->errors_in + buf->errors_out;
-+
-+                	buf->collisions = IFA_STAT(collisions);
-+	                buf->flags = _glibtop_sysdeps_netload;
-+
-+			sdl = (struct sockaddr_dl *)ifa->ifa_addr;
-+			memcpy(buf->hwaddress, LLADDR(sdl),
-+				sizeof(buf->hwaddress));
-+			buf->mtu = IFA_STAT(mtu);
-+			buf->flags |= GLIBTOP_NETLOAD_HWADDRESS;
-+			break;
-+		}
-+		case AF_INET: {
-+			struct sockaddr_in *sin;
- 
+-				break;
+-			}
+-
 -#define CP(x) ((char *)(x))
 -                        cp = (CP(ifaddr.ifa.ifa_addr) - CP(ifaddraddr)) +
 -                             CP(&ifaddr);
@@ -298,32 +222,111 @@
 -                                }
 -                        }
 -                } /* end of for ( ifaddraddr ) */
--
+ 
 -		/* found the interface anyway */
 -                break;
 -        } /* end of for ( ifnetaddr ) */
-+			sin = (struct sockaddr_in *)ifa->ifa_addr;
-+			buf->address = sin->sin_addr.s_addr;
-+			sin = (struct sockaddr_in *)ifa->ifa_netmask;
-+			buf->subnet = sin->sin_addr.s_addr & buf->address;
-+			buf->flags |= _glibtop_sysdeps_netload_data;
-+			break;
-+		}
-+		case AF_INET6: {
-+			struct sockaddr_in6 *sin6;
++		switch (ifa->ifa_addr->sa_family) {
++                case AF_LINK: {
++                        struct sockaddr_dl *sdl;
++                        struct ifreq ifr;
++                        int s, flags;
 +
-+			sin6 = (struct sockaddr_in6 *)ifa->ifa_addr;
-+			memcpy(buf->address6, &sin6->sin6_addr,
-+				sizeof(buf->address6));
-+			buf->scope6 = (guint8 )sin6->sin6_scope_id;
-+			buf->flags |= _glibtop_sysdeps_netload6;
-+			sin6 = (struct sockaddr_in6 *)ifa->ifa_netmask;
-+			memcpy(buf->prefix6, &sin6->sin6_addr,
-+				sizeof(buf->prefix6));
-+			buf->flags |= GLIBTOP_NETLOAD_PREFIX6;
-+			break;
-+		}
-+		} // switch() end
-+	}
-+	freeifaddrs(ifap);
++                        s = socket(AF_INET, SOCK_DGRAM, 0);
++                        if (s < 0) {
++                                glibtop_warn_io_r(server, "socket(AF_INET)");
++                                break;
++                        }
++                        memset(&ifr, 0, sizeof(ifr));
++                        (void)strlcpy(ifr.ifr_name, ifa->ifa_name,
++                                sizeof(ifr.ifr_name));
++                        if (ioctl(s, SIOCGIFFLAGS, (caddr_t)&ifr) < 0) {
++                                glibtop_warn_io_r(server, "ioctl(SIOCGIFFLAGS)");
++                                close(s);
++                                break;
++                        }
++                        close(s);
++ 
++                        flags = (ifr.ifr_flags & 0xffff) | (ifr.ifr_flagshigh << 16);
++
++                        if (flags & IFF_UP)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_UP);
++                        if (flags & IFF_BROADCAST)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_BROADCAST);
++                        if (flags & IFF_DEBUG)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_DEBUG);
++                        if (flags & IFF_LOOPBACK)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_LOOPBACK);
++                        if (flags & IFF_POINTOPOINT)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_POINTOPOINT);
++                        if (flags & IFF_RUNNING)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_RUNNING);
++                        if (flags & IFF_NOARP)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_NOARP);
++                        if (flags & IFF_PROMISC)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_PROMISC);
++                        if (flags & IFF_ALLMULTI)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_ALLMULTI);
++                        if (flags & IFF_SIMPLEX)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_SIMPLEX);
++                        if (flags & IFF_LINK0)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_LINK0);
++                        if (flags & IFF_LINK1)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_LINK1);
++                        if (flags & IFF_LINK2)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_LINK2);
++                        if (flags & IFF_ALTPHYS)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_ALTPHYS);
++                        if (flags & IFF_MULTICAST)
++                                buf->if_flags |= (1L << GLIBTOP_IF_FLAGS_MULTICAST);
++
++                        buf->packets_in = IFA_STAT(ipackets);
++                        buf->packets_out = IFA_STAT(opackets);
++                        buf->packets_total = buf->packets_in + buf->packets_out;
++
++                        buf->bytes_in = IFA_STAT(ibytes);
++                        buf->bytes_out = IFA_STAT(obytes);
++                        buf->bytes_total = buf->bytes_in + buf->bytes_out;
++
++                        buf->errors_in = IFA_STAT(ierrors);
++                        buf->errors_out = IFA_STAT(oerrors);
++                        buf->errors_total = buf->errors_in + buf->errors_out;
++
++                        buf->collisions = IFA_STAT(collisions);
++                        buf->flags = _glibtop_sysdeps_netload;
++
++                        sdl = (struct sockaddr_dl *)ifa->ifa_addr;
++                        memcpy(buf->hwaddress, LLADDR(sdl),
++                                sizeof(buf->hwaddress));
++                        buf->mtu = IFA_STAT(mtu);
++                        buf->flags |= GLIBTOP_NETLOAD_HWADDRESS;
++                        break;
++                }
++                case AF_INET: {
++                        struct sockaddr_in *sin;
++
++                        sin = (struct sockaddr_in *)ifa->ifa_addr;
++                        buf->address = sin->sin_addr.s_addr;
++                        sin = (struct sockaddr_in *)ifa->ifa_netmask;
++                        buf->subnet = sin->sin_addr.s_addr & buf->address;
++                        buf->flags |= _glibtop_sysdeps_netload_data;
++                        break;
++                }
++                case AF_INET6: {
++                        struct sockaddr_in6 *sin6;
++
++                        sin6 = (struct sockaddr_in6 *)ifa->ifa_addr;
++                        memcpy(buf->address6, &sin6->sin6_addr,
++                                sizeof(buf->address6));
++                        buf->scope6 = (guint8 )sin6->sin6_scope_id;
++                        buf->flags |= _glibtop_sysdeps_netload6;
++                        sin6 = (struct sockaddr_in6 *)ifa->ifa_netmask;
++                        memcpy(buf->prefix6, &sin6->sin6_addr,
++                                sizeof(buf->prefix6));
++                        buf->flags |= GLIBTOP_NETLOAD_PREFIX6;
++                        break;
++                }
++                } // switch() end
++        }
++        freeifaddrs(ifap);
  }
