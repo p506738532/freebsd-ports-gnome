@@ -29,9 +29,9 @@ USES=		autoreconf:build
 BUILD_DEPENDS+=	gm4:${PORTSDIR}/devel/m4
 
 GNU_CONFIGURE=	yes
-USES+=		compiler:c++11-lang gettext gmake libtool pathfix pkgconfig
+USES+=		compiler:c++11-lib gettext gmake libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
-USE_GNOME=	atkmm gtk20 pangomm
+USE_GNOME=	atkmm gtk20 intltool pangomm
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-documentation

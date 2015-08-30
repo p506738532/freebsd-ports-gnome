@@ -11,7 +11,7 @@ COMMENT=	C++ wrapper for ATK API library
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gmake libtool pathfix pkgconfig tar:xz
+USES=		compiler:c++11-lib gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	atk glibmm
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

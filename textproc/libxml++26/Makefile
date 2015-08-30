@@ -18,7 +18,7 @@ PLIST_SUB=	API_VERSION="2.6"
 
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
-USES+=		gmake libtool pathfix pkgconfig
+USES+=		compiler:c++11-lib gmake libtool pathfix pkgconfig
 USE_GNOME=	glibmm libxml2
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

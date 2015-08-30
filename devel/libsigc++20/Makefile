@@ -13,7 +13,7 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
-USES=		gmake libtool pathfix perl5 tar:xz
+USES=		compiler:c++11-lib gmake libtool pathfix perl5 tar:xz
 USE_PERL5=	build
 USE_LDCONFIG=	yes
 
