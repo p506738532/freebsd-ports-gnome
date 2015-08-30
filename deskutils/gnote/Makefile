@@ -21,7 +21,7 @@ LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre \
 		libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 USE_GNOME=	gtk30 gtkmm30 intltool libxml2 libxslt
-USES=		desktop-file-utils gettext gmake libtool \
+USES=		desktop-file-utils compiler:c++11-lib gettext gmake libtool \
 		pathfix pkgconfig tar:xz
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
