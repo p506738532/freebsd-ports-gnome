@@ -115,7 +115,6 @@
     SUBDIR += hla
     SUBDIR += hope
     SUBDIR += hs-brainfuck
-    SUBDIR += hs-epic
     SUBDIR += hs-unlambda
     SUBDIR += huc
     SUBDIR += hugs
@@ -136,6 +135,7 @@
     SUBDIR += kturtle
     SUBDIR += lafontaine
     SUBDIR += lci
+    SUBDIR += lfe
     SUBDIR += libhx
     SUBDIR += libjit
     SUBDIR += libobjc2

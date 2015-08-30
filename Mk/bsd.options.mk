@@ -100,6 +100,8 @@
 #				get enabled too.
 # ${opt}_PREVENTS		When opt is enabled, if any options in PREVENTS are
 #				also enabled, it will produce an error.
+# ${opt}_PREVENTS_MSG		Provides a message explaining why the options
+#				cannot be selected together.
 #
 # ${opt}_USE=	FOO=bar		When option is enabled, it will  enable
 #				USE_FOO+= bar
@@ -107,6 +109,15 @@
 #				FOO=bar,baz and you'll get USE_FOO=bar baz
 # ${opt}_USE_OFF=	FOO=bar	When option is disabled, it will enable
 #				USE_FOO+= bar
+#
+# ${opt}_VARS=	FOO=bar		When option is enabled, it will set
+#				FOO= bar
+# ${opt}_VARS=	FOO+=bar	When option is enabled, it will append
+#				FOO+= bar
+# ${opt}_VARS_OFF=    FOO=bar	When option is disabled, it will set
+#				FOO= bar
+# ${opt}_VARS_OFF=    FOO+=bar	When option is disabled, it will append
+#				FOO+= bar
 #
 # For each of:
 # ALL_TARGET BROKEN CATEGORIES CFLAGS CONFIGURE_ENV CONFLICTS CONFLICTS_BUILD
@@ -373,10 +384,37 @@ NEW_OPTIONS:=	${NEW_OPTIONS:N${opt}}
 
 ## Enable options implied by other options
 # _PREVENTS is handled in bsd.port.mk:pre-check-config
-.for count in ${PORT_OPTIONS}
-.  for opt in ${PORT_OPTIONS}
-PORT_OPTIONS+=	${${opt}_IMPLIES}
+## 1) Build dependency chain in A.B format:
+_DEPCHAIN=
+.for opt in ${COMPLETE_OPTIONS_LIST}
+.  for o in ${${opt}_IMPLIES}
+_DEPCHAIN+=	${opt}.$o
 .  endfor
+.endfor
+## 2) Check each dependency pair and if LHS is in PORT_OPTIONS then add RHS.
+##    All of RHS of "RHS.*" (i.e. indirect dependency) are also added for
+##    fast convergence.
+_PORT_OPTIONS:=	${PORT_OPTIONS}
+.for _count in _0 ${COMPLETE_OPTIONS_LIST}
+count=	${_count}
+### Check if all of the nested dependency are resolved already.
+.  if ${count} == _0 || ${_PORT_OPTIONS} != ${PORT_OPTIONS}
+PORT_OPTIONS:=	${_PORT_OPTIONS}
+.    for dc in ${_DEPCHAIN}
+.      for opt in ${_PORT_OPTIONS}
+_opt=${opt}
+### Add all of direct and indirect dependency only if
+### they are not in ${PORT_OPTIONS}.
+.        if !empty(_opt:M${dc:R})
+.          for d in ${dc:E} ${_DEPCHAIN:M${dc:E}.*:E}
+.            if empty(_PORT_OPTIONS:M$d)
+_PORT_OPTIONS+=	$d
+.            endif
+.          endfor
+.        endif
+.      endfor
+.    endfor
+.  endif
 .endfor
 
 # Finally, add options required by slave ports
@@ -434,6 +472,16 @@ _u=		${option:C/=.*//g}
 USE_${_u:tu}+=	${option:C/.*=//g:C/,/ /g}
 .      endfor
 .    endif
+.    if defined(${opt}_VARS)
+.      for var in ${${opt}_VARS}
+_u=		${var:C/=.*//}
+.        if ${_u:M*+}
+${_u:C/.$//:tu}+=	${var:C/[^+]*\+=//:C/^"(.*)"$$/\1/}
+.        else
+${_u:tu}=	${var:C/[^=]*=//:C/^"(.*)"$$/\1/}
+.        endif
+.      endfor
+.    endif
 .    if defined(${opt}_CONFIGURE_ENABLE)
 .      for iopt in ${${opt}_CONFIGURE_ENABLE}
 CONFIGURE_ARGS+=	--enable-${iopt}
@@ -470,6 +518,16 @@ _OPTIONS_${_target}:=	${_OPTIONS_${_target}} ${_prio}:${_type}-${_target}-${opt}
 .      for option in ${${opt}_USE_OFF}
 _u=		${option:C/=.*//g}
 USE_${_u:tu}+=	${option:C/.*=//g:C/,/ /g}
+.      endfor
+.    endif
+.    if defined(${opt}_VARS_OFF)
+.      for var in ${${opt}_VARS_OFF}
+_u=		${var:C/=.*//}
+.        if ${_u:M*+}
+${_u:C/.$//:tu}+=	${var:C/[^+]*\+=//:C/^"(.*)"$$/\1/}
+.        else
+${_u:tu}=	${var:C/[^=]*=//:C/^"(.*)"$$/\1/}
+.        endif
 .      endfor
 .    endif
 .    if defined(${opt}_CONFIGURE_ENABLE)
