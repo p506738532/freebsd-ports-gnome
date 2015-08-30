@@ -514,6 +514,7 @@ share/devhelp/books/libsigc++-%%API_VERSION%%/libsigc++-%%API_VERSION%%.devhelp2
 %%PORTDOCS%%%%DOCSDIR%%-%%API_VERSION%%/reference/html/namespacemembers_p.html
 %%PORTDOCS%%%%DOCSDIR%%-%%API_VERSION%%/reference/html/namespacemembers_r.html
 %%PORTDOCS%%%%DOCSDIR%%-%%API_VERSION%%/reference/html/namespacemembers_t.html
+%%PORTDOCS%%%%DOCSDIR%%-%%API_VERSION%%/reference/html/namespacemembers_type.html
 %%PORTDOCS%%%%DOCSDIR%%-%%API_VERSION%%/reference/html/namespacemembers_u.html
 %%PORTDOCS%%%%DOCSDIR%%-%%API_VERSION%%/reference/html/namespacemembers_v.html
 %%PORTDOCS%%%%DOCSDIR%%-%%API_VERSION%%/reference/html/namespaces.html
