@@ -293,6 +293,7 @@
     SUBDIR += cppi
     SUBDIR += cpptest
     SUBDIR += cppunit
+    SUBDIR += cppunit113
     SUBDIR += cproto
     SUBDIR += cpuflags
     SUBDIR += critcl
@@ -1392,6 +1393,7 @@
     SUBDIR += lua-lgi
     SUBDIR += lua-lpeg
     SUBDIR += lua-lpeg51
+    SUBDIR += lua-luarocks
     SUBDIR += lua-lunit
     SUBDIR += lua-posix
     SUBDIR += lua-pty
@@ -1485,7 +1487,6 @@
     SUBDIR += nini
     SUBDIR += ninja
     SUBDIR += ninja-ide
-    SUBDIR += ninja16
     SUBDIR += node-thrift
     SUBDIR += notify-sharp
     SUBDIR += noweb
@@ -3433,6 +3434,7 @@
     SUBDIR += pccts
     SUBDIR += pcl
     SUBDIR += pcre
+    SUBDIR += pcre2
     SUBDIR += pcre++
     SUBDIR += pcsc-ada
     SUBDIR += pcsc-lite
@@ -5165,6 +5167,7 @@
     SUBDIR += winpdb
     SUBDIR += wizardkit
     SUBDIR += wxGlade
+    SUBDIR += wxformbuilder
     SUBDIR += xa65
     SUBDIR += xc3sprog
     SUBDIR += xdg-user-dirs
