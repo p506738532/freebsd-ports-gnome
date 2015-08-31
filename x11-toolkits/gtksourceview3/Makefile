@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gtksourceview
-PORTVERSION=	3.17.5
+PORTVERSION=	3.17.6
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
@@ -24,7 +24,9 @@ USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build \
 		libxml2 referencehack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--enable-compile-warnings=no --enable-glade-catalog=no \
+CONFIGURE_ARGS=	--enable-compile-warnings=no \
+		--enable-glade-catalog=no \
+		--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig \
 		--enable-introspection
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib
