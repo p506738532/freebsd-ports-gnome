@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-initial-setup
-PORTVERSION=	3.17.90
+PORTVERSION=	3.17.91
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
