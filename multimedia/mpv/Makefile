@@ -4,31 +4,27 @@
 PORTNAME=	mpv
 PORTVERSION=	0.9.2
 DISTVERSIONPREFIX=	v
-PORTREVISION=	7
+PORTREVISION=	9
 PORTEPOCH=	1
 CATEGORIES=	multimedia audio
-MASTER_SITES=	http://ftp.waf.io/pub/release/:1 \
-		http://www.freehackers.org/~tnagy/release/:1
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} waf-${WAF_VERSION}:1
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	cpm@fbsd.es
 COMMENT=	Free and open-source general-purpose video player
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	libavcodec.so:${PORTSDIR}/multimedia/ffmpeg \
-		libfreetype.so:${PORTSDIR}/print/freetype2
+LIB_DEPENDS=	libavcodec.so:${PORTSDIR}/multimedia/ffmpeg
 BUILD_DEPENDS=	rst2man:${PORTSDIR}/textproc/py-docutils
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	mpv-player
+GH_ACCOUNT=	mpv-player waf-project:waf
+GH_PROJECT=	waf:waf
+GH_TAGNAME=	waf-1.8.9:waf
 
-WAF_VERSION=	1.8.9
+WAF_CMD=	${WRKSRC_waf}/waf-light
 
 USES=		compiler:c11 desktop-file-utils iconv pkgconfig python:build waf
 USE_LDCONFIG=	yes
-INSTALLS_ICONS=	yes
 
 CPPFLAGS+=	-I.. -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -143,10 +139,6 @@ ZSH_CONFIGURE_ENABLE=		zsh-comp
 .if ${ARCH} == "i386"
 CFLAGS:=	${CFLAGS:N-O*} -O0
 .endif
-
-post-extract:
-	@${CP} ${DISTDIR}/waf-${WAF_VERSION} ${WRKSRC}/waf
-	@${CHMOD} +x ${WRKSRC}/waf
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/pkgconfig/mpv.pc|data/pkgconfig/mpv.pc|g' \
