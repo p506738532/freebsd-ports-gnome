@@ -5,8 +5,7 @@
 # PORTREVISION bumps of depending ports.
 
 PORTNAME=	pulseaudio
-PORTVERSION=	6.0
-PORTREVISION=	2
+PORTVERSION=	6.99.1
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 
@@ -76,7 +75,7 @@ SIMD_CONFIGURE_ENABLE=	orc
 SIMD_LIB_DEPENDS=	liborc-0.4.so:${PORTSDIR}/devel/orc
 ZSH_CONFIGURE_OFF=	--without-zsh-completion-dir
 
-PULSE_VERSION=	${PORTVERSION}
+PULSE_VERSION=	${PORTVERSION:R}
 PLIST_SUB=	PULSE_VERSION=${PULSE_VERSION}
 
 post-patch:
@@ -92,6 +91,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/${ii} \
 		${STAGEDIR}${PREFIX}/etc/pulse/${ii}.sample
 .endfor
+	@${RM} ${STAGEDIR}/pa*
+
 post-install-BASH-off:
 	@${RM} -rf ${STAGEDIR}${PREFIX}/etc/bash_completion.d
 

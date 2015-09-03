@@ -69,7 +69,7 @@ lib/libpulse-simple.so.0
 lib/libpulse-simple.so.0.1.0
 lib/libpulse.so
 lib/libpulse.so.0
-lib/libpulse.so.0.18.0
+lib/libpulse.so.0.18.1
 lib/libpulsecore-%%PULSE_VERSION%%.so
 %%AVAHI%%lib/pulse-%%PULSE_VERSION%%/modules/libavahi-wrap.so
 lib/pulse-%%PULSE_VERSION%%/modules/module-device-manager.so
@@ -170,7 +170,10 @@ man/man1/pacat.1.gz
 man/man1/pacmd.1.gz
 man/man1/pactl.1.gz
 man/man1/padsp.1.gz
+man/man1/pamon.1.gz
 man/man1/paplay.1.gz
+man/man1/parec.1.gz
+man/man1/parecord.1.gz
 man/man1/pasuspender.1.gz
 man/man1/pax11publish.1.gz
 man/man1/pulseaudio.1.gz
@@ -244,9 +247,11 @@ share/locale/id/LC_MESSAGES/pulseaudio.mo
 share/locale/it/LC_MESSAGES/pulseaudio.mo
 share/locale/ja/LC_MESSAGES/pulseaudio.mo
 share/locale/kn/LC_MESSAGES/pulseaudio.mo
+share/locale/ko/LC_MESSAGES/pulseaudio.mo
 share/locale/ml/LC_MESSAGES/pulseaudio.mo
 share/locale/mr/LC_MESSAGES/pulseaudio.mo
 share/locale/nl/LC_MESSAGES/pulseaudio.mo
+share/locale/oc/LC_MESSAGES/pulseaudio.mo
 share/locale/or/LC_MESSAGES/pulseaudio.mo
 share/locale/pa/LC_MESSAGES/pulseaudio.mo
 share/locale/pl/LC_MESSAGES/pulseaudio.mo
