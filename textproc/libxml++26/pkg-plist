@@ -8,6 +8,7 @@ include/libxml++-%%API_VERSION%%/libxml++/exceptions/exception.h
 include/libxml++-%%API_VERSION%%/libxml++/exceptions/internal_error.h
 include/libxml++-%%API_VERSION%%/libxml++/exceptions/parse_error.h
 include/libxml++-%%API_VERSION%%/libxml++/exceptions/validity_error.h
+include/libxml++-%%API_VERSION%%/libxml++/exceptions/wrapped_exception.h
 include/libxml++-%%API_VERSION%%/libxml++/io/istreamparserinputbuffer.h
 include/libxml++-%%API_VERSION%%/libxml++/io/ostreamoutputbuffer.h
 include/libxml++-%%API_VERSION%%/libxml++/io/outputbuffer.h
