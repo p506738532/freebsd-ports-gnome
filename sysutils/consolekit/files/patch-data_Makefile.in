@@ -1,0 +1,11 @@
+--- data/Makefile.in.orig	2015-09-04 19:48:08.311325000 +0200
++++ data/Makefile.in	2015-09-04 19:48:37.217379000 +0200
+@@ -784,7 +784,7 @@
+ 
+ install-90-consolekit: $(XINITRC_CONFS)
+ 	$(MKDIR_P) $(DESTDIR)$(XINITRC_DIR)/
+-	$(INSTALL_PROGRAM) 90-consolekit $(DESTDIR)$(XINITRC_DIR) && \
++	$(INSTALL_DATA) 90-consolekit $(DESTDIR)$(XINITRC_DIR) && \
+ 		chmod +x $(DESTDIR)$(XINITRC_DIR)/90-consolekit
+ 
+ uninstall-logrotate:
