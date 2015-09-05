@@ -9,6 +9,9 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Callback Framework for C++
 
+LICENSE=	LGPL21 # or later
+LICENSE_FILE=	${WRKSRC}/COPYING
+
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 GNU_CONFIGURE=	yes
@@ -21,11 +24,7 @@ PLIST_SUB=	API_VERSION="2.0"
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.options.mk>
-
-.if ! ${PORT_OPTIONS:MDOCS}
-CONFIGURE_ARGS+=--enable-documentation=no
-.endif
+DOCS_CONFIGURE_OFF=	--enable-documentation=no
 
 post-patch:
 	@${REINPLACE_CMD} -e "/^SUBDIRS =/s|tests||; \

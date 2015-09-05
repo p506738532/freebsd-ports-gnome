@@ -27,7 +27,7 @@ PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils bison gettext gmake libtool \
 		pathfix perl5 pkgconfig tar:xz
-USE_GNOME=	evolutiondataserver3 gnomedesktop3 intlhack
+USE_GNOME=	evolutiondataserver3 gnomedesktop3 intltool
 GNU_CONFIGURE=	yes
 USE_GSTREAMER1=	yes
 INSTALLS_ICONS=	yes

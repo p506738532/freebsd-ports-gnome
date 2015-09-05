@@ -19,7 +19,7 @@ RUN_DEPENDS=	evolution>=3.0.0:${PORTSDIR}/mail/evolution
 PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake libtool pathfix pkgconfig tar:xz
-USE_GNOME=	intlhack
+USE_GNOME=	intltool
 GNU_CONFIGURE=	yes
 USE_SQLITE=	3
 USE_BDB=	5
