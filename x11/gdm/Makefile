@@ -36,7 +36,7 @@ RUN_DEPENDS+=	xrdb:${PORTSDIR}/x11/xrdb \
 		xterm:${PORTSDIR}/x11/xterm
 
 USERS=		gdm
-GROUPS=		gdm
+GROUPS=		gdm video
 
 PORTSCOUT=	limitw:1,even
 
