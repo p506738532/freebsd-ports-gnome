@@ -73,8 +73,7 @@ RUN_DEPENDS+=	empathy>=3.0.0:${PORTSDIR}/net-im/empathy \
 		gdm>=3.0.0:${PORTSDIR}/x11/gdm \
 		gnome-color-manager>=0:${PORTSDIR}/graphics/gnome-color-manager \
 		evolution>=3.0.0:${PORTSDIR}/mail/evolution \
-		cheese>=3.0.0:${PORTSDIR}/multimedia/cheese \
-		alacarte>=3.0.0:${PORTSDIR}/deskutils/alacarte
+		cheese>=3.0.0:${PORTSDIR}/multimedia/cheese
 
 .endif # !gnome3-lite section
 

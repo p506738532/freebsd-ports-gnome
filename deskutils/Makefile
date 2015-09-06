@@ -5,7 +5,6 @@
 
     SUBDIR += affiche
     SUBDIR += akamaru
-    SUBDIR += alacarte
     SUBDIR += anamnesis
     SUBDIR += appwrapper
     SUBDIR += aspostit
