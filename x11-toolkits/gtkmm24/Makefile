@@ -50,6 +50,9 @@ pre-configure:
 pre-build:
 	cd ${WRKSRC}/gdk/src && ${GMAKE} ${_MAKE_JOBS}
 	cd ${WRKSRC}/gtk/src && ${GMAKE} ${_MAKE_JOBS}
+# something goes wrong during regen of the files, apply hack to fix this.
+	@${REINPLACE_CMD} -e '/std::move(src)/d' \
+		${WRKSRC}/gtk/gtkmm/*.cc
 
 .include <bsd.port.mk>
 
