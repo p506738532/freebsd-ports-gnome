@@ -22,12 +22,13 @@ LIB_DEPENDS=	libpopt.so:${PORTSDIR}/devel/popt \
 #RUN_DEPENDS=	p5-XML-XQL>=0:${PORTSDIR}/textproc/p5-XML-XQL
 
 USE_GNOME=	gtkmm24 intlhack libxslt
-USES=		compiler:c++0x cpe desktop-file-utils gettext gmake iconv \
+USES=		compiler:c++11-lib cpe desktop-file-utils gettext gmake iconv \
 		libtool pathfix perl5 pkgconfig shebangfix tar:bzip2
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+USE_CXXSTD=	c++11
 CONFIGURE_ARGS=	--without-gnome-vfs
 
 python_OLD_CMD?=/usr/bin/env python
