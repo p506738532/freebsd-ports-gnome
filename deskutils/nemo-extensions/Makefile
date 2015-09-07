@@ -12,9 +12,6 @@ COMMENT=	File manager extensions for the Cinnamon desktop
 BUILD_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 		gtkdocize:${PORTSDIR}/textproc/gtk-doc \
 		rst2html:${PORTSDIR}/textproc/py-docutils \
-		automake>=0:${PORTSDIR}/devel/automake \
-		autoconf>=0:${PORTSDIR}/devel/autoconf \
-		libtool:${PORTSDIR}/devel/libtool \
 		gnome-autogen.sh:${PORTSDIR}/devel/gnome-common \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
@@ -27,8 +24,7 @@ LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
 		libevdocument3.so:${PORTSDIR}/graphics/evince \
 		libclutter-gtk-1.0.so:${PORTSDIR}/graphics/clutter-gtk3 \
 		libclutter-gst-2.0.so:${PORTSDIR}/multimedia/clutter-gst \
-		libmusicbrainz5.so:${PORTSDIR}/audio/libmusicbrainz5 \
-		libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3
+		libmusicbrainz5.so:${PORTSDIR}/audio/libmusicbrainz5
 RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
@@ -38,8 +34,9 @@ GH_TAGNAME=	2.6.x
 
 USE_GNOME=	gconf2 gnomeprefix gnomedocutils gtksourceview3 intlhack \
 		introspection:build libxml2 pygtk2
-USES=		gettext gmake libtool pathfix pkgconfig shebangfix
-SHEBANG_FILES=  nemo-dropbox/dropbox.in
+USES=		autoreconf:build gettext gmake libtool pathfix pkgconfig \
+		shebangfix
+SHEBANG_FILES=	nemo-dropbox/dropbox.in
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -52,6 +49,8 @@ AUTO_EXTENSIONS=
 post-patch:
 	@${REINPLACE_CMD} -e 's|AM_GNU_GETTEXT_VERSION(\[0.17\])||g ;\
 		s|AM_GNU_GETTEXT(\[external\])||g' \
+		${WRKSRC}/nemo-preview/configure.ac
+	@${REINPLACE_CMD} -e 's|webkitgtk-3.0||' \
 		${WRKSRC}/nemo-preview/configure.ac
 
 do-configure:

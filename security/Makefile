@@ -207,10 +207,12 @@
     SUBDIR += hs-cryptohash
     SUBDIR += hs-cryptohash-conduit
     SUBDIR += hs-cryptohash-cryptoapi
+    SUBDIR += hs-cryptonite
     SUBDIR += hs-digest
     SUBDIR += hs-entropy
     SUBDIR += hs-gnutls
     SUBDIR += hs-monadcryptorandom
+    SUBDIR += hs-nonce
     SUBDIR += hs-pem
     SUBDIR += hs-pureMD5
     SUBDIR += hs-pwstore-fast
@@ -991,6 +993,7 @@
     SUBDIR += snortreport
     SUBDIR += snortsam
     SUBDIR += snortsnarf
+    SUBDIR += softether
     SUBDIR += softhsm
     SUBDIR += softhsm2
     SUBDIR += spass

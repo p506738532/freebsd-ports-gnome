@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	haproxy
-DISTVERSION=	1.6-dev3
+DISTVERSION=	1.6-dev4
 CATEGORIES=	net www
 MASTER_SITES=	http://haproxy.1wt.eu/download/1.6/src/devel/
 PKGNAMESUFFIX=	-devel
@@ -18,8 +18,8 @@ USES=		cpe gmake
 CONFLICTS=	haproxy-[1234567890]\*
 USE_RC_SUBR=	haproxy
 
-DEVICEATLAS_VERSION=	0.9
-DEVICEATLAS_DISTFILE= deviceatlas_c_${DEVICEATLAS_VERSION}
+DEVICEATLAS_VERSION=	2.1
+DEVICEATLAS_DISTFILE=	deviceatlas-enterprise-c-${DEVICEATLAS_VERSION}
 DEVICEATLAS_REGISTRATION_URL= https://deviceatlas.com/deviceatlas-haproxy-module
 
 OPTIONS_DEFINE=		DOCS EXAMPLES LUA OPENSSL DEVICEATLAS
