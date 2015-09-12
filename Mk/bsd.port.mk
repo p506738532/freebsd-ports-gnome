@@ -1386,7 +1386,7 @@ USES+=	gnome
 .endif
 
 .if defined(USE_MATE)
-USES+=	gnome
+USES+=	mate
 .endif
 
 .if defined(WANT_WX) || defined(USE_WX) || defined(USE_WX_NOT)
@@ -1880,11 +1880,11 @@ _FORCE_POST_PATTERNS=	rmdir kldxref mkfontscale mkfontdir fc-cache \
 .endif
 
 .if defined(WANT_GNOME) || defined(USE_GNOME)
-.include "${PORTSDIR}/Mk/bsd.gnome.mk"
+USES+=	gnome
 .endif
 
 .if defined(USE_MATE)
-.include "${PORTSDIR}/Mk/bsd.mate.mk"
+USES+=	mate
 .endif
 
 .if defined(USE_KDE4)
