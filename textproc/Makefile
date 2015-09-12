@@ -168,6 +168,7 @@
     SUBDIR += eo-aspell
     SUBDIR += eqe
     SUBDIR += erlang-edown
+    SUBDIR += erlang-p1xml
     SUBDIR += erlang-yamerl
     SUBDIR += es-aspell
     SUBDIR += es-hunspell
@@ -1149,6 +1150,7 @@
     SUBDIR += peco
     SUBDIR += perl2html
     SUBDIR += permute
+    SUBDIR += php-mecab
     SUBDIR += php5-ctype
     SUBDIR += php5-dom
     SUBDIR += php5-pspell
@@ -1258,6 +1260,8 @@
     SUBDIR += py-sphinx
     SUBDIR += py-sphinx-intl
     SUBDIR += py-sphinx_rtd_theme
+    SUBDIR += py-sphinx_numfig
+    SUBDIR += py-sphinx_wikipedia
     SUBDIR += py-sphinxcontrib-adadomain
     SUBDIR += py-sphinxcontrib-bitbucket
     SUBDIR += py-sphinxcontrib-httpdomain
@@ -1374,6 +1378,7 @@
     SUBDIR += rubygem-fog-xml
     SUBDIR += rubygem-gemoji
     SUBDIR += rubygem-gherkin
+    SUBDIR += rubygem-gherkin3
     SUBDIR += rubygem-github-linguist
     SUBDIR += rubygem-github-markdown
     SUBDIR += rubygem-github-markup
@@ -1498,6 +1503,7 @@
     SUBDIR += sl-hyphen
     SUBDIR += sl-mythes
     SUBDIR += slides
+    SUBDIR += smi
     SUBDIR += smu
     SUBDIR += so-hunspell
     SUBDIR += soothsayer

@@ -113,6 +113,7 @@
     SUBDIR += easypg
     SUBDIR += elixir-comeonin
     SUBDIR += engine_pkcs11
+    SUBDIR += erlang-p1tls
     SUBDIR += expiretable
     SUBDIR += f-prot
     SUBDIR += fakebo
@@ -159,6 +160,7 @@
     SUBDIR += go.crypto
     SUBDIR += goptlib
     SUBDIR += gorilla
+    SUBDIR += govpn
     SUBDIR += gpa
     SUBDIR += gpasman
     SUBDIR += gpass
@@ -273,8 +275,8 @@
     SUBDIR += libassuan
     SUBDIR += libbeid
     SUBDIR += libbf
-    SUBDIR += libcryptui
     SUBDIR += libbzrtp
+    SUBDIR += libcryptui
     SUBDIR += libecc
     SUBDIR += libfprint
     SUBDIR += libgcrypt
@@ -842,6 +844,8 @@
     SUBDIR += py-pysha3
     SUBDIR += py-python-registry
     SUBDIR += py-rekall
+    SUBDIR += py-rekall-core
+    SUBDIR += py-rekall_gui
     SUBDIR += py-requests-kerberos
     SUBDIR += py-rsa
     SUBDIR += py-service_identity

@@ -618,6 +618,7 @@
     SUBDIR += nadar
     SUBDIR += naev
     SUBDIR += naev-data
+    SUBDIR += narcissu2
     SUBDIR += nazghul
     SUBDIR += nehquake
     SUBDIR += nelly
