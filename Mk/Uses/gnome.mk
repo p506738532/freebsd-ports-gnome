@@ -13,7 +13,8 @@
 #
 # ======================= /USERS ================================
 
-.if !defined(_POSTMKINCLUDED) && !defined(Gnome_Pre_Include)
+.if !defined(_INCLUDE_USES_GNOME_MK)
+_INCLUDE_USES_GNOME_MK= yes
 
 # Please make sure all changes to this file are passed through the maintainer.
 # Do not commit them yourself (unless of course you're the Port's Wraith ;).
@@ -561,13 +562,14 @@ HAVE_GNOME+=	${component}
 .endif
 # End of optional part.
 
-.if defined(_POSTMKINCLUDED) && !defined(Gnome_Post_Include)
+# XXXX
+#.if defined(_POSTMKINCLUDED) && !defined(Gnome_Post_Include)
 
-Gnome_Post_Include=		bsd.gnome.mk
+#Gnome_Post_Include=		bsd.gnome.mk
 
-.if !defined(Gnome_Pre_Include)
-.error The Pre include part of bsd.gnome.mk part is not included. Did you forget WANT_GNOME=yes before bsd.port.pre.mk?
-.endif
+#.if !defined(Gnome_Pre_Include)
+#.error The Pre include part of bsd.gnome.mk part is not included. Did you forget WANT_GNOME=yes before bsd.port.pre.mk?
+#.endif
 
 .if defined(USE_GNOME)
 # First of all expand all USE_GNOME_IMPL recursively
@@ -731,5 +733,5 @@ gnome-post-install:
 .  endif
 .endif
 
-.endif
+#.endif
 # End of use part.
