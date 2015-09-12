@@ -1404,7 +1404,7 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 .endif
 
 .if defined(WANT_GSTREAMER) || defined(USE_GSTREAMER) || defined(USE_GSTREAMER1)
-.include "${PORTSDIR}/Mk/bsd.gstreamer.mk"
+USES+=	gstreamer
 .endif
 
 .if defined(USE_SDL) || defined(WANT_SDL)
@@ -1835,10 +1835,6 @@ _FORCE_POST_PATTERNS=	rmdir kldxref mkfontscale mkfontdir fc-cache \
 .if defined(USE_MYSQL) || defined(WANT_MYSQL_VER) || \
 	defined(USE_BDB) || defined(USE_SQLITE) || defined(USE_FIREBIRD)
 .include "${PORTSDIR}/Mk/bsd.database.mk"
-.endif
-
-.if defined(WANT_GSTREAMER) || defined(USE_GSTREAMER) || defined(USE_GSTREAMER1)
-.include "${PORTSDIR}/Mk/bsd.gstreamer.mk"
 .endif
 
 .if defined(USE_JAVA)
