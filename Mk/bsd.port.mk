@@ -379,16 +379,6 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # USE_GECKO		- If set, this port uses the Gecko/Mozilla product.
 #				  See bsd.gecko.mk for more details.
 ##
-# USE_GNOME		- A list of the Gnome dependencies the port has (e.g.,
-#				  glib12, gtk12).  Implies that the port needs Gnome.
-#				  Implies inclusion of bsd.gnome.mk.  See bsd.gnome.mk
-#				  or http://www.FreeBSD.org/gnome/docs/porting.html
-#				  for more details.
-##
-# USE_MATE		- A list of the MATE dependencies the port has. Implies
-#				  that the port needs MATE. Implies inclusion of
-#				  bsd.mate.mk. See bsd.mate.mk for more details.
-##
 # USE_WX		- If set, this port uses the WxWidgets library and related
 #				  components. See bsd.wx.mk for more details.
 ##
@@ -1392,11 +1382,11 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 .endif
 
 .if defined(WANT_GNOME) || defined(USE_GNOME) || defined(INSTALLS_ICONS)
-.include "${PORTSDIR}/Mk/bsd.gnome.mk"
+USES+=	gnome
 .endif
 
 .if defined(USE_MATE)
-.include "${PORTSDIR}/Mk/bsd.mate.mk"
+USES+=	gnome
 .endif
 
 .if defined(WANT_WX) || defined(USE_WX) || defined(USE_WX_NOT)
