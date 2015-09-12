@@ -161,6 +161,7 @@
     SUBDIR += gnu-radius
     SUBDIR += go-amqp
     SUBDIR += go-cs
+    SUBDIR += go-geoip
     SUBDIR += go.net
     SUBDIR += gofish
     SUBDIR += gogoc
@@ -204,6 +205,7 @@
     SUBDIR += howl
     SUBDIR += hping
     SUBDIR += hping-devel
+    SUBDIR += hs-aws
     SUBDIR += hs-connection
     SUBDIR += hs-gsasl
     SUBDIR += hs-hoauth2
@@ -214,6 +216,7 @@
     SUBDIR += hs-network-info
     SUBDIR += hs-network-multicast
     SUBDIR += hs-network-protocol-xmpp
+    SUBDIR += hs-network-uri
     SUBDIR += hs-pcap
     SUBDIR += hs-publicsuffixlist
     SUBDIR += hs-sendfile
@@ -270,6 +273,7 @@
     SUBDIR += kdenetwork4
     SUBDIR += kdenetwork4-filesharing
     SUBDIR += kdenetwork4-strigi-analyzers
+    SUBDIR += kea
     SUBDIR += kget
     SUBDIR += kio-upnp-ms
     SUBDIR += kippo
@@ -370,7 +374,6 @@
     SUBDIR += macchanger
     SUBDIR += mad_fcl
     SUBDIR += malo-firmware-kmod
-    SUBDIR += mcast-tools
     SUBDIR += mdns-repeater
     SUBDIR += mediastreamer
     SUBDIR += mediatomb
@@ -876,6 +879,9 @@
     SUBDIR += php56-sockets
     SUBDIR += php56-xmlrpc
     SUBDIR += phpldapadmin
+    SUBDIR += pim6-tools
+    SUBDIR += pim6dd
+    SUBDIR += pim6sd
     SUBDIR += pimd
     SUBDIR += pimdd
     SUBDIR += pipsecd
@@ -1165,6 +1171,7 @@
     SUBDIR += slurm
     SUBDIR += smb4k-kde4
     SUBDIR += smbldap-tools
+    SUBDIR += smcroute
     SUBDIR += smm++
     SUBDIR += sniffit
     SUBDIR += sntop

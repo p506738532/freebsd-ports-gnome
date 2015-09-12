@@ -72,7 +72,6 @@
     SUBDIR += hs-OpenGLRaw
     SUBDIR += hs-gtk
     SUBDIR += hs-gtk2hs
-    SUBDIR += hs-gtkglext
     SUBDIR += hs-gtksourceview2
     SUBDIR += hs-pango
     SUBDIR += hs-vte
@@ -205,6 +204,7 @@
     SUBDIR += py-wxPython28-unicode
     SUBDIR += py-wxPython30
     SUBDIR += py-xlib
+    SUBDIR += pypy-tkinter
     SUBDIR += qt4-declarative
     SUBDIR += qt4-gui
     SUBDIR += qt4pas

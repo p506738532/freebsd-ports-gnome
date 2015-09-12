@@ -152,7 +152,6 @@
     SUBDIR += gtk-youtube-viewer
     SUBDIR += gxine
     SUBDIR += handbrake
-    SUBDIR += hs-gstreamer
     SUBDIR += imagination
     SUBDIR += iriverter
     SUBDIR += iso2mkv
@@ -285,12 +284,14 @@
     SUBDIR += p5-Subtitles
     SUBDIR += p5-Umph-Prompt
     SUBDIR += p5-Video-OpenQuicktime
+    SUBDIR += pHash
     SUBDIR += phonon
     SUBDIR += phonon-designerplugin
     SUBDIR += phonon-gstreamer
     SUBDIR += phonon-vlc
     SUBDIR += phonon-xine
     SUBDIR += photofilmstrip
+    SUBDIR += php-pHash
     SUBDIR += pitivi
     SUBDIR += playd
     SUBDIR += plexhometheater

@@ -245,6 +245,7 @@
     SUBDIR += extipl
     SUBDIR += ezjail
     SUBDIR += f3
+    SUBDIR += facter
     SUBDIR += fanout
     SUBDIR += farbot
     SUBDIR += fastest_cvsup
@@ -401,6 +402,7 @@
     SUBDIR += hs-cpu
     SUBDIR += hs-ekg
     SUBDIR += hs-ekg-core
+    SUBDIR += hs-ekg-json
     SUBDIR += htop
     SUBDIR += httplog
     SUBDIR += hwstat
@@ -951,6 +953,7 @@
     SUBDIR += ssync
     SUBDIR += stalepid
     SUBDIR += stmpclean
+    SUBDIR += storcli
     SUBDIR += stow
     SUBDIR += stowES
     SUBDIR += stress
@@ -970,7 +973,6 @@
     SUBDIR += syslog-ng-devel
     SUBDIR += syslog-ng-incubator
     SUBDIR += syslog-ng-incubator03
-    SUBDIR += syslog-ng33
     SUBDIR += syslog-ng34
     SUBDIR += syslog-ng35
     SUBDIR += syslogger
@@ -1091,6 +1093,7 @@
     SUBDIR += wmfire
     SUBDIR += wmflame
     SUBDIR += wmmemfree
+    SUBDIR += wmmemload
     SUBDIR += wmtop
     SUBDIR += wmupmon
     SUBDIR += worldtools
