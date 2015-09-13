@@ -20,6 +20,12 @@
 .if !defined(_INCLUDE_USES_MATE_MK)
 _INCLUDE_USES_MATE_MK= yes
 
+_USES_POST+=	mate
+
+.if !empty(mate_ARGS)
+IGNORE=	USES=mate takes no arguments
+.endif
+
 # This section defines possible names of MATE components and all information
 # necessary for ports to use those components.
 

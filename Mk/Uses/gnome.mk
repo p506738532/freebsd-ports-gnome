@@ -59,6 +59,12 @@
 .if !defined(_INCLUDE_USES_GNOME_MK)
 _INCLUDE_USES_GNOME_MK=        yes
 
+_USES_POST+=	gnome
+
+.if !empty(gnome_ARGS)
+IGNORE=	USES=gnome takes no arguments
+.endif
+
 # non-version specific components
 _USE_GNOME_ALL= esound intlhack intltool introspection \
 		referencehack gnomemimedata \
