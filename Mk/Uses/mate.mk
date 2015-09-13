@@ -2,17 +2,8 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#	$NetBSD$
-#     $MCom: ports-experimental/Mk/bsd.mate.mk,v 1.13 2012/09/03 17:02:31 mezz Exp $
 #
 # Please view me with 4 column tabs!
-
-#######################################################
-#
-# *** WARNING: Disable MARCUSCOM before merge in FreeBSD!
-#     Please also remove this section before merging into FreeBSD.
-#
-#MARCUSCOM_CVS=yes
 
 # ======================= USERS =================================
 #
@@ -20,15 +11,14 @@
 # This file is a framework to make it easier to create MATE ports.
 #
 # ======================= /USERS ================================
+#
+# Please make sure all changes to this file are passed through the maintainer.
+# Do not commit them yourself (unless of course you're the Port's Wraith ;).
+#
+# MAINTAINER: gnome@FreeBSD.org
 
 .if !defined(_INCLUDE_USES_MATE_MK)
 _INCLUDE_USES_MATE_MK= yes
-#.if !defined(_POSTMKINCLUDED) && !defined(Mate_Pre_Include)
-
-# Please make sure all changes to this file are passed through the maintainer.
-# Do not commit them yourself (unless of course you're the Port's Wraith ;).
-Mate_Include_MAINTAINER=	gnome@FreeBSD.org
-Mate_Pre_Include=			bsd.mate.mk
 
 # This section defines possible names of MATE components and all information
 # necessary for ports to use those components.
@@ -144,13 +134,6 @@ settingsdaemon_RUN_DEPENDS=	${settingsdaemon_DETECT}:${PORTSDIR}/sysutils/mate-s
 
 # End component definition section
 
-.endif
-# End of optional part.
-
-#.if defined(_POSTMKINCLUDED) && !defined(Mate_Post_Include)
-
-#Mate_Post_Include=		bsd.mate.mk
-
 .if defined(USE_MATE)
 # Comparing between USE_MATE and _USE_MATE_ALL to make sure the component
 # exists in _USE_MATE_ALL. If it does not exist then give an error about it.
@@ -204,6 +187,12 @@ MATE_PRE_PATCH+=	; ${${component}_PRE_PATCH}
 . endfor
 .endif # USE_MATE check
 
+.endif
+# End of optional part.
+
+.if defined(_POSTMKINCLUDED) && !defined(_INCLUDE_USES_MATE_POST_MK)
+_INCLUDE_USES_MATE_POST_MK=     yes
+
 .if ${USE_MATE:Mautogen}!=""
 
 CONFIGURE_ENV+=	NOCONFIGURE=yes
@@ -220,10 +209,6 @@ pre-configure-script: mate-pre-configure-script
 
 mate-pre-configure-script:
 	@${MATE_PRE_PATCH:C/^;//1}
-.endif
-
-.if ${MAINTAINER}=="gnome@FreeBSD.org"
-CONFIGURE_FAIL_MESSAGE= "Please run the gnomelogalyzer, available from \"http://www.freebsd.org/gnome/gnomelogalyzer.sh\", which will diagnose the problem and suggest a solution. If - and only if - the gnomelogalyzer cannot solve the problem, report the build failure to the FreeBSD MATE team at ${MAINTAINER}, and attach (a) \"${CONFIGURE_WRKSRC}/${CONFIGURE_LOG}\", (b) the output of the failed make command, and (c) the gnomelogalyzer output. Also, it might be a good idea to provide an overview of all packages installed on your system (i.e. an \`ls ${PKG_DBDIR}\`). Put your attachment up on any website, copy-and-paste into http://freebsd-gnome.pastebin.com, or use send-pr(1) with the attachment. Try to avoid sending any attachments to the mailing list (${MAINTAINER}), because attachments sent to FreeBSD mailing lists are usually discarded by the mailing list software."
 .endif
 
 #.endif
