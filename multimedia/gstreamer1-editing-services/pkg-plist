@@ -61,6 +61,7 @@ include/gstreamer-%%VERSION%%/ges/ges-video-uri-source.h
 include/gstreamer-%%VERSION%%/ges/ges-xml-formatter.h
 include/gstreamer-%%VERSION%%/ges/ges.h
 lib/girepository-%%VERSION%%/GES-%%VERSION%%.typelib
+lib/gstreamer-%%VERSION%%/libgstnle.so
 lib/libges-%%VERSION%%.so
 lib/libges-%%VERSION%%.so.0
 lib/libges-%%VERSION%%.so.0.0.0
