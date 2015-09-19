@@ -2,7 +2,7 @@
 # $FreeBSD: head/multimedia/gstreamer1/Makefile 375225 2014-12-22 10:22:38Z kwm $
 
 PORTNAME=	gstreamer
-PORTVERSION=	1.5.90
+PORTVERSION=	1.5.91
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gstreamer/
 PKGNAMESUFFIX=	1
