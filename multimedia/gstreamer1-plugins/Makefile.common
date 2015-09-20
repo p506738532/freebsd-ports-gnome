@@ -234,6 +234,9 @@ gst_chromaprint_LIB_DEPENDS=	libchromaprint.so:${PORTSDIR}/audio/chromaprint
 # curl
 gst_curl_LIB_DEPENDS=	libcurl.so:${PORTSDIR}/ftp/curl
 
+# dtls
+gst_dtls_USES=		compiler:c11
+
 # dts
 gst_dts_LIB_DEPENDS=	libdca.so:${PORTSDIR}/multimedia/libdca
 gst_dts_PLIST_FILES=	${GST_LIB_DIR}/libgstdtsdec.so
