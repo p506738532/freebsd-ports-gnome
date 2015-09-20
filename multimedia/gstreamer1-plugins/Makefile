@@ -125,6 +125,11 @@ DEFAULT_DVD_DEVICE=${WITH_DVD_DEVICE}
 DEFAULT_DVD_DEVICE=/dev/cd0
 .endif
 
+# openssl in 9.x is too old
+.if ${GST_PLUGIN} == dtls && ${OSVERSION} < 1000000
+WITH_OPENSSL_PORT=yes
+.endif
+
 post-patch:
 .if ${DIST} == bad
 # custom rule to fix opencv detection in configure
