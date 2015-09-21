@@ -38,7 +38,7 @@ include/gtksourceview-3.0/gtksourceview/gtksourceview.h
 lib/girepository-1.0/GtkSource-3.0.typelib
 lib/libgtksourceview-3.0.so
 lib/libgtksourceview-3.0.so.1
-lib/libgtksourceview-3.0.so.1.4.0
+lib/libgtksourceview-3.0.so.1.5.0
 libdata/pkgconfig/gtksourceview-3.0.pc
 %%PORTDOCS%%%%DOCSDIR%%-3.0/GtkSourceBuffer.html
 %%PORTDOCS%%%%DOCSDIR%%-3.0/GtkSourceCompletion.html
