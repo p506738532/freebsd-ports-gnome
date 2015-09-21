@@ -4,6 +4,7 @@ include/libsoup-%%VERSION%%/libsoup/soup-auth-domain-digest.h
 include/libsoup-%%VERSION%%/libsoup/soup-auth-domain.h
 include/libsoup-%%VERSION%%/libsoup/soup-auth-manager.h
 include/libsoup-%%VERSION%%/libsoup/soup-auth.h
+include/libsoup-%%VERSION%%/libsoup/soup-autocleanups.h
 include/libsoup-%%VERSION%%/libsoup/soup-cache.h
 include/libsoup-%%VERSION%%/libsoup/soup-connection.h
 include/libsoup-%%VERSION%%/libsoup/soup-content-decoder.h
