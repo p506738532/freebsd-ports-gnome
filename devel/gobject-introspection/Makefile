@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gobject-introspection
-PORTVERSION=	1.45.4
+PORTVERSION=	1.46.0
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
