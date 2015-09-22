@@ -2195,6 +2195,11 @@ share/icons/Adwaita/cursors/sb_right_arrow
 share/icons/Adwaita/cursors/sb_up_arrow
 share/icons/Adwaita/cursors/sb_v_double_arrow
 share/icons/Adwaita/cursors/se-resize
+share/icons/Adwaita/cursors/size_all
+share/icons/Adwaita/cursors/size_bdiag
+share/icons/Adwaita/cursors/size_fdiag
+share/icons/Adwaita/cursors/size_hor
+share/icons/Adwaita/cursors/size_ver
 share/icons/Adwaita/cursors/sw-resize
 share/icons/Adwaita/cursors/target
 share/icons/Adwaita/cursors/tcross
@@ -2267,8 +2272,8 @@ share/icons/Adwaita/scalable/actions/format-justify-fill-symbolic.svg
 share/icons/Adwaita/scalable/actions/format-justify-left-symbolic.svg
 share/icons/Adwaita/scalable/actions/format-justify-right-symbolic.svg
 share/icons/Adwaita/scalable/actions/format-text-bold-symbolic.svg
-share/icons/Adwaita/scalable/actions/format-text-direction-ltr-symbolic.svg
-share/icons/Adwaita/scalable/actions/format-text-direction-rtl-symbolic.svg
+share/icons/Adwaita/scalable/actions/format-text-direction-symbolic-rtl.svg
+share/icons/Adwaita/scalable/actions/format-text-direction-symbolic.svg
 share/icons/Adwaita/scalable/actions/format-text-italic-symbolic.svg
 share/icons/Adwaita/scalable/actions/format-text-strikethrough-symbolic.svg
 share/icons/Adwaita/scalable/actions/format-text-underline-symbolic.svg
@@ -2573,13 +2578,13 @@ share/icons/Adwaita/scalable/status/mail-attachment-symbolic.svg
 share/icons/Adwaita/scalable/status/mail-read-symbolic.svg
 share/icons/Adwaita/scalable/status/mail-replied-symbolic.svg
 share/icons/Adwaita/scalable/status/mail-unread-symbolic.svg
-share/icons/Adwaita/scalable/status/media-playlist-consecutive-rtl-symbolic.svg
+share/icons/Adwaita/scalable/status/media-playlist-consecutive-symbolic-rtl.svg
 share/icons/Adwaita/scalable/status/media-playlist-consecutive-symbolic.svg
-share/icons/Adwaita/scalable/status/media-playlist-repeat-rtl-symbolic.svg
-share/icons/Adwaita/scalable/status/media-playlist-repeat-song-rtl-symbolic.svg
+share/icons/Adwaita/scalable/status/media-playlist-repeat-song-symbolic-rtl.svg
 share/icons/Adwaita/scalable/status/media-playlist-repeat-song-symbolic.svg
+share/icons/Adwaita/scalable/status/media-playlist-repeat-symbolic-rtl.svg
 share/icons/Adwaita/scalable/status/media-playlist-repeat-symbolic.svg
-share/icons/Adwaita/scalable/status/media-playlist-shuffle-rtl-symbolic.svg
+share/icons/Adwaita/scalable/status/media-playlist-shuffle-symbolic-rtl.svg
 share/icons/Adwaita/scalable/status/media-playlist-shuffle-symbolic.svg
 share/icons/Adwaita/scalable/status/microphone-sensitivity-high-symbolic.svg
 share/icons/Adwaita/scalable/status/microphone-sensitivity-low-symbolic.svg
@@ -2635,7 +2640,7 @@ share/icons/Adwaita/scalable/status/rotation-locked-symbolic.svg
 share/icons/Adwaita/scalable/status/security-high-symbolic.svg
 share/icons/Adwaita/scalable/status/security-low-symbolic.svg
 share/icons/Adwaita/scalable/status/security-medium-symbolic.svg
-share/icons/Adwaita/scalable/status/semi-starred-rtl-symbolic.svg
+share/icons/Adwaita/scalable/status/semi-starred-symbolic-rtl.svg
 share/icons/Adwaita/scalable/status/semi-starred-symbolic.svg
 share/icons/Adwaita/scalable/status/software-update-available-symbolic.svg
 share/icons/Adwaita/scalable/status/software-update-urgent-symbolic.svg
@@ -2666,8 +2671,6 @@ share/icons/Adwaita/scalable/status/weather-showers-scattered-symbolic.svg
 share/icons/Adwaita/scalable/status/weather-showers-symbolic.svg
 share/icons/Adwaita/scalable/status/weather-snow-symbolic.svg
 share/icons/Adwaita/scalable/status/weather-storm-symbolic.svg
-@exec /usr/bin/find %%LOCALBASE%%/share/icons -type d -depth 1 -exec %D/bin/gtk-update-icon-cache -q -f {} \; 2>/dev/null || /usr/bin/true
-@unexec /usr/bin/find %%LOCALBASE%%/share/icons -type f -depth 2 -name icon-theme.cache -delete 2>/dev/null || /usr/bin/true
 @dir share/locale/an/LC_MESSAGES
 @dir share/locale/as/LC_MESSAGES
 @dir share/locale/ast/LC_MESSAGES
