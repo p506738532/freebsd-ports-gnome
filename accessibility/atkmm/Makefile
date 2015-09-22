@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	atkmm
-PORTVERSION=	2.23.3
+PORTVERSION=	2.24.0
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 
