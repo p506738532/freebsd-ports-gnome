@@ -14,6 +14,7 @@ share/icons/hicolor/512x512/apps/gnome-2048.png
 share/icons/hicolor/scalable/apps/gnome-2048-symbolic.svg
 share/icons/hicolor/scalable/apps/gnome-2048.svg
 share/locale/bs/LC_MESSAGES/gnome-2048.mo
+share/locale/ca/LC_MESSAGES/gnome-2048.mo
 share/locale/cs/LC_MESSAGES/gnome-2048.mo
 share/locale/de/LC_MESSAGES/gnome-2048.mo
 share/locale/es/LC_MESSAGES/gnome-2048.mo
@@ -21,7 +22,9 @@ share/locale/fi/LC_MESSAGES/gnome-2048.mo
 share/locale/fr/LC_MESSAGES/gnome-2048.mo
 share/locale/he/LC_MESSAGES/gnome-2048.mo
 share/locale/hu/LC_MESSAGES/gnome-2048.mo
+share/locale/lt/LC_MESSAGES/gnome-2048.mo
 share/locale/pl/LC_MESSAGES/gnome-2048.mo
+share/locale/pt/LC_MESSAGES/gnome-2048.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-2048.mo
 share/locale/sl/LC_MESSAGES/gnome-2048.mo
 share/locale/sr/LC_MESSAGES/gnome-2048.mo
