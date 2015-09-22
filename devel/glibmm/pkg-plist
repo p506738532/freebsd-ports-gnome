@@ -369,6 +369,7 @@ include/glibmm-%%VERSION%%/glibmm/variantdict.h
 include/glibmm-%%VERSION%%/glibmm/variantiter.h
 include/glibmm-%%VERSION%%/glibmm/varianttype.h
 include/glibmm-%%VERSION%%/glibmm/vectorutils.h
+include/glibmm-%%VERSION%%/glibmm/weakref.h
 include/glibmm-%%VERSION%%/glibmm/wrap.h
 include/glibmm-%%VERSION%%/glibmm/wrap_init.h
 include/glibmm-%%VERSION%%/glibmm_generate_extra_defs/generate_extra_defs.h
