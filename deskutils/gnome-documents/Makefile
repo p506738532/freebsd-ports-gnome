@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-documents
-PORTVERSION=	3.17.90
+PORTVERSION=	3.18.0.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -32,7 +32,7 @@ PORTSCOUT=	limitw:1,even
 
 USES=		compiler:c++11-lib gettext gmake libtool pathfix \
 		pkgconfig tar:xz
-USE_GNOME=	gnomedesktop3 gtk30 intltool \
+USE_GNOME=	gnomedesktop3 gtk30 intlhack \
 		introspection:build librsvg2 libxml2
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
