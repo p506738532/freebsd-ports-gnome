@@ -217,5 +217,5 @@ mate-pre-configure-script:
 	@${MATE_PRE_PATCH:C/^;//1}
 .endif
 
-#.endif
+.endif
 # End of use part.
