@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	at-spi2-core
-PORTVERSION=	2.17.90
+PORTVERSION=	2.18.0
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
