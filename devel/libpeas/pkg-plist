@@ -17,10 +17,10 @@ lib/girepository-1.0/Peas-1.0.typelib
 lib/girepository-1.0/PeasGtk-1.0.typelib
 lib/libpeas-1.0.so
 lib/libpeas-1.0.so.0
-lib/libpeas-1.0.so.0.1500.0
+lib/libpeas-1.0.so.0.1600.0
 lib/libpeas-gtk-1.0.so
 lib/libpeas-gtk-1.0.so.0
-lib/libpeas-gtk-1.0.so.0.1500.0
+lib/libpeas-gtk-1.0.so.0.1600.0
 lib/peas-demo/plugins/helloworld/helloworld.plugin
 lib/peas-demo/plugins/helloworld/libhelloworld.so
 lib/peas-demo/plugins/secondtime/libsecondtime.so
@@ -50,7 +50,6 @@ share/gtk-doc/html/libpeas/ch02.html
 share/gtk-doc/html/libpeas/ch03.html
 share/gtk-doc/html/libpeas/home.png
 share/gtk-doc/html/libpeas/index.html
-share/gtk-doc/html/libpeas/index.sgml
 share/gtk-doc/html/libpeas/left-insensitive.png
 share/gtk-doc/html/libpeas/left.png
 share/gtk-doc/html/libpeas/libpeas-PeasExtension.html
