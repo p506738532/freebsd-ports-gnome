@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	cairomm
-PORTVERSION=	1.11.4
+PORTVERSION=	1.12.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://cairographics.org/releases/
+MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ interface to cairo
@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USES=		compiler:c++11-lib gmake libtool pathfix pkgconfig
+USES=		compiler:c++11-lib gmake libtool pathfix pkgconfig tar:xz
 USE_GNOME=	cairo libxml++26
 CONFIGURE_ENV=	AUTOMAKE="${TRUE}" AUTOCONF="${TRUE}" DOXYGEN="${TRUE}"
 CPPFLAGS+=	-I${LOCALBASE}/include
