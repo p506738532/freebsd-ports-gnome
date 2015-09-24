@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gedit-plugins
-PORTVERSION=	3.17.0
-PORTREVISION=	1
+PORTVERSION=	3.18.0
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -14,6 +13,7 @@ COMMENT=	Plugins for GEdit 3
 BUILD_DEPENDS=	gedit>=0:${PORTSDIR}/editors/gedit \
 		itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libpeas-1.0.so:${PORTSDIR}/devel/libpeas \
+		libzeitgeist-2.0.so:${PORTSDIR}/sysutils/zeitgeist \
 		libgit2-glib-1.0.so:${PORTSDIR}/devel/libgit2-glib
 RUN_DEPENDS=	gedit>=0:${PORTSDIR}/editors/gedit
 

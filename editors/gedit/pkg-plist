@@ -210,6 +210,7 @@ share/gtk-doc/html/gedit/gedit-gedit-window.html
 share/gtk-doc/html/gedit/gedit.devhelp2
 share/gtk-doc/html/gedit/home.png
 share/gtk-doc/html/gedit/index.html
+share/gtk-doc/html/gedit/index.sgml
 share/gtk-doc/html/gedit/left-insensitive.png
 share/gtk-doc/html/gedit/left.png
 share/gtk-doc/html/gedit/object-tree.html
