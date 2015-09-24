@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-calendar
-PORTVERSION=	3.17.90
+PORTVERSION=	3.18.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
