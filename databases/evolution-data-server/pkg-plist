@@ -217,6 +217,7 @@ include/evolution-data-server/libedataserver/e-memory.h
 include/evolution-data-server/libedataserver/e-module.h
 include/evolution-data-server/libedataserver/e-operation-pool.h
 include/evolution-data-server/libedataserver/e-proxy.h
+include/evolution-data-server/libedataserver/e-secret-store.h
 include/evolution-data-server/libedataserver/e-sexp.h
 include/evolution-data-server/libedataserver/e-soup-auth-bearer.h
 include/evolution-data-server/libedataserver/e-soup-ssl-trust.h
