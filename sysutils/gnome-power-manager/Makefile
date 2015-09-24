@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-power-manager
-PORTVERSION=	3.17.90
+PORTVERSION=	3.18.0
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
