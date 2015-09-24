@@ -5,7 +5,7 @@
 # PORTREVISION bumps of depending ports.
 
 PORTNAME=	pulseaudio
-PORTVERSION=	6.99.1
+PORTVERSION=	7.0
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 
@@ -75,7 +75,7 @@ SIMD_CONFIGURE_ENABLE=	orc
 SIMD_LIB_DEPENDS=	liborc-0.4.so:${PORTSDIR}/devel/orc
 ZSH_CONFIGURE_OFF=	--without-zsh-completion-dir
 
-PULSE_VERSION=	${PORTVERSION:R}
+PULSE_VERSION=	${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 PLIST_SUB=	PULSE_VERSION=${PULSE_VERSION}
 
 post-patch:
