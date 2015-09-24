@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-user-docs
-PORTVERSION=	3.16.1
+PORTVERSION=	3.18.0
 CATEGORIES=	misc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
