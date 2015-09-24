@@ -11,6 +11,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plugins for GEdit 3
 
 BUILD_DEPENDS=	gedit>=0:${PORTSDIR}/editors/gedit \
+		valac:${PORTSDIR}/lang/vala \
 		itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libpeas-1.0.so:${PORTSDIR}/devel/libpeas \
 		libzeitgeist-2.0.so:${PORTSDIR}/sysutils/zeitgeist \
