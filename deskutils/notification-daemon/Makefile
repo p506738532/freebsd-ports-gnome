@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	notification-daemon
-PORTVERSION=	3.17.2
+PORTVERSION=	3.18.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
 
 PORTSCOUT=	limitw:1,even
 
-USE_GNOME=	gnomeprefix intlhack gtk30
+USE_GNOME=	gnomeprefix gtk30
 USES=		gettext gmake pathfix pkgconfig tar:xz
 USE_XORG=	x11
 INSTALLS_ICONS=	yes
