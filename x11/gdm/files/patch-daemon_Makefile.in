@@ -1,5 +1,5 @@
---- daemon/Makefile.in.orig	2015-08-16 22:44:42.000000000 +0200
-+++ daemon/Makefile.in	2015-08-16 22:45:36.000000000 +0200
+--- daemon/Makefile.in.orig	2015-09-25 10:27:28.829353000 +0200
++++ daemon/Makefile.in	2015-09-25 10:31:56.940846000 +0200
 @@ -100,6 +100,7 @@
  
  sbin_PROGRAMS = gdm$(EXEEXT) $(am__EXEEXT_1)
@@ -54,31 +54,7 @@
  CPP = @CPP@
  CPPFLAGS = @CPPFLAGS@
  CXX = @CXX@
-@@ -367,7 +372,6 @@
- GTK_CFLAGS = @GTK_CFLAGS@
- GTK_LIBS = @GTK_LIBS@
- HAVE_PAM = @HAVE_PAM@
--HELP_DIR = @HELP_DIR@
- INSTALL = @INSTALL@
- INSTALL_DATA = @INSTALL_DATA@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
-@@ -389,7 +393,6 @@
- INTROSPECTION_MAKEFILE = @INTROSPECTION_MAKEFILE@
- INTROSPECTION_SCANNER = @INTROSPECTION_SCANNER@
- INTROSPECTION_TYPELIBDIR = @INTROSPECTION_TYPELIBDIR@
--ITSTOOL = @ITSTOOL@
- JOURNALD_CFLAGS = @JOURNALD_CFLAGS@
- JOURNALD_LIBS = @JOURNALD_LIBS@
- LANG_CONFIG_FILE = @LANG_CONFIG_FILE@
-@@ -413,6 +416,7 @@
- LT_AGE = @LT_AGE@
- LT_CURRENT = @LT_CURRENT@
- LT_REVISION = @LT_REVISION@
-+LT_SYS_LIBRARY_PATH = @LT_SYS_LIBRARY_PATH@
- MAINT = @MAINT@
- MAKEINFO = @MAKEINFO@
- MANIFEST_TOOL = @MANIFEST_TOOL@
-@@ -460,6 +464,7 @@
+@@ -461,6 +466,7 @@
  USE_NLS = @USE_NLS@
  VERSION = @VERSION@
  WARN_CFLAGS = @WARN_CFLAGS@
@@ -86,24 +62,7 @@
  XDMCP_LIBS = @XDMCP_LIBS@
  XEVIE_OPTION = @XEVIE_OPTION@
  XGETTEXT = @XGETTEXT@
-@@ -467,7 +472,6 @@
- XLIB_CFLAGS = @XLIB_CFLAGS@
- XLIB_LIBS = @XLIB_LIBS@
- XMKMF = @XMKMF@
--XMLLINT = @XMLLINT@
- XSESSION_SHELL = @XSESSION_SHELL@
- X_CFLAGS = @X_CFLAGS@
- X_EXTRA_LIBS = @X_EXTRA_LIBS@
-@@ -479,8 +483,6 @@
- X_XNEST_CMD = @X_XNEST_CMD@
- X_XNEST_CONFIG_OPTIONS = @X_XNEST_CONFIG_OPTIONS@
- X_XNEST_UNSCALED_FONTPATH = @X_XNEST_UNSCALED_FONTPATH@
--YELP_LC_DIST = @YELP_LC_DIST@
--YELP_LC_MEDIA_LINKS = @YELP_LC_MEDIA_LINKS@
- abs_builddir = @abs_builddir@
- abs_srcdir = @abs_srcdir@
- abs_top_builddir = @abs_top_builddir@
-@@ -564,6 +566,7 @@
+@@ -565,6 +571,7 @@
  	-DGDM_SCREENSHOT_DIR=\"$(GDM_SCREENSHOT_DIR)\"		\
  	-DGDM_CACHE_DIR=\""$(localstatedir)/cache/gdm"\"	\
  	-DGDM_SESSION_DEFAULT_PATH=\"$(GDM_SESSION_DEFAULT_PATH)\" \
@@ -111,7 +70,7 @@
  	$(DISABLE_DEPRECATED_CFLAGS)			\
  	$(DAEMON_CFLAGS)				\
  	$(XLIB_CFLAGS)					\
-@@ -668,7 +671,7 @@
+@@ -669,7 +676,7 @@
  	gdm-session-worker-common.c gdm-session-worker-common.h \
  	gdm-session-worker-job.c gdm-session-worker-job.h \
  	gdm-dbus-util.c gdm-dbus-util.h gdm-xerrors.c gdm-xerrors.h \
@@ -120,7 +79,7 @@
  nodist_gdm_SOURCES = \
  	gdm-display-glue.h			\
  	gdm-display-glue.c			\
-@@ -695,8 +698,8 @@
+@@ -696,8 +703,8 @@
  	gdm-xdmcp-chooser-display.h	\
  	$(NULL)
  
