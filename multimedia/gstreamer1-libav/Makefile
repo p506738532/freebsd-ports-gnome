@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gstreamer1-libav
-PORTVERSION=	1.5.91
+PORTVERSION=	1.6.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-libav/
 DISTNAME=	gst-libav-${PORTVERSION}
