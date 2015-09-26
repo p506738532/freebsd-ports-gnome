@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gstreamer1-validate
-PORTVERSION=	1.5.2
+PORTVERSION=	1.6.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-validate/
 DISTNAME=	gst-validate-${PORTVERSION}
@@ -13,7 +13,7 @@ COMMENT=	Gstreamer element validation suite
 USES=		gmake libtool pathfix pkgconfig python:2 tar:xz
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	glib20 gtk30 introspection:build
+USE_GNOME=	gtk30 introspection:build
 USE_GSTREAMER1=	yes
 INSTALL_TARGET=	install-strip
 
