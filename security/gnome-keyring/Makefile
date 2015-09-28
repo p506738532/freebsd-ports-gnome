@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-keyring
-PORTVERSION=	3.17.91
+PORTVERSION=	3.18.0
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
