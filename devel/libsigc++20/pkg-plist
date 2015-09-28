@@ -7,6 +7,8 @@ include/sigc++-%%API_VERSION%%/sigc++/adaptors/compose.h
 include/sigc++-%%API_VERSION%%/sigc++/adaptors/deduce_result_type.h
 include/sigc++-%%API_VERSION%%/sigc++/adaptors/exception_catch.h
 include/sigc++-%%API_VERSION%%/sigc++/adaptors/hide.h
+include/sigc++-%%API_VERSION%%/sigc++/adaptors/lambda/base.h
+include/sigc++-%%API_VERSION%%/sigc++/adaptors/lambda/select.h
 include/sigc++-%%API_VERSION%%/sigc++/adaptors/retype.h
 include/sigc++-%%API_VERSION%%/sigc++/adaptors/retype_return.h
 include/sigc++-%%API_VERSION%%/sigc++/adaptors/track_obj.h
@@ -370,6 +372,7 @@ share/devhelp/books/libsigc++-%%API_VERSION%%/libsigc++-%%API_VERSION%%.devhelp2
 %%PORTDOCS%%%%DOCSDIR%%-%%API_VERSION%%/reference/html/dir_0bd3c8d814eb03171de012519d7a2ccd.html
 %%PORTDOCS%%%%DOCSDIR%%-%%API_VERSION%%/reference/html/dir_5c02128c554eaa40138b2e605fc08970.html
 %%PORTDOCS%%%%DOCSDIR%%-%%API_VERSION%%/reference/html/dir_5fbc72877197f8c6013d0f619df5433c.html
+%%PORTDOCS%%%%DOCSDIR%%-%%API_VERSION%%/reference/html/dir_ea4abdd77c05d5873cecf571a6d96de7.html
 %%PORTDOCS%%%%DOCSDIR%%-%%API_VERSION%%/reference/html/doc.png
 %%PORTDOCS%%%%DOCSDIR%%-%%API_VERSION%%/reference/html/doxygen-extra.css
 %%PORTDOCS%%%%DOCSDIR%%-%%API_VERSION%%/reference/html/doxygen.css
