@@ -55,9 +55,7 @@ GLIB_SCHEMAS=	org.gnome.Evolution.DefaultSources.gschema.xml \
 		org.gnome.evolution-data-server.gschema.xml \
 		org.gnome.evolution.shell.network-config.gschema.xml
 
-# 3.17 mixes 3.18 and 3.16. Use NEW_VERSION while this happens
-PLIST_SUB=	NEW_VERSION="3.18" VERSION="3.16" EVO_VERSION="1.2"
-#PLIST_SUB=	VERSION="3.16" EVO_VERSION="1.2"
+PLIST_SUB=	VERSION="3.18" EVO_VERSION="1.2"
 
 OPTIONS_DEFINE=	WEATHER KERBEROS
 OPTIONS_DEFAULT=WEATHER KERBEROS
