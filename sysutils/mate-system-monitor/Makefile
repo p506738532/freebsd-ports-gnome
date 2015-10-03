@@ -24,8 +24,14 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LIBS="-lutil"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+USE_CXXSTD=	c++11
 
 GLIB_SCHEMAS=	org.mate.system-monitor.enums.xml \
 		org.mate.system-monitor.gschema.xml
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-std=gnu89||g' \
+		-e 's|-std=c++98||g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>
