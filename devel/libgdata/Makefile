@@ -1,9 +1,8 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/trunk/devel/libgdata/Makefile 20049 2014-11-10 09:22:03Z gusi $
 
 PORTNAME=	libgdata
-PORTVERSION=	0.17.1
+PORTVERSION=	0.17.3
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
