@@ -5,15 +5,15 @@
  
  %.1: %.xml
 -	$(AM_V_GEN) $(XSLTPROC) $(XSLTPROC_MAN_FLAGS) http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl $<
-+	$(AM_V_GEN) $(XSLTPROC) $(XSLTPROC_MAN_FLAGS) /usr/local/share/xsl/docbook/manpages/docbook.xsl $<
++	$(AM_V_GEN) $(XSLTPROC) $(XSLTPROC_MAN_FLAGS) %%LOCALBASE%%/share/xsl/docbook/manpages/docbook.xsl $<
  
  dconf.1: dconf-tool.xml
 -	$(AM_V_GEN) $(XSLTPROC) $(XSLTPROC_MAN_FLAGS) http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl $<
-+	$(AM_V_GEN) $(XSLTPROC) $(XSLTPROC_MAN_FLAGS) /usr/local/share/xsl/docbook/manpages/docbook.xsl $<
++	$(AM_V_GEN) $(XSLTPROC) $(XSLTPROC_MAN_FLAGS) %%LOCALBASE%%/share/xsl/docbook/manpages/docbook.xsl $<
  
  dconf.7: dconf-overview.xml
 -	$(AM_V_GEN) $(XSLTPROC) $(XSLTPROC_MAN_FLAGS) http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl $<
-+	$(AM_V_GEN) $(XSLTPROC) $(XSLTPROC_MAN_FLAGS) /usr/local/share/xsl/docbook/manpages/docbook.xsl $<
++	$(AM_V_GEN) $(XSLTPROC) $(XSLTPROC_MAN_FLAGS) %%LOCALBASE%%/share/xsl/docbook/manpages/docbook.xsl $<
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
