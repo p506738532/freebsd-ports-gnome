@@ -14,5 +14,8 @@ USES=compiler:c++11-lib and/or USE_CXXSTD=c++11. But don't add it blindly.
 
 * Mk/Uses/gnome.mk and Mk/Uses/mate.mk needs revew about pre/post voodoo.
 
+* GDM: something segfaults and it doesn't show login dialog. possible to
+  do with my botching the consolekit patches.
+
 REMOVED:
  deskutils/alacarte
