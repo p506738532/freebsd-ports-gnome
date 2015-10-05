@@ -14,8 +14,6 @@ USES=compiler:c++11-lib and/or USE_CXXSTD=c++11. But don't add it blindly.
 * x11-toolkits/gtkmm30 is broken on 9.x due to gcc 4.8 not knowning (I think)
   about std::stod which is new in c++11 and 4.8 might nog have it.
 
-* version bump meta ports, gnome-utils, gnome-games gnome3
-
 * Mk/Uses/gnome.mk and Mk/Uses/mate.mk needs revew about pre/post voodoo.
 
 REMOVED:
