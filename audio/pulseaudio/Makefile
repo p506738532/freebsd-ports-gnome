@@ -28,8 +28,8 @@ LIB_DEPENDS=	libsndfile.so:${PORTSDIR}/audio/libsndfile \
 USE_GNOME=	glib20 intltool
 USE_XORG=	x11 sm xtst ice
 USE_LDCONFIG=	yes
-USES=		cpe execinfo gettext gmake libtool pathfix pkgconfig \
-		shebangfix tar:xz
+USES=		cpe compiler:c11 execinfo gettext gmake libtool \
+		pathfix pkgconfig shebangfix tar:xz
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	PTHREAD_LIBS="-lpthread" \
 		OPENSSL_CFLAGS="-I/usr/include" \
