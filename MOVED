@@ -6889,7 +6889,6 @@ textproc/ats-contrib-parcomb||2014-09-01|Not staged
 textproc/coco||2014-09-01|Not staged
 textproc/lemmatizer2||2014-09-01|Not staged
 textproc/openvanilla-modules||2014-09-01|Not staged
-textproc/pootle||2014-09-01|Not staged
 textproc/publican||2014-09-01|Not staged
 textproc/ruby-html-fillinform||2014-09-01|Not staged
 textproc/ruby-html-template||2014-09-01|Not staged
@@ -7889,3 +7888,7 @@ net/linc||2015-09-27|Has expired: Last release in 2003, not used by anything any
 net/linc-reference||2015-09-27|Has expired: Last release in 2003, not used by anything anymore
 x11/xlogout||2015-09-27|Has expired: Useless cruft from 1989
 net/rubygem-amq-client||2015-10-01|Has expired: Deprecated by Upstream. It is part of net/rubygem-amqp codebase now
+emulators/ppsspp-devel|emulators/ppsspp|2015-10-06|Out of date: use emulators/ppsspp for now
+ports-mgmt/bpm||2015-10-10|No support for pkg
+www/moodle27||2015-10-11|Has expired: Please upgrade to moodle28 or moodle29
+graphics/epeg|devel/efl|2015-10-11|Has expired: Merged into devel/efl

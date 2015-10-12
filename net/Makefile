@@ -945,6 +945,7 @@
     SUBDIR += py-netlib
     SUBDIR += py-netstring
     SUBDIR += py-novaclient
+    SUBDIR += py-ntplib
     SUBDIR += py-oauth
     SUBDIR += py-oauth2
     SUBDIR += py-paho-mqtt
@@ -1350,6 +1351,7 @@
     SUBDIR += zebra
     SUBDIR += zebra-server
     SUBDIR += zeroconf-ioslave
+    SUBDIR += zerotier
     SUBDIR += zillion
     SUBDIR += zsync
 
