@@ -4,6 +4,9 @@ share/applications/org.gnome.gnome-2048.desktop
 share/help/C/gnome-2048/index.page
 share/help/C/gnome-2048/media/gnome-2048.png
 share/help/C/gnome-2048/media/gnome-204822.png
+share/help/cs/gnome-2048/index.page
+share/help/cs/gnome-2048/media/gnome-2048.png
+share/help/cs/gnome-2048/media/gnome-204822.png
 share/icons/hicolor/16x16/apps/gnome-2048.png
 share/icons/hicolor/22x22/apps/gnome-2048.png
 share/icons/hicolor/24x24/apps/gnome-2048.png
