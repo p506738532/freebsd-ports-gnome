@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-desktop
-PORTVERSION=	3.18.0
+PORTVERSION=	3.18.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,9 +12,7 @@ COMMENT=	Additional UI API for GNOME 3
 
 USES=		tar:xz
 
-.if defined(REFERENCE_PORT)
-PORTSCOUT=	ignore:1
-.else
+.if !defined(REFERENCE_PORT)
 PORTSCOUT=	limitw:1,even
 
 BUILD_DEPENDS=	iso-codes>=0:${PORTSDIR}/misc/iso-codes \
