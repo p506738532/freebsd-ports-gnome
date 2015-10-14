@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	clutter
-PORTVERSION=	1.24.0
+PORTVERSION=	1.24.2
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -24,6 +24,7 @@ USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-x --enable-conformance=no \
+		--disable-evdev-input \
 		--enable-egl-backend=yes \
 		--enable-x11-backend=yes \
 		--enable-gdk-backend=no \
