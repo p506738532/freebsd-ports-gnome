@@ -82,7 +82,7 @@ CPPFLAGS+=	-Wno-mismatched-tags -Wno-unknown-attributes
 #CPP=    ${LOCALBASE}/bin/clang-cpp34
 #CC=     ${LOCALBASE}/bin/clang34
 #CXX=    ${LOCALBASE}/bin/clang++34
-.endif
+#.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-ldl||g' \
