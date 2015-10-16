@@ -24,7 +24,6 @@ LIB_DEPENDS=	libpopt.so:${PORTSDIR}/devel/popt \
 USE_GNOME=	gtkmm24 intlhack libxslt
 USES=		compiler:c++11-lib cpe desktop-file-utils gettext gmake iconv \
 		libtool pathfix perl5 pkgconfig python:run shebangfix tar:bzip2
-		libtool pathfix perl5 pkgconfig python:run shebangfix tar:bzip2
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -77,12 +76,12 @@ CPPFLAGS+=	-Wno-mismatched-tags -Wno-unknown-attributes
 # but base clang 3.4.1 in FreeBSD 10.1 succeeds.  The difference *appears*
 # to be the patch applied in r271597 (head) / r271739 (stable/10).  The
 # latter happened shortly before 10.1 was branched.
-.if ${ARCH} == i386 && ${OPSYS} == FreeBSD && ${OSVERSION} < 1001000 && \
-    ( ${COMPILER_TYPE} == clang || ${ALT_COMPILER_TYPE} == clang )
-BUILD_DEPENDS+=	clang34:${PORTSDIR}/lang/clang34
-CPP=    ${LOCALBASE}/bin/clang-cpp34
-CC=     ${LOCALBASE}/bin/clang34
-CXX=    ${LOCALBASE}/bin/clang++34
+#.if ${ARCH} == i386 && ${OPSYS} == FreeBSD && ${OSVERSION} < 1001000 && \
+#    ( ${COMPILER_TYPE} == clang || ${ALT_COMPILER_TYPE} == clang )
+#BUILD_DEPENDS+=	clang34:${PORTSDIR}/lang/clang34
+#CPP=    ${LOCALBASE}/bin/clang-cpp34
+#CC=     ${LOCALBASE}/bin/clang34
+#CXX=    ${LOCALBASE}/bin/clang++34
 .endif
 
 post-patch:
