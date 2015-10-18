@@ -37,7 +37,7 @@
  
  PKG_CHECK_MODULES(SYSTEMD,
 -                  [libsystemd])
-+                  [libsystemd],
++                  [libsystemd-login >= 186 libsystemd-daemon],
 +                  [have_systemd=yes], [have_systemd=no])
 +
 +if test "x$with_systemd" = "xauto" ; then

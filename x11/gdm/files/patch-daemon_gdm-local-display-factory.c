@@ -1,5 +1,5 @@
 --- daemon/gdm-local-display-factory.c.orig	2015-09-21 16:12:33.000000000 +0200
-+++ daemon/gdm-local-display-factory.c	2015-09-25 10:40:38.545961000 +0200
++++ daemon/gdm-local-display-factory.c	2015-10-18 16:48:51.256655000 +0200
 @@ -42,6 +42,7 @@
  
  #define GDM_LOCAL_DISPLAY_FACTORY_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GDM_TYPE_LOCAL_DISPLAY_FACTORY, GdmLocalDisplayFactoryPrivate))
@@ -62,6 +62,15 @@
  
          seat_id = get_seat_of_transient_display (factory);
          g_object_set (display,
+@@ -290,7 +317,7 @@ on_display_status_changed (GdmDisplay   
+                         /* reset num failures */
+                         factory->priv->num_failures = 0;
+ 
+-                        gdm_local_display_factory_sync_seats (factory);
++                        create_display (factory, seat_id, session_type, is_initial);
+                 }
+                 break;
+         case GDM_DISPLAY_FAILED:
 @@ -372,12 +399,14 @@ create_display (GdmLocalDisplayFactory *
          g_debug ("GdmLocalDisplayFactory: Adding display on seat %s", seat_id);
  
@@ -86,13 +95,15 @@
  static void
  delete_display (GdmLocalDisplayFactory *factory,
                  const char             *seat_id) {
-@@ -571,17 +602,21 @@ on_display_removed (GdmDisplayStore     
- 
+@@ -538,6 +569,7 @@ gdm_local_display_factory_stop_monitor (
+                 factory->priv->seat_removed_id = 0;
          }
  }
 +#endif
  
- static gboolean
+ static void
+ on_display_added (GdmDisplayStore        *display_store,
+@@ -576,6 +608,7 @@ static gboolean
  gdm_local_display_factory_start (GdmDisplayFactory *base_factory)
  {
          GdmLocalDisplayFactory *factory = GDM_LOCAL_DISPLAY_FACTORY (base_factory);
@@ -100,34 +111,27 @@
          GdmDisplayStore *store;
  
          g_return_val_if_fail (GDM_IS_LOCAL_DISPLAY_FACTORY (factory), FALSE);
- 
-         store = gdm_display_factory_get_display_store (GDM_DISPLAY_FACTORY (factory));
- 
-+// XXX signals?
-+#ifdef WITH_SYSTEMD
-         g_signal_connect (G_OBJECT (store),
-                           "display-added",
-                           G_CALLBACK (on_display_added),
-@@ -592,8 +627,16 @@ gdm_local_display_factory_start (GdmDisp
+@@ -592,8 +625,17 @@ gdm_local_display_factory_start (GdmDisp
                            G_CALLBACK (on_display_removed),
                            factory);
  
 -        gdm_local_display_factory_start_monitor (factory);
 -        return gdm_local_display_factory_sync_seats (factory);
++#ifdef WITH_SYSTEMD
 +	if (LOGIND_RUNNING()) {
 +        	gdm_local_display_factory_start_monitor (factory);
 +        	return gdm_local_display_factory_sync_seats (factory);
 +	}
 +#endif
 +
-+ /* On ConsoleKit just create Seat1, and that's it. */
++	/* On ConsoleKit just create Seat1, and that's it. */
 +        display = create_display (factory, CK_SEAT1_PATH, NULL, TRUE);
 +
 +        return display != NULL;
  }
  
  static gboolean
-@@ -604,17 +647,20 @@ gdm_local_display_factory_stop (GdmDispl
+@@ -604,17 +646,20 @@ gdm_local_display_factory_stop (GdmDispl
  
          g_return_val_if_fail (GDM_IS_LOCAL_DISPLAY_FACTORY (factory), FALSE);
  
@@ -149,7 +153,7 @@
          return TRUE;
  }
  
-@@ -760,7 +806,9 @@ gdm_local_display_factory_finalize (GObj
+@@ -760,7 +805,9 @@ gdm_local_display_factory_finalize (GObj
  
          g_hash_table_destroy (factory->priv->used_display_numbers);
  
