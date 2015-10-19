@@ -19,12 +19,9 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 		automake>=0:${PORTSDIR}/devel/automake \
 		autoconf>=0:${PORTSDIR}/devel/autoconf \
 		libtool>=2.4:${PORTSDIR}/devel/libtool \
+		gdb>=7.10:${PORTSDIR}/devel/gdb \
 		gmake:${PORTSDIR}/devel/gmake \
 		yelp>=3.0.0:${PORTSDIR}/x11/yelp
-
-# when bumping gdb, check files/patch-plugins_gdb_debugger.c
-RUN_DEPENDS+=	gdb=7.10:${PORTSDIR}/devel/gdb
-
 
 PORTSCOUT=	limitw:1,even
 
@@ -121,5 +118,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-fprofile-arcs||g' \
 		${WRKSRC}/libanjuta/tests/Makefile.in \
 		${WRKSRC}/libanjuta/tests/Makefile.am
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${PREFIX}|g' \
+		${WRKSRC}/plugins/gdb/debugger.c
 
 .include <bsd.port.mk>
