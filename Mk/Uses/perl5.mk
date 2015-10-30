@@ -43,7 +43,9 @@ IGNORE=	Incorrect 'USES+=perl5:${perl5_ARGS}' perl5 takes no arguments
 USE_PERL5?=	run build
 
 # remove when 5.20 goes away.
+.if !defined(_PORTS_ENV_CHECK)
 .sinclude "${LOCALBASE}/etc/perl5_version"
+.endif
 .if defined(PERL_VERSION)
 PERL5_DEPEND=	${PERL5}
 THIS_IS_OLD_PERL=	yes
@@ -308,19 +310,14 @@ fix-perl-things:
 	@${RM} -f ${STAGEDIR}${PREFIX}/lib/perl5/${PERL_VER}/${PERL_ARCH}/perllocal.pod* || :
 	@${RMDIR} -p ${STAGEDIR}${PREFIX}/lib/perl5/${PERL_VER}/${PERL_ARCH} 2>/dev/null || :
 
-.if !target(regression-test)
-TEST_ARGS?=	${MAKE_ARGS}
-TEST_ENV?=	${MAKE_ENV}
+.if !target(do-test) && (!empty(USE_PERL5:Mmodbuild*) || !empty(USE_PERL5:Mconfigure))
 TEST_TARGET?=	test
 TEST_WRKSRC?=	${BUILD_WRKSRC}
-.if !target(test)
-test: regression-test
-.endif # test
-regression-test: build
+do-test:
 .if ${USE_PERL5:Mmodbuild*}
-	-cd ${TEST_WRKSRC}/ && ${SETENV} ${TEST_ENV} ${PERL5} ${PL_BUILD} ${TEST_TARGET} ${TEST_ARGS}
+	cd ${TEST_WRKSRC}/ && ${SETENV} ${TEST_ENV} ${PERL5} ${PL_BUILD} ${TEST_TARGET} ${TEST_ARGS}
 .elif ${USE_PERL5:Mconfigure}
-	-cd ${TEST_WRKSRC}/ && ${SETENV} ${TEST_ENV} ${MAKE_CMD} ${TEST_ARGS} ${TEST_TARGET}
+	cd ${TEST_WRKSRC}/ && ${SETENV} ${TEST_ENV} ${MAKE_CMD} ${TEST_ARGS} ${TEST_TARGET}
 .endif # USE_PERL5:Mmodbuild*
-.endif # regression-test
+.endif # do-test
 .endif # defined(_POSTMKINCLUDED)

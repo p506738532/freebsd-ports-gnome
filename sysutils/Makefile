@@ -27,6 +27,7 @@
     SUBDIR += aird
     SUBDIR += am-utils
     SUBDIR += amrstat
+    SUBDIR += amtc
     SUBDIR += anacron
     SUBDIR += and
     SUBDIR += ansible
@@ -67,14 +68,14 @@
     SUBDIR += bacula5-client-static
     SUBDIR += bacula5-docs
     SUBDIR += bacula5-server
+    SUBDIR += baloo
+    SUBDIR += baloo-widgets
+    SUBDIR += bamf
     SUBDIR += bareos-bat
     SUBDIR += bareos-client
     SUBDIR += bareos-client-static
     SUBDIR += bareos-docs
     SUBDIR += bareos-server
-    SUBDIR += baloo
-    SUBDIR += baloo-widgets
-    SUBDIR += bamf
     SUBDIR += bashburn
     SUBDIR += batmon
     SUBDIR += battfink
@@ -409,6 +410,7 @@
     SUBDIR += i2c-tools
     SUBDIR += i7z
     SUBDIR += iat
+    SUBDIR += inotify-tools
     SUBDIR += installwatch
     SUBDIR += intel-pcm
     SUBDIR += iocage
@@ -552,9 +554,9 @@
     SUBDIR += monitord
     SUBDIR += monitorix
     SUBDIR += mono-kmod
-    SUBDIR += moosefs-chunkserver
     SUBDIR += moosefs-cgi
     SUBDIR += moosefs-cgiserv
+    SUBDIR += moosefs-chunkserver
     SUBDIR += moosefs-cli
     SUBDIR += moosefs-client
     SUBDIR += moosefs-master
@@ -596,6 +598,7 @@
     SUBDIR += obliterate
     SUBDIR += odo
     SUBDIR += ods2
+    SUBDIR += ohmu
     SUBDIR += open
     SUBDIR += openipmi
     SUBDIR += openupsd
@@ -749,11 +752,11 @@
     SUBDIR += pstacku
     SUBDIR += pstree
     SUBDIR += ptools
-    SUBDIR += puppet37
-    SUBDIR += puppet4
     SUBDIR += puppet
     SUBDIR += puppet-lint
     SUBDIR += puppet-mode.el
+    SUBDIR += puppet37
+    SUBDIR += puppet4
     SUBDIR += pv
     SUBDIR += pwd_unmkdb
     SUBDIR += pwgen
@@ -774,6 +777,7 @@
     SUBDIR += py-honcho
     SUBDIR += py-iowait
     SUBDIR += py-nagiosplugin
+    SUBDIR += py-pkginfo
     SUBDIR += py-ploy
     SUBDIR += py-ploy_ansible
     SUBDIR += py-ploy_ec2
@@ -872,8 +876,8 @@
     SUBDIR += rubygem-hammer_cli_foreman_salt
     SUBDIR += rubygem-hammer_cli_foreman_ssh
     SUBDIR += rubygem-hiera
-    SUBDIR += rubygem-hiera1
     SUBDIR += rubygem-hiera-file
+    SUBDIR += rubygem-hiera1
     SUBDIR += rubygem-librarian-puppet
     SUBDIR += rubygem-log4r
     SUBDIR += rubygem-logify
@@ -888,6 +892,8 @@
     SUBDIR += rubygem-rubyipmi
     SUBDIR += rubygem-shellany
     SUBDIR += rubygem-smart_proxy_chef
+    SUBDIR += rubygem-smart_proxy_dynflow
+    SUBDIR += rubygem-smart_proxy_remote_execution_ssh
     SUBDIR += rubygem-smart_proxy_salt
     SUBDIR += rubygem-sys-admin
     SUBDIR += rubygem-sys-cpu
@@ -909,6 +915,7 @@
     SUBDIR += samefile
     SUBDIR += samesame
     SUBDIR += sas2ircu
+    SUBDIR += sas3ircu
     SUBDIR += savelogs
     SUBDIR += sb16config
     SUBDIR += sbsigntool
@@ -1020,6 +1027,7 @@
     SUBDIR += tss
     SUBDIR += tty-clock
     SUBDIR += ttyload
+    SUBDIR += tuptime
     SUBDIR += tw_cli
     SUBDIR += tzdialog
     SUBDIR += u-boot-bananapi
@@ -1071,6 +1079,7 @@
     SUBDIR += vimpager
     SUBDIR += virtualmin
     SUBDIR += vlogger
+    SUBDIR += vm-bhyve
     SUBDIR += vmdktool
     SUBDIR += vmtouch
     SUBDIR += vobcopy

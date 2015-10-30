@@ -22,12 +22,12 @@ DAP_DESC=	Build DAP client and remote testing
 SZIP_DESC=	SZIP support (required if HDF5 was built with SZIP)
 
 CONFIGURE_ARGS=	--enable-netcdf-4
-CPPFLAGS+=	-I${WRKSRC}/include -I${LOCALBASE}/include -fPIC -DPIC
+CPPFLAGS+=	-fPIC -DPIC
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
-LIBS+=		-L${LOCALBASE}/lib
+TEST_TARGET=	check
 USE_LDCONFIG=	yes
-USES=		libtool pathfix
+USES=		libtool localbase pathfix
 
 DAP_CONFIGURE_OFF=	--disable-dap
 DAP_CONFIGURE_ON=	--enable-dap
@@ -50,8 +50,5 @@ post-build-DOXYGEN-on:
 post-install-DOXYGEN-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}/
 	cd ${WRKSRC}/docs/html/ && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}
-
-regression-test test: build
-	cd ${WRKSRC}/ && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} check
 
 .include <bsd.port.mk>

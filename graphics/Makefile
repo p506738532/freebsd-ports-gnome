@@ -114,6 +114,7 @@
     SUBDIR += darktable
     SUBDIR += dataplot
     SUBDIR += dc20pack
+    SUBDIR += dcp2icc
     SUBDIR += dcraw
     SUBDIR += dcraw-m
     SUBDIR += deegree-csw
@@ -141,6 +142,7 @@
     SUBDIR += easypaint
     SUBDIR += edje_viewer
     SUBDIR += electrix
+    SUBDIR += embree
     SUBDIR += enblend
     SUBDIR += entangle
     SUBDIR += eog
@@ -148,7 +150,6 @@
     SUBDIR += eom
     SUBDIR += eos-movrec
     SUBDIR += epdfview
-    SUBDIR += epeg
     SUBDIR += epix
     SUBDIR += eps2png
     SUBDIR += epstool
@@ -572,6 +573,7 @@
     SUBDIR += luminance
     SUBDIR += luminance-qt5
     SUBDIR += luxrender
+    SUBDIR += luxrender14
     SUBDIR += mahotas
     SUBDIR += maim
     SUBDIR += makehuman
@@ -601,6 +603,7 @@
     SUBDIR += nip2
     SUBDIR += nomacs
     SUBDIR += npretty
+    SUBDIR += nurbs++
     SUBDIR += nvidia-texture-tools
     SUBDIR += ocaml-images
     SUBDIR += ocaml-lablgl
@@ -833,6 +836,7 @@
     SUBDIR += py-gimp
     SUBDIR += py-glewpy
     SUBDIR += py-goocanvas
+    SUBDIR += py-gphoto2
     SUBDIR += py-graph
     SUBDIR += py-graph-core
     SUBDIR += py-graph-dot
@@ -968,6 +972,7 @@
     SUBDIR += sdump
     SUBDIR += seam-carving-gui
     SUBDIR += seejpeg
+    SUBDIR += seexpr
     SUBDIR += seom
     SUBDIR += separate
     SUBDIR += seq2gif

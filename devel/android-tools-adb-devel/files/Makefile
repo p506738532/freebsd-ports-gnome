@@ -3,6 +3,9 @@
 PROG_CXX=adb
 NO_MAN=
 BINDIR?=/usr/bin
+FILESDIR?=${DOCDIR}/${PROG}
+
+FILES= *.[Tt][Xx][Tt]
 
 SRCS+= adb.cpp
 SRCS+= adb_auth.cpp
@@ -10,6 +13,7 @@ SRCS+= adb_auth_host.cpp
 SRCS+= adb_client.cpp
 SRCS+= adb_io.cpp
 SRCS+= adb_listeners.cpp
+SRCS+= adb_trace.cpp
 SRCS+= adb_utils.cpp
 SRCS+= commandline.cpp
 SRCS+= console.cpp
@@ -32,7 +36,7 @@ TEST_SRCS+= transport_test.cpp
 .PATH: ${.CURDIR}/client
 SRCS+= main.cpp
 
-.PATH: ${FILESDIR}
+.PATH: ${EXTRADIR}
 SRCS+= get_my_path_freebsd.cpp
 SRCS+= usb_libusb.cpp
 
@@ -62,34 +66,55 @@ SRCS+= threads.c
 .PATH: ${.CURDIR}/../liblog
 SRCS+= fake_log_device.c
 SRCS+= logd_write.c
-CFLAGS.logd_write.c+= -DFAKE_LOG_DEVICE=1
+CPPFLAGS.logd_write.c+= -DFAKE_LOG_DEVICE=1
 
-CFLAGS+= -DADB_HOST=1
-CFLAGS+= -DHAVE_FORKEXEC=1
-CFLAGS+= -DHAVE_SYMLINKS
-CFLAGS+= -DHAVE_TERMIO_H
-CFLAGS+= -DHAVE_SYS_SOCKET_H
-CFLAGS+= -D_FILE_OFFSET_BITS=64
-CFLAGS+= -I${.CURDIR}
-CFLAGS+= -I${.CURDIR}/../include
-CFLAGS+= -I${.CURDIR}/../base/include
-CFLAGS+=${CFLAGS.${.IMPSRC:T}}
+REVISION?= $$(${GIT} rev-parse --short=12 HEAD 2>/dev/null || echo unknown)
 
+CPPFLAGS+= -DADB_REVISION="\"${REVISION}-android\""
+CPPFLAGS+= -DADB_HOST=1
+CPPFLAGS+= -DHAVE_FORKEXEC=1
+CPPFLAGS+= -DHAVE_SYMLINKS
+CPPFLAGS+= -DHAVE_TERMIO_H
+CPPFLAGS+= -DHAVE_SYS_SOCKET_H
+CPPFLAGS+= -D_FILE_OFFSET_BITS=64
+CPPFLAGS+= -I${.CURDIR}
+CPPFLAGS+= -I${.CURDIR}/../include
+CPPFLAGS+= -I${.CURDIR}/../base/include
+CPPFLAGS+= ${CPPFLAGS.${.IMPSRC:T}}
+CPPFLAGS+= $$(${PKG_CONFIG} libcrypto --cflags 2>/dev/null)
+CPPFLAGS+= $$(${PKG_CONFIG} libusb-1.0 --cflags 2>/dev/null)
 CXXFLAGS+= -std=gnu++11
-CXXFLAGS+= ${CFLAGS:N-std*}
 
-TEST_CFLAGS+= $$(${GTEST_CONFIG} --cppflags)
+.ifndef COMPILE.c
+CFLAGS+= ${CPPFLAGS}
+CXXFLAGS+= ${CPPFLAGS}
+.endif
+
+TEST_CPPFLAGS+= $$(${GTEST_CONFIG} --cppflags)
 .for f in ${TEST_SRCS}
-CFLAGS.${f}+= ${TEST_CFLAGS}
+CPPFLAGS.${f}+= ${TEST_CPPFLAGS}
 .endfor
 
-LDADD+= -lcrypto -lpthread -lusb -lz
+LDADD+= $$(${PKG_CONFIG} libcrypto --libs 2>/dev/null || echo -lcrypto)
+LDADD+= $$(${PKG_CONFIG} libusb-1.0 --libs 2>/dev/null || echo -lusb)
+LDADD+= -lz \-lpthread
 DPADD+= ${LIBCRYPTO} ${LIBPTHREAD} ${LIBUSB} ${LIBZ}
 TEST_LDADD+= $$(${GTEST_CONFIG} --libs --ldflags)
 
-GTEST_CONFIG?= gtest-config
+TEST_OBJS+= ${TEST_SRCS:R:S/$/.o/}
+CLEANFILES+= ${PROG}_test ${TEST_OBJS}
 
-adb_test: ${SRCS:R:S/$/.o/:Nmain.o:Ncommandline.o} ${TEST_SRCS:R:S/$/.o/}
-	${CXX} ${CXXFLAGS} ${LDFLAGS} -o $@ $> ${LDADD} ${TEST_LDADD}
+GIT?= git
+GTEST_CONFIG?= gtest-config
+PKG_CONFIG?= pkg-config
+
+beforeinstall:
+	${INSTALL} -d ${DESTDIR}${FILESDIR}
 
 .include <bsd.prog.mk>
+
+test: ${PROG}_test
+	@for f in ${.ALLSRC}; do ./$$f; done
+
+${PROG}_test: ${OBJS:Nmain.o:Ncommandline.o} ${TEST_OBJS}
+	${CXX} ${CPPFLAGS} ${CXXFLAGS} ${LDFLAGS} -o $@ $> ${LDADD} ${TEST_LDADD}

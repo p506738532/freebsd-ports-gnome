@@ -535,7 +535,6 @@
     SUBDIR += monast
     SUBDIR += mongoose
     SUBDIR += mongrel2
-    SUBDIR += moodle27
     SUBDIR += moodle28
     SUBDIR += moodle29
     SUBDIR += mozplugger
@@ -567,6 +566,7 @@
     SUBDIR += npapi-xine
     SUBDIR += npc
     SUBDIR += npm
+    SUBDIR += npm012
     SUBDIR += nspluginwrapper
     SUBDIR += ocaml-net
     SUBDIR += ocsigen
@@ -1135,6 +1135,7 @@
     SUBDIR += p5-Plack-Middleware-Debug
     SUBDIR += p5-Plack-Middleware-Deflater
     SUBDIR += p5-Plack-Middleware-Expires
+    SUBDIR += p5-Plack-Middleware-ExtDirect
     SUBDIR += p5-Plack-Middleware-File-Sass
     SUBDIR += p5-Plack-Middleware-FixMissingBodyInRedirect
     SUBDIR += p5-Plack-Middleware-ForceEnv
@@ -1889,6 +1890,7 @@
     SUBDIR += rubygem-innate
     SUBDIR += rubygem-jekyll
     SUBDIR += rubygem-jekyll-watch
+    SUBDIR += rubygem-jekyll2
     SUBDIR += rubygem-journey
     SUBDIR += rubygem-jquery-atwho-rails
     SUBDIR += rubygem-jquery-atwho-rails-rails4
@@ -2087,6 +2089,7 @@
     SUBDIR += tomcat6
     SUBDIR += tomcat7
     SUBDIR += tomcat8
+    SUBDIR += tomee
     SUBDIR += trac
     SUBDIR += trac-OhlohWidgetsMacro
     SUBDIR += trac-TracGoogleAnalytics
@@ -2147,7 +2150,6 @@
     SUBDIR += trytond28_google_maps
     SUBDIR += tt-rss
     SUBDIR += ttf2eot
-    SUBDIR += twig
     SUBDIR += twiki
     SUBDIR += twiki-BehaviourContrib
     SUBDIR += twiki-BlogAddOn
@@ -2194,6 +2196,7 @@
     SUBDIR += uzbl
     SUBDIR += validator
     SUBDIR += varnish-libvmod-header
+    SUBDIR += varnish-libvmod-saintmode
     SUBDIR += varnish-nagios
     SUBDIR += varnish4
     SUBDIR += vdr-plugin-live

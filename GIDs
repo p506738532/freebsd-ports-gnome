@@ -95,6 +95,7 @@ trircd:*:154:
 xorp:*:155:
 monetdb:*:156:
 barman:*:157:
+pootle:*:158:
 nocat:*:159:
 sfs:*:171:
 agk:*:172:
@@ -174,6 +175,7 @@ ldap:*:389:
 tiarra:*:398:
 uhub:*:411:
 drweb:*:426:
+varnish:*:429:
 quasselcore:*:442:
 callweaver:*:444:
 ecartis:*:450:
@@ -237,7 +239,7 @@ tcpcryptd:*:841:
 munin:*:842:
 dahdi:*:843:asterisk
 subsonic:*:844:
-sogod:*:845:
+sogod:*:846:
 fossy:*:901:www
 scanlogd:*:902:
 _ocserv:*:903:

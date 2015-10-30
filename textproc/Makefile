@@ -83,6 +83,7 @@
     SUBDIR += clucene
     SUBDIR += clucene-qt4
     SUBDIR += clucene-qt5
+    SUBDIR += cmark
     SUBDIR += coccigrep
     SUBDIR += code2html
     SUBDIR += codespell
@@ -223,6 +224,7 @@
     SUBDIR += groff
     SUBDIR += groonga
     SUBDIR += gsed
+    SUBDIR += gspell
     SUBDIR += gtk-doc
     SUBDIR += gtkspell
     SUBDIR += gtkspell-reference
@@ -298,6 +300,7 @@
     SUBDIR += html2fo
     SUBDIR += html2tex
     SUBDIR += html2text
+    SUBDIR += html2xhtml
     SUBDIR += htmlc
     SUBDIR += htmldoc
     SUBDIR += htmlise
@@ -1182,6 +1185,7 @@
     SUBDIR += po4a
     SUBDIR += pocketreader
     SUBDIR += pod2mdoc
+    SUBDIR += pootle
     SUBDIR += popup
     SUBDIR += popup-stacks
     SUBDIR += ppower4
@@ -1202,6 +1206,7 @@
     SUBDIR += py-diff-match-patch
     SUBDIR += py-docutils
     SUBDIR += py-dsv
+    SUBDIR += py-elasticsearch-dsl-py
     SUBDIR += py-elasticsearch-py
     SUBDIR += py-elib.intl
     SUBDIR += py-empy
@@ -1259,8 +1264,8 @@
     SUBDIR += py-sparqlwrapper
     SUBDIR += py-sphinx
     SUBDIR += py-sphinx-intl
-    SUBDIR += py-sphinx_rtd_theme
     SUBDIR += py-sphinx_numfig
+    SUBDIR += py-sphinx_rtd_theme
     SUBDIR += py-sphinx_wikipedia
     SUBDIR += py-sphinxcontrib-adadomain
     SUBDIR += py-sphinxcontrib-bitbucket
@@ -1401,6 +1406,7 @@
     SUBDIR += rubygem-libxml-ruby
     SUBDIR += rubygem-linguistics
     SUBDIR += rubygem-liquid
+    SUBDIR += rubygem-liquid2
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
     SUBDIR += rubygem-ltsv

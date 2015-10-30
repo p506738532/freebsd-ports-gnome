@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nginx
-PORTVERSION=	1.9.5
+PORTVERSION=	1.9.6
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
 MASTER_SITES+=	LOCAL/osa
@@ -368,7 +368,7 @@ JAVA_VERSION=	1.8
 JAVA_VENDOR=	openjdk
 JAVA_BUILD=	yes
 JAVA_RUN=	yes
-NGINX_CLOJURE_VERSION=	0.4.2
+NGINX_CLOJURE_VERSION=	0.4.3
 GH_ACCOUNT+=	nginx-clojure:clojure
 GH_PROJECT+=	nginx-clojure:clojure
 GH_TAGNAME+=	v${NGINX_CLOJURE_VERSION}:clojure
@@ -555,7 +555,7 @@ CONFIGURE_ARGS+=--with-http_stub_status_module
 CONFIGURE_ARGS+=--with-http_sub_module
 .endif
 
-.if ${PORT_OPTIONS:MHTTP_UPLOAD} 	 
+.if ${PORT_OPTIONS:MHTTP_UPLOAD}
 GIT_UPLOAD_VERSION= aba1e3f34c
 GH_ACCOUNT+=	vkholodkov:upload
 GH_PROJECT+=	nginx-upload-module:upload
@@ -685,10 +685,11 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-nginx-modsecurity-configure
 .endif
 
 .if ${PORT_OPTIONS:MNAXSI}
-NGINX_NAXSI_VERSION=	0.50
-MASTER_SITES+=	http://naxsi.googlecode.com/files/:naxsi
-DISTFILES+=	naxsi-core-${NGINX_NAXSI_VERSION}.tgz:naxsi
-CONFIGURE_ARGS+=--add-module=${WRKDIR}/naxsi-core-${NGINX_NAXSI_VERSION}/naxsi_src
+NGINX_NAXSI_VERSION=	0.54
+GH_ACCOUNT+=	nbs-system:naxsi
+GH_PROJECT+=	naxsi:naxsi
+GH_TAGNAME+=	${NGINX_NAXSI_VERSION}:naxsi
+CONFIGURE_ARGS+=--add-module=${WRKDIR}/naxsi-${NGINX_NAXSI_VERSION}/naxsi_src
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_REWRITE} || defined(USE_HTTP_REWRITE)
@@ -701,7 +702,7 @@ CONFIGURE_ARGS+=--without-http_rewrite_module \
 .endif
 
 .if ${PORT_OPTIONS:MPASSENGER}
-PASSENGER_VERSION=	5.0.20
+PASSENGER_VERSION=	5.0.21
 MASTER_SITES+=	http://s3.amazonaws.com/phusion-passenger/releases/:passenger
 DISTFILES+=	passenger-${PASSENGER_VERSION}.tar.gz:passenger
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/passenger-${PASSENGER_VERSION}/src/nginx_module
@@ -966,7 +967,7 @@ post-patch:
 .endif
 .if ${PORT_OPTIONS:MCLOJURE}
 	@${REINPLACE_CMD} \
-		'45,47d' \
+		'54,57d' \
 		${WRKSRC_clojure}/src/c/config
 .endif
 .if ${PORT_OPTIONS:MDRIZZLE}
@@ -1070,7 +1071,7 @@ do-install:
 
 .if ${PORT_OPTIONS:MNAXSI}
 	${INSTALL_DATA} \
-	${WRKDIR}/naxsi-core-${NGINX_NAXSI_VERSION}/naxsi_config/naxsi_core.rules \
+	${WRKDIR}/naxsi-${NGINX_NAXSI_VERSION}/naxsi_config/naxsi_core.rules \
 	${STAGEDIR}${ETCDIR}
 .endif
 

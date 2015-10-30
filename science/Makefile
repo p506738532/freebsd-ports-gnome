@@ -76,6 +76,7 @@
     SUBDIR += libquantum
     SUBDIR += libsvm
     SUBDIR += libsvm-python
+    SUBDIR += libxc
     SUBDIR += linsmith
     SUBDIR += massxpert
     SUBDIR += mbdyn
@@ -98,6 +99,7 @@
     SUBDIR += openbabel
     SUBDIR += openkim
     SUBDIR += orthanc
+    SUBDIR += orthanc-dicomweb
     SUBDIR += orthanc-postgresql
     SUBDIR += orthanc-webviewer
     SUBDIR += p5-Algorithm-SVMLight

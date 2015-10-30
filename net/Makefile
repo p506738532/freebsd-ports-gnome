@@ -356,8 +356,6 @@
     SUBDIR += libzmq3
     SUBDIR += libzmq4
     SUBDIR += liferea
-    SUBDIR += linc
-    SUBDIR += linc-reference
     SUBDIR += linknx
     SUBDIR += linphone
     SUBDIR += linux-c6-avahi-libs
@@ -465,6 +463,7 @@
     SUBDIR += opal
     SUBDIR += openafs
     SUBDIR += openbgpd
+    SUBDIR += openbsc
     SUBDIR += opendpi
     SUBDIR += openggsn
     SUBDIR += openh323
@@ -479,6 +478,7 @@
     SUBDIR += openospfd
     SUBDIR += openpgm
     SUBDIR += openradius
+    SUBDIR += opensips
     SUBDIR += openslp
     SUBDIR += opentracker
     SUBDIR += openvswitch
@@ -758,6 +758,7 @@
     SUBDIR += p5-SOAP-Data-Builder
     SUBDIR += p5-SOAP-Lite
     SUBDIR += p5-SOAP-MySOAP
+    SUBDIR += p5-SOAP-XML-Client
     SUBDIR += p5-Samba-LDAP
     SUBDIR += p5-Server-Starter
     SUBDIR += p5-Socket
@@ -935,7 +936,6 @@
     SUBDIR += py-libdnet
     SUBDIR += py-libnet
     SUBDIR += py-maxminddb
-    SUBDIR += py-medusa
     SUBDIR += py-miniupnpc
     SUBDIR += py-msrplib
     SUBDIR += py-ndg_httpsclient
@@ -945,6 +945,7 @@
     SUBDIR += py-netlib
     SUBDIR += py-netstring
     SUBDIR += py-novaclient
+    SUBDIR += py-ntplib
     SUBDIR += py-oauth
     SUBDIR += py-oauth2
     SUBDIR += py-paho-mqtt
@@ -1046,7 +1047,6 @@
     SUBDIR += ruby-tcpsocketpipe
     SUBDIR += ruby-tserver
     SUBDIR += rubygem-amazon-ec2
-    SUBDIR += rubygem-amq-client
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp
     SUBDIR += rubygem-amqp-utils
@@ -1063,6 +1063,7 @@
     SUBDIR += rubygem-epp-client-rgp
     SUBDIR += rubygem-epp-client-secdns
     SUBDIR += rubygem-epp-client-smallregistry
+    SUBDIR += rubygem-fog-aliyun
     SUBDIR += rubygem-fog-atmos
     SUBDIR += rubygem-fog-aws
     SUBDIR += rubygem-fog-brightbox
@@ -1081,6 +1082,7 @@
     SUBDIR += rubygem-fog-terremark
     SUBDIR += rubygem-fog-vmfusion
     SUBDIR += rubygem-fog-voxel
+    SUBDIR += rubygem-fog-xenserver
     SUBDIR += rubygem-geoip
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-http_parser.rb
@@ -1247,6 +1249,7 @@
     SUBDIR += tigervnc
     SUBDIR += tightvnc
     SUBDIR += tintin++
+    SUBDIR += tiny-network-utilities
     SUBDIR += tinyfugue
     SUBDIR += tinyldap
     SUBDIR += tn5250
@@ -1351,6 +1354,7 @@
     SUBDIR += zebra
     SUBDIR += zebra-server
     SUBDIR += zeroconf-ioslave
+    SUBDIR += zerotier
     SUBDIR += zillion
     SUBDIR += zsync
 
