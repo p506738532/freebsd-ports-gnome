@@ -410,6 +410,7 @@
     SUBDIR += i2c-tools
     SUBDIR += i7z
     SUBDIR += iat
+    SUBDIR += inotify-tools
     SUBDIR += installwatch
     SUBDIR += intel-pcm
     SUBDIR += iocage
@@ -598,6 +599,7 @@
     SUBDIR += obliterate
     SUBDIR += odo
     SUBDIR += ods2
+    SUBDIR += ohmu
     SUBDIR += open
     SUBDIR += openipmi
     SUBDIR += openupsd
@@ -1026,6 +1028,7 @@
     SUBDIR += tss
     SUBDIR += tty-clock
     SUBDIR += ttyload
+    SUBDIR += tuptime
     SUBDIR += tw_cli
     SUBDIR += tzdialog
     SUBDIR += u-boot-bananapi

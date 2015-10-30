@@ -77,6 +77,7 @@
     SUBDIR += e2fsprogs-libuuid
     SUBDIR += elixir-uuid
     SUBDIR += elscreen
+    SUBDIR += erlang-mimerl
     SUBDIR += esniper
     SUBDIR += estic
     SUBDIR += excel-writer
@@ -396,7 +397,6 @@
     SUBDIR += rname
     SUBDIR += rpl
     SUBDIR += rtfm
-    SUBDIR += ruby-progressbar
     SUBDIR += rubygem-dotenv
     SUBDIR += rubygem-iesd
     SUBDIR += rubygem-mime-types
@@ -442,6 +442,7 @@
     SUBDIR += tpp
     SUBDIR += translate
     SUBDIR += ttyrec
+    SUBDIR += tudu
     SUBDIR += tvbrowser
     SUBDIR += typetrainer
     SUBDIR += uk-phone
