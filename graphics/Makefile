@@ -77,7 +77,6 @@
     SUBDIR += cairo-reference
     SUBDIR += cairomm
     SUBDIR += cal3d
-    SUBDIR += cal3d-devel
     SUBDIR += camera
     SUBDIR += camerakit
     SUBDIR += cbrpager
@@ -215,7 +214,6 @@
     SUBDIR += gcolor2
     SUBDIR += gd
     SUBDIR += gdal
-    SUBDIR += gdal-grass
     SUBDIR += gdchart
     SUBDIR += gdk-pixbuf
     SUBDIR += gdk-pixbuf2
@@ -773,7 +771,6 @@
     SUBDIR += php56-gd
     SUBDIR += phplot
     SUBDIR += picpuz
-    SUBDIR += picviz
     SUBDIR += piddle
     SUBDIR += pikopixel
     SUBDIR += pinpoint

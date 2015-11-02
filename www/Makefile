@@ -98,6 +98,7 @@
     SUBDIR += cntlm
     SUBDIR += cocoon
     SUBDIR += codeigniter
+    SUBDIR += codeigniter22
     SUBDIR += coppermine
     SUBDIR += cplanet
     SUBDIR += cppcms
@@ -400,7 +401,6 @@
     SUBDIR += linux-c6-qt47-webkit
     SUBDIR += linux-f10-flashplugin11
     SUBDIR += linux-firefox
-    SUBDIR += linux-libgtkembedmoz
     SUBDIR += linux-opera
     SUBDIR += linux-seamonkey
     SUBDIR += lionwiki
@@ -524,6 +524,7 @@
     SUBDIR += mod_umask
     SUBDIR += mod_vhost_ldap
     SUBDIR += mod_vhs
+    SUBDIR += mod_webauth
     SUBDIR += mod_webkit
     SUBDIR += mod_whatkilledus
     SUBDIR += mod_wsgi4
@@ -1578,7 +1579,6 @@
     SUBDIR += py-falcon
     SUBDIR += py-fcgi
     SUBDIR += py-fedex
-    SUBDIR += py-feedfinder
     SUBDIR += py-feedgenerator
     SUBDIR += py-flask
     SUBDIR += py-flask-admin
@@ -1616,7 +1616,6 @@
     SUBDIR += py-meld3
     SUBDIR += py-mt
     SUBDIR += py-nevow
-    SUBDIR += py-openssl-proxy
     SUBDIR += py-pafy
     SUBDIR += py-paste
     SUBDIR += py-pastedeploy
@@ -1764,8 +1763,6 @@
     SUBDIR += py-webob
     SUBDIR += py-websocket-client
     SUBDIR += py-webunit
-    SUBDIR += py-webware
-    SUBDIR += py-webware-component
     SUBDIR += py-werkzeug
     SUBDIR += py-wikipedia
     SUBDIR += py-wikitools
