@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.18.1
+PORTVERSION=	3.18.2
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -57,9 +57,13 @@ GLIB_SCHEMAS=	org.gnome.Evolution.DefaultSources.gschema.xml \
 
 PLIST_SUB=	VERSION="3.18" EVO_VERSION="1.2"
 
+OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	WEATHER KERBEROS
 OPTIONS_DEFAULT=WEATHER KERBEROS
 WEATHER_DESC=	Weather calendar backend
+
+WEATHER_LIB_DEPENDS=	libgweather-3.so:${PORTSDIR}/net/libgweather
+WEATHER_CONFIGURE_ENABLE=	weather
 
 .include <bsd.port.options.mk>
 
@@ -68,15 +72,6 @@ CONFIGURE_ARGS+=	--with-krb5=/usr
 KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 .else
 CONFIGURE_ARGS+=	--without-krb5
-.endif
-
-.if ${PORT_OPTIONS:MWEATHER}
-LIB_DEPENDS+=		libgweather-3.so:${PORTSDIR}/net/libgweather
-CONFIGURE_ARGS+=	--enable-weather
-PLIST_SUB+=		WEATHER=""
-.else
-CONFIGURE_ARGS+=	--disable-weather
-PLIST_SUB+=		WEATHER="@comment "
 .endif
 
 EDS_BDB_MSG=	"!!!WARNING!!!: Berkeley Database version is ${BDB_VER}.  If this is an upgrade, you may experience problems if you or any other Evolution-data-server users were previously using BDB_VER 5."
