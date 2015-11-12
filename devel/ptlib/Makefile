@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ptlib
-PORTVERSION=	2.10.10
-PORTREVISION=	3
+PORTVERSION=	2.10.11
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
@@ -16,8 +15,7 @@ LIB_DEPENDS=	libexpat.so:${PORTSDIR}/textproc/expat2
 
 CONFLICTS=	pwlib-1.*
 
-USES=		bison gmake pkgconfig tar:xz
-USE_AUTOTOOLS=	autoconf:env automake:env
+USES=		autoreconf:build bison gmake pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
