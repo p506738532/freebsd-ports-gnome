@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-system-monitor
-PORTVERSION=	3.18.0.1
+PORTVERSION=	3.18.2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -10,10 +10,8 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 system monitor program
 
-BUILD_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
-		itstool:${PORTSDIR}/textproc/itstool
+BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop
-RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme
 
 PORTSCOUT=	limitw:1,even
 
