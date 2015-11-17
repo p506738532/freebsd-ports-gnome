@@ -2,11 +2,11 @@
 
 PORTNAME=	xen
 PKGNAMESUFFIX=	-kernel
-PORTVERSION=	4.5.1
+PORTVERSION=	4.5.2
 CATEGORIES=	emulators
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${PORTVERSION}/
 
-MAINTAINER=	bapt@FreeBSD.org
+MAINTAINER=	royger@FreeBSD.org
 COMMENT=	Hypervisor using a microkernel design
 
 LICENSE=	GPLv2
@@ -30,7 +30,7 @@ EXTRA_PATCHES=	${FILESDIR}/0001-introduce-a-helper-to-allocate-non-contiguous-me
 		${FILESDIR}/0005-x86-rework-paging_log_dirty_op-to-work-with-hvm-gues.patch:-p2 \
 		${FILESDIR}/0006-xen-pvh-enable-mmu_update-hypercall.patch:-p2 \
 		${FILESDIR}/0007-iommu-fix-usage-of-shared-EPT-IOMMU-page-tables-on-P.patch:-p2 \
-		${FILESDIR}/0008-xen-arm-mm-Do-not-dump-the-p2m-when-mapping-a-foreig.patch:-p2
+		${FILESDIR}/xsa156-4.5.patch:-p2
 
 .include <bsd.port.options.mk>
 

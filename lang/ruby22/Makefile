@@ -45,6 +45,9 @@ USE_RUBY=		yes
 RUBY_NO_BUILD_DEPENDS=	yes
 RUBY_NO_RUN_DEPENDS=	yes
 
+NOT_FOR_ARCHS=	ia64
+NOT_FOR_ARCHS_REASON_ia64=	does not build
+
 OPTIONS_DEFINE=		CAPIDOCS DEBUG DOCS EXAMPLES GMP RDOC
 OPTIONS_DEFAULT=	RDOC LIBEDIT
 OPTIONS_SINGLE=		EDIT
@@ -62,11 +65,11 @@ CAPIDOCS_CONFIGURE_ENABLE=	install-capi
 GMP_CONFIGURE_WITH=	gmp
 GMP_LIB_DEPENDS=	libgmp.so:${PORTSDIR}/math/gmp
 LIBEDIT_BUILD_DEPENDS=	libedit>=0:${PORTSDIR}/devel/libedit
-LIBEDIT_CONFIGURE_ON=	--enable-libedit --with-libedit-dir=${LIBEDITPREFIX}
+LIBEDIT_CONFIGURE_ON=	--enable-libedit --with-libedit-dir=${LOCALBASE}
 LIBEDIT_RUN_DEPENDS=	libedit>=0:${PORTSDIR}/devel/libedit
 RDOC_CONFIGURE_ENABLE=	install-rdoc
 READLINE_BUILD_DEPENDS=	readline>=0:${PORTSDIR}/devel/readline
-READLINE_CONFIGURE_ON=	--disable-libedit --with-readline-dir=${READLINEPREFIX}
+READLINE_CONFIGURE_ON=	--disable-libedit --with-readline-dir=${LOCALBASE}
 READLINE_RUN_DEPENDS=	readline>=0:${PORTSDIR}/devel/readline
 
 CPE_VENDOR=	ruby-lang

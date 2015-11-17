@@ -798,7 +798,10 @@
     SUBDIR += p5-ZConf
     SUBDIR += p5-ZConf-Bookmarks
     SUBDIR += p5-ZeroMQ
+    SUBDIR += p5-ldap2pf
+    SUBDIR += p5-ldap2pw
     SUBDIR += p5-perl-ldap
+    SUBDIR += p5-srv2pf
     SUBDIR += packetdrill
     SUBDIR += packter-agent
     SUBDIR += panoptis
@@ -959,6 +962,7 @@
     SUBDIR += py-pynsq
     SUBDIR += py-pypcap
     SUBDIR += py-pysendfile
+    SUBDIR += py-pysmb
     SUBDIR += py-pysocks
     SUBDIR += py-pysphere
     SUBDIR += py-python-bitcoinrpc
@@ -969,7 +973,6 @@
     SUBDIR += py-raet
     SUBDIR += py-s3cmd
     SUBDIR += py-simplesoap
-    SUBDIR += py-smb
     SUBDIR += py-smbpasswd
     SUBDIR += py-soappy
     SUBDIR += py-speedtest-cli

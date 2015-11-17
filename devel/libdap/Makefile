@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libdap
-PORTVERSION=	3.13.3
+PORTVERSION=	3.16.0
 CATEGORIES=	devel
 MASTER_SITES=	http://www.opendap.org/pub/source/ \
 		LOCAL/sunpoet
@@ -24,7 +24,7 @@ USES=		bison charsetfix gmake libtool localbase pathfix
 
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} >= 1100000
+.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1100000
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-dds.yy
 .endif
 

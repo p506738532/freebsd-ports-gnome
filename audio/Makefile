@@ -77,7 +77,6 @@
     SUBDIR += cmp3
     SUBDIR += cmt
     SUBDIR += cmus
-    SUBDIR += cmus-post.fm
     SUBDIR += cpige
     SUBDIR += cplay
     SUBDIR += cpp-xmms2
@@ -97,6 +96,7 @@
     SUBDIR += dcd
     SUBDIR += deadbeef
     SUBDIR += deadbeef-mpris-plugin
+    SUBDIR += deadbeef-mpris2-plugin
     SUBDIR += decibel-audio-player
     SUBDIR += deforaos-mixer
     SUBDIR += dekagen

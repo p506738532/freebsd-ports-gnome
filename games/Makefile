@@ -189,6 +189,7 @@
     SUBDIR += darkplaces
     SUBDIR += dcross
     SUBDIR += defendguin
+    SUBDIR += dhewm3
     SUBDIR += diameter
     SUBDIR += diaspora
     SUBDIR += digger-vgl
@@ -517,6 +518,7 @@
     SUBDIR += libkmahjongg
     SUBDIR += libmaitretarot
     SUBDIR += libmt_client
+    SUBDIR += libretro-cores
     SUBDIR += libshhcards
     SUBDIR += lightsoff
     SUBDIR += lincity
@@ -536,7 +538,6 @@
     SUBDIR += linux-etqw-demo-server
     SUBDIR += linux-etqw-server
     SUBDIR += linux-nerogame
-    SUBDIR += linux-ningpo-demo
     SUBDIR += linux-nwnclient
     SUBDIR += linux-nwserver
     SUBDIR += linux-quake3
@@ -835,6 +836,7 @@
     SUBDIR += reminiscence
     SUBDIR += rescue
     SUBDIR += residualvm
+    SUBDIR += retroarch
     SUBDIR += rezerwar
     SUBDIR += rfksay
     SUBDIR += ri-li
