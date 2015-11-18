@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell-extension-mediaplayer
-PORTVERSION=	0.0.0.20150329
+PORTVERSION=	0.0.0.20151118
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -25,7 +25,7 @@ GLIB_SCHEMAS=	org.gnome.shell.extensions.mediaplayer.gschema.xml
 
 GH_ACCOUNT=	eonpatapon
 GH_PROJECT=	gnome-shell-extensions-mediaplayer
-GH_TAGNAME=	788c552162
+GH_TAGNAME=	ffabc47
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 
