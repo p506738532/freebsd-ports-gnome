@@ -22,3 +22,4 @@ USES=compiler:c++11-lib and/or USE_CXXSTD=c++11. But don't add it blindly.
 
 REMOVED:
  deskutils/alacarte
+ deskutils/gnome-shell-extension-calculator (gnome-calculator provides this functionality)
