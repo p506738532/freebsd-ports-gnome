@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell-extension-lockkeys
-PORTVERSION=	0.0.0.20150613
+PORTVERSION=	0.0.0.20151017
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -23,7 +23,7 @@ GLIB_SCHEMAS=	org.gnome.shell.extensions.lockkeys.gschema.xml
 
 GH_ACCOUNT=	kazysmaster
 GH_PROJECT=	gnome-shell-extension-lockkeys
-GH_TAGNAME=	76ac557
+GH_TAGNAME=	222289e
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 
