@@ -5,7 +5,7 @@
 # PORTREVISION bumps of depending ports.
 
 PORTNAME=	pulseaudio
-PORTVERSION=	7.0
+PORTVERSION=	7.1
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 
@@ -90,9 +90,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/${ii} \
 		${STAGEDIR}${PREFIX}/etc/pulse/${ii}.sample
 .endfor
-	@${RM} ${STAGEDIR}/pa*
 
 post-install-BASH-off:
-	@${RM} -rf ${STAGEDIR}${PREFIX}/etc/bash_completion.d
+	@${RM} -rf ${STAGEDIR}${PREFIX}/share/bash-completion
 
 .include <bsd.port.mk>
