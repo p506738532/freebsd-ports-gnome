@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell-extension-overlay-icons
-PORTVERSION=	0.0.0.20150422
+PORTVERSION=	0.0.0.20151015
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -23,7 +23,7 @@ GLIB_SCHEMAS=	org.gnome.shell.extensions.windowoverlay-icons.gschema.xml
 
 GH_ACCOUNT=	sustmi
 GH_PROJECT=	gnome-shell-extensions-sustmi
-GH_TAGNAME=	9072ba8
+GH_TAGNAME=	e8200b3
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 
