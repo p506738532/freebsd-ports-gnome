@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell-extension-panel-osd
-PORTVERSION=	0.0.0.20150422
+PORTVERSION=	0.0.0.20151111
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -24,7 +24,7 @@ GLIB_SCHEMAS=	org.gnome.shell.extensions.panel-osd.gschema.xml
 
 GH_ACCOUNT=	jenslody
 GH_PROJECT=	gnome-shell-extension-panel-osd
-GH_TAGNAME=	f388fe7
+GH_TAGNAME=	61c1bd4
 
 PKGMESSAGE=	../gnome-shell-extra-extensions/pkg-message.slaves
 
