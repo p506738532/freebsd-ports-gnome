@@ -224,7 +224,6 @@
     SUBDIR += simplegroupware
     SUBDIR += sliderule
     SUBDIR += spice-gtk
-    SUBDIR += steadyflow
     SUBDIR += strigi
     SUBDIR += strigiclient
     SUBDIR += strigidaemon

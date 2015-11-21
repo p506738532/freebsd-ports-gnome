@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nginx
-PORTVERSION=	1.9.6
+PORTVERSION=	1.9.7
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
 MASTER_SITES+=	LOCAL/osa
@@ -853,7 +853,7 @@ USE_OPENSSL_PORT=	yes
 .if ${PORT_OPTIONS:MNJS}
 GH_ACCOUNT+=	nginx:njs
 GH_PROJECT+=	njs:njs
-GH_TAGNAME+=	8e72a0b:njs
+GH_TAGNAME+=	e7ea1a7:njs
 CONFIGURE_ARGS+=--add-module=${WRKSRC_njs}/nginx
 .endif
 

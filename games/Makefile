@@ -520,6 +520,7 @@
     SUBDIR += libkmahjongg
     SUBDIR += libmaitretarot
     SUBDIR += libmt_client
+    SUBDIR += libretro-cores
     SUBDIR += libshhcards
     SUBDIR += lightsoff
     SUBDIR += lincity
@@ -837,6 +838,7 @@
     SUBDIR += reminiscence
     SUBDIR += rescue
     SUBDIR += residualvm
+    SUBDIR += retroarch
     SUBDIR += rezerwar
     SUBDIR += rfksay
     SUBDIR += ri-li

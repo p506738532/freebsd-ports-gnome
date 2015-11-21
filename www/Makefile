@@ -538,6 +538,7 @@
     SUBDIR += mongrel2
     SUBDIR += moodle28
     SUBDIR += moodle29
+    SUBDIR += moodle30
     SUBDIR += mozplugger
     SUBDIR += multisort
     SUBDIR += multiwatch
@@ -1758,6 +1759,7 @@
     SUBDIR += py-uliweb
     SUBDIR += py-urlgrabber
     SUBDIR += py-urljr
+    SUBDIR += py-user_agent
     SUBDIR += py-utidy
     SUBDIR += py-w3lib
     SUBDIR += py-waitress
@@ -1870,6 +1872,7 @@
     SUBDIR += rubygem-gollum-lib
     SUBDIR += rubygem-gon
     SUBDIR += rubygem-gon-rails4
+    SUBDIR += rubygem-hackpad-cli
     SUBDIR += rubygem-haml
     SUBDIR += rubygem-haml-coderay
     SUBDIR += rubygem-haml-contrib
