@@ -1,5 +1,5 @@
---- daemon/gdm-local-display-factory.c.orig	2015-09-21 16:12:33.000000000 +0200
-+++ daemon/gdm-local-display-factory.c	2015-10-18 16:48:51.256655000 +0200
+--- daemon/gdm-local-display-factory.c.orig	2015-11-17 18:14:16.000000000 +0100
++++ daemon/gdm-local-display-factory.c	2015-11-19 10:05:18.551682000 +0100
 @@ -42,6 +42,7 @@
  
  #define GDM_LOCAL_DISPLAY_FACTORY_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GDM_TYPE_LOCAL_DISPLAY_FACTORY, GdmLocalDisplayFactoryPrivate))
@@ -131,7 +131,7 @@
  }
  
  static gboolean
-@@ -604,17 +646,20 @@ gdm_local_display_factory_stop (GdmDispl
+@@ -604,7 +646,9 @@ gdm_local_display_factory_stop (GdmDispl
  
          g_return_val_if_fail (GDM_IS_LOCAL_DISPLAY_FACTORY (factory), FALSE);
  
@@ -141,19 +141,15 @@
  
          store = gdm_display_factory_get_display_store (GDM_DISPLAY_FACTORY (factory));
  
-+#ifdef WITH_SYSTEMD
-         g_signal_handlers_disconnect_by_func (G_OBJECT (store),
-                                               G_CALLBACK (on_display_added),
-                                               factory);
+@@ -614,7 +658,6 @@ gdm_local_display_factory_stop (GdmDispl
          g_signal_handlers_disconnect_by_func (G_OBJECT (store),
                                                G_CALLBACK (on_display_removed),
                                                factory);
 -
-+#endif
          return TRUE;
  }
  
-@@ -760,7 +805,9 @@ gdm_local_display_factory_finalize (GObj
+@@ -760,7 +803,9 @@ gdm_local_display_factory_finalize (GObj
  
          g_hash_table_destroy (factory->priv->used_display_numbers);
  
