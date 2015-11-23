@@ -83,4 +83,9 @@ post-patch:
 		s|MISSION_CONTROL_PLUGINS_DIR=`pkg-config -|MISSION_CONTROL_PLUGINS_DIR=$${libdir}/`pkg-config -|g' \
 			${WRKSRC}/configure
 
+# workaround wierd bug that happened in 3.12.11.
+post-install:
+	@${MV} ${STAGEDIR}/mission-control-plugins.0 \
+		${STAGEDIR}${PREFIX}/lib/
+
 .include <bsd.port.mk>
