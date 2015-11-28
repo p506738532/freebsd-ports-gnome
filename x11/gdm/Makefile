@@ -12,7 +12,7 @@ COMMENT=	GNOME 3 version of xdm display manager
 
 BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity \
 		itstool:${PORTSDIR}/textproc/itstool \
-    		iso-codes>=0:${PORTSDIR}/misc/iso-codes
+		iso-codes>=0:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	libck-connector.so:${PORTSDIR}/sysutils/consolekit \
 		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libupower-glib.so:${PORTSDIR}/sysutils/upower \
@@ -40,7 +40,9 @@ GROUPS=		gdm video
 
 PORTSCOUT=	limitw:1,even
 
-USES=		execinfo gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		cpe execinfo gettext gmake libtool pathfix pkgconfig tar:xz
+CPE_VENDOR=	gnome
+CPE_VENDOR=	gnome_display_manager
 USE_GNOME=	dconf intlhack introspection librsvg2
 
 USES+=		autoreconf
@@ -70,7 +72,7 @@ CONFIGURE_ARGS=	--disable-static \
 		--without-plymouth \
 		--with-user=gdm \
 		--with-group=gdm \
- 		--with-initial-vt=09 \
+		--with-initial-vt=09 \
 		--disable-wayland-support \
 		--with-systemd=no
 

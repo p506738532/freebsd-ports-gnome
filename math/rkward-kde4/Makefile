@@ -2,10 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	rkward
-PORTVERSION=	0.6.2
-PORTREVISION=	1
+PORTVERSION=	0.6.3
 CATEGORIES=	math
-MASTER_SITES=	SF/${PORTNAME}/Current_Stable_Releases
+MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 PKGNAMESUFFIX=	-kde4
 
 MAINTAINER=	thierry@FreeBSD.org
@@ -24,7 +23,7 @@ USE_QT4=	qmake_build moc_build rcc_build uic_build phonon
 USE_KDE4=	kdeprefix automoc4 kdelibs
 USE_PHP=	yes
 WANT_PHP_CLI=	yes
-USES=		cmake gettext fortran
+USES=		cmake gettext fortran shared-mime-info
 INSTALLS_ICONS=	yes
 
 CFLAGS+=	-I${LOCALBASE}/include
@@ -51,7 +50,6 @@ RUN_DEPENDS+=	${LR_MOD_DIR}/R2HTML/INDEX:${PORTSDIR}/textproc/R-cran-R2HTML	\
 		${LR_MOD_DIR}/mvtnorm/INDEX:${PORTSDIR}/math/R-cran-mvtnorm	\
 		${LR_MOD_DIR}/outliers/INDEX:${PORTSDIR}/math/R-cran-outliers	\
 		${LR_MOD_DIR}/tseries/INDEX:${PORTSDIR}/finance/R-cran-tseries
-		# ${LR_MOD_DIR}/car/INDEX:${PORTSDIR}/math/R-cran-car
 .endif
 
 pre-configure:
