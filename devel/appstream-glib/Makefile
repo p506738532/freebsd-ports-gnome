@@ -17,6 +17,7 @@ BUILD_DEPENDS=	gtkdoc-check:${PORTSDIR}/textproc/gtk-doc \
 		gcab:${PORTSDIR}/archivers/gcab
 LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
 		libyaml.so:${PORTSDIR}/textproc/libyaml \
+		libuuid.so:${PORTSDIR}/misc/e2fsprogs-libuuid \
 		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
 		libfreetype.so:${PORTSDIR}/print/freetype2
 RUN_DEPENDS=	gcab:${PORTSDIR}/archivers/gcab
