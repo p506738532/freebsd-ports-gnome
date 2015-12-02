@@ -10,6 +10,7 @@
     SUBDIR += axfr2acl
     SUBDIR += bind-tools
     SUBDIR += bind10
+    SUBDIR += bind9-devel
     SUBDIR += bind910
     SUBDIR += bind99
     SUBDIR += bindgraph
@@ -61,7 +62,6 @@
     SUBDIR += fpdns
     SUBDIR += gdnsd
     SUBDIR += gdnsd2
-    SUBDIR += geta
     SUBDIR += getdns
     SUBDIR += ghtool
     SUBDIR += hesiod
@@ -129,7 +129,6 @@
     SUBDIR += p5-Net-DNS-TestNS
     SUBDIR += p5-Net-DNS-ToolKit
     SUBDIR += p5-Net-DNS-Zone-Parser
-    SUBDIR += p5-Net-DNS-ZoneCheck
     SUBDIR += p5-Net-DNS-ZoneFile-Fast
     SUBDIR += p5-Net-DNSBL-MultiDaemon
     SUBDIR += p5-Net-DNSBL-Statistics
@@ -163,6 +162,7 @@
     SUBDIR += py-dns3
     SUBDIR += py-dnspython
     SUBDIR += py-easyzone
+    SUBDIR += py-idna
     SUBDIR += py-idnkit2
     SUBDIR += py-ldns
     SUBDIR += py-namebench

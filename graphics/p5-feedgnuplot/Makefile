@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	feedgnuplot
-PORTVERSION=	1.34
+PORTVERSION=	1.36
 CATEGORIES=	graphics perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DK/DKOGAN/
 PKGNAMEPREFIX=	p5-
@@ -20,6 +20,6 @@ RUN_DEPENDS:=	${BUILD_DEPENDS} \
 USES=		perl5
 USE_PERL5=	configure
 
-PLIST_FILES=	bin/feedgnuplot man/man1/feedgnuplot.1.gz
+PLIST_FILES=	bin/feedgnuplot ${SITE_MAN1}/feedgnuplot.1.gz
 
 .include <bsd.port.mk>

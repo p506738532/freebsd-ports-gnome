@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	utf8proc
-PORTVERSION=	1.2
+PORTVERSION=	1.3.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	textproc devel
 
@@ -17,13 +17,18 @@ GH_ACCOUNT=	JuliaLang
 
 USES=		gmake
 USE_LDCONFIG=	yes
+MAKE_ARGS=	prefix=${PREFIX}
 
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/libutf8proc.so ${STAGEDIR}${PREFIX}/lib/libutf8proc.so.1.2.0
-	${INSTALL_DATA} ${WRKSRC}/libutf8proc.a ${STAGEDIR}${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/utf8proc.h ${STAGEDIR}${PREFIX}/include
-	${LN} -sf libutf8proc.so.1.2.0 ${STAGEDIR}${PREFIX}/lib/libutf8proc.so.1.2
-	${LN} -sf libutf8proc.so.1.2.0 ${STAGEDIR}${PREFIX}/lib/libutf8proc.so.1
-	${LN} -sf libutf8proc.so.1.2.0 ${STAGEDIR}${PREFIX}/lib/libutf8proc.so
+PORTDOCS=	NEWS.md README.md
+
+OPTIONS_DEFINE=	DOCS
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libutf8proc.so
+
+post-install-DOCS-on:
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} \
+		${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>

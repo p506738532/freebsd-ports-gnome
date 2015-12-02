@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ocserv
-PORTVERSION=	0.10.7
+PORTVERSION=	0.10.9
 CATEGORIES=	net security
 MASTER_SITES=	ftp://ftp.infradead.org/pub/ocserv/
 
@@ -18,9 +18,11 @@ LIB_DEPENDS=	liblz4.so:${PORTSDIR}/archivers/liblz4 \
 		libiconv.so:${PORTSDIR}/converters/libiconv \
 		libtalloc.so:${PORTSDIR}/devel/talloc \
 		libprotobuf-c.so:${PORTSDIR}/devel/protobuf-c \
-		libgnutls.so:${PORTSDIR}/security/gnutls
+		libgnutls.so:${PORTSDIR}/security/gnutls \
+		libtasn1.so:${PORTSDIR}/security/libtasn1
 
-USES=	autoreconf cpe gmake gperf libtool ncurses pathfix pkgconfig readline tar:xz
+USES=		autoreconf cpe gettext gmake gperf libtool ncurses \
+		pathfix pkgconfig readline tar:xz
 CPE_VENDOR=	infradead
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lintl
@@ -43,14 +45,9 @@ OPTIONS_DEFINE=		DOCS EXAMPLES GSSAPI
 PORTDOCS=	AUTHORS ChangeLog INSTALL NEWS README TODO
 PORTEXAMPLES=	profile.xml sample.config sample.passwd
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MGSSAPI}
-USES+=	gssapi:mit
-LIB_DEPENDS+=	libkrb5support.so:${PORTSDIR}/security/krb5
-.else
-CONFIGURE_ARGS+=	--without-gssapi
-.endif
+GSSAPI_USES=		gssapi:mit
+GSSAPI_LIB_DEPENDS=	libkrb5support.so:${PORTSDIR}/security/krb5
+GSSAPI_CONFIGURE_OFF=	--without-gssapi
 
 post-patch:
 	${RM} ${WRKSRC}/doc/occtl.8
@@ -65,14 +62,12 @@ post-install:
 	${MKDIR} ${STAGEDIR}/var/run/ocserv/
 	${CP} ${FILESDIR}/ocserv.conf ${STAGEDIR}${PREFIX}/etc/ocserv/conf.sample
 
-.if ${PORT_OPTIONS:MDOCS}
+post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
-.endif
 
-.if ${PORT_OPTIONS:MEXAMPLES}
+post-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} ${PORTEXAMPLES} ${STAGEDIR}${EXAMPLESDIR}
-.endif
 
 .include <bsd.port.mk>

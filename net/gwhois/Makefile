@@ -4,7 +4,7 @@
 PORTNAME=	gwhois
 PORTVERSION=	20120626
 CATEGORIES=	net
-MASTER_SITES=	http://gwhois.de/gwhois/
+MASTER_SITES=	http://julijane.de/gwhois/
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	ports@FreeBSD.org

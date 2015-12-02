@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	acpica
-PORTVERSION=	20150818
+PORTVERSION=	20151124
 CATEGORIES=	sysutils devel
 MASTER_SITES=	https://acpica.org/sites/acpica/files/ \
 		LOCAL/jkim
@@ -35,8 +35,8 @@ MAKE_ARGS+=	MACROPROC="${LOCALBASE}/bin/gm4"
 YACC=		${LOCALBASE}/bin/bison
 .endif
 
-post-patch:
-	${LN} -fs ${WRKSRC}/source/tools/acpinames/AcpiNames.h \
+post-extract:
+	${MV} ${WRKSRC}/source/tools/acpinames/AcpiNames.h \
 	    ${WRKSRC}/source/tools/acpinames/acpinames.h
 
 do-install:

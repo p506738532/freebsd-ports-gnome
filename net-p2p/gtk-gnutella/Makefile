@@ -35,7 +35,7 @@
 #
 
 PORTNAME=	gtk-gnutella
-PORTVERSION=	1.1.3
+PORTVERSION=	1.1.6
 CATEGORIES=	net-p2p ipv6
 MASTER_SITES=	SF
 
@@ -44,7 +44,7 @@ COMMENT=	GTK based Gnutella client
 
 LICENSE=	GPLv2 # (or later)
 
-USES=		iconv pkgconfig tar:bzip2
+USES=		iconv localbase pkgconfig tar:bzip2
 USE_GNOME=	glib20 libxml2
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	Configure
@@ -58,9 +58,6 @@ CONFIGURE_ARGS=	-O -Dyacc='byacc' \
 		-Dusemymalloc='n'
 MAKE_ARGS=	INSTALL_PREFIX="${STAGEDIR}"
 INSTALL_TARGET=	install install.man
-
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	ARCH="${ARCH}" OPSYS="${OPSYS:tl}"
 
@@ -76,6 +73,7 @@ DBUS_LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus
 DBUS_CONFIGURE_OFF=	-Ud_dbus
 DEBUG_CONFIGURE_ON=	-Ud_official
 GUI_USE=		gnome=gtk20
+GUI_VARS=		INSTALLS_ICONS=yes
 GUI_CONFIGURE_OFF=	-Dd_headless
 IPV6_CONFIGURE_OFF=	-Ud_ipv6
 NLS_USES=		gettext
@@ -85,14 +83,8 @@ PORTABILITY_CONFIGURE_ON=	-Dd_portable
 TLS_LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls
 TLS_CONFIGURE_OFF=	-Ud_gnutls
 
-.include <bsd.port.options.mk>
-
 .if !defined(INTERACTIVE_CONFIGURE)
 CONFIGURE_ARGS+=	-ders
-.endif
-
-.if ${PORT_OPTIONS:MGUI}
-INSTALLS_ICONS=	yes
 .endif
 
 post-extract:
@@ -101,13 +93,12 @@ post-extract:
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.SH" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|@exit 0|@echo done|'
-.if empty(PORT_OPTIONS:MDEBUG)
+
+post-patch-DEBUG-off:
 	@${REINPLACE_CMD} 's/(INSTALL) -c -m 555/(INSTALL) -c -s -m 555/g' \
 		${WRKSRC}/src/Makefile.SH
-.endif
 
-post-install:
-.if ${PORT_OPTIONS:MGUI}
+post-install-GUI-on:
 .for i in 16 32 128 256 512
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/hicolor/${i}x${i}/apps
 	(cd ${WRKSRC}/extra_files && ${INSTALL_DATA} gtk-gnutella.${i}.png \
@@ -116,6 +107,5 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps
 	(cd ${WRKSRC}/extra_files && ${INSTALL_DATA} gtk-gnutella.svg \
 		${STAGEDIR}${PREFIX}/share/icons/hicolor/scalable/apps/gtk-gnutella.svg)
-.endif
 
 .include <bsd.port.mk>

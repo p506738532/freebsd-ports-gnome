@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	qcad
-PORTVERSION=	3.7.5.0
+PORTVERSION=	3.12.3.0
 DISTVERSIONPREFIX=	v
 PORTREVISION=	4
 CATEGORIES=	cad
@@ -40,7 +40,8 @@ RESDIR=		${WRKSRC}/release
 .endif
 
 SHRLIBS=	qcadcore qcadecmaapi qcadentity qcadgrid qcadgui qcadoperations	\
-		qcadsnap qcadspatialindex qcadstemmer spatialindexnavel
+		qcadsnap qcadspatialindex qcadstemmer spatialindexnavel qcadzip \
+		quazip
 STALIBS=	dxflib stemmer
 SHRDIR=		fonts libraries patterns plugins scripts ts
 #QSCRIPTS should not be installed to avoid conflicts with texlive-base
@@ -52,12 +53,12 @@ pre-configure:
 	${REINPLACE_CMD} -e "s|%%DATADIR%%|${DATADIR}|"	\
 		${WRKSRC}/src/core/RSettings.cpp
 
-# Temporary hack for Qt 4.8.6 support while upstream does not add proper
+# Temporary hack for Qt 4.8.7 support while upstream does not add proper
 # bindings.
-	(cd ${WRKSRC}/src/3rdparty/qt-labs-qtscriptgenerator-4.8.5 && \
-		${COPYTREE_SHARE} . ../qt-labs-qtscriptgenerator-4.8.6)
-	(cd ${WRKSRC}/src/3rdparty/qt-labs-qtscriptgenerator-4.8.6 && \
-		mv qt-labs-qtscriptgenerator-4.8.5.pro qt-labs-qtscriptgenerator-4.8.6.pro)
+#	(cd ${WRKSRC}/src/3rdparty/qt-labs-qtscriptgenerator-4.8.5 && \
+#		${COPYTREE_SHARE} . ../qt-labs-qtscriptgenerator-4.8.7)
+#	(cd ${WRKSRC}/src/3rdparty/qt-labs-qtscriptgenerator-4.8.7 && \
+#		mv qt-labs-qtscriptgenerator-4.8.5.pro qt-labs-qtscriptgenerator-4.8.7.pro)
 
 do-install:
 	${INSTALL_PROGRAM} ${RESDIR}/qcad-bin ${STAGEDIR}${PREFIX}/bin/

@@ -11,6 +11,7 @@
     SUBDIR += ark
     SUBDIR += atool
     SUBDIR += bicom
+    SUBDIR += brotli
     SUBDIR += bzip
     SUBDIR += bzip2
     SUBDIR += cabextract
@@ -162,10 +163,10 @@
     SUBDIR += ppunpack
     SUBDIR += pxz
     SUBDIR += py-attic
-    SUBDIR += py-liblzma
     SUBDIR += py-librtfcomp
     SUBDIR += py-lz4
     SUBDIR += py-lzma
+    SUBDIR += py-pyliblzma
     SUBDIR += py-python-snappy
     SUBDIR += qpress
     SUBDIR += quazip
@@ -213,7 +214,6 @@
     SUBDIR += unzip
     SUBDIR += unzoo
     SUBDIR += upx
-    SUBDIR += wzip
     SUBDIR += xar
     SUBDIR += xarchive
     SUBDIR += xarchiver

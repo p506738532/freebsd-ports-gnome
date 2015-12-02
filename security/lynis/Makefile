@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	lynis
-PORTVERSION=	1.6.4
+
+PORTVERSION=	2.1.1
 CATEGORIES=	security
-MASTER_SITES=	http://cisofy.com/files/
+MASTER_SITES=	https://cisofy.com/files/
 
 MAINTAINER=	lme@FreeBSD.org
 COMMENT=	Security and system auditing tool

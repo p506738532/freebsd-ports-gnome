@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnuradio
-PORTVERSION=	3.7.7.1
-PORTREVISION=	1
+PORTVERSION=	3.7.8
 CATEGORIES=	comms astro hamradio
 MASTER_SITES=	http://gnuradio.org/releases/gnuradio/ \
 		LOCAL/db
@@ -34,25 +33,30 @@ LIB_DEPENDS=	libcppunit.so:${PORTSDIR}/devel/cppunit \
 		libgsl.so:${PORTSDIR}/math/gsl
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
-USES=		cmake:outsource iconv perl5 python:2.7 shebangfix
+# USES=compiler:c11 is necessary because base GCC fails:
+# volk/lib/volk_cpu.c: In function 'i_can_has_3dnow':
+# volk/lib/volk_cpu.c:62: error: can't find a register in class 'BREG' while reloading 'asm'
+# volk/lib/volk_cpu.c:62: error: 'asm' operand has impossible constraints
+USES=		cmake:outsource compiler:c11 iconv perl5 python:2.7 shebangfix
 SHEBANG_FILES=	grc/freedesktop/grc_setup_freedesktop.in
-CONFIGURE_ENV+=	LD_PRELOAD="${GCC_LIBS}/libstdc++.so:${GCC_LIBS}/libgcc_s.so.1"
 CMAKE_ARGS+=	-DSWIG_EXECUTABLE:STRING="${LOCALBASE}/bin/swig2.0"
 CMAKE_ARGS+=	-DICONV_PREFIX:STRING="${ICONV_PREFIX}" \
 		-DICONV_LIB:STRING="X${ICONV_LIB}" \
 		-DENABLE_GR_CTRLPORT="YES"
-# for detailed debugging uncomment the next two lines as needed
+# for detailed debugging uncomment the next line
 #CMAKE_ARGS+=	--debug-output --trace
-MAJOR_SUB_VER=	3.7.7
+MAJOR_SUB_VER=	3.7.8
 DOCSDIR=	share/doc/${PORTNAME}-${MAJOR_SUB_VER}
 USE_GNOME=	pygtk2
-USE_GCC=	yes
 USE_WX=		3.0+
 USE_QT4=	gui xml qmake moc rcc uic
 WX_COMPS=	wx wx:build wx:run python:build python:run
 USE_LDCONFIG=	yes
 PLIST_SUB+=	MAJOR_VERSION="3"
 PLIST_SUB+=	MAJOR_SUB_VER="${MAJOR_SUB_VER}"
+LIBSTRIP_FILES=	analog atsc audio blocks channels digital dtv fcd fec fft\
+		filter noaa pager pmt qtgui runtime trellis video-sdl\
+		vocoder wavelet wxgui
 
 OPTIONS_DEFINE=		USRP TESTING
 # Unfortunately building docs on i386 fails
@@ -60,12 +64,11 @@ OPTIONS_DEFINE=		USRP TESTING
 # Yay. building docs is broken on 10 and HEAD too so turn them all off
 OPTIONS_EXCLUDE=	DOCS
 OPTIONS_DEFAULT=	USRP
+OPTIONS_SUB=		yes
 USRP_DESC=	Include USRP support (UHD) from Ettus
 TESTING_DESC=	Include testing support
 
 PLIST_SUB+=	PORTVERSION=${PORTVERSION}
-VP=		${GCC_DEFAULT:S/.//}
-GCC_LIBS=	${LOCALBASE}/lib/gcc${VP}
 
 DOCS_BUILD_DEPENDS=	doxygen:${PORTSDIR}/devel/doxygen \
 			${LOCALBASE}/bin/sphinx-apidoc:${PORTSDIR}/textproc/py-sphinx \
@@ -88,6 +91,15 @@ TESTING_CMAKE_ON=	-DENABLE_TESTING:STRING="ON"
 TESTING_CMAKE_OFF=	-DENABLE_TESTING:STRING="OFF"
 TESTING_BUILD_DEPENDS=	cppunit-config:${PORTSDIR}/devel/cppunit
 
+.include <bsd.port.pre.mk>
+
+.if ${PORT_OPTIONS:MUSRP}
+LIBSTRIP_FILES+=	uhd
+.endif
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000000
+USE_GCC=	yes
+.endif
+
 post-patch:
 	@${FIND} ${WRKSRC}/.. -name CMakeLists.txt | \
 	    ${XARGS} ${REINPLACE_CMD} -e \
@@ -98,4 +110,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 		${WRKSRC}/cmake/Modules/FindPortaudio.cmake
 
-.include <bsd.port.mk>
+post-install:
+.for a in ${LIBSTRIP_FILES}
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libgnuradio-${a}.so.${MAJOR_SUB_VER}
+.endfor
+
+.include <bsd.port.post.mk>

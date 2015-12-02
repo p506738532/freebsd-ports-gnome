@@ -22,7 +22,6 @@
     SUBDIR += charis-compact
     SUBDIR += clearsans
     SUBDIR += code2000
-    SUBDIR += code2001
     SUBDIR += comfortaa-ttf
     SUBDIR += comic-neue
     SUBDIR += consolamono-ttf
@@ -166,6 +165,7 @@
     SUBDIR += ubuntu-font
     SUBDIR += urwfonts
     SUBDIR += urwfonts-ttf
+    SUBDIR += uw-ttyp0
     SUBDIR += vollkorn-ttf
     SUBDIR += webfonts
     SUBDIR += wqy

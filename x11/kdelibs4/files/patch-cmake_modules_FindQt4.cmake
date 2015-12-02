@@ -1,6 +1,10 @@
---- ./cmake/modules/FindQt4.cmake.orig	2011-07-28 05:34:31.000000000 +1100
-+++ ./cmake/modules/FindQt4.cmake	2012-05-18 00:28:12.000000000 +1100
-@@ -627,23 +627,12 @@
+Do the same thing we do in devel/cmake's FindQt4.cmake patch. The idea behind
+the change is that the directories FindQt4.cmake looks for might not be
+present at the time CMake looks for them since the ports that actually create
+them may not be required by the port calling CMake.
+--- cmake/modules/FindQt4.cmake.orig	2014-11-06 22:33:50 UTC
++++ cmake/modules/FindQt4.cmake
+@@ -638,23 +638,12 @@ IF (QT4_QMAKE_FOUND)
    # ask qmake for the imports directory
    IF (QT_LIBRARY_DIR AND NOT QT_IMPORTS_DIR OR QT_QMAKE_CHANGED)
      _qt4_query_qmake(QT_INSTALL_IMPORTS qt_imports_dir)

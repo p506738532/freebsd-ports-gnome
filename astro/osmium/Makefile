@@ -29,7 +29,6 @@ CXXFLAGS+=	-I${LOCALBASE}/include \
 		-L${LOCALBASE}/lib
 
 NO_ARCH=	yes
-NO_BUILD=	yes
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	JAVASCRIPT DOXYGEN DOCS
@@ -47,9 +46,6 @@ do-build-DOXYGEN-on:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKR_ARGS} doc
 
-regression-test:
-	cd ${WRKSRC}/test && ${SETENV} ${MAKE_ENV} ${SH} run_tests.sh
-
 do-install:
 	cd ${WRKSRC}/include && ${COPYTREE_SHARE} '${PORTNAME} ${PORTNAME}.hpp' \
 		${STAGEDIR}${PREFIX}/include/
@@ -58,5 +54,8 @@ do-install:
 		${WRKSRC}/NOTES_FOR_DEVELOPERS ${STAGEDIR}${DOCSDIR}/
 do-install-DOXYGEN-on:
 	cd ${WRKSRC}/doc && ${COPYTREE_SHARE} html ${STAGEDIR}${DOCSDIR}/
+
+do-test:
+	cd ${WRKSRC}/test && ${SETENV} ${MAKE_ENV} ${SH} run_tests.sh
 
 .include <bsd.port.mk>

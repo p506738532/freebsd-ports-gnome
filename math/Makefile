@@ -11,11 +11,15 @@
     SUBDIR += R-cran-KFAS
     SUBDIR += R-cran-LearnBayes
     SUBDIR += R-cran-MCMCpack
+    SUBDIR += R-cran-MatrixModels
     SUBDIR += R-cran-NMF
     SUBDIR += R-cran-RHmm
     SUBDIR += R-cran-RSvgDevice
     SUBDIR += R-cran-RcppArmadillo
+    SUBDIR += R-cran-RcppEigen
+    SUBDIR += R-cran-SparseM
     SUBDIR += R-cran-SuppDists
+    SUBDIR += R-cran-VGAM
     SUBDIR += R-cran-Zelig
     SUBDIR += R-cran-bdsmatrix
     SUBDIR += R-cran-car
@@ -31,13 +35,19 @@
     SUBDIR += R-cran-inline
     SUBDIR += R-cran-irlba
     SUBDIR += R-cran-labeling
+    SUBDIR += R-cran-lme4
+    SUBDIR += R-cran-maxLik
     SUBDIR += R-cran-memisc
     SUBDIR += R-cran-minqa
+    SUBDIR += R-cran-miscTools
     SUBDIR += R-cran-mvtnorm
+    SUBDIR += R-cran-nloptr
     SUBDIR += R-cran-nnls
     SUBDIR += R-cran-outliers
+    SUBDIR += R-cran-pbkrtest
     SUBDIR += R-cran-psych
     SUBDIR += R-cran-quadprog
+    SUBDIR += R-cran-quantreg
     SUBDIR += R-cran-sandwich
     SUBDIR += R-cran-sm
     SUBDIR += R-cran-sp
@@ -88,10 +98,13 @@
     SUBDIR += chryzodus
     SUBDIR += clarence
     SUBDIR += clasp
+    SUBDIR += clblas
+    SUBDIR += clfft
     SUBDIR += clipper
     SUBDIR += cln
     SUBDIR += cloog
     SUBDIR += clp
+    SUBDIR += clrng
     SUBDIR += cminpack
     SUBDIR += cmlib
     SUBDIR += coinmp
@@ -241,6 +254,7 @@
     SUBDIR += ltl
     SUBDIR += ltl2ba
     SUBDIR += lybniz
+    SUBDIR += math77
     SUBDIR += mathomatic
     SUBDIR += matio
     SUBDIR += matlab-installer
@@ -486,6 +500,7 @@
     SUBDIR += p5-Math-SymbolicX-Statistics-Distributions
     SUBDIR += p5-Math-TrulyRandom
     SUBDIR += p5-Math-Units
+    SUBDIR += p5-Math-Utils
     SUBDIR += p5-Math-Vec
     SUBDIR += p5-Math-VecStat
     SUBDIR += p5-Math-VectorReal
@@ -685,5 +700,6 @@
     SUBDIR += xppaut
     SUBDIR += xspread
     SUBDIR += yacas
+    SUBDIR += z3
 
 .include <bsd.port.subdir.mk>

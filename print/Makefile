@@ -41,11 +41,13 @@
     SUBDIR += dvi2tty
     SUBDIR += dvips2ascii
     SUBDIR += dvisvg
+    SUBDIR += dymo-cups-drivers
     SUBDIR += easylatex
     SUBDIR += enscript-a4
     SUBDIR += enscript-letter
     SUBDIR += enscript-letterdj
     SUBDIR += enscriptfonts
+    SUBDIR += epson-inkjet-printer-escpr
     SUBDIR += epsonepl
     SUBDIR += flpsed
     SUBDIR += font-amsfonts
@@ -191,6 +193,7 @@
     SUBDIR += psutils
     SUBDIR += py-cups
     SUBDIR += py-fonttools
+    SUBDIR += py-fpdf
     SUBDIR += py-pdf
     SUBDIR += py-pollyreports
     SUBDIR += py-preppy
@@ -223,6 +226,7 @@
     SUBDIR += rubygem-prawn-security
     SUBDIR += rubygem-prawn-svg
     SUBDIR += rubygem-rbpdf
+    SUBDIR += rubygem-rbpdf-font
     SUBDIR += rubygem-ttfunk
     SUBDIR += scribus
     SUBDIR += sgf2tex
@@ -260,6 +264,7 @@
     SUBDIR += utopia
     SUBDIR += xfce4-print
     SUBDIR += xmbibtex
+    SUBDIR += xpdfopen
     SUBDIR += xpp
     SUBDIR += xtexsh
     SUBDIR += yatex

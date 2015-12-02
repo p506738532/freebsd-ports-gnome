@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	owncloud
-PORTVERSION=	8.1.1
-PORTREVISION=	1
+PORTVERSION=	8.2.1
 CATEGORIES=	www
 MASTER_SITES=	http://download.owncloud.org/community/
 
@@ -24,6 +23,7 @@ OWNCLOUD_GROUPNAME?=	${WWWGRP}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 NO_BUILD=	yes
+NO_ARCH=	yes
 SUB_FILES=	pkg-message
 PLIST_SUB=	OWNCLOUD_USERNAME=${OWNCLOUD_USERNAME} \
 		OWNCLOUD_GROUPNAME=${OWNCLOUD_GROUPNAME}
@@ -58,6 +58,5 @@ do-install:
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${WWWDIR}/data
-	${CHMOD} +x ${STAGEDIR}${WWWDIR}/occ
 
 .include <bsd.port.mk>

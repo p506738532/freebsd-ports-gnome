@@ -90,13 +90,14 @@ lib/collectd/threshold.so
 %%TOKYOTYRANT%%lib/collectd/tokyotyrant.so
 lib/collectd/unixsock.so
 lib/collectd/uptime.so
-%%USERS%%lib/collectd/users.so
+lib/collectd/users.so
 lib/collectd/uuid.so
 %%VARNISH%%lib/collectd/varnish.so
 %%VIRT%%lib/collectd/virt.so
 lib/collectd/write_graphite.so
 %%CURL%%lib/collectd/write_http.so
 lib/collectd/write_log.so
+%%KAFKA%%lib/collectd/write_kafka.so
 %%MONGODB%%lib/collectd/write_mongodb.so
 %%REDIS%%lib/collectd/write_redis.so
 %%RIEMANN%%lib/collectd/write_riemann.so

@@ -31,6 +31,7 @@
     SUBDIR += R-cran-rtiff
     SUBDIR += R-cran-scales
     SUBDIR += R-cran-shape
+    SUBDIR += R-cran-visNetwork
     SUBDIR += SciPlot
     SUBDIR += a2png
     SUBDIR += aalib
@@ -39,6 +40,7 @@
     SUBDIR += aeskulap
     SUBDIR += agave
     SUBDIR += agg
+    SUBDIR += alembic
     SUBDIR += alpng
     SUBDIR += amide
     SUBDIR += ampasACES-container
@@ -77,7 +79,6 @@
     SUBDIR += cairo-reference
     SUBDIR += cairomm
     SUBDIR += cal3d
-    SUBDIR += cal3d-devel
     SUBDIR += camera
     SUBDIR += camerakit
     SUBDIR += cbrpager
@@ -90,7 +91,6 @@
     SUBDIR += cimg
     SUBDIR += cinepaint
     SUBDIR += clutter
-    SUBDIR += clutter-box2d
     SUBDIR += clutter-gtk
     SUBDIR += clutter-gtk3
     SUBDIR += cluttermm
@@ -114,6 +114,7 @@
     SUBDIR += darktable
     SUBDIR += dataplot
     SUBDIR += dc20pack
+    SUBDIR += dcp2icc
     SUBDIR += dcraw
     SUBDIR += dcraw-m
     SUBDIR += deegree-csw
@@ -132,6 +133,7 @@
     SUBDIR += digikam-kde4-l10n
     SUBDIR += ditaa
     SUBDIR += djview4
+    SUBDIR += djview4-qt4
     SUBDIR += djvulibre
     SUBDIR += dmtx-utils
     SUBDIR += dri
@@ -141,6 +143,7 @@
     SUBDIR += easypaint
     SUBDIR += edje_viewer
     SUBDIR += electrix
+    SUBDIR += embree
     SUBDIR += enblend
     SUBDIR += entangle
     SUBDIR += eog
@@ -148,7 +151,6 @@
     SUBDIR += eom
     SUBDIR += eos-movrec
     SUBDIR += epdfview
-    SUBDIR += epeg
     SUBDIR += epix
     SUBDIR += eps2png
     SUBDIR += epstool
@@ -214,7 +216,6 @@
     SUBDIR += gcolor2
     SUBDIR += gd
     SUBDIR += gdal
-    SUBDIR += gdal-grass
     SUBDIR += gdchart
     SUBDIR += gdk-pixbuf
     SUBDIR += gdk-pixbuf2
@@ -318,6 +319,7 @@
     SUBDIR += gstreamer1-plugins-opencv
     SUBDIR += gstreamer1-plugins-openjpeg
     SUBDIR += gstreamer1-plugins-png
+    SUBDIR += gstreamer1-plugins-rsvg
     SUBDIR += gstreamer1-plugins-webp
     SUBDIR += gstreamer1-plugins-zbar
     SUBDIR += gthumb
@@ -346,7 +348,6 @@
     SUBDIR += icc-profiles-openicc
     SUBDIR += iccexamin
     SUBDIR += iccxml
-    SUBDIR += icoconvert
     SUBDIR += icon-slicer
     SUBDIR += icontact
     SUBDIR += icoutils
@@ -384,7 +385,6 @@
     SUBDIR += jpatch
     SUBDIR += jpeg
     SUBDIR += jpeg-turbo
-    SUBDIR += jpeg2ps
     SUBDIR += jpeginfo
     SUBDIR += jpegoptim
     SUBDIR += jpg2pdf
@@ -540,7 +540,6 @@
     SUBDIR += libwpg03
     SUBDIR += lightzone
     SUBDIR += linplasma
-    SUBDIR += linux-XnViewMP
     SUBDIR += linux-adobesvg
     SUBDIR += linux-c6-cairo
     SUBDIR += linux-c6-dri
@@ -571,6 +570,7 @@
     SUBDIR += luminance
     SUBDIR += luminance-qt5
     SUBDIR += luxrender
+    SUBDIR += luxrender14
     SUBDIR += mahotas
     SUBDIR += maim
     SUBDIR += makehuman
@@ -600,6 +600,7 @@
     SUBDIR += nip2
     SUBDIR += nomacs
     SUBDIR += npretty
+    SUBDIR += nurbs++
     SUBDIR += nvidia-texture-tools
     SUBDIR += ocaml-images
     SUBDIR += ocaml-lablgl
@@ -755,6 +756,7 @@
     SUBDIR += pgplot
     SUBDIR += pho
     SUBDIR += photopc
+    SUBDIR += phototonic
     SUBDIR += php-facedetect
     SUBDIR += php-gdal
     SUBDIR += php-libpuzzle
@@ -769,8 +771,8 @@
     SUBDIR += php56-gd
     SUBDIR += phplot
     SUBDIR += picpuz
-    SUBDIR += picviz
     SUBDIR += piddle
+    SUBDIR += pikopixel
     SUBDIR += pinpoint
     SUBDIR += pinta
     SUBDIR += pixelize
@@ -811,7 +813,6 @@
     SUBDIR += projectm-libvisual
     SUBDIR += pstoedit
     SUBDIR += pstoepsi
-    SUBDIR += pure-gl
     SUBDIR += py-PyX
     SUBDIR += py-PyX12
     SUBDIR += py-aafigure
@@ -831,6 +832,7 @@
     SUBDIR += py-gimp
     SUBDIR += py-glewpy
     SUBDIR += py-goocanvas
+    SUBDIR += py-gphoto2
     SUBDIR += py-graph
     SUBDIR += py-graph-core
     SUBDIR += py-graph-dot
@@ -874,10 +876,8 @@
     SUBDIR += py3-cairo
     SUBDIR += pygts
     SUBDIR += pymorph
-    SUBDIR += pyro
     SUBDIR += pysvg
     SUBDIR += qcomicbook
-    SUBDIR += qcread
     SUBDIR += qgis
     SUBDIR += qiv
     SUBDIR += qiviewer
@@ -945,7 +945,6 @@
     SUBDIR += rubygem-rsvg2
     SUBDIR += rubygem-ruby-graphviz
     SUBDIR += rubygem-scruffy
-    SUBDIR += rubyphoto
     SUBDIR += s10sh
     SUBDIR += sage
     SUBDIR += sam2p
@@ -966,6 +965,7 @@
     SUBDIR += sdump
     SUBDIR += seam-carving-gui
     SUBDIR += seejpeg
+    SUBDIR += seexpr
     SUBDIR += seom
     SUBDIR += separate
     SUBDIR += seq2gif
@@ -979,7 +979,6 @@
     SUBDIR += simpleviewer
     SUBDIR += sk1libs
     SUBDIR += skanlite
-    SUBDIR += sketch
     SUBDIR += smillaenlarger
     SUBDIR += springgraph
     SUBDIR += squish
@@ -1029,6 +1028,7 @@
     SUBDIR += volpack
     SUBDIR += vp
     SUBDIR += waffle
+    SUBDIR += waifu2x-converter-cpp
     SUBDIR += webp
     SUBDIR += whirlgif
     SUBDIR += white_dune

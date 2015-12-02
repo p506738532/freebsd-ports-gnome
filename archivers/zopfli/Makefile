@@ -2,14 +2,15 @@
 # $FreeBSD$
 
 PORTNAME=	zopfli
-DISTVERSION=	1.0.0-31
-DISTVERSIONSUFFIX=	-g6ff3ba2
+DISTVERSIONPREFIX=	${PORTNAME}-
+DISTVERSION=	1.0.1
 CATEGORIES=	archivers
 
-MAINTAINER=	freebsd@nagilum.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Zopfli Compression Algorithm
 
 LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	google
@@ -23,6 +24,8 @@ MAKE_ARGS=	CC="${CC}" CXX="${CXX}" CFLAGS="${CFLAGS} ${LDFLAGS}" \
 CFLAGS+=	-fPIC # XXX Convert into an implicit rule
 LDFLAGS+=	-lm
 USE_LDCONFIG=	yes
+
+MAKE_JOBS_UNSAFE=	yes
 
 do-install:
 .for f in ${PORTNAME} ${PORTNAME}png

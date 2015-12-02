@@ -3,7 +3,7 @@
 
 PORTNAME=	jishyo
 PORTVERSION=	0.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	japanese gnustep
 MASTER_SITES=	http://www.eskimo.com/~pburns/Dictionaries/files/
 DISTNAME=	Jishyo-${PORTVERSION}
@@ -13,10 +13,12 @@ COMMENT=	English to Japanese dictionary for GNUstep
 
 LICENSE=	GPLv2 # or later
 
+PORTSCOUT=	skipv:0.2
+
 USES=		gnustep
 USE_GNUSTEP=	back build
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/GNUstep/Local/Applications/Jishyo.app/Jishyo
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/GNUstep/System/Applications/Jishyo.app/Jishyo
 
 .include <bsd.port.mk>

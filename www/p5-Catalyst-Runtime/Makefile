@@ -2,10 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	Catalyst-Runtime
-PORTVERSION=	5.90100
+PORTVERSION=	5.90103
 CATEGORIES=	www perl5
 MASTER_SITES=	CPAN
-MASTER_SITE_SUBDIR=	CPAN:JJNAPIORK
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	perl@FreeBSD.org
@@ -14,7 +13,7 @@ COMMENT=	Elegant MVC Web Application Framework (Runtime)
 LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 
-# Do not add the following ports to TEST_DEPENDS to avoid cyclic dependencies in tinderbox:
+# Do not add the following ports to TEST_DEPENDS to avoid cyclic dependencies:
 # - devel/p5-Test-WWW-Mechanize-Catalyst
 # - www/p5-Catalyst-Engine-PSGI
 # - www/p5-CatalystX-LeakChecker
@@ -57,7 +56,7 @@ BUILD_DEPENDS=	p5-CGI-Simple>=1.109:${PORTSDIR}/www/p5-CGI-Simple \
 		p5-URI>=1.65:${PORTSDIR}/net/p5-URI \
 		p5-URI-ws>=0.03:${PORTSDIR}/net/p5-URI-ws \
 		p5-libwww>=5.837:${PORTSDIR}/www/p5-libwww \
-		p5-namespace-autoclean>=0.09:${PORTSDIR}/devel/p5-namespace-autoclean \
+		p5-namespace-autoclean>=0.28:${PORTSDIR}/devel/p5-namespace-autoclean \
 		p5-namespace-clean>=0.23:${PORTSDIR}/devel/p5-namespace-clean
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 TEST_DEPENDS=	p5-IO-stringy>=0:${PORTSDIR}/devel/p5-IO-stringy \

@@ -23,6 +23,7 @@ USES=		autoreconf gettext gmake libtool pathfix pkgconfig \
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
 USE_XORG=	x11 xrandr xext
 SHEBANG_FILES=	files/usr/bin/cinnamon-desktop-migrate-mediakeys
+python_OLD_CMD=	/usr/bin/python2
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 PATHFIX_MAKEFILEIN=	Makefile.am

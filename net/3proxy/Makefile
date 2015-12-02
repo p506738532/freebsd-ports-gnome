@@ -2,12 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	3proxy
-PORTVERSION=	0.7.1.2
-PORTREVISION=	1
-DISTVERSIONPREFIX=	v
+PORTVERSION=	0.7.1.3
+DISTVERSIONPREFIX=	${PORTNAME}-
 CATEGORIES=	net
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	timp87@gmail.com
 COMMENT=	Proxy servers set (support HTTP(S), FTP, SOCKS, POP3, TCP & UDP)
 
 LICENSE=	APACHE20 BSD2CLAUSE GPLv2 GPLv3 LGPL21 LGPL3
@@ -29,7 +28,7 @@ post-patch:
 post-build:
 	${MV} ${WRKSRC}/src/proxy ${WRKSRC}/src/httppr
 	${MV} ${WRKSRC}/man/proxy.8 ${WRKSRC}/man/httppr.8
-	
+
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/lib/${PORTNAME}/ ${STAGEDIR}${DOCSDIR}/
 	cd ${WRKSRC}/src/ && ${INSTALL_PROGRAM} 3proxy countersutil dighosts ftppr icqpr msnpr mycrypt pop3p httppr smtpp socks tcppm udppm ${STAGEDIR}${PREFIX}/bin/

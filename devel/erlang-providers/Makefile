@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	providers
-PORTVERSION=	1.4.1
+PORTVERSION=	1.6.0
 CATEGORIES=	devel
 PKGNAMEPREFIX=	erlang-
 

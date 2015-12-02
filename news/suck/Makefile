@@ -20,7 +20,6 @@ SHEBANG_FILES=	sample/post_filter.pl
 GNU_CONFIGURE=	yes
 MAKE_ENV=	CHKHISTORY=chkhistory_db.o
 
-MAN1=		suck.1 rpost.1 testhost.1 lmove.1
 EX_SCRIPTS=	get.news.generic get.news.inn perl_kill.pl perl_xover.pl \
 		post_filter.pl put.news put.news.pl put.news.sm put.news.sm.pl
 EX_DATA=	suckkillfile.sample sucknewsrc.sample suckothermsgs.sample
@@ -51,7 +50,7 @@ CONFLICTS+=	suck-4.*
 .if ${PORT_OPTIONS:MINN}
 CFLAGS+=	-DNO_CONFIGDATA -I${LOCALBASE}/include/inn
 MAKE_ENV+=	DB_TYPE="-DUSE_INN23 -DDO_TAGGED_HASH"
-MAKE_ENV+=	DB_LIB="-linn -lstorage"
+MAKE_ENV+=	DB_LIB="-linn -lstorage -linnhist"
 MAKE_ENV+=	DB_LIB_LOC=-L${LOCALBASE}/news/lib
 MAKE_ENV+=	DB_INC_LOC="-I${LOCALBASE}/news/include -I${LOCALBASE}/news/include/inn"
 MAKE_ENV+=	INCDIR2=-I${LOCALBASE}/include

@@ -77,7 +77,6 @@
     SUBDIR += courier-pythonfilter
     SUBDIR += couriergraph
     SUBDIR += crm114
-    SUBDIR += cucipop
     SUBDIR += cvsmail
     SUBDIR += cyrus-imapd23
     SUBDIR += cyrus-imapd24
@@ -222,6 +221,7 @@
     SUBDIR += mailgraph
     SUBDIR += mailman
     SUBDIR += mailmgr
+    SUBDIR += mailpile
     SUBDIR += mailscanner
     SUBDIR += mailsync
     SUBDIR += mailtray
@@ -284,6 +284,8 @@
     SUBDIR += offlineimap
     SUBDIR += opendkim
     SUBDIR += opendmarc
+    SUBDIR += openemm2013
+    SUBDIR += openemm2015
     SUBDIR += opensmtpd
     SUBDIR += opensmtpd-devel
     SUBDIR += openwebmail
@@ -577,10 +579,12 @@
     SUBDIR += rubygem-actionmailer
     SUBDIR += rubygem-actionmailer4
     SUBDIR += rubygem-actionmailer41
+    SUBDIR += rubygem-email_reply_parser
     SUBDIR += rubygem-email_reply_parser-discourse
     SUBDIR += rubygem-exception_notification
     SUBDIR += rubygem-larch
     SUBDIR += rubygem-mail
+    SUBDIR += rubygem-mail_room
     SUBDIR += rubygem-mail25
     SUBDIR += rubygem-mailfactory
     SUBDIR += rubygem-pony

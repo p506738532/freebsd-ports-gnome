@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	unicorn
-PORTVERSION=	4.9.0
-PORTREVISION=	1
+PORTVERSION=	5.0.1
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
 
@@ -20,7 +19,11 @@ RUN_DEPENDS=	rubygem-kgio>=2.6:${PORTSDIR}/devel/rubygem-kgio \
 USE_RUBY=	yes
 USE_RUBYGEMS=	yes
 RUBYGEM_AUTOPLIST=	yes
+USES=		shebangfix
 
 PLIST_FILES=	bin/unicorn bin/unicorn_rails
+
+SHEBANG_FILES=	bin/unicorn* test/aggregate.rb
+ruby_OLD_CMD=	.*ruby
 
 .include <bsd.port.mk>

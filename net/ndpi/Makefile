@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	ndpi
-PORTVERSION=	1.6
-PORTREVISION=	1
+PORTVERSION=	1.7
 CATEGORIES=	net
 MASTER_SITES=	SF/ntop/nDPI
 DISTNAME=	nDPI-${PORTVERSION}
@@ -21,7 +20,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 LIBS+=		-ljson-c
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USES=	 	autoreconf libtool pathfix pkgconfig compiler:c++11-lang
+USES=	 	alias autoreconf libtool pathfix pkgconfig compiler:c++11-lang
 WRKSRC=		${WRKDIR}/nDPI-${PORTVERSION}
 INSTALL_TARGET=	install-strip
 

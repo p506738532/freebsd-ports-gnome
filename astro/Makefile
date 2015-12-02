@@ -4,7 +4,6 @@
     COMMENT = Astronomical ports
 
     SUBDIR += R-cran-maptools
-    SUBDIR += aa
     SUBDIR += accrete
     SUBDIR += astrometry
     SUBDIR += boinc-astropulse
@@ -13,8 +12,6 @@
     SUBDIR += celestia-gnome
     SUBDIR += celestia-gtk
     SUBDIR += cfitsio
-    SUBDIR += dgpsip
-    SUBDIR += ephem
     SUBDIR += fowsr
     SUBDIR += foxtrotgps
     SUBDIR += garmindev
@@ -90,13 +87,14 @@
     SUBDIR += pyephem
     SUBDIR += pyweather
     SUBDIR += qlandkartegt
+    SUBDIR += qmapshack
     SUBDIR += readosm
     SUBDIR += rmap
     SUBDIR += roadmap
     SUBDIR += roadnav
+    SUBDIR += routino
     SUBDIR += saoimage
     SUBDIR += sextractor
-    SUBDIR += sky2000
     SUBDIR += sscalc
     SUBDIR += stardates
     SUBDIR += starplot
@@ -111,7 +109,6 @@
     SUBDIR += wcslib
     SUBDIR += weather
     SUBDIR += weatherspect
-    SUBDIR += wmglobe
     SUBDIR += wmjupiter
     SUBDIR += wmmoonclock
     SUBDIR += wmsolar

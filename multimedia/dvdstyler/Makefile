@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	dvdstyler
-PORTVERSION=	2.9.2
+PORTVERSION=	2.9.4
 PORTEPOCH=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	SF
@@ -12,6 +12,7 @@ MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	WxWidgets frontend to dvd recoding and authoring programs
 
 LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip \
 		wxsvg>=1.2:${PORTSDIR}/graphics/wxsvg \
@@ -32,9 +33,8 @@ RUN_DEPENDS=	zip:${PORTSDIR}/archivers/zip \
 USES=		autoreconf compiler:c++11-lib gettext gmake pkgconfig tar:bzip2
 USE_CXXSTD=	gnu++11
 USE_WX=		3.0
-GNU_CONFIGURE=	yes
-WX_UNICODE=	yes
 WX_CONF_ARGS=	absolute
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_AVCONV_PATH="" OBJCXX="${CXX}"
 
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -62,8 +62,6 @@ pre-everything::
 post-patch:
 	@${REINPLACE_CMD} -e '/doc_DATA/s|COPYING||' \
 		${WRKSRC}/Makefile.am
-	@${REINPLACE_CMD} -e 's|=\(dvdstyler.png\)|=${PREFIX}/share/pixmaps/\1|' \
-		${WRKSRC}/data/dvdstyler.desktop
 	@${REINPLACE_CMD} -e 's|"sg\*"|"cd*"|g' \
 		${WRKSRC}/src/BurnDlg.cpp
 	@${REINPLACE_CMD} -e 's|/dev/dvd|${DEFAULT_DVD_DEVICE}|g' \

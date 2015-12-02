@@ -4,7 +4,6 @@
     COMMENT = Things that used to be on the desktop before computers were invented
 
     SUBDIR += affiche
-    SUBDIR += akamaru
     SUBDIR += alacarte
     SUBDIR += anamnesis
     SUBDIR += appwrapper
@@ -137,8 +136,6 @@
     SUBDIR += ladon
     SUBDIR += launchy
     SUBDIR += libgcal
-    SUBDIR += libopensync-plugin-file
-    SUBDIR += libopensync-plugin-sunbird
     SUBDIR += libopensync-plugin-vformat-devel
     SUBDIR += libstreamanalyzer
     SUBDIR += libstreams
@@ -153,7 +150,6 @@
     SUBDIR += menumaker
     SUBDIR += moregroupware
     SUBDIR += mozo
-    SUBDIR += mrundlg
     SUBDIR += multisync
     SUBDIR += multisync-backup
     SUBDIR += multisync-syncml
@@ -196,8 +192,8 @@
     SUBDIR += plasma-applet-yawp
     SUBDIR += plopfolio
     SUBDIR += preferences
-    SUBDIR += py-khal
     SUBDIR += py-bugwarrior
+    SUBDIR += py-khal
     SUBDIR += py-pycarddav
     SUBDIR += py-pystash
     SUBDIR += py-send2trash
@@ -225,7 +221,6 @@
     SUBDIR += simplegroupware
     SUBDIR += sliderule
     SUBDIR += spice-gtk
-    SUBDIR += steadyflow
     SUBDIR += strigi
     SUBDIR += strigiclient
     SUBDIR += strigidaemon
@@ -234,6 +229,7 @@
     SUBDIR += superkaramba
     SUBDIR += superswitcher
     SUBDIR += surrealtodo
+    SUBDIR += syncthing-gtk
     SUBDIR += systempreferences
     SUBDIR += tagutils
     SUBDIR += taskcoach
@@ -249,7 +245,6 @@
     SUBDIR += tomboy-plugin-latex
     SUBDIR += tomboy-plugin-reminder
     SUBDIR += tomboy-plugin-todo
-    SUBDIR += tomboy-plugin-wordcount
     SUBDIR += toolboxkit
     SUBDIR += tpb
     SUBDIR += treeline
@@ -264,7 +259,6 @@
     SUBDIR += when
     SUBDIR += wmpinboard
     SUBDIR += wyrd
-    SUBDIR += x-tile
     SUBDIR += x026
     SUBDIR += xcalendar
     SUBDIR += xchm

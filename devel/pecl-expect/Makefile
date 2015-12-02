@@ -2,13 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	expect
-PORTVERSION=	0.3.1
+PORTVERSION=	0.3.3
 CATEGORIES=	devel pear
 MASTER_SITES=	http://pecl.php.net/get/
 PKGNAMEPREFIX=	pecl-
 DIST_SUBDIR=	PECL
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	PHP extension for expect library
 
 LICENSE=	PHP301
