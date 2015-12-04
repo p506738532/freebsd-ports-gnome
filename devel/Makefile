@@ -2906,6 +2906,7 @@
     SUBDIR += p5-PerlIO-via-dynamic
     SUBDIR += p5-PerlIO-via-symlink
     SUBDIR += p5-PerlX-Maybe
+    SUBDIR += p5-PerlX-Maybe-XS
     SUBDIR += p5-Pid-File-Flock
     SUBDIR += p5-Pipeline
     SUBDIR += p5-Pithub
@@ -3915,7 +3916,6 @@
     SUBDIR += py-aspects
     SUBDIR += py-aspyct
     SUBDIR += py-astroid
-    SUBDIR += py-async
     SUBDIR += py-asyncio
     SUBDIR += py-atomicwrites
     SUBDIR += py-avro
@@ -4894,6 +4894,7 @@
     SUBDIR += rubygem-notiffany
     SUBDIR += rubygem-notify
     SUBDIR += rubygem-nprogress-rails
+    SUBDIR += rubygem-octopress-hooks
     SUBDIR += rubygem-oj
     SUBDIR += rubygem-omniauth_crowd
     SUBDIR += rubygem-omniauth_crowd-rails41
@@ -5045,6 +5046,7 @@
     SUBDIR += rubygem-timers
     SUBDIR += rubygem-tins
     SUBDIR += rubygem-tins0
+    SUBDIR += rubygem-titlecase
     SUBDIR += rubygem-toml
     SUBDIR += rubygem-transaction-simple
     SUBDIR += rubygem-travis
