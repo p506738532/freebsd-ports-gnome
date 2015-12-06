@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nemo-extensions
-PORTVERSION=	2.6.0
+PORTVERSION=	2.8.1
 CATEGORIES=	deskutils gnome
 DIST_SUBDIR=	gnome3
 
@@ -30,7 +30,8 @@ RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
-GH_TAGNAME=	2.6.x
+# there is no "offical" tag, so just pick the "latest"
+GH_TAGNAME=	468f760
 
 USE_GNOME=	gconf2 gnomeprefix gnomedocutils gtksourceview3 intlhack \
 		introspection:build libxml2 pygtk2
