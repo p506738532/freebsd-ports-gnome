@@ -27,7 +27,6 @@
     SUBDIR += fastjar
     SUBDIR += file-roller
     SUBDIR += fpc-bzip2
-    SUBDIR += fpc-paszlib
     SUBDIR += fpc-unzip
     SUBDIR += freetar
     SUBDIR += freeze
@@ -47,6 +46,7 @@
     SUBDIR += hs-zlib
     SUBDIR += hs-zlib-bindings
     SUBDIR += hs-zlib-enum
+    SUBDIR += innoextract
     SUBDIR += javatar
     SUBDIR += jzip.org
     SUBDIR += jzlib

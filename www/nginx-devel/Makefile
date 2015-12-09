@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nginx
-PORTVERSION=	1.9.7
-PORTREVISION=	1
+PORTVERSION=	1.9.8
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
 MASTER_SITES+=	LOCAL/osa
@@ -43,6 +42,7 @@ OPTIONS_DEFINE=	\
 	HTTP_REALIP \
 	HTTP_REWRITE \
 	HTTP_SECURE_LINK \
+	HTTP_SLICE \
 	HTTP_SSL \
 	HTTP_STATUS \
 	HTTP_SUB \
@@ -140,6 +140,7 @@ HTTP_RANDOM_INDEX_DESC=		Enable http_random_index module
 HTTP_REALIP_DESC=		Enable http_realip module
 HTTP_REWRITE_DESC=		Enable http_rewrite module
 HTTP_SECURE_LINK_DESC=		Enable http_secure_link module
+HTTP_SLICE_DESC=		Enable http_slice module
 HTTP_SSL_DESC=			Enable http_ssl module
 HTTP_STATUS_DESC=		Enable http_stub_status module
 HTTP_SUB_DESC=			Enable http_sub module
@@ -564,6 +565,10 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_tarantool-config
 CONFIGURE_ARGS+=--with-http_secure_link_module
 .endif
 
+.if ${PORT_OPTIONS:MHTTP_SLICE}
+CONFIGURE_ARGS+=--with-http_slice_module
+.endif
+
 .if ${PORT_OPTIONS:MHTTP_STATUS}
 CONFIGURE_ARGS+=--with-http_stub_status_module
 .endif
@@ -617,17 +622,16 @@ CONFIGURE_ARGS+=--add-module=${WRKDIR}/mod_zip-${NGINX_ZIP_VERSION}
 
 .if ${PORT_OPTIONS:MDRIZZLE}
 LIB_DEPENDS+=	libdrizzle.so:${PORTSDIR}/databases/libdrizzle
-NGINX_DRIZZLE_VERSION=	0.1.8
+NGINX_DRIZZLE_VERSION=	0.1.9
 GH_ACCOUNT+=	openresty:drizzle
 GH_PROJECT+=	drizzle-nginx-module:drizzle
 GH_TAGNAME+=	v${NGINX_DRIZZLE_VERSION}:drizzle
 CONFIGURE_ARGS+=--add-module=${WRKSRC_drizzle}
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-openresty-drizzle-nginx-module-config \
-		${PATCHDIR}/extra-patch-ngx_http_drizzle_util.c
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-openresty-drizzle-nginx-module-config
 .endif
 
 .if ${PORT_OPTIONS:MDYNAMIC_UPSTREAM}
-NGINX_DYNAMIC_UPSTREAM_VERSION=	0.1.0
+NGINX_DYNAMIC_UPSTREAM_VERSION=	0.1.1
 GH_ACCOUNT+=	cubicdaiya:dyn_upstream
 GH_PROJECT+=	ngx_dynamic_upstream:dyn_upstream
 GH_TAGNAME+=	v${NGINX_DYNAMIC_UPSTREAM_VERSION}:dyn_upstream
@@ -719,7 +723,7 @@ CONFIGURE_ARGS+=--without-http_rewrite_module \
 .endif
 
 .if ${PORT_OPTIONS:MPASSENGER}
-PASSENGER_VERSION=	5.0.21
+PASSENGER_VERSION=	5.0.22
 MASTER_SITES+=	http://s3.amazonaws.com/phusion-passenger/releases/:passenger
 DISTFILES+=	passenger-${PASSENGER_VERSION}.tar.gz:passenger
 CONFIGURE_ARGS+=--add-module=${WRKDIR}/passenger-${PASSENGER_VERSION}/src/nginx_module
@@ -818,7 +822,7 @@ CONFIGURE_ARGS+=--add-module=${WRKSRC_small_light}
 .endif
 
 .if ${PORT_OPTIONS:MSRCACHE}
-NGINX_SRCACHE_VERSION=	0.29
+NGINX_SRCACHE_VERSION=	0.30
 GH_ACCOUNT+=	openresty:srcache
 GH_PROJECT+=	srcache-nginx-module:srcache
 GH_TAGNAME+=	v${NGINX_SRCACHE_VERSION}:srcache
@@ -998,11 +1002,6 @@ post-patch:
 		's!%%PREFIX%%!${LOCALBASE}!g' \
 		${WRKSRC_drizzle}/config
 .endif
-.if ${PORT_OPTIONS:MDYNAMIC_UPSTREAM}
-	@${REINPLACE_CMD} \
-		's!ngx_ngx_slab_alloc!ngx_slab_alloc!g' \
-		${WRKSRC_dyn_upstream}/src/ngx_inet_slab.c
-.endif
 # Respect CFLAGS by remove needless --std=c99 flag
 .if ${PORT_OPTIONS:MGRIDFS}
 	@${REINPLACE_CMD} \
@@ -1031,11 +1030,6 @@ post-patch:
 	@${REINPLACE_CMD} \
 		's!%%PREFIX%%!${LOCALBASE}!g' \
 		${WRKDIR}/nginx-sflow-module-${NGINX_SFLOW_VERSION}/ngx_http_sflow_config.h
-.endif
-.if ${PORT_OPTIONS:MLUA}
-	@${REINPLACE_CMD} 's!ngx_http_set_connection_log!ngx_set_connection_log!g' \
-		${WRKSRC_lua}/src/ngx_http_lua_initworkerby.c \
-		${WRKSRC_lua}/src/ngx_http_lua_timer.c
 .endif
 .if ${PORT_OPTIONS:MICONV}
 	@${REINPLACE_CMD} \
