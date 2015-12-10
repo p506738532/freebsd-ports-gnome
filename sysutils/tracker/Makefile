@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	tracker
-PORTVERSION=	1.6.0
+PORTVERSION=	1.6.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -45,7 +45,8 @@ CONFIGURE_ARGS=	--with-session-bus-services-dir=${LOCALBASE}/share/dbus-1/servic
 		--enable-generic-media-extractor=gstreamer
 # disable evolution miner until tracker fixes the dep
 CONFIGURE_ARGS+=	--disable-miner-evolution
-CONFIGURE_ENV+=		enable_miner_evolution=no
+CONFIGURE_ENV+=		enable_miner_evolution=no \
+			DATADIRNAME=share
 INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.freedesktop.Tracker.DB.gschema.xml \
 		org.freedesktop.Tracker.Extract.gschema.xml \
@@ -57,7 +58,7 @@ GLIB_SCHEMAS=	org.freedesktop.Tracker.DB.gschema.xml \
 		org.freedesktop.Tracker.enums.xml \
 		org.freedesktop.Tracker.gschema.xml
 
-PLIST_SUB=	TRACKER_VER="1.0" LIBVER=600
+PLIST_SUB=	TRACKER_VER="1.0" LIBVER=601
 
 OPTIONS_DEFINE=		AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINERS \
 			WEB_MINERS
