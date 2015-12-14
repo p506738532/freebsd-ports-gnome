@@ -133,7 +133,6 @@
     SUBDIR += firewalk
     SUBDIR += fl0p
     SUBDIR += flawfinder
-    SUBDIR += fpc-hash
     SUBDIR += fpc-openssl
     SUBDIR += fpm2
     SUBDIR += fprint_demo
@@ -643,6 +642,7 @@
     SUBDIR += p5-OpenCA-PKCS7
     SUBDIR += p5-OpenCA-REQ
     SUBDIR += p5-OpenCA-X509
+    SUBDIR += p5-Parse-Snort
     SUBDIR += p5-PBKDF2-Tiny
     SUBDIR += p5-PGP
     SUBDIR += p5-PGP-Sign
@@ -761,6 +761,7 @@
     SUBDIR += pinentry-gtk2
     SUBDIR += pinentry-qt4
     SUBDIR += pinentry-tty
+    SUBDIR += pixiewps
     SUBDIR += pkcrack
     SUBDIR += pkcs11-dump
     SUBDIR += pkcs11-gateway
@@ -847,6 +848,7 @@
     SUBDIR += py-pycrypto
     SUBDIR += py-pycryptopp
     SUBDIR += py-pydeep
+    SUBDIR += py-pyelliptic
     SUBDIR += py-pylibacl
     SUBDIR += py-pyme
     SUBDIR += py-pyptlib
@@ -1061,6 +1063,7 @@
     SUBDIR += tcpcrypt
     SUBDIR += tinc
     SUBDIR += tinyca
+    SUBDIR += titus
     SUBDIR += tlswrap
     SUBDIR += tmux-cssh
     SUBDIR += tor

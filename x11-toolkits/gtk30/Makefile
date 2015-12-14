@@ -4,7 +4,7 @@
 # adwaita-icon-theme, gnome-themes-standard and mate-themes
 
 PORTNAME=	gtk
-PORTVERSION=	3.16.6
+PORTVERSION=	3.16.7
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME/sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -47,7 +47,7 @@ LIBS+=		-L${LOCALBASE}/lib
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
-LIBVERSION=	0.1600.6
+LIBVERSION=	0.1600.7
 PLIST_SUB+=	LIBVERSION=${LIBVERSION}
 
 GLIB_SCHEMAS=	org.gtk.Demo.gschema.xml \
@@ -78,14 +78,8 @@ DEBUG_CONFIGURE_ENABLE=debug
 
 # GTK+ 3.17 has a beter way
 TYPEAHEAD_DESC=		Re-enable type-a-head functionality in file chooser
-
-# needed for the exists() check, booo
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MTYPEAHEAD}
-EXTRA_PATCHES+=	${FILESDIR}/extra-gtk_gtkfilechooserwidget.c \
+TYPEAHEAD_EXTRA_PATCHES=${FILESDIR}/extra-gtk_gtkfilechooserwidget.c \
 		${FILESDIR}/extra-gtk_ui_gtkfilechooserwidget.ui
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|[{]libdir[}]/locale|{datadir}/locale|g' \
@@ -94,10 +88,11 @@ post-patch:
 		${WRKSRC}/gtk/Makefile.in
 
 pre-configure:
-.if !exists(${LOCALBASE}/libdata/pkgconfig/cairo-xlib.pc)
-	@${ECHO_CMD} "${PKGNAME}: Needs cairo with X11 support enabled."
-	@${FALSE}
-.endif
+# .if !exists() evaluates too early before cairo has a chance to be installed
+	@if ! pkg-config --exists cairo-xlib; then \
+		${ECHO_MSG} "${PKGNAME}: Needs cairo with X11 support enabled."; \
+		${FALSE}; \
+	fi
 
 pre-build:
 	@${RM} -rf ${WRKSRC}/docs/gtk.info*

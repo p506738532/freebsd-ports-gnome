@@ -5,7 +5,6 @@
 
     SUBDIR += MT
     SUBDIR += R-cran-RgoogleMaps
-    SUBDIR += R-cran-Rpad
     SUBDIR += R-cran-htmlwidgets
     SUBDIR += R-cran-httpuv
     SUBDIR += R-cran-httr
@@ -247,6 +246,7 @@
     SUBDIR += goose
     SUBDIR += gpx2map
     SUBDIR += grafana
+    SUBDIR += grafana2
     SUBDIR += grails
     SUBDIR += gregarius
     SUBDIR += groupoffice
@@ -354,7 +354,8 @@
     SUBDIR += jdresolve
     SUBDIR += jericho-html
     SUBDIR += jesred
-    SUBDIR += jetty
+    SUBDIR += jetty8
+    SUBDIR += jetty9
     SUBDIR += jinzora
     SUBDIR += jmeter
     SUBDIR += joomla15
@@ -419,10 +420,10 @@
     SUBDIR += man2web
     SUBDIR += mathjax
     SUBDIR += mathopd
-    SUBDIR += mediawiki119
     SUBDIR += mediawiki123
     SUBDIR += mediawiki124
     SUBDIR += mediawiki125
+    SUBDIR += mediawiki126
     SUBDIR += mergelog
     SUBDIR += mgstat
     SUBDIR += mhonarc
@@ -570,6 +571,7 @@
     SUBDIR += npm
     SUBDIR += npm012
     SUBDIR += nspluginwrapper
+    SUBDIR += obhttpd
     SUBDIR += ocaml-net
     SUBDIR += ocsigen
     SUBDIR += offline-npm
@@ -1085,6 +1087,7 @@
     SUBDIR += p5-Mojolicious-Plugin-SetUserGroup
     SUBDIR += p5-Mojolicious-Plugin-TtRenderer
     SUBDIR += p5-Mojolicious-Plugin-YamlConfig
+    SUBDIR += p5-MojoX-Log-Dispatch-Simple
     SUBDIR += p5-Monoceros
     SUBDIR += p5-Mozilla-CA
     SUBDIR += p5-Net-Akismet
@@ -1135,6 +1138,7 @@
     SUBDIR += p5-Plack-Middleware-Auth-Digest
     SUBDIR += p5-Plack-Middleware-AutoRefresh
     SUBDIR += p5-Plack-Middleware-ConsoleLogger
+    SUBDIR += p5-Plack-Middleware-CrossOrigin
     SUBDIR += p5-Plack-Middleware-Debug
     SUBDIR += p5-Plack-Middleware-Deflater
     SUBDIR += p5-Plack-Middleware-Expires
@@ -1148,6 +1152,7 @@
     SUBDIR += p5-Plack-Middleware-JSConcat
     SUBDIR += p5-Plack-Middleware-MemoryUsage
     SUBDIR += p5-Plack-Middleware-MethodOverride
+    SUBDIR += p5-Plack-Middleware-NoMultipleSlashes
     SUBDIR += p5-Plack-Middleware-Precompressed
     SUBDIR += p5-Plack-Middleware-RemoveRedundantBody
     SUBDIR += p5-Plack-Middleware-Reproxy
@@ -1525,6 +1530,7 @@
     SUBDIR += py-django-caching-app-plugins
     SUBDIR += py-django-classy-tags
     SUBDIR += py-django-cms
+    SUBDIR += py-django-contact-form
     SUBDIR += py-django-contrib-comments
     SUBDIR += py-django-crispy-forms
     SUBDIR += py-django-datetime-widget
@@ -1545,15 +1551,19 @@
     SUBDIR += py-django-mezzanine-grappelli
     SUBDIR += py-django-mptt
     SUBDIR += py-django-openid-auth
+    SUBDIR += py-django-overextends
     SUBDIR += py-django-photologue
     SUBDIR += py-django-picklefield
     SUBDIR += py-django-pipeline
     SUBDIR += py-django-pipeline12
+    SUBDIR += py-django-pipeline13
+    SUBDIR += py-django-pipeline14
     SUBDIR += py-django-piston
     SUBDIR += py-django-profiles
     SUBDIR += py-django-redis
     SUBDIR += py-django-registration
     SUBDIR += py-django-registration-defaults
+    SUBDIR += py-django-registration-redux
     SUBDIR += py-django-reversion
     SUBDIR += py-django-sekizai
     SUBDIR += py-django-signals-ahoy
@@ -1720,6 +1730,8 @@
     SUBDIR += py-qp
     SUBDIR += py-qpy
     SUBDIR += py-qt4-webkit
+    SUBDIR += py-qt5-webkit
+    SUBDIR += py-qt5-webkitwidgets
     SUBDIR += py-rackspace-monitoring
     SUBDIR += py-recaptcha
     SUBDIR += py-requestbuilder
@@ -1729,6 +1741,7 @@
     SUBDIR += py-requests-toolbelt
     SUBDIR += py-requests1
     SUBDIR += py-restclient
+    SUBDIR += py-rfc3986
     SUBDIR += py-rfc3987
     SUBDIR += py-rhodecode
     SUBDIR += py-routes
@@ -1924,6 +1937,7 @@
     SUBDIR += rubygem-mousetrap-rails
     SUBDIR += rubygem-multipart-post
     SUBDIR += rubygem-nanoc
+    SUBDIR += rubygem-nested_form
     SUBDIR += rubygem-net-http-digest_auth
     SUBDIR += rubygem-net-http-digest_auth11
     SUBDIR += rubygem-net-http-persistent
@@ -1931,6 +1945,7 @@
     SUBDIR += rubygem-net-http-pipeline
     SUBDIR += rubygem-nicovideo
     SUBDIR += rubygem-ntlm-http
+    SUBDIR += rubygem-octopress
     SUBDIR += rubygem-pagerduty
     SUBDIR += rubygem-passenger
     SUBDIR += rubygem-puma
@@ -2037,6 +2052,7 @@
     SUBDIR += smb_auth
     SUBDIR += snarf
     SUBDIR += sogo
+    SUBDIR += sogo-activesync
     SUBDIR += spawn-fcgi
     SUBDIR += spdylay
     SUBDIR += speedtest-mini

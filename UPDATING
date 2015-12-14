@@ -5,6 +5,102 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20151210:
+  AFFECTS: users of comms/gammu
+  AUTHOR: vanilla@FreeBSD.org
+
+  The python binding of comms/gammu were split from the main port. To get them you
+  need to install comms/py-gammu.
+
+20151206:
+  AFFECTS: users of mail/postfixadmin
+  AUTHOR: riggs@FreeBSD.org
+
+  Caveat when updating to version 2.93: If you have an existing
+  configuration and are NOT using the recommended practice of putting your
+  settings changes in config.local.php:
+
+  Copy config.inc.php to config.local.php prior to upgrading, then revise
+  config.local.php for the current version afterward.
+
+  Postfixadmin will not function correctly unless correct and complete
+  data structures are placed in config.inc.php. Therefore the file must be
+  upgraded as part of the package and any changes to config.inc.php will
+  be overwritten.
+
+  Detailed information regarding this procedure is provided in step 3 of
+  the installation instructions in ${DATADIR}/INSTALL.TXT (by default
+  /usr/local/share/postfixadmin/INSTALL.TXT).
+
+20151205:
+  AFFECTS: users of devel/ncurses
+  AUTHOR: bapt@FreeBSD.org
+
+  ncurses has been updated to 6.0.
+  If you are using binary pkg, 'pkg upgrade' will do the right thing.
+  Users of portmaster/portupgrade must rebuild all ports which depend
+  on ncurses.
+
+  Portmaster users:
+      portmaster -w -r ncurses
+  Portupgrade users:
+      portupgrade -fr devel/ncurses
+
+20151203:
+  AFFECTS: users of x11-toolkits/qt4-gui or x11-toolkits/qt5-gui
+  AUTHOR: kde@FreeBSD.org
+
+  Back in mid-2012, pkg-message was added to the port suggesting changes to the
+  default shared memory limits in loader.conf(5). Since then, the default
+  limits have been changed and the values suggested by the port are no longer
+  sensible. If you have changed the following values in loader.conf(5) due to
+  qt4-gui's or qt5-gui's pkg-message, please considering removing them and
+  using the default settings:
+  * kern.ipc.shmall
+  * kern.ipc.shmmni
+  * kern.ipc.shmseg
+  See base r209037 and ports PR 202927 for more context.
+
+20151203:
+  AFFECTS: users of sysutils/logstash
+  AUTHOR: junovitch@FreeBSD.org
+
+  Logstash has been updated to the 2.1.0 release. The embedded ElasticSearch
+  instance is no longer supported. If in use, end users must update
+  logstash.conf to point to the URL of an ElasticSearch instance.
+
+20151130:
+  AFFECTS: users of net/samba43
+  AUTHOR: timur@FreeBSD.org
+
+  A new version of Samba server that has better integration with Windows 10.
+  This is still experimental and there were reports that rolling upgrade from
+  previous version of Samba fails to work.
+
+  Please, backup all relevant files from /var/db/samba4/ directory, as well
+  as configuration files.
+
+  Follow https://wiki.samba.org/index.php/Updating_Samba for the upgrade path.
+
+20151130:
+  AFFECTS: users of net/samba4, net/samba41, net/samba42
+  AUTHOR: timur@FreeBSD.org
+
+  Recent versions of devel/talloc, devel/tevent, database/tdb, database/ldb
+  contained infinit recursive call to the strtol* set of replacement functions,
+  which lead to coredumps. Unofficial patch was added meanwhile, but now
+  official version of the fixed libs were released. If your version of
+  net/samba4 works fine you don't need to recompile it. Other ports were also
+  upgraded and some bugs were fixed in upstream.
+
+20151122:
+  AFFECTS: users of audio/audacity
+  AUTHOR: riggs@FreeBSD.org
+
+  Audacity has been upgraded to version 2.1.1. Changes in its settings
+  processing may prevent it from starting. If this happens, removing its
+  user-specific configuration directory ~/.audacity-data resolves this.
+
 20151118:
   AFFECTS: users of mail/rmilter
   AUTHOR: vsevolod@FreeBSD.org
@@ -541,7 +637,7 @@ you update your ports collection, before attempting any port upgrades.
 
 20150615:
   AFFECTS: users of security/libressl
-  AUTHOR: brnrd@FreeBSD.org 
+  AUTHOR: brnrd@FreeBSD.org
 
   After upgrading libressl, manually update all packages that depend on
   this library since its version has changed. Normally, you can obtain the
@@ -1249,7 +1345,7 @@ AUTHOR: ohauer@FreeBSD.org
 
 20141215:
   AFFECTS: users of emulators/linux_base-f10 and emulators/linux_base-c6
-  AUTHOR: sbruno@freebsd.org
+  AUTHOR: sbruno@FreeBSD.org
 
   The CentOS ports are now the default for stable/10 (after revision 275807).
   See UPDATING entry 20141209 for details on migration of systems.
@@ -1273,7 +1369,7 @@ AUTHOR: ohauer@FreeBSD.org
 
 20141209:
   AFFECTS: users of emulators/linux_base-f10 and emulators/linux_base-c6
-  AUTHOR: xmj@freebsd.org
+  AUTHOR: xmj@FreeBSD.org
 
   The CentOS ports infrastructure has replaced Fedora 10 as default.
 
@@ -2603,7 +2699,7 @@ AUTHOR: ohauer@FreeBSD.org
 
     1) distribute-0.6.35-py2.7.egg
     2) setuptools-0.6c11-py2.7.egg
-    3) *Any* version of setuptools directly from PyPi via pip or easy_install
+    3) *Any* version of setuptools directly from PyPI via pip or easy_install
 
   More information is available here:
 
@@ -7001,7 +7097,7 @@ AUTHOR: ohauer@FreeBSD.org
 
 20110928:
   AFFECTS: users of www/nginx-devel
-  AUTHOR: osa@FreeBSD.ORG
+  AUTHOR: osa@FreeBSD.org
 
   Note: 1.1.4 release introduces several API changes which may affect
   third-party modules.

@@ -11,6 +11,7 @@
     SUBDIR += R-cran-KFAS
     SUBDIR += R-cran-LearnBayes
     SUBDIR += R-cran-MCMCpack
+    SUBDIR += R-cran-MSwM
     SUBDIR += R-cran-MatrixModels
     SUBDIR += R-cran-NMF
     SUBDIR += R-cran-RHmm
@@ -19,6 +20,7 @@
     SUBDIR += R-cran-RcppEigen
     SUBDIR += R-cran-SparseM
     SUBDIR += R-cran-SuppDists
+    SUBDIR += R-cran-VGAM
     SUBDIR += R-cran-Zelig
     SUBDIR += R-cran-bdsmatrix
     SUBDIR += R-cran-car
@@ -35,8 +37,10 @@
     SUBDIR += R-cran-irlba
     SUBDIR += R-cran-labeling
     SUBDIR += R-cran-lme4
+    SUBDIR += R-cran-maxLik
     SUBDIR += R-cran-memisc
     SUBDIR += R-cran-minqa
+    SUBDIR += R-cran-miscTools
     SUBDIR += R-cran-mvtnorm
     SUBDIR += R-cran-nloptr
     SUBDIR += R-cran-nnls
@@ -684,7 +688,7 @@
     SUBDIR += wcalc
     SUBDIR += wfmath
     SUBDIR += why3
-    SUBDIR += why3-gpl
+    SUBDIR += why3-spark
     SUBDIR += wingz3
     SUBDIR += wxMaxima
     SUBDIR += x12arima
