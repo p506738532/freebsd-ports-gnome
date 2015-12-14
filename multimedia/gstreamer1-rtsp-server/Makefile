@@ -2,13 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	gstreamer1-rtsp-server
-PORTVERSION=	1.6.1
+PORTVERSION=	1.6.2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-rtsp-server/
 DISTNAME=	gst-rtsp-server-${PORTVERSION}
 
 MAINTAINER=	multimedia@FreeBSD.org
-COMMENT=	Gstreamer library for building a RTSP server
+COMMENT=	GStreamer library for building a RTSP server
 
 USES=		gmake libtool pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
