@@ -655,6 +655,7 @@
     SUBDIR += p5-ODF-lpOD
     SUBDIR += p5-OpenOffice-OODoc
     SUBDIR += p5-PDF-API2
+    SUBDIR += p5-PDF-API2-Simple
     SUBDIR += p5-PDF-API3
     SUBDIR += p5-PDF-Create
     SUBDIR += p5-PDF-FromHTML
@@ -1260,6 +1261,8 @@
     SUBDIR += py-qrcode
     SUBDIR += py-qt4-xml
     SUBDIR += py-qt4-xmlpatterns
+    SUBDIR += py-qt5-xml
+    SUBDIR += py-qt5-xmlpatterns
     SUBDIR += py-rdflib
     SUBDIR += py-regex
     SUBDIR += py-reverend

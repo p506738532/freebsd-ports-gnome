@@ -1054,7 +1054,6 @@
     SUBDIR += jech-dht
     SUBDIR += jenkins
     SUBDIR += jenkins-lts
-    SUBDIR += jep
     SUBDIR += jgoodies-common
     SUBDIR += jiic
     SUBDIR += jline
@@ -2001,6 +2000,7 @@
     SUBDIR += p5-Data-SExpression
     SUBDIR += p5-Data-Section
     SUBDIR += p5-Data-Section-Simple
+    SUBDIR += p5-Data-Serializable
     SUBDIR += p5-Data-Serializer
     SUBDIR += p5-Data-Serializer-Sereal
     SUBDIR += p5-Data-ShowTable
@@ -2558,6 +2558,7 @@
     SUBDIR += p5-Log-Handler
     SUBDIR += p5-Log-Log4perl
     SUBDIR += p5-Log-Log4perl-Appender-RabbitMQ
+    SUBDIR += p5-Log-Log4perl-Appender-Socket-UNIX
     SUBDIR += p5-Log-Log4perl-Tiny
     SUBDIR += p5-Log-Message
     SUBDIR += p5-Log-Message-Simple
@@ -4090,6 +4091,7 @@
     SUBDIR += py-jdcal
     SUBDIR += py-jedi
     SUBDIR += py-jellyfish
+    SUBDIR += py-jep
     SUBDIR += py-jira
     SUBDIR += py-jmespath
     SUBDIR += py-joblib
@@ -4126,7 +4128,7 @@
     SUBDIR += py-manuel
     SUBDIR += py-mccabe
     SUBDIR += py-meliae
-    SUBDIR += py-memoryprofiler
+    SUBDIR += py-memory_profiler
     SUBDIR += py-mercurialserver
     SUBDIR += py-mez_xml
     SUBDIR += py-mimeparse
@@ -4176,6 +4178,7 @@
     SUBDIR += py-phpserialize
     SUBDIR += py-pika
     SUBDIR += py-pip
+    SUBDIR += py-pkgconfig
     SUBDIR += py-plan
     SUBDIR += py-plex
     SUBDIR += py-pluggy
@@ -4259,6 +4262,14 @@
     SUBDIR += py-qt4-script
     SUBDIR += py-qt4-scripttools
     SUBDIR += py-qt4-test
+    SUBDIR += py-qt5
+    SUBDIR += py-qt5-core
+    SUBDIR += py-qt5-dbus
+    SUBDIR += py-qt5-dbussupport
+    SUBDIR += py-qt5-designer
+    SUBDIR += py-qt5-designerplugin
+    SUBDIR += py-qt5-qscintilla2
+    SUBDIR += py-qt5-test
     SUBDIR += py-rauth
     SUBDIR += py-raven
     SUBDIR += py-rednose
@@ -4370,6 +4381,7 @@
     SUBDIR += py-unittestplus
     SUBDIR += py-urlimport
     SUBDIR += py-urwid
+    SUBDIR += py-urwidtrees
     SUBDIR += py-usb
     SUBDIR += py-user_agents
     SUBDIR += py-utils
@@ -4524,6 +4536,8 @@
     SUBDIR += qross
     SUBDIR += qscintilla2
     SUBDIR += qscintilla2-designerplugin
+    SUBDIR += qscintilla2-qt5
+    SUBDIR += qscintilla2-designerplugin-qt5
     SUBDIR += qt4
     SUBDIR += qt4-assistant
     SUBDIR += qt4-assistant-adp
