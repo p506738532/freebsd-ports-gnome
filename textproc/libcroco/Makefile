@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libcroco
-PORTVERSION=	0.6.10
+PORTVERSION=	0.6.11
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
 
