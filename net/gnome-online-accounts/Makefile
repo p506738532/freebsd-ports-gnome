@@ -29,6 +29,8 @@ INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
+CONFIGURE_ARGS=	--enable-lastfm
+
 GLIB_SCHEMAS=	org.gnome.online-accounts.gschema.xml
 
 # for webkit2-gtk3
