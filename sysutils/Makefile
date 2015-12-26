@@ -105,7 +105,6 @@
     SUBDIR += btsixad
     SUBDIR += bulk_extractor
     SUBDIR += busybox
-    SUBDIR += busybox-unstable
     SUBDIR += byobu
     SUBDIR += cbsd
     SUBDIR += ccd2iso
@@ -731,6 +730,7 @@
     SUBDIR += php55-posix
     SUBDIR += php56-fileinfo
     SUBDIR += php56-posix
+    SUBDIR += phttpget
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
@@ -889,9 +889,9 @@
     SUBDIR += rubygem-hammer_cli_foreman_salt
     SUBDIR += rubygem-hammer_cli_foreman_ssh
     SUBDIR += rubygem-hiera
-    SUBDIR += rubygem-hieracles
     SUBDIR += rubygem-hiera-file
     SUBDIR += rubygem-hiera1
+    SUBDIR += rubygem-hieracles
     SUBDIR += rubygem-librarian-puppet
     SUBDIR += rubygem-log4r
     SUBDIR += rubygem-logify

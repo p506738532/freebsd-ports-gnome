@@ -621,6 +621,7 @@
     SUBDIR += p5-Lingua-EN-Words2Nums
     SUBDIR += p5-Lingua-Ident
     SUBDIR += p5-Lingua-Identify
+    SUBDIR += p5-Lingua-Identify-CLD
     SUBDIR += p5-Lingua-Ispell
     SUBDIR += p5-Lingua-PT-Stemmer
     SUBDIR += p5-Lingua-Preferred
@@ -1209,6 +1210,7 @@
     SUBDIR += py-chardet
     SUBDIR += py-cloud_sptheme
     SUBDIR += py-creole
+    SUBDIR += py-curator
     SUBDIR += py-diff-match-patch
     SUBDIR += py-docutils
     SUBDIR += py-dsv
@@ -1307,9 +1309,9 @@
     SUBDIR += py-zope.tal
     SUBDIR += py-zpt
     SUBDIR += py2html
+    SUBDIR += py3-MarkupSafe
     SUBDIR += py3-chardet
     SUBDIR += py3-libxml2
-    SUBDIR += py3-MarkupSafe
     SUBDIR += pychm
     SUBDIR += qprint
     SUBDIR += qstardict
