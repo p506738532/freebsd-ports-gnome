@@ -5,12 +5,10 @@ PORTNAME=	plan9port
 PORTVERSION=	20140306
 PORTREVISION=	4
 CATEGORIES=	devel plan9
-MASTER_SITES=	http://swtch.com/${PORTNAME}/
+MASTER_SITES=	https://plan9port.googlecode.com/files/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Port of many Plan 9 programs to Unix-like operating systems
-
-BROKEN=		unfetchable
 
 LICENSE=	LUCENT
 LICENSE_NAME=	Lucent Public License Version 1.02
@@ -43,7 +41,7 @@ SHEBANG_FILES=	acid/transcript \
 		unix/man/fixurls
 USE_PERL5=	build
 USE_XORG=	x11 xt xi xaw
-WRKSRC=		${WRKDIR}/plan9
+WRKSRC=		${WRKDIR}/${PORTNAME}
 PLIST=		${WRKDIR}/.PLIST
 SUB_FILES=	pkg-message
 REINPLACE_ARGS=	-i ""		# necessary since installs via recursive copy

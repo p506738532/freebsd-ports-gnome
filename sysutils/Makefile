@@ -104,6 +104,7 @@
     SUBDIR += bsdstats
     SUBDIR += btsixad
     SUBDIR += bulk_extractor
+    SUBDIR += burp
     SUBDIR += busybox
     SUBDIR += byobu
     SUBDIR += cbsd
@@ -729,7 +730,6 @@
     SUBDIR += php55-posix
     SUBDIR += php56-fileinfo
     SUBDIR += php56-posix
-    SUBDIR += phttpget
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof

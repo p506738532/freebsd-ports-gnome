@@ -1055,7 +1055,6 @@
     SUBDIR += jech-dht
     SUBDIR += jenkins
     SUBDIR += jenkins-lts
-    SUBDIR += jgoodies-common
     SUBDIR += jiic
     SUBDIR += jline
     SUBDIR += jna
@@ -1489,7 +1488,6 @@
     SUBDIR += mongo-cxx-driver
     SUBDIR += mono-addins
     SUBDIR += monodevelop
-    SUBDIR += monodevelop-database
     SUBDIR += monotone
     SUBDIR += monotone-viz
     SUBDIR += motor
@@ -3970,6 +3968,7 @@
     SUBDIR += py-configobj
     SUBDIR += py-configparser
     SUBDIR += py-construct
+    SUBDIR += py-contextlib2
     SUBDIR += py-country
     SUBDIR += py-cov-core
     SUBDIR += py-coverage
@@ -3995,7 +3994,6 @@
     SUBDIR += py-diazo
     SUBDIR += py-dirspec
     SUBDIR += py-distorm
-    SUBDIR += py-distutils-extra
     SUBDIR += py-django-rq
     SUBDIR += py-django-tastypie-mongoengine
     SUBDIR += py-django16-tastypie-mongoengine
@@ -4068,7 +4066,7 @@
     SUBDIR += py-grizzled
     SUBDIR += py-grouch
     SUBDIR += py-gyp-devel
-    SUBDIR += py-hashring
+    SUBDIR += py-hash_ring
     SUBDIR += py-hghooks
     SUBDIR += py-hgsubversion
     SUBDIR += py-hgtools
@@ -4150,6 +4148,7 @@
     SUBDIR += py-mx-experimental
     SUBDIR += py-mygpoclient
     SUBDIR += py-nagioscheck
+    SUBDIR += py-natsort
     SUBDIR += py-natural
     SUBDIR += py-ncurses
     SUBDIR += py-nose
@@ -4208,6 +4207,7 @@
     SUBDIR += py-pycalendar
     SUBDIR += py-pycallgraph
     SUBDIR += py-pycerberus
+    SUBDIR += py-pycmd
     SUBDIR += py-pycparser
     SUBDIR += py-pydasm
     SUBDIR += py-pydoop
@@ -4239,6 +4239,7 @@
     SUBDIR += py-pytest-timeout
     SUBDIR += py-pytest-xdist
     SUBDIR += py-python-bugzilla
+    SUBDIR += py-python-distutils-extra
     SUBDIR += py-python-jenkins
     SUBDIR += py-python-pcre
     SUBDIR += py-python-statsd
@@ -4374,6 +4375,7 @@
     SUBDIR += py-tw.forms
     SUBDIR += py-twiggy
     SUBDIR += py-twisted
+    SUBDIR += py-twisted152
     SUBDIR += py-twistedCore
     SUBDIR += py-twistedFlow
     SUBDIR += py-twistedRunner
@@ -4803,6 +4805,7 @@
     SUBDIR += rubygem-fog-json
     SUBDIR += rubygem-font-awesome-rails
     SUBDIR += rubygem-font-awesome-rails-rails4
+    SUBDIR += rubygem-foreigner
     SUBDIR += rubygem-foreman
     SUBDIR += rubygem-formatador
     SUBDIR += rubygem-gdata
@@ -4869,6 +4872,7 @@
     SUBDIR += rubygem-librarian
     SUBDIR += rubygem-librarianp
     SUBDIR += rubygem-libyajl2
+    SUBDIR += rubygem-licensee
     SUBDIR += rubygem-listen
     SUBDIR += rubygem-little-plugger
     SUBDIR += rubygem-locale
@@ -4933,6 +4937,7 @@
     SUBDIR += rubygem-pkg-config
     SUBDIR += rubygem-platform
     SUBDIR += rubygem-plist
+    SUBDIR += rubygem-polyamorous
     SUBDIR += rubygem-polyglot
     SUBDIR += rubygem-popen4
     SUBDIR += rubygem-posix-spawn
@@ -4956,6 +4961,7 @@
     SUBDIR += rubygem-rainbow
     SUBDIR += rubygem-rake
     SUBDIR += rubygem-rake-compiler
+    SUBDIR += rubygem-ransack
     SUBDIR += rubygem-rapt
     SUBDIR += rubygem-rash
     SUBDIR += rubygem-rb-fsevent
@@ -4984,6 +4990,7 @@
     SUBDIR += rubygem-rspec-expectations
     SUBDIR += rubygem-rspec-logsplit
     SUBDIR += rubygem-rspec-mocks
+    SUBDIR += rubygem-rspec-rails
     SUBDIR += rubygem-rspec-support
     SUBDIR += rubygem-rubigen
     SUBDIR += rubygem-rubocop
@@ -5021,6 +5028,7 @@
     SUBDIR += rubygem-shoulda-context
     SUBDIR += rubygem-shoulda-matchers
     SUBDIR += rubygem-sidekiq
+    SUBDIR += rubygem-sidekiq-cron
     SUBDIR += rubygem-sidetiq
     SUBDIR += rubygem-sigdump
     SUBDIR += rubygem-simple_form
@@ -5041,6 +5049,7 @@
     SUBDIR += rubygem-sprockets3
     SUBDIR += rubygem-spruz
     SUBDIR += rubygem-state_machine
+    SUBDIR += rubygem-state_machines
     SUBDIR += rubygem-statsd
     SUBDIR += rubygem-stella
     SUBDIR += rubygem-stemmer
@@ -5181,7 +5190,6 @@
     SUBDIR += subversion
     SUBDIR += subversion-book
     SUBDIR += subversion-static
-    SUBDIR += subversion17
     SUBDIR += subversion18
     SUBDIR += subversive
     SUBDIR += svk

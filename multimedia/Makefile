@@ -262,6 +262,7 @@
     SUBDIR += mythtv
     SUBDIR += mythtv-frontend
     SUBDIR += naludump
+    SUBDIR += nordlicht
     SUBDIR += nxtvepg
     SUBDIR += obs-studio
     SUBDIR += oggvideotools
@@ -328,9 +329,9 @@
     SUBDIR += pyjama
     SUBDIR += pymp
     SUBDIR += qmmp
-    SUBDIR += qmmp-qt5
     SUBDIR += qmmp-plugin-pack
     SUBDIR += qmmp-plugin-pack-qt5
+    SUBDIR += qmmp-qt5
     SUBDIR += qt-faststart
     SUBDIR += qt4-mobility
     SUBDIR += qt4-multimedia
@@ -364,7 +365,6 @@
     SUBDIR += snappy
     SUBDIR += spigot
     SUBDIR += spook
-    SUBDIR += spotify-websocket-api
     SUBDIR += subtitlecomposer-kde4
     SUBDIR += subtitleeditor
     SUBDIR += subtitleoffsetmodifier
