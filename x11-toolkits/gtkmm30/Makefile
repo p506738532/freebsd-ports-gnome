@@ -31,6 +31,12 @@ INSTALL_TARGET=	install-strip
 
 PLIST_SUB=	API_VERSION="3.0"
 
+.include <bsd.port.options.mk>
+
+.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1000000
+EXTRA_PATCHES=	${FILESDIR}/extra-gtk_gtkmm_treeview.h
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/tests//' \
 		${WRKSRC}/Makefile.in
