@@ -46,7 +46,6 @@
     SUBDIR += bsdsfv
     SUBDIR += bsmtrace
     SUBDIR += bugs
-    SUBDIR += burpsuite
     SUBDIR += ca_root_nss
     SUBDIR += calife
     SUBDIR += ccrypt
@@ -182,6 +181,7 @@
     SUBDIR += gwee
     SUBDIR += hackbot
     SUBDIR += hamachi
+    SUBDIR += hashcat
     SUBDIR += heimdal
     SUBDIR += hitch
     SUBDIR += hlfl
@@ -304,6 +304,7 @@
     SUBDIR += libpwquality
     SUBDIR += libpwstor
     SUBDIR += libressl
+    SUBDIR += libressl-devel
     SUBDIR += libscrypt
     SUBDIR += libsecret
     SUBDIR += libsectok
@@ -852,8 +853,11 @@
     SUBDIR += py-pydeep
     SUBDIR += py-pyelliptic
     SUBDIR += py-pylibacl
+    SUBDIR += py-pymacaroons-pynacl
     SUBDIR += py-pyme
+    SUBDIR += py-pynacl
     SUBDIR += py-pyptlib
+    SUBDIR += py-pysaml2
     SUBDIR += py-pyscard
     SUBDIR += py-pysha3
     SUBDIR += py-python-gnupg
@@ -864,6 +868,7 @@
     SUBDIR += py-requests-kerberos
     SUBDIR += py-rsa
     SUBDIR += py-service_identity
+    SUBDIR += py-signedjson
     SUBDIR += py-slowaes
     SUBDIR += py-ssh
     SUBDIR += py-sslstrip
@@ -956,6 +961,7 @@
     SUBDIR += rubygem-nmap-parser
     SUBDIR += rubygem-omniauth
     SUBDIR += rubygem-omniauth-bitbucket
+    SUBDIR += rubygem-omniauth-cas3
     SUBDIR += rubygem-omniauth-gitlab
     SUBDIR += rubygem-omniauth-multipassword
     SUBDIR += rubygem-omniauth-saml

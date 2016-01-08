@@ -78,8 +78,6 @@ DEBUG_CONFIGURE_ENABLE=debug
 post-patch:
 	@${REINPLACE_CMD} -e 's|[{]libdir[}]/locale|{datadir}/locale|g' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|file,cups|file,cups,lpr|' \
-		${WRKSRC}/gtk/Makefile.in
 
 pre-configure:
 # .if !exists() evaluates too early before cairo has a chance to be installed

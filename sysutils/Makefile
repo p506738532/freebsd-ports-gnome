@@ -104,6 +104,7 @@
     SUBDIR += bsdstats
     SUBDIR += btsixad
     SUBDIR += bulk_extractor
+    SUBDIR += burp
     SUBDIR += busybox
     SUBDIR += byobu
     SUBDIR += cbsd
@@ -653,6 +654,7 @@
     SUBDIR += p5-Samba-SIDhelper
     SUBDIR += p5-Schedule-At
     SUBDIR += p5-Schedule-Cron
+    SUBDIR += p5-Schedule-Cron-Events
     SUBDIR += p5-Schedule-Load
     SUBDIR += p5-Schedule-Match
     SUBDIR += p5-Shell-Command
@@ -730,7 +732,6 @@
     SUBDIR += php55-posix
     SUBDIR += php56-fileinfo
     SUBDIR += php56-posix
-    SUBDIR += phttpget
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
