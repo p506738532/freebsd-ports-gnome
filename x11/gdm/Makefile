@@ -70,6 +70,7 @@ CONFIGURE_ARGS=	--disable-static \
 		--with-screenshot-dir=/var/run/gdm/greeter \
 		--enable-authentication-scheme=pam \
 		--without-plymouth \
+		--without-systemd \
 		--with-user=gdm \
 		--with-group=gdm \
 		--with-initial-vt=09 \
