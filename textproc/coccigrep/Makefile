@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	coccigrep
-PORTVERSION=	1.13
+PORTVERSION=	1.16
 DISTVERSIONPREFIX=	v
 CATEGORIES=	textproc
 
@@ -31,6 +31,8 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/editors/cocci-grep.el ${STAGEDIR}${DATADIR}
 	${INSTALL_DATA} ${WRKSRC}/editors/cocci-grep.vim ${STAGEDIR}${DATADIR}
+
+post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 

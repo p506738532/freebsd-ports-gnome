@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	nginx
-PORTVERSION=	1.9.8
+PORTVERSION=	1.9.9
 CATEGORIES=	www
 MASTER_SITES=	http://nginx.org/download/
 MASTER_SITES+=	LOCAL/osa
@@ -513,7 +513,7 @@ CONFIGURE_ARGS+=--add-module=${WRKSRC_push}
 .endif
 
 .if ${PORT_OPTIONS:MHTTP_PUSH_STREAM}
-NGINX_PUSH_STREAM_VERSION=	0.3.5
+NGINX_PUSH_STREAM_VERSION=	0.5.1
 GH_ACCOUNT+=	wandenberg:pushstream
 GH_PROJECT+=	nginx-push-stream-module:pushstream
 GH_TAGNAME+=	${NGINX_PUSH_STREAM_VERSION}:pushstream

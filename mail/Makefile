@@ -69,6 +69,7 @@
     SUBDIR += claws-mail-tnef
     SUBDIR += claws-mail-vcalendar
     SUBDIR += clawsker
+    SUBDIR += cleanup-maildir
     SUBDIR += cone
     SUBDIR += coolmail
     SUBDIR += courier
@@ -509,9 +510,10 @@
     SUBDIR += py-dkimpy
     SUBDIR += py-libgmail
     SUBDIR += py-milter
+    SUBDIR += py-notmuch
     SUBDIR += py-ppolicy
+    SUBDIR += py-pyspf
     SUBDIR += py-spambayes
-    SUBDIR += py-spf
     SUBDIR += py-turbomail
     SUBDIR += py-twistedMail
     SUBDIR += py-zope.sendmail
@@ -573,6 +575,7 @@
     SUBDIR += roundcube-umich
     SUBDIR += roundcube-veximaccountadmin
     SUBDIR += rspamd
+    SUBDIR += rspamd-devel
     SUBDIR += rss2email2
     SUBDIR += rss2email3
     SUBDIR += ruby-rfilter
@@ -585,11 +588,14 @@
     SUBDIR += rubygem-exception_notification
     SUBDIR += rubygem-larch
     SUBDIR += rubygem-mail
-    SUBDIR += rubygem-mail_room
     SUBDIR += rubygem-mail25
+    SUBDIR += rubygem-mail_room
+    SUBDIR += rubygem-mailboxer
     SUBDIR += rubygem-mailfactory
     SUBDIR += rubygem-pony
     SUBDIR += rubygem-rmail
+    SUBDIR += rubygem-roadie
+    SUBDIR += rubygem-roadie-rails
     SUBDIR += rubygem-ruby-qmail
     SUBDIR += rubygem-tmail
     SUBDIR += rubygem-vmail
