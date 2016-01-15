@@ -2,20 +2,21 @@
 # $FreeBSD$
 
 PORTNAME=	consolekit
-PORTVERSION=	1.0.0
+PORTVERSION=	1.0.1
 CATEGORIES=	sysutils gnome
+MASTER_SITES=	https://github.com/ConsoleKit2/ConsoleKit2/releases/download/${PORTVERSION}/
+DISTFILES=	ConsoleKit2-${PORTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Framework for defining and tracking users
 
+LICENSE=	GPLv2
+
 LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
     		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	ConsoleKit2
-GH_PROJECT=	ConsoleKit2
-
-USES=		autoreconf gettext gmake libtool pathfix pkgconfig tar:bzip2
+WRKSRC=		${WRKDIR}/ConsoleKit2-${PORTVERSION}
+USES=		gettext gmake libtool pathfix pkgconfig tar:bzip2
 USE_XORG=	x11
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
@@ -29,8 +30,6 @@ CONFIGURE_ARGS=	--with-pid-file=/var/run/${PORTNAME}.pid \
 		--enable-polkit \
 		--disable-udev-acl \
 		--without-systemsystemunitdir
-PATHFIX_MAKEFILEIN=	Makefile.am
-
 INSTALL_TARGET=	install-strip
 
 post-install:

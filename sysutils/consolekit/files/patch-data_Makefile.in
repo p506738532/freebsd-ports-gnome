@@ -1,6 +1,6 @@
---- data/Makefile.am.orig	2015-08-12 14:40:05.683752000 +0200
-+++ data/Makefile.am	2015-08-12 14:42:29.272507000 +0200
-@@ -113,8 +113,7 @@
+--- data/Makefile.in.bak	2016-01-13 10:01:33.000000000 +0100
++++ data/Makefile.in	2016-01-15 14:10:15.489421000 +0100
+@@ -784,8 +784,7 @@
  
  install-90-consolekit: $(XINITRC_CONFS)
  	$(MKDIR_P) $(DESTDIR)$(XINITRC_DIR)/
