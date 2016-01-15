@@ -34,7 +34,6 @@ CONFIGURE_ARGS=	--with-pam-prefix=${PREFIX}/etc/pam.d \
 		--without-systemd
 INSTALL_TARGET=	install-strip
 
-CONFIGURE_ARGS+=--disable-locking
 #CONFIGURE_ARGS+=--enable-debug=yes
 
 SUB_FILES+=	cinnamon-screensaver.pam
