@@ -334,11 +334,14 @@
     SUBDIR += libopennet
     SUBDIR += liboping
     SUBDIR += libosip2
+    SUBDIR += libp0f
     SUBDIR += libpcap
     SUBDIR += libpcapnav
     SUBDIR += libproxy
     SUBDIR += libproxy-gnome
+    SUBDIR += libproxy-gnome3
     SUBDIR += libproxy-kde
+    SUBDIR += libproxy-mozjs
     SUBDIR += libproxy-perl
     SUBDIR += libproxy-python
     SUBDIR += libproxy-webkit
@@ -776,8 +779,10 @@
     SUBDIR += p5-Sort-Key-IPv4
     SUBDIR += p5-Test-URI
     SUBDIR += p5-URI
+    SUBDIR += p5-URI-db
     SUBDIR += p5-URI-FromHash
     SUBDIR += p5-URI-Match
+    SUBDIR += p5-URI-Nested
     SUBDIR += p5-URI-OpenURL
     SUBDIR += p5-URI-Query
     SUBDIR += p5-URI-SmartURI
@@ -945,6 +950,7 @@
     SUBDIR += py-libcloud
     SUBDIR += py-libdnet
     SUBDIR += py-libnet
+    SUBDIR += py-matrix-synapse
     SUBDIR += py-maxminddb
     SUBDIR += py-miniupnpc
     SUBDIR += py-msrplib

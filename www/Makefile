@@ -1490,6 +1490,7 @@
     SUBDIR += py-GinGin
     SUBDIR += py-HTMLgen
     SUBDIR += py-Lightbox
+    SUBDIR += py-MechanicalSoup
     SUBDIR += py-Products.CMFPlone
     SUBDIR += py-Products.PloneLDAP
     SUBDIR += py-Products.TinyMCE
@@ -1516,6 +1517,7 @@
     SUBDIR += py-clientform
     SUBDIR += py-collective.easytemplate
     SUBDIR += py-collective.templateengines
+    SUBDIR += py-cookies
     SUBDIR += py-cssmin
     SUBDIR += py-cssselect
     SUBDIR += py-cssutils
@@ -1586,6 +1588,7 @@
     SUBDIR += py-django16-tastypie
     SUBDIR += py-django17
     SUBDIR += py-django18
+    SUBDIR += py-django19
     SUBDIR += py-django_compressor
     SUBDIR += py-djangotoolbox
     SUBDIR += py-djblets
@@ -2052,6 +2055,7 @@
     SUBDIR += sitecopy
     SUBDIR += siteframe
     SUBDIR += skytemplate
+    SUBDIR += slowcgi
     SUBDIR += smarty2
     SUBDIR += smarty3
     SUBDIR += smb_auth
@@ -2142,6 +2146,8 @@
     SUBDIR += trac-iniadmin
     SUBDIR += trac-keywords
     SUBDIR += trac-keywordsecretticket
+    SUBDIR += trac-ldap
+    SUBDIR += trac-ldapauthstore
     SUBDIR += trac-mastertickets
     SUBDIR += trac-math
     SUBDIR += trac-mercurial
@@ -2333,7 +2339,6 @@
     SUBDIR += xpi-linkification
     SUBDIR += xpi-live_http_headers
     SUBDIR += xpi-live_pagerank
-    SUBDIR += xpi-locale-switcher
     SUBDIR += xpi-menueditor
     SUBDIR += xpi-mldonkey
     SUBDIR += xpi-modify_headers
