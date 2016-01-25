@@ -46,7 +46,7 @@ USE_GNOME=	evolutiondataserver3 gconf2 gnomedesktop3 \
 # this happens before moving the file to ${PREFIX} (which then will be copied to ${STAGEDIR}${PREFIX})
 SHEBANG_FILES=	files/usr/bin/cinnamon2d
 USE_XORG=	x11 xfixes sm
-USE_GSTREAMER1=	theora vp8 ogg
+USE_GSTREAMER1=	good theora vpx ogg
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
