@@ -23,6 +23,8 @@ USES=compiler:c++11-lib and/or USE_CXXSTD=c++11. But don't add it blindly.
 * most of the third-party extensions have been bumped to support 3.18.
   Need testing.
 
+* make sure x11-themes/mate-themes is 1 revision ahead of ports.
+
 REMOVED:
  deskutils/alacarte
  deskutils/gnome-shell-extension-calculator (gnome-calculator provides this functionality)
