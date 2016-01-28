@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libsecret
-PORTVERSION=	0.18.3
+PORTVERSION=	0.18.4
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
