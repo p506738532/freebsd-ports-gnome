@@ -412,7 +412,6 @@
     SUBDIR += dyncall
     SUBDIR += e00compr
     SUBDIR += e2fsprogs-libss
-    SUBDIR += e_dbus
     SUBDIR += easygit
     SUBDIR += eblob
     SUBDIR += ebnf2yacc
@@ -468,6 +467,7 @@
     SUBDIR += eric4
     SUBDIR += eric6
     SUBDIR += eris
+    SUBDIR += erlang-backoff
     SUBDIR += erlang-bbmustache
     SUBDIR += erlang-bear
     SUBDIR += erlang-certifi
@@ -1026,7 +1026,6 @@
     SUBDIR += htable
     SUBDIR += hub
     SUBDIR += hwloc
-    SUBDIR += i386-linux-binutils
     SUBDIR += ice
     SUBDIR += icmake
     SUBDIR += icu
@@ -1185,6 +1184,7 @@
     SUBDIR += libfirm
     SUBDIR += libfortuna
     SUBDIR += libfreefare
+    SUBDIR += libfsntfs
     SUBDIR += libftdi
     SUBDIR += libftdi1
     SUBDIR += libfwsi
@@ -1400,6 +1400,7 @@
     SUBDIR += llvm35
     SUBDIR += llvm36
     SUBDIR += llvm37
+    SUBDIR += llvm38
     SUBDIR += lm4tools
     SUBDIR += lmdbg
     SUBDIR += lndir
@@ -4114,6 +4115,7 @@
     SUBDIR += py-kaptan
     SUBDIR += py-kayako
     SUBDIR += py-kazoo
+    SUBDIR += py-keystoneauth1
     SUBDIR += py-kid
     SUBDIR += py-kjbuckets
     SUBDIR += py-kqueue
@@ -4149,7 +4151,7 @@
     SUBDIR += py-monotonic
     SUBDIR += py-more-itertools
     SUBDIR += py-mox
-    SUBDIR += py-msgpack
+    SUBDIR += py-msgpack-python
     SUBDIR += py-multipledispatch
     SUBDIR += py-mwlib
     SUBDIR += py-mwlib.ext
@@ -4176,6 +4178,9 @@
     SUBDIR += py-optik
     SUBDIR += py-orbit
     SUBDIR += py-ordereddict
+    SUBDIR += py-oslo.i18n
+    SUBDIR += py-oslo.serialization
+    SUBDIR += py-oslo.utils
     SUBDIR += py-palm
     SUBDIR += py-parsedatetime
     SUBDIR += py-path.py
@@ -4392,6 +4397,7 @@
     SUBDIR += py-twistedCore
     SUBDIR += py-twistedFlow
     SUBDIR += py-twistedRunner
+    SUBDIR += py-txaio
     SUBDIR += py-tzlocal
     SUBDIR += py-ua_parser
     SUBDIR += py-ujson
@@ -4595,6 +4601,7 @@
     SUBDIR += qt5-help
     SUBDIR += qt5-linguist
     SUBDIR += qt5-linguisttools
+    SUBDIR += qt5-location
     SUBDIR += qt5-qdbus
     SUBDIR += qt5-qdbusviewer
     SUBDIR += qt5-qdoc
@@ -4764,6 +4771,7 @@
     SUBDIR += rubygem-cri
     SUBDIR += rubygem-cucumber
     SUBDIR += rubygem-cucumber-core
+    SUBDIR += rubygem-cucumber-wire
     SUBDIR += rubygem-curses
     SUBDIR += rubygem-cyoi
     SUBDIR += rubygem-daemon_controller
@@ -4794,6 +4802,7 @@
     SUBDIR += rubygem-enumerize
     SUBDIR += rubygem-equalizer
     SUBDIR += rubygem-errand
+    SUBDIR += rubygem-event-bus
     SUBDIR += rubygem-eventmachine
     SUBDIR += rubygem-excon
     SUBDIR += rubygem-execjs
@@ -4865,6 +4874,7 @@
     SUBDIR += rubygem-ice_cube
     SUBDIR += rubygem-ice_nine
     SUBDIR += rubygem-inflecto
+    SUBDIR += rubygem-instance_storage
     SUBDIR += rubygem-interact
     SUBDIR += rubygem-io-like
     SUBDIR += rubygem-iobuffer
@@ -4898,6 +4908,7 @@
     SUBDIR += rubygem-lumberjack
     SUBDIR += rubygem-main
     SUBDIR += rubygem-map
+    SUBDIR += rubygem-memoist
     SUBDIR += rubygem-memoizable
     SUBDIR += rubygem-memoize
     SUBDIR += rubygem-mercenary
@@ -5162,7 +5173,6 @@
     SUBDIR += simgear
     SUBDIR += simian
     SUBDIR += simple_components
-    SUBDIR += simpletest
     SUBDIR += skalibs
     SUBDIR += slf4j
     SUBDIR += smack
