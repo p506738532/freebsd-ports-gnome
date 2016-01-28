@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cantarell-fonts
-PORTVERSION=	0.0.19
+PORTVERSION=	0.0.21
 CATEGORIES=	x11-fonts gnome
 MASTER_SITES=	GNOME
 
