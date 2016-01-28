@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.18.3
+PORTVERSION=	3.18.4
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,7 +26,8 @@ LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		bison gettext gmake gperf libtool pathfix pkgconfig tar:xz
+USES=		bison gettext gmake gperf libtool pathfix pkgconfig \
+		sqlite tar:xz
 # Unbreak mail/evolution with webkit-gtk3 on FreeBSD 8 and 9.  Normally
 # this change would be done there, but it is not a C++ application, so it
 # does not link directly to libstdc++ and adding the libstdc++ rpath to
@@ -34,7 +35,6 @@ USES=		bison gettext gmake gperf libtool pathfix pkgconfig tar:xz
 USES+=		compiler:c++11-lib
 USE_GNOME=	gtk30 intltool introspection:build libxml2
 USE_OPENLDAP=	yes
-USE_SQLITE=	yes
 GNU_CONFIGURE=	yes
 USE_BDB=	5
 USE_LDCONFIG=	yes
