@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-calculator
-PORTVERSION=	3.18.2
+PORTVERSION=	3.18.3
 CATEGORIES=	math gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
