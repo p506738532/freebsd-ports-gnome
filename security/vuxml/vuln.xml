@@ -58,6 +58,41 @@ Notes:
 
 -->
 <vuxml xmlns="http://www.vuxml.org/apps/vuxml-1">
+  <vuln vid="c1c18ee1-c711-11e5-96d6-14dae9d210b8">
+    <topic>nginx -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>nginx</name>
+	<range><lt>1.8.1,2</lt></range>
+      </package>
+      <package>
+	<name>nginx-devel</name>
+	<range><lt>1.9.10</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Maxim Dounin reports:</p>
+	<blockquote cite="http://mailman.nginx.org/pipermail/nginx/2016-January/049700.html">
+	  <p>Several problems in nginx resolver were identified, which
+	    might allow an attacker to cause worker process crash, or might have
+	    potential other impact if the "resolver" directive
+	    is used in a configuration file.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>http://mailman.nginx.org/pipermail/nginx/2016-January/049700.html</url>
+      <cvename>CVE-2016-0742</cvename>
+      <cvename>CVE-2016-0746</cvename>
+      <cvename>CVE-2016-0747</cvename>
+    </references>
+    <dates>
+      <discovery>2016-01-26</discovery>
+      <entry>2016-01-30</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="a0d77bc8-c6a7-11e5-96d6-14dae9d210b8">
     <topic>typo3 -- multiple vulnerabilities</topic>
     <affects>
@@ -573,8 +608,7 @@ Notes:
     <affects>
       <package>
 	<name>curl</name>
-	<range><ge>7.10.0</ge></range>
-	<range><lt>7.47.0</lt></range>
+	<range><ge>7.10.0</ge><lt>7.47.0</lt></range>
       </package>
     </affects>
     <description>
@@ -595,6 +629,7 @@ Notes:
     <dates>
       <discovery>2016-01-27</discovery>
       <entry>2016-01-27</entry>
+      <modified>2016-01-30</modified>
     </dates>
   </vuln>
 
@@ -4815,7 +4850,7 @@ Notes:
       </package>
       <package>
 	<name>linux-c6-openssl</name>
-	<range><ge>0</ge></range>
+	<range><lt>1.0.1e_7</lt></range>
       </package>
     </affects>
     <description>
@@ -4847,6 +4882,7 @@ Notes:
     <dates>
       <discovery>2015-12-03</discovery>
       <entry>2015-12-05</entry>
+      <modified>2016-01-31</modified>
     </dates>
   </vuln>
 
@@ -14340,7 +14376,7 @@ Notes:
       </package>
       <package>
 	<name>linux-c6-libxml2</name>
-	<range><ge>*</ge></range>
+	<range><lt>2.7.6_5</lt></range>
       </package>
       <package>
 	<name>linux-f10-libxml2</name>
@@ -14366,7 +14402,7 @@ Notes:
     <dates>
       <discovery>2015-04-14</discovery>
       <entry>2015-07-01</entry>
-      <modified>2015-07-15</modified>
+      <modified>2015-01-31</modified>
     </dates>
   </vuln>
 
@@ -19458,7 +19494,7 @@ Notes:
       </package>
       <package>
 	<name>linux-f10-xorg-libs</name>
-	<range><ge>*</ge></range>
+	<range><lt>7.4_4</lt></range>
       </package>
     </affects>
     <description>
@@ -19489,7 +19525,7 @@ Notes:
     <dates>
       <discovery>2015-03-17</discovery>
       <entry>2015-03-18</entry>
-      <modified>2015-07-15</modified>
+      <modified>2016-01-31</modified>
     </dates>
   </vuln>
 
