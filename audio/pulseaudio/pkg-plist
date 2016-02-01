@@ -69,8 +69,7 @@ lib/libpulse-simple.so.0
 lib/libpulse-simple.so.0.1.0
 lib/libpulse.so
 lib/libpulse.so.0
-lib/libpulse.so.0.18.2
-lib/libpulsecore-%%PULSE_VERSION%%.so
+lib/libpulse.so.0.19.0
 %%AVAHI%%lib/pulse-%%PULSE_VERSION%%/modules/libavahi-wrap.so
 lib/pulse-%%PULSE_VERSION%%/modules/module-device-manager.so
 %%ALSA%%lib/pulse-%%PULSE_VERSION%%/modules/libalsa-util.so
@@ -160,6 +159,7 @@ lib/pulse-%%PULSE_VERSION%%/modules/module-x11-xsmp.so
 %%AVAHI%%lib/pulse-%%PULSE_VERSION%%/modules/module-zeroconf-discover.so
 %%AVAHI%%lib/pulse-%%PULSE_VERSION%%/modules/module-zeroconf-publish.so
 lib/pulseaudio/libpulsecommon-%%PULSE_VERSION%%.so
+lib/pulseaudio/libpulsecore-%%PULSE_VERSION%%.so
 lib/pulseaudio/libpulsedsp.so
 libdata/pkgconfig/libpulse-mainloop-glib.pc
 libdata/pkgconfig/libpulse-simple.pc
