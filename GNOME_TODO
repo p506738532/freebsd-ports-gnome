@@ -1,7 +1,8 @@
 Due to glibmm now requiring c++11, MM based ports will probably need to have
 USES=compiler:c++11-lib and/or USE_CXXSTD=c++11. But don't add it blindly.
 
-* Cheese reworked the device detection code, needs testing!
+* [[Cheese reworked the device detection code, needs testing!]]
+  Works fine, if user is added to the webcamd group!
 
 * tracker -> nautilus -> tracker circulair dependancy. break tracker up in
   slave ports?
