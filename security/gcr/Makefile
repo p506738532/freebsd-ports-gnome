@@ -6,7 +6,7 @@ PORTVERSION=	3.18.0
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
-MAINTAINER=	kwm@FreeBSD.org
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library for bits of crypto UI and parsing
 
 BUILD_DEPENDS=	gtk-doc>0:${PORTSDIR}/textproc/gtk-doc \
