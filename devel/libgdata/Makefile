@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libgdata
-PORTVERSION=	0.17.3
+PORTVERSION=	0.17.4
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
@@ -19,7 +19,7 @@ LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 		liboauth.so:${PORTSDIR}/net/liboauth
 RUN_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 gnomeprefix intlhack \
 		introspection:build
 USE_LDCONFIG=	yes
