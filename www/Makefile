@@ -91,7 +91,6 @@
     SUBDIR += cntlm
     SUBDIR += cocoon
     SUBDIR += codeigniter
-    SUBDIR += codeigniter22
     SUBDIR += coppermine
     SUBDIR += cplanet
     SUBDIR += cppcms
@@ -247,6 +246,7 @@
     SUBDIR += gstreamer1-plugins-neon
     SUBDIR += gtkhtml3
     SUBDIR += gtkhtml4
+    SUBDIR += guacamole-client
     SUBDIR += guile-www
     SUBDIR += gurlchecker
     SUBDIR += h2o
@@ -1560,6 +1560,10 @@
     SUBDIR += py-django-registration
     SUBDIR += py-django-registration-defaults
     SUBDIR += py-django-registration-redux
+    SUBDIR += py-djangorestframework
+    SUBDIR += py-djangorestframework-csv
+    SUBDIR += py-djangorestframework-filters
+    SUBDIR += py-djangorestframework-xml
     SUBDIR += py-django-reversion
     SUBDIR += py-django-sekizai
     SUBDIR += py-django-signals-ahoy
@@ -1578,7 +1582,6 @@
     SUBDIR += py-django-voting
     SUBDIR += py-django16
     SUBDIR += py-django16-tastypie
-    SUBDIR += py-django17
     SUBDIR += py-django18
     SUBDIR += py-django19
     SUBDIR += py-django_compressor
@@ -2005,6 +2008,7 @@
     SUBDIR += rubygem-thin
     SUBDIR += rubygem-tinyatom
     SUBDIR += rubygem-tinymce-rails
+    SUBDIR += rubygem-totoridipjp
     SUBDIR += rubygem-tumblr_client
     SUBDIR += rubygem-turbolinks
     SUBDIR += rubygem-turbolinks-rails41

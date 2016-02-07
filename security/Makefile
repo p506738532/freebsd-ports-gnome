@@ -283,6 +283,7 @@
     SUBDIR += l5
     SUBDIR += lasso
     SUBDIR += lastpass-cli
+    SUBDIR += letsencrypt.sh
     SUBDIR += libassuan
     SUBDIR += libbeid
     SUBDIR += libbf
@@ -782,7 +783,6 @@
     SUBDIR += pks
     SUBDIR += pktsuckers
     SUBDIR += please
-    SUBDIR += polarssl
     SUBDIR += polarssl13
     SUBDIR += poly1305aes
     SUBDIR += pond
@@ -1067,6 +1067,7 @@
     SUBDIR += stoken
     SUBDIR += strobe
     SUBDIR += strongswan
+    SUBDIR += stud
     SUBDIR += stunnel
     SUBDIR += subversion-gnome-keyring
     SUBDIR += subversion-kwallet

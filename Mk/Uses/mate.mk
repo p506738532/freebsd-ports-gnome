@@ -203,7 +203,7 @@ _INCLUDE_USES_MATE_POST_MK=     yes
 
 CONFIGURE_ENV+=	NOCONFIGURE=yes
 
-pre-configure: mate-pre-configure
+_USES_configure+=	295:mate-pre-configure
 
 mate-pre-configure:
 	@(cd ${CONFIGURE_WRKSRC} ; ${SETENV} ${CONFIGURE_ENV} ./autogen.sh)
@@ -211,7 +211,7 @@ mate-pre-configure:
 
 .if defined(MATE_PRE_PATCH)
 
-pre-configure-script: mate-pre-configure-script
+_USES_configure+=	445:mate-pre-configure-script
 
 mate-pre-configure-script:
 	@${MATE_PRE_PATCH:C/^;//1}

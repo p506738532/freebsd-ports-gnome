@@ -670,7 +670,7 @@ _INCLUDE_USES_GNOME_POST_MK=     yes
 
 .if defined(GNOME_PRE_PATCH)
 
-pre-patch: gnome-pre-patch
+_USES_patch+=	290:gnome-pre-patch
 
 gnome-pre-patch:
 	@${GNOME_PRE_PATCH:C/^;//1}
@@ -678,7 +678,7 @@ gnome-pre-patch:
 
 .if defined(GCONF_SCHEMAS) || defined(INSTALLS_OMF) || defined(INSTALLS_ICONS) \
 	|| defined(GLIB_SCHEMAS)
-post-install: gnome-post-install
+_USES_install+=	690:gnome-post-install
 
 gnome-post-install:
 .  if defined(GCONF_SCHEMAS)
