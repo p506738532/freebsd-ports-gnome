@@ -21,7 +21,7 @@ LIB_DEPENDS=	libwebkit2gtk-4.0.so:${PORTSDIR}/www/webkit2-gtk3 \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack introspection:build libxslt:build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

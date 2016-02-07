@@ -13,7 +13,7 @@ COMMENT=	Standard themes for GNOME
 CONFLICTS=	gnome-themes-2.[0-9]*
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext-tools gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext-tools gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gtk20 gtk30 intlhack librsvg2
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes

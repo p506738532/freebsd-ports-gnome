@@ -40,7 +40,8 @@ GROUPS=		gdm video
 
 PORTSCOUT=	limitw:1,even
 
-USES=		cpe execinfo gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		cpe execinfo gettext gmake gnome libtool pathfix \
+		pkgconfig tar:xz
 CPE_VENDOR=	gnome
 CPE_VENDOR=	gnome_display_manager
 USE_GNOME=	dconf intlhack introspection librsvg2

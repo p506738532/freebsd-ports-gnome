@@ -14,7 +14,7 @@ PORTSCOUT=	limitw:1,even
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix intlhack libxml2 libxslt
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

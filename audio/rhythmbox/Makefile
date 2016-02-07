@@ -25,7 +25,7 @@ LIB_DEPENDS=	libmusicbrainz5.so:${PORTSDIR}/audio/libmusicbrainz5 \
 		libsecret-1.so:${PORTSDIR}/security/libsecret \
 		libtdb.so:${PORTSDIR}/databases/tdb
 
-USES=		desktop-file-utils gettext gmake libtool pathfix \
+USES=		desktop-file-utils gettext gmake gnome libtool pathfix \
 		pkgconfig tar:xz
 USE_GNOME=	intlhack gnomeprefix gtk30 introspection:build \
 		py3gobject3

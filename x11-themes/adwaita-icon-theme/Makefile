@@ -10,7 +10,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME Symbolic Icons
 
-USES=		gettext-tools gmake pathfix pkgconfig tar:xz
+USES=		gettext-tools gmake gnome pathfix pkgconfig tar:xz
 USE_GNOME=	intltool gtk-update-icon-cache
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_GTK_ENCODE_SYMBOLIC_SVG="false"

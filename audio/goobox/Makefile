@@ -17,7 +17,7 @@ LIB_DEPENDS=	libdiscid.so:${PORTSDIR}/audio/libdiscid \
 		libbrasero-media3.so:${PORTSDIR}/sysutils/brasero \
 		libunique-1.0.so:${PORTSDIR}/x11-toolkits/unique
 
-USES=		desktop-file-utils gettext gmake pkgconfig tar:xz
+USES=		desktop-file-utils gettext gmake gnome pkgconfig tar:xz
 USE_GNOME=	glib20 gtk30 intlhack
 USE_XORG=	x11
 USE_GSTREAMER1=	yes

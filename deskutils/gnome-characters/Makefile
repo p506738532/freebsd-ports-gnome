@@ -16,7 +16,7 @@ BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	libgjs.so:${PORTSDIR}/lang/gjs \
 		libunistring.so:${PORTSDIR}/devel/libunistring
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	gtk30 intlhack introspection

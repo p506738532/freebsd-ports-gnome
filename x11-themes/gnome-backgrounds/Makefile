@@ -12,7 +12,7 @@ COMMENT=	Collection of backgrounds for GNOME
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake pathfix tar:xz
+USES=		gettext gmake gnome pathfix tar:xz
 USE_GNOME=	intlhack
 GNU_CONFIGURE=	yes
 

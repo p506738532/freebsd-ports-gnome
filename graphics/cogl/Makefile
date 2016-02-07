@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 CONFLICTS=	clutter-1.6.[0-9]*
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 USE_GNOME=	gdkpixbuf2 gnomeprefix atk pango introspection:build
 USE_GL=		gl egl

@@ -19,7 +19,7 @@ LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake libarchive libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libarchive libtool pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 intlhack libxslt:build
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

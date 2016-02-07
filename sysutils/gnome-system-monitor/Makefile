@@ -15,7 +15,7 @@ LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop
 
 PORTSCOUT=	limitw:1,even
 
-USES=		alias compiler:c++11-lib gettext gmake pathfix \
+USES=		alias compiler:c++11-lib gettext gmake gnome pathfix \
 		pkgconfig tar:xz
 USE_GNOME=	gtkmm30 intlhack librsvg2 libwnck3
 GNU_CONFIGURE=	yes

@@ -12,7 +12,7 @@ COMMENT=	GNOME 3 hex editor
 
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack libxml2:build
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes

@@ -12,7 +12,7 @@ COMMENT=	D-Bus service that provides location information
 LIB_DEPENDS=	libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
 		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 intlhack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

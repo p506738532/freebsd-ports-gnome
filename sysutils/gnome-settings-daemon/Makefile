@@ -33,7 +33,7 @@ PORTSCOUT=	limitw:1,even
 
 USE_XORG=	xxf86misc
 USE_GNOME=	gnomedesktop3 intltool libxslt
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-gudev \

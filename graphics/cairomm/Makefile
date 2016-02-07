@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USES=		compiler:c++11-lib gmake libtool pathfix pkgconfig tar:xz
+USES=		compiler:c++11-lib gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	cairo libxml++26
 CONFIGURE_ENV=	AUTOMAKE="${TRUE}" AUTOCONF="${TRUE}" DOXYGEN="${TRUE}"
 CPPFLAGS+=	-I${LOCALBASE}/include

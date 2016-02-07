@@ -26,7 +26,7 @@ LIB_DEPENDS=	libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		bison gettext gmake gperf libtool pathfix pkgconfig \
+USES=		bison gettext gmake gnome gperf libtool pathfix pkgconfig \
 		sqlite tar:xz
 # Unbreak mail/evolution with webkit-gtk3 on FreeBSD 8 and 9.  Normally
 # this change would be done there, but it is not a C++ application, so it

@@ -13,8 +13,8 @@ COMMENT=	GNOME Javascript binding
 LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
 		libmozjs-24.so:${PORTSDIR}/lang/spidermonkey24
 
-USES=		compiler:c++11-lib gettext gmake libtool pathfix pkgconfig \
-		python:build tar:xz
+USES=		compiler:c++11-lib gettext gmake gnome libtool \
+		pathfix pkgconfig python:build tar:xz
 USE_GNOME=	cairo glib20 gnomeprefix introspection:build \
 		intlhack
 GNU_CONFIGURE=	yes

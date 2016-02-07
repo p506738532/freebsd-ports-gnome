@@ -14,7 +14,7 @@ PORTSCOUT=	limitw:1,even
 
 LIB_DEPENDS=	libical.so:${PORTSDIR}/devel/libical
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	evolutiondataserver3 gtk30 intlhack \

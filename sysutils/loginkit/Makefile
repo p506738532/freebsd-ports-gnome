@@ -17,7 +17,7 @@ GH_TAGNAME=	f363547
 
 NO_CONFIGURE=	yes
 
-USES=		gmake pkgconfig
+USES=		gmake gnome pkgconfig
 USE_GNOME=	glib20
 
 # work around until unstall script does this.

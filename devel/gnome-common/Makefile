@@ -13,7 +13,7 @@ COMMENT=	Common automake macros for GNOME 3
 BUILD_DEPENDS=	autoconf-archive>=0:${PORTSDIR}/devel/autoconf-archive
 RUN_DEPENDS=	autoconf-archive>=0:${PORTSDIR}/devel/autoconf-archive
 
-USES=		gmake pkgconfig tar:xz
+USES=		gmake gnome pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-autoconf-archive
 

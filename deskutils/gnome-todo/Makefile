@@ -12,7 +12,7 @@ COMMENT=	Small application to manage your personal tasks
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	evolutiondataserver3 gnomedesktop3 gtk30 intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

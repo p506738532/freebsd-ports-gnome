@@ -12,7 +12,7 @@ COMMENT=	CSS2 parsing library
 LICENSE=	LGPL21
 
 GNU_CONFIGURE=	yes
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
 USE_GNOME=	glib20 libxml2
 CONFIGURE_ARGS=	--disable-gtk-doc-html

@@ -20,7 +20,7 @@ RUN_DEPENDS=	gedit>=0:${PORTSDIR}/editors/gedit
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake libtool pathfix pkgconfig \
+USES=		gettext gmake gnome libtool pathfix pkgconfig \
 		python:3 tar:xz
 USE_GNOME=	gtk30 gtksourceview3 intlhack
 USE_LDCONFIG=	yes

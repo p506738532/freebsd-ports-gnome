@@ -15,7 +15,7 @@ BUILD_DEPENDS=	vala:${PORTSDIR}/lang/vala \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake pkgconfig tar:xz
+USES=		desktop-file-utils gettext gmake gnome pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack librsvg2 libxml2:build
 INSTALLS_ICONS=	yes
 USE_XORG=	x11

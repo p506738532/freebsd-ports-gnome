@@ -29,8 +29,8 @@ PORTSCOUT=	limitw:1,even
 
 USE_GSTREAMER1=	bad gl
 USE_XORG=	x11 xext ice
-USES=		bison cmake compiler:c++11-lib gettext gmake gperf jpeg perl5 \
-		pkgconfig python:2,build sqlite tar:xz
+USES=		bison cmake compiler:c++11-lib gettext gmake gnome gperf \
+		jpeg perl5 pkgconfig python:2,build sqlite tar:xz
 USE_RUBY=	yes
 RUBY_NO_RUN_DEPENDS=yes
 USE_GNOME=	cairo gtk20 gtk30 introspection:build libxml2 libxslt

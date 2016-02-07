@@ -17,7 +17,7 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at
 CONFLICTS=	at-spi-1.[0-9]*
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake pathfix pkgconfig python:3 tar:xz
+USES=		gettext gmake gnome pathfix pkgconfig python:3 tar:xz
 USE_GNOME=	intlhack py3gobject3
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

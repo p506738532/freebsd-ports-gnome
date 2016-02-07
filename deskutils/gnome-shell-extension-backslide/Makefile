@@ -19,7 +19,7 @@ RUN_DEPENDS=	gnome-shell>=0:${PORTSDIR}/x11/gnome-shell \
 
 WRKSRC=		${WRKDIR}/LukasKnuth-backslide-7e36a49fc5e1
 
-USES=		gettext gmake pkgconfig tar:xz
+USES=		gettext gmake gnome pkgconfig tar:xz
 USE_GNOME=	glib20
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

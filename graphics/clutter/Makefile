@@ -17,7 +17,7 @@ LIB_DEPENDS=	libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
 
 PORTSCOUT=	limit:1,even
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 introspection:build
 USE_GL=		gl egl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi

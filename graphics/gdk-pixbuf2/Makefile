@@ -15,7 +15,7 @@ LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_XORG=	xt xi x11
-USES=		cpe gmake libtool pathfix pkgconfig tar:xz
+USES=		cpe gmake gnome libtool pathfix pkgconfig tar:xz
 CPE_VENDOR=	gnome
 USE_GNOME+=	glib20 introspection:build
 USE_LDCONFIG=	yes

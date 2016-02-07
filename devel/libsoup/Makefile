@@ -19,7 +19,7 @@ PORTSCOUT=	limitw:1,even
 
 .if !defined(REFERENCE_PORT)
 
-USES+=		gettext gmake libtool pathfix pkgconfig \
+USES+=		gettext gmake gnome libtool pathfix pkgconfig \
 		python:3:build tar:xz
 USE_GNOME=	glib20 intlhack introspection:build \
 		libxml2 referencehack

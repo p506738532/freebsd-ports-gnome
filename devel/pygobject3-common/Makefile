@@ -37,7 +37,7 @@ MAKE_ARGS=	PYTHON_VERSION=${PYTHON_VER}
 PORTSCOUT?=	limitw:1,even
 
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
-USES+=		python:build
+USES+=		gnome python:build
 USE_GNOME=	glib20:build introspection:build
 NO_BUILD=	yes
 
@@ -50,6 +50,7 @@ do-install:
 .else
 PORTSCOUT=	ignore:1
 
+USES+=		gnome
 USE_GNOME+=	glib20 introspection
 LIB_DEPENDS+=	libffi.so:${PORTSDIR}/devel/libffi
 RUN_DEPENDS+=	pygobject3-common>=0:${PORTSDIR}/devel/pygobject3-common

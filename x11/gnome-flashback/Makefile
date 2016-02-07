@@ -22,7 +22,7 @@ RUN_DEPENDS=	gnome-panel>=0:${PORTSDIR}/x11/gnome-panel \
 		gnome-screensaver>=0:${PORTSDIR}/x11/gnome-screensaver \
 		polkit-gnome>=0.105:${PORTSDIR}/sysutils/polkit-gnome
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intltool introspection \
 		metacity
 		

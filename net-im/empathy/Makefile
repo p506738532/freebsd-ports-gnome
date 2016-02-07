@@ -36,7 +36,7 @@ RUN_DEPENDS=	iso-codes>=0:${PORTSDIR}/misc/iso-codes \
 		geoclue>=0:${PORTSDIR}/net/geoclue \
     		mc-tool:${PORTSDIR}/net-im/telepathy-mission-control
 
-USES=		gettext gmake libtool pathfix pkgconfig python tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig python tar:xz
 USE_GNOME=	evolutiondataserver3 intlhack
 USE_GSTREAMER1=	yes
 USE_LDCONFIG=	yes

@@ -12,7 +12,7 @@ COMMENT=	C++ wrapper for libgda5 library
 
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
-USES=		compiler:c++11-lib gmake libtool pathfix pkgconfig tar:xz
+USES=		compiler:c++11-lib gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	libgda5 glibmm
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip

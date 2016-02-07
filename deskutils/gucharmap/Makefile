@@ -17,7 +17,7 @@ BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake libtool pathfix \
+USES=		desktop-file-utils gettext gmake gnome libtool pathfix \
 		pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build
 GNU_CONFIGURE=	yes

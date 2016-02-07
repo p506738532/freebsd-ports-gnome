@@ -14,7 +14,7 @@ LIB_DEPENDS=	libupower-glib.so:${PORTSDIR}/sysutils/upower
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 INSTALLS_ICONS=	yes
 USE_GNOME=	gtk30 intlhack
 GNU_CONFIGURE=	yes

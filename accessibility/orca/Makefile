@@ -26,7 +26,7 @@ RUN_DEPENDS=	py3?-dbus>=0:${PORTSDIR}/devel/py3-dbus \
 CONFLICTS=	py*-json-py-[0-9]*
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake pathfix pkgconfig python:3 tar:xz
+USES=		gettext gmake gnome pathfix pkgconfig python:3 tar:xz
 USE_GNOME=	gtk30 py3gobject3 intlhack
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes

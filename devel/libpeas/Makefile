@@ -22,7 +22,7 @@ LIB_DEPENDS+=	libpeas-1.0.so:${PORTSDIR}/devel/libpeas
 PORTSCOUT=	ignore:1
 .endif
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack introspection:build
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes

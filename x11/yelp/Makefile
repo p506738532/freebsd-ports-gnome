@@ -20,7 +20,7 @@ RUN_DEPENDS=	yelp-xsl>=0:${PORTSDIR}/textproc/yelp-xsl
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake libtool pathfix \
+USES=		desktop-file-utils gettext gmake gnome libtool pathfix \
 		pkgconfig tar:xz
 USE_XORG=	x11 ice
 USE_GNOME=	gtk30 intlhack libxml2 libxslt

@@ -15,7 +15,7 @@ BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 PORTSCOUT=	limitw:1,even
 
 GNU_CONFIGURE=	yes
-USES=		gettext-tools gmake pathfix tar:xz
+USES=		gettext-tools gmake gnome pathfix tar:xz
 USE_GNOME=	libxml2:build
 
 .include <bsd.port.mk>

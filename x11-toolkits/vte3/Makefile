@@ -17,7 +17,7 @@ LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls
 
 PORTSCOUT=	limitw:1,even
 
-USES=		bison compiler:c++0x gettext gmake libtool pathfix \
+USES=		bison compiler:c++0x gettext gmake gnome libtool pathfix \
 		pkgconfig tar:xz
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

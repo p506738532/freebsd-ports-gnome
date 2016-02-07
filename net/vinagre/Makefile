@@ -21,7 +21,7 @@ RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
+USES=		desktop-file-utils gettext gmake gnome pathfix pkgconfig \
 		shared-mime-info tar:xz
 USE_GNOME=	gtk30 intlhack libxml2 vte3
 GNU_CONFIGURE=	yes

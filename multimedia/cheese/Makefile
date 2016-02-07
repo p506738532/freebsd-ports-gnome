@@ -22,7 +22,7 @@ RUN_DEPENDS=	gnome-video-effects>=0:${PORTSDIR}/graphics/gnome-video-effects
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	intlhack evolutiondataserver3 librsvg2 \
 		gnomedesktop3 libxml2:build introspection:build
 USE_XORG=	xxf86vm x11

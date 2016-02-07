@@ -28,7 +28,7 @@ RUN_DEPENDS=	iso-codes>=0:${PORTSDIR}/misc/iso-codes \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		cpe desktop-file-utils gettext gmake libtool pathfix \
+USES=		cpe desktop-file-utils gettext gmake gnome libtool pathfix \
 		pkgconfig python:3 sqlite tar:xz
 CPE_VENDOR=	gnome
 USE_GNOME=	gnomedesktop3 intlhack libwnck3 libxml2 libxslt

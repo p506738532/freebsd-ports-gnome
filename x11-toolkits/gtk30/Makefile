@@ -35,7 +35,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	atk gdkpixbuf2 introspection:build pango
 #gtk-update-icon-cache
-USES+=		gettext gmake libtool pathfix perl5 pkgconfig
+USES+=		gettext gmake gnome libtool pathfix perl5 pkgconfig
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
 CONFIGURE_ARGS=	--enable-x11-backend \

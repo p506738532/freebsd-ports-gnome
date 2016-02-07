@@ -16,7 +16,7 @@ LIB_DEPENDS=	libdconf.so:${PORTSDIR}/devel/dconf
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome pathfix pkgconfig tar:xz
 USE_GNOME=	intltool gtk30 libxml2
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

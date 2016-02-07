@@ -22,7 +22,7 @@ LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
 		libfreetype.so:${PORTSDIR}/print/freetype2
 RUN_DEPENDS=	gcab:${PORTSDIR}/archivers/gcab
 
-USES=		gettext gperf gmake libarchive libtool pathfix \
+USES=		gettext gperf gmake gnome libarchive libtool pathfix \
 		pkgconfig sqlite tar:xz
 USE_GNOME=	gdkpixbuf2 glib20 gtk30 intlhack introspection:build \
 		libxml2:build pango

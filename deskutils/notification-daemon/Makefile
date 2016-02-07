@@ -18,7 +18,7 @@ LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
 PORTSCOUT=	limitw:1,even
 
 USE_GNOME=	gnomeprefix gtk30
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome pathfix pkgconfig tar:xz
 USE_XORG=	x11
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes

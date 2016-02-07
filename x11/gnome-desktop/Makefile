@@ -26,7 +26,7 @@ RUN_DEPENDS=	iso-codes>=0:${PORTSDIR}/misc/iso-codes \
 		xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
 		libxkbfile>=0:${PORTSDIR}/x11/libxkbfile
 
-USES+=		bison gettext gmake libtool pathfix pkgconfig python:3
+USES+=		bison gettext gmake gnome libtool pathfix pkgconfig python:3
 USE_GNOME=	gtk30 intlhack introspection:build referencehack
 USE_XORG=	x11 xrandr xext
 USE_LDCONFIG=	yes

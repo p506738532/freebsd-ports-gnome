@@ -16,7 +16,7 @@ LIB_DEPENDS=	libsoup-2.4.so:${PORTSDIR}/devel/libsoup \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack introspection:build
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes

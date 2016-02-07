@@ -25,7 +25,7 @@ RUN_DEPENDS=	xorg-fonts-truetype>0:${PORTSDIR}/x11-fonts/xorg-fonts-truetype \
 
 PORTSCOUT=	limitw:1,even
 
-USES+=		gettext gmake libtool pathfix pkgconfig
+USES+=		gettext gmake gnome libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	cairo glib20 introspection:build referencehack

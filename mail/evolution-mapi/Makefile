@@ -17,7 +17,7 @@ RUN_DEPENDS=	evolution>=3.0.0:${PORTSDIR}/mail/evolution
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake libtool pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pkgconfig tar:xz
 USE_GNOME=	intltool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

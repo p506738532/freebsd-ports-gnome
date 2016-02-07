@@ -12,7 +12,7 @@ COMMENT=	C++ bindings for the goocanvas widget for GTK
 
 LIB_DEPENDS=	libgoocanvas-2.0.so:${PORTSDIR}/graphics/goocanvas2
 
-USES=		compiler:c++11-lib gmake libtool pathfix pkgconfig tar:xz
+USES=		compiler:c++11-lib gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gtkmm30
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

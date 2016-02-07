@@ -30,7 +30,7 @@ RUN_DEPENDS=	py2?-dbus>0:${PORTSDIR}/devel/py-dbus \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c++11-lib gettext gmake libtool pathfix \
+USES=		compiler:c++11-lib gettext gmake gnome libtool pathfix \
 		pkgconfig tar:xz
 USE_GNOME=	gnomedesktop3 gtk30 intlhack \
 		introspection:build librsvg2 libxml2

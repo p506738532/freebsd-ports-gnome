@@ -21,7 +21,7 @@ LIB_DEPENDS=	libgweather-3.so:${PORTSDIR}/net/libgweather \
 		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
 RUN_DEPENDS=	notification-daemon>=0:${PORTSDIR}/deskutils/notification-daemon
 
-USES+=		gettext gmake libtool pathfix pkgconfig
+USES+=		gettext gmake gnome libtool pathfix pkgconfig
 USE_XORG=	ice sm x11 xau xrandr
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes

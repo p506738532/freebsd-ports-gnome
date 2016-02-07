@@ -15,7 +15,7 @@ LIB_DEPENDS=	libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gnomedesktop3 gtk30 intlhack introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

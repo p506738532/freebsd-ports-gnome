@@ -18,7 +18,7 @@ RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-sc
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake libtool pathfix \
+USES=		desktop-file-utils gettext gmake gnome libtool pathfix \
 		pkgconfig tar:xz
 USE_GNOME=	intltool librsvg2 gtk30 gnomedesktop3 introspection:build
 INSTALLS_ICONS=	yes

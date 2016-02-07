@@ -26,8 +26,8 @@ RUN_DEPENDS=	gucharmap:${PORTSDIR}/deskutils/gucharmap \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		autoreconf:build gettext gmake libtool pathfix pkgconfig python:3 \
-		shebangfix tar:xz
+USES=		autoreconf:build gettext gmake gnome libtool pathfix \
+		pkgconfig python:3 shebangfix tar:xz
 USE_XORG=	x11
 USE_GNOME=	gdkpixbuf2 gtksourceview2 introspection:build \
 		libxml2 libxslt pygobject pygobject3 libwnck intlhack

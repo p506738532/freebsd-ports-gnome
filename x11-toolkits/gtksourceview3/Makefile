@@ -19,7 +19,7 @@ PORTSCOUT=	limitw:1,even
 
 BUILD_DEPENDS=	vala:${PORTSDIR}/lang/vala
 
-USES+=		gettext gmake libtool pathfix pkgconfig
+USES+=		gettext gmake gnome libtool pathfix pkgconfig
 USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build \
 		libxml2 referencehack
 GNU_CONFIGURE=	yes

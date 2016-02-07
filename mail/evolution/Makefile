@@ -25,7 +25,7 @@ RUN_DEPENDS=	highlight:${PORTSDIR}/textproc/highlight \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils bison gettext gmake libtool \
+USES=		desktop-file-utils bison gettext gmake gnome libtool \
 		pathfix perl5 pkgconfig tar:xz
 USE_GNOME=	evolutiondataserver3 gnomedesktop3 intltool
 GNU_CONFIGURE=	yes

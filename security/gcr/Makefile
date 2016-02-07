@@ -20,7 +20,7 @@ CONFLICTS=	gnome-keyring-2.[0-9]*
 PORTSCOUT=	limitw:1,even
 
 USE_GNOME=	gtk30 intlhack introspection:build
-USES=		desktop-file-utils gettext gmake libtool pathfix \
+USES=		desktop-file-utils gettext gmake gnome libtool pathfix \
 		pkgconfig shared-mime-info tar:xz
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

@@ -18,7 +18,7 @@ RUN_DEPENDS=	at-spi2-core>=2.17.90:${PORTSDIR}/accessibility/at-spi2-core
 
 PORTSCOUT=	limitw:1,even
 
-USES=		cpe gmake libtool pathfix pkgconfig tar:xz
+USES=		cpe gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	atk glib20 intlhack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

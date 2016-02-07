@@ -23,7 +23,7 @@ RUN_DEPENDS=	iso-codes>=0:${PORTSDIR}/misc/iso-codes \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake libtool \
+USES=		desktop-file-utils gettext gmake gnome libtool \
 		pathfix pkgconfig python:3 tar:xz
 USE_GNOME=	gtksourceview3 intlhack introspection:build \
 		libxml2 py3gobject3

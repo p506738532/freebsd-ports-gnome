@@ -16,7 +16,7 @@ LIB_DEPENDS=	libgweather-3.so:${PORTSDIR}/net/libgweather \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gnomedesktop3 gtk30 intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

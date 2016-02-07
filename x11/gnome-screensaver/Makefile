@@ -19,7 +19,7 @@ RUN_DEPENDS=	pam_helper:${PORTSDIR}/security/pam_helper \
 		gsettings-desktop-schemas>=3.2.0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		gnome-keyring>=0:${PORTSDIR}/security/gnome-keyring
 
-USES=		gettext gmake pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome pathfix pkgconfig tar:xz
 USE_XORG=	x11 xext xxf86vm xxf86misc xscrnsaver
 USE_GNOME=	gnomedesktop3 gnomeprefix intltool libgnomekbd
 GNU_CONFIGURE=	yes

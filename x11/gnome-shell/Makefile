@@ -32,8 +32,8 @@ RUN_DEPENDS=	py*-dbus>=0:${PORTSDIR}/devel/py-dbus \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c11 cpe gettext gmake libtool pathfix pkgconfig \
-		tar:xz webplugin:native
+USES=		compiler:c11 cpe gettext gmake gnome libtool pathfix \
+		pkgconfig tar:xz webplugin:native
 USE_GNOME=	evolutiondataserver3 gnomedesktop3 gtk30 intlhack \
 		introspection
 USE_XORG=	x11 xfixes sm
