@@ -22,7 +22,8 @@ RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity \
 PORTSCOUT=	limitw:1,even
 
 USE_XORG=	x11 xcomposite xdamage xrender xcursor xinerama xext xrandr
-USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
+USES=		compiler:c11 gettext gmake gnome libtool \
+		pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomeprefix gtk30 intlhack libxml2:build
 USE_LDCONFIG=	yes

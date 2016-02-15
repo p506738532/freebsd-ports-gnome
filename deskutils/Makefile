@@ -4,7 +4,6 @@
     COMMENT = Things that used to be on the desktop before computers were invented
 
     SUBDIR += affiche
-    SUBDIR += akamaru
     SUBDIR += anamnesis
     SUBDIR += appwrapper
     SUBDIR += aspostit

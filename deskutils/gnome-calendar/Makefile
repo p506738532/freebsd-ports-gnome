@@ -26,4 +26,9 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.calendar.enums.xml \
 		org.gnome.calendar.gschema.xml
 
+# for gcc 4.2.1
+post-patch:
+	@${REINPLACE_CMD} -e 's|-Wempty-body||g' \
+		${WRKSRC}/configure
+
 .include <bsd.port.mk>

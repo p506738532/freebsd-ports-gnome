@@ -99,8 +99,8 @@ DEVHELP_LIB_DEPENDS=	libdevhelp-3.so:${PORTSDIR}/devel/devhelp
 DEVHELP_CONFIGURE_ENBABLE=	plugin-devhelp
 
 VALA_VER=		0.30
-VALA_BUILD_DEPENDS=	vala=${VALA_VER}:${PORTSDIR}/lang/vala
-VALA_RUN_DEPENDS=	vala=${VALA_VER}:${PORTSDIR}/lang/vala
+VALA_BUILD_DEPENDS=	vala>=${VALA_VER}<${VALA_VER}.99:${PORTSDIR}/lang/vala
+VALA_RUN_DEPENDS=	vala>=${VALA_VER}<${VALA_VER}.99:${PORTSDIR}/lang/vala
 VALA_CONFIGURE_ENABLE=	vala
 
 post-patch:

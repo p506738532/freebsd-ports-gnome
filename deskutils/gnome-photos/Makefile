@@ -25,7 +25,8 @@ RUN_DEPENDS=	geoclue>=0:${PORTSDIR}/net/geoclue
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
+USES=		compiler:c11 gettext gmake gnome libtool \
+		pathfix pkgconfig tar:xz
 USE_GNOME=	gnomedesktop3 gtk30 intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

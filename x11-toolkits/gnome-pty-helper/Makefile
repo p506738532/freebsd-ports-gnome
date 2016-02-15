@@ -9,7 +9,7 @@ DISTNAME=	vte-${PORTVERSION}
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Terminal widget with improved accessibility and I18N support
+COMMENT=	utmp/wtmp/lastlog helper program for the vte Terminal widget
 
 BUILD_DEPENDS+=	gnutls>=0:${PORTSDIR}/security/gnutls
 

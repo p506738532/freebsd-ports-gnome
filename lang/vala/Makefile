@@ -13,7 +13,8 @@ LICENSE=	LGPL21
 
 PORTSCOUT=	limitw:1,even
 
-USES=		bison gettext gmake gnome libtool pathfix pkgconfig tar:xz
+USES=		bison gettext-runtime gmake gnome libtool \
+		pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 gnomeprefix libxslt
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
