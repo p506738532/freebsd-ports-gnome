@@ -3,6 +3,7 @@
 
 PORTNAME=	gstreamer1-vaapi
 PORTVERSION=	0.7.0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.freedesktop.org/software/vaapi/releases/gstreamer-vaapi/
 DISTNAME=	gstreamer-vaapi-${PORTVERSION}
@@ -24,7 +25,7 @@ USE_GSTREAMER1=	yes
 USE_GL=		gl
 USE_XORG=	x11 xrandr xrender xproto:build
 
-PLIST_SUB=	VERSION=1.0 LIBVER=1.6
+PLIST_SUB=	VERSION=1.0 LIBVER=1.7
 
 # manual since pathfix doesn't work.
 post-patch:
