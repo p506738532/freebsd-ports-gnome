@@ -98,6 +98,7 @@ BAD_GST_NON_PLUGINS= \
 		--disable-fbdev \
 		--disable-uvch264 \
 		--disable-vcd \
+		--disable-vulkan \
 		--disable-wildmidi \
 		--disable-wininet
 
