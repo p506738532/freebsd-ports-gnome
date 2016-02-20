@@ -31,7 +31,6 @@ BAD_GST_ALL_PLUGINS+= \
 		librfb \
 		modplug \
 		mpeg2enc \
-		mpg123 \
 		mplex \
 		neon \
 		ofa \
@@ -88,7 +87,6 @@ BAD_GST_NON_PLUGINS= \
 		--enable-dvb \
 		--enable-shm \
 		--disable-wgl \
-		--disable-gsettings \
 		--disable-acm \
 		--disable-android_media \
 		--disable-apple_media \
@@ -144,6 +142,7 @@ UGLY_GST_ALL_PLUGINS+= \
 		lame \
 		mad \
 		mpeg2dec \
+		mpg123 \
 		sidplay \
 		twolame \
 		x264
