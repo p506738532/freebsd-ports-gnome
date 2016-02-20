@@ -360,9 +360,9 @@
     SUBDIR += pear-Text_Figlet
     SUBDIR += pecl-timezonedb
     SUBDIR += pfm
-    SUBDIR += php5-calendar
     SUBDIR += php55-calendar
     SUBDIR += php56-calendar
+    SUBDIR += php70-calendar
     SUBDIR += phraze
     SUBDIR += pinfo
     SUBDIR += pipe
@@ -393,6 +393,7 @@
     SUBDIR += qt4-l10n
     SUBDIR += qt4-qtconfig
     SUBDIR += qt4-qtdemo
+    SUBDIR += qt5-l10n
     SUBDIR += qt5ct
     SUBDIR += quotes
     SUBDIR += raspberrypi-userland

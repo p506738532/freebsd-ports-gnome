@@ -300,6 +300,7 @@
     SUBDIR += plexhometheater
     SUBDIR += plexmediaserver
     SUBDIR += plexmediaserver-plexpass
+    SUBDIR += plexpy
     SUBDIR += podcastdl
     SUBDIR += poe
     SUBDIR += ppm2fli
@@ -430,7 +431,6 @@
     SUBDIR += x265
     SUBDIR += xanim
     SUBDIR += xawtv
-    SUBDIR += xbmc-addon-pvr
     SUBDIR += xfce4-parole
     SUBDIR += xine
     SUBDIR += xmms

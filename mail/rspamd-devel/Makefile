@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	rspamd
-PORTVERSION=	1.1.1.b1.19012016
+PORTVERSION=	1.1.3.b3.04022016
 CATEGORIES=	mail
 PKGNAMESUFFIX=	-devel
 
@@ -17,18 +17,20 @@ LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre \
 
 CONFLICTS_INSTALL=	rspamd
 
-RSPAMD_VERSION=	1.1.1
+RSPAMD_VERSION=	1.1.3
 USE_GITHUB=	yes
 GH_ACCOUNT=	vstakhov
 GH_PROJECT=	rspamd
-GH_TAGNAME=	5640329
+GH_TAGNAME=	140fab1
 
-OPTIONS_DEFINE=	GPERF REDIRECTOR
+OPTIONS_DEFINE=	GPERF REDIRECTOR HYPERSCAN
 GPERF_DESC=		google perf-tools profiling
 REDIRECTOR_DESC=	Install HTTP redirector
+HYPERSCAN_DESC=		Use hyperscan optimizations (amd64 only)
 
 USE_RC_SUBR=	rspamd
 
+SUB_FILES=	pkg-message rspamd.newsyslog.conf.sample
 PLIST_SUB+=	ETCDIR=etc/rspamd \
 		RSPAMDVERSION=${RSPAMD_VERSION}
 CMAKE_ARGS+=	-DCONFDIR=${PREFIX}/etc/rspamd \
@@ -58,6 +60,12 @@ WITH_DEBUG=	yes
 .if ${PORT_OPTIONS:MGPERF}
  CMAKE_ARGS+=	-DENABLE_GPERF_TOOLS=ON
  LIB_DEPENDS+=	libprofiler.so:${PORTSDIR}/devel/google-perftools
+.endif
+
+.if ${PORT_OPTIONS:MHYPERSCAN}
+ CMAKE_ARGS+=	-DENABLE_HYPERSCAN=ON
+ BUILD_DEPENDS+=	${LOCALBASE}/lib/libhs.a:${PORTSDIR}/devel/hyperscan
+ ONLY_FOR_ARCHS=	amd64
 .endif
 
 .if ${PORT_OPTIONS:MREDIRECTOR}
@@ -90,5 +98,10 @@ post-stage:
 		${RM} ${STAGEDIR}/${ETCDIR}/rspamd.systemd.conf
 		# No need, since rspamd.conf.sample is a same
 		${RM} ${STAGEDIR}/${ETCDIR}/rspamd.sysvinit.conf
+	${INSTALL_DATA} ${WRKDIR}/rspamd.newsyslog.conf.sample ${STAGEDIR}${ETCDIR}
+
+post-install:
+	@${MKDIR} ${STAGEDIR}/usr/local/etc/newsyslog.conf.d
+	${LN} -s ${ETCDIR}/rspamd.newsyslog.conf ${STAGEDIR}/usr/local/etc/newsyslog.conf.d
 
 .include <bsd.port.mk>

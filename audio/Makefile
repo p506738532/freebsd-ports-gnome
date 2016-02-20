@@ -94,12 +94,17 @@
     SUBDIR += deadbeef-jack-plugin
     SUBDIR += deadbeef-mpris-plugin
     SUBDIR += deadbeef-mpris2-plugin
+    SUBDIR += deadbeef-musical-spectrum-plugin
+    SUBDIR += deadbeef-playback-status-plugin
+    SUBDIR += deadbeef-quick-search-plugin
+    SUBDIR += deadbeef-waveform-seekbar-plugin
     SUBDIR += decibel-audio-player
     SUBDIR += deforaos-mixer
     SUBDIR += dekagen
     SUBDIR += denemo
     SUBDIR += dir2ogg
     SUBDIR += discid
+    SUBDIR += dream
     SUBDIR += drumpiler
     SUBDIR += dssi
     SUBDIR += dtmfdial
@@ -420,7 +425,6 @@
     SUBDIR += linux-c6-nas-libs
     SUBDIR += linux-c6-openal-soft
     SUBDIR += linux-c6-pulseaudio-libs
-    SUBDIR += linux-c6-pulseaudio-libs-glib2
     SUBDIR += linux-c6-pulseaudio-utils
     SUBDIR += linux-c6-sdl_mixer
     SUBDIR += linux-f10-alsa-lib

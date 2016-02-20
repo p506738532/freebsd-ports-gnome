@@ -3,7 +3,7 @@
 
 PORTNAME=	graphviz
 PORTVERSION=	2.38.0
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	graphics tk
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
@@ -162,7 +162,8 @@ CONFIGURE_ARGS+=	--program-transform-name="s/x/x/" \
 		--with-fontconfigincludedir=${LOCALBASE}/include \
 		--with-fontconfiglibdir=${LOCALBASE}/lib \
 		--disable-io --disable-ocaml --disable-java \
-		--disable-sharp
+		--disable-sharp \
+		--disable-silent-rules
 
 .if ${PORT_OPTIONS:MMING}
 BROKEN=	Ming incomplete, uses removed libgraph

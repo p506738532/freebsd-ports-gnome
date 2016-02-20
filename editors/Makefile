@@ -241,6 +241,7 @@
     SUBDIR += texstudio
     SUBDIR += textroom
     SUBDIR += texworks
+    SUBDIR += the
     SUBDIR += thoteditor
     SUBDIR += tpad
     SUBDIR += tree-widget
@@ -254,6 +255,7 @@
     SUBDIR += vim
     SUBDIR += vim-lite
     SUBDIR += winefish
+    SUBDIR += with-editor
     SUBDIR += wordgrinder
     SUBDIR += xcoral
     SUBDIR += xed

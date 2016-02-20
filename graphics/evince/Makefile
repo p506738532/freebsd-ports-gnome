@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evince
-PORTVERSION=	3.16.1
-PORTREVISION?=	1
+PORTVERSION=	3.18.2
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -24,8 +23,8 @@ RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
 PORTSCOUT=	limitw:1,even
 SLAVEPORT?=	no
 
-USES=		compiler:c++11-lib desktop-file-utils gettext gmake libtool \
-		pathfix pkgconfig tar:xz
+USES=		compiler:c++11-lib desktop-file-utils gettext gmake \
+		gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -50,7 +49,7 @@ GLIB_SCHEMAS=	org.gnome.Evince.gschema.xml
 PLIST_SUB=	VERSION=3.0
 
 OPTIONS_DEFINE=	COMICS DJVU DVI KEYRING NAUTILUS T1LIB XPS
-OPTIONS_DEFAULT=COMICS KEYRING NAUTILUS XPS
+OPTIONS_DEFAULT=COMICS DJVU KEYRING NAUTILUS XPS
 DVI_DESC=	DVI viewer support
 T1LIB_DESC=	T1LIB for TYPE1 fonts to DVI (Enables DVI)
 NAUTILUS_DESC=	Nautilus plugin

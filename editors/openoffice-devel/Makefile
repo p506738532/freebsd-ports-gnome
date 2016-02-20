@@ -3,7 +3,7 @@
 
 PORTNAME=	apache-openoffice
 PORTVERSION=	${AOOVERSION1}.${AOOVERSION2}.${SVNREVISION}
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	4
 CATEGORIES=	editors java
 MASTER_SITES=	https://dist.apache.org/repos/dist/dev/openoffice/${AOOVERSION}-${AOORC}-r${SVNREVISION}/source/ \
@@ -55,7 +55,6 @@ BUILD_DEPENDS=								\
 		${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip	\
 		zip:${PORTSDIR}/archivers/zip				\
 		ant:${PORTSDIR}/devel/apache-ant			\
-		${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs \
 		dmake:${PORTSDIR}/devel/dmake				\
 		epm:${PORTSDIR}/devel/epm				\
 		${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf		\
@@ -102,7 +101,7 @@ AOOVERSION2=	2
 AOOVERSION3=	0
 # From solenv/inc/minor.mk SOURCEREVISION LAST_MINOR BUILD
 AOOTAG=		AOO420m1\(Build:9800\)
-SVNREVISION=	1712473
+SVNREVISION=	1727463
 #AOORC=rc3
 EXTSRC=		ApacheOpenOffice.ext_sources.${AOOVERSION1}.x.x.20150707.tar.gz
 
@@ -176,6 +175,8 @@ MMEDIA_USE=			GSTREAMER=yes
 SDK_CONFIGURE_ENABLE=		odk
 
 PDFIMPORT_CONFIGURE_ENABLE=	pdfimport
+PDFIMPORT_LIB_DEPENDS=		libboost_system.so:${PORTSDIR}/devel/boost-libs
+PDFIMPORT_BUILD_DEPENDS_OFF=	${LOCALBASE}/include/boost/shared_ptr.hpp:${PORTSDIR}/devel/boost-libs
 
 WIKI_PUBLISHER_CONFIGURE_ENABLE=	wiki-publisher
 

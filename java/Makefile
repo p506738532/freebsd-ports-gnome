@@ -65,6 +65,7 @@
     SUBDIR += jcalendar
     SUBDIR += jcckit
     SUBDIR += jcommon
+    SUBDIR += jd-gui
     SUBDIR += jdbcpool
     SUBDIR += jdk16-doc
     SUBDIR += jdk7-doc
@@ -118,8 +119,6 @@
     SUBDIR += veditor
     SUBDIR += visualvm
     SUBDIR += wildfly100
-    SUBDIR += wildfly80
-    SUBDIR += wildfly81
     SUBDIR += wildfly82
     SUBDIR += wildfly90
     SUBDIR += xdoclet

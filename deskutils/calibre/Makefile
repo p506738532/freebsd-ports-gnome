@@ -2,7 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	calibre
-PORTVERSION=	2.48.0
+PORTVERSION=	2.50.1
+PORTREVISION=	1
 CATEGORIES=	deskutils python
 MASTER_SITES=	http://download.calibre-ebook.com/${PORTVERSION}/
 
@@ -32,6 +33,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sip>=0:${PORTSDIR}/devel/py-sip \
 		${PYTHON_PKGNAMEPREFIX}cssutils>=0.9.9:${PORTSDIR}/www/py-cssutils \
 		${PYTHON_PKGNAMEPREFIX}apsw>=0:${PORTSDIR}/databases/py-apsw
 RUN_DEPENDS=	xdg-open:${PORTSDIR}/devel/xdg-utils \
+		${PYTHON_PKGNAMEPREFIX}sip>=0:${PORTSDIR}/devel/py-sip \
 		${PYTHON_PKGNAMEPREFIX}cssutils>=0.9.9:${PORTSDIR}/www/py-cssutils \
 		${PYTHON_PKGNAMEPREFIX}dnspython>=0:${PORTSDIR}/dns/py-dnspython \
 		${PYTHON_PKGNAMEPREFIX}dateutil>=0:${PORTSDIR}/devel/py-dateutil \
@@ -58,7 +60,8 @@ USE_RC_SUBR=	calibre
 EXTRACT_BEFORE_ARGS=	-x -s '/^calibre/~-src/' -f
 
 USES=		desktop-file-utils pkgconfig python:2 shared-mime-info shebangfix tar:xz
-SHEBANG_FILES=	src/calibre/ebooks/metadata/odt.py \
+SHEBANG_FILES=	resources/calibre-portable.sh \
+		src/calibre/ebooks/metadata/odt.py \
 		src/calibre/utils/*.py \
 		src/odf/*.py
 USE_QT5=	buildtools_build dbus qmake_build
@@ -94,10 +97,13 @@ do-install:
 		${STAGEDIR}${PREFIX}/share/applications \
 		${STAGEDIR}${PREFIX}/share/desktop-directories \
 		${STAGEDIR}${PREFIX}/share/mime/packages
+	# Create this file to avoid what looks like a bug in xdg-desktop-menu
+	@${TOUCH} ${STAGEDIR}${PREFIX}/share/applications/defaults.list
 	(cd ${BUILD_WRKSRC}; ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} \
 		${PYSETUP} install --prefix ${PREFIX} \
 		--staging-root ${STAGEDIR}${PREFIX})
-	@${RM} ${STAGEDIR}${PREFIX}/bin/calibre-uninstall
+	@${RM} ${STAGEDIR}${PREFIX}/bin/calibre-uninstall \
+		${STAGEDIR}${PREFIX}/share/applications/defaults.list
 	@${RMDIR} ${STAGEDIR}${PREFIX}/share/desktop-directories
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/calibre/calibre/plugins/*
 
