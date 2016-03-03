@@ -394,6 +394,7 @@
     SUBDIR += octave-forge-video
     SUBDIR += octave-forge-xraylib
     SUBDIR += octave-forge-zenity
+    SUBDIR += octave-forge-zeromq
     SUBDIR += ogdf
     SUBDIR += oleo
     SUBDIR += open-axiom
@@ -667,6 +668,7 @@
     SUBDIR += slgrace
     SUBDIR += snns
     SUBDIR += solitaire
+    SUBDIR += sound-of-sorting
     SUBDIR += spar
     SUBDIR += spblas
     SUBDIR += speedcrunch

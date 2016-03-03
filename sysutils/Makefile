@@ -221,6 +221,7 @@
     SUBDIR += dolly
     SUBDIR += downtime
     SUBDIR += downtimed
+    SUBDIR += dsbwrtsysctl
     SUBDIR += dt
     SUBDIR += dtpstree
     SUBDIR += du2ps
@@ -244,6 +245,7 @@
     SUBDIR += enteruser
     SUBDIR += entr
     SUBDIR += env4801
+    SUBDIR += envconsul
     SUBDIR += etcmerge
     SUBDIR += etcupdate
     SUBDIR += eventlog
@@ -1057,6 +1059,7 @@
     SUBDIR += u-boot-pandaboard
     SUBDIR += u-boot-rpi
     SUBDIR += u-boot-rpi2
+    SUBDIR += u-boot-utilite
     SUBDIR += u-boot-wandboard
     SUBDIR += ua
     SUBDIR += ucspi-ipc

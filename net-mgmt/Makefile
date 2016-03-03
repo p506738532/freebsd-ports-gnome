@@ -187,6 +187,7 @@
     SUBDIR += ocsinventory-ng
     SUBDIR += omping
     SUBDIR += openlldp
+    SUBDIR += openvmps
     SUBDIR += p0f
     SUBDIR += p0f2
     SUBDIR += p5-AnyEvent-SNMP
@@ -310,6 +311,7 @@
     SUBDIR += statsd
     SUBDIR += statsite
     SUBDIR += subcalc
+    SUBDIR += super_mediator
     SUBDIR += sx
     SUBDIR += sysmon
     SUBDIR += tcpreplay

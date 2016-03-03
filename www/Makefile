@@ -468,6 +468,7 @@
     SUBDIR += mod_flickr
     SUBDIR += mod_geoip2
     SUBDIR += mod_gzip2
+    SUBDIR += mod_http2-devel
     SUBDIR += mod_h264_streaming
     SUBDIR += mod_hosts_access
     SUBDIR += mod_jail
@@ -1539,10 +1540,12 @@
     SUBDIR += py-django-formtools
     SUBDIR += py-django-happenings
     SUBDIR += py-django-haystack
+    SUBDIR += py-django-htmlmin
     SUBDIR += py-django-json-rpc
     SUBDIR += py-django-keyedcache
     SUBDIR += py-django-ldapdb
     SUBDIR += py-django-livesettings
+    SUBDIR += py-django-markdownx
     SUBDIR += py-django-markwhat
     SUBDIR += py-django-mezzanine
     SUBDIR += py-django-mezzanine-filebrowser

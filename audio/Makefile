@@ -35,7 +35,6 @@
     SUBDIR += asunder
     SUBDIR += atunes
     SUBDIR += aubio
-    SUBDIR += audacious-dumb
     SUBDIR += audacity
     SUBDIR += audex
     SUBDIR += audiere
@@ -97,6 +96,7 @@
     SUBDIR += deadbeef-musical-spectrum-plugin
     SUBDIR += deadbeef-playback-status-plugin
     SUBDIR += deadbeef-quick-search-plugin
+    SUBDIR += deadbeef-vu-meter-plugin
     SUBDIR += deadbeef-waveform-seekbar-plugin
     SUBDIR += decibel-audio-player
     SUBDIR += deforaos-mixer
@@ -650,7 +650,6 @@
     SUBDIR += rem
     SUBDIR += resid
     SUBDIR += rexima
-    SUBDIR += rezound
     SUBDIR += rhythmbox
     SUBDIR += rio500
     SUBDIR += rioutil
