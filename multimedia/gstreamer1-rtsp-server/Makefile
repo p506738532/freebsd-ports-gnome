@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gstreamer1-rtsp-server
-PORTVERSION=	1.7.2
+PORTVERSION=	1.7.90
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-rtsp-server/
 DISTNAME=	gst-rtsp-server-${PORTVERSION}
@@ -19,6 +19,6 @@ INSTALL_TARGET=	install-strip
 
 #CONFIGURE_ARGS=	--enable-introspection=yes \
 #		--with-bash-completion-dir=${PREFIX}/share/bash-completion/completions
-PLIST_SUB=	VERSION=1.0 SOVERSION=0.702.0
+PLIST_SUB=	VERSION=1.0 SOVERSION=0.790.0
 
 .include <bsd.port.mk>
