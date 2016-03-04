@@ -6,6 +6,7 @@ BASE_GST_ALL_PLUGINS= \
 		ivorbis \
 		libvisual \
 		ogg \
+		opus \
 		pango \
 		theora \
 		vorbis \
@@ -40,7 +41,6 @@ BAD_GST_ALL_PLUGINS+= \
 		opengl \
 		openh264 \
 		openjpeg \
-		opus \
 		resindvd \
 		rtmp \
 		rsvg \
