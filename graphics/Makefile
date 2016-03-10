@@ -343,6 +343,7 @@
     SUBDIR += hs-svgcairo
     SUBDIR += hsetroot
     SUBDIR += hugin
+    SUBDIR += hugin-2016
     SUBDIR += hugin-devel
     SUBDIR += icat
     SUBDIR += icc-profiles-basiccolor
@@ -539,6 +540,7 @@
     SUBDIR += libwmf-nox11
     SUBDIR += libwpg
     SUBDIR += libwpg03
+    SUBDIR += libyuv
     SUBDIR += lightzone
     SUBDIR += linplasma
     SUBDIR += linux-adobesvg

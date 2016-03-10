@@ -8,6 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	https://launchpad.net/hugin/2016.0/2016.0rc1/+download/
 DISTFILES=	hugin-2016.0.0_rc1.tar.bz2
 WRKSRC=		${WRKDIR}/hugin-2016.0.0
+PKGNAMESUFFIX=	-2016
 
 MAINTAINER=	grog@FreeBSD.org
 COMMENT=	GUI for Panorama Tools, to stitch panoramic images
@@ -15,6 +16,7 @@ COMMENT=	GUI for Panorama Tools, to stitch panoramic images
 LIB_DEPENDS=	libIlmImf.so:${PORTSDIR}/graphics/OpenEXR \
 		libImath.so:${PORTSDIR}/graphics/ilmbase \
 		libboost_thread.so:${PORTSDIR}/devel/boost-libs \
+		liblcms2.so:${PORTSDIR}/graphics/lcms2 \
 		libexiv2.so:${PORTSDIR}/graphics/exiv2 \
 		libfftw3.so:${PORTSDIR}/math/fftw3 \
 		libpano13.so:${PORTSDIR}/graphics/libpano13 \

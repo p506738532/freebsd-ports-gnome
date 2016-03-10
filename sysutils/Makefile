@@ -108,6 +108,7 @@
     SUBDIR += burp
     SUBDIR += busybox
     SUBDIR += byobu
+    SUBDIR += catfish
     SUBDIR += cbsd
     SUBDIR += ccd2iso
     SUBDIR += cciss_vol_status
@@ -293,6 +294,7 @@
     SUBDIR += freebsd-snapshot
     SUBDIR += freecolor
     SUBDIR += freedt
+    SUBDIR += freefilesync
     SUBDIR += freeipmi
     SUBDIR += freesbie
     SUBDIR += froxlor
@@ -375,6 +377,7 @@
     SUBDIR += graffer
     SUBDIR += graid5
     SUBDIR += graveman
+    SUBDIR += graylog
     SUBDIR += grok
     SUBDIR += grub2
     SUBDIR += grub2-bhyve
@@ -512,7 +515,6 @@
     SUBDIR += logrotate
     SUBDIR += logstalgia
     SUBDIR += logstash
-    SUBDIR += logstash-contrib
     SUBDIR += logstash-forwarder
     SUBDIR += logtool
     SUBDIR += logwatch
@@ -1018,6 +1020,7 @@
     SUBDIR += tai64nfrac
     SUBDIR += tarsnap
     SUBDIR += tarsnap-gui
+    SUBDIR += tarsnap-periodic
     SUBDIR += tartarus
     SUBDIR += tbku
     SUBDIR += tclsyslog

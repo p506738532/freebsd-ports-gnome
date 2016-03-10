@@ -160,6 +160,7 @@
     SUBDIR += elasticsearch-river-rabbitmq
     SUBDIR += elasticsearch2
     SUBDIR += elasticsearch2-plugin-hq
+    SUBDIR += elasticsearch2-plugin-marvel
     SUBDIR += elasticsearch2-plugin-sql
     SUBDIR += elixir-earmark
     SUBDIR += elixir-ex_doc
@@ -1705,6 +1706,7 @@
     SUBDIR += yi-hunspell
     SUBDIR += yodl
     SUBDIR += yould
+    SUBDIR += zenxml
     SUBDIR += zorba
     SUBDIR += zu-aspell
     SUBDIR += zu-hunspell
