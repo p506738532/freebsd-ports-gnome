@@ -108,6 +108,7 @@
     SUBDIR += burp
     SUBDIR += busybox
     SUBDIR += byobu
+    SUBDIR += catfish
     SUBDIR += cbsd
     SUBDIR += ccd2iso
     SUBDIR += cciss_vol_status
@@ -221,6 +222,7 @@
     SUBDIR += dolly
     SUBDIR += downtime
     SUBDIR += downtimed
+    SUBDIR += dsbwrtsysctl
     SUBDIR += dt
     SUBDIR += dtpstree
     SUBDIR += du2ps
@@ -244,6 +246,7 @@
     SUBDIR += enteruser
     SUBDIR += entr
     SUBDIR += env4801
+    SUBDIR += envconsul
     SUBDIR += etcmerge
     SUBDIR += etcupdate
     SUBDIR += eventlog
@@ -291,6 +294,7 @@
     SUBDIR += freebsd-snapshot
     SUBDIR += freecolor
     SUBDIR += freedt
+    SUBDIR += freefilesync
     SUBDIR += freeipmi
     SUBDIR += freesbie
     SUBDIR += froxlor
@@ -373,6 +377,7 @@
     SUBDIR += graffer
     SUBDIR += graid5
     SUBDIR += graveman
+    SUBDIR += graylog
     SUBDIR += grok
     SUBDIR += grub2
     SUBDIR += grub2-bhyve
@@ -511,7 +516,6 @@
     SUBDIR += logrotate
     SUBDIR += logstalgia
     SUBDIR += logstash
-    SUBDIR += logstash-contrib
     SUBDIR += logstash-forwarder
     SUBDIR += logtool
     SUBDIR += logwatch
@@ -735,6 +739,8 @@
     SUBDIR += php55-posix
     SUBDIR += php56-fileinfo
     SUBDIR += php56-posix
+    SUBDIR += php70-fileinfo
+    SUBDIR += php70-posix
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
@@ -1015,6 +1021,7 @@
     SUBDIR += tai64nfrac
     SUBDIR += tarsnap
     SUBDIR += tarsnap-gui
+    SUBDIR += tarsnap-periodic
     SUBDIR += tartarus
     SUBDIR += tbku
     SUBDIR += tclsyslog
@@ -1056,6 +1063,7 @@
     SUBDIR += u-boot-pandaboard
     SUBDIR += u-boot-rpi
     SUBDIR += u-boot-rpi2
+    SUBDIR += u-boot-utilite
     SUBDIR += u-boot-wandboard
     SUBDIR += ua
     SUBDIR += ucspi-ipc
