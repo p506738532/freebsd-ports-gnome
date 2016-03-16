@@ -222,6 +222,9 @@
     SUBDIR += dolly
     SUBDIR += downtime
     SUBDIR += downtimed
+    SUBDIR += dsbdriverd
+    SUBDIR += dsbmc
+    SUBDIR += dsbmd
     SUBDIR += dsbwrtsysctl
     SUBDIR += dt
     SUBDIR += dtpstree
@@ -774,6 +777,7 @@
     SUBDIR += puppet37
     SUBDIR += puppet38
     SUBDIR += puppet4
+    SUBDIR += puppetserver
     SUBDIR += pv
     SUBDIR += pwd_unmkdb
     SUBDIR += pwgen
@@ -938,6 +942,7 @@
     SUBDIR += safecat
     SUBDIR += samefile
     SUBDIR += samesame
+    SUBDIR += sample
     SUBDIR += sas2ircu
     SUBDIR += sas3ircu
     SUBDIR += savelogs
@@ -967,6 +972,7 @@
     SUBDIR += shim
     SUBDIR += shlock
     SUBDIR += shmcat
+    SUBDIR += showbeastie
     SUBDIR += sievelog
     SUBDIR += skill
     SUBDIR += slack
