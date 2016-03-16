@@ -64,7 +64,7 @@ lib/gst-validate-launcher/python/launcher/vfb_server.pyc
 lib/gst-validate-launcher/python/launcher/vfb_server.pyo
 lib/gstreamer-%%VERSION%%/libgstvalidateplugin-%%VERSION%%.so
 lib/gstreamer-%%VERSION%%/libgstvalidateplugin-%%VERSION%%.so.0
-lib/gstreamer-%%VERSION%%/libgstvalidateplugin-%%VERSION%%.so.0.790.0
+lib/gstreamer-%%VERSION%%/libgstvalidateplugin-%%VERSION%%.so.%%SOVERSION%%
 lib/gstreamer-%%VERSION%%/validate/libgstvalidatefaultinjection.so
 lib/gstreamer-%%VERSION%%/validate/libgstvalidategapplication.so
 lib/gstreamer-%%VERSION%%/validate/libgstvalidategtk.so
