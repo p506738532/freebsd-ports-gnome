@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gstreamer1-editing-services
-PORTVERSION=	1.7.91
+PORTVERSION=	1.8.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gstreamer-editing-services/
 DISTNAME=	gstreamer-editing-services-${PORTVERSION}
@@ -21,7 +21,7 @@ INSTALL_TARGET=	install-strip
 
 CONFIGURE_ARGS=	--enable-introspection=yes \
 		--with-bash-completion-dir=${PREFIX}/share/bash-completion/completions
-PLIST_SUB=	VERSION=1.0 SOVERSION=0.791.0
+PLIST_SUB=	VERSION=1.0 SOVERSION=0.800.0
 
 .include <bsd.port.options.mk>
 

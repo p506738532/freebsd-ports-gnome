@@ -345,6 +345,7 @@ gst_opencv_LIB_DEPENDS=	libopencv_highgui.so:${PORTSDIR}/graphics/opencv
 gst_opencv_PLIST_FILES=	${GST_LIB_DIR}/libgstopencv.so \
 			share/gst-plugins-bad/${VERSION}/opencv_haarcascades/fist.xml \
 			share/gst-plugins-bad/${VERSION}/opencv_haarcascades/palm.xml
+gst_opencv_USES=	compiler:c++11-lib
 
 # openjpeg
 gst_openjpeg_LIB_DEPENDS=	libopenjpeg.so:${PORTSDIR}/graphics/openjpeg15
