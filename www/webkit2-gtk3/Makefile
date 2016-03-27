@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	webkit
-PORTVERSION=	2.10.7
+PORTVERSION=	2.10.9
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	2-gtk3
@@ -87,6 +87,7 @@ pre-configure:
 post-install:
 	${MV} ${STAGEDIR}${PREFIX}/bin/jsc \
 		${STAGEDIR}/${PREFIX}/bin/jsc-4
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/MiniBrowser
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/*.so.*.*
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/webkit2gtk-4.0/injected-bundle/*.so
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/jsc-4
