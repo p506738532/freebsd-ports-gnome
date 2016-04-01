@@ -3,6 +3,7 @@ bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
 bin/gtk-query-immodules-3.0
+bin/gtk-query-settings
 @comment bin/gtk-update-icon-cache
 bin/gtk3-demo
 bin/gtk3-demo-application
@@ -44,6 +45,7 @@ include/gtk-3.0/gdk/gdkproperty.h
 include/gtk-3.0/gdk/gdkrectangle.h
 include/gtk-3.0/gdk/gdkrgba.h
 include/gtk-3.0/gdk/gdkscreen.h
+include/gtk-3.0/gdk/gdkseat.h
 include/gtk-3.0/gdk/gdkselection.h
 include/gtk-3.0/gdk/gdktestutils.h
 include/gtk-3.0/gdk/gdkthreads.h
@@ -223,6 +225,7 @@ include/gtk-3.0/gtk/gtkcsssection.h
 include/gtk-3.0/gtk/gtkdebug.h
 include/gtk-3.0/gtk/gtkdialog.h
 include/gtk-3.0/gtk/gtkdnd.h
+include/gtk-3.0/gtk/gtkdragsource.h
 include/gtk-3.0/gtk/gtkdrawingarea.h
 include/gtk-3.0/gtk/gtkeditable.h
 include/gtk-3.0/gtk/gtkentry.h
@@ -235,6 +238,7 @@ include/gtk-3.0/gtk/gtkexpander.h
 include/gtk-3.0/gtk/gtkfilechooser.h
 include/gtk-3.0/gtk/gtkfilechooserbutton.h
 include/gtk-3.0/gtk/gtkfilechooserdialog.h
+include/gtk-3.0/gtk/gtkfilechoosernative.h
 include/gtk-3.0/gtk/gtkfilechooserwidget.h
 include/gtk-3.0/gtk/gtkfilefilter.h
 include/gtk-3.0/gtk/gtkfixed.h
@@ -284,6 +288,7 @@ include/gtk-3.0/gtk/gtkmessagedialog.h
 include/gtk-3.0/gtk/gtkmodelbutton.h
 include/gtk-3.0/gtk/gtkmodules.h
 include/gtk-3.0/gtk/gtkmountoperation.h
+include/gtk-3.0/gtk/gtknativedialog.h
 include/gtk-3.0/gtk/gtknotebook.h
 include/gtk-3.0/gtk/gtkoffscreenwindow.h
 include/gtk-3.0/gtk/gtkorientable.h
@@ -324,6 +329,10 @@ include/gtk-3.0/gtk/gtkseparator.h
 include/gtk-3.0/gtk/gtkseparatormenuitem.h
 include/gtk-3.0/gtk/gtkseparatortoolitem.h
 include/gtk-3.0/gtk/gtksettings.h
+include/gtk-3.0/gtk/gtkshortcutsgroup.h
+include/gtk-3.0/gtk/gtkshortcutssection.h
+include/gtk-3.0/gtk/gtkshortcutsshortcut.h
+include/gtk-3.0/gtk/gtkshortcutswindow.h
 include/gtk-3.0/gtk/gtkshow.h
 include/gtk-3.0/gtk/gtksizegroup.h
 include/gtk-3.0/gtk/gtksizerequest.h
@@ -425,6 +434,8 @@ share/aclocal/gtk-3.0.m4
 share/applications/gtk3-demo.desktop
 share/applications/gtk3-icon-browser.desktop
 share/applications/gtk3-widget-factory.desktop
+share/gettext/its/gtkbuilder.its
+share/gettext/its/gtkbuilder.loc
 share/gir-1.0/Gdk-3.0.gir
 share/gir-1.0/GdkX11-3.0.gir
 share/gir-1.0/Gtk-3.0.gir
