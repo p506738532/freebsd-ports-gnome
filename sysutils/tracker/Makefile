@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	tracker
-PORTVERSION=	1.6.1
+PORTVERSION=	1.8.0
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -24,7 +24,7 @@ RUN_DEPENDS=	xdg-desktop-icon:devel/xdg-utils \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake gnome libarchive libtool \
+USES=		gettext gmake gnome libarchive libtool \
 		pathfix pkgconfig sqlite tar:xz
 USE_GNOME=	gtk30 intltool introspection:build libxslt:build
 USE_LDCONFIG=	yes
@@ -57,7 +57,7 @@ GLIB_SCHEMAS=	org.freedesktop.Tracker.DB.gschema.xml \
 		org.freedesktop.Tracker.enums.xml \
 		org.freedesktop.Tracker.gschema.xml
 
-PLIST_SUB=	TRACKER_VER="1.0" LIBVER=601
+PLIST_SUB=	TRACKER_VER="1.0" LIBVER=800
 
 OPTIONS_DEFINE=		AUDIO_MINERS DOCUMENT_MINERS GRAPHIC_MINERS \
 			WEB_MINERS

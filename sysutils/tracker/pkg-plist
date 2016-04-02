@@ -1,13 +1,6 @@
 bin/tracker
-bin/tracker-control
-bin/tracker-import
-bin/tracker-info
 bin/tracker-needle
 bin/tracker-preferences
-bin/tracker-search
-bin/tracker-sparql
-bin/tracker-stats
-bin/tracker-tag
 etc/xdg/autostart/tracker-extract.desktop
 etc/xdg/autostart/tracker-miner-apps.desktop
 etc/xdg/autostart/tracker-miner-fs.desktop
@@ -160,6 +153,7 @@ share/gir-%%TRACKER_VER%%/TrackerControl-1.0.gir
 share/gir-%%TRACKER_VER%%/TrackerMiner-1.0.gir
 share/gtk-doc/html/libtracker-control/libtracker-miner-reference.html
 share/gtk-doc/html/libtracker-control/home.png
+share/gtk-doc/html/libtracker-control/index.sgml
 share/gtk-doc/html/libtracker-control/ch01.html
 share/gtk-doc/html/libtracker-control/style.css
 share/gtk-doc/html/libtracker-control/right-insensitive.png
@@ -172,6 +166,7 @@ share/gtk-doc/html/libtracker-control/right.png
 share/gtk-doc/html/libtracker-control/left.png
 share/gtk-doc/html/libtracker-control/annotation-glossary.html
 share/gtk-doc/html/libtracker-control/index.html
+share/gtk-doc/html/libtracker-miner/index.sgml
 share/gtk-doc/html/libtracker-miner/libtracker-miner-TrackerFileEnumerator.html
 share/gtk-doc/html/libtracker-miner/libtracker-miner-TrackerEnumerator.html
 share/gtk-doc/html/libtracker-miner/up-insensitive.png
@@ -215,6 +210,7 @@ share/gtk-doc/html/libtracker-sparql/tracker-overview-environment-variables.html
 share/gtk-doc/html/libtracker-sparql/style.css
 share/gtk-doc/html/libtracker-sparql/tracker-overview-connection-methods.html
 share/gtk-doc/html/libtracker-sparql/index.html
+share/gtk-doc/html/libtracker-sparql/index.sgml
 share/gtk-doc/html/libtracker-sparql/tracker-examples-writeonly-with-blank-nodes.html
 share/gtk-doc/html/libtracker-sparql/TrackerSparqlBuilder.html
 share/gtk-doc/html/libtracker-sparql/libtracker-sparql-Utilities.html
@@ -290,7 +286,6 @@ share/locale/zh_HK/LC_MESSAGES/tracker.mo
 share/locale/zh_TW/LC_MESSAGES/tracker.mo
 %%DATADIR%%/tracker-backup.xml
 %%DATADIR%%/tracker-extract-priority.xml
-%%DATADIR%%/tracker-extract.xml
 %%DATADIR%%/tracker-miner-files-index.xml
 %%DATADIR%%/tracker-miner.xml
 %%DATADIR%%/tracker-needle.ui
