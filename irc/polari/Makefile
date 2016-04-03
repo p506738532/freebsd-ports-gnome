@@ -13,10 +13,10 @@ COMMENT=	Internet Relay Chat (IRC) client designed for GNOME 3
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	appstream-util:${PORTSDIR}/devel/appstream-glib \
-		gjs-console:${PORTSDIR}/lang/gjs
-LIB_DEPENDS=	libtelepathy-glib.so:${PORTSDIR}/net-im/telepathy-glib
-RUN_DEPENDS=	gjs-console:${PORTSDIR}/lang/gjs
+BUILD_DEPENDS=	appstream-util:devel/appstream-glib \
+		gjs-console:lang/gjs
+LIB_DEPENDS=	libtelepathy-glib.so:net-im/telepathy-glib
+RUN_DEPENDS=	gjs-console:lang/gjs
 
 PORTSCOUT=	limitw:1,even
 
