@@ -12,8 +12,8 @@ COMMENT=	Framework for defining and tracking users
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus \
-    		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
+LIB_DEPENDS=	libdbus-1.so:devel/dbus \
+    		libpolkit-gobject-1.so:sysutils/polkit
 
 WRKSRC=		${WRKDIR}/ConsoleKit2-${PORTVERSION}
 USES=		gettext gmake gnome libtool pathfix pkgconfig tar:bzip2

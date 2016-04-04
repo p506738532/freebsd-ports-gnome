@@ -26,7 +26,7 @@ USES=		autoreconf:build
 
 .if !defined(REFERENCE_PORT)
 
-BUILD_DEPENDS+=	gm4:${PORTSDIR}/devel/m4
+BUILD_DEPENDS+=	gm4:devel/m4
 
 GNU_CONFIGURE=	yes
 USES+=		compiler:c++11-lib gettext gmake gnome libtool \

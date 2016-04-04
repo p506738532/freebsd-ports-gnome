@@ -10,8 +10,8 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 system monitor program
 
-BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
-LIB_DEPENDS=	libgtop-2.0.so:${PORTSDIR}/devel/libgtop
+BUILD_DEPENDS=	itstool:textproc/itstool
+LIB_DEPENDS=	libgtop-2.0.so:devel/libgtop
 
 PORTSCOUT=	limitw:1,even
 

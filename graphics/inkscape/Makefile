@@ -11,15 +11,15 @@ MASTER_SITES=	https://inkscape.global.ssl.fastly.net/media/resources/file/ \
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Full featured open source SVG editor
 
-BUILD_DEPENDS=	${LOCALBASE}/include/boost/concept_check.hpp:${PORTSDIR}/devel/boost-libs
-LIB_DEPENDS=	libpopt.so:${PORTSDIR}/devel/popt \
-		libgc.so:${PORTSDIR}/devel/boehm-gc \
-		libgsl.so:${PORTSDIR}/math/gsl \
-		libgtkspell.so:${PORTSDIR}/textproc/gtkspell \
-		liblcms.so:${PORTSDIR}/graphics/lcms \
-		libpng.so:${PORTSDIR}/graphics/png \
-		libMagick++-6.so:${PORTSDIR}/graphics/ImageMagick
-#RUN_DEPENDS=	p5-XML-XQL>=0:${PORTSDIR}/textproc/p5-XML-XQL
+BUILD_DEPENDS=	${LOCALBASE}/include/boost/concept_check.hpp:devel/boost-libs
+LIB_DEPENDS=	libpopt.so:devel/popt \
+		libgc.so:devel/boehm-gc \
+		libgsl.so:math/gsl \
+		libgtkspell.so:textproc/gtkspell \
+		liblcms.so:graphics/lcms \
+		libpng.so:graphics/png \
+		libMagick++-6.so:graphics/ImageMagick
+#RUN_DEPENDS=	p5-XML-XQL>=0:textproc/p5-XML-XQL
 
 USE_GNOME=	gtkmm24 intlhack libxslt
 USES=		compiler:c++11-lib cpe desktop-file-utils gettext gmake \
@@ -42,27 +42,27 @@ OPTIONS_SUB=	yes
 
 CDR_DESC=		Support for CorelDRAW diagrams
 CDR_CONFIGURE_ENABLE=	cdr
-CDR_LIB_DEPENDS=	librevenge-stream-0.0.so:${PORTSDIR}/textproc/librevenge \
-			libcdr-0.1.so:${PORTSDIR}/graphics/libcdr01
+CDR_LIB_DEPENDS=	librevenge-stream-0.0.so:textproc/librevenge \
+			libcdr-0.1.so:graphics/libcdr01
 
 DBUS_CONFIGURE_ENABLE=	dbusapi
-DBUS_LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
+DBUS_LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib
 
 OPENMP_USES=		compiler:openmp
 OPENMP_USES_OFF=	compiler:features
 
 POPPLER_DESC=		PDF preview rendering
 POPPLER_CONFIGURE_ENABLE=	poppler-cairo
-POPPLER_LIB_DEPENDS=	libpoppler-glib.so:${PORTSDIR}/graphics/poppler-glib
+POPPLER_LIB_DEPENDS=	libpoppler-glib.so:graphics/poppler-glib
 
 VISIO_DESC=		Support for Microsoft Visio diagrams
 VISIO_CONFIGURE_ENABLE=	visio
-VISIO_LIB_DEPENDS=	librevenge-stream-0.0.so:${PORTSDIR}/textproc/librevenge \
-			libvisio-0.1.so:${PORTSDIR}/textproc/libvisio01
+VISIO_LIB_DEPENDS=	librevenge-stream-0.0.so:textproc/librevenge \
+			libvisio-0.1.so:textproc/libvisio01
 
 WPG_DESC=		Support for WordPerfect graphics
 WPG_CONFIGURE_ENABLE=	wpg
-WPG_LIB_DEPENDS=	libwpg-0.3.so:${PORTSDIR}/graphics/libwpg03
+WPG_LIB_DEPENDS=	libwpg-0.3.so:graphics/libwpg03
 
 .include <bsd.port.pre.mk>
 
@@ -72,6 +72,6 @@ CPPFLAGS+=	-Wno-mismatched-tags -Wno-unknown-attributes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-ldl||g' \
-	    	${WRKSRC}/configure
+		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
