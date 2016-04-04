@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	atk
-PORTVERSION=	2.18.0
+PORTVERSION=	2.20.0
 PORTREVISION?=	0
 CATEGORIES=	accessibility devel
 MASTER_SITES=	GNOME
@@ -18,11 +18,9 @@ PORTSCOUT=	limitw:1,even
 
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USES+=		gettext gmake gnome libtool pathfix pkgconfig
+USES+=		gettext gmake gnome libtool localbase pathfix pkgconfig
 USE_GNOME=	glib20 introspection:build referencehack
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
-CPPFLAGS+=	-I${LOCALBASE}/include
-LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 post-patch:
