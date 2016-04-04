@@ -79,6 +79,7 @@
     SUBDIR += klog
     SUBDIR += kremotecontrol
     SUBDIR += kvasd
+    SUBDIR += libcodec2
     SUBDIR += libconcord
     SUBDIR += libfap
     SUBDIR += libfec
@@ -86,6 +87,8 @@
     SUBDIR += libirman
     SUBDIR += libmodbus
     SUBDIR += librs232
+    SUBDIR += libsdr
+    SUBDIR += libsdr-gui
     SUBDIR += libticables2
     SUBDIR += libticalcs2
     SUBDIR += libusbmuxd
@@ -139,6 +142,7 @@
     SUBDIR += py-serial
     SUBDIR += pyla
     SUBDIR += qico
+    SUBDIR += qpage
     SUBDIR += qrq
     SUBDIR += qsstv
     SUBDIR += qt5-connectivity
@@ -152,6 +156,7 @@
     SUBDIR += rubygem-ruby-termios
     SUBDIR += rxtx
     SUBDIR += scmxx
+    SUBDIR += sdr-wspr
     SUBDIR += ser2net
     SUBDIR += serialoverip
     SUBDIR += seyon

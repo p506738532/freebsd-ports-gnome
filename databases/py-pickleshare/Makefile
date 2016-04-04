@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	pickleshare
-PORTVERSION=	0.5
+PORTVERSION=	0.6
 CATEGORIES=	databases python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -12,7 +12,7 @@ COMMENT=	Tiny shelve-like database with concurrency support
 
 LICENSE=	MIT
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}path.py>0:${PORTSDIR}/devel/py-path.py
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}path.py>0:devel/py-path.py
 
 USES=		python
 USE_PYTHON=	distutils autoplist

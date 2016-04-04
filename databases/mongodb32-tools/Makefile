@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mongodb32-tools
-PORTVERSION=	3.2.1
+PORTVERSION=	3.2.4
 DISTVERSIONPREFIX=	r
 CATEGORIES=	databases net
 
@@ -11,7 +11,7 @@ COMMENT=	Tools for MongoDB
 
 LICENSE=	APACHE20
 
-BUILD_DEPENDS=	go>0:${PORTSDIR}/lang/go
+BUILD_DEPENDS=	go>0:lang/go
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	mongodb
@@ -21,7 +21,7 @@ OPTIONS_DEFINE=	SSL SASL
 OPTIONS_DEFAULT=	SSL
 
 SASL_USE=	my_tags=sasl
-SASL_LIB_DEPENDS=	libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
+SASL_LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 
 SSL_USE=	openssl=yes my_tags=ssl
 
@@ -38,6 +38,13 @@ MAKE_ENV=	GOPATH="${WRKSRC}/.gopath:${WRKSRC}/vendor" \
 
 USES=	localbase
 MY_TAGS=	-tags "${USE_MY_TAGS}"
+
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 1000000
+# Cannot be built
+IGNORE=	unsupported on FreeBSD 9 or older
+.endif
 
 post-patch:
 	@cd ${WRKSRC} ; ${MKDIR} ${WRKSRC}/.gopath/src/github.com/${GH_ACCOUNT} ; \
@@ -62,4 +69,4 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/${x} ${STAGEDIR}${DOCSDIR}
 .endfor
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

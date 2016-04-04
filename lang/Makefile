@@ -39,9 +39,9 @@
     SUBDIR += clang35
     SUBDIR += clang36
     SUBDIR += clang37
+    SUBDIR += clang38
     SUBDIR += clojure
     SUBDIR += clojure-mode.el
-    SUBDIR += cloudabi-clang
     SUBDIR += clover
     SUBDIR += cmucl
     SUBDIR += cmucl-extra
@@ -123,6 +123,7 @@
     SUBDIR += guile
     SUBDIR += guile2
     SUBDIR += harbour
+    SUBDIR += haskell-mode.el
     SUBDIR += hla
     SUBDIR += hope
     SUBDIR += hs-brainfuck
@@ -244,12 +245,12 @@
     SUBDIR += pharo
     SUBDIR += phc
     SUBDIR += php-mode.el
-    SUBDIR += php5
-    SUBDIR += php5-extensions
     SUBDIR += php55
     SUBDIR += php55-extensions
     SUBDIR += php56
     SUBDIR += php56-extensions
+    SUBDIR += php70
+    SUBDIR += php70-extensions
     SUBDIR += php_doc
     SUBDIR += picoc
     SUBDIR += pike78

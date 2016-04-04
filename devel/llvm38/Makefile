@@ -1,7 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	llvm
-DISTVERSION=	3.8.0rc1
+DISTVERSION=	3.8.0
+PORTREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	http://llvm.org/${PRE_}releases/${LLVM_RELEASE}/${RCDIR}
 DISTNAME=	${PORTNAME}-${DISTVERSION}.src
@@ -40,7 +41,8 @@ CLANG_DESC=	Build clang
 CLANG_EXTRA_PATCHES= \
 	${PATCHDIR}/clang-patch-fformat_extensions.diff \
 	${PATCHDIR}/clang-patch-tools_clang_lib_Headers_CMakeLists.txt \
-	${PATCHDIR}/clang-patch-tools_clang_tools_clang-format_clang-format.py
+	${PATCHDIR}/clang-patch-tools_clang_tools_clang-format_clang-format.py \
+	${PATCHDIR}/clang-patch-tools_clang_tools_scan-build_libexec_ccc-analyzer
 CLANG_CONFLICTS_INSTALL=	clang-devel-3.[1234567]*
 CLANG_DISTFILES=	cfe-${DISTVERSION}.src${EXTRACT_SUFX}
 CLANG_CMAKE_ON=		-DCLANG_DEFAULT_OPENMP_RUNTIME=libomp
@@ -57,13 +59,13 @@ LIT_DESC=		Install lit and FileCheck test tools
 LLD_DESC=		Install lld, the LLVM linker
 LLD_DISTFILES=		lld-${DISTVERSION}.src${EXTRACT_SUFX}
 LLDB_DESC=		Install lldb, the LLVM debugger (ignored on 9.x)
-LLDB_BUILD_DEPENDS=	swig:${PORTSDIR}/devel/swig13
+LLDB_BUILD_DEPENDS=	swig:devel/swig13
 LLDB_DISTFILES=		lldb-${DISTVERSION}.src${EXTRACT_SUFX}
 OPENMP_DESC=		Install libomp, the LLVM OpenMP runtime library
 OPENMP_DISTFILES=	openmp-${DISTVERSION}.src${EXTRACT_SUFX}
 GOLD_DESC=		Build the LLVM Gold plugin for LTO
 GOLD_CMAKE_ON=		-DLLVM_BINUTILS_INCDIR=${LOCALBASE}/include
-GOLD_BUILD_DEPENDS=	ld.gold:${PORTSDIR}/devel/binutils
+GOLD_BUILD_DEPENDS=	ld.gold:devel/binutils
 
 # Emulate USE_GITHUB's ${WRKSRC_tag} to reduce diffs to ../llvm-devel
 .for option in CLANG EXTRAS LLD LLDB OPENMP
@@ -72,7 +74,7 @@ WRKSRC_${option:tl}=		${WRKDIR}/${${option}_DISTFILES:S/${EXTRACT_SUFX}//}
 
 OPTIONS_SUB=	yes
 
-DOCS_BUILD_DEPENDS=		sphinx-build:${PORTSDIR}/textproc/py-sphinx
+DOCS_BUILD_DEPENDS=		sphinx-build:textproc/py-sphinx
 
 PLIST_SUB+=	LLVM_RELEASE=${LLVM_RELEASE}
 
@@ -114,8 +116,10 @@ STRIP_LIBS=	BugpointPasses.so \
 EXTRAS_COMMANDS+= \
 		clang-apply-replacements \
 		clang-modernize \
+		clang-query \
 		clang-rename \
-		clang-tidy
+		clang-tidy \
+		modularize
 EXTRAS_LIBS=	libclangApplyReplacements \
 		libclangQuery \
 		libclangRename \
@@ -147,19 +151,10 @@ MAN1SRCS+=	clang.1 \
 CLANG_PATTERN=	(c-index-test|clang|scan-|Reporter.py|ScanView.py|scanview.css|sorttable.js|startfile.py|-analyzer)
 .endif
 
-.if ${PORT_OPTIONS:MEXTRAS}
-COMMANDS+=	${EXTRAS_COMMANDS}
-.endif
-
 .if ${PORT_OPTIONS:MLIT}
 MAN1SRCS+=	lit.1 FileCheck.1
 _USES_PYTHON=	python
 LIT_COMMANDS=	lit llvm-lit FileCheck
-.endif
-
-.if ${PORT_OPTIONS:MLLD}
-COMMANDS+=	lld
-PORTDOCS+=	lld
 .endif
 
 .if ${PORT_OPTIONS:MLLDB}
@@ -190,9 +185,22 @@ NOT_FOR_ARCH=	ia64
 
 .include <bsd.port.pre.mk>
 
+.if ${OPSYS} != "FreeBSD" || ${COMPILER_TYPE} == clang
+.if ${PORT_OPTIONS:MEXTRAS}
+COMMANDS+=	${EXTRAS_COMMANDS}
+MAN1SRCS+=	extraclangtools.1
+PORTDOCS+=	clang-tools
+.endif
+
+.if ${PORT_OPTIONS:MLLD}
+COMMANDS+=	lld
+PORTDOCS+=	lld
+.endif
+.endif
+
 .if ${PYTHON_REL} < 3400
 LLDB_BUILD_DEPENDS+= \
-	${PYTHON_PKGNAMEPREFIX}enum34>0:${PORTSDIR}/devel/py-enum34
+	${PYTHON_PKGNAMEPREFIX}enum34>0:devel/py-enum34
 .endif
 
 .if ${PORT_OPTIONS:MLLDB} && ${PYTHON_REL} >= 3000
@@ -201,6 +209,8 @@ BROKEN=	LLDB does not build with Python 3
 
 .if ${OPSYS} == "FreeBSD" && ${COMPILER_TYPE} != clang
 # Evil hack around gcc48 not providing a usable c++11 environment on 9.x
+PLIST_SUB:=	${PLIST_SUB:NEXTRAS=*} EXTRAS="@comment "
+PLIST_SUB:=	${PLIST_SUB:NLLD=*} LLD="@comment "
 PLIST_SUB:=	${PLIST_SUB:NLLDB=*} LLDB="@comment "
 .endif
 
@@ -208,10 +218,14 @@ post-extract-CLANG-on:
 	${MV} ${WRKSRC_clang} ${PATCH_WRKSRC}/tools/clang
 
 post-extract-EXTRAS-on:
+.if ${OPSYS} != "FreeBSD" || ${COMPILER_TYPE} == clang
 	${MV} ${WRKSRC_extras} ${PATCH_WRKSRC}/tools/clang/tools/extra
+.endif
 
 post-extract-LLD-on:
+.if ${OPSYS} != "FreeBSD" || ${COMPILER_TYPE} == clang
 	${MV} ${WRKSRC_lld} ${PATCH_WRKSRC}/tools/lld
+.endif
 
 post-extract-LLDB-on:
 .if ${OPSYS} != "FreeBSD" || ${COMPILER_TYPE} == clang
@@ -248,6 +262,13 @@ post-install-DOCS-on:
 .endif
 	${RMDIR} ${STAGEDIR}${LLVM_PREFIX}/share/man/man1/
 	${RMDIR} ${STAGEDIR}${LLVM_PREFIX}/share/man/
+
+.if ${PORT_OPTIONS:MCLANG}
+post-install-DOCS-off:
+	${RM} ${STAGEDIR}${LLVM_PREFIX}/share/man/man1/scan-build.1
+	${RMDIR} ${STAGEDIR}${LLVM_PREFIX}/share/man/man1/
+	${RMDIR} ${STAGEDIR}${LLVM_PREFIX}/share/man/
+.endif
 
 post-install-LLDB-on:
 .if ${OPSYS} != "FreeBSD" || ${COMPILER_TYPE} == clang
@@ -310,7 +331,7 @@ build-plist:
 	    if ($$0 ~ /${CLANG_PATTERN}/ && $$0 !~ /(omp.h|libclang_rt|sanitizer|blacklist.txt|${EXTRAS_PATTERN})/) {printf "%%%%CLANG%%%%"} \
 	    if ($$0 ~ /(${EXTRAS_PATTERN})/) {printf "%%%%EXTRAS%%%%"} \
 	    if ($$0 ~ /lld/ && $$0 !~ /lldb/) {printf "%%%%LLD%%%%"} \
-	    if ($$0 ~ /(argdumper|lldb)/) {printf "%%%%LLDB%%%%"} \
+	    if ($$0 ~ /(argdumper|lldb|six.py)/) {printf "%%%%LLDB%%%%"} \
 	    if ($$0 ~ /lib.*omp/) {printf "%%%%OPENMP%%%%"} \
 	    if ($$0 ~ /LLVMgold/) {printf "%%%%GOLD%%%%"} \
 	    if ($$0 !~ /libclang_rt/) {print}}' ${PLIST}.tmp >> ${PLIST}

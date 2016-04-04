@@ -5,6 +5,7 @@
 
     SUBDIR += SoXt
     SUBDIR += Xaw3d
+    SUBDIR += Xmt
     SUBDIR += attica
     SUBDIR += bakery
     SUBDIR += blt
@@ -33,6 +34,7 @@
     SUBDIR += gnustep-gui
     SUBDIR += granite
     SUBDIR += gstreamer-plugins-pango
+    SUBDIR += gstreamer1-plugins-gtksink
     SUBDIR += gstreamer1-plugins-pango
     SUBDIR += gtk-sharp-beans
     SUBDIR += gtk-sharp10
@@ -125,6 +127,7 @@
     SUBDIR += ocaml-lablgtk2
     SUBDIR += ocaml-labltk
     SUBDIR += open-motif
+    SUBDIR += osm-gps-map
     SUBDIR += otk
     SUBDIR += p5-Alien-wxWidgets
     SUBDIR += p5-Glade2

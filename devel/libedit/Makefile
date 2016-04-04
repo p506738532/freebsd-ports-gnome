@@ -4,7 +4,7 @@
 PORTNAME=	libedit
 PORTVERSION=	${EDITVERSION}.${EDITDATE}
 DISTVERSION=	${EDITDATE}-${EDITVERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://thrysoee.dk/editline/
 
@@ -24,6 +24,6 @@ CONFIGURE_ARGS=	--enable-widec
 MAKE_ENV=	LC_ALL=C
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-CONFLICT_INSTALL=	editline-*
+CONFLICTS_INSTALL=	editline-*
 
 .include <bsd.port.mk>

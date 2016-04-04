@@ -179,6 +179,7 @@
     SUBDIR += ifile
     SUBDIR += im
     SUBDIR += imap-uw
+    SUBDIR += imapdedup
     SUBDIR += imapfilter
     SUBDIR += imapsync
     SUBDIR += imaptools
@@ -200,6 +201,7 @@
     SUBDIR += libesmtp
     SUBDIR += libetpan
     SUBDIR += libmapi
+    SUBDIR += libmilter
     SUBDIR += libpst
     SUBDIR += librfc822
     SUBDIR += libsieve
@@ -290,6 +292,7 @@
     SUBDIR += openemm2015
     SUBDIR += opensmtpd
     SUBDIR += opensmtpd-devel
+    SUBDIR += opensmtpd-extras
     SUBDIR += openwebmail
     SUBDIR += osbf-lua
     SUBDIR += ovs
@@ -322,6 +325,7 @@
     SUBDIR += p5-Email-MIME-CreateHTML
     SUBDIR += p5-Email-MIME-Creator-ISO_2022_JP
     SUBDIR += p5-Email-MIME-Encodings
+    SUBDIR += p5-Email-MIME-RFC2047
     SUBDIR += p5-Email-MessageID
     SUBDIR += p5-Email-Reply
     SUBDIR += p5-Email-Send
@@ -358,6 +362,7 @@
     SUBDIR += p5-Mail-Audit
     SUBDIR += p5-Mail-Audit-Attach
     SUBDIR += p5-Mail-Box
+    SUBDIR += p5-Mail-Box-IMAP4-SSL
     SUBDIR += p5-Mail-Box-Parser-C
     SUBDIR += p5-Mail-Bulkmail
     SUBDIR += p5-Mail-Cache
@@ -465,9 +470,9 @@
     SUBDIR += pflogsumm
     SUBDIR += pfqueue
     SUBDIR += pgpsendmail
-    SUBDIR += php5-imap
     SUBDIR += php55-imap
     SUBDIR += php56-imap
+    SUBDIR += php70-imap
     SUBDIR += phplist
     SUBDIR += phpmailer
     SUBDIR += pine-pgp-filters
@@ -488,12 +493,16 @@
     SUBDIR += postfinger
     SUBDIR += postfix
     SUBDIR += postfix-current
+    SUBDIR += postfix-current-sasl
     SUBDIR += postfix-logwatch
     SUBDIR += postfix-policyd-sf
     SUBDIR += postfix-policyd-spf-perl
     SUBDIR += postfix-policyd-spf-python
     SUBDIR += postfix-policyd-weight
     SUBDIR += postfix-postfwd
+    SUBDIR += postfix-sasl
+    SUBDIR += postfix211
+    SUBDIR += postfix211-sasl
     SUBDIR += postfixadmin
     SUBDIR += postgrey
     SUBDIR += postsrsd
@@ -501,8 +510,8 @@
     SUBDIR += prepflog
     SUBDIR += procmail
     SUBDIR += prom-wl
-    SUBDIR += pronto
     SUBDIR += proxsmtp
+    SUBDIR += py-email-reply-parser
     SUBDIR += py-Products.MailHost
     SUBDIR += py-Products.SecureMailHost
     SUBDIR += py-apolicy
@@ -568,6 +577,7 @@
     SUBDIR += roundcube-groupvice
     SUBDIR += roundcube-html5_notifier
     SUBDIR += roundcube-login_info
+    SUBDIR += roundcube-markasjunk2
     SUBDIR += roundcube-mobilecube
     SUBDIR += roundcube-mvision2
     SUBDIR += roundcube-sauserprefs
@@ -583,7 +593,6 @@
     SUBDIR += ruby-rmail
     SUBDIR += rubygem-actionmailer
     SUBDIR += rubygem-actionmailer4
-    SUBDIR += rubygem-actionmailer41
     SUBDIR += rubygem-email_reply_parser
     SUBDIR += rubygem-email_reply_parser-discourse
     SUBDIR += rubygem-exception_notification
