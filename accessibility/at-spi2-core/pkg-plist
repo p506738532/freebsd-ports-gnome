@@ -1,4 +1,3 @@
-etc/at-spi2/accessibility.conf
 etc/xdg/autostart/at-spi-dbus-bus.desktop
 include/at-spi-2.0/atspi/atspi-accessible.h
 include/at-spi-2.0/atspi/atspi-action.h
@@ -36,6 +35,7 @@ lib/girepository-1.0/Atspi-2.0.typelib
 lib/libatspi.so
 lib/libatspi.so.0
 lib/libatspi.so.0.0.1
+lib/systemd/user/at-spi-dbus-bus.service
 libdata/pkgconfig/atspi-2.pc
 libexec/at-spi-bus-launcher
 libexec/at-spi2-registryd
