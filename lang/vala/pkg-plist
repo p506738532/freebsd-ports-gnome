@@ -110,6 +110,8 @@ share/devhelp/books/vala-%%VERSION%%/vala-%%VERSION%%.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/gio-2.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/gio-unix-2.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/gio-unix-2.0.vapi
+%%DATADIR%%-%%VERSION%%/vapi/gio-windows-2.0.deps
+%%DATADIR%%-%%VERSION%%/vapi/gio-windows-2.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/glib-2.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/gmodule-2.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/gnet-2.0.deps
