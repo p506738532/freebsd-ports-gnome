@@ -35,14 +35,13 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	atk gdkpixbuf2 introspection:build pango
 #gtk-update-icon-cache
-USES+=		gettext gmake gnome libtool pathfix perl5 pkgconfig
+USES+=		gettext gmake gnome libtool localbase pathfix perl5 pkgconfig
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
 CONFIGURE_ARGS=	--enable-x11-backend \
 		--disable-wayland-backend \
 		--enable-introspection
-CPPFLAGS+=	-I${LOCALBASE}/include -fno-omit-frame-pointer
-LIBS+=		-L${LOCALBASE}/lib
+CPPFLAGS+=	-fno-omit-frame-pointer
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
