@@ -314,6 +314,7 @@
     SUBDIR += libfb
     SUBDIR += libfixbuf
     SUBDIR += libgnetwork
+    SUBDIR += libgrss
     SUBDIR += libgweather
     SUBDIR += libilbc
     SUBDIR += libkfbapi
