@@ -9,11 +9,11 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Additional UI API for cinnamon
 
-BUILD_DEPENDS=	xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
-		gnome-common>=0:${PORTSDIR}/devel/gnome-common \
-		libxkbfile>=0:${PORTSDIR}/x11/libxkbfile
-RUN_DEPENDS=	xkeyboard-config>=0:${PORTSDIR}/x11/xkeyboard-config \
-		libxkbfile>=0:${PORTSDIR}/x11/libxkbfile
+BUILD_DEPENDS=	xkeyboard-config>=0:x11/xkeyboard-config \
+		gnome-common>=0:devel/gnome-common \
+		libxkbfile>=0:x11/libxkbfile
+RUN_DEPENDS=	xkeyboard-config>=0:x11/xkeyboard-config \
+		libxkbfile>=0:x11/libxkbfile
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint

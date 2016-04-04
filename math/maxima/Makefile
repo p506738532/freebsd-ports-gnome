@@ -3,6 +3,7 @@
 
 PORTNAME=	maxima
 PORTVERSION=	5.37.3
+PORTREVISION=	1
 CATEGORIES=	math lisp tk
 MASTER_SITES=	SF/maxima/Maxima-source/${PORTVERSION}-source
 
@@ -12,9 +13,9 @@ COMMENT=	Symbolic mathematics program
 LICENSE=	GPLv2
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/${LISPPORT}
-PATCH_DEPENDS=	${LOCALBASE}/bin/bash:${PORTSDIR}/shells/bash
+PATCH_DEPENDS=	${LOCALBASE}/bin/bash:shells/bash
 RUN_DEPENDS=	${LOCALBASE}/bin/${LISPPORT} \
-		${LOCALBASE}/bin/gnuplot:${PORTSDIR}/math/gnuplot
+		${LOCALBASE}/bin/gnuplot:math/gnuplot
 
 USES=			gmake makeinfo perl5 python:build tk:84+
 USE_PERL5=		build
@@ -25,7 +26,6 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX} \
 			${LISPSELECT}
 
 INFO=	maxima imaxima xmaxima
-#maxima.info-1 maxima.info-2 maxima.info-3
 
 PLIST_SUB=	BINDIR=${BINDIRECTORY}
 PLIST_SUB+=	LISPBIN=${LISPBINARY}
@@ -47,7 +47,7 @@ SBCL_DESC=	Build with Steel Bank Common Lisp
 # Lisp to build with. Define only ONE of these!
 .if ${PORT_OPTIONS:MCLISP}
 LISPSELECT=	--enable-clisp
-LISPPORT=	clisp:${PORTSDIR}/lang/clisp
+LISPPORT=	clisp:lang/clisp
 BINDIRECTORY=	binary-clisp
 LISPBINARY=	lisp.run
 PLIST_SUB+=	LISPBINARY=""
@@ -56,7 +56,7 @@ MAXIMABINARY=	maxima.mem
 
 .if ${PORT_OPTIONS:MCMUCL}
 LISPSELECT=	--enable-cmucl
-LISPPORT=	lisp:${PORTSDIR}/lang/cmucl
+LISPPORT=	lisp:lang/cmucl
 BINDIRECTORY=	binary-cmucl
 LISPBINARY=	lisp
 PLIST_SUB+=	LISPBINARY=""
@@ -66,7 +66,7 @@ STRIP=	#strip(1) chokes on LISPBINARY
 
 .if ${PORT_OPTIONS:MGCL}
 LISPSELECT=	--enable-gcl
-LISPPORT=	gcl:${PORTSDIR}/lang/gcl
+LISPPORT=	gcl:lang/gcl
 BINDIRECTORY=	binary-gcl
 #LISPBINARY is null so fudge this so deinstall works cleanly
 PLIST_SUB+=	LISPBINARY="@comment "
@@ -87,7 +87,7 @@ LISPSELECT=	--with-sbcl="sbcl ${MAXIMA_LISP_OPTIONS}"
 .  else
 LISPSELECT=	--enable-sbcl
 .  endif
-LISPPORT=	sbcl:${PORTSDIR}/lang/sbcl
+LISPPORT=	sbcl:lang/sbcl
 BINDIRECTORY=	binary-sbcl
 #LISPBINARY is null so fudge this so deinstall works cleanly
 PLIST_SUB+=	LISPBINARY="@comment "

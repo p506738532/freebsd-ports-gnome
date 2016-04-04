@@ -53,7 +53,7 @@ OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	CUPS
 OPTIONS_DEFAULT=CUPS
 CUPS_CONFIGURE_ENABLE=	cups
-CUPS_LIB_DEPENDS=	libcups.so:${PORTSDIR}/print/cups-client
+CUPS_LIB_DEPENDS=	libcups.so:print/cups
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/|${PREFIX}/share/|g' \

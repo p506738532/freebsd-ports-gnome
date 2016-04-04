@@ -2,7 +2,7 @@
 
 PORTNAME=	gcc-arm-embedded
 PORTVERSION=	5.2.20151219
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://launchpad.net/gcc-arm-embedded/5.0/5-2015-q4-major/+download/
 DISTNAME=	${ORIGINAL_PACKAGE_NAME}-src
@@ -21,16 +21,16 @@ PDF_DESC=	Install PDF documentation (requires TeX, it is huge)
 PYGDB_DESC=	Build and install pyhon-enabled gdb in addition to standard one
 
 PURE_LIB_DEPENDS_OFF=	\
-			libexpat.so:${PORTSDIR}/textproc/expat2 \
-			libgmp.so:${PORTSDIR}/math/gmp \
-			libmpfr.so:${PORTSDIR}/math/mpfr \
-			libmpc.so:${PORTSDIR}/math/mpc \
-			libisl.so:${PORTSDIR}/devel/isl \
-			libcloog-isl.so:${PORTSDIR}/math/cloog \
-			libelf.so:${PORTSDIR}/devel/libelf
+			libexpat.so:textproc/expat2 \
+			libgmp.so:math/gmp \
+			libmpfr.so:math/mpfr \
+			libmpc.so:math/mpc \
+			libisl.so:devel/isl \
+			libcloog-isl.so:math/cloog \
+			libelf.so:devel/libelf
 
 PDF_USE=		TEX=base:build,tex:build,dvipsk:build
-PDF_BUILD_DEPENDS=	texi2dvi:${PORTSDIR}/print/texinfo
+PDF_BUILD_DEPENDS=	texi2dvi:print/texinfo
 OPTIONS_SUB=		yes
 PYGDB_USES=		python:2
 

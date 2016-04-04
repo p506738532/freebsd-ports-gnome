@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cargo
-PORTVERSION=	0.8.0
+PORTVERSION=	0.9.0
 CATEGORIES=	devel
 
 MAINTAINER=	dumbbell@FreeBSD.org
@@ -44,6 +44,9 @@ GH_ACCOUNT=	rust-lang
 GH_PROJECT=	rust-installer:rust_installer
 GH_TAGNAME=	4915c75:rust_installer
 
+ONLY_FOR_ARCHS=	amd64
+ONLY_FOR_ARCHS_REASON=	requires prebuilt bootstrap cargo
+
 CARGO_BOOT_SIG=	${ARCH:S/amd64/x86_64/}-unknown-${OPSYS:tl}
 CARGO_BOOT=	${PORTNAME}-nightly-${CARGO_BOOT_SIG}${EXTRACT_SUFX}
 CARGO_REGISTRY=	${PORTNAME}-registry-${DISTVERSIONFULL}.tar.xz
@@ -53,11 +56,11 @@ CARGO_REGISTRY_CUR_HASH=	88ac128001ac3a9a
 
 # We don't USES=cmake here, because cmake is not Cargo's build system.
 # It's used by a bundled dependency (libgit2).
-BUILD_DEPENDS=	cmake:${PORTSDIR}/devel/cmake \
-		${RUST_PORT:T}>=1.5.0:${PORTSDIR}/${RUST_PORT}
-LIB_DEPENDS=	libssh2.so:${PORTSDIR}/security/libssh2 \
-		libcurl.so:${PORTSDIR}/ftp/curl
-RUN_DEPENDS=	rustc:${PORTSDIR}/${RUST_PORT}
+BUILD_DEPENDS=	cmake:devel/cmake \
+		${RUST_PORT:T}>=1.5.0:${RUST_PORT}
+LIB_DEPENDS=	libssh2.so:security/libssh2 \
+		libcurl.so:ftp/curl
+RUN_DEPENDS=	rustc:${RUST_PORT}
 RUST_PORT?=	lang/rust
 
 USES=		gmake python:-2.7,build pkgconfig

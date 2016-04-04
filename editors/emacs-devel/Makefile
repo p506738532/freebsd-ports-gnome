@@ -2,9 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	emacs
-PORTVERSION=	${EMACS_VER}.${EMACS_REV}
+PORTVERSION=	${EMACS_VER}
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	editors ipv6
+MASTER_SITES=	GNU_ALPHA/emacs/pretest
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	ashish@FreeBSD.org
@@ -13,7 +15,6 @@ COMMENT=	GNU editing macros
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BROKEN_FreeBSD_9=does not build
 BROKEN_sparc64=	fails to compile at bootstrap phase
 BROKEN_ia64=	Emacs 24.X does not currently build on ia64
 
@@ -22,18 +23,10 @@ CONFLICTS=	emacs-19.* emacs21-[0-9]* emacs22-[0-9]*              \
 		xemacs-devel-[0-9]* xemacs-mule-[0-9]*                \
 		xemacs-devel-mule-[0-9]* emacs-nox11-[0-9]*
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	emacs-mirror
-GH_TAGNAME=	0a7ad07
-
-EMACS_VER=	25.0.50
-EMACS_REV=	20160102
+EMACS_VER=	25.0.92
 GNU_CONFIGURE=	yes
-USES=		autoreconf cpe gmake makeinfo ncurses pkgconfig
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+USES=		cpe gmake makeinfo ncurses pkgconfig tar:xz
 INFO_PATH=	${DATADIR_REL}/info
-WRKSRC=		${WRKDIR}/${PORTNAME}-${GH_TAGNAME}
 CPE_VENDOR=	gnu
 
 SUB_LIST+=	ARCHLIBDIR=${PREFIX}/libexec/emacs/${EMACS_VER}/\
@@ -57,7 +50,7 @@ INFO=		ada-mode auth autotype bovine calc ccmode cl dbus     \
 
 OPTIONS_DEFINE=	X11 ACL DBUS GCONF GIF JPEG M17N OTF PNG SOUND        \
 		SOURCES SVG TIFF SCROLLBARS XFT XIM XML XPM MAGICK    \
-		GNUTLS GSETTINGS LTO FILENOTIFY LLDB CAIRO MODULES
+		GNUTLS GSETTINGS LTO FILENOTIFY LLDB CAIRO MODULES XWIDGETS
 
 OPTIONS_SINGLE=	X11 SOUND
 
@@ -75,6 +68,7 @@ FILENOTIFY_DESC=File notification support
 LTO_DESC=	Enable link-time optimization (requires GCC 4.6+)
 LLDB_DESC=	Enable lldb support for GUD (from llvm.org)
 MODULES_DESC=	Dynamic modules support
+XWIDGETS_DESC=  Enable use of some GTK widgets in Emacs buffers
 
 OPTIONS_SINGLE_X11=	GTK2 GTK3 XAW XAW3D MOTIF
 OPTIONS_SINGLE_SOUND=	ALSA OSS
@@ -89,13 +83,13 @@ LLDB_EXTRA_PATCHES=	${PATCHDIR}/extrapatch-lldb-gud.el
 
 SOUND_CONFIGURE_OFF=	--with-sound=no
 ALSA_CONFIGURE_ON=	--with-sound=alsa
-ALSA_LIB_DEPENDS=	libasound.so:${PORTSDIR}/audio/alsa-lib
+ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
 OSS_CONFIGURE_ON=	--with-sound=oss
 
-DBUS_LIB_DEPENDS=	libdbus-1.so:${PORTSDIR}/devel/dbus
+DBUS_LIB_DEPENDS=	libdbus-1.so:devel/dbus
 DBUS_CONFIGURE_WITH=	dbus
 
-GNUTLS_LIB_DEPENDS=	libgnutls.so:${PORTSDIR}/security/gnutls
+GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
 GNUTLS_CONFIGURE_WITH=	gnutls
 
 XML_USE=		GNOME=libxml2
@@ -114,7 +108,7 @@ GTK2_CONFIGURE_ON=	-with-x-toolkit=gtk2
 GTK3_USE=		GNOME=gtk30
 GTK3_CONFIGURE_ON=	--with-x-toolkit=gtk3
 
-XAW3D_LIB_DEPENDS=	libXaw3d.so:${PORTSDIR}/x11-toolkits/Xaw3d
+XAW3D_LIB_DEPENDS=	libXaw3d.so:x11-toolkits/Xaw3d
 XAW3D_CONFIGURE_ON=	--with-x-toolkit=athena
 
 XAW_USE=		XORG=xaw
@@ -130,29 +124,29 @@ SYNC_INPUT_CONFIGURE_WITH=sync-input
 JPEG_USES=		jpeg
 JPEG_CONFIGURE_WITH=	jpeg
 
-TIFF_LIB_DEPENDS=	libtiff.so:${PORTSDIR}/graphics/tiff
+TIFF_LIB_DEPENDS=	libtiff.so:graphics/tiff
 TIFF_CONFIGURE_WITH=	tiff
 
-GIF_LIB_DEPENDS=	libgif.so:${PORTSDIR}/graphics/giflib
+GIF_LIB_DEPENDS=	libgif.so:graphics/giflib
 GIF_CONFIGURE_WITH=	gif
 
-PNG_LIB_DEPENDS+=	libpng.so:${PORTSDIR}/graphics/png
+PNG_LIB_DEPENDS+=	libpng.so:graphics/png
 PNG_CONFIGURE_WITH=	png
 
 XPM_USE=		XORG=xpm
 XPM_CONFIGURE_WITH=	xpm
 
 XFT_USE=		XORG=xft
-XFT_LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2
+XFT_LIB_DEPENDS=	libfreetype.so:print/freetype2
 XFT_CONFIGURE_WITH=	xft
 
-M17N_LIB_DEPENDS=	libm17n.so:${PORTSDIR}/devel/m17n-lib
+M17N_LIB_DEPENDS=	libm17n.so:devel/m17n-lib
 M17N_CONFIGURE_WITH=	m17n-flt
 
-OTF_LIB_DEPENDS=	libotf.so:${PORTSDIR}/print/libotf
+OTF_LIB_DEPENDS=	libotf.so:print/libotf
 OTF_CONFIGURE_WITH=	libotf
 
-MAGICK_LIB_DEPENDS=libMagickCore-6.so:${PORTSDIR}/graphics/ImageMagick
+MAGICK_LIB_DEPENDS=libMagickCore-6.so:graphics/ImageMagick
 MAGICK_CONFIGURE_WITH=	imagemagick
 
 GSETTINGS_USE=		gnome=glib20
@@ -177,6 +171,9 @@ CAIRO_CONFIGURE_ON=	--with-cairo
 
 MODULES_CONFIGURE_ON=	--with-modules
 
+XWIDGETS_CONFIGURE_ON=	--with-xwidgets
+XWIDGETS_LIB_DEPENDS=	libwebkitgtk-3.0.so:www/webkit-gtk3
+
 .include <bsd.port.options.mk>
 
 # clang is broken on i386 platform in -O2, due to use of alloca, and
@@ -196,7 +193,7 @@ INSTALLS_ICONS=	yes
 .if ${PORT_OPTIONS:MM17N}
 IGNORE=		m17n requires Xft. Please run 'make config'
 .elif ${PORT_OPTIONS:MOTF}
-IGNORE=		Opentype fonts require Xft. Please run 'make config'
+IGNORE=		support for Opentype fonts require Xft. Please run 'make config'
 .endif
 .endif
 .else
@@ -210,7 +207,13 @@ IGNORE=		option ${OPT} requires X11 option
 
 .if !${PORT_OPTIONS:MDBUS}
 .if ${PORT_OPTIONS:MGSETTINGS}
-IGNORE=		GSettings requires DBUS. Please run 'make config'
+IGNORE=		support for GSettings requires DBUS. Please run 'make config'
+.endif
+.endif
+
+.if !${PORT_OPTIONS:MGTK3}
+.if ${PORT_OPTIONS:MXWIDGETS}
+IGNORE=		support for XWidgets requires GTK3. Please run 'make config'
 .endif
 .endif
 
@@ -229,9 +232,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's/^Terminal=.*$$/Terminal=true/'        \
 		${WRKSRC}/etc/emacs.desktop
 .endif
-
-pre-configure:
-	@cd ${WRKSRC} && ./autogen.sh
 
 post-install:
 .if ${PORT_OPTIONS:MSOURCES}

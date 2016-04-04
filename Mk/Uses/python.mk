@@ -10,14 +10,14 @@
 #
 # version 	If your port requires only some set of Python versions, you
 # 		can set this to [min]-[max] or min+ or -max or as an
-# 		explicit version or as a meta port version (eg. 3.2-3.3 for
-# 		[min]-[max], 2.7+ or -3.2 for min+ and -max, 2.7 for an
+# 		explicit version or as a meta port version (eg. 3.3-3.4 for
+# 		[min]-[max], 2.7+ or -3.3 for min+ and -max, 2.7 for an
 # 		explicit version or 3 for a meta port version). Example:
 #
 #			USES=python:2.7		# Only use Python 2.7
-#			USES=python:3.2+	# Use Python 3.2 or newer
-#			USES=python:3.2-3.3	# Use Python 3.2 or 3.3
-#			USES=python:-3.2	# Use any Python up to 3.2
+#			USES=python:3.3+	# Use Python 3.3 or newer
+#			USES=python:3.3-3.4	# Use Python 3.3 or 3.4
+#			USES=python:-3.3	# Use any Python up to 3.3
 #			USES=python:2		# Use the Python 2 meta port
 #			USES=python		# Use the set default Python
 #						# version
@@ -220,7 +220,7 @@
 _INCLUDE_USES_PYTHON_MK=	yes
 
 # What Python version and what Python interpreters are currently supported?
-_PYTHON_VERSIONS=		2.7 3.4 3.5 3.3 3.2	# preferred first
+_PYTHON_VERSIONS=		2.7 3.4 3.5 3.3	# preferred first
 _PYTHON_PORTBRANCH=		2.7		# ${_PYTHON_VERSIONS:[1]}
 _PYTHON_BASECMD=		${LOCALBASE}/bin/python
 _PYTHON_RELPORTDIR=		${PORTSDIR}/lang/python
@@ -372,7 +372,9 @@ IGNORE=		needs an unsupported version of Python
 # try to find a different one, if the passed version fits into
 # the supported version range.
 PYTHON_VERSION?=	python${_PYTHON_VERSION}
+.if !defined(PYTHON_NO_DEPENDS)
 DEPENDS_ARGS+=		PYTHON_VERSION=${PYTHON_VERSION}
+.endif
 
 # NOTE:
 #
@@ -463,8 +465,8 @@ UNIQUE_FIND_SUFFIX_FILES=	\
 _CURRENTPORT:=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
 .if defined(_PYTHON_FEATURE_DISTUTILS) && \
 	${_CURRENTPORT:S/${PYTHON_SUFFIX}$//} != ${PYTHON_PKGNAMEPREFIX}setuptools
-BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools${PYTHON_SUFFIX}>0:${PORTSDIR}/devel/py-setuptools${PYTHON_SUFFIX}
-RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools${PYTHON_SUFFIX}>0:${PORTSDIR}/devel/py-setuptools${PYTHON_SUFFIX}
+BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools${PYTHON_SUFFIX}>0:devel/py-setuptools${PYTHON_SUFFIX}
+RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools${PYTHON_SUFFIX}>0:devel/py-setuptools${PYTHON_SUFFIX}
 .endif
 
 # distutils support
@@ -550,9 +552,9 @@ CONFIGURE_ENV+=	PYTHON="${PYTHON_CMD}"
 CMAKE_ARGS+=	-DPython_ADDITIONAL_VERSIONS=${PYTHON_VER}
 
 # Python 3rd-party modules
-PYGAME=		${PYTHON_PKGNAMEPREFIX}game>0:${PORTSDIR}/devel/py-game
-PYNUMERIC=	${PYTHON_SITELIBDIR}/Numeric/Numeric.py:${PORTSDIR}/math/py-numeric
-PYNUMPY=	${PYTHON_SITELIBDIR}/numpy/core/numeric.py:${PORTSDIR}/math/py-numpy
+PYGAME=		${PYTHON_PKGNAMEPREFIX}game>0:devel/py-game
+PYNUMERIC=	${PYTHON_SITELIBDIR}/Numeric/Numeric.py:math/py-numeric
+PYNUMPY=	${PYTHON_SITELIBDIR}/numpy/core/numeric.py:math/py-numpy
 
 # dependencies
 .if defined(_PYTHON_BUILD_DEP)

@@ -9,17 +9,17 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	File manager for the Cinnamon desktop
 
-BUILD_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
-		gnome-common>=0:${PORTSDIR}/devel/gnome-common \
-		gtkdocize:${PORTSDIR}/textproc/gtk-doc \
-		py*-polib>=0:${PORTSDIR}/devel/py-polib \
-		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
-LIB_DEPENDS=	libexif.so:${PORTSDIR}/graphics/libexif \
-		libcinnamon-desktop.so:${PORTSDIR}/x11/cinnamon-desktop \
-		libnotify.so:${PORTSDIR}/devel/libnotify \
-		libexempi.so:${PORTSDIR}/textproc/exempi
-RUN_DEPENDS=	gnome-icon-theme>=0:${PORTSDIR}/misc/gnome-icon-theme \
-		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
+BUILD_DEPENDS=	gnome-icon-theme>=0:misc/gnome-icon-theme \
+		gnome-common>=0:devel/gnome-common \
+		gtkdocize:textproc/gtk-doc \
+		py*-polib>=0:devel/py-polib \
+		gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
+LIB_DEPENDS=	libexif.so:graphics/libexif \
+		libcinnamon-desktop.so:x11/cinnamon-desktop \
+		libnotify.so:devel/libnotify \
+		libexempi.so:textproc/exempi
+RUN_DEPENDS=	gnome-icon-theme>=0:misc/gnome-icon-theme \
+		gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint
@@ -42,7 +42,7 @@ OPTIONS_SUB=			yes
 OPTIONS_DEFINE=			TRACKER
 OPTIONS_DEFAULT=		TRACKER
 TRACKER_CONFIGURE_ENABLE=	tracker
-TRACKER_LIB_DEPENDS=		libtracker-sparql-1.0.so:${PORTSDIR}/sysutils/tracker
+TRACKER_LIB_DEPENDS=		libtracker-sparql-1.0.so:sysutils/tracker
 TRACKER_DESC=			Integration with tracker
 
 post-patch:

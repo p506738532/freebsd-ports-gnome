@@ -9,15 +9,15 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Cinnamon screensaver and locker
 
-BUILD_DEPENDS=	gsettings-desktop-schemas>=3.2.0:${PORTSDIR}/devel/gsettings-desktop-schemas \
-		gnome-common>=0:${PORTSDIR}/devel/gnome-common
-LIB_DEPENDS=	libnotify.so:${PORTSDIR}/devel/libnotify \
-		libwebkit2gtk-4.0.so:${PORTSDIR}/www/webkit2-gtk3 \
-		libcinnamon-desktop.so:${PORTSDIR}/x11/cinnamon-desktop \
-		libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib
-RUN_DEPENDS=	pam_helper:${PORTSDIR}/security/pam_helper \
-		gsettings-desktop-schemas>=3.2.0:${PORTSDIR}/devel/gsettings-desktop-schemas \
-		gnome-keyring>=0:${PORTSDIR}/security/gnome-keyring
+BUILD_DEPENDS=	gsettings-desktop-schemas>=3.2.0:devel/gsettings-desktop-schemas \
+		gnome-common>=0:devel/gnome-common
+LIB_DEPENDS=	libnotify.so:devel/libnotify \
+		libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
+		libcinnamon-desktop.so:x11/cinnamon-desktop \
+		libdbus-glib-1.so:devel/dbus-glib
+RUN_DEPENDS=	pam_helper:security/pam_helper \
+		gsettings-desktop-schemas>=3.2.0:devel/gsettings-desktop-schemas \
+		gnome-keyring>=0:security/gnome-keyring
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	linuxmint

@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libressl
-PORTVERSION=	2.3.1
-PORTREVISIION=	1
+PORTVERSION=	2.3.3
 CATEGORIES=	security devel
 MASTER_SITES=	OPENBSD/LibreSSL
 PKGNAMESUFFIX=	-devel
@@ -21,11 +20,11 @@ OPTIONS_DEFAULT=	MAN3 NC
 MAN3_DESC=	Install API manpages (section 3)
 NC_DESC=	Build nc libtls demo application
 
-CONFLICTS?=	openssl-[0-9]* \
-		libressl-[0-9]*
+CONFLICTS?=	libressl-[0-9]* \
+		openssl-[0-9]* \
+		openssl-devel-[0-9]*
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--enable-silent-rules
 USES=		cpe libtool pathfix pkgconfig
 USE_LDCONFIG=	yes
 OPTIONS_SUB=	yes
@@ -40,5 +39,8 @@ post-stage-NC-on:
 post-install-MAN3-off:
 	${RM} -rf ${STAGEDIR}/${PREFIX}/man/man3
 	${REINPLACE_CMD} -e '/^man\/man3/d' ${TMPPLIST}
+
+post-install:
+	${RM} -rf ${STAGEDIR}/${PREFIX}/etc/ssl/cert.pem
 
 .include <bsd.port.mk>

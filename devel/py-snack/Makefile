@@ -12,9 +12,11 @@ COMMENT=	Not Eriks Windowing Toolkit Python bindings
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	libslang.so:${PORTSDIR}/devel/libslang2 \
-		libpopt.so:${PORTSDIR}/devel/popt \
-		libnewt.so:${PORTSDIR}/devel/newt
+BROKEN=		conflicts with devel/newt
+
+LIB_DEPENDS=	libslang.so:devel/libslang2 \
+		libpopt.so:devel/popt \
+		libnewt.so:devel/newt
 
 OPTIONS_DEFINE=	EXAMPLES
 

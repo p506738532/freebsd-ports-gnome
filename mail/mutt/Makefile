@@ -3,7 +3,7 @@
 
 PORTNAME=	mutt
 PORTVERSION=	1.5.24
-PORTREVISION?=	1
+PORTREVISION?=	6
 CATEGORIES+=	mail ipv6
 MASTER_SITES=	ftp://ftp.mutt.org/mutt/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/mutt/ \
@@ -48,13 +48,14 @@ OPTIONS_SUB=	yes
 
 .if defined (MUTT_LITE)
 LITE=	yes
+USES+=	ncurses
 .endif
 
 .if defined (LITE)
 OPTIONS_UNSET=	NLS DOCS EXAMPLES
 .else
 OPTIONS_DEFINE=	COMPRESSED_FOLDERS SASL DEBUG DOCS EXAMPLES FLOCK \
-		GPGME GREETING_PATCH GSSAPI HTML ICONV IDN IFDEF_PATCH \
+		GPGME GREETING_PATCH HTML ICONV IDN IFDEF_PATCH \
 		IMAP_HEADER_CACHE LOCALES_FIX MAILBOX_MANPAGES \
 		MAILDIR_HEADER_CACHE MAILDIR_MTIME_PATCH \
 		MIXMASTER NLS NNTP PARENT_CHILD_MATCH_PATCH \
@@ -62,9 +63,10 @@ OPTIONS_DEFINE=	COMPRESSED_FOLDERS SASL DEBUG DOCS EXAMPLES FLOCK \
 		SIGNATURE_MENU SMART_DATE SMIME_OUTLOOK_COMPAT SMTP \
 		TOKYOCABINET TRASH_PATCH URLVIEW XML
 
-OPTIONS_SINGLE=	SCREEN
+OPTIONS_SINGLE=	GSSAPI SCREEN
 OPTIONS_RADIO=	SPELL
 OPTIONS_RADIO_SPELL=	ASPELL ISPELL
+OPTIONS_SINGLE_GSSAPI=	GSSAPI_BASE GSSAPI_HEIMDAL GSSAPI_MIT GSSAPI_NONE
 OPTIONS_SINGLE_SCREEN=	NCURSES SLANG
 
 COMPRESSED_FOLDERS_DESC=	Compressed folders
@@ -73,7 +75,6 @@ DEBUG_DESC=	Debugging capabilities
 FLOCK_DESC=	flock() usage
 GPGME_DESC=	Gpgme interface
 GREETING_PATCH_DESC=	Greeting support
-GSSAPI_DESC=	Use the gss API
 HTML_DESC=	HTML documentation
 IFDEF_PATCH_DESC=	ifdef feature
 IMAP_HEADER_CACHE_DESC=	IMAP header cache
@@ -104,17 +105,17 @@ OPTIONS_DEFAULT=	COMPRESSED_FOLDERS HTML ICONV IDN IFDEF_PATCH \
 		MAILDIR_HEADER_CACHE MAILDIR_MTIME_PATCH NLS \
 		NCURSES PARENT_CHILD_MATCH_PATCH QUOTE_PATCH \
 		REVERSE_REPLY_PATCH SMART_DATE SMIME_OUTLOOK_COMPAT \
-		SASL SMTP TRASH_PATCH URLVIEW XML
+		SASL SMTP TRASH_PATCH URLVIEW XML GSSAPI_NONE
 .endif
 
-RUN_DEPENDS+=	${LOCALBASE}/etc/mime.types:${PORTSDIR}/misc/mime-support
+RUN_DEPENDS+=	${LOCALBASE}/etc/mime.types:misc/mime-support
 
 .if !defined (LITE)
-ASPELL_BUILD_DEPENDS=	aspell:${PORTSDIR}/textproc/aspell
-ASPELL_RUN_DEPENDS=		aspell:${PORTSDIR}/textproc/aspell
-ISPELL_BUILD_DEPENDS=	ispell:${PORTSDIR}/textproc/aspell-ispell
-ISPELL_RUN_DEPENDS=		ispell:${PORTSDIR}/textproc/aspell-ispell
-URLVIEW_RUN_DEPENDS=	urlview:${PORTSDIR}/textproc/urlview
+ASPELL_BUILD_DEPENDS=	aspell:textproc/aspell
+ASPELL_RUN_DEPENDS=		aspell:textproc/aspell
+ISPELL_BUILD_DEPENDS=	ispell:textproc/aspell-ispell
+ISPELL_RUN_DEPENDS=		ispell:textproc/aspell-ispell
+URLVIEW_RUN_DEPENDS=	urlview:textproc/urlview
 .endif
 
 .if defined (LITE)
@@ -133,13 +134,22 @@ DEBUG_CONFIGURE_ON=	--enable-debug
 
 # Handle ncurses/ncurses-port/slang
 SLANG_CONFIGURE_ON=	--with-slang=${LOCALBASE}
-SLANG_LIB_DEPENDS=	libslang.so:${PORTSDIR}/devel/libslang2
+SLANG_LIB_DEPENDS=	libslang.so:devel/libslang2
 SLANG_VARS=	PKGMESSAGE=${FILESDIR}/pkg-message.slang
 
 NCURSES_USES=	ncurses
 
 NLS_USES=	gettext
 NLS_CONFIGURE_OFF=	--disable-nls
+
+# Handle GSSAPI from various places
+GSSAPI_BASE_USES=	gssapi
+GSSAPI_BASE_CONFIGURE_ON=	--with-gss=${GSSAPIBASEDIR} ${GSSAPI_CONFIGURE_ARGS}
+GSSAPI_HEIMDAL_USES=	gssapi:heimdal
+GSSAPI_HEIMDAL_CONFIGURE_ON=	--with-gss=${GSSAPIBASEDIR} ${GSSAPI_CONFIGURE_ARGS}
+GSSAPI_MIT_USES=	gssapi:mit
+GSSAPI_MIT_CONFIGURE_ON=	--with-gss=${GSSAPIBASEDIR} ${GSSAPI_CONFIGURE_ARGS}
+GSSAPI_NONE_CONFIGURE_ON=	--without-gss
 
 ICONV_USES=	iconv:translit
 ICONV_CONFIGURE_ON=	${ICONV_CONFIGURE_ARG}
@@ -149,11 +159,11 @@ ASPELL_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-aspell
 ##PARENT_CHILD_MATCH_PATCH_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-parent-child-match
 REVERSE_REPLY_PATCH_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-reverse_reply
 
-SASL_LIB_DEPENDS=	libsasl2.so:${PORTSDIR}/security/cyrus-sasl2
+SASL_LIB_DEPENDS=	libsasl2.so:security/cyrus-sasl2
 SASL_CONFIGURE_ON=	--with-sasl=${LOCALBASE}
 
-#MIXMASTER_BUILD_DEPENDS=	mixmaster:${PORTSDIR}/mail/mixmaster
-MIXMASTER_RUN_DEPENDS=	mixmaster:${PORTSDIR}/mail/mixmaster
+#MIXMASTER_BUILD_DEPENDS=	mixmaster:mail/mixmaster
+MIXMASTER_RUN_DEPENDS=	mixmaster:mail/mixmaster
 MIXMASTER_CONFIGURE_ON=	--with-mixmaster=${LOCALBASE}
 
 SMIME_OUTLOOK_COMPAT_EXTRA_PATCHES=	${PATCHDIR}/extra-patch-smime-outlook
@@ -164,11 +174,11 @@ FLOCK_CONFIGURE_OFF=	--disable-flock
 
 LOCALES_FIX_CONFIGURE_ON=	--enable-locales-fix
 
-IDN_LIB_DEPENDS=	libidn.so:${PORTSDIR}/dns/libidn
+IDN_LIB_DEPENDS=	libidn.so:dns/libidn
 IDN_CONFIGURE_ON=	--with-idn
 IDN_CONFIGURE_OFF=	--without-idn
 
-GPGME_LIB_DEPENDS=	libgpgme.so:${PORTSDIR}/security/gpgme
+GPGME_LIB_DEPENDS=	libgpgme.so:security/gpgme
 GPGME_CONFIGURE_ON=	--enable-gpgme
 GPGME_CONFIGURE_OFF=	--disable-gpgme
 
@@ -229,24 +239,6 @@ pre-build::
 			-e "s|^(AUTOHEADER = ).+|\1${AUTOHEADER}|" \
 		${BUILD_WRKSRC}/Makefile
 
-.if ${PORT_OPTIONS:MGSSAPI}
-.if exists(${LOCALBASE}/bin/krb5-config)
-LIB_DEPENDS+=		libgssapi_krb5.so:${PORTSDIR}/security/krb5
-CONFIGURE_ARGS+=	--with-gss=${LOCALBASE}
-.elif exists(${KRB5_HOME}/bin/krb5-config)
-LIB_DEPENDS+=		libgssapi_krb5.so:${PORTSDIR}/security/krb5
-CONFIGURE_ARGS+=	--with-gss=${KRB5_HOME}
-LDFLAGS+=		-L${KRB5_HOME}/lib -Wl,-rpath=${KRB5_HOME}/lib -ltinfow
-.elif exists(${HEIMDAL_HOME}/bin/krb5-config)
-LIB_DEPENDS+=		libgssapi_krb5.so:${PORTSDIR}/security/krb5
-CONFIGURE_ARGS+=	--with-gss=${HEIMDAL_HOME}
-LDFLAGS+=		-L${HEIMDAL_HOME}/lib -Wl,-rpath=${HEIMDAL_HOME}/lib -ltinfow
-.elif (defined(MAKE_KERBEROS5)) || exists(/usr/lib/libkrb5.a)
-CONFIGURE_ARGS+=	--with-gss
-WITH_KRB5_SYS=yes
-.endif
-.endif
-
 LDFLAGS+=		-L${LOCALBASE}/lib -Wl,-rpath=${LOCALBASE}/lib:/usr/lib -ltinfow
 CFLAGS+=		${CFLAGS_ADD}
 LDFLAGS+=		${LDFLAGS_ADD}
@@ -286,6 +278,9 @@ post-patch-NNTP-off:
 	@${PATCH} ${PATCH_ARGS} -p1 < ${PATCHDIR}/extra-patch-maildir-mtime
 .endif
 
+post-install:
+	${INSTALL_MAN} ${FILESDIR}/mailcap.5 ${STAGEDIR}${MANPREFIX}/man/man5
+
 post-install-NNTP-on:
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog.nntp ${STAGEDIR}${DOCSDIR}
 
@@ -320,7 +315,7 @@ pre-configure::
 .if ${PORT_OPTIONS:MIMAP_HEADER_CACHE} || ${PORT_OPTIONS:MMAILDIR_HEADER_CACHE}
 .if ${PORT_OPTIONS:MTOKYOCABINET}
 CONFIGURE_ARGS+=	--enable-hcache --without-gdbm --without-bdb --with-tokyocabinet
-LIB_DEPENDS+=		libtokyocabinet.so:${PORTSDIR}/databases/tokyocabinet
+LIB_DEPENDS+=		libtokyocabinet.so:databases/tokyocabinet
 .else
 USE_BDB=		42+
 CONFIGURE_ARGS+=	--enable-hcache --without-gdbm --with-bdb
@@ -333,9 +328,9 @@ CONFIGURE_ARGS+=	--disable-hcache
 .endif
 
 .if defined (XML_NEEDED) && ${PORT_OPTIONS:MXML}
-BUILD_DEPENDS+=	xsltproc:${PORTSDIR}/textproc/libxslt \
-		${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl \
-		lynx:${PORTSDIR}/www/lynx
+BUILD_DEPENDS+=	xsltproc:textproc/libxslt \
+		${LOCALBASE}/share/xsl/docbook/html/docbook.xsl:textproc/docbook-xsl \
+		lynx:www/lynx
 .else
 pre-build::
 	@${REINPLACE_CMD} -E -e 's|-xsltproc|@-true xsltproc|g' \

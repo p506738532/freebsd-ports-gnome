@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	django-simple-history
-PORTVERSION=	1.7.0
-PORTREVISION=	1
+PORTVERSION=	1.8.0
 CATEGORIES=	www python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -12,7 +11,7 @@ COMMENT=	Store model history and view/revert changes from admin site
 
 LICENSE=	BSD3CLAUSE
 
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/django/bin/django-admin.py:${PORTSDIR}/www/py-django18 # >= 1.8
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/django/bin/django-admin.py:www/py-django18 # >= 1.8
 
 USE_GITHUB=	yes
 

@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	wyrmsun
-PORTVERSION=	1.9.7
+PORTVERSION=	1.9.9
 DISTVERSIONPREFIX=	v
 CATEGORIES=	games
 
@@ -12,7 +12,7 @@ COMMENT=	Strategy game based on history, mythology and fiction
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/license.txt
 
-RUN_DEPENDS=	wyrmgus:${PORTSDIR}/games/wyrmgus
+RUN_DEPENDS=	wyrmgus:games/wyrmgus
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	Andrettin

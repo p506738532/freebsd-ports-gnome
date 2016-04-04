@@ -1,6 +1,6 @@
 # $FreeBSD$
 #
-# Provide support for firebird
+# Provide support for Firebird
 # Feature:	firebird
 # Usage:	USES=	firebird[:version]
 # MAINTAINER:	ports@FreeBSD.org
@@ -16,7 +16,7 @@ FIREBIRD_VER=	${firebird_ARGS}
 FIREBIRD_VER?=	${FIREBIRD_DEFAULT:S/.//}
 
 .if ${FIREBIRD_VER} == 25
-LIB_DEPENDS+=	libfbclient.so:${PORTSDIR}/databases/firebird25-client
+LIB_DEPENDS+=	libfbclient.so:databases/firebird25-client
 .else
 IGNORE=		cannot install: unknown Firebird version: ${FIREBIRD_VER}
 .endif
