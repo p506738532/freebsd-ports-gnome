@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-session
-PORTVERSION=	3.18.1.2
+PORTVERSION=	3.20.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -18,7 +18,8 @@ RUN_DEPENDS=	${LOCALBASE}/sbin/console-kit-daemon:sysutils/consolekit \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		execinfo gettext gmake gnome pathfix pkgconfig tar:xz
+USES=		execinfo gettext gmake gnome localbase pathfix \
+		pkgconfig tar:xz
 USE_GNOME=	gnomedesktop3 gtk30 intlhack intlhack libxslt:build
 USE_XORG=	ice sm xau xext xtst xrender xtrans xcomposite
 USE_GL=		gl
@@ -27,8 +28,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docbook-docs \
 		--enable-consolekit \
 		--enable-gconf=no
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.SessionManager.gschema.xml
 

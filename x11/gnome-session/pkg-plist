@@ -11,7 +11,6 @@ man/man1/gnome-session-quit.1.gz
 share/GConf/gsettings/gnome-session.convert
 %%DATADIR%%/hardware-compatibility
 %%DATADIR%%/sessions/gnome-dummy.session
-%%DATADIR%%/sessions/gnome-wayland.session
 %%DATADIR%%/session-properties.ui
 %%DATADIR%%/sessions/gnome.session
 share/icons/hicolor/16x16/apps/session-properties.png
