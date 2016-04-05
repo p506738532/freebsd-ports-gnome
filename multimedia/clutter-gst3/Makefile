@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	clutter-gst
-PORTVERSION=	3.0.14
+PORTVERSION=	3.0.18
 CATEGORIES=	multimedia
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
@@ -12,7 +12,8 @@ COMMENT=	Clutter GStreamer integration
 
 LIB_DEPENDS=	libclutter-1.0.so:graphics/clutter
 
-USES=		gmake gnome libtool pathfix pkgconfig tar:xz
+USES=		gmake gnome libtool localbase pathfix \
+		pkgconfig tar:xz
 USE_GNOME=	gnomeprefix introspection:build
 GNU_CONFIGURE=	yes
 USE_GL=		gl
@@ -21,8 +22,8 @@ USE_XORG=	xp x11
 USE_LDCONFIG=	yes
 MAKE_ENV=	XDG_CACHE_HOME=${WRKDIR}
 
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CPPFLAGS+=	${PTHREAD_CFLAGS}
+LDFLAGS+=	${PTHREAD_LIBS}
 INSTALL_TARGET=	install-strip
 
 # The clutter-gst gstreamer plugin is not parrallel installable with
