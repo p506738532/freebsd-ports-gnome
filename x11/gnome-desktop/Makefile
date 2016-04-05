@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-desktop
-PORTVERSION=	3.18.2
-PORTREVISION=	1
+PORTVERSION=	3.20.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,14 +25,13 @@ RUN_DEPENDS=	iso-codes>=0:misc/iso-codes \
 		xkeyboard-config>=0:x11/xkeyboard-config \
 		libxkbfile>=0:x11/libxkbfile
 
-USES+=		bison gettext gmake gnome libtool pathfix pkgconfig python:3
+USES+=		bison gettext gmake gnome libtool localbase pathfix \
+		pkgconfig python:3
 USE_GNOME=	gtk30 intlhack introspection:build referencehack
 USE_XORG=	x11 xrandr xext
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gnome-distributor="FreeBSD GNOME Project"
-CPPFLAGS+=	-I${LOCALBASE}/include
-LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 post-patch:
