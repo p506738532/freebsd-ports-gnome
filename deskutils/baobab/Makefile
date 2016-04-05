@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	baobab
-PORTVERSION=	3.18.1
+PORTVERSION=	3.20.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,13 +17,11 @@ LIB_DEPENDS=	libgtop-2.0.so:devel/libgtop
 CONFLICTS=	gnome-utils-2.[0-9]*
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake gnome pathfix \
-		pkgconfig tar:xz
+USES=		desktop-file-utils gettext gmake gnome localbase \
+		pathfix pkgconfig tar:xz
 USE_GNOME=	gnomeprefix gtk30 intlhack libxml2
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.baobab.gschema.xml
 
