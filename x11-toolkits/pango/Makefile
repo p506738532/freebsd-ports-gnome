@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	pango
-PORTVERSION=	1.38.0
+PORTVERSION=	1.40.0
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -25,16 +25,15 @@ RUN_DEPENDS=	xorg-fonts-truetype>0:x11-fonts/xorg-fonts-truetype \
 
 PORTSCOUT=	limitw:1,even
 
-USES+=		gettext gmake gnome libtool pathfix pkgconfig
+USES+=		gettext gmake gnome libtool localbase pathfix \
+		pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	cairo glib20 introspection:build referencehack
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 VERSION=	1.8.0
-LIBVERSION=	0.3800.0
+LIBVERSION=	0.4000.0
 PLIST_SUB+=     VERSION=${VERSION} LIBVERSION=${LIBVERSION}
 
 FONTSCALE=	${LOCALBASE}/share/fonts/TTF/luximb.ttf
