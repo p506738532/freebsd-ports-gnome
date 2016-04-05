@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-characters
-PORTVERSION=	3.18.1
+PORTVERSION=	3.20.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,13 +16,13 @@ BUILD_DEPENDS=	itstool:textproc/itstool
 LIB_DEPENDS=	libgjs.so:lang/gjs \
 		libunistring.so:devel/libunistring
 
-USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool localbase pathfix \
+		pkgconfig tar:xz
+USE_GNOME=	gtk30 intlhack introspection
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-USE_GNOME=	gtk30 intlhack introspection
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.Characters.gschema.xml
 
