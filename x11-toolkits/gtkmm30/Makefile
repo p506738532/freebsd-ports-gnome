@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gtkmm
-PORTVERSION=	3.16.0
+PORTVERSION=	3.20.0
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -20,12 +20,11 @@ PORTSCOUT=	limitw:1,even
 
 BUILD_DEPENDS=	gm4:devel/m4
 
-USES+=		gettext gmake libtool pathfix pkgconfig
+USES+=		gettext gmake libtool localbase pathfix \
+		pkgconfig
 USE_GNOME=	gtk30 glibmm cairomm atkmm pangomm
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LIBS+=		-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-documentation
 INSTALL_TARGET=	install-strip
 
