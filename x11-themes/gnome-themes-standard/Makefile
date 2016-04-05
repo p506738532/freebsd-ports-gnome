@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-themes-standard
-PORTVERSION=	3.18.0
+PORTVERSION=	3.20
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,8 +17,6 @@ USES=		gettext-tools gmake gnome libtool pathfix pkgconfig tar:xz
 USE_GNOME=	gtk20 gtk30 intlhack librsvg2
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 post-patch:
