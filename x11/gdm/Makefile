@@ -46,8 +46,6 @@ CPE_VENDOR=	gnome
 CPE_VENDOR=	gnome_display_manager
 USE_GNOME=	dconf intlhack introspection librsvg2
 
-USES+=		autoreconf
-
 USE_LDCONFIG=	yes
 USE_XORG=	dmx dmxproto
 INSTALLS_ICONS=	yes
@@ -106,16 +104,14 @@ CONFIGURE_ARGS+=	--enable-debug
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|root:root|root:wheel|g' \
-		${WRKSRC}/data/Makefile.am
-#		${WRKSRC}/data/Makefile.in
+		${WRKSRC}/data/Makefile.in
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		-e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/daemon/gdm-session-worker.c
 	@${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g' \
 		-e 's|/usr/bin/X|${LOCALBASE}/bin/X|g' \
 		-e 's|/usr/bin/Xorg|${LOCALBASE}/bin/Xorg|g' \
-		${WRKSRC}/configure.ac ${WRKSRC}/daemon/*.c ${WRKSRC}/po/*.po
-#		${WRKSRC}/configure ${WRKSRC}/daemon/*.c ${WRKSRC}/po/*.po
+		${WRKSRC}/configure ${WRKSRC}/daemon/*.c ${WRKSRC}/po/*.po
 	@${REINPLACE_CMD} -e 's|/at-spi-registryd|/at-spi2-registryd|g' \
 		${WRKSRC}/gui/simple-chooser/gdm-host-chooser.c \
 		${WRKSRC}/gui/simple-chooser/chooser-main.c
@@ -155,9 +151,5 @@ post-install:
 
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' < ${PKGDIR}/pkg-message \
 		| /usr/bin/fmt 75 79 > ${PKGMESSAGE}
-
-	${MV} ${STAGEDIR}${PREFIX}/lib/pkgconfig/gdm.pc \
-		${STAGEDIR}${PREFIX}/libdata/pkgconfig/gdm.pc
-	@${RMDIR} ${STAGEDIR}${PREFIX}/lib/pkgconfig
 
 .include <bsd.port.mk>
