@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	devhelp
-PORTVERSION=	3.18.1
+PORTVERSION=	3.20.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -14,15 +14,13 @@ LIB_DEPENDS=	libwebkit2gtk-4.0.so:www/webkit2-gtk3
 
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c++11-lib gettext gmake gnome libtool pathfix \
-		pkgconfig tar:xz
+USES=		compiler:c++11-lib gettext gmake gnome \
+		libtool localbase pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack libxslt
 USE_XORG=	x11
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.devhelp.gschema.xml
