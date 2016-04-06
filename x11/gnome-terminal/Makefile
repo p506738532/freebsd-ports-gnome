@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-terminal
-PORTVERSION=	3.18.1
-PORTREVISION=	1
+PORTVERSION=	3.20.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -21,12 +20,11 @@ RUN_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 
 PORTSCOUT=	limitw:1,even
 
-USES=		cpe gettext gmake gnome libtool pathfix pkgconfig tar:xz
+USES=		cpe gettext gmake gnome libtool localbase pathfix \
+		pkgconfig tar:xz
 USE_GNOME=	dconf gtk30 intlhack nautilus3 vte3
 USE_XORG=	sm ice
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 CPE_VENDOR=	gnome
 
