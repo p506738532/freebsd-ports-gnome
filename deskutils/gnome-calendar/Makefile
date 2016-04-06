@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-calendar
-PORTVERSION=	3.18.2.1
+PORTVERSION=	3.20.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -14,14 +14,13 @@ PORTSCOUT=	limitw:1,even
 
 LIB_DEPENDS=	libical.so:devel/libical
 
-USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool localbase pathfix \
+		pkgconfig tar:xz
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	evolutiondataserver3 gtk30 intlhack \
 		introspection
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.calendar.enums.xml \
 		org.gnome.calendar.gschema.xml
