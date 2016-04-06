@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	sushi
-PORTVERSION=	3.18.0
+PORTVERSION=	3.19.90
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,7 +13,7 @@ COMMENT=	Tool similar to Gloobus Preview that provides quick file previews
 LIB_DEPENDS=	libgcr-3.so:security/gcr \
 		libgjs.so:lang/gjs \
 		libclutter-gtk-1.0.so:graphics/clutter-gtk3 \
-		libclutter-gst-2.0.so:multimedia/clutter-gst \
+		libclutter-gst-3.0.so:multimedia/clutter-gst3 \
 		libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
 		libmusicbrainz5.so:audio/libmusicbrainz5 \
 		libevdocument3.so:graphics/evince
@@ -21,13 +21,12 @@ RUN_DEPENDS=	nautilus:x11-fm/nautilus
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool localbase pathfix \
+		pkgconfig tar:xz
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix gtksourceview3 intlhack introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>
