@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	vte
-PORTVERSION=	0.42.4
-PORTREVISION=	1
+PORTVERSION=	0.44.0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
@@ -18,13 +17,11 @@ LIB_DEPENDS=	libgnutls.so:security/gnutls
 
 PORTSCOUT=	limitw:1,even
 
-USES=		bison compiler:c++0x gettext gmake gnome libtool pathfix \
-		pkgconfig tar:xz
+USES=		bison compiler:c++0x gettext gmake gnome libtool localbase \
+		pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME?=	gtk30 intltool referencehack introspection:build
-CPPFLAGS+=	-I${LOCALBASE}/include
-LIBS+=		-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-introspection \
 		--disable-static \
 		--disable-Bsymbolic
