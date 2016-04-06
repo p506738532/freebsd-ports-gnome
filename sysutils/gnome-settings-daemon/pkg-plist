@@ -79,6 +79,7 @@ libexec/gsd-test-xrandr
 libexec/gsd-test-xsettings
 man/man1/gnome-settings-daemon.1.gz
 share/GConf/gsettings/gnome-settings-daemon.convert
+%%DATADIR%%-3.0/input-device-example.sh
 %%DATADIR%%/datetime/backward
 share/gnome-settings-daemon-3.0/input-device-example.sh
 share/icons/hicolor/16x16/apps/gsd-xrandr.png
