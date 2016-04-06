@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	file-roller
-PORTVERSION=	3.16.4
-PORTREVISION=	1
+PORTVERSION=	3.20.0
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	GNOME
@@ -22,14 +21,12 @@ RUN_DEPENDS=	gtar:archivers/gtar \
 PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils gettext gmake libarchive libtool \
-		pathfix pkgconfig tar:xz
+		localbase pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack introspection:build
 USE_XORG=	sm
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-packagekit
 INSTALL_TARGET=	install-strip
 
