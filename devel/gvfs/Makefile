@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gvfs
-PORTVERSION=	1.26.3
-PORTREVISION=	1
+PORTVERSION=	1.28.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,11 +19,10 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake gnome libarchive libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libarchive libtool localbase \
+		pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 intlhack libxslt:build
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-bluray
 
 CONFIGURE_ARGS+=\

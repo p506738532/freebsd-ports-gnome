@@ -79,6 +79,7 @@ share/bash-completion/completions/gvfs-ls
 share/bash-completion/completions/gvfs-mkdir
 share/bash-completion/completions/gvfs-monitor-dir
 share/bash-completion/completions/gvfs-monitor-file
+share/bash-completion/completions/gvfs-mount
 share/bash-completion/completions/gvfs-move
 share/bash-completion/completions/gvfs-open
 share/bash-completion/completions/gvfs-rename
