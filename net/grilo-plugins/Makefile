@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	grilo-plugins
-PORTVERSION=	0.2.17
+PORTVERSION=	0.3.1
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -10,11 +10,12 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plugins for net/grilo
 
 BUILD_DEPENDS=	itstool:textproc/itstool
-LIB_DEPENDS=	libgrilo-0.2.so:net/grilo \
+LIB_DEPENDS=	libgrilo-0.3.so:net/grilo \
 		libavahi-gobject.so:net/avahi-app \
 		libgdata.so:devel/libgdata
 
-USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool libtool pathfix \
+		pkgconfig tar:xz
 USE_LDCONFIG=	yes
 USE_GNOME=	glib20 intlhack libxml2
 GNU_CONFIGURE=	yes
@@ -22,8 +23,7 @@ CONFIGURE_ARGS=	--enable-youtube \
 		--enable-vimeo \
 		--enable-freebox \
 		--enable-tmdb
-CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/grilo-0.2/
-LDFLAGS+=	-L${LOCALBASE}/lib
+#CPPFLAGS+=	-I${LOCALBASE}/include/grilo-0.2/
 INSTALL_TARGET=	install-strip
 
 OPTIONS_SUB=			yes
