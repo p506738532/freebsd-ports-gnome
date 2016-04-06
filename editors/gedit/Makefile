@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gedit
-PORTVERSION=	3.18.3
+PORTVERSION=	3.20.1
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,23 +16,25 @@ BUILD_DEPENDS=	iso-codes>=0:misc/iso-codes \
 		itstool:textproc/itstool
 LIB_DEPENDS=	libenchant.so:textproc/enchant \
 		libpeas-gtk-1.0.so:devel/libpeas \
-		libsoup-2.4.so:devel/libsoup
+		libsoup-2.4.so:devel/libsoup \
+		libgspell-1.so:textproc/gspell
 RUN_DEPENDS=	iso-codes>=0:misc/iso-codes \
 		gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas \
 		${PYTHON_PKGNAMEPREFIX}libpeas>=0:devel/py3-libpeas
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake gnome libtool \
+USES=		desktop-file-utils gettext gmake gnome libtool localbase \
 		pathfix pkgconfig python:3 tar:xz
 USE_GNOME=	gtksourceview3 intlhack introspection:build \
 		libxml2 py3gobject3
 USE_XORG=	sm
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-updater \
-		--enable-python
-CPPFLAGS+=	-I${LOCALBASE}/include -Wno-error=format-nonliteral
-CFLAGS+=	-I${LOCALBASE}/include -Wno-error=format-nonliteral
+		--enable-python \
+		--enable-spell
+CPPFLAGS+=	-Wno-error=format-nonliteral
+CFLAGS+=	-Wno-error=format-nonliteral
 LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 PLIST_SUB=	VERSION="3.14"

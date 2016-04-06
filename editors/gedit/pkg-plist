@@ -148,7 +148,6 @@ share/appdata/org.gnome.gedit.appdata.xml
 share/applications/org.gnome.gedit.desktop
 share/dbus-1/services/org.gnome.gedit.service
 %%DATADIR%%/gir-1.0/Gedit-3.0.gir
-%%DATADIR%%/logo/gedit-logo.png
 %%DATADIR%%/plugins/externaltools/tools/build
 %%DATADIR%%/plugins/externaltools/tools/open-terminal-here
 %%DATADIR%%/plugins/externaltools/tools/remove-trailing-spaces
@@ -1775,5 +1774,12 @@ share/locale/xh/LC_MESSAGES/gedit.mo
 share/locale/zh_CN/LC_MESSAGES/gedit.mo
 share/locale/zh_HK/LC_MESSAGES/gedit.mo
 share/locale/zh_TW/LC_MESSAGES/gedit.mo
+share/icons/hicolor/16x16/apps/gedit.png
+share/icons/hicolor/22x22/apps/gedit.png
+share/icons/hicolor/24x24/apps/gedit.png
+share/icons/hicolor/256x256/apps/gedit.png
+share/icons/hicolor/32x32/apps/gedit.png
+share/icons/hicolor/48x48/apps/gedit.png
+share/icons/hicolor/symbolic/apps/gedit-symbolic.svg
 share/vala/vapi/gedit.deps
 share/vala/vapi/gedit.vapi
