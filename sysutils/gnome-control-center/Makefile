@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	3.18.2
-PORTREVISION=	2
+PORTVERSION=	3.20.0
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,7 +25,7 @@ LIB_DEPENDS=	libcanberra-gtk3.so:audio/libcanberra-gtk3 \
 		libpwquality.so:security/libpwquality \
 		libgtop-2.0.so:devel/libgtop \
 		libdbus-glib-1.so:devel/dbus-glib \
-		libgrilo-0.2.so:net/grilo \
+		libgrilo-0.3.so:net/grilo \
 		libpolkit-gobject-1.so:sysutils/polkit
 RUN_DEPENDS=	gnome-eject:sysutils/gnome-mount \
 		gnome-settings-daemon>=3.4.0:sysutils/gnome-settings-daemon \
@@ -39,14 +38,13 @@ RUN_DEPENDS=	gnome-eject:sysutils/gnome-mount \
 CONFLICTS=	gnome-media-2.[0-9]*
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c++11-lib gettext gmake gnome pathfix pkgconfig tar:xz
+USES=		compiler:c++11-lib gettext gmake gnome localbase pathfix \
+		pkgconfig tar:xz
 USE_GNOME=	gnomedesktop3 intltool libxml2
 USE_XORG=	xscrnsaver x11 xxf86misc kbproto xi
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_SUB=	yes
 OPTIONS_DEFINE=	CUPS
