@@ -34,7 +34,6 @@ include/gdkmm-%%API_VERSION%%/gdkmm/private/rectangle_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/rgba_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/screen_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/seat_p.h
-include/gdkmm-%%API_VERSION%%/gdkmm/private/seat.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/timecoord_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/types_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/visual_p.h
@@ -42,6 +41,7 @@ include/gdkmm-%%API_VERSION%%/gdkmm/private/window_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/rectangle.h
 include/gdkmm-%%API_VERSION%%/gdkmm/rgba.h
 include/gdkmm-%%API_VERSION%%/gdkmm/screen.h
+include/gdkmm-%%API_VERSION%%/gdkmm/seat.h
 include/gdkmm-%%API_VERSION%%/gdkmm/timecoord.h
 include/gdkmm-%%API_VERSION%%/gdkmm/types.h
 include/gdkmm-%%API_VERSION%%/gdkmm/visual.h
