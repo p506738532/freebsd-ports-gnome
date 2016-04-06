@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evince
-PORTVERSION=	3.18.2
+PORTVERSION=	3.20.0
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -24,14 +24,13 @@ PORTSCOUT=	limitw:1,even
 SLAVEPORT?=	no
 
 USES=		compiler:c++11-lib desktop-file-utils gettext gmake \
-		gnome libtool pathfix pkgconfig tar:xz
+		gnome libtool localbase pathfix pkgconfig tar:xz
 USE_GNOME=	gtk30 intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_XORG=	ice
 INSTALLS_ICONS=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include -Wno-format-nonliteral
-LIBS+=		-L${LOCALBASE}/lib
+CPPFLAGS+=	-Wno-format-nonliteral
 INSTALL_TARGET=	install-strip
 
 .if ${SLAVEPORT} == lite

@@ -85,6 +85,7 @@ lib/mozilla/plugins/libevbrowserplugin.a
 lib/mozilla/plugins/libevbrowserplugin.so
 %%NAUTILUS%%lib/nautilus/extensions-%%VERSION%%/libevince-properties-page.a
 %%NAUTILUS%%lib/nautilus/extensions-%%VERSION%%/libevince-properties-page.so
+lib/systemd/user/evince.service
 libdata/pkgconfig/evince-document-%%VERSION%%.pc
 libdata/pkgconfig/evince-view-%%VERSION%%.pc
 libexec/evinced
@@ -140,7 +141,6 @@ share/dbus-1/services/org.gnome.evince.Daemon.service
 %%DATADIR%%/icons/hicolor/48x48/actions/view-page-facing.png
 %%DATADIR%%/icons/hicolor/scalable/actions/object-rotate-left.svg
 %%DATADIR%%/icons/hicolor/scalable/actions/object-rotate-right.svg
-%%DATADIR%%/icons/hicolor/scalable/apps/evince-symbolic.svg
 %%DATADIR%%/icons/hicolor/scalable/mimetypes/x-office-presentation.svg
 share/gir-1.0/EvinceDocument-%%VERSION%%.gir
 share/gir-1.0/EvinceView-%%VERSION%%.gir
@@ -2981,6 +2981,7 @@ share/icons/hicolor/22x22/apps/evince.png
 share/icons/hicolor/24x24/apps/evince.png
 share/icons/hicolor/256x256/apps/evince.png
 share/icons/hicolor/48x48/apps/evince.png
+share/icons/hicolor/symbolic/apps/evince-symbolic.svg
 share/locale/af/LC_MESSAGES/evince.mo
 share/locale/an/LC_MESSAGES/evince.mo
 share/locale/ar/LC_MESSAGES/evince.mo
