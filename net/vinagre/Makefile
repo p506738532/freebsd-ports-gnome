@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	vinagre
-PORTVERSION=	3.18.2
-PORTREVISION=	3
+PORTVERSION=	3.20.0
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,14 +18,13 @@ RUN_DEPENDS=	gnome-icon-theme>=0:misc/gnome-icon-theme
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake gnome pathfix pkgconfig \
-		shared-mime-info tar:xz
+USES=		desktop-file-utils gettext gmake gnome localbase \
+		pathfix pkgconfig shared-mime-info tar:xz
 USE_GNOME=	gtk30 intlhack libxml2 vte3
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--enable-ssh
-CPPFLAGS+=	-I${LOCALBASE}/include -Wno-format-nonliteral
-LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-Wno-format-nonliteral
 
 GLIB_SCHEMAS=	org.gnome.Vinagre.gschema.xml
 
