@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cheese
-PORTVERSION=	3.18.1
+PORTVERSION=	3.20.0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,7 +22,8 @@ RUN_DEPENDS=	gnome-video-effects>=0:graphics/gnome-video-effects
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake gnome libtool pathfix pkgconfig tar:xz
+USES=		gettext gmake gnome libtool localbase pathfix \
+		pkgconfig tar:xz
 USE_GNOME=	intlhack evolutiondataserver3 librsvg2 \
 		gnomedesktop3 libxml2:build introspection:build
 USE_XORG=	xxf86vm x11
@@ -30,8 +31,7 @@ USE_GSTREAMER1=	bad good jpeg ogg theora v4l2 vorbis vpx
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include -Wno-format-nonliteral
-LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-Wno-format-nonliteral
 INSTALL_TARGET=	install-strip
 
 DOCS=		AUTHORS COPYING ChangeLog NEWS README
