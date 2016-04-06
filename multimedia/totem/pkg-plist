@@ -73,6 +73,7 @@ lib/totem/plugins/vimeo/libvimeo.a
 lib/totem/plugins/vimeo/libvimeo.so
 lib/totem/plugins/vimeo/vimeo.plugin
 libdata/pkgconfig/totem.pc
+man/man1/totem-audio-preview.1.gz
 man/man1/totem-video-thumbnailer.1.gz
 man/man1/totem.1.gz
 share/GConf/gsettings/opensubtitles.convert
@@ -503,5 +504,6 @@ share/thumbnailers/totem.thumbnailer
 %%DATADIR%%/playlist.ui
 %%DATADIR%%/preferences.ui
 %%DATADIR%%/properties.ui
+%%DATADIR%%/shortcuts.ui
 %%DATADIR%%/totem.ui
 %%DATADIR%%/uri.ui

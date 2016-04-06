@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	totem
-PORTVERSION=	3.18.1
+PORTVERSION=	3.20.0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -31,7 +31,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:misc/iso-codes \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake gnome libtool \
+USES=		desktop-file-utils gettext gmake gnome libtool localbase \
 		pathfix pkgconfig python:2 tar:xz
 USE_GNOME=	gtk30 intlhack introspection:build libxml2 nautilus3 \
 		pygobject3
@@ -40,9 +40,8 @@ USE_GSTREAMER1=	core good bad soup ugly
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include -Wno-error=format-nonliteral
-CFLAGS+=	-I${LOCALBASE}/include -Wno-error=format-nonliteral
-LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-Wno-error=format-nonliteral
+CFLAGS+=	-Wno-error=format-nonliteral
 CONFIGURE_ENV=	LIBS="-lXrandr"
 CONFIGURE_ARGS=	--with-plugins="${TOTEM_PLUGINS}"
 #CONFIGURE_ENV+=	APPDATA_VALIDATE="${LOCALBASE}/bin/appdata-validate --nonet"
