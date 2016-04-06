@@ -132,7 +132,6 @@ share/applications/evince.desktop
 %%DATADIR%%/icons/hicolor/48x48/actions/view-page-facing.png
 %%DATADIR%%/icons/hicolor/scalable/actions/object-rotate-left.svg
 %%DATADIR%%/icons/hicolor/scalable/actions/object-rotate-right.svg
-%%DATADIR%%/icons/hicolor/scalable/apps/evince-symbolic.svg
 %%DATADIR%%/icons/hicolor/scalable/mimetypes/x-office-presentation.svg
 share/gtk-doc/html/evince/EvFileMonitor.html
 share/gtk-doc/html/evince/EvHistory.html
@@ -2971,6 +2970,7 @@ share/icons/hicolor/22x22/apps/evince.png
 share/icons/hicolor/24x24/apps/evince.png
 share/icons/hicolor/256x256/apps/evince.png
 share/icons/hicolor/48x48/apps/evince.png
+share/icons/hicolor/scalable/apps/evince-symbolic.svg
 share/locale/af/LC_MESSAGES/evince.mo
 share/locale/an/LC_MESSAGES/evince.mo
 share/locale/ar/LC_MESSAGES/evince.mo
