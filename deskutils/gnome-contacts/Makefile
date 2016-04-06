@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-contacts
-PORTVERSION=	3.18.0
+PORTVERSION=	3.19.91
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -21,10 +21,9 @@ PORTSCOUT=	limitw:1,even
 
 USE_GNOME=	evolutiondataserver3 gnomedesktop3 gtk30 intlhack \
 		introspection:build
-USES=		gettext gmake gnome pathfix perl5 pkgconfig tar:xz
+USES=		gettext gmake gnome localbase pathfix perl5 \
+		pkgconfig tar:xz
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ENV=	XDG_CACHE_HOME=${WRKDIR}
 
 GLIB_SCHEMAS=	org.gnome.Contacts.enums.xml \
