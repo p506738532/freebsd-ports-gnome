@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	yelp
-PORTVERSION=	3.18.1
+PORTVERSION=	3.20.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,15 +20,13 @@ RUN_DEPENDS=	yelp-xsl>=0:textproc/yelp-xsl
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake gnome libtool pathfix \
-		pkgconfig tar:xz
+USES=		desktop-file-utils gettext gmake gnome libtool \
+		localbase pathfix pkgconfig tar:xz
 USE_XORG=	x11 ice
 USE_GNOME=	gtk30 intlhack libxml2 libxslt
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.yelp.gschema.xml
 INSTALL_TARGET=	install-strip
 
