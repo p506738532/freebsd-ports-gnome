@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	vino
-PORTVERSION=	3.18.1
-PORTREVISION=	2
+PORTVERSION=	3.20.0
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -21,14 +20,14 @@ LIB_DEPENDS=	libgnutls.so:security/gnutls \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		cpe gettext gmake gnome pathfix pkgconfig tar:xz
+USES=		cpe gettext gmake gnome localbase pathfix \
+		pkgconfig tar:xz
 CPE_VENDOR=	david_king
 USE_GNOME=	gtk30 intlhack
 USE_XORG=	xdamage xfixes xtst
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include -Wno-format-nonliteral
-LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-Wno-format-nonliteral
 GLIB_SCHEMAS=	org.gnome.Vino.enums.xml org.gnome.Vino.gschema.xml
 
 .include <bsd.port.mk>
