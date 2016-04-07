@@ -16,7 +16,7 @@ LIB_DEPENDS=	libffi.so:devel/libffi
 
 PORTSCOUT=	limitw:1,even
 
-USES=		bison gettext gmake gnome libtool localbase pathfix  \
+USES=		bison gettext gmake gnome libtool localbase pathfix \
 		pkgconfig python:2 tar:xz
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
