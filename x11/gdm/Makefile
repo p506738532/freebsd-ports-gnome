@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gdm
-PORTVERSION=	3.16.4
-PORTREVISION=	1
+PORTVERSION=	3.20.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -37,14 +36,16 @@ RUN_DEPENDS+=	xrdb:x11/xrdb \
 		xterm:x11/xterm
 
 USERS=		gdm
-GROUPS=		gdm
+GROUPS=		gdm video
 
 PORTSCOUT=	limitw:1,even
 
-USES=		cpe execinfo gettext gmake libtool pathfix pkgconfig tar:xz
+USES=		cpe execinfo gettext gmake gnome libtool pathfix \
+		pkgconfig tar:xz
 CPE_VENDOR=	gnome
 CPE_VENDOR=	gnome_display_manager
 USE_GNOME=	dconf intlhack introspection librsvg2
+
 USE_LDCONFIG=	yes
 USE_XORG=	dmx dmxproto
 INSTALLS_ICONS=	yes
@@ -68,6 +69,7 @@ CONFIGURE_ARGS=	--disable-static \
 		--with-screenshot-dir=/var/run/gdm/greeter \
 		--enable-authentication-scheme=pam \
 		--without-plymouth \
+		--without-systemd \
 		--with-user=gdm \
 		--with-group=gdm \
 		--with-initial-vt=09 \
