@@ -1431,6 +1431,7 @@
     SUBDIR += pecl-amfext
     SUBDIR += pecl-http
     SUBDIR += pecl-http1
+    SUBDIR += pecl-http2
     SUBDIR += pecl-solr
     SUBDIR += pecl-sphinx
     SUBDIR += pecl-swish
@@ -1787,7 +1788,6 @@
     SUBDIR += py-twistedWeb
     SUBDIR += py-twistedWeb2
     SUBDIR += py-txrequests
-    SUBDIR += py-ua-parser
     SUBDIR += py-uliweb
     SUBDIR += py-urlgrabber
     SUBDIR += py-urljr
@@ -1902,6 +1902,7 @@
     SUBDIR += rubygem-gitlab-grack
     SUBDIR += rubygem-gollum-grit_adapter
     SUBDIR += rubygem-gollum-lib
+    SUBDIR += rubygem-gollum-rugged_adapter
     SUBDIR += rubygem-gon
     SUBDIR += rubygem-gon-rails4
     SUBDIR += rubygem-hackpad-cli
