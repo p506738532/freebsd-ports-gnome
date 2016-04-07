@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution-ews
-PORTVERSION=	3.18.5
+PORTVERSION=	3.20.0
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -18,14 +18,13 @@ RUN_DEPENDS=	evolution>=3.0.0:mail/evolution
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake gnome libtool pathfix pkgconfig sqlite tar:xz
+USES=		gettext gmake gnome libtool localbase pathfix pkgconfig \
+		sqlite tar:xz
 USE_GNOME=	intltool
 GNU_CONFIGURE=	yes
 USE_BDB=	5
 USE_OPENLDAP=	yes
 USE_LDCONFIG=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--datarootdir=${PREFIX}/share \
 		--localedir=${PREFIX}/share/locale \
 		--prefix=${PREFIX}
