@@ -234,7 +234,6 @@ lib/gegl-%%GEGL_VER%%/sepia.so
 lib/gegl-%%GEGL_VER%%/shift.so
 lib/gegl-%%GEGL_VER%%/sinus.so
 lib/gegl-%%GEGL_VER%%/snn-mean.so
-lib/gegl-%%GEGL_VER%%.so.%%GEGL_VER%%06.0
 lib/gegl-%%GEGL_VER%%/soft-light.so
 lib/gegl-%%GEGL_VER%%/softglow.so
 lib/gegl-%%GEGL_VER%%/src-atop.so
