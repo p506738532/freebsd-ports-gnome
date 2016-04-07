@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libsoup
-PORTVERSION=	2.52.2
+PORTVERSION=	2.54.0.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,8 +19,8 @@ PORTSCOUT=	limitw:1,even
 
 .if !defined(REFERENCE_PORT)
 
-USES+=		gettext gmake gnome libtool pathfix pkgconfig \
-		python:3:build tar:xz
+USES+=		gettext gmake gnome libtool localbase pathfix \
+		pkgconfig python:3:build tar:xz
 USE_GNOME=	glib20 intlhack introspection:build \
 		libxml2 referencehack
 USE_SQLITE=	3
@@ -28,8 +28,6 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-more-warnings \
 		--disable-vala
-CPPFLAGS+=	-I${LOCALBASE}/include
-LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 LIBVERSION=	1.7.0
