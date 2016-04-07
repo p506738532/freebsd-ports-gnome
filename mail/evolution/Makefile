@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution
-PORTVERSION=	3.18.5.1
+PORTVERSION=	3.20.0
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,7 +26,7 @@ RUN_DEPENDS=	highlight:textproc/highlight \
 PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils bison gettext gmake gnome libtool \
-		pathfix perl5 pkgconfig tar:xz
+		localbase pathfix perl5 pkgconfig tar:xz
 USE_GNOME=	evolutiondataserver3 gnomedesktop3 intltool
 GNU_CONFIGURE=	yes
 USE_GSTREAMER1=	yes
@@ -35,8 +35,6 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-nss=yes \
 		--disable-autoar \
 		--with-sub-version=" FreeBSD GNOME Team Port"
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.evolution.gschema.xml \
@@ -58,7 +56,7 @@ GLIB_SCHEMAS=	org.gnome.evolution.gschema.xml \
 		org.gnome.evolution.plugin.publish-calendar.gschema.xml \
 		org.gnome.evolution.plugin.templates.gschema.xml
 
-EVO_VERSION=	3.18
+EVO_VERSION=	3.20
 PLIST_SUB=	VERSION=${EVO_VERSION} \
 		PORTVERSION=2.12
 
