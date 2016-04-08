@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	rhythmbox
-PORTVERSION=	3.2.1
-PORTREVISION=	1
+PORTVERSION=	3.3.1
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,8 +24,8 @@ LIB_DEPENDS=	libmusicbrainz5.so:audio/libmusicbrainz5 \
 		libsecret-1.so:security/libsecret \
 		libtdb.so:databases/tdb
 
-USES=		desktop-file-utils gettext gmake gnome libtool pathfix \
-		pkgconfig tar:xz
+USES=		desktop-file-utils gettext gmake gnome libtool localbase \
+		pathfix pkgconfig tar:xz
 USE_GNOME=	intlhack gnomeprefix gtk30 introspection:build \
 		py3gobject3
 USE_XORG=	ice xproto
@@ -40,8 +39,6 @@ CONFIGURE_ARGS=	--enable-vala \
 		--with-libsecret=yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 PLIST_SUB+=	PYTVER=${PYTHON_VER:S/.//}
@@ -49,7 +46,7 @@ PLIST_SUB+=	PYTVER=${PYTHON_VER:S/.//}
 GLIB_SCHEMAS=	org.gnome.rhythmbox.gschema.xml
 
 OPTIONS_SUB=	yes
-OPTIONS_DEFINE=	BRASERO DAAP GRILO IPOD NOTIFY PYTHON LIRC MTP
+OPTIONS_DEFINE=	BRASERO DAAP IPOD GRILO NOTIFY PYTHON LIRC MTP
 OPTIONS_DEFAULT=BRASERO NOTIFY PYTHON
 BRASERO_DESC=	Brasero disc burning support
 BRASERO_CONFIGURE_ENABLE=brasero
@@ -82,8 +79,20 @@ PYTHON_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}libpeas>=0:devel/py3-libpeas
 #WEBKIT_CONFIGURE_WITH=	webkit
 #WEBKIT_LIB_DEPENDS=	libwebkitgtk-3.0.so:www/webkit-gtk3
 
+.include <bsd.port.options.mk>
+
+# disable grilo, it fails to compile with grilo-0.3. Even trying to trick
+# it by patching the configure detection. 
+# Probably post-patch would need to be killed too when rhythmbox gets
+# grilo-0.3 support
+.if ${PORT_OPTIONS:MGRILO}
+BROKEN= Fails to compile with recent grilo-0.3
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|{MOZILLA_PLUGINDIR|{MOZILLA_PLUGINDIR}|g' \
+		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|grilo-0.2|grilo-0.3|g' \
 		${WRKSRC}/configure
 
 # rbzeitgeist plugin needs py3-zeitgeist
