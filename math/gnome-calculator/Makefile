@@ -11,7 +11,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 calculator tool
 
 BUILD_DEPENDS=	itstool:textproc/itstool
-LIB_DEPENDS=	libmpfr.so:math/mpfr
+LIB_DEPENDS=	libmpfr.so:math/mpfr \
+		libsoup-2.4.so:devel/libsoup
 
 PORTSCOUT=	limitw:1,even
 
