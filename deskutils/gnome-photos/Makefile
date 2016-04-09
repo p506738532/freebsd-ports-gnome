@@ -16,7 +16,7 @@ LIB_DEPENDS=	libexempi.so:textproc/exempi \
 		libgfbgraph-0.2.so:net/gfbgraph \
 		libgegl-0.3.so:graphics/gegl3 \
 		libgrilo-0.3.so:net/grilo \
-		libexif.so:graphics/libexif \
+		libgexiv2.so:graphics/gexiv2 \
 		libtracker-control-1.0.so:sysutils/tracker \
 		libgjs.so:lang/gjs \
 		libbabl-0.1.so:x11/babl \
