@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	epiphany
-PORTVERSION=	3.16.3
-PORTREVISION=	1
+PORTVERSION=	3.20.1
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -29,7 +28,7 @@ RUN_DEPENDS=	iso-codes>=0:misc/iso-codes \
 
 PORTSCOUT=	limitw:1,even
 
-USES=		cpe desktop-file-utils gettext gmake libtool pathfix \
+USES=		cpe desktop-file-utils gettext gmake libtool localbase pathfix \
 		pkgconfig python:3 sqlite tar:xz
 CPE_VENDOR=	gnome
 USE_GNOME=	gnomedesktop3 intlhack libwnck3 libxml2 libxslt
@@ -40,8 +39,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=\
 		--with-distributor-name="FreeBSD GNOME Project"
 #		--with-ca-file=${LOCALBASE}/share/certs/ca-root-nss.crt
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 
 GLIB_SCHEMAS=	org.gnome.Epiphany.enums.xml \
