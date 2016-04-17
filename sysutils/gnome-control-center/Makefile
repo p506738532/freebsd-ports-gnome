@@ -3,6 +3,7 @@
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	3.20.0
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -21,7 +22,6 @@ LIB_DEPENDS=	libcanberra-gtk3.so:audio/libcanberra-gtk3 \
 		libcolord-gtk.so:graphics/colord-gtk \
 		libibus-1.0.so:textproc/ibus \
 		libgoa-1.0.so:net/gnome-online-accounts \
-		libsocialweb.so:www/libsocialweb \
 		libpwquality.so:security/libpwquality \
 		libgtop-2.0.so:devel/libgtop \
 		libdbus-glib-1.so:devel/dbus-glib \
