@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitg
-PORTVERSION=	3.19.6
+PORTVERSION=	3.20.0
 CATEGORIES=	devel deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -25,7 +25,8 @@ RUN_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 CONFLICTS=	gitg0-[0-9]*
 PORTSCOUT=	limitw:1,even
 
-USES=		compiler:c11 desktop-file-utils gmake libtool pathfix pkgconfig tar:xz
+USES=		compiler:c11 desktop-file-utils gmake libtool localbase \
+		pathfix pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-silent-rules \
 		--disable-maintainer-mode \
@@ -35,9 +36,6 @@ INSTALL_TARGET=	install-strip
 
 INSTALLS_ICONS=	yes
 GLIB_SCHEMAS=	org.gnome.gitg.gschema.xml
-
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS_DEFINE=	DEBUG NLS PYTHON
 OPTIONS_SUB=	yes
@@ -60,9 +58,5 @@ PYOEXTENSION=	opt-1.pyc
 .endif
 
 PLIST_SUB+=	PYOEXTENSION=${PYOEXTENSION}
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|0.24.0|0.25.0|g' \
-		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
