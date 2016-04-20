@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	3.20.0
-PORTREVISION=	2
+PORTVERSION=	3.20.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -24,7 +23,6 @@ LIB_DEPENDS=	libcanberra-gtk3.so:audio/libcanberra-gtk3 \
 		libgoa-1.0.so:net/gnome-online-accounts \
 		libpwquality.so:security/libpwquality \
 		libgtop-2.0.so:devel/libgtop \
-		libdbus-glib-1.so:devel/dbus-glib \
 		libgrilo-0.3.so:net/grilo \
 		libpolkit-gobject-1.so:sysutils/polkit
 RUN_DEPENDS=	gnome-settings-daemon>=3.4.0:sysutils/gnome-settings-daemon \
@@ -60,8 +58,6 @@ CUPS_LIB_DEPENDS=	libcups.so:print/cups \
 CUPS_CONFIGURE_ENABLE=	cups
 CHEESE_LIB_DEPENDS=	libcheese.so:multimedia/cheese
 CHEESE_CONFIGURE_WITH=	cheese
-
-.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|datetime wacom|datetime|g' \
