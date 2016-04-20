@@ -551,6 +551,7 @@
     SUBDIR += linux-ssamtfe
     SUBDIR += linux-ssamtse
     SUBDIR += linux-unigine-heaven
+    SUBDIR += linux-unigine-valley
     SUBDIR += linux-unrealgold
     SUBDIR += linux-uplink-demo
     SUBDIR += linux-ut
@@ -985,6 +986,7 @@
     SUBDIR += traindirector
     SUBDIR += traingame
     SUBDIR += tremulous
+    SUBDIR += trenchbroom
     SUBDIR += trigger-data
     SUBDIR += trigger-rally
     SUBDIR += trimines
@@ -1192,6 +1194,7 @@
     SUBDIR += zatacka
     SUBDIR += zaz
     SUBDIR += zephulor
+    SUBDIR += zhlt
     SUBDIR += znibbles
     SUBDIR += zoom
     SUBDIR += ztrack

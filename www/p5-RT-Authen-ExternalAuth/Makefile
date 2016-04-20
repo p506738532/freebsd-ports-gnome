@@ -13,9 +13,9 @@ COMMENT=	RT extension to authenticate users against an external source
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS=	p5-perl-ldap>0:${PORTSDIR}/net/p5-perl-ldap \
-		p5-DBI>0:${PORTSDIR}/databases/p5-DBI \
-		p5-Net-SSLeay>0:${PORTSDIR}/security/p5-Net-SSLeay
+BUILD_DEPENDS=	p5-perl-ldap>0:net/p5-perl-ldap \
+		p5-DBI>0:databases/p5-DBI \
+		p5-Net-SSLeay>0:security/p5-Net-SSLeay
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 NO_ARCH=	yes
@@ -40,8 +40,8 @@ RT_VER=         ${opt}
 ### Temporary for debugging
 #WRKDIR=         ${WRKDIRPREFIX}${.CURDIR}/work${RT_VER}
 
-BUILD_DEPENDS+=	${LOCALBASE}/bin/rt:${PORTSDIR}/www/rt${RT_VER}
-RUN_DEPENDS+=	${LOCALBASE}/bin/rt:${PORTSDIR}/www/rt${RT_VER}
+BUILD_DEPENDS+=	${LOCALBASE}/bin/rt:www/rt${RT_VER}
+RUN_DEPENDS+=	${LOCALBASE}/bin/rt:www/rt${RT_VER}
 
 MAN3PREFIX=	${PREFIX}
 
@@ -54,7 +54,7 @@ PLIST_SUB+=	RTHOME=share/rt${RT_VER}
 do-configure:
 	@cd ${CONFIGURE_WRKSRC} && \
 	    unset PREFIX && \
-	    ${SETENV} ${CONFIGURE_ENV} ${PERL5} -I${SITE_PERL} ./${CONFIGURE_SCRIPT} && \
+	    ${SETENV} ${CONFIGURE_ENV} ${PERL5} -I${SITE_PERL} ${CONFIGURE_CMD} && \
 	    ${PERL5} -pi -e 's/ doc_(perl|site|\$$\(INSTALLDIRS\))_install$$//;' Makefile
 
 post-configure:

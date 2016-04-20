@@ -25,7 +25,6 @@
     SUBDIR += beansdb
     SUBDIR += buzhug
     SUBDIR += c3p0
-    SUBDIR += cassandra
     SUBDIR += cassandra-cpp-driver
     SUBDIR += cassandra2
     SUBDIR += casstcl
@@ -250,6 +249,7 @@
     SUBDIR += p5-AnyEvent-DBD-Pg
     SUBDIR += p5-AnyEvent-Memcached
     SUBDIR += p5-AnyEvent-Redis
+    SUBDIR += p5-App-Sqitch
     SUBDIR += p5-AsciiDB-TagFile
     SUBDIR += p5-BDB
     SUBDIR += p5-BSON
@@ -538,6 +538,7 @@
     SUBDIR += pecl-memcache
     SUBDIR += pecl-memcached
     SUBDIR += pecl-mongo
+    SUBDIR += pecl-mongodb
     SUBDIR += pecl-mysqlnd_ms
     SUBDIR += pecl-mysqlnd_qc
     SUBDIR += pecl-pdo_user
@@ -549,6 +550,7 @@
     SUBDIR += percona56-client
     SUBDIR += percona56-server
     SUBDIR += pg_activity
+    SUBDIR += pg_citus
     SUBDIR += pg_reorg
     SUBDIR += pg_rman
     SUBDIR += pg_statsinfo
@@ -702,6 +704,8 @@
     SUBDIR += proftpd-mod_sql_tds
     SUBDIR += puppetdb
     SUBDIR += puppetdb-terminus
+    SUBDIR += puppetdb-terminus4
+    SUBDIR += puppetdb4
     SUBDIR += pure-sql3
     SUBDIR += puredb
     SUBDIR += pxlib
@@ -736,6 +740,7 @@
     SUBDIR += py-htsql-pgsql
     SUBDIR += py-kyotocabinet
     SUBDIR += py-leveldb
+    SUBDIR += py-motor
     SUBDIR += py-mycli
     SUBDIR += py-mysql-connector-python
     SUBDIR += py-mysql-connector-python2
@@ -768,6 +773,7 @@
     SUBDIR += py-qt4-sql
     SUBDIR += py-qt5-sql
     SUBDIR += py-queries
+    SUBDIR += py-rb
     SUBDIR += py-redis
     SUBDIR += py-riak
     SUBDIR += py-rrdtool_lgpl
@@ -796,6 +802,7 @@
     SUBDIR += py35-sqlite3
     SUBDIR += pydbx
     SUBDIR += pymongo
+    SUBDIR += pymongo28
     SUBDIR += pypy-gdbm
     SUBDIR += pypy-sqlite3
     SUBDIR += pyspatialite
@@ -816,6 +823,7 @@
     SUBDIR += qt5-sqldrivers-pgsql
     SUBDIR += qt5-sqldrivers-sqlite2
     SUBDIR += qt5-sqldrivers-sqlite3
+    SUBDIR += qt5-sqldrivers-tds
     SUBDIR += rdb
     SUBDIR += rdfdb
     SUBDIR += recutils
@@ -842,16 +850,13 @@
     SUBDIR += ruby-tokyocabinet
     SUBDIR += rubygem-activemodel
     SUBDIR += rubygem-activemodel4
-    SUBDIR += rubygem-activemodel41
     SUBDIR += rubygem-activerecord
     SUBDIR += rubygem-activerecord-jdbc-adapter
     SUBDIR += rubygem-activerecord-jdbcmysql-adapter
     SUBDIR += rubygem-activerecord-mysql-adapter
     SUBDIR += rubygem-activerecord-session_store
     SUBDIR += rubygem-activerecord4
-    SUBDIR += rubygem-activerecord41
     SUBDIR += rubygem-after_commit_queue
-    SUBDIR += rubygem-after_commit_queue-rails41
     SUBDIR += rubygem-amalgalite
     SUBDIR += rubygem-arel
     SUBDIR += rubygem-arel-helpers
@@ -904,7 +909,6 @@
     SUBDIR += rubygem-mysql2
     SUBDIR += rubygem-openid-redis-store
     SUBDIR += rubygem-paranoia
-    SUBDIR += rubygem-paranoia-rails41
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-rbase
     SUBDIR += rubygem-redis
@@ -948,6 +952,7 @@
     SUBDIR += tarantool
     SUBDIR += tarantool-c
     SUBDIR += tcl-Mysql
+    SUBDIR += tcl-lmdb
     SUBDIR += tcl-sqlite3
     SUBDIR += tdb
     SUBDIR += tdbc

@@ -150,6 +150,7 @@
     SUBDIR += cloop-utils
     SUBDIR += cloudabi-utils
     SUBDIR += clsync
+    SUBDIR += cluster-glue
     SUBDIR += cmdwatch
     SUBDIR += cmockery2
     SUBDIR += cmogstored
@@ -222,6 +223,7 @@
     SUBDIR += dolly
     SUBDIR += downtime
     SUBDIR += downtimed
+    SUBDIR += dsbbatmon
     SUBDIR += dsbdriverd
     SUBDIR += dsbmc
     SUBDIR += dsbmd
@@ -250,6 +252,7 @@
     SUBDIR += entr
     SUBDIR += env4801
     SUBDIR += envconsul
+    SUBDIR += epazote
     SUBDIR += etcmerge
     SUBDIR += etcupdate
     SUBDIR += eventlog
@@ -405,6 +408,7 @@
     SUBDIR += heartbeat
     SUBDIR += heirloom
     SUBDIR += hextools
+    SUBDIR += hfm
     SUBDIR += hfsexplorer
     SUBDIR += hfsutils
     SUBDIR += hidesvn
@@ -429,6 +433,7 @@
     SUBDIR += iat
     SUBDIR += inotify-tools
     SUBDIR += installwatch
+    SUBDIR += intel-nvmupdate
     SUBDIR += intel-pcm
     SUBDIR += iocage
     SUBDIR += iocage-devel
@@ -541,8 +546,17 @@
     SUBDIR += mbgtools
     SUBDIR += mcelog
     SUBDIR += mcollective
+    SUBDIR += mcollective-actionpolicy-auth
+    SUBDIR += mcollective-nettest-agent
+    SUBDIR += mcollective-nettest-client
+    SUBDIR += mcollective-nettest-common
     SUBDIR += mcollective-nrpe-agent
     SUBDIR += mcollective-puppet-agent
+    SUBDIR += mcollective-puppet-client
+    SUBDIR += mcollective-puppet-common
+    SUBDIR += mcollective-service-agent
+    SUBDIR += mcollective-service-client
+    SUBDIR += mcollective-service-common
     SUBDIR += mcollective-shell-agent
     SUBDIR += mcollective-shell-client
     SUBDIR += mcron
@@ -618,6 +632,7 @@
     SUBDIR += ods2
     SUBDIR += ohmu
     SUBDIR += open
+    SUBDIR += openhpi
     SUBDIR += openipmi
     SUBDIR += openupsd
     SUBDIR += ori
@@ -699,6 +714,7 @@
     SUBDIR += paicc
     SUBDIR += pam_mount
     SUBDIR += panicmail
+    SUBDIR += parafly
     SUBDIR += parallel
     SUBDIR += password-store
     SUBDIR += patchelf
@@ -1019,6 +1035,8 @@
     SUBDIR += syslog-ng-incubator03
     SUBDIR += syslog-ng34
     SUBDIR += syslog-ng35
+    SUBDIR += syslog-ng36
+    SUBDIR += syslog-ng37
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += system-tools-backends
@@ -1183,6 +1201,7 @@
     SUBDIR += xsysstats
     SUBDIR += xvidcap
     SUBDIR += yum
+    SUBDIR += zap
     SUBDIR += zbackup
     SUBDIR += zeitgeist
     SUBDIR += zeroer

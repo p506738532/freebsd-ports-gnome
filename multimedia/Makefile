@@ -59,6 +59,7 @@
     SUBDIR += ffmpeg0
     SUBDIR += ffmpeg2theora
     SUBDIR += ffmpegthumbnailer
+    SUBDIR += ffms2
     SUBDIR += flvmeta
     SUBDIR += flvstreamer
     SUBDIR += flvtool++
@@ -165,6 +166,7 @@
     SUBDIR += kmplayer-kde4
     SUBDIR += kodi
     SUBDIR += kplayer-kde4
+    SUBDIR += l-smash
     SUBDIR += libaacs
     SUBDIR += libass
     SUBDIR += libav
@@ -173,6 +175,7 @@
     SUBDIR += libcec
     SUBDIR += libdc1394
     SUBDIR += libdca
+    SUBDIR += libdcadec
     SUBDIR += libde265
     SUBDIR += libdv
     SUBDIR += libdvbcsa
@@ -301,6 +304,7 @@
     SUBDIR += plexmediaserver
     SUBDIR += plexmediaserver-plexpass
     SUBDIR += plexpy
+    SUBDIR += plexwatch
     SUBDIR += podcastdl
     SUBDIR += poe
     SUBDIR += ppm2fli
@@ -373,6 +377,7 @@
     SUBDIR += subtitleripper
     SUBDIR += subtools
     SUBDIR += swfdec-gnome
+    SUBDIR += syncplay
     SUBDIR += szap-s2
     SUBDIR += tcmplex-panteltje
     SUBDIR += tivodecode
@@ -388,6 +393,8 @@
     SUBDIR += v4l-utils
     SUBDIR += v4l_compat
     SUBDIR += vamps
+    SUBDIR += vapoursynth
+    SUBDIR += vapoursynth-l-smash-works
     SUBDIR += vcdgear
     SUBDIR += vcdimager
     SUBDIR += vcdpad
