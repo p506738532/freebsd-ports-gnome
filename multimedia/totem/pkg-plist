@@ -90,7 +90,6 @@ share/gtk-doc/html/totem/api-index-full.html
 share/gtk-doc/html/totem/core-api.html
 share/gtk-doc/html/totem/home.png
 share/gtk-doc/html/totem/index.html
-share/gtk-doc/html/totem/index.sgml
 share/gtk-doc/html/totem/ix02.html
 share/gtk-doc/html/totem/ix03.html
 share/gtk-doc/html/totem/ix04.html
@@ -436,6 +435,7 @@ share/locale/eu/LC_MESSAGES/totem.mo
 share/locale/fa/LC_MESSAGES/totem.mo
 share/locale/fi/LC_MESSAGES/totem.mo
 share/locale/fr/LC_MESSAGES/totem.mo
+share/locale/fur/LC_MESSAGES/totem.mo
 share/locale/ga/LC_MESSAGES/totem.mo
 share/locale/gd/LC_MESSAGES/totem.mo
 share/locale/gl/LC_MESSAGES/totem.mo

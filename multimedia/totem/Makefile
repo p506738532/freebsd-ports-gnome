@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	totem
-PORTVERSION=	3.20.0
+PORTVERSION=	3.20.1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,7 +17,6 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:misc/iso-codes \
 		itstool:textproc/itstool \
 		grilo-plugins>=0:net/grilo-plugins
 LIB_DEPENDS=	libgdata.so:devel/libgdata \
-		libdbus-glib-1.so:devel/dbus-glib \
 		libclutter-gst-3.0.so:multimedia/clutter-gst3 \
 		libclutter-gtk-1.0.so:graphics/clutter-gtk3 \
 		libpeas-1.0.so:devel/libpeas \
@@ -53,8 +52,6 @@ GLIB_SCHEMAS=	org.gnome.totem.enums.xml \
 		org.gnome.totem.plugins.opensubtitles.gschema.xml
 
 OPTIONS_DEFINE=	LIRC
-
-PLIST_SUB+=	PYVER=${PYTHON_VER:S/.//}
 
 OPTIONS_DEFAULT=
 
