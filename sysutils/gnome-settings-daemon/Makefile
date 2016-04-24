@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	3.20.0
+PORTVERSION=	3.20.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
