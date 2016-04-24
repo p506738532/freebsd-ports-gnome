@@ -2,12 +2,6 @@ bin/gnome-photos
 share/appdata/org.gnome.Photos.appdata.xml
 share/applications/org.gnome.Photos.desktop
 share/dbus-1/services/org.gnome.Photos.service
-%%DOCSDIR%%/ARTISTS
-%%DOCSDIR%%/AUTHORS
-%%DOCSDIR%%/COPYING
-%%DOCSDIR%%/ChangeLog
-%%DOCSDIR%%/NEWS
-%%DOCSDIR%%/README
 share/gnome-shell/search-providers/org.gnome.Photos.search-provider.ini
 share/help/C/gnome-photos/favorites-set.page
 share/help/C/gnome-photos/favorites.page
@@ -170,6 +164,7 @@ share/locale/te/LC_MESSAGES/gnome-photos.mo
 share/locale/tg/LC_MESSAGES/gnome-photos.mo
 share/locale/tr/LC_MESSAGES/gnome-photos.mo
 share/locale/uk/LC_MESSAGES/gnome-photos.mo
+share/locale/vi/LC_MESSAGES/gnome-photos.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-photos.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-photos.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-photos.mo

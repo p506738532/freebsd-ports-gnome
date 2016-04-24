@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-photos
-PORTVERSION=	3.20.0
+PORTVERSION=	3.20.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -31,8 +31,7 @@ USE_GNOME=	gnomedesktop3 gtk30 intlhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-CPPFLAGS+=	-Wno-error=format-nonliteral
-CFLAGS=		-Wno-error=format-nonliteral
+PORTDOCS=	*
 
 GLIB_SCHEMAS=	org.gnome.photos.gschema.xml
 
