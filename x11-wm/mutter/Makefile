@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	mutter
-PORTVERSION=	3.20.0
+PORTVERSION=	3.20.1
 CATEGORIES=	x11-wm
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -34,8 +34,6 @@ CONFIGURE_ARGS=	--enable-compile-warnings=maximum
 INSTALL_TARGET=	install-strip
 GLIB_SCHEMAS=	org.gnome.mutter.gschema.xml \
 		org.gnome.mutter.wayland.gschema.xml
-
-PLIST_SUB=	VERSION=${PORTVERSION:R}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wcast-align||g' \
