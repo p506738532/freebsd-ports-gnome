@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-tweak-tool
-PORTVERSION=	3.20.0
+PORTVERSION=	3.20.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -14,8 +14,10 @@ RUN_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 
 PORTSCOUT=	limitw:1,even
 
+NO_ARCH=	yes
 USES=		gettext gmake gnome localbase pathfix pkgconfig \
-		python:2 tar:xz
+		python:2.7 shebangfix tar:xz
+SHEBANG_FILES=	gnome-tweak-tool
 USE_GNOME=	gtk30 pygobject3 intlhack
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
