@@ -6,7 +6,9 @@ share/dbus-1/services/org.gnome.taquin.service
 %%DATADIR%%/sounds/gameover.ogg
 %%DATADIR%%/sounds/sliding-1.ogg
 %%DATADIR%%/sounds/sliding-n.ogg
+%%DATADIR%%/themes/cats/1-Cat_face_day.jpg
 %%DATADIR%%/themes/cats/1-Jasmina.jpg
+%%DATADIR%%/themes/cats/1-Tortoiseshell.jpg
 %%DATADIR%%/themes/cats/1-maine.jpg
 %%DATADIR%%/themes/cats/1-march.jpg
 %%DATADIR%%/themes/numbers/3-numbers.png
