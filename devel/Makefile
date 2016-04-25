@@ -26,6 +26,7 @@
     SUBDIR += R-cran-gbm
     SUBDIR += R-cran-gdata
     SUBDIR += R-cran-glmnet
+    SUBDIR += R-cran-gmodels
     SUBDIR += R-cran-gsubfn
     SUBDIR += R-cran-gtools
     SUBDIR += R-cran-iterators
@@ -269,6 +270,7 @@
     SUBDIR += clinfo
     SUBDIR += clisp-hyperspec
     SUBDIR += clojure-cider
+    SUBDIR += cloudabi
     SUBDIR += cloudabi-binutils-aarch64
     SUBDIR += cloudabi-binutils-x86_64
     SUBDIR += cloudabi-toolchain
@@ -290,7 +292,6 @@
     SUBDIR += commit-patch
     SUBDIR += commoncpp
     SUBDIR += compiler-rt
-    SUBDIR += compiler-rt-devel
     SUBDIR += compiz-bcop
     SUBDIR += concurrencykit
     SUBDIR += configkit
@@ -455,6 +456,7 @@
     SUBDIR += elixir-inflex
     SUBDIR += elixir-lager_logger
     SUBDIR += elixir-msgpax
+    SUBDIR += elixir-nadia
     SUBDIR += elixir-paratize
     SUBDIR += elixir-plug
     SUBDIR += elixir-poison
@@ -462,7 +464,6 @@
     SUBDIR += elixir-red_black_tree
     SUBDIR += elixir-sorted_set
     SUBDIR += elixir-timex
-    SUBDIR += elixir-timex-interval
     SUBDIR += elixir-tzdata
     SUBDIR += embb
     SUBDIR += epl.el
@@ -740,6 +741,7 @@
     SUBDIR += goprotobuf
     SUBDIR += gorm
     SUBDIR += gperf
+    SUBDIR += gpm
     SUBDIR += gprbuild
     SUBDIR += gps
     SUBDIR += gpsim
@@ -764,6 +766,7 @@
     SUBDIR += guiloader-c++
     SUBDIR += gumbo
     SUBDIR += gvfs
+    SUBDIR += gvp
     SUBDIR += gwenhywfar
     SUBDIR += gwenhywfar-fox16
     SUBDIR += gwenhywfar-gtk2
@@ -1253,7 +1256,6 @@
     SUBDIR += libmaa
     SUBDIR += libmatheval
     SUBDIR += libmba
-    SUBDIR += libmcs
     SUBDIR += libmill
     SUBDIR += libmimedir
     SUBDIR += libmonetra
@@ -1480,6 +1482,7 @@
     SUBDIR += maven33
     SUBDIR += mcpp
     SUBDIR += mdds
+    SUBDIR += mdds0
     SUBDIR += memcheck
     SUBDIR += menhir
     SUBDIR += mercator
@@ -2003,6 +2006,7 @@
     SUBDIR += p5-Data-ObjectDriver
     SUBDIR += p5-Data-OptList
     SUBDIR += p5-Data-Page-NoTotalEntries
+    SUBDIR += p5-Data-Page-Pageset
     SUBDIR += p5-Data-ParseBinary
     SUBDIR += p5-Data-Path
     SUBDIR += p5-Data-Peek
@@ -3274,6 +3278,7 @@
     SUBDIR += p5-Test-Reporter
     SUBDIR += p5-Test-Reporter-Transport-Metabase
     SUBDIR += p5-Test-Requires
+    SUBDIR += p5-Test-Requires-Git
     SUBDIR += p5-Test-RequiresInternet
     SUBDIR += p5-Test-Script
     SUBDIR += p5-Test-Script-Run
@@ -3283,7 +3288,6 @@
     SUBDIR += p5-Test-Singleton
     SUBDIR += p5-Test-Spec
     SUBDIR += p5-Test-Spelling
-    SUBDIR += p5-Test-Stream
     SUBDIR += p5-Test-Strict
     SUBDIR += p5-Test-SubCalls
     SUBDIR += p5-Test-Synopsis
@@ -3374,6 +3378,7 @@
     SUBDIR += p5-Time-Mock
     SUBDIR += p5-Time-Object
     SUBDIR += p5-Time-Out
+    SUBDIR += p5-Time-ParseDate
     SUBDIR += p5-Time-Period
     SUBDIR += p5-Time-Piece
     SUBDIR += p5-Time-Piece-Range
@@ -3732,9 +3737,11 @@
     SUBDIR += pecl-params
     SUBDIR += pecl-parsekit
     SUBDIR += pecl-propro
+    SUBDIR += pecl-propro2
     SUBDIR += pecl-pthreads
     SUBDIR += pecl-qb
     SUBDIR += pecl-raphf
+    SUBDIR += pecl-raphf2
     SUBDIR += pecl-runkit
     SUBDIR += pecl-scream
     SUBDIR += pecl-shape
@@ -4042,6 +4049,7 @@
     SUBDIR += py-dirspec
     SUBDIR += py-distorm
     SUBDIR += py-django-rq
+    SUBDIR += py-django-rq-dashboard
     SUBDIR += py-django-tastypie-mongoengine
     SUBDIR += py-django16-tastypie-mongoengine
     SUBDIR += py-docker-py
@@ -4299,8 +4307,8 @@
     SUBDIR += py-pyrfc3339
     SUBDIR += py-pyro
     SUBDIR += py-pyshapelib
-    SUBDIR += py-pytemplate
     SUBDIR += py-pyte
+    SUBDIR += py-pytemplate
     SUBDIR += py-pytest
     SUBDIR += py-pytest-cache
     SUBDIR += py-pytest-capturelog
@@ -4398,6 +4406,7 @@
     SUBDIR += py-sh
     SUBDIR += py-shapely
     SUBDIR += py-should_dsl
+    SUBDIR += py-simpleeval
     SUBDIR += py-simplegeneric
     SUBDIR += py-simplejson
     SUBDIR += py-simpleparse
@@ -4530,6 +4539,7 @@
     SUBDIR += py-zope.app.dependable
     SUBDIR += py-zope.app.error
     SUBDIR += py-zope.app.exception
+    SUBDIR += py-zope.app.file
     SUBDIR += py-zope.app.folder
     SUBDIR += py-zope.app.form
     SUBDIR += py-zope.app.generations
@@ -4761,6 +4771,7 @@
     SUBDIR += rubygem-apipie-bindings
     SUBDIR += rubygem-apipie-params
     SUBDIR += rubygem-app_config
+    SUBDIR += rubygem-arr-pm
     SUBDIR += rubygem-arrayfields
     SUBDIR += rubygem-ascii85
     SUBDIR += rubygem-asetus
@@ -4798,6 +4809,7 @@
     SUBDIR += rubygem-builder
     SUBDIR += rubygem-builder32
     SUBDIR += rubygem-byebug
+    SUBDIR += rubygem-cabin
     SUBDIR += rubygem-caesars
     SUBDIR += rubygem-cairo-gobject
     SUBDIR += rubygem-capybara
@@ -4833,6 +4845,7 @@
     SUBDIR += rubygem-configstruct
     SUBDIR += rubygem-configuration
     SUBDIR += rubygem-cool.io
+    SUBDIR += rubygem-corefines
     SUBDIR += rubygem-crack
     SUBDIR += rubygem-cri
     SUBDIR += rubygem-cucumber
@@ -4862,7 +4875,6 @@
     SUBDIR += rubygem-directory_watcher
     SUBDIR += rubygem-ditz
     SUBDIR += rubygem-docile
-    SUBDIR += rubygem-dotenv-deployment
     SUBDIR += rubygem-drydock
     SUBDIR += rubygem-dynflow
     SUBDIR += rubygem-edavis10-object_daddy
@@ -5238,6 +5250,7 @@
     SUBDIR += sigslot
     SUBDIR += silc-toolkit
     SUBDIR += silentbob
+    SUBDIR += simavr
     SUBDIR += simgear
     SUBDIR += simian
     SUBDIR += simple_components
@@ -5361,6 +5374,7 @@
     SUBDIR += ua_parser-core
     SUBDIR += uatraits
     SUBDIR += uboot-mkimage
+    SUBDIR += uclcmd
     SUBDIR += uclmmbase
     SUBDIR += ucommon
     SUBDIR += ucpp
@@ -5386,6 +5400,7 @@
     SUBDIR += violet
     SUBDIR += visualparadigm
     SUBDIR += vstr
+    SUBDIR += vtable-dumper
     SUBDIR += vtcl
     SUBDIR += vxlog
     SUBDIR += wand-libconfig
@@ -5423,6 +5438,7 @@
     SUBDIR += z80-asm
     SUBDIR += z80asm
     SUBDIR += z80ex
+    SUBDIR += zeal
     SUBDIR += zookeeper
     SUBDIR += zpu-binutils
     SUBDIR += zpu-gcc

@@ -293,6 +293,19 @@
     SUBDIR += opensmtpd
     SUBDIR += opensmtpd-devel
     SUBDIR += opensmtpd-extras
+    SUBDIR += opensmtpd-extras-filter-clamav
+    SUBDIR += opensmtpd-extras-filter-dkim
+    SUBDIR += opensmtpd-extras-filter-dnsbl
+    SUBDIR += opensmtpd-extras-filter-pause
+    SUBDIR += opensmtpd-extras-filter-regex
+    SUBDIR += opensmtpd-extras-filter-spamassassin
+    SUBDIR += opensmtpd-extras-table-mysql
+    SUBDIR += opensmtpd-extras-table-passwd
+    SUBDIR += opensmtpd-extras-table-postgresql
+    SUBDIR += opensmtpd-extras-table-python
+    SUBDIR += opensmtpd-extras-table-redis
+    SUBDIR += opensmtpd-extras-table-socketmap
+    SUBDIR += opensmtpd-extras-table-sqlite
     SUBDIR += openwebmail
     SUBDIR += osbf-lua
     SUBDIR += ovs
@@ -573,6 +586,7 @@
     SUBDIR += roundcube
     SUBDIR += roundcube-air
     SUBDIR += roundcube-automatic_addressbook
+    SUBDIR += roundcube-carddav
     SUBDIR += roundcube-contextmenu
     SUBDIR += roundcube-groupvice
     SUBDIR += roundcube-html5_notifier
@@ -603,6 +617,8 @@
     SUBDIR += rubygem-mailboxer
     SUBDIR += rubygem-mailfactory
     SUBDIR += rubygem-pony
+    SUBDIR += rubygem-premailer
+    SUBDIR += rubygem-premailer-rails
     SUBDIR += rubygem-rmail
     SUBDIR += rubygem-roadie
     SUBDIR += rubygem-roadie-rails

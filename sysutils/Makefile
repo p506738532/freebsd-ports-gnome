@@ -433,6 +433,7 @@
     SUBDIR += iat
     SUBDIR += inotify-tools
     SUBDIR += installwatch
+    SUBDIR += intel-nvmupdate
     SUBDIR += intel-pcm
     SUBDIR += iocage
     SUBDIR += iocage-devel
@@ -551,6 +552,8 @@
     SUBDIR += mcollective-nettest-common
     SUBDIR += mcollective-nrpe-agent
     SUBDIR += mcollective-puppet-agent
+    SUBDIR += mcollective-puppet-client
+    SUBDIR += mcollective-puppet-common
     SUBDIR += mcollective-service-agent
     SUBDIR += mcollective-service-client
     SUBDIR += mcollective-service-common
@@ -1014,7 +1017,6 @@
     SUBDIR += stow
     SUBDIR += stowES
     SUBDIR += stress
-    SUBDIR += su2
     SUBDIR += superiotool
     SUBDIR += swapd
     SUBDIR += swapexd
@@ -1198,6 +1200,7 @@
     SUBDIR += xsysstats
     SUBDIR += xvidcap
     SUBDIR += yum
+    SUBDIR += zap
     SUBDIR += zbackup
     SUBDIR += zeitgeist
     SUBDIR += zeroer
