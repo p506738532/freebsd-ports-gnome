@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-terminal
-PORTVERSION=	3.20.0
+PORTVERSION=	3.20.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -14,8 +14,7 @@ BUILD_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas \
 		itstool:textproc/itstool \
 		appstream-builder:devel/appstream-glib \
 		vala:lang/vala
-LIB_DEPENDS=	libstartup-notification-1.so:x11/startup-notification \
-		libuuid.so:misc/e2fsprogs-libuuid
+LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 
 PORTSCOUT=	limitw:1,even
@@ -54,7 +53,7 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-src_terminal-screen.c
 .endif
 
 post-install:
-.for i in ca cs de el es fi fr gl hu pt_BR ru
+.for i in ca cs de el es fi fr gl
 	@${RMDIR} ${STAGEDIR}${PREFIX}/share/help/${i}/gnome-terminal/figures
 .endfor
 
