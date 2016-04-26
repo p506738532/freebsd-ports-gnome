@@ -225,6 +225,12 @@ etc/xdg/autostart/orca-autostart.desktop
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/Mozilla/__pycache__/script.cpython-%%PYVER%%.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/Mozilla/__pycache__/script.cpython-%%PYVER%%.%%PYOEXTENSION%%
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/Mozilla/script.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/SeaMonkey/__init__.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/SeaMonkey/__pycache__/__init__.cpython-%%PYVER%%.%%PYOEXTENSION%%
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/SeaMonkey/__pycache__/__init__.cpython-%%PYVER%%.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/SeaMonkey/__pycache__/script.cpython-%%PYVER%%.%%PYOEXTENSION%%
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/SeaMonkey/__pycache__/script.cpython-%%PYVER%%.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/SeaMonkey/script.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/Thunderbird/__init__.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/Thunderbird/__pycache__/__init__.cpython-%%PYVER%%.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/Thunderbird/__pycache__/__init__.cpython-%%PYVER%%.%%PYOEXTENSION%%

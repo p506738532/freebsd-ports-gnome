@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	orca
-PORTVERSION=	3.20.0
+PORTVERSION=	3.20.1
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,6 +26,7 @@ RUN_DEPENDS=	py3?-dbus>=0:devel/py3-dbus \
 CONFLICTS=	py*-json-py-[0-9]*
 PORTSCOUT=	limitw:1,even
 
+NO_ARCH=	yes
 USES=		gettext gmake gnome localbase pathfix pkgconfig \
 		python:3 tar:xz
 USE_GNOME=	gtk30 py3gobject3 intlhack
