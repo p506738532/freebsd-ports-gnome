@@ -174,7 +174,6 @@
     SUBDIR += exrtools
     SUBDIR += farbfeld
     SUBDIR += feh
-    SUBDIR += ffff
     SUBDIR += fig2sxd
     SUBDIR += figurine
     SUBDIR += flam3
@@ -412,7 +411,7 @@
     SUBDIR += kipi-plugin-flashexport
     SUBDIR += kipi-plugin-flickrexport
     SUBDIR += kipi-plugin-galleryexport
-    SUBDIR += kipi-plugin-googledrive
+    SUBDIR += kipi-plugin-googleservices
     SUBDIR += kipi-plugin-gpssync
     SUBDIR += kipi-plugin-htmlexport
     SUBDIR += kipi-plugin-imageshackexport
@@ -428,7 +427,6 @@
     SUBDIR += kipi-plugin-metadataedit
     SUBDIR += kipi-plugin-panorama
     SUBDIR += kipi-plugin-photolayoutseditor
-    SUBDIR += kipi-plugin-picasawebexport
     SUBDIR += kipi-plugin-piwigoexport
     SUBDIR += kipi-plugin-printimages
     SUBDIR += kipi-plugin-rajceexport
@@ -1032,6 +1030,7 @@
     SUBDIR += uniconvw
     SUBDIR += unpaper
     SUBDIR += urt
+    SUBDIR += vapoursynth-waifu2x-w2xc
     SUBDIR += variety
     SUBDIR += vcg
     SUBDIR += viewnior
