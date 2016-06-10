@@ -1,9 +1,9 @@
 # $FreeBSD$
 
 PORTNAME=	jenkins2
-DISTVERSION=	2.0-rc1
+DISTVERSION=	2.3
 CATEGORIES=	devel java
-MASTER_SITES=	http://mirrors.jenkins-ci.org/war-rc/${PORTVERSION:R}/
+MASTER_SITES=	http://mirrors.jenkins-ci.org/war/${PORTVERSION}/
 DISTNAME=	jenkins
 EXTRACT_SUFX=	.war
 DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
@@ -13,6 +13,9 @@ MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Open-source continuous integration server
 
 LICENSE=	MIT
+
+DEPRECATED=		Use devel/jenkins
+EXPIRATION_DATE=	2016-06-30
 
 CONFLICTS=	jenkins-[0-9]* jenkins-lts-[0-9]*
 

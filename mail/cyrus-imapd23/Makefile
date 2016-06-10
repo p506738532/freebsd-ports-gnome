@@ -48,7 +48,7 @@ OPTIONS_DEFAULT=	BDB
 OPTIONS_SUB=		yes
 AUTOCREATE_DESC=	Use autocreate INBOX patch (UoA)
 AUTOSIEVE_DESC=		Use autosievefolder patch (UoA)
-BDB_USE=		BDB=yes
+BDB_USES=		bdb
 BDB_CONFIGURE_ON=	--with-bdb-incdir=${BDB_INCLUDE_DIR} \
 			--with-bdb-libdir=${LOCALBASE}/lib
 DRAC_DESC=		Enable DRAC support
@@ -64,7 +64,7 @@ LISTEXT_CONFIGURE_ENABLE=listext
 MURDER_DESC=		Enable IMAP Murder support
 MURDER_CONFIGURE_ENABLE=murder
 MURDER_MAKE_ENV=	PTHREAD_LIBS="-lpthread"
-MYSQL_USE=		MYSQL=yes
+MYSQL_USES=		mysql
 MYSQL_CONFIGURE_ON=	--with-mysql=yes \
 			--with-mysql-libdir=${LOCALBASE}/lib/mysql \
 			--with-mysql-incdir=${LOCALBASE}/include/mysql
@@ -82,7 +82,7 @@ SNMP_5_LIB_DEPENDS=	libnetsnmp.so:net-mgmt/net-snmp
 SNMP_5_CONFIGURE_ON=	--with-snmp=${LOCALBASE}
 SNMP_5_CONFIGURE_OFF=	--with-snmp=no
 SQLITE_DESC=		Enable SQLite backend (experimental)
-SQLITE_USE=		SQLITE=yes
+SQLITE_USES=		sqlite
 SQLITE_CONFIGURE_ON=	--with-sqlite=${LOCALBASE}
 
 # Autocreate Inbox and Autosieve patches from UoA

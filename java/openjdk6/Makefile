@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	openjdk6
-PORTVERSION=	b38
+PORTVERSION=	b39
 PORTEPOCH=	1
 CATEGORIES=	java devel
 MASTER_SITES=	APACHE/ant/binaries/:ant \
@@ -27,10 +27,10 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2
 RUN_DEPENDS=	javavm:java/javavmwrapper \
 		dejavu>0:x11-fonts/dejavu
 
-OPENJDK_BUILDDATE=	20_jan_2016
+OPENJDK_BUILDDATE=	03_may_2016
 
 OPTIONS_DEFINE=	ICEDTEA IPV6 POLICY SOUND TZUPDATE
-OPTIONS_DEFAULT=ICEDTEA IPV6 TZUPDATE
+OPTIONS_DEFAULT=ICEDTEA TZUPDATE
 ICEDTEA_DESC=	Apply additional patches from IcedTea
 POLICY_DESC=	Install the Unlimited Strength Policy Files
 SOUND_DESC=	Enable sound support

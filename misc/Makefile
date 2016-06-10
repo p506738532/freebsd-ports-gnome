@@ -65,7 +65,6 @@
     SUBDIR += dejagnu
     SUBDIR += delay
     SUBDIR += detachtty
-    SUBDIR += diary-hercules
     SUBDIR += diction
     SUBDIR += digitemp
     SUBDIR += display
@@ -232,7 +231,6 @@
     SUBDIR += kde4-l10n-wa
     SUBDIR += kde4-xdg-env
     SUBDIR += kdeedu4
-    SUBDIR += kdehier4
     SUBDIR += kdeutils4
     SUBDIR += kenny
     SUBDIR += kgeography
@@ -276,6 +274,7 @@
     SUBDIR += mtx
     SUBDIR += najitool
     SUBDIR += newer
+    SUBDIR += nms
     SUBDIR += nsf
     SUBDIR += numchar
     SUBDIR += nut
@@ -394,6 +393,8 @@
     SUBDIR += qt4-l10n
     SUBDIR += qt4-qtconfig
     SUBDIR += qt4-qtdemo
+    SUBDIR += qt5-doc
+    SUBDIR += qt5-examples
     SUBDIR += qt5-l10n
     SUBDIR += qt5ct
     SUBDIR += quotes
@@ -415,6 +416,7 @@
     SUBDIR += rubygem-vpim
     SUBDIR += rump
     SUBDIR += saaghar
+    SUBDIR += sent
     SUBDIR += seq2
     SUBDIR += shared-mime-info
     SUBDIR += shc

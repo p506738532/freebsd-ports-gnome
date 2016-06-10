@@ -2,16 +2,13 @@
 # pkg-help formatted with fmt 59 63
 
 PORTNAME=	bind
-PORTVERSION=	${ISCVERSION:S/-P/P/}
-PORTREVISION=	0
+PORTVERSION=	${ISCVERSION:S/-P/P/:S/b/.b/}
+PORTREVISION=	1
 CATEGORIES=	dns net ipv6
 MASTER_SITES=	LOCAL/mat/bind
-#MASTER_SITES=	https://source.isc.org/cgi-bin/gitweb.cgi?p=bind9.git;a=snapshot;h=${HASH};sf=tgz;f=
+#MASTER_SITES=	https://source.isc.org/cgi-bin/gitweb.cgi?p=bind9.git;a=snapshot;h=${HASH};sf=tgz;/
 PKGNAMESUFFIX=	9-devel
 DISTNAME=	${PORTNAME}9-${HASH}
-
-# Force the filename when fetched from the ISC gitweb.
-FETCH_BEFORE_ARGS=	-o ${DISTFILES}
 
 MAINTAINER=	mat@FreeBSD.org
 COMMENT=	BIND DNS suite with updated DNSSEC and DNS64
@@ -19,8 +16,8 @@ COMMENT=	BIND DNS suite with updated DNSSEC and DNS64
 LICENSE=	ISCL
 
 # ISC releases things like 9.8.0-P1, which our versioning doesn't like
-ISCVERSION=	9.11.0.a20160408
-HASH=		7f79448
+ISCVERSION=	9.11.0.a20160604
+HASH=		e211ffb
 
 MAKE_JOBS_UNSAFE=	yes
 
@@ -40,6 +37,7 @@ CONFIGURE_ARGS+=	--localstatedir=/var --disable-linux-caps \
 		--with-randomdev=/dev/random \
 		--with-libxml2=${LOCALBASE} \
 		--with-readline=-ledit \
+		--with-dlopen=yes \
 		--sysconfdir=${ETCDIR}
 ETCDIR=		${PREFIX}/etc/namedb
 
@@ -47,7 +45,7 @@ CONFLICTS+=	bind9*-9.[456789].* bind9*-sdb-9.[456789].*
 
 SUB_FILES=	pkg-message
 
-OPTIONS_DEFAULT=	IPV6 SSL THREADS SIGCHASE IDN GSSAPI_NONE
+OPTIONS_DEFAULT=	SSL THREADS SIGCHASE IDN GSSAPI_NONE DLZ_FILESYSTEM
 OPTIONS_DEFINE=		IDN LARGE_FILE PYTHON START_LATE \
 			FIXED_RRSET SIGCHASE IPV6 THREADS FILTER_AAAA
 OPTIONS_RADIO=	CRYPTO GOSTDEF
@@ -130,8 +128,10 @@ GEOIP_LIB_DEPENDS=	libGeoIP.so:net/GeoIP
 GOST_CONFIGURE_ON=	--with-gost
 GOST_ASN1_CONFIGURE_ON=	--with-gost=asn1
 
-PYTHON_CONFIGURE_WITH=	python
+PYTHON_CONFIGURE_WITH=	python=${PYTHON_CMD}
 PYTHON_USES=	python
+PYTHON_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ply>=0:devel/py-ply
+PYTHON_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}ply>=0:devel/py-ply
 
 DLZ_POSTGRESQL_CONFIGURE_ON=	--with-dlz-postgres=yes
 DLZ_POSTGRESQL_USES=		pgsql
@@ -145,10 +145,10 @@ RPZ_NSDNAME_CONFIGURE_ENABLE=	rpz-nsdname
 RRL_CONFIGURE_ENABLE=	rrl
 
 DLZ_MYSQL_CONFIGURE_ON=	--with-dlz-mysql=yes
-DLZ_MYSQL_USE=		mysql=yes
+DLZ_MYSQL_USES=		mysql
 
 DLZ_BDB_CONFIGURE_ON=	--with-dlz-bdb=yes
-DLZ_BDB_USE=		bdb=yes
+DLZ_BDB_USES=		bdb
 
 DLZ_LDAP_CONFIGURE_ON=	--with-dlz-ldap=yes
 DLZ_LDAP_USE=		openldap=yes
@@ -261,5 +261,9 @@ post-install:
 .endif
 	${INSTALL_DATA} ${WRKSRC}/bin/rndc/rndc.conf \
 		${STAGEDIR}${ETCDIR}/rndc.conf.sample
+
+# Can't use USE_PYTHON=autoplist
+post-install-PYTHON-on:
+	@${FIND} ${STAGEDIR}${PYTHON_SITELIBDIR} -type f | ${SED} -e 's|${STAGEDIR}||' >> ${TMPPLIST}
 
 .include <bsd.port.post.mk>

@@ -1,2 +1,3 @@
-SHA256 (node-v5.10.1.tar.gz) = c6e278b612b53c240ddf85521403e55abfd8f0201d2f2c7e3d2c21383054aacd
-SIZE (node-v5.10.1.tar.gz) = 22576242
+TIMESTAMP = 1465201049
+SHA256 (node-v6.2.1.tar.gz) = fa26d4380150fbb69a48bddaec6143e176effe043cfe44e512c5ef9d22618b63
+SIZE (node-v6.2.1.tar.gz) = 25129807

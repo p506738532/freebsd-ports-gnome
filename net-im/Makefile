@@ -82,6 +82,7 @@
     SUBDIR += mu-conference
     SUBDIR += naim
     SUBDIR += openfire
+    SUBDIR += oysttyer
     SUBDIR += p5-AnyEvent-XMPP
     SUBDIR += p5-DJabberd
     SUBDIR += p5-Jabber-Connection
@@ -148,6 +149,9 @@
     SUBDIR += qxmpp
     SUBDIR += ramblercontacts
     SUBDIR += ricochet
+    SUBDIR += ring-daemon
+    SUBDIR += ring-gnome
+    SUBDIR += ring-libclient
     SUBDIR += rubygem-earthquake
     SUBDIR += rubygem-hipchat
     SUBDIR += rubygem-lita
@@ -155,7 +159,6 @@
     SUBDIR += rubygem-tinder
     SUBDIR += sayaka
     SUBDIR += sendxmpp
-    SUBDIR += sigram
     SUBDIR += skype
     SUBDIR += skype-devel
     SUBDIR += skype4

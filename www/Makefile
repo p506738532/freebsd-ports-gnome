@@ -60,6 +60,7 @@
     SUBDIR += c-icap-modules
     SUBDIR += cadaver
     SUBDIR += calamaris
+    SUBDIR += caldavzap
     SUBDIR += calendarserver
     SUBDIR += castget
     SUBDIR += caudium14
@@ -116,7 +117,6 @@
     SUBDIR += domoticz
     SUBDIR += dotclear
     SUBDIR += dotproject
-    SUBDIR += download-gemist
     SUBDIR += drood
     SUBDIR += drraw
     SUBDIR += drupal6
@@ -533,6 +533,7 @@
     SUBDIR += moodle28
     SUBDIR += moodle29
     SUBDIR += moodle30
+    SUBDIR += moodle31
     SUBDIR += mozplugger
     SUBDIR += multisort
     SUBDIR += multiwatch
@@ -557,6 +558,7 @@
     SUBDIR += node010
     SUBDIR += node012
     SUBDIR += node4
+    SUBDIR += node5
     SUBDIR += nostromo
     SUBDIR += npapi-vlc
     SUBDIR += npapi-xine
@@ -838,6 +840,7 @@
     SUBDIR += p5-Dancer-Plugin-Lexicon
     SUBDIR += p5-Dancer-Plugin-Memcached
     SUBDIR += p5-Dancer-Plugin-REST
+    SUBDIR += p5-Dancer-Plugin-RPC
     SUBDIR += p5-Dancer-Plugin-SiteMap
     SUBDIR += p5-Dancer-Plugin-ValidationClass
     SUBDIR += p5-Dancer-Session-Cookie
@@ -984,7 +987,6 @@
     SUBDIR += p5-HTTP-BrowserDetect
     SUBDIR += p5-HTTP-Cache-Transparent
     SUBDIR += p5-HTTP-CookieJar
-    SUBDIR += p5-HTTP-CookieMonster
     SUBDIR += p5-HTTP-Cookies
     SUBDIR += p5-HTTP-Cookies-Mozilla
     SUBDIR += p5-HTTP-Cookies-iCab
@@ -1044,7 +1046,6 @@
     SUBDIR += p5-LWP-Authen-OAuth
     SUBDIR += p5-LWP-Authen-Wsse
     SUBDIR += p5-LWP-ConnCache-MaxKeepAliveRequests
-    SUBDIR += p5-LWP-ConsoleLogger
     SUBDIR += p5-LWP-MediaTypes
     SUBDIR += p5-LWP-Online
     SUBDIR += p5-LWP-Protocol-PSGI
@@ -1280,7 +1281,6 @@
     SUBDIR += p5-WWW-LongURL
     SUBDIR += p5-WWW-Mechanize
     SUBDIR += p5-WWW-Mechanize-CGI
-    SUBDIR += p5-WWW-Mechanize-Cached
     SUBDIR += p5-WWW-Mechanize-DecodedContent
     SUBDIR += p5-WWW-Mechanize-FormFiller
     SUBDIR += p5-WWW-Mechanize-GZip
@@ -1564,6 +1564,7 @@
     SUBDIR += py-django-mezzanine-grappelli
     SUBDIR += py-django-mptt
     SUBDIR += py-django-openid-auth
+    SUBDIR += py-django-otp
     SUBDIR += py-django-overextends
     SUBDIR += py-django-paging
     SUBDIR += py-django-photologue
@@ -1639,6 +1640,7 @@
     SUBDIR += py-goobook
     SUBDIR += py-google
     SUBDIR += py-google-api-python-client
+    SUBDIR += py-graphite-api
     SUBDIR += py-graphite-web
     SUBDIR += py-grequests
     SUBDIR += py-gunicorn
@@ -1748,6 +1750,7 @@
     SUBDIR += py-pyramid
     SUBDIR += py-pyramid_rpc
     SUBDIR += py-pysearch
+    SUBDIR += py-pySmartDL
     SUBDIR += py-python-digitalocean
     SUBDIR += py-pywebdav
     SUBDIR += py-pywikibot
@@ -1760,6 +1763,7 @@
     SUBDIR += py-recaptcha
     SUBDIR += py-requestbuilder
     SUBDIR += py-requests
+    SUBDIR += py-requests-futures
     SUBDIR += py-requests-oauth-hook
     SUBDIR += py-requests-oauthlib
     SUBDIR += py-requests-toolbelt
@@ -1774,6 +1778,7 @@
     SUBDIR += py-scriptaculous
     SUBDIR += py-seafdav
     SUBDIR += py-seafobj
+    SUBDIR += py-searx
     SUBDIR += py-selector
     SUBDIR += py-selenium
     SUBDIR += py-slimit
@@ -1833,8 +1838,16 @@
     SUBDIR += redmine
     SUBDIR += redmine-backlogs
     SUBDIR += redmine-basecamp
+    SUBDIR += redmine-default_assign
+    SUBDIR += redmine-graphs
     SUBDIR += redmine-http-auth
+    SUBDIR += redmine-issue_templates
+    SUBDIR += redmine-knowledgebase
+    SUBDIR += redmine-qa_contact
+    SUBDIR += redmine-redcarpet_formatter
     SUBDIR += redmine-sidebar_hide
+    SUBDIR += redmine-stuff_to_do
+    SUBDIR += redmine-wiki_notes
     SUBDIR += rejik
     SUBDIR += rekonq
     SUBDIR += reportmagic
@@ -1898,6 +1911,8 @@
     SUBDIR += rubygem-eventmachine_httpserver
     SUBDIR += rubygem-faraday
     SUBDIR += rubygem-faraday_middleware
+    SUBDIR += rubygem-faye
+    SUBDIR += rubygem-faye-websocket
     SUBDIR += rubygem-fcgi
     SUBDIR += rubygem-feed-normalizer
     SUBDIR += rubygem-feedjira
@@ -2046,6 +2061,8 @@
     SUBDIR += rubygem-webmock
     SUBDIR += rubygem-webrobots
     SUBDIR += rubygem-websocket
+    SUBDIR += rubygem-websocket-driver
+    SUBDIR += rubygem-websocket-extensions
     SUBDIR += rubygem-yapra
     SUBDIR += sabredav
     SUBDIR += sahi
@@ -2076,9 +2093,9 @@
     SUBDIR += smarty3
     SUBDIR += smb_auth
     SUBDIR += snarf
-    SUBDIR += sogo
+    SUBDIR += sogo2
     SUBDIR += sogo3
-    SUBDIR += sogo-activesync
+    SUBDIR += sogo2-activesync
     SUBDIR += sogo3-activesync
     SUBDIR += spawn-fcgi
     SUBDIR += spdylay
@@ -2086,6 +2103,7 @@
     SUBDIR += spreadlogd
     SUBDIR += sqstat
     SUBDIR += squid
+    SUBDIR += squid-devel
     SUBDIR += squid_radius_auth
     SUBDIR += squidanalyzer
     SUBDIR += squidclamav
@@ -2246,6 +2264,7 @@
     SUBDIR += uzbl
     SUBDIR += validator
     SUBDIR += varnish-libvmod-header
+    SUBDIR += varnish-libvmod-maxminddb
     SUBDIR += varnish-libvmod-saintmode
     SUBDIR += varnish-nagios
     SUBDIR += varnish4
