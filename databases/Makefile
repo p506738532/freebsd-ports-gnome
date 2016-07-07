@@ -176,7 +176,9 @@
     SUBDIR += liquibase
     SUBDIR += lmdb
     SUBDIR += luadbi
+    SUBDIR += luasql-firebird
     SUBDIR += luasql-mysql
+    SUBDIR += luasql-odbc
     SUBDIR += luasql-postgres
     SUBDIR += luasql-sqlite3
     SUBDIR += mantis
@@ -210,8 +212,6 @@
     SUBDIR += mysql-proxy
     SUBDIR += mysql-q4m
     SUBDIR += mysql-udf
-    SUBDIR += mysql-udf-sys
-    SUBDIR += mysql-xql
     SUBDIR += mysql2odbc
     SUBDIR += mysql2pgsql
     SUBDIR += mysql55-client
@@ -243,7 +243,6 @@
     SUBDIR += opentsdb
     SUBDIR += oracle7-client
     SUBDIR += oracle8-client
-    SUBDIR += oracle_odbc_driver
     SUBDIR += p5-Amazon-SimpleDB
     SUBDIR += p5-Amon2-DBI
     SUBDIR += p5-AnyEvent-BDB
@@ -634,6 +633,7 @@
     SUBDIR += php70-pdo_pgsql
     SUBDIR += php70-pdo_sqlite
     SUBDIR += php70-pgsql
+    SUBDIR += php70-redis
     SUBDIR += php70-sqlite3
     SUBDIR += phpminiadmin
     SUBDIR += phpmyadmin
@@ -654,11 +654,6 @@
     SUBDIR += postgresql-relay
     SUBDIR += postgresql-repmgr
     SUBDIR += postgresql-repmgr2
-    SUBDIR += postgresql90-client
-    SUBDIR += postgresql90-pgtcl
-    SUBDIR += postgresql90-plperl
-    SUBDIR += postgresql90-plpython
-    SUBDIR += postgresql90-server
     SUBDIR += postgresql91-client
     SUBDIR += postgresql91-contrib
     SUBDIR += postgresql91-docs
@@ -699,7 +694,6 @@
     SUBDIR += postgresql95-plpython
     SUBDIR += postgresql95-pltcl
     SUBDIR += postgresql95-server
-    SUBDIR += postgresql_autodoc
     SUBDIR += powerarchitect
     SUBDIR += proftpd-mod_sql_mysql
     SUBDIR += proftpd-mod_sql_odbc
@@ -751,6 +745,7 @@
     SUBDIR += py-mysql-connector-python
     SUBDIR += py-mysql-connector-python2
     SUBDIR += py-mysql2pgsql
+    SUBDIR += py-mysqlclient
     SUBDIR += py-odbc
     SUBDIR += py-oops
     SUBDIR += py-oursql
@@ -970,6 +965,7 @@
     SUBDIR += tcl-sqlite3
     SUBDIR += tdb
     SUBDIR += tdbc
+    SUBDIR += tile38
     SUBDIR += tinycdb
     SUBDIR += tokyocabinet
     SUBDIR += tokyotyrant

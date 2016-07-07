@@ -3,6 +3,7 @@
 
     COMMENT = Java language support
 
+    SUBDIR += aparapi
     SUBDIR += avis
     SUBDIR += berkeley-db
     SUBDIR += bluej
@@ -90,6 +91,7 @@
     SUBDIR += jtiger
     SUBDIR += jump
     SUBDIR += junit
+    SUBDIR += jxgrabkey
     SUBDIR += langspec
     SUBDIR += linux-oracle-jdk18
     SUBDIR += linux-oracle-jre18

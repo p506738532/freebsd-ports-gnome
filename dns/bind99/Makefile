@@ -2,7 +2,7 @@
 # pkg-help formatted with fmt 59 63
 
 PORTNAME=	bind
-PORTVERSION=	${ISCVERSION:S/-P/P/:S/b/.b/}
+PORTVERSION=	${ISCVERSION:S/-P/P/:S/b/.b/:S/a/.a/}
 PORTREVISION=	0
 CATEGORIES=	dns net ipv6
 MASTER_SITES=	ISC/bind9/${ISCVERSION}
@@ -39,7 +39,7 @@ CONFIGURE_ARGS=	--localstatedir=/var --disable-linux-caps \
 		--sysconfdir=${ETCDIR}
 ETCDIR=		${PREFIX}/etc/namedb
 
-CONFLICTS=	bind9*-9.[45678].* bind9*-sdb-9.[45678].* bind-tools-9.*
+CONFLICTS=	bind9*-9.[45678].* bind9*-sdb-9.[45678].* bind910-* bind911-* bind-tools-9.*
 
 SUB_FILES=	pkg-message
 
@@ -191,9 +191,9 @@ PORTDOCS=	*
 
 .include <bsd.port.pre.mk>
 
-.if ( ${PORT_OPTIONS:MGOST} ) && defined(WITH_OPENSSL_BASE)
+.if ( ${PORT_OPTIONS:MGOST} ) && ${SSL_DEFAULT} == base
 BROKEN=	OpenSSL from the base system does not support GOST, add \
-	WITH_OPENSSL_PORT=yes to your /etc/make.conf and rebuild everything \
+	DEFAULT_VERSIONS+=ssl=openssl to your /etc/make.conf and rebuild everything \
 	that needs SSL.
 .endif
 
