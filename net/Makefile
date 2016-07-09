@@ -246,6 +246,7 @@
     SUBDIR += ifstat
     SUBDIR += ifstated
     SUBDIR += igmpproxy
+    SUBDIR += iipsrv
     SUBDIR += ilbc
     SUBDIR += imapproxy
     SUBDIR += intel-ixl-kmod
@@ -398,6 +399,7 @@
     SUBDIR += miredo
     SUBDIR += miruo
     SUBDIR += mlvpn
+    SUBDIR += mobile-broadband-provider-info
     SUBDIR += mono-zeroconf
     SUBDIR += mopd
     SUBDIR += morebalance
@@ -454,7 +456,6 @@
     SUBDIR += nss-pam-ldapd-sasl
     SUBDIR += nss_ldap
     SUBDIR += nsscache
-    SUBDIR += nstxd
     SUBDIR += ntimed
     SUBDIR += ntlmaps
     SUBDIR += ntop
@@ -963,6 +964,7 @@
     SUBDIR += py-libcloud
     SUBDIR += py-libdnet
     SUBDIR += py-libnet
+    SUBDIR += py-magic-wormhole
     SUBDIR += py-matrix-synapse
     SUBDIR += py-maxminddb
     SUBDIR += py-miniupnpc
@@ -989,6 +991,7 @@
     SUBDIR += py-pynsq
     SUBDIR += py-pypcap
     SUBDIR += py-pysendfile
+    SUBDIR += py-pyshark
     SUBDIR += py-pysmb
     SUBDIR += py-pysocks
     SUBDIR += py-pystun
@@ -1019,6 +1022,7 @@
     SUBDIR += py-txamqp
     SUBDIR += py-txrestapi
     SUBDIR += py-uritemplate
+    SUBDIR += py-uritemplate.py
     SUBDIR += py-urllib3
     SUBDIR += py-wolframalpha
     SUBDIR += py-xmlrpc
@@ -1238,7 +1242,6 @@
     SUBDIR += spread
     SUBDIR += spread-j
     SUBDIR += spread4
-    SUBDIR += sprinkle
     SUBDIR += sqtop
     SUBDIR += srelay
     SUBDIR += ss5

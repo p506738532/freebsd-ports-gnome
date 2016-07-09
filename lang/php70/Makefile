@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	php70
-PORTVERSION=	7.0.7
-PORTREVISION?=	0
+PORTVERSION=	7.0.8
+PORTREVISION?=	1
 CATEGORIES?=	lang devel www
 MASTER_SITES=	PHP/distributions
 DISTNAME=	php-${PORTVERSION}
@@ -15,7 +15,7 @@ LICENSE=	PHP301
 
 BROKEN_powerpc64=	Does not build
 
-USES=		tar:bzip2 cpe
+USES+=		tar:bzip2 cpe
 CPE_PRODUCT=	php
 NO_OPTIONS_SORT=yes
 .if !defined(PKGNAMESUFFIX)
@@ -83,7 +83,7 @@ CONFIGURE_ARGS+=--enable-fpm \
 .endif
 
 .if defined(PKGNAMEPREFIX)
-USE_PHP=	yes
+USES+=	php
 PHP_DEFAULT=	7.0
 IGNORE_WITH_PHP=	55 56
 USE_APACHE=	22+
@@ -169,12 +169,12 @@ post-patch:
 		${WRKSRC}/sapi/fpm/php-fpm.conf.in
 .endif
 
+# Work around issues with newer (>=2.64) autoconf
 pre-configure:
 	@${REINPLACE_CMD} -E 's:^((m4_)?divert)[(]([0-9]*)[)]:\1(600\3):' \
 		${WRKSRC}/configure.in `${FIND} ${WRKSRC} -name '*.m4'`
 	@${RM} ${WRKSRC}/configure
 	@${CAT} ${WRKSRC}/acinclude.m4 ${WRKSRC}/build/libtool.m4 > ${WRKSRC}/aclocal.m4
-
 
 .if !defined(PKGNAMEPREFIX)
 post-build:
@@ -182,6 +182,8 @@ post-build:
 	@${ECHO_CMD} "PHP_VERSION=${PORTVERSION}" >> ${WRKDIR}/php.conf
 	@${ECHO_CMD} "PHP_SAPI=${PHP_SAPI}" >> ${WRKDIR}/php.conf
 	@${ECHO_CMD} "PHP_EXT_INC=pcre spl" >> ${WRKDIR}/php.conf
+	@${ECHO_CMD} -n "PHP_EXT_DIR=" >> ${WRKDIR}/php.conf
+	@${SH} ${WRKSRC}/scripts/php-config --extension-dir | sed -ne 's,^${PREFIX}/lib/php/,,p' >> ${WRKDIR}/php.conf
 
 test: build
 	@(cd ${WRKSRC} && ${MAKE} test)
