@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell
-PORTVERSION=	3.20.1
+PORTVERSION=	3.20.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -45,7 +45,8 @@ WEBPLUGIN_NAME=	libgnome-shell-browser-plugin.so
 WEBPLUGIN_DIR=	${PREFIX}/lib/mozilla/plugins/
 WEBPLUGIN_FILES=libgnome-shell-browser-plugin.so
 CONFIGURE_ARGS+=--enable-compile-warnings=no \
-		--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
+		--disable-systemd \
+		--disable-networkmanager
 INSTALL_TARGET=	install-strip
 CPE_VENDOR=	gnome
 
