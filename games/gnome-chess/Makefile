@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-chess
-PORTVERSION=	3.20.0
+PORTVERSION=	3.20.1
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,7 +17,7 @@ PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils gettext gmake gnome \
 		localbase pkgconfig tar:xz
-USE_GNOME=	gtk30 intlhack librsvg2 libxml2:build
+USE_GNOME=	cairo gtk30 intlhack librsvg2 libxml2:build
 INSTALLS_ICONS=	yes
 USE_XORG=	x11
 USE_GL=		gl glu
