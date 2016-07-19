@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-todo
-PORTVERSION=	3.20.0
+PORTVERSION=	3.20.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -10,6 +10,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Small application to manage your personal tasks
 
+BUILD_DEPENDS=	appstream-util:devel/appstream-glib
 LIB_DEPENDS=	libpeas-1.0.so:devel/libpeas
 
 PORTSCOUT=	limitw:1,even
