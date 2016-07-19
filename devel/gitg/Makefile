@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitg
-PORTVERSION=	3.20.0
+PORTVERSION=	3.20.1
 CATEGORIES=	devel deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -13,7 +13,9 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup \
+		libenchant.so:textproc/enchant \
 		libgee-0.8.so:devel/libgee \
+		libgit2.so:devel/libgit2 \
 		libgit2-glib-1.0.so:devel/libgit2-glib \
 		libpeas-1.0.so:devel/libpeas \
 		libgtkspell3-3.so:textproc/gtkspell3 \
@@ -31,7 +33,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-silent-rules \
 		--disable-maintainer-mode \
 		--enable-compile-warnings=no
-USE_GNOME=	glib20 gtk30 gtksourceview3 intlhack introspection
+USE_GNOME=	cairo glib20 gtk30 gtksourceview3 intlhack introspection
 INSTALL_TARGET=	install-strip
 
 INSTALLS_ICONS=	yes
@@ -42,7 +44,7 @@ OPTIONS_SUB=	yes
 DEBUG_CONFIGURE_ENABLE=	debug
 NLS_USES=	gettext
 NLS_CONFIGURE_ENABLE=	nls
-PYTHON_USES=	python:3
+PYTHON_USES=	python:3.2+
 PYTHON_CONFIGURE_ENABLE=	python
 PYTHON_USE=	GNOME=py3gobject3
 PYTHON_PLIST_SUB=	PYTHON_SUFFIX=${PYTHON_SUFFIX}
