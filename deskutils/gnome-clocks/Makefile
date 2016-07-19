@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-clocks
-PORTVERSION=	3.20.0
+PORTVERSION=	3.20.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -11,7 +11,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Clocks for GNOME 3
 
 BUILD_DEPENDS=	geoclue>=0:net/geoclue \
-		itstool:textproc/itstool
+		itstool:textproc/itstool \
+		vala:lang/vala
 LIB_DEPENDS=	libcanberra-gtk3.so:audio/libcanberra-gtk3 \
 		libgeocode-glib.so:net/geocode-glib \
 		libgweather-3.so:net/libgweather
@@ -22,7 +23,7 @@ PORTSCOUT=	limitw:1,even
 USES=		gettext gmake gnome libtool localbase pathfix \
 		pkgconfig tar:xz
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomedesktop3 gsound gtk30 intlhack
+USE_GNOME=	cairo gnomedesktop3 gsound gtk30 intlhack
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 
