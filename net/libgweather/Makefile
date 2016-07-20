@@ -2,13 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	libgweather
-PORTVERSION=	3.20.0
+PORTVERSION=	3.20.1
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Library to accessing online weather informations
+COMMENT=	Library to access online weather information
 
 BUILD_DEPENDS=	vala:lang/vala
 LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup \
@@ -18,7 +18,7 @@ PORTSCOUT=	limitw:1,even
 
 USES=		gettext gmake gnome libtool localbase pathfix \
 		pkgconfig tar:xz
-USE_GNOME=	gtk30 intlhack introspection:build
+USE_GNOME=	cairo gtk30 intlhack introspection:build libxml2
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
