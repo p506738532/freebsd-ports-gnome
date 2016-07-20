@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-shell-extensions
-PORTVERSION=	3.20.0
+PORTVERSION=	3.20.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,6 +15,7 @@ RUN_DEPENDS=	gnome-shell>=3.12.0:x11/gnome-shell
 
 PORTSCOUT=	limitw:1,even
 
+NO_ARCH=	yes
 USES=		gettext gmake gnome pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 gnomedesktop3 intlhack
 USE_LDCONFIG=	yes
