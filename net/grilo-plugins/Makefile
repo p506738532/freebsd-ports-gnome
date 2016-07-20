@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	grilo-plugins
-PORTVERSION=	0.3.1
+PORTVERSION=	0.3.2
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -12,7 +12,12 @@ COMMENT=	Plugins for net/grilo
 BUILD_DEPENDS=	itstool:textproc/itstool
 LIB_DEPENDS=	libgrilo-0.3.so:net/grilo \
 		libavahi-gobject.so:net/avahi-app \
-		libgdata.so:devel/libgdata
+		libgdata.so:devel/libgdata \
+		liboauth.so:net/liboauth \
+		libgoa-1.0.so:net/gnome-online-accounts \
+		libtotem-plparser.so:multimedia/totem-pl-parser \
+		libgmime-2.6.so:mail/gmime26 \
+		libjson-glib-1.0.so:devel/json-glib
 
 USES=		gettext gmake gnome libtool libtool pathfix \
 		pkgconfig tar:xz
@@ -27,8 +32,8 @@ CONFIGURE_ARGS=	--enable-youtube \
 INSTALL_TARGET=	install-strip
 
 OPTIONS_SUB=			yes
-OPTIONS_DEFINE=                 TRACKER DLEYNA DMAP METADATA
-OPTIONS_DEFAULT=                TRACKER METADATA
+OPTIONS_DEFINE=			TRACKER DLEYNA DMAP METADATA
+OPTIONS_DEFAULT=		TRACKER METADATA
 
 TRACKER_DESC=			Tracker support for grilo (used by gnome-music and possibly others)
 TRACKER_CONFIGURE_ENABLE=	tracker
