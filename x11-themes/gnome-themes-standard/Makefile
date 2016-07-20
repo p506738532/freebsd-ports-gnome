@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-themes-standard
-PORTVERSION=	3.20
+PORTVERSION=	3.20.2
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,8 +13,11 @@ COMMENT=	Standard themes for GNOME
 CONFLICTS=	gnome-themes-2.[0-9]*
 PORTSCOUT=	limitw:1,even
 
+LIB_DEPENDS=	libfreetype.so:print/freetype2 \
+		libfontconfig.so:x11-fonts/fontconfig
+
 USES=		gettext-tools gmake gnome libtool pathfix pkgconfig tar:xz
-USE_GNOME=	gtk20 gtk30 intlhack librsvg2
+USE_GNOME=	cairo gtk20 gtk30 intlhack librsvg2
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
