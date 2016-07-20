@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-weather
-PORTVERSION=	3.20.0
+PORTVERSION=	3.20.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,6 +17,7 @@ LIB_DEPENDS=	libgweather-3.so:net/libgweather \
 
 PORTSCOUT=	limitw:1,even
 
+NO_ARCH=	yes
 USES=		gettext gmake gnome libtool localbase pathfix \
 		pkgconfig tar:xz
 USE_GNOME=	gnomedesktop3 gtk30 intlhack
