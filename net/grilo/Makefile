@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	grilo
-PORTVERSION=	0.3.0
+PORTVERSION=	0.3.1
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Grilo is a framework focused on making media discovery and browsing
+COMMENT=	Framework focused on making media discovery and browsing
 
 BUILD_DEPENDS=	vapigen:lang/vala
 LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup \
