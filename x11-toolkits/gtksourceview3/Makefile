@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gtksourceview
-PORTVERSION=	3.20.2
+PORTVERSION=	3.20.4
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
@@ -20,7 +20,7 @@ PORTSCOUT=	limitw:1,even
 BUILD_DEPENDS=	vala:lang/vala
 
 USES+=		gettext gmake gnome libtool localbase pathfix pkgconfig
-USE_GNOME=	gnomeprefix gtk30 intlhack introspection:build \
+USE_GNOME=	cairo gdkpixbuf2 gnomeprefix gtk30 intlhack introspection:build \
 		libxml2 referencehack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
