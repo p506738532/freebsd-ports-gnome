@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution
-PORTVERSION=	3.20.1
-PORTREVISION=	1
+PORTVERSION=	3.20.4
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -33,10 +32,11 @@ RUN_DEPENDS=	highlight:textproc/highlight \
 PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils bison gettext gmake gnome libtool \
-		localbase pathfix perl5 pkgconfig tar:xz
-USE_GNOME=	evolutiondataserver3 gnomedesktop3 intltool
+		localbase pathfix perl5 pkgconfig sqlite tar:xz
+USE_GNOME=	cairo evolutiondataserver3 gnomedesktop3 intltool
 GNU_CONFIGURE=	yes
 USE_GSTREAMER1=	yes
+USE_XORG=	x11
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-nss=yes \
