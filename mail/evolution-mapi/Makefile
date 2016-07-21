@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution-mapi
-PORTVERSION=	3.20.1
+PORTVERSION=	3.20.4
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,8 +17,9 @@ RUN_DEPENDS=	evolution>=3.0.0:mail/evolution
 
 PORTSCOUT=	limitw:1,even
 
-USES=		gettext gmake gnome libtool localbase pkgconfig tar:xz
-USE_GNOME=	intltool
+USES=		gettext gmake gnome libtool localbase pkgconfig sqlite tar:xz
+USE_GNOME=	atk cairo evolutiondataserver3 gdkpixbuf2 glib20 gtk30 \
+		intltool pango
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-Wno-error=format-nonliteral
