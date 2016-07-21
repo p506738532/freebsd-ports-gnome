@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	vte
-PORTVERSION=	0.44.1
+PORTVERSION=	0.44.2
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
@@ -21,7 +21,8 @@ USES=		bison compiler:c++0x gettext gmake gnome libtool localbase \
 		pathfix pkgconfig tar:xz
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME?=	gtk30 intltool referencehack introspection:build
+USE_GNOME?=	cairo gdkpixbuf2 gtk30 intltool referencehack \
+		introspection:build
 CONFIGURE_ARGS=	--enable-introspection \
 		--disable-static \
 		--disable-Bsymbolic
