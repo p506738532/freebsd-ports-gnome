@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gedit
-PORTVERSION=	3.20.1
+PORTVERSION=	3.20.2
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,10 +25,10 @@ RUN_DEPENDS=	iso-codes>=0:misc/iso-codes \
 PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils gettext gmake gnome libtool localbase \
-		pathfix pkgconfig python:3 tar:xz
-USE_GNOME=	gtksourceview3 intlhack introspection:build \
+		pathfix pkgconfig python:3.2+ tar:xz
+USE_GNOME=	cairo gdkpixbuf2 gtksourceview3 intlhack introspection \
 		libxml2 py3gobject3
-USE_XORG=	sm
+USE_XORG=	sm x11
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-updater \
 		--enable-python \
