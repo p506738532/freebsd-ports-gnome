@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gvfs
-PORTVERSION=	1.28.1
+PORTVERSION=	1.28.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,9 +13,14 @@ COMMENT=	GNOME virtual file system
 BUILD_DEPENDS=	docbook-xsl>=0:textproc/docbook-xsl
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libsoup-gnome-2.4.so:devel/libsoup-gnome \
+		libsoup-2.4.so:devel/libsoup \
 		libgcrypt.so:security/libgcrypt \
 		libgcr-base-3.so:security/gcr \
-		libsecret-1.so:security/libsecret
+		libsecret-1.so:security/libsecret \
+		libp11-kit.so:security/p11-kit \
+		libgpg-error.so:security/libgpg-error \
+		libcdio.so:sysutils/libcdio \
+		libjson-glib-1.0.so:devel/json-glib
 
 PORTSCOUT=	limitw:1,even
 
@@ -23,9 +28,7 @@ USES=		gettext gmake gnome libarchive libtool localbase \
 		pathfix pkgconfig tar:xz
 USE_GNOME=	glib20 intlhack libxslt:build
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-bluray
-
-CONFIGURE_ARGS+=\
+CONFIGURE_ARGS=	--disable-bluray \
 		--disable-gudev \
 		--disable-libsystemd-login \
 		--disable-udisks2 \
@@ -33,7 +36,8 @@ CONFIGURE_ARGS+=\
 		--disable-udev \
 		--disable-goa \
 		--disable-libmtp \
-		--disable-gtk
+		--disable-gtk \
+		--disable-libsystemd-login
 
 INSTALL_TARGET=	install-strip
 
