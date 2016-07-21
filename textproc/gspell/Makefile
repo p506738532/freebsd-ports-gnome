@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gspell
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.3
 CATEGORIES=	textproc
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,7 +19,8 @@ LIB_DEPENDS=	libenchant.so:textproc/enchant
 PORTSCOUT=	limit:^0\.1\.
 
 USES=		gmake iconv libtool pathfix pkgconfig tar:xz
-USE_GNOME=	glib20 gtksourceview3 introspection:build libxml2
+USE_GNOME=	cairo gdkpixbuf2 glib20 gtksourceview3 \
+		introspection:build libxml2
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
