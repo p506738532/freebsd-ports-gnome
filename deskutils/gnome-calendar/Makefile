@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-calendar
-PORTVERSION=	3.20.1
+PORTVERSION=	3.20.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,13 +12,18 @@ COMMENT=	Simple and beatiful calendar application for GNOME
 
 PORTSCOUT=	limitw:1,even
 
-LIB_DEPENDS=	libical.so:devel/libical
+LIB_DEPENDS=	libical.so:devel/libical \
+		libnss3.so:security/nss \
+		libnspr4.so:devel/nspr \
+		libsecret-1.so:security/libsecret \
+		libsoup-2.4.so:devel/libsoup \
+		libgoa-1.0.so:net/gnome-online-accounts
 
 USES=		gettext gmake gnome libtool localbase pathfix \
-		pkgconfig tar:xz
+		pkgconfig sqlite tar:xz
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-USE_GNOME=	evolutiondataserver3 gtk30 intlhack \
+USE_GNOME=	cairo evolutiondataserver3 gtk30 intlhack \
 		introspection
 GNU_CONFIGURE=	yes
 
