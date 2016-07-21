@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	vinagre
-PORTVERSION=	3.20.1
+PORTVERSION=	3.20.2
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,7 +20,8 @@ PORTSCOUT=	limitw:1,even
 
 USES=		desktop-file-utils gettext gmake gnome localbase \
 		pathfix pkgconfig shared-mime-info tar:xz
-USE_GNOME=	gtk30 intlhack libxml2 vte3
+USE_GNOME=	cairo gtk30 intlhack libxml2 vte3
+USE_XORG=	x11
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--enable-ssh
