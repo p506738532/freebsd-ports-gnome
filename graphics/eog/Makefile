@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	eog
-PORTVERSION=	3.20.1
+PORTVERSION=	3.20.3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,14 +13,16 @@ COMMENT=	The Eye Of Gnome image viewer
 BUILD_DEPENDS=	itstool:textproc/itstool \
 		gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 LIB_DEPENDS=	libpeas-gtk-1.0.so:devel/libpeas \
-		liblcms.so:graphics/lcms
+		liblcms.so:graphics/lcms \
+		liblcms2.so:graphics/lcms2
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake gnome libtool localbase \
+USES=		desktop-file-utils gettext gmake gnome jpeg libtool localbase \
 		pathfix pkgconfig tar:xz
-USE_GNOME=	intltool librsvg2 gtk30 gnomedesktop3 introspection:build
+USE_GNOME=	cairo intltool librsvg2 gtk30 gnomedesktop3 introspection
+USE_XORG=	x11
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
