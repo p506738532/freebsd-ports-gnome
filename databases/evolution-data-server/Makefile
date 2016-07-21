@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.20.1
+PORTVERSION=	3.20.4
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,9 +13,9 @@ COMMENT=	Data backends for the Evolution integrated mail/PIM suite
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	gcr>=3.11:security/gcr \
-		vapigen:lang/vala
+BUILD_DEPENDS=	vapigen:lang/vala
 LIB_DEPENDS=	libsoup-gnome-2.4.so:devel/libsoup-gnome \
+		libgcr-base-3.so:security/gcr \
 		liboauth.so:net/liboauth \
 		libgoa-1.0.so:net/gnome-online-accounts \
 		libgdata.so:devel/libgdata \
@@ -34,7 +34,7 @@ USES=		bison gettext gmake gnome gperf libtool localbase \
 # does not link directly to libstdc++ and adding the libstdc++ rpath to
 # the executable does not work at runtime.
 USES+=		compiler:c++11-lib
-USE_GNOME=	gtk30 intltool introspection:build libxml2
+USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool introspection:build libxml2
 USE_OPENLDAP=	yes
 GNU_CONFIGURE=	yes
 USE_BDB=	5
