@@ -13,7 +13,6 @@ COMMENT=	The Eye Of Gnome image viewer
 BUILD_DEPENDS=	itstool:textproc/itstool \
 		gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 LIB_DEPENDS=	libpeas-gtk-1.0.so:devel/libpeas \
-		liblcms.so:graphics/lcms \
 		liblcms2.so:graphics/lcms2
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 
