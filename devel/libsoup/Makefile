@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	libsoup
-PORTVERSION=	2.54.0.1
+PORTVERSION=	2.54.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -14,13 +14,13 @@ BUILD_DEPENDS=	glib-networking>=2.29.18:net/glib-networking
 LIB_DEPENDS=	libgcrypt.so:security/libgcrypt
 RUN_DEPENDS=	glib-networking>=2.29.18:net/glib-networking
 
-USES=		tar:xz
+USES=		sqlite tar:xz
 PORTSCOUT=	limitw:1,even
 
 .if !defined(REFERENCE_PORT)
 
 USES+=		gettext gmake gnome libtool localbase pathfix \
-		pkgconfig python:3:build sqlite:3 tar:xz
+		pkgconfig python:3.3+:build
 USE_GNOME=	glib20 intlhack introspection:build \
 		libxml2 referencehack
 USE_LDCONFIG=	yes
@@ -29,7 +29,7 @@ CONFIGURE_ARGS=	--disable-more-warnings \
 		--disable-vala
 INSTALL_TARGET=	install-strip
 
-LIBVERSION=	1.7.0
+LIBVERSION=	1.8.0
 PLIST_SUB=	VERSION="2.4" LIBVERSION=${LIBVERSION}
 
 .if defined(SOUP_SLAVE)
