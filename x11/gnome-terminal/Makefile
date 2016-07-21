@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gnome-terminal
-PORTVERSION=	3.20.1
+PORTVERSION=	3.20.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -14,15 +14,16 @@ BUILD_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas \
 		itstool:textproc/itstool \
 		appstream-builder:devel/appstream-glib \
 		vala:lang/vala
-LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid
+LIB_DEPENDS=	libuuid.so:misc/e2fsprogs-libuuid \
+		libgnutls.so:security/gnutls
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:devel/gsettings-desktop-schemas
 
 PORTSCOUT=	limitw:1,even
 
 USES=		cpe gettext gmake gnome libtool localbase pathfix \
 		pkgconfig tar:xz
-USE_GNOME=	dconf gtk30 intlhack nautilus3 vte3
-USE_XORG=	sm ice
+USE_GNOME=	cairo dconf gdkpixbuf2 gtk30 intlhack nautilus3 vte3
+USE_XORG=	sm ice x11
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 CPE_VENDOR=	gnome

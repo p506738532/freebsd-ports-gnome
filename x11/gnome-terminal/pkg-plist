@@ -1,6 +1,7 @@
 bin/gnome-terminal
 lib/nautilus/extensions-3.0/libterminal-nautilus.a
 lib/nautilus/extensions-3.0/libterminal-nautilus.so
+lib/systemd/user/gnome-terminal-server.service
 %%MIGRATION%%libexec/gnome-terminal-migration
 libexec/gnome-terminal-server
 share/appdata/org.gnome.Terminal.Nautilus.appdata.xml
@@ -298,7 +299,6 @@ share/help/gl/gnome-terminal/txt-copy-paste.page
 share/help/gl/gnome-terminal/txt-links.page
 share/help/gl/gnome-terminal/txt-search.page
 share/help/gl/gnome-terminal/txt-select-text.page
-share/help/hu/gnome-terminal/figures/gnome-terminal.png
 share/help/hu/gnome-terminal/adv-keyboard-shortcuts.page
 share/help/hu/gnome-terminal/app-colors.page
 share/help/hu/gnome-terminal/app-cursor.page
@@ -331,7 +331,6 @@ share/help/hu/gnome-terminal/txt-copy-paste.page
 share/help/hu/gnome-terminal/txt-links.page
 share/help/hu/gnome-terminal/txt-search.page
 share/help/hu/gnome-terminal/txt-select-text.page
-share/help/ko/gnome-terminal/figures/gnome-terminal.png
 share/help/ko/gnome-terminal/adv-keyboard-shortcuts.page
 share/help/ko/gnome-terminal/app-colors.page
 share/help/ko/gnome-terminal/app-cursor.page
@@ -364,7 +363,6 @@ share/help/ko/gnome-terminal/txt-copy-paste.page
 share/help/ko/gnome-terminal/txt-links.page
 share/help/ko/gnome-terminal/txt-search.page
 share/help/ko/gnome-terminal/txt-select-text.page
-share/help/pt_BR/gnome-terminal/figures/gnome-terminal.png
 share/help/pt_BR/gnome-terminal/adv-keyboard-shortcuts.page
 share/help/pt_BR/gnome-terminal/app-colors.page
 share/help/pt_BR/gnome-terminal/app-cursor.page
@@ -397,7 +395,6 @@ share/help/pt_BR/gnome-terminal/txt-copy-paste.page
 share/help/pt_BR/gnome-terminal/txt-links.page
 share/help/pt_BR/gnome-terminal/txt-search.page
 share/help/pt_BR/gnome-terminal/txt-select-text.page
-share/help/ru/gnome-terminal/figures/gnome-terminal.png
 share/help/ru/gnome-terminal/adv-keyboard-shortcuts.page
 share/help/ru/gnome-terminal/app-colors.page
 share/help/ru/gnome-terminal/app-cursor.page
@@ -526,3 +523,6 @@ share/locale/zh_CN/LC_MESSAGES/gnome-terminal.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-terminal.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-terminal.mo
 @dir share/help/ko/gnome-terminal/figures
+@dir share/help/hu/gnome-terminal/figures
+@dir share/help/pt_BR/gnome-terminal/figures
+@dir share/help/ru/gnome-terminal/figures
