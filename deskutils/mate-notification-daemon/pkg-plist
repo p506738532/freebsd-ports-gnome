@@ -37,6 +37,7 @@ share/locale/eu/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/fi/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/fr/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/fr_CA/LC_MESSAGES/mate-notification-daemon.mo
+share/locale/frp/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/gl/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/he/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/hi/LC_MESSAGES/mate-notification-daemon.mo
@@ -78,5 +79,6 @@ share/locale/ur/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/uz/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/vi/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/zh_CN/LC_MESSAGES/mate-notification-daemon.mo
+share/locale/zh_HK/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/zh_TW/LC_MESSAGES/mate-notification-daemon.mo
 %%DATADIR%%/mate-notification-properties.ui
