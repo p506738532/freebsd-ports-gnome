@@ -11,10 +11,15 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:S/.a1//}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Graph based image processing framework
 
+LICENSE=	BSD3CLAUSE GPLv3+ LGPL3+
+LICENSE_COMB=	multi
+LICENSE_FILE_GPLv3+ =	${WRKSRC}/COPYING
+LICENSE_FILE_LGPL3+ =	${WRKSRC}/COPYING.LESSER
+
 LIB_DEPENDS=	libbabl-0.1.so:x11/babl \
 		libjson-glib-1.0.so:devel/json-glib
 
-USES=		gettext gmake libtool localbase pathfix pkgconfig \
+USES=		cpe gettext gmake libtool localbase pathfix pkgconfig \
 		shebangfix tar:bzip2
 USE_GNOME=	glib20 intltool introspection:build
 USE_LDCONFIG=	yes
@@ -55,7 +60,7 @@ CAIRO_CONFIGURE_WITH=	cairo
 PANGO_USE=	GNOME=pango
 PANGO_CONFIGURE_WITH=	pango
 
-MENSCRIPT_BUILD_DEPENDS=	enscript:print/enscript-a4
+ENSCRIPT_BUILD_DEPENDS=	enscript:print/enscript-a4
 
 FFMPEG_LIB_DEPENDS=	libavformat.so:multimedia/ffmpeg
 FFMPEG_CONFIGURE_WITH=	libavformat
@@ -96,6 +101,7 @@ SPIRO_CONFIGURE_WITH=	libspiro
 V4L_BUILD_DEPENDS=	v4l_compat>=0:multimedia/v4l_compat
 V4L_LIB_DEPENDS=	libv4l2.so:multimedia/libv4l
 V4L_CONFIGURE_WITH=	libv4l
+V4L_VARS=		LICENSE+=LGPL20+
 
 WEBP_LIB_DEPENDS=	libwebp.so:graphics/webp
 WEBP_CONFIGURE_WITH=	webp

@@ -56,6 +56,7 @@
     SUBDIR += acsccid
     SUBDIR += activitymail
     SUBDIR += ada-util
+    SUBDIR += adaid
     SUBDIR += adabooch
     SUBDIR += adacurses
     SUBDIR += adime
@@ -115,6 +116,7 @@
     SUBDIR += atlas
     SUBDIR += atlas-devel
     SUBDIR += atlassian-plugin-sdk
+    SUBDIR += aunit
     SUBDIR += autobook
     SUBDIR += autoconf
     SUBDIR += autoconf-archive
@@ -208,7 +210,8 @@
     SUBDIR += c2mdoc
     SUBDIR += caf
     SUBDIR += calibrator
-    SUBDIR += capstone
+    SUBDIR += capstone3
+    SUBDIR += capstone4
     SUBDIR += cargo
     SUBDIR += cask
     SUBDIR += catch
@@ -407,6 +410,7 @@
     SUBDIR += dulwich
     SUBDIR += duplo
     SUBDIR += dwarfdump
+    SUBDIR += dwarves
     SUBDIR += dxa65
     SUBDIR += dyncall
     SUBDIR += e00compr
@@ -428,6 +432,7 @@
     SUBDIR += elfrc
     SUBDIR += elfsh
     SUBDIR += elftoaout
+    SUBDIR += elfutils
     SUBDIR += elixir-apex
     SUBDIR += elixir-bson
     SUBDIR += elixir-calendar
@@ -451,6 +456,7 @@
     SUBDIR += elixir-lager_logger
     SUBDIR += elixir-msgpax
     SUBDIR += elixir-nadia
+    SUBDIR += elixir-nimble_csv
     SUBDIR += elixir-paratize
     SUBDIR += elixir-plug
     SUBDIR += elixir-poison
@@ -458,6 +464,7 @@
     SUBDIR += elixir-red_black_tree
     SUBDIR += elixir-sorted_set
     SUBDIR += elixir-timex
+    SUBDIR += elixir-tirexs
     SUBDIR += elixir-tzdata
     SUBDIR += embb
     SUBDIR += epl.el
@@ -695,7 +702,6 @@
     SUBDIR += glrparser
     SUBDIR += glui
     SUBDIR += gmake
-    SUBDIR += gmake-lite
     SUBDIR += gnatcoll
     SUBDIR += gnatpython
     SUBDIR += gnome-builder
@@ -713,16 +719,28 @@
     SUBDIR += gnustep-make
     SUBDIR += go-bindata
     SUBDIR += go-btree
+    SUBDIR += go-cobra
+    SUBDIR += go-codec
+    SUBDIR += go-faker
     SUBDIR += go-flags
+    SUBDIR += go-form
+    SUBDIR += go-go.uuid
+    SUBDIR += go-goregen
     SUBDIR += go-hashicorp-logutils
     SUBDIR += go-json-rest
+    SUBDIR += go-logrus
+    SUBDIR += go-metrics
+    SUBDIR += go-pflag
     SUBDIR += go-pretty
+    SUBDIR += go-protobuf
     SUBDIR += go-raw
     SUBDIR += go-runewidth
     SUBDIR += go-slices
     SUBDIR += go-sql-driver
     SUBDIR += go-termbox
+    SUBDIR += go-tools
     SUBDIR += go-uuid
+    SUBDIR += go-yaml
     SUBDIR += gob2
     SUBDIR += gobject-introspection
     SUBDIR += godep
@@ -1196,6 +1214,7 @@
     SUBDIR += libfastjson
     SUBDIR += libffi
     SUBDIR += libfirm
+    SUBDIR += libflatarray
     SUBDIR += libfortuna
     SUBDIR += libfreefare
     SUBDIR += libfsntfs
@@ -1404,6 +1423,7 @@
     SUBDIR += linux_kdump
     SUBDIR += linux_libusb
     SUBDIR += lion
+    SUBDIR += liteide
     SUBDIR += lldb37
     SUBDIR += lldb38
     SUBDIR += llnextgen
@@ -1466,6 +1486,7 @@
     SUBDIR += magit
     SUBDIR += make++
     SUBDIR += makedepend
+    SUBDIR += marisa-trie
     SUBDIR += mate-common
     SUBDIR += matreshka
     SUBDIR += maven-wrapper
@@ -1587,6 +1608,7 @@
     SUBDIR += ode
     SUBDIR += ois
     SUBDIR += okteta
+    SUBDIR += omake
     SUBDIR += omniNotify
     SUBDIR += omniORB
     SUBDIR += omniORB-4.1
@@ -2966,6 +2988,7 @@
     SUBDIR += p5-Rcs-Agent
     SUBDIR += p5-Readonly
     SUBDIR += p5-Readonly-XS
+    SUBDIR += p5-ReadonlyX
     SUBDIR += p5-Reflex
     SUBDIR += p5-Regexp-Assemble
     SUBDIR += p5-Regexp-Assemble-Compressed
@@ -3271,6 +3294,7 @@
     SUBDIR += p5-Test-Requires
     SUBDIR += p5-Test-Requires-Git
     SUBDIR += p5-Test-RequiresInternet
+    SUBDIR += p5-Test-Roo
     SUBDIR += p5-Test-Script
     SUBDIR += p5-Test-Script-Run
     SUBDIR += p5-Test-SharedFork
@@ -3995,6 +4019,7 @@
     SUBDIR += py-clint
     SUBDIR += py-clonedigger
     SUBDIR += py-cloudpickle
+    SUBDIR += py-cluster
     SUBDIR += py-cmdln
     SUBDIR += py-codecov
     SUBDIR += py-codegen
@@ -4026,6 +4051,7 @@
     SUBDIR += py-daemons
     SUBDIR += py-dal
     SUBDIR += py-darcsver
+    SUBDIR += py-darts.util.lru
     SUBDIR += py-dateutil
     SUBDIR += py-dbus
     SUBDIR += py-debtcollector
@@ -4148,6 +4174,7 @@
     SUBDIR += py-jdcal
     SUBDIR += py-jedi
     SUBDIR += py-jellyfish
+    SUBDIR += py-jenkins-job-builder
     SUBDIR += py-jep
     SUBDIR += py-jira
     SUBDIR += py-jmespath
@@ -4187,6 +4214,7 @@
     SUBDIR += py-logbook
     SUBDIR += py-logan
     SUBDIR += py-logilab-common
+    SUBDIR += py-louie
     SUBDIR += py-lxml
     SUBDIR += py-magic
     SUBDIR += py-manuel
@@ -4205,6 +4233,7 @@
     SUBDIR += py-more-itertools
     SUBDIR += py-mox
     SUBDIR += py-msgpack-python
+    SUBDIR += py-multi_key_dict
     SUBDIR += py-multipledispatch
     SUBDIR += py-mwlib
     SUBDIR += py-mwlib.ext
@@ -4249,6 +4278,7 @@
     SUBDIR += py-pex
     SUBDIR += py-phabricator
     SUBDIR += py-phonenumbers
+    SUBDIR += py-phply
     SUBDIR += py-phpserialize
     SUBDIR += py-pika
     SUBDIR += py-pinocchio
@@ -4320,6 +4350,7 @@
     SUBDIR += py-pytest-xdist
     SUBDIR += py-python-bugzilla
     SUBDIR += py-python-distutils-extra
+    SUBDIR += py-python-gist
     SUBDIR += py-python-jenkins
     SUBDIR += py-python-magic
     SUBDIR += py-python-pcre
@@ -4362,6 +4393,7 @@
     SUBDIR += py-raven
     SUBDIR += py-rcsparse
     SUBDIR += py-re2
+    SUBDIR += py-rebulk
     SUBDIR += py-rednose
     SUBDIR += py-repl
     SUBDIR += py-repoze.lru
@@ -4421,6 +4453,7 @@
     SUBDIR += py-snack
     SUBDIR += py-snackwich
     SUBDIR += py-sortedcontainers
+    SUBDIR += py-sourcemap
     SUBDIR += py-spark
     SUBDIR += py-speaklater
     SUBDIR += py-spyder
@@ -4429,6 +4462,7 @@
     SUBDIR += py-statsd
     SUBDIR += py-stdnum
     SUBDIR += py-stevedore
+    SUBDIR += py-stopit
     SUBDIR += py-structlog
     SUBDIR += py-stsci.distutils
     SUBDIR += py-subversion
@@ -4440,6 +4474,7 @@
     SUBDIR += py-tabulate
     SUBDIR += py-tapi
     SUBDIR += py-tarantool-queue
+    SUBDIR += py-tblib
     SUBDIR += py-tconfpy
     SUBDIR += py-tempora
     SUBDIR += py-tempstorage
@@ -4476,6 +4511,7 @@
     SUBDIR += py-twistedFlow
     SUBDIR += py-twistedRunner
     SUBDIR += py-txaio
+    SUBDIR += py-typing
     SUBDIR += py-tzlocal
     SUBDIR += py-ua_parser
     SUBDIR += py-ujson
@@ -4799,6 +4835,7 @@
     SUBDIR += rubygem-bindata
     SUBDIR += rubygem-binding_of_caller
     SUBDIR += rubygem-bio
+    SUBDIR += rubygem-bit-struct
     SUBDIR += rubygem-blankslate
     SUBDIR += rubygem-blobstore_client
     SUBDIR += rubygem-blockenspiel
@@ -4826,6 +4863,7 @@
     SUBDIR += rubygem-cf-uaa-lib
     SUBDIR += rubygem-childprocess
     SUBDIR += rubygem-chronic
+    SUBDIR += rubygem-chronic_duration
     SUBDIR += rubygem-clamp
     SUBDIR += rubygem-classifier
     SUBDIR += rubygem-classifier-reborn
@@ -4946,6 +4984,7 @@
     SUBDIR += rubygem-grit
     SUBDIR += rubygem-guess_html_encoding
     SUBDIR += rubygem-gyoku
+    SUBDIR += rubygem-hamster
     SUBDIR += rubygem-hashdiff
     SUBDIR += rubygem-hashery
     SUBDIR += rubygem-hashie
@@ -5038,6 +5077,7 @@
     SUBDIR += rubygem-notiffany
     SUBDIR += rubygem-notify
     SUBDIR += rubygem-nprogress-rails
+    SUBDIR += rubygem-numerizer
     SUBDIR += rubygem-octopress-hooks
     SUBDIR += rubygem-oj
     SUBDIR += rubygem-omniauth_crowd
@@ -5295,6 +5335,7 @@
     SUBDIR += splint
     SUBDIR += srecord
     SUBDIR += st
+    SUBDIR += stack
     SUBDIR += staf
     SUBDIR += statcvs
     SUBDIR += statik

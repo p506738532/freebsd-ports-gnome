@@ -20,8 +20,8 @@ RUN_DEPENDS=	yelp-xsl>=0:textproc/yelp-xsl
 
 PORTSCOUT=	limitw:1,even
 
-USES=		desktop-file-utils gettext gmake gnome libtool \
-		localbase pathfix pkgconfig tar:xz
+USES=		autoreconf desktop-file-utils gettext gmake gnome libtool pathfix \
+		pkgconfig tar:xz
 USE_XORG=	x11 ice
 USE_GNOME=	gtk30 intlhack libxml2 libxslt
 GNU_CONFIGURE=	yes
@@ -36,5 +36,11 @@ INSTALL_TARGET=	install-strip
 CONFIGURE_ENV+=	YELP_LZMA_CFLAGS="-I/usr/include" \
 		YELP_LZMA_LIBS="-L/usr/lib -llzma"
 .endif
+
+post-patch:
+	@${CP} ${FILESDIR}/yelp-groff ${WRKSRC}/libyelp
+
+post-install:
+	${INSTALL_SCRIPT} ${FILESDIR}/yelp-groff ${STAGEDIR}${PREFIX}/libexec
 
 .include <bsd.port.mk>
