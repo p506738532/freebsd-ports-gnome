@@ -12,11 +12,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Archive manager for zip files, tar, etc
 
 BUILD_DEPENDS=	itstool:textproc/itstool
-RUN_DEPENDS=	gtar:archivers/gtar \
-		zipinfo:archivers/unzip
-
-# Port unzip is desired, but specify the uniquely named zipinfo to ensure
-# archivers/unzip is pulled in.  Using "unzip" is satisfied by base unzip
+RUN_DEPENDS=	gtar:archivers/gtar
 
 PORTSCOUT=	limitw:1,even
 
