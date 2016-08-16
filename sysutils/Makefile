@@ -452,6 +452,7 @@
     SUBDIR += ioping
     SUBDIR += ipa
     SUBDIR += ipad_charge
+    SUBDIR += ipdbtools
     SUBDIR += ipfs-go
     SUBDIR += ipmitool
     SUBDIR += ipsc
@@ -536,6 +537,7 @@
     SUBDIR += logtool
     SUBDIR += logwatch
     SUBDIR += lookat
+    SUBDIR += lr
     SUBDIR += lsof
     SUBDIR += ltrace
     SUBDIR += luckybackup
@@ -636,6 +638,7 @@
     SUBDIR += ncdu
     SUBDIR += nepomuk-core
     SUBDIR += nepomuk-widgets
+    SUBDIR += nfcutils
     SUBDIR += nfsping
     SUBDIR += nitrogen
     SUBDIR += no-login
@@ -858,6 +861,7 @@
     SUBDIR += py-stdiff
     SUBDIR += py-supervisor
     SUBDIR += py-tmuxp
+    SUBDIR += py-uptime
     SUBDIR += py-zdaemon
     SUBDIR += py-zfs
     SUBDIR += pydf
@@ -1200,6 +1204,7 @@
     SUBDIR += xcdroast
     SUBDIR += xcpustate
     SUBDIR += xdu
+    SUBDIR += xe
     SUBDIR += xe-guest-utilities
     SUBDIR += xen-guest-tools
     SUBDIR += xen-tools

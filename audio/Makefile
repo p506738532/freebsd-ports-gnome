@@ -634,10 +634,12 @@
     SUBDIR += py-pyliblo
     SUBDIR += py-shout
     SUBDIR += py-soundcloud
+    SUBDIR += py-speechrecognition
     SUBDIR += py-speex
     SUBDIR += py-tagpy
     SUBDIR += py-vorbis
     SUBDIR += py-xmms2
+    SUBDIR += py3-mutagen
     SUBDIR += py3-pylast
     SUBDIR += pytone
     SUBDIR += qjackctl
@@ -697,6 +699,7 @@
     SUBDIR += smasher
     SUBDIR += snack
     SUBDIR += snd
+    SUBDIR += sndio
     SUBDIR += solfege
     SUBDIR += sonata
     SUBDIR += sooperlooper
